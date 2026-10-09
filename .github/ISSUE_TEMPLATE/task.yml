@@ -1,0 +1,45 @@
+name: 작업 / 실험
+description: 담당 조원, 수정 범위와 완료 기준을 공유합니다.
+title: "[작업] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        조원 3명이 각자 AI와 작업합니다. 다른 조원의 Issue와 Draft PR을 확인한 뒤 작성해주세요.
+        AI 모델명이 아니라 실제 담당 조원을 적고, 아직 정하지 않은 것은 미정으로 표시하세요.
+  - type: input
+    id: owner
+    attributes:
+      label: 담당 조원
+      description: GitHub 아이디 또는 이름. 아직 정하지 않았다면 미정.
+    validations:
+      required: true
+  - type: textarea
+    id: goal
+    attributes:
+      label: 목표와 완료 기준
+      description: 어떤 결과물이 나오면 이 작업이 끝나는지 적어주세요.
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: 수정 범위 / 실험 조건
+      description: 파일·기능 범위 또는 실행할 조건. 관찰만 하는 작업이면 그렇게 적어주세요.
+    validations:
+      required: true
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: 다른 조원 작업과의 관계
+      description: 관련 Issue/PR, 재사용할 코드·결과, 겹치는 파일, 기다리는 변경을 적어주세요.
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 현재 상태와 근거
+      description: 관측 사실·가설·검증·미확인을 구분하고 코드/실험 기록 링크를 남겨주세요.
+  - type: textarea
+    id: next
+    attributes:
+      label: 다음 행동 / 필요한 결정
+      description: 이어서 할 일이나 조원에게 확인받아야 할 내용을 적어주세요.

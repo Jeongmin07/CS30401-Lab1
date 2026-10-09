@@ -218,3 +218,18 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Course simulation outputs remain local; share reproducible code and small evidence.
+/runs/
+/states/
+/viz/
+/output/
+/ns-3*/
+/hypatia/
+/Lab1_*.zip
+
+# New per-event traces: keep summaries/configs in Git and link archived raw data.
+# This does not untrack any results that have already been committed.
+**/logs_ns3/tcp_flow_*_cwnd.csv
+**/logs_ns3/tcp_flow_*_rtt.csv
+**/logs_ns3/tcp_flow_*_progress.csv
