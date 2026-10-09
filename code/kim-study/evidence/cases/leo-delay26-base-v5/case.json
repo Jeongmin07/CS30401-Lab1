@@ -1,0 +1,40 @@
+{
+  "case": "leo-delay26-base-v5",
+  "parameters": {
+    "name": "leo-delay26-base-v5",
+    "kind": "leo",
+    "cc": "TcpCubic",
+    "rate": 10.0,
+    "queue": 100,
+    "duration": 200,
+    "parameters": "",
+    "trace": 1,
+    "before_ms": 50,
+    "after_ms": 45,
+    "event_s": 10,
+    "loss_s": -1,
+    "initial_ssthresh_pkts": 900,
+    "max_bytes": 100000000000,
+    "state": "/tmp/cs30401-controls/delay26/state",
+    "patch": "/work/study-v5.patch"
+  },
+  "command": [
+    "/home/ubuntu/ns-3.48/build/scratch/main_satnet/ns3.48-main_satnet",
+    "--run_dir=/tmp/cs30401-study/leo-delay26-base-v5"
+  ],
+  "trace_environment": {
+    "CS30401_STUDY_TRACE": "1",
+    "CS30401_STUDY_TRACE_DIR": "/tmp/cs30401-study/leo-delay26-base-v5/logs_ns3"
+  },
+  "official_image": "ghcr.io/yeonjong21/cs30401-lab1:2026f-v1",
+  "official_image_digest": "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+  "patch_sha256": "b5657a3b2919ed32ea7fcb8f14a922a75a94cc4d9910e99f809c771747cff3e6",
+  "binary_sha256": "de9f678113c37a72df7e3215e876f18945c0ccecf9123f60fc8f655f9d9a6eab",
+  "state": "/tmp/cs30401-controls/delay26/state",
+  "start_time_unix": 1791566022.0024202,
+  "status": "complete",
+  "config_ns3.properties_sha256": "3db6325ac277c6d7a3536f403defde8288fc62be1b37e4af294976c8fd2e5090",
+  "schedule.csv_sha256": "e6cde3aa7716856e46d24c3833354df90407313ece13a5ffbd1b789fa4fea23c",
+  "exit_code": 0,
+  "wall_time_s": 24.162
+}

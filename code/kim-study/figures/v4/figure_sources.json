@@ -1,0 +1,1136 @@
+{
+  "stage": "initial controlled experiment, v4",
+  "flow_id": "0",
+  "mss_bytes": 1380,
+  "sources": {
+    "leo10-base": {
+      "label": "Cubic baseline",
+      "summary": "/tmp/cs30401-study/leo10-base/study_analysis.json",
+      "sha256": "b39c28345f48f41affa86e737e4836be066766dc82557e715cd5aee26e3cef80",
+      "duration_s": 200.0,
+      "analysis_parameters": {
+        "bin_s": 0.1,
+        "event_after_s": 2.0,
+        "event_before_s": 0.5,
+        "maximum_case_samples": 100,
+        "maximum_evidence_rows_per_sample": 12,
+        "root_queue_disc_absence_independently_audited": false,
+        "tx_identity_retention_s": 10.0
+      },
+      "inputs": [
+        {
+          "kind": "sender",
+          "path": "/tmp/cs30401-study/leo10-base/logs_ns3/tcp_flow_0_study_packets.csv"
+        },
+        {
+          "kind": "drop",
+          "path": "/tmp/cs30401-study/leo10-base/logs_ns3/study_drops.csv"
+        },
+        {
+          "kind": "receiver",
+          "path": "/tmp/cs30401-study/leo10-base/logs_ns3/study_rx_node_1585_port_1024.csv"
+        },
+        {
+          "kind": "app",
+          "path": "/tmp/cs30401-study/leo10-base/logs_ns3/study_app_rx_node_1585_port_1024.csv"
+        },
+        {
+          "kind": "state",
+          "path": "/tmp/cs30401-study/leo10-base/logs_ns3/tcp_flow_0_study_events.csv"
+        }
+      ],
+      "limitations": [
+        "Path-truth propagation RTT includes both directions; RTT decreases alone do not prove forward-path overtaking.",
+        "Repeated cumulative ACKs are observations, not an independent reconstruction of every duplicate-ACK predicate.",
+        "Exact tx_id tags, not packet UIDs, identify transmission instances; joins are retained for a bounded time.",
+        "Candidate unnecessary recovery associates a sequence gap, ACK evidence, retransmission and eventual original delivery; controlled comparisons are still needed for a causal performance claim.",
+        "LOSS state is reported directly and is not automatically called an RTO without a dedicated timer trace.",
+        "Drop trace rows can duplicate one physical loss; distinct tagged transmission counts and per-layer counts are separate.",
+        "No observed drop is not proof of no drop when coverage or packet parsing is incomplete.",
+        "Traffic-control TcDrop coverage is required before excluding network loss; pre-v3 coverage can omit this path.",
+        "Root queue-disc absence must be verified per device or explicitly independently audited; TcDrop does not observe a root queue-disc's own losses.",
+        "Receiver TCP window rejection and PAWS/input discards are not covered by queue/IP/device/traffic-control hooks.",
+        "Pre-processing wire Rx does not prove acceptance: a gap fill requires subsequent expected_seq advancement or same-time application delivery.",
+        "Application HandleRead bytes are ordered unique delivery; wire interval union is a separate metric.",
+        "Sequence epochs assume adjacent relevant sequence references differ by less than 2^31 bytes.",
+        "Static and dynamic path controls, actual loss tests and deployment-information errors remain separate experimental requirements."
+      ]
+    },
+    "leo10-bbr": {
+      "label": "BBR baseline",
+      "summary": "/tmp/cs30401-study/leo10-bbr/study_analysis.json",
+      "sha256": "aaf8f812f5d6f68592c7fca2f4058591e69417646e9ea190a43add3c84f17529",
+      "duration_s": 200.0,
+      "analysis_parameters": {
+        "bin_s": 0.1,
+        "event_after_s": 2.0,
+        "event_before_s": 0.5,
+        "maximum_case_samples": 100,
+        "maximum_evidence_rows_per_sample": 12,
+        "root_queue_disc_absence_independently_audited": false,
+        "tx_identity_retention_s": 10.0
+      },
+      "inputs": [
+        {
+          "kind": "sender",
+          "path": "/tmp/cs30401-study/leo10-bbr/logs_ns3/tcp_flow_0_study_packets.csv"
+        },
+        {
+          "kind": "drop",
+          "path": "/tmp/cs30401-study/leo10-bbr/logs_ns3/study_drops.csv"
+        },
+        {
+          "kind": "receiver",
+          "path": "/tmp/cs30401-study/leo10-bbr/logs_ns3/study_rx_node_1585_port_1024.csv"
+        },
+        {
+          "kind": "app",
+          "path": "/tmp/cs30401-study/leo10-bbr/logs_ns3/study_app_rx_node_1585_port_1024.csv"
+        },
+        {
+          "kind": "state",
+          "path": "/tmp/cs30401-study/leo10-bbr/logs_ns3/tcp_flow_0_study_events.csv"
+        }
+      ],
+      "limitations": [
+        "Path-truth propagation RTT includes both directions; RTT decreases alone do not prove forward-path overtaking.",
+        "Repeated cumulative ACKs are observations, not an independent reconstruction of every duplicate-ACK predicate.",
+        "Exact tx_id tags, not packet UIDs, identify transmission instances; joins are retained for a bounded time.",
+        "Candidate unnecessary recovery associates a sequence gap, ACK evidence, retransmission and eventual original delivery; controlled comparisons are still needed for a causal performance claim.",
+        "LOSS state is reported directly and is not automatically called an RTO without a dedicated timer trace.",
+        "Drop trace rows can duplicate one physical loss; distinct tagged transmission counts and per-layer counts are separate.",
+        "No observed drop is not proof of no drop when coverage or packet parsing is incomplete.",
+        "Traffic-control TcDrop coverage is required before excluding network loss; pre-v3 coverage can omit this path.",
+        "Root queue-disc absence must be verified per device or explicitly independently audited; TcDrop does not observe a root queue-disc's own losses.",
+        "Receiver TCP window rejection and PAWS/input discards are not covered by queue/IP/device/traffic-control hooks.",
+        "Pre-processing wire Rx does not prove acceptance: a gap fill requires subsequent expected_seq advancement or same-time application delivery.",
+        "Application HandleRead bytes are ordered unique delivery; wire interval union is a separate metric.",
+        "Sequence epochs assume adjacent relevant sequence references differ by less than 2^31 bytes.",
+        "Static and dynamic path controls, actual loss tests and deployment-information errors remain separate experimental requirements."
+      ]
+    },
+    "leo10-guard20": {
+      "label": "Route guard 20",
+      "summary": "/tmp/cs30401-study/leo10-guard20/study_analysis.json",
+      "sha256": "a7f78df9bfcc1ed01e6d56abce3e132d201c91514f5cd8064ba0c26d4d826b62",
+      "duration_s": 200.0,
+      "analysis_parameters": {
+        "bin_s": 0.1,
+        "event_after_s": 2.0,
+        "event_before_s": 0.5,
+        "maximum_case_samples": 100,
+        "maximum_evidence_rows_per_sample": 12,
+        "root_queue_disc_absence_independently_audited": false,
+        "tx_identity_retention_s": 10.0
+      },
+      "inputs": [
+        {
+          "kind": "sender",
+          "path": "/tmp/cs30401-study/leo10-guard20/logs_ns3/tcp_flow_0_study_packets.csv"
+        },
+        {
+          "kind": "drop",
+          "path": "/tmp/cs30401-study/leo10-guard20/logs_ns3/study_drops.csv"
+        },
+        {
+          "kind": "receiver",
+          "path": "/tmp/cs30401-study/leo10-guard20/logs_ns3/study_rx_node_1585_port_1024.csv"
+        },
+        {
+          "kind": "app",
+          "path": "/tmp/cs30401-study/leo10-guard20/logs_ns3/study_app_rx_node_1585_port_1024.csv"
+        },
+        {
+          "kind": "state",
+          "path": "/tmp/cs30401-study/leo10-guard20/logs_ns3/tcp_flow_0_study_events.csv"
+        }
+      ],
+      "limitations": [
+        "Path-truth propagation RTT includes both directions; RTT decreases alone do not prove forward-path overtaking.",
+        "Repeated cumulative ACKs are observations, not an independent reconstruction of every duplicate-ACK predicate.",
+        "Exact tx_id tags, not packet UIDs, identify transmission instances; joins are retained for a bounded time.",
+        "Candidate unnecessary recovery associates a sequence gap, ACK evidence, retransmission and eventual original delivery; controlled comparisons are still needed for a causal performance claim.",
+        "LOSS state is reported directly and is not automatically called an RTO without a dedicated timer trace.",
+        "Drop trace rows can duplicate one physical loss; distinct tagged transmission counts and per-layer counts are separate.",
+        "No observed drop is not proof of no drop when coverage or packet parsing is incomplete.",
+        "Traffic-control TcDrop coverage is required before excluding network loss; pre-v3 coverage can omit this path.",
+        "Root queue-disc absence must be verified per device or explicitly independently audited; TcDrop does not observe a root queue-disc's own losses.",
+        "Receiver TCP window rejection and PAWS/input discards are not covered by queue/IP/device/traffic-control hooks.",
+        "Pre-processing wire Rx does not prove acceptance: a gap fill requires subsequent expected_seq advancement or same-time application delivery.",
+        "Application HandleRead bytes are ordered unique delivery; wire interval union is a separate metric.",
+        "Sequence epochs assume adjacent relevant sequence references differ by less than 2^31 bytes.",
+        "Static and dynamic path controls, actual loss tests and deployment-information errors remain separate experimental requirements."
+      ]
+    },
+    "leo10-static20": {
+      "label": "Static threshold 20",
+      "summary": "/tmp/cs30401-study/leo10-static20/study_analysis.json",
+      "sha256": "7ed545e046582786ac69bdac2278105b4961b34dd613640744352fef0b546d57",
+      "duration_s": 200.0,
+      "analysis_parameters": {
+        "bin_s": 0.1,
+        "event_after_s": 2.0,
+        "event_before_s": 0.5,
+        "maximum_case_samples": 100,
+        "maximum_evidence_rows_per_sample": 12,
+        "root_queue_disc_absence_independently_audited": false,
+        "tx_identity_retention_s": 10.0
+      },
+      "inputs": [
+        {
+          "kind": "sender",
+          "path": "/tmp/cs30401-study/leo10-static20/logs_ns3/tcp_flow_0_study_packets.csv"
+        },
+        {
+          "kind": "drop",
+          "path": "/tmp/cs30401-study/leo10-static20/logs_ns3/study_drops.csv"
+        },
+        {
+          "kind": "receiver",
+          "path": "/tmp/cs30401-study/leo10-static20/logs_ns3/study_rx_node_1585_port_1024.csv"
+        },
+        {
+          "kind": "app",
+          "path": "/tmp/cs30401-study/leo10-static20/logs_ns3/study_app_rx_node_1585_port_1024.csv"
+        },
+        {
+          "kind": "state",
+          "path": "/tmp/cs30401-study/leo10-static20/logs_ns3/tcp_flow_0_study_events.csv"
+        }
+      ],
+      "limitations": [
+        "Path-truth propagation RTT includes both directions; RTT decreases alone do not prove forward-path overtaking.",
+        "Repeated cumulative ACKs are observations, not an independent reconstruction of every duplicate-ACK predicate.",
+        "Exact tx_id tags, not packet UIDs, identify transmission instances; joins are retained for a bounded time.",
+        "Candidate unnecessary recovery associates a sequence gap, ACK evidence, retransmission and eventual original delivery; controlled comparisons are still needed for a causal performance claim.",
+        "LOSS state is reported directly and is not automatically called an RTO without a dedicated timer trace.",
+        "Drop trace rows can duplicate one physical loss; distinct tagged transmission counts and per-layer counts are separate.",
+        "No observed drop is not proof of no drop when coverage or packet parsing is incomplete.",
+        "Traffic-control TcDrop coverage is required before excluding network loss; pre-v3 coverage can omit this path.",
+        "Root queue-disc absence must be verified per device or explicitly independently audited; TcDrop does not observe a root queue-disc's own losses.",
+        "Receiver TCP window rejection and PAWS/input discards are not covered by queue/IP/device/traffic-control hooks.",
+        "Pre-processing wire Rx does not prove acceptance: a gap fill requires subsequent expected_seq advancement or same-time application delivery.",
+        "Application HandleRead bytes are ordered unique delivery; wire interval union is a separate metric.",
+        "Sequence epochs assume adjacent relevant sequence references differ by less than 2^31 bytes.",
+        "Static and dynamic path controls, actual loss tests and deployment-information errors remain separate experimental requirements."
+      ]
+    },
+    "leo10-vegas": {
+      "label": "Vegas baseline",
+      "summary": "/tmp/cs30401-study/leo10-vegas/study_analysis.json",
+      "sha256": "63606c7d7e131c7f2786072cbc6c7f3e9b082ffa5ad52f63c44fe3a95794ab78",
+      "duration_s": 200.0,
+      "analysis_parameters": {
+        "bin_s": 0.1,
+        "event_after_s": 2.0,
+        "event_before_s": 0.5,
+        "maximum_case_samples": 100,
+        "maximum_evidence_rows_per_sample": 12,
+        "root_queue_disc_absence_independently_audited": false,
+        "tx_identity_retention_s": 10.0
+      },
+      "inputs": [
+        {
+          "kind": "sender",
+          "path": "/tmp/cs30401-study/leo10-vegas/logs_ns3/tcp_flow_0_study_packets.csv"
+        },
+        {
+          "kind": "drop",
+          "path": "/tmp/cs30401-study/leo10-vegas/logs_ns3/study_drops.csv"
+        },
+        {
+          "kind": "receiver",
+          "path": "/tmp/cs30401-study/leo10-vegas/logs_ns3/study_rx_node_1585_port_1024.csv"
+        },
+        {
+          "kind": "app",
+          "path": "/tmp/cs30401-study/leo10-vegas/logs_ns3/study_app_rx_node_1585_port_1024.csv"
+        },
+        {
+          "kind": "state",
+          "path": "/tmp/cs30401-study/leo10-vegas/logs_ns3/tcp_flow_0_study_events.csv"
+        }
+      ],
+      "limitations": [
+        "Path-truth propagation RTT includes both directions; RTT decreases alone do not prove forward-path overtaking.",
+        "Repeated cumulative ACKs are observations, not an independent reconstruction of every duplicate-ACK predicate.",
+        "Exact tx_id tags, not packet UIDs, identify transmission instances; joins are retained for a bounded time.",
+        "Candidate unnecessary recovery associates a sequence gap, ACK evidence, retransmission and eventual original delivery; controlled comparisons are still needed for a causal performance claim.",
+        "LOSS state is reported directly and is not automatically called an RTO without a dedicated timer trace.",
+        "Drop trace rows can duplicate one physical loss; distinct tagged transmission counts and per-layer counts are separate.",
+        "No observed drop is not proof of no drop when coverage or packet parsing is incomplete.",
+        "Traffic-control TcDrop coverage is required before excluding network loss; pre-v3 coverage can omit this path.",
+        "Root queue-disc absence must be verified per device or explicitly independently audited; TcDrop does not observe a root queue-disc's own losses.",
+        "Receiver TCP window rejection and PAWS/input discards are not covered by queue/IP/device/traffic-control hooks.",
+        "Pre-processing wire Rx does not prove acceptance: a gap fill requires subsequent expected_seq advancement or same-time application delivery.",
+        "Application HandleRead bytes are ordered unique delivery; wire interval union is a separate metric.",
+        "Sequence epochs assume adjacent relevant sequence references differ by less than 2^31 bytes.",
+        "Static and dynamic path controls, actual loss tests and deployment-information errors remain separate experimental requirements."
+      ]
+    },
+    "micro-loss-base": {
+      "label": "Cubic baseline",
+      "summary": "/tmp/cs30401-study/micro-loss-base/study_analysis.json",
+      "sha256": "335e9cf244fe168875d688856237fdba8b98a684994951bbda14229da878acbe",
+      "duration_s": 20.0,
+      "analysis_parameters": {
+        "bin_s": 0.1,
+        "event_after_s": 2.0,
+        "event_before_s": 0.5,
+        "maximum_case_samples": 100,
+        "maximum_evidence_rows_per_sample": 12,
+        "root_queue_disc_absence_independently_audited": false,
+        "tx_identity_retention_s": 10.0
+      },
+      "inputs": [
+        {
+          "kind": "sender",
+          "path": "/tmp/cs30401-study/micro-loss-base/logs_ns3/tcp_flow_0_study_packets.csv"
+        },
+        {
+          "kind": "drop",
+          "path": "/tmp/cs30401-study/micro-loss-base/logs_ns3/study_drops.csv"
+        },
+        {
+          "kind": "receiver",
+          "path": "/tmp/cs30401-study/micro-loss-base/logs_ns3/study_rx_node_1_port_1024.csv"
+        },
+        {
+          "kind": "app",
+          "path": "/tmp/cs30401-study/micro-loss-base/logs_ns3/study_app_rx_node_1_port_1024.csv"
+        },
+        {
+          "kind": "state",
+          "path": "/tmp/cs30401-study/micro-loss-base/logs_ns3/tcp_flow_0_study_events.csv"
+        }
+      ],
+      "limitations": [
+        "Path-truth propagation RTT includes both directions; RTT decreases alone do not prove forward-path overtaking.",
+        "Repeated cumulative ACKs are observations, not an independent reconstruction of every duplicate-ACK predicate.",
+        "Exact tx_id tags, not packet UIDs, identify transmission instances; joins are retained for a bounded time.",
+        "Candidate unnecessary recovery associates a sequence gap, ACK evidence, retransmission and eventual original delivery; controlled comparisons are still needed for a causal performance claim.",
+        "LOSS state is reported directly and is not automatically called an RTO without a dedicated timer trace.",
+        "Drop trace rows can duplicate one physical loss; distinct tagged transmission counts and per-layer counts are separate.",
+        "No observed drop is not proof of no drop when coverage or packet parsing is incomplete.",
+        "Traffic-control TcDrop coverage is required before excluding network loss; pre-v3 coverage can omit this path.",
+        "Root queue-disc absence must be verified per device or explicitly independently audited; TcDrop does not observe a root queue-disc's own losses.",
+        "Receiver TCP window rejection and PAWS/input discards are not covered by queue/IP/device/traffic-control hooks.",
+        "Pre-processing wire Rx does not prove acceptance: a gap fill requires subsequent expected_seq advancement or same-time application delivery.",
+        "Application HandleRead bytes are ordered unique delivery; wire interval union is a separate metric.",
+        "Sequence epochs assume adjacent relevant sequence references differ by less than 2^31 bytes.",
+        "Static and dynamic path controls, actual loss tests and deployment-information errors remain separate experimental requirements."
+      ]
+    },
+    "micro-loss-guard64": {
+      "label": "Route guard 64",
+      "summary": "/tmp/cs30401-study/micro-loss-guard64/study_analysis.json",
+      "sha256": "0866944d94f9b23c4b81594d013001c3868eba1486967bdf7f7bb94f31a7291d",
+      "duration_s": 20.0,
+      "analysis_parameters": {
+        "bin_s": 0.1,
+        "event_after_s": 2.0,
+        "event_before_s": 0.5,
+        "maximum_case_samples": 100,
+        "maximum_evidence_rows_per_sample": 12,
+        "root_queue_disc_absence_independently_audited": false,
+        "tx_identity_retention_s": 10.0
+      },
+      "inputs": [
+        {
+          "kind": "sender",
+          "path": "/tmp/cs30401-study/micro-loss-guard64/logs_ns3/tcp_flow_0_study_packets.csv"
+        },
+        {
+          "kind": "drop",
+          "path": "/tmp/cs30401-study/micro-loss-guard64/logs_ns3/study_drops.csv"
+        },
+        {
+          "kind": "receiver",
+          "path": "/tmp/cs30401-study/micro-loss-guard64/logs_ns3/study_rx_node_1_port_1024.csv"
+        },
+        {
+          "kind": "app",
+          "path": "/tmp/cs30401-study/micro-loss-guard64/logs_ns3/study_app_rx_node_1_port_1024.csv"
+        },
+        {
+          "kind": "state",
+          "path": "/tmp/cs30401-study/micro-loss-guard64/logs_ns3/tcp_flow_0_study_events.csv"
+        }
+      ],
+      "limitations": [
+        "Path-truth propagation RTT includes both directions; RTT decreases alone do not prove forward-path overtaking.",
+        "Repeated cumulative ACKs are observations, not an independent reconstruction of every duplicate-ACK predicate.",
+        "Exact tx_id tags, not packet UIDs, identify transmission instances; joins are retained for a bounded time.",
+        "Candidate unnecessary recovery associates a sequence gap, ACK evidence, retransmission and eventual original delivery; controlled comparisons are still needed for a causal performance claim.",
+        "LOSS state is reported directly and is not automatically called an RTO without a dedicated timer trace.",
+        "Drop trace rows can duplicate one physical loss; distinct tagged transmission counts and per-layer counts are separate.",
+        "No observed drop is not proof of no drop when coverage or packet parsing is incomplete.",
+        "Traffic-control TcDrop coverage is required before excluding network loss; pre-v3 coverage can omit this path.",
+        "Root queue-disc absence must be verified per device or explicitly independently audited; TcDrop does not observe a root queue-disc's own losses.",
+        "Receiver TCP window rejection and PAWS/input discards are not covered by queue/IP/device/traffic-control hooks.",
+        "Pre-processing wire Rx does not prove acceptance: a gap fill requires subsequent expected_seq advancement or same-time application delivery.",
+        "Application HandleRead bytes are ordered unique delivery; wire interval union is a separate metric.",
+        "Sequence epochs assume adjacent relevant sequence references differ by less than 2^31 bytes.",
+        "Static and dynamic path controls, actual loss tests and deployment-information errors remain separate experimental requirements."
+      ]
+    },
+    "micro-loss-static64": {
+      "label": "Static threshold 64",
+      "summary": "/tmp/cs30401-study/micro-loss-static64/study_analysis.json",
+      "sha256": "d49e68903afa5354872167acd7ea2bf788c6ce35bf429a344ad20d0420f8bc38",
+      "duration_s": 20.0,
+      "analysis_parameters": {
+        "bin_s": 0.1,
+        "event_after_s": 2.0,
+        "event_before_s": 0.5,
+        "maximum_case_samples": 100,
+        "maximum_evidence_rows_per_sample": 12,
+        "root_queue_disc_absence_independently_audited": false,
+        "tx_identity_retention_s": 10.0
+      },
+      "inputs": [
+        {
+          "kind": "sender",
+          "path": "/tmp/cs30401-study/micro-loss-static64/logs_ns3/tcp_flow_0_study_packets.csv"
+        },
+        {
+          "kind": "drop",
+          "path": "/tmp/cs30401-study/micro-loss-static64/logs_ns3/study_drops.csv"
+        },
+        {
+          "kind": "receiver",
+          "path": "/tmp/cs30401-study/micro-loss-static64/logs_ns3/study_rx_node_1_port_1024.csv"
+        },
+        {
+          "kind": "app",
+          "path": "/tmp/cs30401-study/micro-loss-static64/logs_ns3/study_app_rx_node_1_port_1024.csv"
+        },
+        {
+          "kind": "state",
+          "path": "/tmp/cs30401-study/micro-loss-static64/logs_ns3/tcp_flow_0_study_events.csv"
+        }
+      ],
+      "limitations": [
+        "Path-truth propagation RTT includes both directions; RTT decreases alone do not prove forward-path overtaking.",
+        "Repeated cumulative ACKs are observations, not an independent reconstruction of every duplicate-ACK predicate.",
+        "Exact tx_id tags, not packet UIDs, identify transmission instances; joins are retained for a bounded time.",
+        "Candidate unnecessary recovery associates a sequence gap, ACK evidence, retransmission and eventual original delivery; controlled comparisons are still needed for a causal performance claim.",
+        "LOSS state is reported directly and is not automatically called an RTO without a dedicated timer trace.",
+        "Drop trace rows can duplicate one physical loss; distinct tagged transmission counts and per-layer counts are separate.",
+        "No observed drop is not proof of no drop when coverage or packet parsing is incomplete.",
+        "Traffic-control TcDrop coverage is required before excluding network loss; pre-v3 coverage can omit this path.",
+        "Root queue-disc absence must be verified per device or explicitly independently audited; TcDrop does not observe a root queue-disc's own losses.",
+        "Receiver TCP window rejection and PAWS/input discards are not covered by queue/IP/device/traffic-control hooks.",
+        "Pre-processing wire Rx does not prove acceptance: a gap fill requires subsequent expected_seq advancement or same-time application delivery.",
+        "Application HandleRead bytes are ordered unique delivery; wire interval union is a separate metric.",
+        "Sequence epochs assume adjacent relevant sequence references differ by less than 2^31 bytes.",
+        "Static and dynamic path controls, actual loss tests and deployment-information errors remain separate experimental requirements."
+      ]
+    }
+  },
+  "figures": {
+    "route_event_causal": {
+      "cases": [
+        "leo10-base",
+        "leo10-guard20"
+      ],
+      "window_s": [
+        25.7,
+        28.2
+      ],
+      "details": [
+        {
+          "case": "leo10-base",
+          "event": {
+            "flows": {
+              "0": {
+                "ack_rows_with_sack": 9,
+                "application_delivered_bytes": 2964240,
+                "candidate_unnecessary_recovery_original_arrived": 1,
+                "official_retransmission_rows": 3,
+                "original_eventually_arrived_after_reordering": 4,
+                "out_of_order_payload_rows": 5,
+                "overlapping_sequence_tx_rows": 3,
+                "receiver_application_goodput_mbps": 9.485568,
+                "recovery_state_entries": 1,
+                "repeated_cumulative_ack_rows": 8,
+                "sender_new_sequence_bytes": 2949060,
+                "sender_payload_tx_bytes": 2953200,
+                "wire_payload_rx_bytes": 2964240,
+                "wire_unique_sequence_bytes": 2964240
+              }
+            },
+            "forward_path_changed": true,
+            "gap_case_samples": {
+              "0": [
+                {
+                  "acceptance_evidence": "same-time receiver application delivery after wire fill",
+                  "acceptance_observed_ns": 26279320534,
+                  "ack_evidence": [
+                    {
+                      "ack": 29732101,
+                      "repeated_ack_run": 0,
+                      "sack_blocks": "",
+                      "time_ns": 26322988882
+                    },
+                    {
+                      "ack": 29732101,
+                      "repeated_ack_run": 1,
+                      "sack_blocks": "29739001:29740381",
+                      "time_ns": 26324200077
+                    }
+                  ],
+                  "ack_evidence_count": 2,
+                  "classification": "original_eventually_arrived_after_reordering",
+                  "drop_evidence_for_original_fill": false,
+                  "duration_s": 0.001147203,
+                  "end_ns": 26279320534,
+                  "fill_candidates": [
+                    {
+                      "original": true,
+                      "tag_cache_miss": false,
+                      "time_ns": 26279320534,
+                      "tx_id": 21857
+                    }
+                  ],
+                  "fill_tag_cache_miss": false,
+                  "fill_tx_id": 21857,
+                  "first_ahead_sequence": 29739001,
+                  "missing_sequence": 29732101,
+                  "network_loss_exclusion_supported": true,
+                  "observed_distinct_drop_tx_ids": [],
+                  "observed_drop_rows_for_missing_sequence": 0,
+                  "original_fill_confirmed": true,
+                  "recovery_evidence": [],
+                  "recovery_evidence_count": 0,
+                  "retransmission_evidence": [],
+                  "retransmission_evidence_count": 0,
+                  "start_ns": 26278173331
+                },
+                {
+                  "acceptance_evidence": "same-time receiver application delivery after wire fill",
+                  "acceptance_observed_ns": 26281614939,
+                  "ack_evidence": [
+                    {
+                      "ack": 29733481,
+                      "repeated_ack_run": 0,
+                      "sack_blocks": "29739001:29740381",
+                      "time_ns": 26325347270
+                    },
+                    {
+                      "ack": 29733481,
+                      "repeated_ack_run": 1,
+                      "sack_blocks": "29739001:29741761",
+                      "time_ns": 26326494464
+                    }
+                  ],
+                  "ack_evidence_count": 2,
+                  "classification": "original_eventually_arrived_after_reordering",
+                  "drop_evidence_for_original_fill": false,
+                  "duration_s": 0.001147203,
+                  "end_ns": 26281614939,
+                  "fill_candidates": [
+                    {
+                      "original": true,
+                      "tag_cache_miss": false,
+                      "time_ns": 26281614939,
+                      "tx_id": 21858
+                    }
+                  ],
+                  "fill_tag_cache_miss": false,
+                  "fill_tx_id": 21858,
+                  "first_ahead_sequence": 29740381,
+                  "missing_sequence": 29733481,
+                  "network_loss_exclusion_supported": true,
+                  "observed_distinct_drop_tx_ids": [],
+                  "observed_drop_rows_for_missing_sequence": 0,
+                  "original_fill_confirmed": true,
+                  "recovery_evidence": [],
+                  "recovery_evidence_count": 0,
+                  "retransmission_evidence": [],
+                  "retransmission_evidence_count": 0,
+                  "start_ns": 26280467736
+                },
+                {
+                  "acceptance_evidence": "same-time receiver application delivery after wire fill",
+                  "acceptance_observed_ns": 26283909347,
+                  "ack_evidence": [
+                    {
+                      "ack": 29734861,
+                      "repeated_ack_run": 0,
+                      "sack_blocks": "29739001:29741761",
+                      "time_ns": 26327641659
+                    },
+                    {
+                      "ack": 29734861,
+                      "repeated_ack_run": 1,
+                      "sack_blocks": "29739001:29743141",
+                      "time_ns": 26328788841
+                    }
+                  ],
+                  "ack_evidence_count": 2,
+                  "classification": "candidate_unnecessary_recovery_original_arrived",
+                  "drop_evidence_for_original_fill": false,
+                  "duration_s": 0.001147205,
+                  "end_ns": 26283909347,
+                  "fill_candidates": [
+                    {
+                      "original": true,
+                      "tag_cache_miss": false,
+                      "time_ns": 26283909347,
+                      "tx_id": 21859
+                    }
+                  ],
+                  "fill_tag_cache_miss": false,
+                  "fill_tx_id": 21859,
+                  "first_ahead_sequence": 29741761,
+                  "missing_sequence": 29734861,
+                  "network_loss_exclusion_supported": true,
+                  "observed_distinct_drop_tx_ids": [],
+                  "observed_drop_rows_for_missing_sequence": 0,
+                  "original_fill_confirmed": true,
+                  "recovery_evidence": [
+                    {
+                      "preceding_ack": 29734861,
+                      "repeated_ack_run": 1,
+                      "sack_blocks": "29739001:29743141",
+                      "state": "RECOVERY",
+                      "time_ns": 26328788841
+                    }
+                  ],
+                  "recovery_evidence_count": 1,
+                  "retransmission_evidence": [
+                    {
+                      "end_seq": 29736241,
+                      "seq": 29734861,
+                      "time_ns": 26328788841,
+                      "tx_id": 21979
+                    }
+                  ],
+                  "retransmission_evidence_count": 1,
+                  "start_ns": 26282762142
+                },
+                {
+                  "acceptance_evidence": "same-time receiver application delivery after wire fill",
+                  "acceptance_observed_ns": 26286203752,
+                  "ack_evidence": [
+                    {
+                      "ack": 29736241,
+                      "repeated_ack_run": 0,
+                      "sack_blocks": "29739001:29743141",
+                      "time_ns": 26329936038
+                    },
+                    {
+                      "ack": 29736241,
+                      "repeated_ack_run": 1,
+                      "sack_blocks": "29739001:29744521",
+                      "time_ns": 26331083235
+                    }
+                  ],
+                  "ack_evidence_count": 2,
+                  "classification": "original_eventually_arrived_after_reordering",
+                  "drop_evidence_for_original_fill": false,
+                  "duration_s": 0.001147202,
+                  "end_ns": 26286203752,
+                  "fill_candidates": [
+                    {
+                      "original": true,
+                      "tag_cache_miss": false,
+                      "time_ns": 26286203752,
+                      "tx_id": 21860
+                    }
+                  ],
+                  "fill_tag_cache_miss": false,
+                  "fill_tx_id": 21860,
+                  "first_ahead_sequence": 29743141,
+                  "missing_sequence": 29736241,
+                  "network_loss_exclusion_supported": true,
+                  "observed_distinct_drop_tx_ids": [],
+                  "observed_drop_rows_for_missing_sequence": 0,
+                  "original_fill_confirmed": true,
+                  "recovery_evidence": [],
+                  "recovery_evidence_count": 0,
+                  "retransmission_evidence": [
+                    {
+                      "end_seq": 29737621,
+                      "seq": 29736241,
+                      "time_ns": 26329936038,
+                      "tx_id": 21980
+                    }
+                  ],
+                  "retransmission_evidence_count": 1,
+                  "start_ns": 26285056550
+                },
+                {
+                  "acceptance_evidence": "same-time receiver application delivery after wire fill",
+                  "acceptance_observed_ns": 26288498158,
+                  "ack_evidence": [
+                    {
+                      "ack": 29737621,
+                      "repeated_ack_run": 0,
+                      "sack_blocks": "29739001:29744521",
+                      "time_ns": 26332230428
+                    },
+                    {
+                      "ack": 29737621,
+                      "repeated_ack_run": 1,
+                      "sack_blocks": "29739001:29745901",
+                      "time_ns": 26333377623
+                    }
+                  ],
+                  "ack_evidence_count": 2,
+                  "classification": "original_eventually_arrived_after_reordering",
+                  "drop_evidence_for_original_fill": false,
+                  "duration_s": 0.001147203,
+                  "end_ns": 26288498158,
+                  "fill_candidates": [
+                    {
+                      "original": true,
+                      "tag_cache_miss": false,
+                      "time_ns": 26288498158,
+                      "tx_id": 21861
+                    }
+                  ],
+                  "fill_tag_cache_miss": false,
+                  "fill_tx_id": 21861,
+                  "first_ahead_sequence": 29744521,
+                  "missing_sequence": 29737621,
+                  "network_loss_exclusion_supported": true,
+                  "observed_distinct_drop_tx_ids": [],
+                  "observed_drop_rows_for_missing_sequence": 0,
+                  "original_fill_confirmed": true,
+                  "recovery_evidence": [],
+                  "recovery_evidence_count": 0,
+                  "retransmission_evidence": [
+                    {
+                      "end_seq": 29739001,
+                      "seq": 29737621,
+                      "time_ns": 26331083235,
+                      "tx_id": 21981
+                    }
+                  ],
+                  "retransmission_evidence_count": 1,
+                  "start_ns": 26287350955
+                }
+              ]
+            },
+            "rtt_change_ms": -6.634,
+            "time_s": 26.2,
+            "window_end_s": 28.2,
+            "window_start_s": 25.7
+          },
+          "retransmissions_in_window": 3,
+          "annotated_gap": {
+            "acceptance_evidence": "same-time receiver application delivery after wire fill",
+            "acceptance_observed_ns": 26283909347,
+            "ack_evidence": [
+              {
+                "ack": 29734861,
+                "repeated_ack_run": 0,
+                "sack_blocks": "29739001:29741761",
+                "time_ns": 26327641659
+              },
+              {
+                "ack": 29734861,
+                "repeated_ack_run": 1,
+                "sack_blocks": "29739001:29743141",
+                "time_ns": 26328788841
+              }
+            ],
+            "ack_evidence_count": 2,
+            "classification": "candidate_unnecessary_recovery_original_arrived",
+            "drop_evidence_for_original_fill": false,
+            "duration_s": 0.001147205,
+            "end_ns": 26283909347,
+            "fill_candidates": [
+              {
+                "original": true,
+                "tag_cache_miss": false,
+                "time_ns": 26283909347,
+                "tx_id": 21859
+              }
+            ],
+            "fill_tag_cache_miss": false,
+            "fill_tx_id": 21859,
+            "first_ahead_sequence": 29741761,
+            "missing_sequence": 29734861,
+            "network_loss_exclusion_supported": true,
+            "observed_distinct_drop_tx_ids": [],
+            "observed_drop_rows_for_missing_sequence": 0,
+            "original_fill_confirmed": true,
+            "recovery_evidence": [
+              {
+                "preceding_ack": 29734861,
+                "repeated_ack_run": 1,
+                "sack_blocks": "29739001:29743141",
+                "state": "RECOVERY",
+                "time_ns": 26328788841
+              }
+            ],
+            "recovery_evidence_count": 1,
+            "retransmission_evidence": [
+              {
+                "end_seq": 29736241,
+                "seq": 29734861,
+                "time_ns": 26328788841,
+                "tx_id": 21979
+              }
+            ],
+            "retransmission_evidence_count": 1,
+            "start_ns": 26282762142
+          }
+        },
+        {
+          "case": "leo10-guard20",
+          "event": {
+            "flows": {
+              "0": {
+                "ack_rows_with_sack": 9,
+                "application_delivered_bytes": 3007020,
+                "original_eventually_arrived_after_reordering": 5,
+                "out_of_order_payload_rows": 5,
+                "receiver_application_goodput_mbps": 9.622464,
+                "repeated_cumulative_ack_rows": 5,
+                "sender_new_sequence_bytes": 3027720,
+                "sender_payload_tx_bytes": 3027720,
+                "wire_payload_rx_bytes": 3007020,
+                "wire_unique_sequence_bytes": 3007020
+              }
+            },
+            "forward_path_changed": true,
+            "gap_case_samples": {
+              "0": [
+                {
+                  "acceptance_evidence": "same-time receiver application delivery after wire fill",
+                  "acceptance_observed_ns": 26279320534,
+                  "ack_evidence": [
+                    {
+                      "ack": 29732101,
+                      "repeated_ack_run": 0,
+                      "sack_blocks": "",
+                      "time_ns": 26322988882
+                    },
+                    {
+                      "ack": 29732101,
+                      "repeated_ack_run": 1,
+                      "sack_blocks": "29739001:29740381",
+                      "time_ns": 26324200077
+                    }
+                  ],
+                  "ack_evidence_count": 2,
+                  "classification": "original_eventually_arrived_after_reordering",
+                  "drop_evidence_for_original_fill": false,
+                  "duration_s": 0.001147203,
+                  "end_ns": 26279320534,
+                  "fill_candidates": [
+                    {
+                      "original": true,
+                      "tag_cache_miss": false,
+                      "time_ns": 26279320534,
+                      "tx_id": 21857
+                    }
+                  ],
+                  "fill_tag_cache_miss": false,
+                  "fill_tx_id": 21857,
+                  "first_ahead_sequence": 29739001,
+                  "missing_sequence": 29732101,
+                  "network_loss_exclusion_supported": true,
+                  "observed_distinct_drop_tx_ids": [],
+                  "observed_drop_rows_for_missing_sequence": 0,
+                  "original_fill_confirmed": true,
+                  "recovery_evidence": [],
+                  "recovery_evidence_count": 0,
+                  "retransmission_evidence": [],
+                  "retransmission_evidence_count": 0,
+                  "start_ns": 26278173331
+                },
+                {
+                  "acceptance_evidence": "same-time receiver application delivery after wire fill",
+                  "acceptance_observed_ns": 26281614939,
+                  "ack_evidence": [
+                    {
+                      "ack": 29733481,
+                      "repeated_ack_run": 0,
+                      "sack_blocks": "29739001:29740381",
+                      "time_ns": 26325347270
+                    },
+                    {
+                      "ack": 29733481,
+                      "repeated_ack_run": 1,
+                      "sack_blocks": "29739001:29741761",
+                      "time_ns": 26326494464
+                    }
+                  ],
+                  "ack_evidence_count": 2,
+                  "classification": "original_eventually_arrived_after_reordering",
+                  "drop_evidence_for_original_fill": false,
+                  "duration_s": 0.001147203,
+                  "end_ns": 26281614939,
+                  "fill_candidates": [
+                    {
+                      "original": true,
+                      "tag_cache_miss": false,
+                      "time_ns": 26281614939,
+                      "tx_id": 21858
+                    }
+                  ],
+                  "fill_tag_cache_miss": false,
+                  "fill_tx_id": 21858,
+                  "first_ahead_sequence": 29740381,
+                  "missing_sequence": 29733481,
+                  "network_loss_exclusion_supported": true,
+                  "observed_distinct_drop_tx_ids": [],
+                  "observed_drop_rows_for_missing_sequence": 0,
+                  "original_fill_confirmed": true,
+                  "recovery_evidence": [],
+                  "recovery_evidence_count": 0,
+                  "retransmission_evidence": [],
+                  "retransmission_evidence_count": 0,
+                  "start_ns": 26280467736
+                },
+                {
+                  "acceptance_evidence": "same-time receiver application delivery after wire fill",
+                  "acceptance_observed_ns": 26283909347,
+                  "ack_evidence": [
+                    {
+                      "ack": 29734861,
+                      "repeated_ack_run": 0,
+                      "sack_blocks": "29739001:29741761",
+                      "time_ns": 26327641659
+                    },
+                    {
+                      "ack": 29734861,
+                      "repeated_ack_run": 1,
+                      "sack_blocks": "29739001:29743141",
+                      "time_ns": 26328788841
+                    }
+                  ],
+                  "ack_evidence_count": 2,
+                  "classification": "original_eventually_arrived_after_reordering",
+                  "drop_evidence_for_original_fill": false,
+                  "duration_s": 0.001147205,
+                  "end_ns": 26283909347,
+                  "fill_candidates": [
+                    {
+                      "original": true,
+                      "tag_cache_miss": false,
+                      "time_ns": 26283909347,
+                      "tx_id": 21859
+                    }
+                  ],
+                  "fill_tag_cache_miss": false,
+                  "fill_tx_id": 21859,
+                  "first_ahead_sequence": 29741761,
+                  "missing_sequence": 29734861,
+                  "network_loss_exclusion_supported": true,
+                  "observed_distinct_drop_tx_ids": [],
+                  "observed_drop_rows_for_missing_sequence": 0,
+                  "original_fill_confirmed": true,
+                  "recovery_evidence": [],
+                  "recovery_evidence_count": 0,
+                  "retransmission_evidence": [],
+                  "retransmission_evidence_count": 0,
+                  "start_ns": 26282762142
+                },
+                {
+                  "acceptance_evidence": "same-time receiver application delivery after wire fill",
+                  "acceptance_observed_ns": 26286203752,
+                  "ack_evidence": [
+                    {
+                      "ack": 29736241,
+                      "repeated_ack_run": 0,
+                      "sack_blocks": "29739001:29743141",
+                      "time_ns": 26329936038
+                    },
+                    {
+                      "ack": 29736241,
+                      "repeated_ack_run": 1,
+                      "sack_blocks": "29739001:29744521",
+                      "time_ns": 26331083235
+                    }
+                  ],
+                  "ack_evidence_count": 2,
+                  "classification": "original_eventually_arrived_after_reordering",
+                  "drop_evidence_for_original_fill": false,
+                  "duration_s": 0.001147202,
+                  "end_ns": 26286203752,
+                  "fill_candidates": [
+                    {
+                      "original": true,
+                      "tag_cache_miss": false,
+                      "time_ns": 26286203752,
+                      "tx_id": 21860
+                    }
+                  ],
+                  "fill_tag_cache_miss": false,
+                  "fill_tx_id": 21860,
+                  "first_ahead_sequence": 29743141,
+                  "missing_sequence": 29736241,
+                  "network_loss_exclusion_supported": true,
+                  "observed_distinct_drop_tx_ids": [],
+                  "observed_drop_rows_for_missing_sequence": 0,
+                  "original_fill_confirmed": true,
+                  "recovery_evidence": [],
+                  "recovery_evidence_count": 0,
+                  "retransmission_evidence": [],
+                  "retransmission_evidence_count": 0,
+                  "start_ns": 26285056550
+                },
+                {
+                  "acceptance_evidence": "same-time receiver application delivery after wire fill",
+                  "acceptance_observed_ns": 26288498158,
+                  "ack_evidence": [
+                    {
+                      "ack": 29737621,
+                      "repeated_ack_run": 0,
+                      "sack_blocks": "29739001:29744521",
+                      "time_ns": 26332230428
+                    },
+                    {
+                      "ack": 29737621,
+                      "repeated_ack_run": 1,
+                      "sack_blocks": "29739001:29745901",
+                      "time_ns": 26333377623
+                    }
+                  ],
+                  "ack_evidence_count": 2,
+                  "classification": "original_eventually_arrived_after_reordering",
+                  "drop_evidence_for_original_fill": false,
+                  "duration_s": 0.001147203,
+                  "end_ns": 26288498158,
+                  "fill_candidates": [
+                    {
+                      "original": true,
+                      "tag_cache_miss": false,
+                      "time_ns": 26288498158,
+                      "tx_id": 21861
+                    }
+                  ],
+                  "fill_tag_cache_miss": false,
+                  "fill_tx_id": 21861,
+                  "first_ahead_sequence": 29744521,
+                  "missing_sequence": 29737621,
+                  "network_loss_exclusion_supported": true,
+                  "observed_distinct_drop_tx_ids": [],
+                  "observed_drop_rows_for_missing_sequence": 0,
+                  "original_fill_confirmed": true,
+                  "recovery_evidence": [],
+                  "recovery_evidence_count": 0,
+                  "retransmission_evidence": [],
+                  "retransmission_evidence_count": 0,
+                  "start_ns": 26287350955
+                }
+              ]
+            },
+            "rtt_change_ms": -6.634,
+            "time_s": 26.2,
+            "window_end_s": 28.2,
+            "window_start_s": 25.7
+          },
+          "retransmissions_in_window": 0,
+          "annotated_gap": null
+        }
+      ],
+      "missing_traces": []
+    },
+    "receiver_goodput_comparison": {
+      "cases": [
+        "leo10-base",
+        "leo10-static20",
+        "leo10-guard20"
+      ],
+      "event_time_s": 26.2,
+      "event_window_s": [
+        25.7,
+        28.2
+      ],
+      "values": [
+        {
+          "case": "leo10-base",
+          "whole_run_goodput_mbps": 9.544356,
+          "event_goodput_mbps": 9.485568,
+          "event_change_vs_first_pct": 0.0,
+          "whole_run_change_vs_first_pct": 0.0
+        },
+        {
+          "case": "leo10-static20",
+          "whole_run_goodput_mbps": 9.5469504,
+          "event_goodput_mbps": 9.622464,
+          "event_change_vs_first_pct": 1.443202979515834,
+          "whole_run_change_vs_first_pct": 0.027182556895399834
+        },
+        {
+          "case": "leo10-guard20",
+          "whole_run_goodput_mbps": 9.5465088,
+          "event_goodput_mbps": 9.622464,
+          "event_change_vs_first_pct": 1.443202979515834,
+          "whole_run_change_vs_first_pct": 0.022555738700424932
+        }
+      ]
+    },
+    "stable_path_loss_recovery": {
+      "cases": [
+        "micro-loss-base",
+        "micro-loss-static64",
+        "micro-loss-guard64"
+      ],
+      "observations": [
+        {
+          "case": "micro-loss-base",
+          "tx_id": 81566,
+          "drop_time_ns": 10060109600,
+          "retransmission_delay_s": 0.05034912,
+          "gap_resolution_delay_s": 0.30664656,
+          "accepted_fill_is_matching_retransmission": true
+        },
+        {
+          "case": "micro-loss-static64",
+          "tx_id": 81566,
+          "drop_time_ns": 10060109600,
+          "retransmission_delay_s": 0.05734704,
+          "gap_resolution_delay_s": 0.31364448,
+          "accepted_fill_is_matching_retransmission": true
+        },
+        {
+          "case": "micro-loss-guard64",
+          "tx_id": 81566,
+          "drop_time_ns": 10060109600,
+          "retransmission_delay_s": 0.05734704,
+          "gap_resolution_delay_s": 0.31364448,
+          "accepted_fill_is_matching_retransmission": true
+        }
+      ],
+      "application_targets": [],
+      "drop_layer_filter": [
+        "PhyRxDrop"
+      ],
+      "note": "Summary samples; unique transmission ID, sequence range deduplicates layers."
+    },
+    "candidate_baseline_traces": {
+      "cases": [
+        "leo10-base",
+        "leo10-vegas",
+        "leo10-bbr"
+      ],
+      "plotted_duration_s": 200.0,
+      "requested_goodput_bin_s": 1.0,
+      "available_traces": {
+        "goodput": [
+          "leo10-base",
+          "leo10-vegas",
+          "leo10-bbr"
+        ],
+        "cwnd": [
+          "leo10-base",
+          "leo10-vegas",
+          "leo10-bbr"
+        ],
+        "srtt": [
+          "leo10-base",
+          "leo10-vegas",
+          "leo10-bbr"
+        ]
+      }
+    }
+  }
+}

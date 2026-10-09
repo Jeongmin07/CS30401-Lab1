@@ -1,0 +1,71 @@
+{
+  "fresh_official_volume": true,
+  "all_identical": true,
+  "original": {
+    "cwnd": "acf9286c1705fa2aa31eb56805f016c3793051f3d566bc91c87c151af2c5cace",
+    "rtt": "5f7ed6085a55daca60bb23bb3df73b6098d879aa2005d8810d887b023080edc7",
+    "progress": "4ce98bb78f4f26fbc697971d23cfc085d8a3e89ad6b378222900a20469794ca4"
+  },
+  "fresh": {
+    "cwnd": "acf9286c1705fa2aa31eb56805f016c3793051f3d566bc91c87c151af2c5cace",
+    "rtt": "5f7ed6085a55daca60bb23bb3df73b6098d879aa2005d8810d887b023080edc7",
+    "progress": "4ce98bb78f4f26fbc697971d23cfc085d8a3e89ad6b378222900a20469794ca4"
+  },
+  "original_case": "leo10-guard20",
+  "replayed_case": "repro-leo10-guard20",
+  "patch_sha256": "b4189c7689379a523decf564605b055e836981f948d8ca6e662cbe81dd8fbf99",
+  "official_image_digest": "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+  "command": [
+    "python3",
+    "/work/run_study.py",
+    "repro-leo10-guard20",
+    "--rate",
+    "10",
+    "--queue",
+    "100",
+    "--duration",
+    "200",
+    "--parameters",
+    "study_threshold=20;study_windows=26100000000:26500000000|74900000000:75300000000",
+    "--patch",
+    "/work/study-v4.patch"
+  ],
+  "case_manifest": {
+    "case": "repro-leo10-guard20",
+    "parameters": {
+      "name": "repro-leo10-guard20",
+      "kind": "leo",
+      "cc": "TcpCubic",
+      "rate": 10.0,
+      "queue": 100,
+      "duration": 200,
+      "parameters": "study_threshold=20;study_windows=26100000000:26500000000|74900000000:75300000000",
+      "trace": 1,
+      "before_ms": 50,
+      "after_ms": 45,
+      "event_s": 10,
+      "loss_s": -1,
+      "initial_ssthresh_pkts": 900,
+      "patch": "/work/study-v4.patch"
+    },
+    "command": [
+      "/home/ubuntu/ns-3.48/build/scratch/main_satnet/ns3.48-main_satnet",
+      "--run_dir=/tmp/cs30401-study/repro-leo10-guard20"
+    ],
+    "trace_environment": {
+      "CS30401_STUDY_TRACE": "1",
+      "CS30401_STUDY_TRACE_DIR": "/tmp/cs30401-study/repro-leo10-guard20/logs_ns3"
+    },
+    "official_image": "ghcr.io/yeonjong21/cs30401-lab1:2026f-v1",
+    "official_image_digest": "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+    "patch_sha256": "b4189c7689379a523decf564605b055e836981f948d8ca6e662cbe81dd8fbf99",
+    "binary_sha256": "de9f678113c37a72df7e3215e876f18945c0ccecf9123f60fc8f655f9d9a6eab",
+    "state": "/home/ubuntu/lab/data/seoul_london/state",
+    "start_time_unix": 1791565798.3308246,
+    "status": "complete",
+    "config_ns3.properties_sha256": "4eb3014f99b10a8ed3d90c2be83dac0faf3c09c84f93da5a198bf84592efedbc",
+    "schedule.csv_sha256": "0ecfd35c2541858ee6916d8cb457bbf488b60964ddf9f6ee22abea3344624a86",
+    "exit_code": 0,
+    "wall_time_s": 23.61
+  }
+}

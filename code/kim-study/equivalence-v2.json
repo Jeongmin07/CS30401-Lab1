@@ -1,0 +1,26 @@
+{
+  "cwnd": {
+    "hashes": {
+      "original": "6651966bdd19d9cbcbcc99fb18ec854f152de7e81ed93e075e8baa5d09599860",
+      "trace_off": "6651966bdd19d9cbcbcc99fb18ec854f152de7e81ed93e075e8baa5d09599860",
+      "trace_on": "6651966bdd19d9cbcbcc99fb18ec854f152de7e81ed93e075e8baa5d09599860"
+    },
+    "identical": true
+  },
+  "rtt": {
+    "hashes": {
+      "original": "b959d51947cf5f8d37d672ef2a239c942b8b57e9f3d574ce2f7624de42ab1e38",
+      "trace_off": "b959d51947cf5f8d37d672ef2a239c942b8b57e9f3d574ce2f7624de42ab1e38",
+      "trace_on": "b959d51947cf5f8d37d672ef2a239c942b8b57e9f3d574ce2f7624de42ab1e38"
+    },
+    "identical": true
+  },
+  "progress": {
+    "hashes": {
+      "original": "2a9181e6a8a5bf7e1c25b8a770096f43714ec03779e7d7ccd2673b9992339534",
+      "trace_off": "2a9181e6a8a5bf7e1c25b8a770096f43714ec03779e7d7ccd2673b9992339534",
+      "trace_on": "2a9181e6a8a5bf7e1c25b8a770096f43714ec03779e7d7ccd2673b9992339534"
+    },
+    "identical": true
+  }
+}

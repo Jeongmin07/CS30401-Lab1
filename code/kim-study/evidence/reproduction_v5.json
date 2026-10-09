@@ -1,0 +1,1636 @@
+{
+  "checked_case_count": 23,
+  "checked_input_count": 184,
+  "checked_analysis_count": 23,
+  "all_identical": true,
+  "records": [
+    {
+      "case": "leo-delay26-base-v5",
+      "kind": "sender",
+      "relative_file": "logs_ns3/tcp_flow_0_study_packets.csv",
+      "original_sha256": "e1e7450cd034762b940561c96d6f83e3d3b6e868a1d5adfd005507fcd3086112",
+      "replayed_sha256": "e1e7450cd034762b940561c96d6f83e3d3b6e868a1d5adfd005507fcd3086112",
+      "identical": true
+    },
+    {
+      "case": "leo-delay26-base-v5",
+      "kind": "drop",
+      "relative_file": "logs_ns3/study_drops.csv",
+      "original_sha256": "e8b25a990303a6a838682994cafc710bf6010ae3239f7ddce7d03972783bad15",
+      "replayed_sha256": "e8b25a990303a6a838682994cafc710bf6010ae3239f7ddce7d03972783bad15",
+      "identical": true
+    },
+    {
+      "case": "leo-delay26-base-v5",
+      "kind": "receiver",
+      "relative_file": "logs_ns3/study_rx_node_1585_port_1024.csv",
+      "original_sha256": "4b55a096dab646a67b700c45b7610ba22be731c0b3f26810a1e696bdf954e17d",
+      "replayed_sha256": "4b55a096dab646a67b700c45b7610ba22be731c0b3f26810a1e696bdf954e17d",
+      "identical": true
+    },
+    {
+      "case": "leo-delay26-base-v5",
+      "kind": "app",
+      "relative_file": "logs_ns3/study_app_rx_node_1585_port_1024.csv",
+      "original_sha256": "2cca22c2b2f5cbb499951d24ac0afc34bf2d7d8a044548c66f0e3129a728b05c",
+      "replayed_sha256": "2cca22c2b2f5cbb499951d24ac0afc34bf2d7d8a044548c66f0e3129a728b05c",
+      "identical": true
+    },
+    {
+      "case": "leo-delay26-base-v5",
+      "kind": "state",
+      "relative_file": "logs_ns3/tcp_flow_0_study_events.csv",
+      "original_sha256": "673d3281bc25805713c6db19cd815672b241943c1f7d68feeee4d3ab1cd5f211",
+      "replayed_sha256": "673d3281bc25805713c6db19cd815672b241943c1f7d68feeee4d3ab1cd5f211",
+      "identical": true
+    },
+    {
+      "case": "leo-delay26-base-v5",
+      "kind": "legacy_cwnd",
+      "relative_file": "logs_ns3/tcp_flow_0_cwnd.csv",
+      "original_sha256": "c238e717a933beefe3d4cb8ffc2510810bfcaae2842694a08dce26d2933b1b12",
+      "replayed_sha256": "c238e717a933beefe3d4cb8ffc2510810bfcaae2842694a08dce26d2933b1b12",
+      "identical": true
+    },
+    {
+      "case": "leo-delay26-base-v5",
+      "kind": "legacy_rtt",
+      "relative_file": "logs_ns3/tcp_flow_0_rtt.csv",
+      "original_sha256": "1e7fdd41e97ee519fc9a5f721687e09da612fc264f7a24509314be557de6ef34",
+      "replayed_sha256": "1e7fdd41e97ee519fc9a5f721687e09da612fc264f7a24509314be557de6ef34",
+      "identical": true
+    },
+    {
+      "case": "leo-delay26-base-v5",
+      "kind": "legacy_progress",
+      "relative_file": "logs_ns3/tcp_flow_0_progress.csv",
+      "original_sha256": "5f6ef732560052a990445d2815873af1ab5dd7cbb30edf4be4293c0712d6299e",
+      "replayed_sha256": "5f6ef732560052a990445d2815873af1ab5dd7cbb30edf4be4293c0712d6299e",
+      "identical": true
+    },
+    {
+      "case": "leo10-base",
+      "kind": "sender",
+      "relative_file": "logs_ns3/tcp_flow_0_study_packets.csv",
+      "original_sha256": "78fc54184c4481b1421d2139870debcbe72259c18ccb011ba180ef77784e146f",
+      "replayed_sha256": "78fc54184c4481b1421d2139870debcbe72259c18ccb011ba180ef77784e146f",
+      "identical": true
+    },
+    {
+      "case": "leo10-base",
+      "kind": "drop",
+      "relative_file": "logs_ns3/study_drops.csv",
+      "original_sha256": "c915297632311402f8a2b1b4d6d24b83691f5971f40477934b2e2826887e6821",
+      "replayed_sha256": "c915297632311402f8a2b1b4d6d24b83691f5971f40477934b2e2826887e6821",
+      "identical": true
+    },
+    {
+      "case": "leo10-base",
+      "kind": "receiver",
+      "relative_file": "logs_ns3/study_rx_node_1585_port_1024.csv",
+      "original_sha256": "445161a24e3c943e61518cc5c67ce72aecbae5c1bb2caaf6bd4f4ce451b2f1cf",
+      "replayed_sha256": "445161a24e3c943e61518cc5c67ce72aecbae5c1bb2caaf6bd4f4ce451b2f1cf",
+      "identical": true
+    },
+    {
+      "case": "leo10-base",
+      "kind": "app",
+      "relative_file": "logs_ns3/study_app_rx_node_1585_port_1024.csv",
+      "original_sha256": "63defbe5710bafaafec06b3021dfda3c8d2df2bad3bf78ce15b54c84d7bc451d",
+      "replayed_sha256": "63defbe5710bafaafec06b3021dfda3c8d2df2bad3bf78ce15b54c84d7bc451d",
+      "identical": true
+    },
+    {
+      "case": "leo10-base",
+      "kind": "state",
+      "relative_file": "logs_ns3/tcp_flow_0_study_events.csv",
+      "original_sha256": "8809b380277e387dcc400a5d27a5679ccbdf446a08c7efb06fa7a021a42df78b",
+      "replayed_sha256": "8809b380277e387dcc400a5d27a5679ccbdf446a08c7efb06fa7a021a42df78b",
+      "identical": true
+    },
+    {
+      "case": "leo10-base",
+      "kind": "legacy_cwnd",
+      "relative_file": "logs_ns3/tcp_flow_0_cwnd.csv",
+      "original_sha256": "6651966bdd19d9cbcbcc99fb18ec854f152de7e81ed93e075e8baa5d09599860",
+      "replayed_sha256": "6651966bdd19d9cbcbcc99fb18ec854f152de7e81ed93e075e8baa5d09599860",
+      "identical": true
+    },
+    {
+      "case": "leo10-base",
+      "kind": "legacy_rtt",
+      "relative_file": "logs_ns3/tcp_flow_0_rtt.csv",
+      "original_sha256": "b959d51947cf5f8d37d672ef2a239c942b8b57e9f3d574ce2f7624de42ab1e38",
+      "replayed_sha256": "b959d51947cf5f8d37d672ef2a239c942b8b57e9f3d574ce2f7624de42ab1e38",
+      "identical": true
+    },
+    {
+      "case": "leo10-base",
+      "kind": "legacy_progress",
+      "relative_file": "logs_ns3/tcp_flow_0_progress.csv",
+      "original_sha256": "2a9181e6a8a5bf7e1c25b8a770096f43714ec03779e7d7ccd2673b9992339534",
+      "replayed_sha256": "2a9181e6a8a5bf7e1c25b8a770096f43714ec03779e7d7ccd2673b9992339534",
+      "identical": true
+    },
+    {
+      "case": "leo10-bbr",
+      "kind": "sender",
+      "relative_file": "logs_ns3/tcp_flow_0_study_packets.csv",
+      "original_sha256": "8bc5c2d6d8307f4f7bc11d91dec853ec638570072dcd7f119dcfe23d9196e927",
+      "replayed_sha256": "8bc5c2d6d8307f4f7bc11d91dec853ec638570072dcd7f119dcfe23d9196e927",
+      "identical": true
+    },
+    {
+      "case": "leo10-bbr",
+      "kind": "drop",
+      "relative_file": "logs_ns3/study_drops.csv",
+      "original_sha256": "627eb21feb865bfa126d4d62dadaba4ae8b659362b6ef8c2fa5a791ac7def2f9",
+      "replayed_sha256": "627eb21feb865bfa126d4d62dadaba4ae8b659362b6ef8c2fa5a791ac7def2f9",
+      "identical": true
+    },
+    {
+      "case": "leo10-bbr",
+      "kind": "receiver",
+      "relative_file": "logs_ns3/study_rx_node_1585_port_1024.csv",
+      "original_sha256": "1be961eb9b6812e899f6d8eca5293c3a6b08d4dfe91591835ded610b60728deb",
+      "replayed_sha256": "1be961eb9b6812e899f6d8eca5293c3a6b08d4dfe91591835ded610b60728deb",
+      "identical": true
+    },
+    {
+      "case": "leo10-bbr",
+      "kind": "app",
+      "relative_file": "logs_ns3/study_app_rx_node_1585_port_1024.csv",
+      "original_sha256": "33d815da638b488f2761a41657a03b5c10b1160f12b7a2c998bf7f763638972c",
+      "replayed_sha256": "33d815da638b488f2761a41657a03b5c10b1160f12b7a2c998bf7f763638972c",
+      "identical": true
+    },
+    {
+      "case": "leo10-bbr",
+      "kind": "state",
+      "relative_file": "logs_ns3/tcp_flow_0_study_events.csv",
+      "original_sha256": "d641093129e626989a6fb7dce259e7513452e058d2f8dc9829c9c3773a2c1957",
+      "replayed_sha256": "d641093129e626989a6fb7dce259e7513452e058d2f8dc9829c9c3773a2c1957",
+      "identical": true
+    },
+    {
+      "case": "leo10-bbr",
+      "kind": "legacy_cwnd",
+      "relative_file": "logs_ns3/tcp_flow_0_cwnd.csv",
+      "original_sha256": "79280c0a55b70514560e042fb03759581aecc7a54bf7e122d974b47b3728666d",
+      "replayed_sha256": "79280c0a55b70514560e042fb03759581aecc7a54bf7e122d974b47b3728666d",
+      "identical": true
+    },
+    {
+      "case": "leo10-bbr",
+      "kind": "legacy_rtt",
+      "relative_file": "logs_ns3/tcp_flow_0_rtt.csv",
+      "original_sha256": "e53ee819d6aa107f95340956951a614dea2c5d6d1adce7e439c32372007e7d02",
+      "replayed_sha256": "e53ee819d6aa107f95340956951a614dea2c5d6d1adce7e439c32372007e7d02",
+      "identical": true
+    },
+    {
+      "case": "leo10-bbr",
+      "kind": "legacy_progress",
+      "relative_file": "logs_ns3/tcp_flow_0_progress.csv",
+      "original_sha256": "25a78f64dc21aabe863bd57562780f0b7e667c2836c3d760fc5923add8182bcf",
+      "replayed_sha256": "25a78f64dc21aabe863bd57562780f0b7e667c2836c3d760fc5923add8182bcf",
+      "identical": true
+    },
+    {
+      "case": "leo10-guard20",
+      "kind": "sender",
+      "relative_file": "logs_ns3/tcp_flow_0_study_packets.csv",
+      "original_sha256": "6531d453d482133c6e1515206afddcf7277f061447db615bb5b8360a3787df3d",
+      "replayed_sha256": "6531d453d482133c6e1515206afddcf7277f061447db615bb5b8360a3787df3d",
+      "identical": true
+    },
+    {
+      "case": "leo10-guard20",
+      "kind": "drop",
+      "relative_file": "logs_ns3/study_drops.csv",
+      "original_sha256": "9aca2d266ffc1b98cd56f7803d04bdc7d807e11e44d25952b6c1ede94b8ef02e",
+      "replayed_sha256": "9aca2d266ffc1b98cd56f7803d04bdc7d807e11e44d25952b6c1ede94b8ef02e",
+      "identical": true
+    },
+    {
+      "case": "leo10-guard20",
+      "kind": "receiver",
+      "relative_file": "logs_ns3/study_rx_node_1585_port_1024.csv",
+      "original_sha256": "4fb3a7e70c6e79f54007de46368fd1e303359ef2882e0a314587c9e02292b71c",
+      "replayed_sha256": "4fb3a7e70c6e79f54007de46368fd1e303359ef2882e0a314587c9e02292b71c",
+      "identical": true
+    },
+    {
+      "case": "leo10-guard20",
+      "kind": "app",
+      "relative_file": "logs_ns3/study_app_rx_node_1585_port_1024.csv",
+      "original_sha256": "bd7722c1cbb78f51335b6b181d55f2a2c10e427b2a4326a02c74b873712cb23d",
+      "replayed_sha256": "bd7722c1cbb78f51335b6b181d55f2a2c10e427b2a4326a02c74b873712cb23d",
+      "identical": true
+    },
+    {
+      "case": "leo10-guard20",
+      "kind": "state",
+      "relative_file": "logs_ns3/tcp_flow_0_study_events.csv",
+      "original_sha256": "40cec6bcefee134a3455aff489c1e7a0fb28121a88b497ad15aa52693b04e019",
+      "replayed_sha256": "40cec6bcefee134a3455aff489c1e7a0fb28121a88b497ad15aa52693b04e019",
+      "identical": true
+    },
+    {
+      "case": "leo10-guard20",
+      "kind": "legacy_cwnd",
+      "relative_file": "logs_ns3/tcp_flow_0_cwnd.csv",
+      "original_sha256": "acf9286c1705fa2aa31eb56805f016c3793051f3d566bc91c87c151af2c5cace",
+      "replayed_sha256": "acf9286c1705fa2aa31eb56805f016c3793051f3d566bc91c87c151af2c5cace",
+      "identical": true
+    },
+    {
+      "case": "leo10-guard20",
+      "kind": "legacy_rtt",
+      "relative_file": "logs_ns3/tcp_flow_0_rtt.csv",
+      "original_sha256": "5f7ed6085a55daca60bb23bb3df73b6098d879aa2005d8810d887b023080edc7",
+      "replayed_sha256": "5f7ed6085a55daca60bb23bb3df73b6098d879aa2005d8810d887b023080edc7",
+      "identical": true
+    },
+    {
+      "case": "leo10-guard20",
+      "kind": "legacy_progress",
+      "relative_file": "logs_ns3/tcp_flow_0_progress.csv",
+      "original_sha256": "4ce98bb78f4f26fbc697971d23cfc085d8a3e89ad6b378222900a20469794ca4",
+      "replayed_sha256": "4ce98bb78f4f26fbc697971d23cfc085d8a3e89ad6b378222900a20469794ca4",
+      "identical": true
+    },
+    {
+      "case": "leo10-guard32",
+      "kind": "sender",
+      "relative_file": "logs_ns3/tcp_flow_0_study_packets.csv",
+      "original_sha256": "57881dc301187266e8c08244d26ba8912d41fd46cf428093b9e22d028f0774b1",
+      "replayed_sha256": "57881dc301187266e8c08244d26ba8912d41fd46cf428093b9e22d028f0774b1",
+      "identical": true
+    },
+    {
+      "case": "leo10-guard32",
+      "kind": "drop",
+      "relative_file": "logs_ns3/study_drops.csv",
+      "original_sha256": "9aca2d266ffc1b98cd56f7803d04bdc7d807e11e44d25952b6c1ede94b8ef02e",
+      "replayed_sha256": "9aca2d266ffc1b98cd56f7803d04bdc7d807e11e44d25952b6c1ede94b8ef02e",
+      "identical": true
+    },
+    {
+      "case": "leo10-guard32",
+      "kind": "receiver",
+      "relative_file": "logs_ns3/study_rx_node_1585_port_1024.csv",
+      "original_sha256": "4fb3a7e70c6e79f54007de46368fd1e303359ef2882e0a314587c9e02292b71c",
+      "replayed_sha256": "4fb3a7e70c6e79f54007de46368fd1e303359ef2882e0a314587c9e02292b71c",
+      "identical": true
+    },
+    {
+      "case": "leo10-guard32",
+      "kind": "app",
+      "relative_file": "logs_ns3/study_app_rx_node_1585_port_1024.csv",
+      "original_sha256": "bd7722c1cbb78f51335b6b181d55f2a2c10e427b2a4326a02c74b873712cb23d",
+      "replayed_sha256": "bd7722c1cbb78f51335b6b181d55f2a2c10e427b2a4326a02c74b873712cb23d",
+      "identical": true
+    },
+    {
+      "case": "leo10-guard32",
+      "kind": "state",
+      "relative_file": "logs_ns3/tcp_flow_0_study_events.csv",
+      "original_sha256": "1403ddd08acf692539d88a128e7259987150d7ed89b03d8a71838526bfc12fcc",
+      "replayed_sha256": "1403ddd08acf692539d88a128e7259987150d7ed89b03d8a71838526bfc12fcc",
+      "identical": true
+    },
+    {
+      "case": "leo10-guard32",
+      "kind": "legacy_cwnd",
+      "relative_file": "logs_ns3/tcp_flow_0_cwnd.csv",
+      "original_sha256": "acf9286c1705fa2aa31eb56805f016c3793051f3d566bc91c87c151af2c5cace",
+      "replayed_sha256": "acf9286c1705fa2aa31eb56805f016c3793051f3d566bc91c87c151af2c5cace",
+      "identical": true
+    },
+    {
+      "case": "leo10-guard32",
+      "kind": "legacy_rtt",
+      "relative_file": "logs_ns3/tcp_flow_0_rtt.csv",
+      "original_sha256": "5f7ed6085a55daca60bb23bb3df73b6098d879aa2005d8810d887b023080edc7",
+      "replayed_sha256": "5f7ed6085a55daca60bb23bb3df73b6098d879aa2005d8810d887b023080edc7",
+      "identical": true
+    },
+    {
+      "case": "leo10-guard32",
+      "kind": "legacy_progress",
+      "relative_file": "logs_ns3/tcp_flow_0_progress.csv",
+      "original_sha256": "4ce98bb78f4f26fbc697971d23cfc085d8a3e89ad6b378222900a20469794ca4",
+      "replayed_sha256": "4ce98bb78f4f26fbc697971d23cfc085d8a3e89ad6b378222900a20469794ca4",
+      "identical": true
+    },
+    {
+      "case": "leo10-guard8",
+      "kind": "sender",
+      "relative_file": "logs_ns3/tcp_flow_0_study_packets.csv",
+      "original_sha256": "a688b4b047f5eca0ade5bca94572095abde80ecc7a5f5ed22c79137e13545719",
+      "replayed_sha256": "a688b4b047f5eca0ade5bca94572095abde80ecc7a5f5ed22c79137e13545719",
+      "identical": true
+    },
+    {
+      "case": "leo10-guard8",
+      "kind": "drop",
+      "relative_file": "logs_ns3/study_drops.csv",
+      "original_sha256": "9aca2d266ffc1b98cd56f7803d04bdc7d807e11e44d25952b6c1ede94b8ef02e",
+      "replayed_sha256": "9aca2d266ffc1b98cd56f7803d04bdc7d807e11e44d25952b6c1ede94b8ef02e",
+      "identical": true
+    },
+    {
+      "case": "leo10-guard8",
+      "kind": "receiver",
+      "relative_file": "logs_ns3/study_rx_node_1585_port_1024.csv",
+      "original_sha256": "4fb3a7e70c6e79f54007de46368fd1e303359ef2882e0a314587c9e02292b71c",
+      "replayed_sha256": "4fb3a7e70c6e79f54007de46368fd1e303359ef2882e0a314587c9e02292b71c",
+      "identical": true
+    },
+    {
+      "case": "leo10-guard8",
+      "kind": "app",
+      "relative_file": "logs_ns3/study_app_rx_node_1585_port_1024.csv",
+      "original_sha256": "bd7722c1cbb78f51335b6b181d55f2a2c10e427b2a4326a02c74b873712cb23d",
+      "replayed_sha256": "bd7722c1cbb78f51335b6b181d55f2a2c10e427b2a4326a02c74b873712cb23d",
+      "identical": true
+    },
+    {
+      "case": "leo10-guard8",
+      "kind": "state",
+      "relative_file": "logs_ns3/tcp_flow_0_study_events.csv",
+      "original_sha256": "b93eb5594905a7fee151d53576489fb55ee9cb3d94f4e4d0b4d4fe5ecac73ddf",
+      "replayed_sha256": "b93eb5594905a7fee151d53576489fb55ee9cb3d94f4e4d0b4d4fe5ecac73ddf",
+      "identical": true
+    },
+    {
+      "case": "leo10-guard8",
+      "kind": "legacy_cwnd",
+      "relative_file": "logs_ns3/tcp_flow_0_cwnd.csv",
+      "original_sha256": "acf9286c1705fa2aa31eb56805f016c3793051f3d566bc91c87c151af2c5cace",
+      "replayed_sha256": "acf9286c1705fa2aa31eb56805f016c3793051f3d566bc91c87c151af2c5cace",
+      "identical": true
+    },
+    {
+      "case": "leo10-guard8",
+      "kind": "legacy_rtt",
+      "relative_file": "logs_ns3/tcp_flow_0_rtt.csv",
+      "original_sha256": "5f7ed6085a55daca60bb23bb3df73b6098d879aa2005d8810d887b023080edc7",
+      "replayed_sha256": "5f7ed6085a55daca60bb23bb3df73b6098d879aa2005d8810d887b023080edc7",
+      "identical": true
+    },
+    {
+      "case": "leo10-guard8",
+      "kind": "legacy_progress",
+      "relative_file": "logs_ns3/tcp_flow_0_progress.csv",
+      "original_sha256": "4ce98bb78f4f26fbc697971d23cfc085d8a3e89ad6b378222900a20469794ca4",
+      "replayed_sha256": "4ce98bb78f4f26fbc697971d23cfc085d8a3e89ad6b378222900a20469794ca4",
+      "identical": true
+    },
+    {
+      "case": "leo10-late20",
+      "kind": "sender",
+      "relative_file": "logs_ns3/tcp_flow_0_study_packets.csv",
+      "original_sha256": "634e646336664696f333612011b0d12e42a25686e23687dcc885d314dea6801d",
+      "replayed_sha256": "634e646336664696f333612011b0d12e42a25686e23687dcc885d314dea6801d",
+      "identical": true
+    },
+    {
+      "case": "leo10-late20",
+      "kind": "drop",
+      "relative_file": "logs_ns3/study_drops.csv",
+      "original_sha256": "c915297632311402f8a2b1b4d6d24b83691f5971f40477934b2e2826887e6821",
+      "replayed_sha256": "c915297632311402f8a2b1b4d6d24b83691f5971f40477934b2e2826887e6821",
+      "identical": true
+    },
+    {
+      "case": "leo10-late20",
+      "kind": "receiver",
+      "relative_file": "logs_ns3/study_rx_node_1585_port_1024.csv",
+      "original_sha256": "445161a24e3c943e61518cc5c67ce72aecbae5c1bb2caaf6bd4f4ce451b2f1cf",
+      "replayed_sha256": "445161a24e3c943e61518cc5c67ce72aecbae5c1bb2caaf6bd4f4ce451b2f1cf",
+      "identical": true
+    },
+    {
+      "case": "leo10-late20",
+      "kind": "app",
+      "relative_file": "logs_ns3/study_app_rx_node_1585_port_1024.csv",
+      "original_sha256": "63defbe5710bafaafec06b3021dfda3c8d2df2bad3bf78ce15b54c84d7bc451d",
+      "replayed_sha256": "63defbe5710bafaafec06b3021dfda3c8d2df2bad3bf78ce15b54c84d7bc451d",
+      "identical": true
+    },
+    {
+      "case": "leo10-late20",
+      "kind": "state",
+      "relative_file": "logs_ns3/tcp_flow_0_study_events.csv",
+      "original_sha256": "408845bbc888b1f0f1cd35f51b695807bef6c02a4846155c7e57e07f0a1115a7",
+      "replayed_sha256": "408845bbc888b1f0f1cd35f51b695807bef6c02a4846155c7e57e07f0a1115a7",
+      "identical": true
+    },
+    {
+      "case": "leo10-late20",
+      "kind": "legacy_cwnd",
+      "relative_file": "logs_ns3/tcp_flow_0_cwnd.csv",
+      "original_sha256": "6651966bdd19d9cbcbcc99fb18ec854f152de7e81ed93e075e8baa5d09599860",
+      "replayed_sha256": "6651966bdd19d9cbcbcc99fb18ec854f152de7e81ed93e075e8baa5d09599860",
+      "identical": true
+    },
+    {
+      "case": "leo10-late20",
+      "kind": "legacy_rtt",
+      "relative_file": "logs_ns3/tcp_flow_0_rtt.csv",
+      "original_sha256": "b959d51947cf5f8d37d672ef2a239c942b8b57e9f3d574ce2f7624de42ab1e38",
+      "replayed_sha256": "b959d51947cf5f8d37d672ef2a239c942b8b57e9f3d574ce2f7624de42ab1e38",
+      "identical": true
+    },
+    {
+      "case": "leo10-late20",
+      "kind": "legacy_progress",
+      "relative_file": "logs_ns3/tcp_flow_0_progress.csv",
+      "original_sha256": "2a9181e6a8a5bf7e1c25b8a770096f43714ec03779e7d7ccd2673b9992339534",
+      "replayed_sha256": "2a9181e6a8a5bf7e1c25b8a770096f43714ec03779e7d7ccd2673b9992339534",
+      "identical": true
+    },
+    {
+      "case": "leo10-smallq-base",
+      "kind": "sender",
+      "relative_file": "logs_ns3/tcp_flow_0_study_packets.csv",
+      "original_sha256": "67e3e5f036f8a342a61f2aa16f10cb8bb96127bc0e753f96442b36e46bb640d9",
+      "replayed_sha256": "67e3e5f036f8a342a61f2aa16f10cb8bb96127bc0e753f96442b36e46bb640d9",
+      "identical": true
+    },
+    {
+      "case": "leo10-smallq-base",
+      "kind": "drop",
+      "relative_file": "logs_ns3/study_drops.csv",
+      "original_sha256": "81086ad88a8951a3e5a18ee5c0d0d2f8e35b6f420311111f983d9e3aab5fae51",
+      "replayed_sha256": "81086ad88a8951a3e5a18ee5c0d0d2f8e35b6f420311111f983d9e3aab5fae51",
+      "identical": true
+    },
+    {
+      "case": "leo10-smallq-base",
+      "kind": "receiver",
+      "relative_file": "logs_ns3/study_rx_node_1585_port_1024.csv",
+      "original_sha256": "b22569023dfb283f8134dfd4e040c9f781608f911152910855bdf8c03dea3c04",
+      "replayed_sha256": "b22569023dfb283f8134dfd4e040c9f781608f911152910855bdf8c03dea3c04",
+      "identical": true
+    },
+    {
+      "case": "leo10-smallq-base",
+      "kind": "app",
+      "relative_file": "logs_ns3/study_app_rx_node_1585_port_1024.csv",
+      "original_sha256": "f7e8357cc4317f476dc1fc64bf15b1e1e82e2e3cd71c6de2275a8e6553c7e682",
+      "replayed_sha256": "f7e8357cc4317f476dc1fc64bf15b1e1e82e2e3cd71c6de2275a8e6553c7e682",
+      "identical": true
+    },
+    {
+      "case": "leo10-smallq-base",
+      "kind": "state",
+      "relative_file": "logs_ns3/tcp_flow_0_study_events.csv",
+      "original_sha256": "adb6b1a5780e8d55f076ea55c02236fde016c682f9acbde156774fae36d7c333",
+      "replayed_sha256": "adb6b1a5780e8d55f076ea55c02236fde016c682f9acbde156774fae36d7c333",
+      "identical": true
+    },
+    {
+      "case": "leo10-smallq-base",
+      "kind": "legacy_cwnd",
+      "relative_file": "logs_ns3/tcp_flow_0_cwnd.csv",
+      "original_sha256": "c78e422f6eeea5b57fc7c6de05b9d296c990b568426eaeea7dfddc6ea6ec2f94",
+      "replayed_sha256": "c78e422f6eeea5b57fc7c6de05b9d296c990b568426eaeea7dfddc6ea6ec2f94",
+      "identical": true
+    },
+    {
+      "case": "leo10-smallq-base",
+      "kind": "legacy_rtt",
+      "relative_file": "logs_ns3/tcp_flow_0_rtt.csv",
+      "original_sha256": "23cebb2dc3305bb80d890bc4607e677c596b76ff2c990bcf94e447d7b6fc2e3f",
+      "replayed_sha256": "23cebb2dc3305bb80d890bc4607e677c596b76ff2c990bcf94e447d7b6fc2e3f",
+      "identical": true
+    },
+    {
+      "case": "leo10-smallq-base",
+      "kind": "legacy_progress",
+      "relative_file": "logs_ns3/tcp_flow_0_progress.csv",
+      "original_sha256": "bd49becb9423f1d4e8846edb067912873981b1b2dfdc3417ffb1ac2193580b1e",
+      "replayed_sha256": "bd49becb9423f1d4e8846edb067912873981b1b2dfdc3417ffb1ac2193580b1e",
+      "identical": true
+    },
+    {
+      "case": "leo10-smallq-guard20",
+      "kind": "sender",
+      "relative_file": "logs_ns3/tcp_flow_0_study_packets.csv",
+      "original_sha256": "c68c3b3c85d9289325923a539941c90412454f2ea0134d76502db7e45cd12d39",
+      "replayed_sha256": "c68c3b3c85d9289325923a539941c90412454f2ea0134d76502db7e45cd12d39",
+      "identical": true
+    },
+    {
+      "case": "leo10-smallq-guard20",
+      "kind": "drop",
+      "relative_file": "logs_ns3/study_drops.csv",
+      "original_sha256": "5197a50ada7931dbedae6258f3513bc787c68a33fc0bce1e450fb16da27d6d36",
+      "replayed_sha256": "5197a50ada7931dbedae6258f3513bc787c68a33fc0bce1e450fb16da27d6d36",
+      "identical": true
+    },
+    {
+      "case": "leo10-smallq-guard20",
+      "kind": "receiver",
+      "relative_file": "logs_ns3/study_rx_node_1585_port_1024.csv",
+      "original_sha256": "ca295597fba0d95776c901f4f54f190de3de5b33779ffe18f12abbc579af2718",
+      "replayed_sha256": "ca295597fba0d95776c901f4f54f190de3de5b33779ffe18f12abbc579af2718",
+      "identical": true
+    },
+    {
+      "case": "leo10-smallq-guard20",
+      "kind": "app",
+      "relative_file": "logs_ns3/study_app_rx_node_1585_port_1024.csv",
+      "original_sha256": "b999a538b3c9d1720ef6fbdd9bc7be60c3d91f56ca22a04c2c5a709fc5674335",
+      "replayed_sha256": "b999a538b3c9d1720ef6fbdd9bc7be60c3d91f56ca22a04c2c5a709fc5674335",
+      "identical": true
+    },
+    {
+      "case": "leo10-smallq-guard20",
+      "kind": "state",
+      "relative_file": "logs_ns3/tcp_flow_0_study_events.csv",
+      "original_sha256": "6023f301200c37ee0ff406475cc3d31cdd7df018e83157f8681418583755ab47",
+      "replayed_sha256": "6023f301200c37ee0ff406475cc3d31cdd7df018e83157f8681418583755ab47",
+      "identical": true
+    },
+    {
+      "case": "leo10-smallq-guard20",
+      "kind": "legacy_cwnd",
+      "relative_file": "logs_ns3/tcp_flow_0_cwnd.csv",
+      "original_sha256": "ad0baf00d78015dde57c49c87e81c0ce13be88484a7795b0dd6b2d784b57abd0",
+      "replayed_sha256": "ad0baf00d78015dde57c49c87e81c0ce13be88484a7795b0dd6b2d784b57abd0",
+      "identical": true
+    },
+    {
+      "case": "leo10-smallq-guard20",
+      "kind": "legacy_rtt",
+      "relative_file": "logs_ns3/tcp_flow_0_rtt.csv",
+      "original_sha256": "e629f6bd3d1a059319d5201650eae57b34f921608c617caca3a6efb0333b14be",
+      "replayed_sha256": "e629f6bd3d1a059319d5201650eae57b34f921608c617caca3a6efb0333b14be",
+      "identical": true
+    },
+    {
+      "case": "leo10-smallq-guard20",
+      "kind": "legacy_progress",
+      "relative_file": "logs_ns3/tcp_flow_0_progress.csv",
+      "original_sha256": "b69b1de49798cd91f54433d6918666f0ff533c59ddf6dd4d7cbbe118281678ce",
+      "replayed_sha256": "b69b1de49798cd91f54433d6918666f0ff533c59ddf6dd4d7cbbe118281678ce",
+      "identical": true
+    },
+    {
+      "case": "leo10-static20",
+      "kind": "sender",
+      "relative_file": "logs_ns3/tcp_flow_0_study_packets.csv",
+      "original_sha256": "90b0fb295abd8985bb1167b7614d306f50143436cc0b4cdcb9b81cb28b61f5f3",
+      "replayed_sha256": "90b0fb295abd8985bb1167b7614d306f50143436cc0b4cdcb9b81cb28b61f5f3",
+      "identical": true
+    },
+    {
+      "case": "leo10-static20",
+      "kind": "drop",
+      "relative_file": "logs_ns3/study_drops.csv",
+      "original_sha256": "60f9c3c9e18418b6ffaea2093c01741313bbf431b28891f8fcf26fe4bbfec438",
+      "replayed_sha256": "60f9c3c9e18418b6ffaea2093c01741313bbf431b28891f8fcf26fe4bbfec438",
+      "identical": true
+    },
+    {
+      "case": "leo10-static20",
+      "kind": "receiver",
+      "relative_file": "logs_ns3/study_rx_node_1585_port_1024.csv",
+      "original_sha256": "b75e9f7ae2a10a052b5a6994c6f8c2b632c595b3b66b09c27a55e3b01f307dff",
+      "replayed_sha256": "b75e9f7ae2a10a052b5a6994c6f8c2b632c595b3b66b09c27a55e3b01f307dff",
+      "identical": true
+    },
+    {
+      "case": "leo10-static20",
+      "kind": "app",
+      "relative_file": "logs_ns3/study_app_rx_node_1585_port_1024.csv",
+      "original_sha256": "d130e9b181b7b475406d07b451af531c912d02497c75742e2e967b1282c8d2c0",
+      "replayed_sha256": "d130e9b181b7b475406d07b451af531c912d02497c75742e2e967b1282c8d2c0",
+      "identical": true
+    },
+    {
+      "case": "leo10-static20",
+      "kind": "state",
+      "relative_file": "logs_ns3/tcp_flow_0_study_events.csv",
+      "original_sha256": "06a811768bf5f6df6cb398bbd473798bd731197aa81ae00f6bd124452aa9a05c",
+      "replayed_sha256": "06a811768bf5f6df6cb398bbd473798bd731197aa81ae00f6bd124452aa9a05c",
+      "identical": true
+    },
+    {
+      "case": "leo10-static20",
+      "kind": "legacy_cwnd",
+      "relative_file": "logs_ns3/tcp_flow_0_cwnd.csv",
+      "original_sha256": "e133fc6f58c38d36ab5f536da1434bba36a6a8e2bf5a5343938c2a58ae8d98eb",
+      "replayed_sha256": "e133fc6f58c38d36ab5f536da1434bba36a6a8e2bf5a5343938c2a58ae8d98eb",
+      "identical": true
+    },
+    {
+      "case": "leo10-static20",
+      "kind": "legacy_rtt",
+      "relative_file": "logs_ns3/tcp_flow_0_rtt.csv",
+      "original_sha256": "62f27f595008d39333ace4cf39c352f5c791f0498a1e64866bf122f7f36a5cf7",
+      "replayed_sha256": "62f27f595008d39333ace4cf39c352f5c791f0498a1e64866bf122f7f36a5cf7",
+      "identical": true
+    },
+    {
+      "case": "leo10-static20",
+      "kind": "legacy_progress",
+      "relative_file": "logs_ns3/tcp_flow_0_progress.csv",
+      "original_sha256": "d8bb61d5a15f70a6cb507b5f99e14f66a8a3ff61aca95b5571819c8b58eb534e",
+      "replayed_sha256": "d8bb61d5a15f70a6cb507b5f99e14f66a8a3ff61aca95b5571819c8b58eb534e",
+      "identical": true
+    },
+    {
+      "case": "leo10-vegas",
+      "kind": "sender",
+      "relative_file": "logs_ns3/tcp_flow_0_study_packets.csv",
+      "original_sha256": "732e08c994cf422cdc9ef17b225340d449dd1ddb02188a9e2841850a3112d068",
+      "replayed_sha256": "732e08c994cf422cdc9ef17b225340d449dd1ddb02188a9e2841850a3112d068",
+      "identical": true
+    },
+    {
+      "case": "leo10-vegas",
+      "kind": "drop",
+      "relative_file": "logs_ns3/study_drops.csv",
+      "original_sha256": "ec37c4087cf6eb0bf412760b74ba37e2279e44d6bfff2d89f87c8135ec82b959",
+      "replayed_sha256": "ec37c4087cf6eb0bf412760b74ba37e2279e44d6bfff2d89f87c8135ec82b959",
+      "identical": true
+    },
+    {
+      "case": "leo10-vegas",
+      "kind": "receiver",
+      "relative_file": "logs_ns3/study_rx_node_1585_port_1024.csv",
+      "original_sha256": "8ce6b166872cb48ef9c517cc3a3d77e1511830f2aa958ffcff58a257dc94c9fe",
+      "replayed_sha256": "8ce6b166872cb48ef9c517cc3a3d77e1511830f2aa958ffcff58a257dc94c9fe",
+      "identical": true
+    },
+    {
+      "case": "leo10-vegas",
+      "kind": "app",
+      "relative_file": "logs_ns3/study_app_rx_node_1585_port_1024.csv",
+      "original_sha256": "a266f12dad99197d430a7cd38466c46ac0dbbc62d85ac4bb6133f33204e849ef",
+      "replayed_sha256": "a266f12dad99197d430a7cd38466c46ac0dbbc62d85ac4bb6133f33204e849ef",
+      "identical": true
+    },
+    {
+      "case": "leo10-vegas",
+      "kind": "state",
+      "relative_file": "logs_ns3/tcp_flow_0_study_events.csv",
+      "original_sha256": "4cedf6a1604274c0149dc46e65115e39e5a3e77a8bddb173f3e6d8d27487a891",
+      "replayed_sha256": "4cedf6a1604274c0149dc46e65115e39e5a3e77a8bddb173f3e6d8d27487a891",
+      "identical": true
+    },
+    {
+      "case": "leo10-vegas",
+      "kind": "legacy_cwnd",
+      "relative_file": "logs_ns3/tcp_flow_0_cwnd.csv",
+      "original_sha256": "bdfff6a8a2d9293a98bee3cb40fe8bbc5a39f2460c21ddc4562b78aa2dfbe46c",
+      "replayed_sha256": "bdfff6a8a2d9293a98bee3cb40fe8bbc5a39f2460c21ddc4562b78aa2dfbe46c",
+      "identical": true
+    },
+    {
+      "case": "leo10-vegas",
+      "kind": "legacy_rtt",
+      "relative_file": "logs_ns3/tcp_flow_0_rtt.csv",
+      "original_sha256": "e14ba7d8ae674dfab4e1af563ce1772cd2dc73522b24d0f908c35f253e8050f1",
+      "replayed_sha256": "e14ba7d8ae674dfab4e1af563ce1772cd2dc73522b24d0f908c35f253e8050f1",
+      "identical": true
+    },
+    {
+      "case": "leo10-vegas",
+      "kind": "legacy_progress",
+      "relative_file": "logs_ns3/tcp_flow_0_progress.csv",
+      "original_sha256": "7609db03fd7392994d1c611eb8131d684607679efeb38fa675b519e8cbb46ca0",
+      "replayed_sha256": "7609db03fd7392994d1c611eb8131d684607679efeb38fa675b519e8cbb46ca0",
+      "identical": true
+    },
+    {
+      "case": "leo100-base",
+      "kind": "sender",
+      "relative_file": "logs_ns3/tcp_flow_0_study_packets.csv",
+      "original_sha256": "086e163a1c08b29c9e6b87cc28ab07be6bfbc216264c6d740037ed1967d63478",
+      "replayed_sha256": "086e163a1c08b29c9e6b87cc28ab07be6bfbc216264c6d740037ed1967d63478",
+      "identical": true
+    },
+    {
+      "case": "leo100-base",
+      "kind": "drop",
+      "relative_file": "logs_ns3/study_drops.csv",
+      "original_sha256": "e0a1c0dd8879bf86641ab4be3e66d1a9f1496849449055196bec80d937400e60",
+      "replayed_sha256": "e0a1c0dd8879bf86641ab4be3e66d1a9f1496849449055196bec80d937400e60",
+      "identical": true
+    },
+    {
+      "case": "leo100-base",
+      "kind": "receiver",
+      "relative_file": "logs_ns3/study_rx_node_1585_port_1024.csv",
+      "original_sha256": "eac5ceba977957cf96e07b48a59c504d160f78e2cec319f9297b24f81d25d609",
+      "replayed_sha256": "eac5ceba977957cf96e07b48a59c504d160f78e2cec319f9297b24f81d25d609",
+      "identical": true
+    },
+    {
+      "case": "leo100-base",
+      "kind": "app",
+      "relative_file": "logs_ns3/study_app_rx_node_1585_port_1024.csv",
+      "original_sha256": "fc490349cd1060850d75c883bec8e3361409847912cd3ad4f22e76dd7657ab68",
+      "replayed_sha256": "fc490349cd1060850d75c883bec8e3361409847912cd3ad4f22e76dd7657ab68",
+      "identical": true
+    },
+    {
+      "case": "leo100-base",
+      "kind": "state",
+      "relative_file": "logs_ns3/tcp_flow_0_study_events.csv",
+      "original_sha256": "69b713e94794cdf0f850c4b8e26276bcbee92441929dbebf60f07eb707215a4e",
+      "replayed_sha256": "69b713e94794cdf0f850c4b8e26276bcbee92441929dbebf60f07eb707215a4e",
+      "identical": true
+    },
+    {
+      "case": "leo100-base",
+      "kind": "legacy_cwnd",
+      "relative_file": "logs_ns3/tcp_flow_0_cwnd.csv",
+      "original_sha256": "9e28098713d75302e7844154fe96d70d2b1b85593a5ef70515b4db7702d323e7",
+      "replayed_sha256": "9e28098713d75302e7844154fe96d70d2b1b85593a5ef70515b4db7702d323e7",
+      "identical": true
+    },
+    {
+      "case": "leo100-base",
+      "kind": "legacy_rtt",
+      "relative_file": "logs_ns3/tcp_flow_0_rtt.csv",
+      "original_sha256": "4a497ea3b2432b9077cd564f3470f996908c4fba64763b283524d6a67163e69f",
+      "replayed_sha256": "4a497ea3b2432b9077cd564f3470f996908c4fba64763b283524d6a67163e69f",
+      "identical": true
+    },
+    {
+      "case": "leo100-base",
+      "kind": "legacy_progress",
+      "relative_file": "logs_ns3/tcp_flow_0_progress.csv",
+      "original_sha256": "c542c5f9816d0b922d7d3f8910d213c224382eb74bd3de3ae4bd8147021fcce3",
+      "replayed_sha256": "c542c5f9816d0b922d7d3f8910d213c224382eb74bd3de3ae4bd8147021fcce3",
+      "identical": true
+    },
+    {
+      "case": "leo100-guard64",
+      "kind": "sender",
+      "relative_file": "logs_ns3/tcp_flow_0_study_packets.csv",
+      "original_sha256": "c8006de6d2d66213abec5755c603ed9baa9c41bfdf3b95b65edc5a3ed1a27828",
+      "replayed_sha256": "c8006de6d2d66213abec5755c603ed9baa9c41bfdf3b95b65edc5a3ed1a27828",
+      "identical": true
+    },
+    {
+      "case": "leo100-guard64",
+      "kind": "drop",
+      "relative_file": "logs_ns3/study_drops.csv",
+      "original_sha256": "e8380f2a0862441f1b8a5d63c85ad06bcb9878b12c01ca257d3e8a64890efbc2",
+      "replayed_sha256": "e8380f2a0862441f1b8a5d63c85ad06bcb9878b12c01ca257d3e8a64890efbc2",
+      "identical": true
+    },
+    {
+      "case": "leo100-guard64",
+      "kind": "receiver",
+      "relative_file": "logs_ns3/study_rx_node_1585_port_1024.csv",
+      "original_sha256": "52df8574ff3938df9ddbbf2a664bfb4b12bce1c6752b8b03e4bdbf8d6b6c60bf",
+      "replayed_sha256": "52df8574ff3938df9ddbbf2a664bfb4b12bce1c6752b8b03e4bdbf8d6b6c60bf",
+      "identical": true
+    },
+    {
+      "case": "leo100-guard64",
+      "kind": "app",
+      "relative_file": "logs_ns3/study_app_rx_node_1585_port_1024.csv",
+      "original_sha256": "9bf5e212c8fc1e203141e0994ae5623f244d2e14ca9b5185bbb6ca8b622b42ea",
+      "replayed_sha256": "9bf5e212c8fc1e203141e0994ae5623f244d2e14ca9b5185bbb6ca8b622b42ea",
+      "identical": true
+    },
+    {
+      "case": "leo100-guard64",
+      "kind": "state",
+      "relative_file": "logs_ns3/tcp_flow_0_study_events.csv",
+      "original_sha256": "bfb0a29f2b50834bfb765c89e1f2c17937253ef60f29678d351402241b21507d",
+      "replayed_sha256": "bfb0a29f2b50834bfb765c89e1f2c17937253ef60f29678d351402241b21507d",
+      "identical": true
+    },
+    {
+      "case": "leo100-guard64",
+      "kind": "legacy_cwnd",
+      "relative_file": "logs_ns3/tcp_flow_0_cwnd.csv",
+      "original_sha256": "5ec450355efeada060719c37c223d2545b6b2910abc1ecbf425495e4214a5717",
+      "replayed_sha256": "5ec450355efeada060719c37c223d2545b6b2910abc1ecbf425495e4214a5717",
+      "identical": true
+    },
+    {
+      "case": "leo100-guard64",
+      "kind": "legacy_rtt",
+      "relative_file": "logs_ns3/tcp_flow_0_rtt.csv",
+      "original_sha256": "4754abb02007e3af089783286d7813b23f4a93e0be8739ca97b51100f6b6ccc1",
+      "replayed_sha256": "4754abb02007e3af089783286d7813b23f4a93e0be8739ca97b51100f6b6ccc1",
+      "identical": true
+    },
+    {
+      "case": "leo100-guard64",
+      "kind": "legacy_progress",
+      "relative_file": "logs_ns3/tcp_flow_0_progress.csv",
+      "original_sha256": "0ec6364ad095934c1f850bc32d7d48e07bff32a835affbf5996cd0de31fc1aa3",
+      "replayed_sha256": "0ec6364ad095934c1f850bc32d7d48e07bff32a835affbf5996cd0de31fc1aa3",
+      "identical": true
+    },
+    {
+      "case": "leo100-static64",
+      "kind": "sender",
+      "relative_file": "logs_ns3/tcp_flow_0_study_packets.csv",
+      "original_sha256": "6039e1c64ae4b535efb987df0f6254c238c7a9fb82844f895a2755b427f15178",
+      "replayed_sha256": "6039e1c64ae4b535efb987df0f6254c238c7a9fb82844f895a2755b427f15178",
+      "identical": true
+    },
+    {
+      "case": "leo100-static64",
+      "kind": "drop",
+      "relative_file": "logs_ns3/study_drops.csv",
+      "original_sha256": "2a9643aa55ebc299af1413b2c622a029819985b58f39cbaac233668bde936dad",
+      "replayed_sha256": "2a9643aa55ebc299af1413b2c622a029819985b58f39cbaac233668bde936dad",
+      "identical": true
+    },
+    {
+      "case": "leo100-static64",
+      "kind": "receiver",
+      "relative_file": "logs_ns3/study_rx_node_1585_port_1024.csv",
+      "original_sha256": "e32fcfa14761e46cc53743f787302da56cc07b63a47f2a280678f319829f7fa0",
+      "replayed_sha256": "e32fcfa14761e46cc53743f787302da56cc07b63a47f2a280678f319829f7fa0",
+      "identical": true
+    },
+    {
+      "case": "leo100-static64",
+      "kind": "app",
+      "relative_file": "logs_ns3/study_app_rx_node_1585_port_1024.csv",
+      "original_sha256": "a5ec8216bf0938d4ee754883bad744541f599f48250f7c64f0836538df7c0561",
+      "replayed_sha256": "a5ec8216bf0938d4ee754883bad744541f599f48250f7c64f0836538df7c0561",
+      "identical": true
+    },
+    {
+      "case": "leo100-static64",
+      "kind": "state",
+      "relative_file": "logs_ns3/tcp_flow_0_study_events.csv",
+      "original_sha256": "39321724dd84dd08ce81479ead3d87bc060ede1aeebd3b8bd8e3873485f33656",
+      "replayed_sha256": "39321724dd84dd08ce81479ead3d87bc060ede1aeebd3b8bd8e3873485f33656",
+      "identical": true
+    },
+    {
+      "case": "leo100-static64",
+      "kind": "legacy_cwnd",
+      "relative_file": "logs_ns3/tcp_flow_0_cwnd.csv",
+      "original_sha256": "3305ca59c8b7d610bccc3934ac4e404f1f3abeb91b768d2703276d2f3fdf3727",
+      "replayed_sha256": "3305ca59c8b7d610bccc3934ac4e404f1f3abeb91b768d2703276d2f3fdf3727",
+      "identical": true
+    },
+    {
+      "case": "leo100-static64",
+      "kind": "legacy_rtt",
+      "relative_file": "logs_ns3/tcp_flow_0_rtt.csv",
+      "original_sha256": "359de063fc271e0c374465740c1862e60f9e7432538e10e5e011db99820a3401",
+      "replayed_sha256": "359de063fc271e0c374465740c1862e60f9e7432538e10e5e011db99820a3401",
+      "identical": true
+    },
+    {
+      "case": "leo100-static64",
+      "kind": "legacy_progress",
+      "relative_file": "logs_ns3/tcp_flow_0_progress.csv",
+      "original_sha256": "4145b3ac043af4cac67ae3bb7088d8cd3873b13f7f58d6839b97fcf4a2b4b981",
+      "replayed_sha256": "4145b3ac043af4cac67ae3bb7088d8cd3873b13f7f58d6839b97fcf4a2b4b981",
+      "identical": true
+    },
+    {
+      "case": "micro-loss-base",
+      "kind": "sender",
+      "relative_file": "logs_ns3/tcp_flow_0_study_packets.csv",
+      "original_sha256": "037e3847a9411dad620ec08adcd7d41ed986405f803ab9187a20dc25a06757f9",
+      "replayed_sha256": "037e3847a9411dad620ec08adcd7d41ed986405f803ab9187a20dc25a06757f9",
+      "identical": true
+    },
+    {
+      "case": "micro-loss-base",
+      "kind": "drop",
+      "relative_file": "logs_ns3/study_drops.csv",
+      "original_sha256": "30628061a68bb4a7f02b59742d372063aeccc189f1c5cb35827d8976f079e95e",
+      "replayed_sha256": "30628061a68bb4a7f02b59742d372063aeccc189f1c5cb35827d8976f079e95e",
+      "identical": true
+    },
+    {
+      "case": "micro-loss-base",
+      "kind": "receiver",
+      "relative_file": "logs_ns3/study_rx_node_1_port_1024.csv",
+      "original_sha256": "606de390982e350e422eb80f9ef372ec1fd76ed86c73b51a649a84d059ffcfc8",
+      "replayed_sha256": "606de390982e350e422eb80f9ef372ec1fd76ed86c73b51a649a84d059ffcfc8",
+      "identical": true
+    },
+    {
+      "case": "micro-loss-base",
+      "kind": "app",
+      "relative_file": "logs_ns3/study_app_rx_node_1_port_1024.csv",
+      "original_sha256": "71e8e66b2d6973c767c912fdd9e6d24914e9873e1c6f64f528258ea7dc81acbd",
+      "replayed_sha256": "71e8e66b2d6973c767c912fdd9e6d24914e9873e1c6f64f528258ea7dc81acbd",
+      "identical": true
+    },
+    {
+      "case": "micro-loss-base",
+      "kind": "state",
+      "relative_file": "logs_ns3/tcp_flow_0_study_events.csv",
+      "original_sha256": "f5665edddd292a164f6f11da2d1b2e17a2ca76c0bde205048e7253938f00d62f",
+      "replayed_sha256": "f5665edddd292a164f6f11da2d1b2e17a2ca76c0bde205048e7253938f00d62f",
+      "identical": true
+    },
+    {
+      "case": "micro-loss-base",
+      "kind": "legacy_cwnd",
+      "relative_file": "logs_ns3/tcp_flow_0_cwnd.csv",
+      "original_sha256": "af996c47882a24e9e6a10efc26f0efe9a6198b10720c71e3654722b008380329",
+      "replayed_sha256": "af996c47882a24e9e6a10efc26f0efe9a6198b10720c71e3654722b008380329",
+      "identical": true
+    },
+    {
+      "case": "micro-loss-base",
+      "kind": "legacy_rtt",
+      "relative_file": "logs_ns3/tcp_flow_0_rtt.csv",
+      "original_sha256": "d2b71e156c495ee4039213936534a198edc079c8a0898f8d7aecad28a262f3f3",
+      "replayed_sha256": "d2b71e156c495ee4039213936534a198edc079c8a0898f8d7aecad28a262f3f3",
+      "identical": true
+    },
+    {
+      "case": "micro-loss-base",
+      "kind": "legacy_progress",
+      "relative_file": "logs_ns3/tcp_flow_0_progress.csv",
+      "original_sha256": "3f7832e737091ca73fa1cd09c8f9f2154349ec0ef48f80c4adf914209e9016f3",
+      "replayed_sha256": "3f7832e737091ca73fa1cd09c8f9f2154349ec0ef48f80c4adf914209e9016f3",
+      "identical": true
+    },
+    {
+      "case": "micro-loss-guard64",
+      "kind": "sender",
+      "relative_file": "logs_ns3/tcp_flow_0_study_packets.csv",
+      "original_sha256": "4ab554c7161e578558eaa452d4765d9379ef143ff66ed441f691cdc7ae4a327c",
+      "replayed_sha256": "4ab554c7161e578558eaa452d4765d9379ef143ff66ed441f691cdc7ae4a327c",
+      "identical": true
+    },
+    {
+      "case": "micro-loss-guard64",
+      "kind": "drop",
+      "relative_file": "logs_ns3/study_drops.csv",
+      "original_sha256": "30628061a68bb4a7f02b59742d372063aeccc189f1c5cb35827d8976f079e95e",
+      "replayed_sha256": "30628061a68bb4a7f02b59742d372063aeccc189f1c5cb35827d8976f079e95e",
+      "identical": true
+    },
+    {
+      "case": "micro-loss-guard64",
+      "kind": "receiver",
+      "relative_file": "logs_ns3/study_rx_node_1_port_1024.csv",
+      "original_sha256": "fd8f426d5397072448562299a3d431a548591e1bcb568b68353ab56a037810b6",
+      "replayed_sha256": "fd8f426d5397072448562299a3d431a548591e1bcb568b68353ab56a037810b6",
+      "identical": true
+    },
+    {
+      "case": "micro-loss-guard64",
+      "kind": "app",
+      "relative_file": "logs_ns3/study_app_rx_node_1_port_1024.csv",
+      "original_sha256": "67ae919984d191beac8c7ce99e986b5201ec1a97810fe407a4fed44cdfa5873b",
+      "replayed_sha256": "67ae919984d191beac8c7ce99e986b5201ec1a97810fe407a4fed44cdfa5873b",
+      "identical": true
+    },
+    {
+      "case": "micro-loss-guard64",
+      "kind": "state",
+      "relative_file": "logs_ns3/tcp_flow_0_study_events.csv",
+      "original_sha256": "4a8ca01d47afb3b009cc811c3d80ce123b2b19dc8787b29033254b7f5b6797fe",
+      "replayed_sha256": "4a8ca01d47afb3b009cc811c3d80ce123b2b19dc8787b29033254b7f5b6797fe",
+      "identical": true
+    },
+    {
+      "case": "micro-loss-guard64",
+      "kind": "legacy_cwnd",
+      "relative_file": "logs_ns3/tcp_flow_0_cwnd.csv",
+      "original_sha256": "46af2592ba11842e33d7731d21cb3afe6121dc074c7b3fc4225ca028765496b1",
+      "replayed_sha256": "46af2592ba11842e33d7731d21cb3afe6121dc074c7b3fc4225ca028765496b1",
+      "identical": true
+    },
+    {
+      "case": "micro-loss-guard64",
+      "kind": "legacy_rtt",
+      "relative_file": "logs_ns3/tcp_flow_0_rtt.csv",
+      "original_sha256": "3b5f52ffa5be4a02e7df6a60aefd7ca645069304df7d7ab46716e7fd869489aa",
+      "replayed_sha256": "3b5f52ffa5be4a02e7df6a60aefd7ca645069304df7d7ab46716e7fd869489aa",
+      "identical": true
+    },
+    {
+      "case": "micro-loss-guard64",
+      "kind": "legacy_progress",
+      "relative_file": "logs_ns3/tcp_flow_0_progress.csv",
+      "original_sha256": "58a429070d23202fbd24c375af65652e4bc2b811ceaba4a64be0d276a2345fa7",
+      "replayed_sha256": "58a429070d23202fbd24c375af65652e4bc2b811ceaba4a64be0d276a2345fa7",
+      "identical": true
+    },
+    {
+      "case": "micro-loss-static64",
+      "kind": "sender",
+      "relative_file": "logs_ns3/tcp_flow_0_study_packets.csv",
+      "original_sha256": "6e04209111a2a5e32e0f74d85932c3bfe40d37674bb1e3c7be6f113c7f4decef",
+      "replayed_sha256": "6e04209111a2a5e32e0f74d85932c3bfe40d37674bb1e3c7be6f113c7f4decef",
+      "identical": true
+    },
+    {
+      "case": "micro-loss-static64",
+      "kind": "drop",
+      "relative_file": "logs_ns3/study_drops.csv",
+      "original_sha256": "e65108b645ad1f24bead3609dfbbcdd8428d321e5dad5fb0d91cabbf0eb5b16e",
+      "replayed_sha256": "e65108b645ad1f24bead3609dfbbcdd8428d321e5dad5fb0d91cabbf0eb5b16e",
+      "identical": true
+    },
+    {
+      "case": "micro-loss-static64",
+      "kind": "receiver",
+      "relative_file": "logs_ns3/study_rx_node_1_port_1024.csv",
+      "original_sha256": "92d96f0ac15ba373eccb46b5c2191d755b434a4b69b779a114cb7919de28c77b",
+      "replayed_sha256": "92d96f0ac15ba373eccb46b5c2191d755b434a4b69b779a114cb7919de28c77b",
+      "identical": true
+    },
+    {
+      "case": "micro-loss-static64",
+      "kind": "app",
+      "relative_file": "logs_ns3/study_app_rx_node_1_port_1024.csv",
+      "original_sha256": "066c9e22aec050450eb4d6b2a9a5ffb2a6cce2dc184f4d0b0b611070e6e6ba87",
+      "replayed_sha256": "066c9e22aec050450eb4d6b2a9a5ffb2a6cce2dc184f4d0b0b611070e6e6ba87",
+      "identical": true
+    },
+    {
+      "case": "micro-loss-static64",
+      "kind": "state",
+      "relative_file": "logs_ns3/tcp_flow_0_study_events.csv",
+      "original_sha256": "ea8f5afe3ab20a1fa5464ee28bc45dd13f8991ed9860ff63304176422868d2c0",
+      "replayed_sha256": "ea8f5afe3ab20a1fa5464ee28bc45dd13f8991ed9860ff63304176422868d2c0",
+      "identical": true
+    },
+    {
+      "case": "micro-loss-static64",
+      "kind": "legacy_cwnd",
+      "relative_file": "logs_ns3/tcp_flow_0_cwnd.csv",
+      "original_sha256": "271e61c3c48fc7a80b105b98ee30f0a4459beb18dbdf5b71da586afa85395767",
+      "replayed_sha256": "271e61c3c48fc7a80b105b98ee30f0a4459beb18dbdf5b71da586afa85395767",
+      "identical": true
+    },
+    {
+      "case": "micro-loss-static64",
+      "kind": "legacy_rtt",
+      "relative_file": "logs_ns3/tcp_flow_0_rtt.csv",
+      "original_sha256": "12d9ded690c48439e3ce806f73c9727f559ec88188a25377af1f84f1a7ea442f",
+      "replayed_sha256": "12d9ded690c48439e3ce806f73c9727f559ec88188a25377af1f84f1a7ea442f",
+      "identical": true
+    },
+    {
+      "case": "micro-loss-static64",
+      "kind": "legacy_progress",
+      "relative_file": "logs_ns3/tcp_flow_0_progress.csv",
+      "original_sha256": "556df000dc1ca8544b86e6a79b021bf8ab7bf3f93e4fc6eecf5d889fc4b32ca4",
+      "replayed_sha256": "556df000dc1ca8544b86e6a79b021bf8ab7bf3f93e4fc6eecf5d889fc4b32ca4",
+      "identical": true
+    },
+    {
+      "case": "micro-stable-base",
+      "kind": "sender",
+      "relative_file": "logs_ns3/tcp_flow_0_study_packets.csv",
+      "original_sha256": "5be11efe82d6e365a1051082a3ddcbf210ff5766b0e4dcf5d862bee85db42742",
+      "replayed_sha256": "5be11efe82d6e365a1051082a3ddcbf210ff5766b0e4dcf5d862bee85db42742",
+      "identical": true
+    },
+    {
+      "case": "micro-stable-base",
+      "kind": "drop",
+      "relative_file": "logs_ns3/study_drops.csv",
+      "original_sha256": "c574a2d73f6cd8e8b0fc8fee91171bdb774b915d94ea6b701e30b28c927c090b",
+      "replayed_sha256": "c574a2d73f6cd8e8b0fc8fee91171bdb774b915d94ea6b701e30b28c927c090b",
+      "identical": true
+    },
+    {
+      "case": "micro-stable-base",
+      "kind": "receiver",
+      "relative_file": "logs_ns3/study_rx_node_1_port_1024.csv",
+      "original_sha256": "888835d8abffb707745dac3b8e885bda9e5033abe8bfcfd5877911106eb8a456",
+      "replayed_sha256": "888835d8abffb707745dac3b8e885bda9e5033abe8bfcfd5877911106eb8a456",
+      "identical": true
+    },
+    {
+      "case": "micro-stable-base",
+      "kind": "app",
+      "relative_file": "logs_ns3/study_app_rx_node_1_port_1024.csv",
+      "original_sha256": "d289942adf028b28259ab6bf3d69522feb6e029ef0cfbb0d006089e5bb650a83",
+      "replayed_sha256": "d289942adf028b28259ab6bf3d69522feb6e029ef0cfbb0d006089e5bb650a83",
+      "identical": true
+    },
+    {
+      "case": "micro-stable-base",
+      "kind": "state",
+      "relative_file": "logs_ns3/tcp_flow_0_study_events.csv",
+      "original_sha256": "906d1963bd99ff989d8327942347d0ab7bad6af7a32b1b31b8b8499089cf0998",
+      "replayed_sha256": "906d1963bd99ff989d8327942347d0ab7bad6af7a32b1b31b8b8499089cf0998",
+      "identical": true
+    },
+    {
+      "case": "micro-stable-base",
+      "kind": "legacy_cwnd",
+      "relative_file": "logs_ns3/tcp_flow_0_cwnd.csv",
+      "original_sha256": "a3b0dfc804aa50c725cfc31dbe639a02cccf509c88151b06a6f0f24574edde2f",
+      "replayed_sha256": "a3b0dfc804aa50c725cfc31dbe639a02cccf509c88151b06a6f0f24574edde2f",
+      "identical": true
+    },
+    {
+      "case": "micro-stable-base",
+      "kind": "legacy_rtt",
+      "relative_file": "logs_ns3/tcp_flow_0_rtt.csv",
+      "original_sha256": "863ca1dc71d121104e26bdb4739bfdb0e16c039b7f5905068b71c6cfd7018d5a",
+      "replayed_sha256": "863ca1dc71d121104e26bdb4739bfdb0e16c039b7f5905068b71c6cfd7018d5a",
+      "identical": true
+    },
+    {
+      "case": "micro-stable-base",
+      "kind": "legacy_progress",
+      "relative_file": "logs_ns3/tcp_flow_0_progress.csv",
+      "original_sha256": "02eb3dd5ab2809692c3326ceb52300e8a8cae2b2bb1bf90dbd56fc23fdbb1fe3",
+      "replayed_sha256": "02eb3dd5ab2809692c3326ceb52300e8a8cae2b2bb1bf90dbd56fc23fdbb1fe3",
+      "identical": true
+    },
+    {
+      "case": "micro-step-base",
+      "kind": "sender",
+      "relative_file": "logs_ns3/tcp_flow_0_study_packets.csv",
+      "original_sha256": "c9ec883a477481c8de87ad816cebe464cb5097ad362ad03e64172d7a2e894209",
+      "replayed_sha256": "c9ec883a477481c8de87ad816cebe464cb5097ad362ad03e64172d7a2e894209",
+      "identical": true
+    },
+    {
+      "case": "micro-step-base",
+      "kind": "drop",
+      "relative_file": "logs_ns3/study_drops.csv",
+      "original_sha256": "c7d10b0715923b859e5aa80e8f035027256add6f25495e1e2a3e3abd1ea8ac14",
+      "replayed_sha256": "c7d10b0715923b859e5aa80e8f035027256add6f25495e1e2a3e3abd1ea8ac14",
+      "identical": true
+    },
+    {
+      "case": "micro-step-base",
+      "kind": "receiver",
+      "relative_file": "logs_ns3/study_rx_node_1_port_1024.csv",
+      "original_sha256": "6383d7f652e1a246632991a76aac4d167e3f6b7b201a4a1c5d9876cc773052ed",
+      "replayed_sha256": "6383d7f652e1a246632991a76aac4d167e3f6b7b201a4a1c5d9876cc773052ed",
+      "identical": true
+    },
+    {
+      "case": "micro-step-base",
+      "kind": "app",
+      "relative_file": "logs_ns3/study_app_rx_node_1_port_1024.csv",
+      "original_sha256": "ab5999e6cf6ed2bb1b665c6ff7773891dbad45d2d3e6696384bd90aca6e63ed4",
+      "replayed_sha256": "ab5999e6cf6ed2bb1b665c6ff7773891dbad45d2d3e6696384bd90aca6e63ed4",
+      "identical": true
+    },
+    {
+      "case": "micro-step-base",
+      "kind": "state",
+      "relative_file": "logs_ns3/tcp_flow_0_study_events.csv",
+      "original_sha256": "1bba1391d21bae4f650b82b72077ebfc7765c9dbfb221c3e6c206a1d354df4e4",
+      "replayed_sha256": "1bba1391d21bae4f650b82b72077ebfc7765c9dbfb221c3e6c206a1d354df4e4",
+      "identical": true
+    },
+    {
+      "case": "micro-step-base",
+      "kind": "legacy_cwnd",
+      "relative_file": "logs_ns3/tcp_flow_0_cwnd.csv",
+      "original_sha256": "82d7f0b5bc4004f7be45d6b7c1abecd42648722e1684f8ce5c9b30a4f4076d2e",
+      "replayed_sha256": "82d7f0b5bc4004f7be45d6b7c1abecd42648722e1684f8ce5c9b30a4f4076d2e",
+      "identical": true
+    },
+    {
+      "case": "micro-step-base",
+      "kind": "legacy_rtt",
+      "relative_file": "logs_ns3/tcp_flow_0_rtt.csv",
+      "original_sha256": "10b89473c60db813ceb7cea933637a6cf95425b72e472887fcdb98af237a87ca",
+      "replayed_sha256": "10b89473c60db813ceb7cea933637a6cf95425b72e472887fcdb98af237a87ca",
+      "identical": true
+    },
+    {
+      "case": "micro-step-base",
+      "kind": "legacy_progress",
+      "relative_file": "logs_ns3/tcp_flow_0_progress.csv",
+      "original_sha256": "65cf157a5b8fa1ae667a60739188590b260345c6d2e9d941a26857c38a47424c",
+      "replayed_sha256": "65cf157a5b8fa1ae667a60739188590b260345c6d2e9d941a26857c38a47424c",
+      "identical": true
+    },
+    {
+      "case": "micro-step-guard64",
+      "kind": "sender",
+      "relative_file": "logs_ns3/tcp_flow_0_study_packets.csv",
+      "original_sha256": "0cef47354357e8646032d8f726dce5094fe2ba21703ef5ec74ac2f0f1dd53944",
+      "replayed_sha256": "0cef47354357e8646032d8f726dce5094fe2ba21703ef5ec74ac2f0f1dd53944",
+      "identical": true
+    },
+    {
+      "case": "micro-step-guard64",
+      "kind": "drop",
+      "relative_file": "logs_ns3/study_drops.csv",
+      "original_sha256": "bcc3825526726af9c37aa49f7a2f53e41f2d15b2fd53961d8cf7a21efb8632e1",
+      "replayed_sha256": "bcc3825526726af9c37aa49f7a2f53e41f2d15b2fd53961d8cf7a21efb8632e1",
+      "identical": true
+    },
+    {
+      "case": "micro-step-guard64",
+      "kind": "receiver",
+      "relative_file": "logs_ns3/study_rx_node_1_port_1024.csv",
+      "original_sha256": "c0ff935172667352d2d5557ca6e2d3b024ce82061db085f23cdb6eae88375bf9",
+      "replayed_sha256": "c0ff935172667352d2d5557ca6e2d3b024ce82061db085f23cdb6eae88375bf9",
+      "identical": true
+    },
+    {
+      "case": "micro-step-guard64",
+      "kind": "app",
+      "relative_file": "logs_ns3/study_app_rx_node_1_port_1024.csv",
+      "original_sha256": "dbe958041dbafb72aafae68a376bfb3672c750106939a14f63dfead7a5a554a8",
+      "replayed_sha256": "dbe958041dbafb72aafae68a376bfb3672c750106939a14f63dfead7a5a554a8",
+      "identical": true
+    },
+    {
+      "case": "micro-step-guard64",
+      "kind": "state",
+      "relative_file": "logs_ns3/tcp_flow_0_study_events.csv",
+      "original_sha256": "486bfed112e4568ad198be91c64edad72bc46e06766f239f0bb38247dcbc3199",
+      "replayed_sha256": "486bfed112e4568ad198be91c64edad72bc46e06766f239f0bb38247dcbc3199",
+      "identical": true
+    },
+    {
+      "case": "micro-step-guard64",
+      "kind": "legacy_cwnd",
+      "relative_file": "logs_ns3/tcp_flow_0_cwnd.csv",
+      "original_sha256": "b87b9cb5e35a9b8eafe16b6b3650116a221e45e869251317be1637fb7af86fed",
+      "replayed_sha256": "b87b9cb5e35a9b8eafe16b6b3650116a221e45e869251317be1637fb7af86fed",
+      "identical": true
+    },
+    {
+      "case": "micro-step-guard64",
+      "kind": "legacy_rtt",
+      "relative_file": "logs_ns3/tcp_flow_0_rtt.csv",
+      "original_sha256": "5f597309f3ffb401fdcfb21aa9350d26ea293c4e2d263a5b3ec1b639233aeead",
+      "replayed_sha256": "5f597309f3ffb401fdcfb21aa9350d26ea293c4e2d263a5b3ec1b639233aeead",
+      "identical": true
+    },
+    {
+      "case": "micro-step-guard64",
+      "kind": "legacy_progress",
+      "relative_file": "logs_ns3/tcp_flow_0_progress.csv",
+      "original_sha256": "2014686a532d6dd8ebf6b74af7155c395d91b6886489dd0d2fda78c82e328118",
+      "replayed_sha256": "2014686a532d6dd8ebf6b74af7155c395d91b6886489dd0d2fda78c82e328118",
+      "identical": true
+    },
+    {
+      "case": "micro-step-static64",
+      "kind": "sender",
+      "relative_file": "logs_ns3/tcp_flow_0_study_packets.csv",
+      "original_sha256": "5891349b9e945724a5e636324bd7e52a3a689bb5ec4f61d10ef3ba74578ffa11",
+      "replayed_sha256": "5891349b9e945724a5e636324bd7e52a3a689bb5ec4f61d10ef3ba74578ffa11",
+      "identical": true
+    },
+    {
+      "case": "micro-step-static64",
+      "kind": "drop",
+      "relative_file": "logs_ns3/study_drops.csv",
+      "original_sha256": "bb05c03c1d775f3a24fa2403eab666dba2f9c4d59b81b3e3b91db69b129f8e5a",
+      "replayed_sha256": "bb05c03c1d775f3a24fa2403eab666dba2f9c4d59b81b3e3b91db69b129f8e5a",
+      "identical": true
+    },
+    {
+      "case": "micro-step-static64",
+      "kind": "receiver",
+      "relative_file": "logs_ns3/study_rx_node_1_port_1024.csv",
+      "original_sha256": "1e115e69bc02530b2325ca75e7b59f9a76e404f2698e7bb20af0e97ace6ccbd4",
+      "replayed_sha256": "1e115e69bc02530b2325ca75e7b59f9a76e404f2698e7bb20af0e97ace6ccbd4",
+      "identical": true
+    },
+    {
+      "case": "micro-step-static64",
+      "kind": "app",
+      "relative_file": "logs_ns3/study_app_rx_node_1_port_1024.csv",
+      "original_sha256": "3d707aef2f2038cd55c92d4d69eaad2d02e33fcb31901633c6033e5e27421ce4",
+      "replayed_sha256": "3d707aef2f2038cd55c92d4d69eaad2d02e33fcb31901633c6033e5e27421ce4",
+      "identical": true
+    },
+    {
+      "case": "micro-step-static64",
+      "kind": "state",
+      "relative_file": "logs_ns3/tcp_flow_0_study_events.csv",
+      "original_sha256": "26665ec962c2357d3d0e983e60c57a81b15cbf416a511dad86311c73cccbb41c",
+      "replayed_sha256": "26665ec962c2357d3d0e983e60c57a81b15cbf416a511dad86311c73cccbb41c",
+      "identical": true
+    },
+    {
+      "case": "micro-step-static64",
+      "kind": "legacy_cwnd",
+      "relative_file": "logs_ns3/tcp_flow_0_cwnd.csv",
+      "original_sha256": "5cf5ec5220c313b42d1cceaa23fbc534c76237eebaafdfb4036f5b9be7e4bd3b",
+      "replayed_sha256": "5cf5ec5220c313b42d1cceaa23fbc534c76237eebaafdfb4036f5b9be7e4bd3b",
+      "identical": true
+    },
+    {
+      "case": "micro-step-static64",
+      "kind": "legacy_rtt",
+      "relative_file": "logs_ns3/tcp_flow_0_rtt.csv",
+      "original_sha256": "89ac87680ccffcff84449cd59069cf4c10230855524ffa829e632a98034bd2c6",
+      "replayed_sha256": "89ac87680ccffcff84449cd59069cf4c10230855524ffa829e632a98034bd2c6",
+      "identical": true
+    },
+    {
+      "case": "micro-step-static64",
+      "kind": "legacy_progress",
+      "relative_file": "logs_ns3/tcp_flow_0_progress.csv",
+      "original_sha256": "7fac06fd90867de87b6978777be71431926ca60f0e8d62a6499b910d3a7f0f9c",
+      "replayed_sha256": "7fac06fd90867de87b6978777be71431926ca60f0e8d62a6499b910d3a7f0f9c",
+      "identical": true
+    },
+    {
+      "case": "micro-tail-base-v5",
+      "kind": "sender",
+      "relative_file": "logs_ns3/tcp_flow_0_study_packets.csv",
+      "original_sha256": "9774112da74ac364fbe1421ae7d2f532b3e0450cf2f32d874f6362b9043bd6e6",
+      "replayed_sha256": "9774112da74ac364fbe1421ae7d2f532b3e0450cf2f32d874f6362b9043bd6e6",
+      "identical": true
+    },
+    {
+      "case": "micro-tail-base-v5",
+      "kind": "drop",
+      "relative_file": "logs_ns3/study_drops.csv",
+      "original_sha256": "e875ed492bd803c301bd18a29514bca50a6edfe104a69a85ae1ec68003bac35c",
+      "replayed_sha256": "e875ed492bd803c301bd18a29514bca50a6edfe104a69a85ae1ec68003bac35c",
+      "identical": true
+    },
+    {
+      "case": "micro-tail-base-v5",
+      "kind": "receiver",
+      "relative_file": "logs_ns3/study_rx_node_1_port_1024.csv",
+      "original_sha256": "cb432b3cd841713975a574fc6919f5cf0812185846599bdd17182cccacd11e5a",
+      "replayed_sha256": "cb432b3cd841713975a574fc6919f5cf0812185846599bdd17182cccacd11e5a",
+      "identical": true
+    },
+    {
+      "case": "micro-tail-base-v5",
+      "kind": "app",
+      "relative_file": "logs_ns3/study_app_rx_node_1_port_1024.csv",
+      "original_sha256": "b35c9ac46bde2331da713fba1846eeb718c907027d0bb2f050acdf2fbca75b5e",
+      "replayed_sha256": "b35c9ac46bde2331da713fba1846eeb718c907027d0bb2f050acdf2fbca75b5e",
+      "identical": true
+    },
+    {
+      "case": "micro-tail-base-v5",
+      "kind": "state",
+      "relative_file": "logs_ns3/tcp_flow_0_study_events.csv",
+      "original_sha256": "3038a5be2c89948a5724671c2c638a3c408f7828393d6a2513b0a6e6e636863e",
+      "replayed_sha256": "3038a5be2c89948a5724671c2c638a3c408f7828393d6a2513b0a6e6e636863e",
+      "identical": true
+    },
+    {
+      "case": "micro-tail-base-v5",
+      "kind": "legacy_cwnd",
+      "relative_file": "logs_ns3/tcp_flow_0_cwnd.csv",
+      "original_sha256": "ceb39256e8a1e4c940cb3f597b7e200596f2e9ff1f9ac9a0a5075021e8262630",
+      "replayed_sha256": "ceb39256e8a1e4c940cb3f597b7e200596f2e9ff1f9ac9a0a5075021e8262630",
+      "identical": true
+    },
+    {
+      "case": "micro-tail-base-v5",
+      "kind": "legacy_rtt",
+      "relative_file": "logs_ns3/tcp_flow_0_rtt.csv",
+      "original_sha256": "f46faf24fbfea5e839643bcebcbd4b6f10073f725ed5a139f993b2c823b14278",
+      "replayed_sha256": "f46faf24fbfea5e839643bcebcbd4b6f10073f725ed5a139f993b2c823b14278",
+      "identical": true
+    },
+    {
+      "case": "micro-tail-base-v5",
+      "kind": "legacy_progress",
+      "relative_file": "logs_ns3/tcp_flow_0_progress.csv",
+      "original_sha256": "b583a1b2888476107f8d65535c480fa872d89ef79c7b12c3cdb4380249a86e98",
+      "replayed_sha256": "b583a1b2888476107f8d65535c480fa872d89ef79c7b12c3cdb4380249a86e98",
+      "identical": true
+    },
+    {
+      "case": "micro-tail-guard20-v5",
+      "kind": "sender",
+      "relative_file": "logs_ns3/tcp_flow_0_study_packets.csv",
+      "original_sha256": "f245018e5ac3b392880287c5a33c6eacfce5e9234becc2b9900285d1592edd24",
+      "replayed_sha256": "f245018e5ac3b392880287c5a33c6eacfce5e9234becc2b9900285d1592edd24",
+      "identical": true
+    },
+    {
+      "case": "micro-tail-guard20-v5",
+      "kind": "drop",
+      "relative_file": "logs_ns3/study_drops.csv",
+      "original_sha256": "e875ed492bd803c301bd18a29514bca50a6edfe104a69a85ae1ec68003bac35c",
+      "replayed_sha256": "e875ed492bd803c301bd18a29514bca50a6edfe104a69a85ae1ec68003bac35c",
+      "identical": true
+    },
+    {
+      "case": "micro-tail-guard20-v5",
+      "kind": "receiver",
+      "relative_file": "logs_ns3/study_rx_node_1_port_1024.csv",
+      "original_sha256": "c5dead99ea1391cbfff2faf6e41707a9edefeeacde72d6879eddad1e9c730eab",
+      "replayed_sha256": "c5dead99ea1391cbfff2faf6e41707a9edefeeacde72d6879eddad1e9c730eab",
+      "identical": true
+    },
+    {
+      "case": "micro-tail-guard20-v5",
+      "kind": "app",
+      "relative_file": "logs_ns3/study_app_rx_node_1_port_1024.csv",
+      "original_sha256": "9b3da2aaae669b06da4aeee40ffbc81474b54c49992b394708a4e1f3fe47af5b",
+      "replayed_sha256": "9b3da2aaae669b06da4aeee40ffbc81474b54c49992b394708a4e1f3fe47af5b",
+      "identical": true
+    },
+    {
+      "case": "micro-tail-guard20-v5",
+      "kind": "state",
+      "relative_file": "logs_ns3/tcp_flow_0_study_events.csv",
+      "original_sha256": "f9e12d2b2d2154de80b5a57a23f7b568fec203c7d572fbe7b9c6153d5308a0a6",
+      "replayed_sha256": "f9e12d2b2d2154de80b5a57a23f7b568fec203c7d572fbe7b9c6153d5308a0a6",
+      "identical": true
+    },
+    {
+      "case": "micro-tail-guard20-v5",
+      "kind": "legacy_cwnd",
+      "relative_file": "logs_ns3/tcp_flow_0_cwnd.csv",
+      "original_sha256": "45f8b50519694aca5071b72527587fb90bc4a5a4630153d4f93816752b3e71fa",
+      "replayed_sha256": "45f8b50519694aca5071b72527587fb90bc4a5a4630153d4f93816752b3e71fa",
+      "identical": true
+    },
+    {
+      "case": "micro-tail-guard20-v5",
+      "kind": "legacy_rtt",
+      "relative_file": "logs_ns3/tcp_flow_0_rtt.csv",
+      "original_sha256": "11b3645834b95d36b6567f099698d25d6c3dd1d938348e6340abb4b58e22c328",
+      "replayed_sha256": "11b3645834b95d36b6567f099698d25d6c3dd1d938348e6340abb4b58e22c328",
+      "identical": true
+    },
+    {
+      "case": "micro-tail-guard20-v5",
+      "kind": "legacy_progress",
+      "relative_file": "logs_ns3/tcp_flow_0_progress.csv",
+      "original_sha256": "b663ed9c6b48b0e41619e4205e48bbabdf77ff0680bf8e69fdc6daaa14a0cbaa",
+      "replayed_sha256": "b663ed9c6b48b0e41619e4205e48bbabdf77ff0680bf8e69fdc6daaa14a0cbaa",
+      "identical": true
+    }
+  ],
+  "analysis_records": [
+    {
+      "case": "leo-delay26-base-v5",
+      "original_sha256": "4c8755a039e870d6067074437c453c30a85cd69a31e544221eb8d33321d03a2e",
+      "replayed_sha256": "4c8755a039e870d6067074437c453c30a85cd69a31e544221eb8d33321d03a2e",
+      "identical": true
+    },
+    {
+      "case": "leo10-base",
+      "original_sha256": "b39c28345f48f41affa86e737e4836be066766dc82557e715cd5aee26e3cef80",
+      "replayed_sha256": "b39c28345f48f41affa86e737e4836be066766dc82557e715cd5aee26e3cef80",
+      "identical": true
+    },
+    {
+      "case": "leo10-bbr",
+      "original_sha256": "aaf8f812f5d6f68592c7fca2f4058591e69417646e9ea190a43add3c84f17529",
+      "replayed_sha256": "aaf8f812f5d6f68592c7fca2f4058591e69417646e9ea190a43add3c84f17529",
+      "identical": true
+    },
+    {
+      "case": "leo10-guard20",
+      "original_sha256": "a7f78df9bfcc1ed01e6d56abce3e132d201c91514f5cd8064ba0c26d4d826b62",
+      "replayed_sha256": "a7f78df9bfcc1ed01e6d56abce3e132d201c91514f5cd8064ba0c26d4d826b62",
+      "identical": true
+    },
+    {
+      "case": "leo10-guard32",
+      "original_sha256": "5bd8ae3c730a5e50b7ba3492d8e032a763e0db95a7b77a8329a2173996568ced",
+      "replayed_sha256": "5bd8ae3c730a5e50b7ba3492d8e032a763e0db95a7b77a8329a2173996568ced",
+      "identical": true
+    },
+    {
+      "case": "leo10-guard8",
+      "original_sha256": "dcf78de74c7364848d3c1a9c9e76065da4fed99c552a3bf046c3526a2642830c",
+      "replayed_sha256": "dcf78de74c7364848d3c1a9c9e76065da4fed99c552a3bf046c3526a2642830c",
+      "identical": true
+    },
+    {
+      "case": "leo10-late20",
+      "original_sha256": "1c12f37fdebf25e9ace2267ebf3c75bd28a05bafdf058cc88ff6dc1fc415b504",
+      "replayed_sha256": "1c12f37fdebf25e9ace2267ebf3c75bd28a05bafdf058cc88ff6dc1fc415b504",
+      "identical": true
+    },
+    {
+      "case": "leo10-smallq-base",
+      "original_sha256": "cd7bb32bb5e9d94d784a633b55d23ea6c74ec5510e3ca601f0ceb49d3162c880",
+      "replayed_sha256": "cd7bb32bb5e9d94d784a633b55d23ea6c74ec5510e3ca601f0ceb49d3162c880",
+      "identical": true
+    },
+    {
+      "case": "leo10-smallq-guard20",
+      "original_sha256": "95ccdc4ed02d271800bb9434f57b1c480b66a91662299d89e94c591388e4f534",
+      "replayed_sha256": "95ccdc4ed02d271800bb9434f57b1c480b66a91662299d89e94c591388e4f534",
+      "identical": true
+    },
+    {
+      "case": "leo10-static20",
+      "original_sha256": "7ed545e046582786ac69bdac2278105b4961b34dd613640744352fef0b546d57",
+      "replayed_sha256": "7ed545e046582786ac69bdac2278105b4961b34dd613640744352fef0b546d57",
+      "identical": true
+    },
+    {
+      "case": "leo10-vegas",
+      "original_sha256": "63606c7d7e131c7f2786072cbc6c7f3e9b082ffa5ad52f63c44fe3a95794ab78",
+      "replayed_sha256": "63606c7d7e131c7f2786072cbc6c7f3e9b082ffa5ad52f63c44fe3a95794ab78",
+      "identical": true
+    },
+    {
+      "case": "leo100-base",
+      "original_sha256": "e10317a50aa5c8a23e9adc70db969d2c51bea1644de5be40e2628792240e9325",
+      "replayed_sha256": "e10317a50aa5c8a23e9adc70db969d2c51bea1644de5be40e2628792240e9325",
+      "identical": true
+    },
+    {
+      "case": "leo100-guard64",
+      "original_sha256": "45d0a40c8172bd0ee48833d1efd37b96970b9d67d5f88ce55ea282d6423dbff9",
+      "replayed_sha256": "45d0a40c8172bd0ee48833d1efd37b96970b9d67d5f88ce55ea282d6423dbff9",
+      "identical": true
+    },
+    {
+      "case": "leo100-static64",
+      "original_sha256": "06ee2d85740acf7339cc9f5e6e2e24153d4916cf53e12412cd015bee6a871667",
+      "replayed_sha256": "06ee2d85740acf7339cc9f5e6e2e24153d4916cf53e12412cd015bee6a871667",
+      "identical": true
+    },
+    {
+      "case": "micro-loss-base",
+      "original_sha256": "335e9cf244fe168875d688856237fdba8b98a684994951bbda14229da878acbe",
+      "replayed_sha256": "335e9cf244fe168875d688856237fdba8b98a684994951bbda14229da878acbe",
+      "identical": true
+    },
+    {
+      "case": "micro-loss-guard64",
+      "original_sha256": "0866944d94f9b23c4b81594d013001c3868eba1486967bdf7f7bb94f31a7291d",
+      "replayed_sha256": "0866944d94f9b23c4b81594d013001c3868eba1486967bdf7f7bb94f31a7291d",
+      "identical": true
+    },
+    {
+      "case": "micro-loss-static64",
+      "original_sha256": "d49e68903afa5354872167acd7ea2bf788c6ce35bf429a344ad20d0420f8bc38",
+      "replayed_sha256": "d49e68903afa5354872167acd7ea2bf788c6ce35bf429a344ad20d0420f8bc38",
+      "identical": true
+    },
+    {
+      "case": "micro-stable-base",
+      "original_sha256": "237876060d5758351a9962a2d9dfa65ae6263604af3248e59ff262c214dabcc8",
+      "replayed_sha256": "237876060d5758351a9962a2d9dfa65ae6263604af3248e59ff262c214dabcc8",
+      "identical": true
+    },
+    {
+      "case": "micro-step-base",
+      "original_sha256": "e590756233bd290d388c273e5fdd640fd0489a60d1bbbc0a31245d6f1f3a0216",
+      "replayed_sha256": "e590756233bd290d388c273e5fdd640fd0489a60d1bbbc0a31245d6f1f3a0216",
+      "identical": true
+    },
+    {
+      "case": "micro-step-guard64",
+      "original_sha256": "acdc3738a132137147309159a2198e70079ad113f1a5df606a2ed50308b39c22",
+      "replayed_sha256": "acdc3738a132137147309159a2198e70079ad113f1a5df606a2ed50308b39c22",
+      "identical": true
+    },
+    {
+      "case": "micro-step-static64",
+      "original_sha256": "6f3bccfa8744cd87dbda3a610e7e798f330be181b592b3b6fe97a224cc9124be",
+      "replayed_sha256": "6f3bccfa8744cd87dbda3a610e7e798f330be181b592b3b6fe97a224cc9124be",
+      "identical": true
+    },
+    {
+      "case": "micro-tail-base-v5",
+      "original_sha256": "1d982044b2bbf3ad4c211b075bc274f61c2e79bb1f30a79dde8438f633e3c02f",
+      "replayed_sha256": "1d982044b2bbf3ad4c211b075bc274f61c2e79bb1f30a79dde8438f633e3c02f",
+      "identical": true
+    },
+    {
+      "case": "micro-tail-guard20-v5",
+      "original_sha256": "146bbfb770c329d3cb60885acd0b0aa19003aaba9f548138953d7c9ccd7e1b97",
+      "replayed_sha256": "146bbfb770c329d3cb60885acd0b0aa19003aaba9f548138953d7c9ccd7e1b97",
+      "identical": true
+    }
+  ],
+  "scope": "Checks full sender, receiver, receiver application, congestion-state and drop inputs plus any recorded legacy cwnd, SRTT and sender-progress traces. Does not prove all loss paths are instrumented or generality to other scenarios.",
+  "execution_context": {
+    "container": "cs30401-kim-repro-v4",
+    "volume": "cs30401-kim-repro-ns348-v4",
+    "independent_from_original_run_volume": true,
+    "source_history": "Official image initialized a separate empty volume; first v4 single-case check; reverse v4 patch and apply canonical v5 before complete replay.",
+    "official_image_digest": "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+    "replayed_patch_sha256_values": [
+      "b5657a3b2919ed32ea7fcb8f14a922a75a94cc4d9910e99f809c771747cff3e6"
+    ],
+    "replay_command": "docker exec cs30401-kim-repro-v4 python3 /work/replay_cases.py --workers 3",
+    "analysis_command": "docker exec cs30401-kim-repro-v4 python3 /work/analyze_replay.py",
+    "comparison_command": "docker exec cs30401-kim-repro-v4 python3 /work/compare_replay.py",
+    "simulation_runtime_envelope_s": 295.678,
+    "runtime_definition": "First recorded simulation start to last recorded simulation finish; excludes build and analysis."
+  }
+}

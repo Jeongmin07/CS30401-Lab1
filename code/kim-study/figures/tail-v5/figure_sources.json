@@ -1,0 +1,420 @@
+{
+  "stage": "initial controlled experiment, tail v5",
+  "flow_id": "0",
+  "mss_bytes": 1380,
+  "sources": {
+    "leo10-base": {
+      "label": "Cubic baseline",
+      "summary": "/tmp/cs30401-study/leo10-base/study_analysis.json",
+      "sha256": "b39c28345f48f41affa86e737e4836be066766dc82557e715cd5aee26e3cef80",
+      "duration_s": 200.0,
+      "analysis_parameters": {
+        "bin_s": 0.1,
+        "event_after_s": 2.0,
+        "event_before_s": 0.5,
+        "maximum_case_samples": 100,
+        "maximum_evidence_rows_per_sample": 12,
+        "root_queue_disc_absence_independently_audited": false,
+        "tx_identity_retention_s": 10.0
+      },
+      "inputs": [
+        {
+          "kind": "sender",
+          "path": "/tmp/cs30401-study/leo10-base/logs_ns3/tcp_flow_0_study_packets.csv"
+        },
+        {
+          "kind": "drop",
+          "path": "/tmp/cs30401-study/leo10-base/logs_ns3/study_drops.csv"
+        },
+        {
+          "kind": "receiver",
+          "path": "/tmp/cs30401-study/leo10-base/logs_ns3/study_rx_node_1585_port_1024.csv"
+        },
+        {
+          "kind": "app",
+          "path": "/tmp/cs30401-study/leo10-base/logs_ns3/study_app_rx_node_1585_port_1024.csv"
+        },
+        {
+          "kind": "state",
+          "path": "/tmp/cs30401-study/leo10-base/logs_ns3/tcp_flow_0_study_events.csv"
+        }
+      ],
+      "limitations": [
+        "Path-truth propagation RTT includes both directions; RTT decreases alone do not prove forward-path overtaking.",
+        "Repeated cumulative ACKs are observations, not an independent reconstruction of every duplicate-ACK predicate.",
+        "Exact tx_id tags, not packet UIDs, identify transmission instances; joins are retained for a bounded time.",
+        "Candidate unnecessary recovery associates a sequence gap, ACK evidence, retransmission and eventual original delivery; controlled comparisons are still needed for a causal performance claim.",
+        "LOSS state is reported directly and is not automatically called an RTO without a dedicated timer trace.",
+        "Drop trace rows can duplicate one physical loss; distinct tagged transmission counts and per-layer counts are separate.",
+        "No observed drop is not proof of no drop when coverage or packet parsing is incomplete.",
+        "Traffic-control TcDrop coverage is required before excluding network loss; pre-v3 coverage can omit this path.",
+        "Root queue-disc absence must be verified per device or explicitly independently audited; TcDrop does not observe a root queue-disc's own losses.",
+        "Receiver TCP window rejection and PAWS/input discards are not covered by queue/IP/device/traffic-control hooks.",
+        "Pre-processing wire Rx does not prove acceptance: a gap fill requires subsequent expected_seq advancement or same-time application delivery.",
+        "Application HandleRead bytes are ordered unique delivery; wire interval union is a separate metric.",
+        "Sequence epochs assume adjacent relevant sequence references differ by less than 2^31 bytes.",
+        "Static and dynamic path controls, actual loss tests and deployment-information errors remain separate experimental requirements."
+      ]
+    },
+    "leo10-bbr": {
+      "label": "BBR baseline",
+      "summary": "/tmp/cs30401-study/leo10-bbr/study_analysis.json",
+      "sha256": "aaf8f812f5d6f68592c7fca2f4058591e69417646e9ea190a43add3c84f17529",
+      "duration_s": 200.0,
+      "analysis_parameters": {
+        "bin_s": 0.1,
+        "event_after_s": 2.0,
+        "event_before_s": 0.5,
+        "maximum_case_samples": 100,
+        "maximum_evidence_rows_per_sample": 12,
+        "root_queue_disc_absence_independently_audited": false,
+        "tx_identity_retention_s": 10.0
+      },
+      "inputs": [
+        {
+          "kind": "sender",
+          "path": "/tmp/cs30401-study/leo10-bbr/logs_ns3/tcp_flow_0_study_packets.csv"
+        },
+        {
+          "kind": "drop",
+          "path": "/tmp/cs30401-study/leo10-bbr/logs_ns3/study_drops.csv"
+        },
+        {
+          "kind": "receiver",
+          "path": "/tmp/cs30401-study/leo10-bbr/logs_ns3/study_rx_node_1585_port_1024.csv"
+        },
+        {
+          "kind": "app",
+          "path": "/tmp/cs30401-study/leo10-bbr/logs_ns3/study_app_rx_node_1585_port_1024.csv"
+        },
+        {
+          "kind": "state",
+          "path": "/tmp/cs30401-study/leo10-bbr/logs_ns3/tcp_flow_0_study_events.csv"
+        }
+      ],
+      "limitations": [
+        "Path-truth propagation RTT includes both directions; RTT decreases alone do not prove forward-path overtaking.",
+        "Repeated cumulative ACKs are observations, not an independent reconstruction of every duplicate-ACK predicate.",
+        "Exact tx_id tags, not packet UIDs, identify transmission instances; joins are retained for a bounded time.",
+        "Candidate unnecessary recovery associates a sequence gap, ACK evidence, retransmission and eventual original delivery; controlled comparisons are still needed for a causal performance claim.",
+        "LOSS state is reported directly and is not automatically called an RTO without a dedicated timer trace.",
+        "Drop trace rows can duplicate one physical loss; distinct tagged transmission counts and per-layer counts are separate.",
+        "No observed drop is not proof of no drop when coverage or packet parsing is incomplete.",
+        "Traffic-control TcDrop coverage is required before excluding network loss; pre-v3 coverage can omit this path.",
+        "Root queue-disc absence must be verified per device or explicitly independently audited; TcDrop does not observe a root queue-disc's own losses.",
+        "Receiver TCP window rejection and PAWS/input discards are not covered by queue/IP/device/traffic-control hooks.",
+        "Pre-processing wire Rx does not prove acceptance: a gap fill requires subsequent expected_seq advancement or same-time application delivery.",
+        "Application HandleRead bytes are ordered unique delivery; wire interval union is a separate metric.",
+        "Sequence epochs assume adjacent relevant sequence references differ by less than 2^31 bytes.",
+        "Static and dynamic path controls, actual loss tests and deployment-information errors remain separate experimental requirements."
+      ]
+    },
+    "leo10-guard20": {
+      "label": "Route guard 20",
+      "summary": "/tmp/cs30401-study/leo10-guard20/study_analysis.json",
+      "sha256": "a7f78df9bfcc1ed01e6d56abce3e132d201c91514f5cd8064ba0c26d4d826b62",
+      "duration_s": 200.0,
+      "analysis_parameters": {
+        "bin_s": 0.1,
+        "event_after_s": 2.0,
+        "event_before_s": 0.5,
+        "maximum_case_samples": 100,
+        "maximum_evidence_rows_per_sample": 12,
+        "root_queue_disc_absence_independently_audited": false,
+        "tx_identity_retention_s": 10.0
+      },
+      "inputs": [
+        {
+          "kind": "sender",
+          "path": "/tmp/cs30401-study/leo10-guard20/logs_ns3/tcp_flow_0_study_packets.csv"
+        },
+        {
+          "kind": "drop",
+          "path": "/tmp/cs30401-study/leo10-guard20/logs_ns3/study_drops.csv"
+        },
+        {
+          "kind": "receiver",
+          "path": "/tmp/cs30401-study/leo10-guard20/logs_ns3/study_rx_node_1585_port_1024.csv"
+        },
+        {
+          "kind": "app",
+          "path": "/tmp/cs30401-study/leo10-guard20/logs_ns3/study_app_rx_node_1585_port_1024.csv"
+        },
+        {
+          "kind": "state",
+          "path": "/tmp/cs30401-study/leo10-guard20/logs_ns3/tcp_flow_0_study_events.csv"
+        }
+      ],
+      "limitations": [
+        "Path-truth propagation RTT includes both directions; RTT decreases alone do not prove forward-path overtaking.",
+        "Repeated cumulative ACKs are observations, not an independent reconstruction of every duplicate-ACK predicate.",
+        "Exact tx_id tags, not packet UIDs, identify transmission instances; joins are retained for a bounded time.",
+        "Candidate unnecessary recovery associates a sequence gap, ACK evidence, retransmission and eventual original delivery; controlled comparisons are still needed for a causal performance claim.",
+        "LOSS state is reported directly and is not automatically called an RTO without a dedicated timer trace.",
+        "Drop trace rows can duplicate one physical loss; distinct tagged transmission counts and per-layer counts are separate.",
+        "No observed drop is not proof of no drop when coverage or packet parsing is incomplete.",
+        "Traffic-control TcDrop coverage is required before excluding network loss; pre-v3 coverage can omit this path.",
+        "Root queue-disc absence must be verified per device or explicitly independently audited; TcDrop does not observe a root queue-disc's own losses.",
+        "Receiver TCP window rejection and PAWS/input discards are not covered by queue/IP/device/traffic-control hooks.",
+        "Pre-processing wire Rx does not prove acceptance: a gap fill requires subsequent expected_seq advancement or same-time application delivery.",
+        "Application HandleRead bytes are ordered unique delivery; wire interval union is a separate metric.",
+        "Sequence epochs assume adjacent relevant sequence references differ by less than 2^31 bytes.",
+        "Static and dynamic path controls, actual loss tests and deployment-information errors remain separate experimental requirements."
+      ]
+    },
+    "leo10-static20": {
+      "label": "Static threshold 20",
+      "summary": "/tmp/cs30401-study/leo10-static20/study_analysis.json",
+      "sha256": "7ed545e046582786ac69bdac2278105b4961b34dd613640744352fef0b546d57",
+      "duration_s": 200.0,
+      "analysis_parameters": {
+        "bin_s": 0.1,
+        "event_after_s": 2.0,
+        "event_before_s": 0.5,
+        "maximum_case_samples": 100,
+        "maximum_evidence_rows_per_sample": 12,
+        "root_queue_disc_absence_independently_audited": false,
+        "tx_identity_retention_s": 10.0
+      },
+      "inputs": [
+        {
+          "kind": "sender",
+          "path": "/tmp/cs30401-study/leo10-static20/logs_ns3/tcp_flow_0_study_packets.csv"
+        },
+        {
+          "kind": "drop",
+          "path": "/tmp/cs30401-study/leo10-static20/logs_ns3/study_drops.csv"
+        },
+        {
+          "kind": "receiver",
+          "path": "/tmp/cs30401-study/leo10-static20/logs_ns3/study_rx_node_1585_port_1024.csv"
+        },
+        {
+          "kind": "app",
+          "path": "/tmp/cs30401-study/leo10-static20/logs_ns3/study_app_rx_node_1585_port_1024.csv"
+        },
+        {
+          "kind": "state",
+          "path": "/tmp/cs30401-study/leo10-static20/logs_ns3/tcp_flow_0_study_events.csv"
+        }
+      ],
+      "limitations": [
+        "Path-truth propagation RTT includes both directions; RTT decreases alone do not prove forward-path overtaking.",
+        "Repeated cumulative ACKs are observations, not an independent reconstruction of every duplicate-ACK predicate.",
+        "Exact tx_id tags, not packet UIDs, identify transmission instances; joins are retained for a bounded time.",
+        "Candidate unnecessary recovery associates a sequence gap, ACK evidence, retransmission and eventual original delivery; controlled comparisons are still needed for a causal performance claim.",
+        "LOSS state is reported directly and is not automatically called an RTO without a dedicated timer trace.",
+        "Drop trace rows can duplicate one physical loss; distinct tagged transmission counts and per-layer counts are separate.",
+        "No observed drop is not proof of no drop when coverage or packet parsing is incomplete.",
+        "Traffic-control TcDrop coverage is required before excluding network loss; pre-v3 coverage can omit this path.",
+        "Root queue-disc absence must be verified per device or explicitly independently audited; TcDrop does not observe a root queue-disc's own losses.",
+        "Receiver TCP window rejection and PAWS/input discards are not covered by queue/IP/device/traffic-control hooks.",
+        "Pre-processing wire Rx does not prove acceptance: a gap fill requires subsequent expected_seq advancement or same-time application delivery.",
+        "Application HandleRead bytes are ordered unique delivery; wire interval union is a separate metric.",
+        "Sequence epochs assume adjacent relevant sequence references differ by less than 2^31 bytes.",
+        "Static and dynamic path controls, actual loss tests and deployment-information errors remain separate experimental requirements."
+      ]
+    },
+    "leo10-vegas": {
+      "label": "Vegas baseline",
+      "summary": "/tmp/cs30401-study/leo10-vegas/study_analysis.json",
+      "sha256": "63606c7d7e131c7f2786072cbc6c7f3e9b082ffa5ad52f63c44fe3a95794ab78",
+      "duration_s": 200.0,
+      "analysis_parameters": {
+        "bin_s": 0.1,
+        "event_after_s": 2.0,
+        "event_before_s": 0.5,
+        "maximum_case_samples": 100,
+        "maximum_evidence_rows_per_sample": 12,
+        "root_queue_disc_absence_independently_audited": false,
+        "tx_identity_retention_s": 10.0
+      },
+      "inputs": [
+        {
+          "kind": "sender",
+          "path": "/tmp/cs30401-study/leo10-vegas/logs_ns3/tcp_flow_0_study_packets.csv"
+        },
+        {
+          "kind": "drop",
+          "path": "/tmp/cs30401-study/leo10-vegas/logs_ns3/study_drops.csv"
+        },
+        {
+          "kind": "receiver",
+          "path": "/tmp/cs30401-study/leo10-vegas/logs_ns3/study_rx_node_1585_port_1024.csv"
+        },
+        {
+          "kind": "app",
+          "path": "/tmp/cs30401-study/leo10-vegas/logs_ns3/study_app_rx_node_1585_port_1024.csv"
+        },
+        {
+          "kind": "state",
+          "path": "/tmp/cs30401-study/leo10-vegas/logs_ns3/tcp_flow_0_study_events.csv"
+        }
+      ],
+      "limitations": [
+        "Path-truth propagation RTT includes both directions; RTT decreases alone do not prove forward-path overtaking.",
+        "Repeated cumulative ACKs are observations, not an independent reconstruction of every duplicate-ACK predicate.",
+        "Exact tx_id tags, not packet UIDs, identify transmission instances; joins are retained for a bounded time.",
+        "Candidate unnecessary recovery associates a sequence gap, ACK evidence, retransmission and eventual original delivery; controlled comparisons are still needed for a causal performance claim.",
+        "LOSS state is reported directly and is not automatically called an RTO without a dedicated timer trace.",
+        "Drop trace rows can duplicate one physical loss; distinct tagged transmission counts and per-layer counts are separate.",
+        "No observed drop is not proof of no drop when coverage or packet parsing is incomplete.",
+        "Traffic-control TcDrop coverage is required before excluding network loss; pre-v3 coverage can omit this path.",
+        "Root queue-disc absence must be verified per device or explicitly independently audited; TcDrop does not observe a root queue-disc's own losses.",
+        "Receiver TCP window rejection and PAWS/input discards are not covered by queue/IP/device/traffic-control hooks.",
+        "Pre-processing wire Rx does not prove acceptance: a gap fill requires subsequent expected_seq advancement or same-time application delivery.",
+        "Application HandleRead bytes are ordered unique delivery; wire interval union is a separate metric.",
+        "Sequence epochs assume adjacent relevant sequence references differ by less than 2^31 bytes.",
+        "Static and dynamic path controls, actual loss tests and deployment-information errors remain separate experimental requirements."
+      ]
+    },
+    "micro-tail-base-v5": {
+      "label": "micro-tail-base-v5",
+      "summary": "/tmp/cs30401-study/micro-tail-base-v5/study_analysis.json",
+      "sha256": "1d982044b2bbf3ad4c211b075bc274f61c2e79bb1f30a79dde8438f633e3c02f",
+      "duration_s": 4.0,
+      "analysis_parameters": {
+        "bin_s": 0.1,
+        "event_after_s": 2.0,
+        "event_before_s": 0.5,
+        "maximum_case_samples": 100,
+        "maximum_evidence_rows_per_sample": 12,
+        "root_queue_disc_absence_independently_audited": false,
+        "tx_identity_retention_s": 10.0
+      },
+      "inputs": [
+        {
+          "kind": "sender",
+          "path": "/tmp/cs30401-study/micro-tail-base-v5/logs_ns3/tcp_flow_0_study_packets.csv"
+        },
+        {
+          "kind": "drop",
+          "path": "/tmp/cs30401-study/micro-tail-base-v5/logs_ns3/study_drops.csv"
+        },
+        {
+          "kind": "receiver",
+          "path": "/tmp/cs30401-study/micro-tail-base-v5/logs_ns3/study_rx_node_1_port_1024.csv"
+        },
+        {
+          "kind": "app",
+          "path": "/tmp/cs30401-study/micro-tail-base-v5/logs_ns3/study_app_rx_node_1_port_1024.csv"
+        },
+        {
+          "kind": "state",
+          "path": "/tmp/cs30401-study/micro-tail-base-v5/logs_ns3/tcp_flow_0_study_events.csv"
+        }
+      ],
+      "limitations": [
+        "Path-truth propagation RTT includes both directions; RTT decreases alone do not prove forward-path overtaking.",
+        "Repeated cumulative ACKs are observations, not an independent reconstruction of every duplicate-ACK predicate.",
+        "Exact tx_id tags, not packet UIDs, identify transmission instances; joins are retained for a bounded time.",
+        "Candidate unnecessary recovery associates a sequence gap, ACK evidence, retransmission and eventual original delivery; controlled comparisons are still needed for a causal performance claim.",
+        "LOSS state is reported directly and is not automatically called an RTO without a dedicated timer trace.",
+        "Drop trace rows can duplicate one physical loss; distinct tagged transmission counts and per-layer counts are separate.",
+        "No observed drop is not proof of no drop when coverage or packet parsing is incomplete.",
+        "Traffic-control TcDrop coverage is required before excluding network loss; pre-v3 coverage can omit this path.",
+        "Root queue-disc absence must be verified per device or explicitly independently audited; TcDrop does not observe a root queue-disc's own losses.",
+        "Receiver TCP window rejection and PAWS/input discards are not covered by queue/IP/device/traffic-control hooks.",
+        "Pre-processing wire Rx does not prove acceptance: a gap fill requires subsequent expected_seq advancement or same-time application delivery.",
+        "Application HandleRead bytes are ordered unique delivery; wire interval union is a separate metric.",
+        "Sequence epochs assume adjacent relevant sequence references differ by less than 2^31 bytes.",
+        "Static and dynamic path controls, actual loss tests and deployment-information errors remain separate experimental requirements."
+      ]
+    },
+    "micro-tail-guard20-v5": {
+      "label": "micro-tail-guard20-v5",
+      "summary": "/tmp/cs30401-study/micro-tail-guard20-v5/study_analysis.json",
+      "sha256": "146bbfb770c329d3cb60885acd0b0aa19003aaba9f548138953d7c9ccd7e1b97",
+      "duration_s": 4.0,
+      "analysis_parameters": {
+        "bin_s": 0.1,
+        "event_after_s": 2.0,
+        "event_before_s": 0.5,
+        "maximum_case_samples": 100,
+        "maximum_evidence_rows_per_sample": 12,
+        "root_queue_disc_absence_independently_audited": false,
+        "tx_identity_retention_s": 10.0
+      },
+      "inputs": [
+        {
+          "kind": "sender",
+          "path": "/tmp/cs30401-study/micro-tail-guard20-v5/logs_ns3/tcp_flow_0_study_packets.csv"
+        },
+        {
+          "kind": "drop",
+          "path": "/tmp/cs30401-study/micro-tail-guard20-v5/logs_ns3/study_drops.csv"
+        },
+        {
+          "kind": "receiver",
+          "path": "/tmp/cs30401-study/micro-tail-guard20-v5/logs_ns3/study_rx_node_1_port_1024.csv"
+        },
+        {
+          "kind": "app",
+          "path": "/tmp/cs30401-study/micro-tail-guard20-v5/logs_ns3/study_app_rx_node_1_port_1024.csv"
+        },
+        {
+          "kind": "state",
+          "path": "/tmp/cs30401-study/micro-tail-guard20-v5/logs_ns3/tcp_flow_0_study_events.csv"
+        }
+      ],
+      "limitations": [
+        "Path-truth propagation RTT includes both directions; RTT decreases alone do not prove forward-path overtaking.",
+        "Repeated cumulative ACKs are observations, not an independent reconstruction of every duplicate-ACK predicate.",
+        "Exact tx_id tags, not packet UIDs, identify transmission instances; joins are retained for a bounded time.",
+        "Candidate unnecessary recovery associates a sequence gap, ACK evidence, retransmission and eventual original delivery; controlled comparisons are still needed for a causal performance claim.",
+        "LOSS state is reported directly and is not automatically called an RTO without a dedicated timer trace.",
+        "Drop trace rows can duplicate one physical loss; distinct tagged transmission counts and per-layer counts are separate.",
+        "No observed drop is not proof of no drop when coverage or packet parsing is incomplete.",
+        "Traffic-control TcDrop coverage is required before excluding network loss; pre-v3 coverage can omit this path.",
+        "Root queue-disc absence must be verified per device or explicitly independently audited; TcDrop does not observe a root queue-disc's own losses.",
+        "Receiver TCP window rejection and PAWS/input discards are not covered by queue/IP/device/traffic-control hooks.",
+        "Pre-processing wire Rx does not prove acceptance: a gap fill requires subsequent expected_seq advancement or same-time application delivery.",
+        "Application HandleRead bytes are ordered unique delivery; wire interval union is a separate metric.",
+        "Sequence epochs assume adjacent relevant sequence references differ by less than 2^31 bytes.",
+        "Static and dynamic path controls, actual loss tests and deployment-information errors remain separate experimental requirements."
+      ]
+    }
+  },
+  "figures": {
+    "stable_path_loss_recovery": {
+      "cases": [
+        "micro-tail-base-v5",
+        "micro-tail-guard20-v5"
+      ],
+      "observations": [
+        {
+          "case": "micro-tail-base-v5",
+          "tx_id": 3,
+          "drop_time_ns": 150128320,
+          "retransmission_delay_s": 0.05034912,
+          "gap_resolution_delay_s": 0.10046384,
+          "accepted_fill_is_matching_retransmission": true
+        },
+        {
+          "case": "micro-tail-guard20-v5",
+          "tx_id": 3,
+          "drop_time_ns": 150128320,
+          "retransmission_delay_s": 0.949880961,
+          "gap_resolution_delay_s": 0.999995681,
+          "accepted_fill_is_matching_retransmission": true
+        }
+      ],
+      "application_targets": [
+        {
+          "case": "micro-tail-base-v5",
+          "target_bytes": 27600,
+          "receiver_target_time_s": 0.25150992
+        },
+        {
+          "case": "micro-tail-guard20-v5",
+          "target_bytes": 27600,
+          "receiver_target_time_s": 1.150124001
+        }
+      ],
+      "drop_layer_filter": [
+        "PhyRxDrop"
+      ],
+      "note": "Summary samples; unique transmission ID, sequence range deduplicates layers."
+    }
+  }
+}

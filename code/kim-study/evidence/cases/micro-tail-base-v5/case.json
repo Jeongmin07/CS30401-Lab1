@@ -1,0 +1,48 @@
+{
+  "case": "micro-tail-base-v5",
+  "parameters": {
+    "name": "micro-tail-base-v5",
+    "kind": "micro",
+    "cc": "TcpCubic",
+    "rate": 100.0,
+    "queue": 2000,
+    "duration": 4,
+    "parameters": "",
+    "trace": 1,
+    "before_ms": 50.0,
+    "after_ms": 50.0,
+    "event_s": 2.0,
+    "loss_s": 0.15,
+    "initial_ssthresh_pkts": 900,
+    "max_bytes": 27600,
+    "state": "/home/ubuntu/lab/data/seoul_london/state",
+    "patch": "/work/study-v5.patch"
+  },
+  "command": [
+    "/home/ubuntu/ns-3.48/build/scratch/study_micro/ns3.48-study_micro",
+    "--run_dir=/tmp/cs30401-study/micro-tail-base-v5",
+    "--cc=TcpCubic",
+    "--duration=4",
+    "--rate=100.0",
+    "--queue_pkts=2000",
+    "--before_ms=50.0",
+    "--after_ms=50.0",
+    "--event_s=2.0",
+    "--loss_s=0.15",
+    "--initial_ssthresh_pkts=900",
+    "--max_bytes=27600"
+  ],
+  "trace_environment": {
+    "CS30401_STUDY_TRACE": "1",
+    "CS30401_STUDY_TRACE_DIR": "/tmp/cs30401-study/micro-tail-base-v5/logs_ns3"
+  },
+  "official_image": "ghcr.io/yeonjong21/cs30401-lab1:2026f-v1",
+  "official_image_digest": "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+  "patch_sha256": "b5657a3b2919ed32ea7fcb8f14a922a75a94cc4d9910e99f809c771747cff3e6",
+  "binary_sha256": "a7956bd602789be11dc1969ca39e38973ef2ef03fcf92678893394a1e9ea78f8",
+  "state": null,
+  "start_time_unix": 1791566021.8112185,
+  "status": "complete",
+  "exit_code": 0,
+  "wall_time_s": 0.024
+}

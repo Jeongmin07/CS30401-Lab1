@@ -1,0 +1,361 @@
+{
+  "cases": [
+    {
+      "case": "leo10-base",
+      "command": [
+        "python3",
+        "/work/run_study.py",
+        "leo10-base",
+        "--rate",
+        "10",
+        "--queue",
+        "100",
+        "--duration",
+        "200"
+      ],
+      "exit_code": 0
+    },
+    {
+      "case": "leo10-static20",
+      "command": [
+        "python3",
+        "/work/run_study.py",
+        "leo10-static20",
+        "--rate",
+        "10",
+        "--queue",
+        "100",
+        "--duration",
+        "200",
+        "--parameters",
+        "study_threshold=20"
+      ],
+      "exit_code": 0
+    },
+    {
+      "case": "leo10-guard20",
+      "command": [
+        "python3",
+        "/work/run_study.py",
+        "leo10-guard20",
+        "--rate",
+        "10",
+        "--queue",
+        "100",
+        "--duration",
+        "200",
+        "--parameters",
+        "study_threshold=20;study_windows=26100000000:26500000000|74900000000:75300000000"
+      ],
+      "exit_code": 0
+    },
+    {
+      "case": "leo10-late20",
+      "command": [
+        "python3",
+        "/work/run_study.py",
+        "leo10-late20",
+        "--rate",
+        "10",
+        "--queue",
+        "100",
+        "--duration",
+        "200",
+        "--parameters",
+        "study_threshold=20;study_windows=26400000000:26800000000|75200000000:75600000000"
+      ],
+      "exit_code": 0
+    },
+    {
+      "case": "leo10-guard8",
+      "command": [
+        "python3",
+        "/work/run_study.py",
+        "leo10-guard8",
+        "--rate",
+        "10",
+        "--queue",
+        "100",
+        "--duration",
+        "200",
+        "--parameters",
+        "study_threshold=8;study_windows=26100000000:26500000000|74900000000:75300000000"
+      ],
+      "exit_code": 0
+    },
+    {
+      "case": "leo10-guard32",
+      "command": [
+        "python3",
+        "/work/run_study.py",
+        "leo10-guard32",
+        "--rate",
+        "10",
+        "--queue",
+        "100",
+        "--duration",
+        "200",
+        "--parameters",
+        "study_threshold=32;study_windows=26100000000:26500000000|74900000000:75300000000"
+      ],
+      "exit_code": 0
+    },
+    {
+      "case": "leo100-base",
+      "command": [
+        "python3",
+        "/work/run_study.py",
+        "leo100-base",
+        "--rate",
+        "100",
+        "--queue",
+        "1000",
+        "--duration",
+        "85"
+      ],
+      "exit_code": 0
+    },
+    {
+      "case": "leo100-static64",
+      "command": [
+        "python3",
+        "/work/run_study.py",
+        "leo100-static64",
+        "--rate",
+        "100",
+        "--queue",
+        "1000",
+        "--duration",
+        "85",
+        "--parameters",
+        "study_threshold=64"
+      ],
+      "exit_code": 0
+    },
+    {
+      "case": "leo100-guard64",
+      "command": [
+        "python3",
+        "/work/run_study.py",
+        "leo100-guard64",
+        "--rate",
+        "100",
+        "--queue",
+        "1000",
+        "--duration",
+        "85",
+        "--parameters",
+        "study_threshold=64;study_windows=26100000000:26500000000|74900000000:75300000000"
+      ],
+      "exit_code": 0
+    },
+    {
+      "case": "leo10-smallq-base",
+      "command": [
+        "python3",
+        "/work/run_study.py",
+        "leo10-smallq-base",
+        "--rate",
+        "10",
+        "--queue",
+        "50",
+        "--duration",
+        "200"
+      ],
+      "exit_code": 0
+    },
+    {
+      "case": "leo10-smallq-guard20",
+      "command": [
+        "python3",
+        "/work/run_study.py",
+        "leo10-smallq-guard20",
+        "--rate",
+        "10",
+        "--queue",
+        "50",
+        "--duration",
+        "200",
+        "--parameters",
+        "study_threshold=20;study_windows=26100000000:26500000000|74900000000:75300000000"
+      ],
+      "exit_code": 0
+    },
+    {
+      "case": "leo10-vegas",
+      "command": [
+        "python3",
+        "/work/run_study.py",
+        "leo10-vegas",
+        "--rate",
+        "10",
+        "--queue",
+        "100",
+        "--duration",
+        "200",
+        "--cc",
+        "TcpVegas"
+      ],
+      "exit_code": 0
+    },
+    {
+      "case": "leo10-bbr",
+      "command": [
+        "python3",
+        "/work/run_study.py",
+        "leo10-bbr",
+        "--rate",
+        "10",
+        "--queue",
+        "100",
+        "--duration",
+        "200",
+        "--cc",
+        "TcpBbr"
+      ],
+      "exit_code": 0
+    },
+    {
+      "case": "micro-step-base",
+      "command": [
+        "python3",
+        "/work/run_study.py",
+        "micro-step-base",
+        "--kind",
+        "micro",
+        "--rate",
+        "100",
+        "--queue",
+        "2000",
+        "--duration",
+        "20"
+      ],
+      "exit_code": 0
+    },
+    {
+      "case": "micro-step-static64",
+      "command": [
+        "python3",
+        "/work/run_study.py",
+        "micro-step-static64",
+        "--kind",
+        "micro",
+        "--rate",
+        "100",
+        "--queue",
+        "2000",
+        "--duration",
+        "20",
+        "--parameters",
+        "study_threshold=64"
+      ],
+      "exit_code": 0
+    },
+    {
+      "case": "micro-step-guard64",
+      "command": [
+        "python3",
+        "/work/run_study.py",
+        "micro-step-guard64",
+        "--kind",
+        "micro",
+        "--rate",
+        "100",
+        "--queue",
+        "2000",
+        "--duration",
+        "20",
+        "--parameters",
+        "study_threshold=64;study_windows=9990000000:10300000000"
+      ],
+      "exit_code": 0
+    },
+    {
+      "case": "micro-stable-base",
+      "command": [
+        "python3",
+        "/work/run_study.py",
+        "micro-stable-base",
+        "--kind",
+        "micro",
+        "--rate",
+        "100",
+        "--queue",
+        "2000",
+        "--duration",
+        "20",
+        "--after-ms",
+        "50"
+      ],
+      "exit_code": 0
+    },
+    {
+      "case": "micro-loss-base",
+      "command": [
+        "python3",
+        "/work/run_study.py",
+        "micro-loss-base",
+        "--kind",
+        "micro",
+        "--rate",
+        "100",
+        "--queue",
+        "2000",
+        "--duration",
+        "20",
+        "--after-ms",
+        "50",
+        "--loss-s",
+        "10.06"
+      ],
+      "exit_code": 0
+    },
+    {
+      "case": "micro-loss-static64",
+      "command": [
+        "python3",
+        "/work/run_study.py",
+        "micro-loss-static64",
+        "--kind",
+        "micro",
+        "--rate",
+        "100",
+        "--queue",
+        "2000",
+        "--duration",
+        "20",
+        "--after-ms",
+        "50",
+        "--loss-s",
+        "10.06",
+        "--parameters",
+        "study_threshold=64"
+      ],
+      "exit_code": 0
+    },
+    {
+      "case": "micro-loss-guard64",
+      "command": [
+        "python3",
+        "/work/run_study.py",
+        "micro-loss-guard64",
+        "--kind",
+        "micro",
+        "--rate",
+        "100",
+        "--queue",
+        "2000",
+        "--duration",
+        "20",
+        "--after-ms",
+        "50",
+        "--loss-s",
+        "10.06",
+        "--parameters",
+        "study_threshold=64;study_windows=9990000000:10300000000"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "elapsed_s": 278.014
+}

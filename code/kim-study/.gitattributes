@@ -1,0 +1,5 @@
+* text=auto eol=lf
+*.png binary
+*.pdf binary
+# A unified patch has a single-space prefix on empty context lines.
+*.patch text eol=lf whitespace=-blank-at-eol

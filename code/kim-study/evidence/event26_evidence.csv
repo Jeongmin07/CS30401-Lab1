@@ -1,0 +1,75 @@
+evidence_type,source_case,source_file,source_row,time_ns,event,flow_id,packet_uid,tx_id,seq,ack,payload_bytes,expected_seq,sack_blocks,old_value,new_value,threshold,cong_state,detail
+derived,leo-delay26-base-v5,logs_ns3 aggregate;case.json;schedule.csv,,26100000000,DELAYED_ROUTE_CONTROL,,,,,,,,,,,,,"window_ns=26100000000:26600000000;{""drop"":0,""out_of_order_payload"":0,""recovery"":0,""retx"":0};same recorded binary hash and independently hashed schedule;control design:26.1s forwarding snapshot retained26.2-26.8s;orbits/distance continue;design independently specified in make_state_control.py"
+derived_from_state,leo10-base,path_truth_200s.csv,263,26100000000,ROUTE_SNAPSHOT,,,,,,,,,,,,,"{""hops_fwd"":""12"",""hops_rev"":""12"",""path_changed"":""0"",""path_fwd"":""1584-381-380-379-357-335-313-291-269-247-225-224-1585"",""rtt_prop_ms"":""97.698"",""t_s"":""26.1""}"
+derived,leo10-base,study_drop_coverage.csv,,26100000000,DROP_HOOK_COVERAGE,,,,,,,,,,,,,all 50704 declared hooks/checks connected=1;TcDrop included;manifest alone does not independently audit every discard path
+derived,leo10-base,study_drops.csv,,26100000000,DROP_WINDOW_AUDIT,,,,,,,,,,,,,"window_ns=26100000000:26600000000;all_direction_drop_rows=0;original_tx21859_drop_rows=0;whole_run_rows_by_layer={""TcDrop"":499}"
+observed,leo10-base,tcp_flow_0_study_packets.csv,33808,26188727733,TX,0,279,21853,29726581,1,1380,,,,,3,0,tx_time_ns=26188727733
+observed,leo10-base,tcp_flow_0_study_packets.csv,33810,26191022111,TX,0,279,21854,29727961,1,1380,,,,,3,0,tx_time_ns=26191022111
+observed,leo10-base,tcp_flow_0_study_packets.csv,33811,26191022111,TX,0,279,21855,29729341,1,1380,,,,,3,0,tx_time_ns=26191022111
+observed,leo10-base,tcp_flow_0_study_packets.csv,33813,26193316491,TX,0,279,21856,29730721,1,1380,,,,,3,0,tx_time_ns=26193316491
+observed,leo10-base,tcp_flow_0_study_packets.csv,33814,26193316491,TX,0,279,21857,29732101,1,1380,,,,,3,0,tx_time_ns=26193316491
+observed,leo10-base,tcp_flow_0_study_packets.csv,33816,26195610854,TX,0,279,21858,29733481,1,1380,,,,,3,0,tx_time_ns=26195610854
+observed,leo10-base,tcp_flow_0_study_packets.csv,33817,26195610854,TX,0,279,21859,29734861,1,1380,,,,,3,0,tx_time_ns=26195610854
+observed,leo10-base,tcp_flow_0_study_packets.csv,33819,26197905233,TX,0,279,21860,29736241,1,1380,,,,,3,0,tx_time_ns=26197905233
+observed,leo10-base,tcp_flow_0_study_packets.csv,33820,26197905233,TX,0,279,21861,29737621,1,1380,,,,,3,0,tx_time_ns=26197905233
+derived_from_state,leo10-base,path_truth_200s.csv,264,26200000000,ROUTE_SNAPSHOT,,,,,,,,,,,,,"{""hops_fwd"":""10"",""hops_rev"":""10"",""path_changed"":""1"",""path_fwd"":""1584-316-315-314-313-291-269-247-225-224-1585"",""rtt_prop_ms"":""91.064"",""t_s"":""26.2""}"
+observed,leo10-base,tcp_flow_0_study_packets.csv,33822,26200199611,TX,0,279,21862,29739001,1,1380,,,,,3,0,tx_time_ns=26200199611
+observed,leo10-base,tcp_flow_0_study_packets.csv,33823,26200199611,TX,0,279,21863,29740381,1,1380,,,,,3,0,tx_time_ns=26200199611
+observed,leo10-base,tcp_flow_0_study_packets.csv,33825,26202493992,TX,0,279,21864,29741761,1,1380,,,,,3,0,tx_time_ns=26202493992
+observed,leo10-base,tcp_flow_0_study_packets.csv,33826,26202493992,TX,0,279,21865,29743141,1,1380,,,,,3,0,tx_time_ns=26202493992
+observed,leo10-base,tcp_flow_0_study_packets.csv,33828,26204788353,TX,0,279,21866,29744521,1,1380,,,,,3,0,tx_time_ns=26204788353
+observed,leo10-base,tcp_flow_0_study_packets.csv,33829,26204788353,TX,0,279,21867,29745901,1,1380,,,,,3,0,tx_time_ns=26204788353
+observed,leo10-base,tcp_flow_0_study_packets.csv,33831,26207082732,TX,0,279,21868,29747281,1,1380,,,,,3,0,tx_time_ns=26207082732
+observed,leo10-base,tcp_flow_0_study_packets.csv,33832,26207082732,TX,0,279,21869,29748661,1,1380,,,,,3,0,tx_time_ns=26207082732
+observed,leo10-base,study_rx_node_1585_port_1024.csv,21543,26273584518,RECEIVER_RX,0,279,21853,29726581,1,1380,29726581,,,,,,tx_time_ns=26188727733
+observed,leo10-base,study_rx_node_1585_port_1024.csv,21544,26274731720,RECEIVER_RX,0,279,21854,29727961,1,1380,29727961,,,,,,tx_time_ns=26191022111
+observed,leo10-base,study_rx_node_1585_port_1024.csv,21545,26275878926,RECEIVER_RX,0,279,21855,29729341,1,1380,29729341,,,,,,tx_time_ns=26191022111
+observed,leo10-base,study_app_rx_node_1585_port_1024.csv,19759,26277026128,APPLICATION_DELIVERY,0,41996,,,,1380,,,,,,,connection_total_rx_bytes=29732100
+observed,leo10-base,study_rx_node_1585_port_1024.csv,21546,26277026128,RECEIVER_RX,0,279,21856,29730721,1,1380,29730721,,,,,,tx_time_ns=26193316491
+observed,leo10-base,study_rx_node_1585_port_1024.csv,21547,26278173331,RECEIVER_RX,0,279,21862,29739001,1,1380,29732101,,,,,,tx_time_ns=26200199611;payload ahead of next expected sequence
+observed,leo10-base,study_app_rx_node_1585_port_1024.csv,19760,26279320534,APPLICATION_DELIVERY,0,42000,,,,1380,,,,,,,connection_total_rx_bytes=29733480
+observed,leo10-base,study_rx_node_1585_port_1024.csv,21548,26279320534,RECEIVER_RX,0,279,21857,29732101,1,1380,29732101,,,,,,tx_time_ns=26193316491
+observed,leo10-base,study_rx_node_1585_port_1024.csv,21549,26280467736,RECEIVER_RX,0,279,21863,29740381,1,1380,29733481,,,,,,tx_time_ns=26200199611;payload ahead of next expected sequence
+observed,leo10-base,study_app_rx_node_1585_port_1024.csv,19761,26281614939,APPLICATION_DELIVERY,0,42004,,,,1380,,,,,,,connection_total_rx_bytes=29734860
+observed,leo10-base,study_rx_node_1585_port_1024.csv,21550,26281614939,RECEIVER_RX,0,279,21858,29733481,1,1380,29733481,,,,,,tx_time_ns=26195610854
+observed,leo10-base,study_rx_node_1585_port_1024.csv,21551,26282762142,RECEIVER_RX,0,279,21864,29741761,1,1380,29734861,,,,,,tx_time_ns=26202493992;payload ahead of next expected sequence
+observed,leo10-base,study_app_rx_node_1585_port_1024.csv,19762,26283909347,APPLICATION_DELIVERY,0,42008,,,,1380,,,,,,,connection_total_rx_bytes=29736240;application delivery covers original target sequence;delivered_sequence_interval=29734861:29736241;first_data_sequence=1
+observed,leo10-base,study_rx_node_1585_port_1024.csv,21552,26283909347,RECEIVER_RX,0,279,21859,29734861,1,1380,29734861,,,,,,tx_time_ns=26195610854;original target transmission reaches receiver socket
+observed,leo10-base,study_rx_node_1585_port_1024.csv,21553,26285056550,RECEIVER_RX,0,279,21865,29743141,1,1380,29736241,,,,,,tx_time_ns=26202493992;payload ahead of next expected sequence
+observed,leo10-base,study_app_rx_node_1585_port_1024.csv,19763,26286203752,APPLICATION_DELIVERY,0,42012,,,,1380,,,,,,,connection_total_rx_bytes=29737620
+observed,leo10-base,study_rx_node_1585_port_1024.csv,21554,26286203752,RECEIVER_RX,0,279,21860,29736241,1,1380,29736241,,,,,,tx_time_ns=26197905233
+observed,leo10-base,study_rx_node_1585_port_1024.csv,21555,26287350955,RECEIVER_RX,0,279,21866,29744521,1,1380,29737621,,,,,,tx_time_ns=26204788353;payload ahead of next expected sequence
+observed,leo10-base,study_app_rx_node_1585_port_1024.csv,19764,26288498158,APPLICATION_DELIVERY,0,42016,,,,8280,,,,,,,connection_total_rx_bytes=29745900
+observed,leo10-base,study_rx_node_1585_port_1024.csv,21556,26288498158,RECEIVER_RX,0,279,21861,29737621,1,1380,29737621,,,,,,tx_time_ns=26197905233
+observed,leo10-base,study_app_rx_node_1585_port_1024.csv,19765,26289645360,APPLICATION_DELIVERY,0,42019,,,,1380,,,,,,,connection_total_rx_bytes=29747280
+observed,leo10-base,study_rx_node_1585_port_1024.csv,21557,26289645360,RECEIVER_RX,0,279,21867,29745901,1,1380,29745901,,,,,,tx_time_ns=26204788353
+observed,leo10-base,study_app_rx_node_1585_port_1024.csv,19766,26290792566,APPLICATION_DELIVERY,0,42020,,,,1380,,,,,,,connection_total_rx_bytes=29748660
+observed,leo10-base,study_rx_node_1585_port_1024.csv,21558,26290792566,RECEIVER_RX,0,279,21868,29747281,1,1380,29747281,,,,,,tx_time_ns=26207082732
+observed,leo10-base,study_rx_node_1585_port_1024.csv,21559,26291939768,RECEIVER_RX,0,279,21869,29748661,1,1380,29748661,,,,,,tx_time_ns=26207082732
+observed,leo10-base,tcp_flow_0_study_packets.csv,33981,26318400113,RX_ACK,0,41989,0,1,29726581,0,,,,,3,0,tx_time_ns=-1
+observed,leo10-base,tcp_flow_0_study_packets.csv,33984,26320694489,RX_ACK,0,41993,0,1,29729341,0,,,,,3,0,tx_time_ns=-1
+observed,leo10-base,tcp_flow_0_study_packets.csv,33987,26322988882,RX_ACK,0,41997,0,1,29732101,0,,,,,3,0,tx_time_ns=-1
+observed,leo10-base,tcp_flow_0_study_events.csv,34,26324200077,CONG,0,,,,,,,,0,1,3,1,
+observed,leo10-base,tcp_flow_0_study_packets.csv,33990,26324200077,RX_ACK,0,41999,0,1,29732101,0,,29739001:29740381,,,3,0,tx_time_ns=-1
+observed,leo10-base,tcp_flow_0_study_events.csv,35,26325347270,CONG,0,,,,,,,,1,0,3,0,
+observed,leo10-base,tcp_flow_0_study_packets.csv,33992,26325347270,RX_ACK,0,42001,0,1,29733481,0,,29739001:29740381,,,3,1,tx_time_ns=-1
+observed,leo10-base,tcp_flow_0_study_events.csv,36,26326494464,CONG,0,,,,,,,,0,1,3,1,
+observed,leo10-base,tcp_flow_0_study_packets.csv,33994,26326494464,RX_ACK,0,42003,0,1,29733481,0,,29739001:29741761,,,3,0,tx_time_ns=-1
+observed,leo10-base,tcp_flow_0_study_events.csv,37,26327641659,CONG,0,,,,,,,,1,0,3,0,
+observed,leo10-base,tcp_flow_0_study_packets.csv,33996,26327641659,RX_ACK,0,42005,0,1,29734861,0,,29739001:29741761,,,3,1,tx_time_ns=-1
+observed,leo10-base,tcp_flow_0_study_events.csv,38,26328788841,CONG,0,,,,,,,,0,1,3,1,
+observed,leo10-base,tcp_flow_0_study_events.csv,39,26328788841,CONG,0,,,,,,,,1,3,3,3,
+observed,leo10-base,tcp_flow_0_study_events.csv,40,26328788841,SSTHRESH,0,,,,,,,,139380,113160,3,3,
+observed,leo10-base,tcp_flow_0_study_packets.csv,33998,26328788841,RX_ACK,0,42007,0,1,29734861,0,,29739001:29743141,,,3,0,tx_time_ns=-1;triggering SACK covers three 1380-byte segments above cumulative ACK
+observed,leo10-base,tcp_flow_0_study_packets.csv,33999,26328788841,TX,0,279,21979,29734861,1,1380,,,,,3,3,tx_time_ns=26328788841
+observed,leo10-base,tcp_flow_0_study_packets.csv,34000,26328788841,RETX,0,279,21979,29734861,1,1380,,,,,3,3,tx_time_ns=26328788841
+derived,leo10-base,tcp_flow_0_study_packets.csv,,26329936038,COVERING_ACK_DELAY,,,,,,,,,,,,,covering_ack_minus_retransmission_ns=1147197;retransmission_minus_original_acceptance_ns=44879494
+observed,leo10-base,tcp_flow_0_study_packets.csv,34001,26329936038,RX_ACK,0,42009,0,1,29736241,0,,29739001:29743141,,,3,3,tx_time_ns=-1;first covering ACK for sequence29734861
+observed,leo10-base,tcp_flow_0_study_packets.csv,34002,26329936038,TX,0,279,21980,29736241,1,1380,,,,,3,3,tx_time_ns=26329936038
+observed,leo10-base,tcp_flow_0_study_packets.csv,34003,26329936038,RETX,0,279,21980,29736241,1,1380,,,,,3,3,tx_time_ns=26329936038
+observed,leo10-base,tcp_flow_0_study_packets.csv,34004,26331083235,RX_ACK,0,42011,0,1,29736241,0,,29739001:29744521,,,3,3,tx_time_ns=-1
+observed,leo10-base,tcp_flow_0_study_packets.csv,34005,26331083235,TX,0,279,21981,29737621,1,1380,,,,,3,3,tx_time_ns=26331083235
+observed,leo10-base,tcp_flow_0_study_packets.csv,34006,26331083235,RETX,0,279,21981,29737621,1,1380,,,,,3,3,tx_time_ns=26331083235
+observed,leo10-base,tcp_flow_0_study_packets.csv,34007,26332230428,RX_ACK,0,42013,0,1,29737621,0,,29739001:29744521,,,3,3,tx_time_ns=-1
+observed,leo10-base,tcp_flow_0_study_packets.csv,34009,26333377623,RX_ACK,0,42015,0,1,29737621,0,,29739001:29745901,,,3,3,tx_time_ns=-1
+observed,leo10-base,tcp_flow_0_study_packets.csv,34011,26334460816,RX_ACK,0,42017,0,1,29745901,0,,,,,3,3,tx_time_ns=-1

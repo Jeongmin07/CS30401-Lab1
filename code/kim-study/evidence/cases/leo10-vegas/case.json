@@ -1,0 +1,38 @@
+{
+  "case": "leo10-vegas",
+  "parameters": {
+    "name": "leo10-vegas",
+    "kind": "leo",
+    "cc": "TcpVegas",
+    "rate": 10.0,
+    "queue": 100,
+    "duration": 200,
+    "parameters": "",
+    "trace": 1,
+    "before_ms": 50,
+    "after_ms": 45,
+    "event_s": 10,
+    "loss_s": -1,
+    "initial_ssthresh_pkts": 900,
+    "patch": "/work/study-v4.patch"
+  },
+  "command": [
+    "/home/ubuntu/ns-3.48/build/scratch/main_satnet/ns3.48-main_satnet",
+    "--run_dir=/tmp/cs30401-study/leo10-vegas"
+  ],
+  "trace_environment": {
+    "CS30401_STUDY_TRACE": "1",
+    "CS30401_STUDY_TRACE_DIR": "/tmp/cs30401-study/leo10-vegas/logs_ns3"
+  },
+  "official_image": "ghcr.io/yeonjong21/cs30401-lab1:2026f-v1",
+  "official_image_digest": "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+  "patch_sha256": "b4189c7689379a523decf564605b055e836981f948d8ca6e662cbe81dd8fbf99",
+  "binary_sha256": "de9f678113c37a72df7e3215e876f18945c0ccecf9123f60fc8f655f9d9a6eab",
+  "state": "/home/ubuntu/lab/data/seoul_london/state",
+  "start_time_unix": 1791565727.7092624,
+  "status": "complete",
+  "config_ns3.properties_sha256": "5dd90bfd359815b1e63da4861d0d681b0e615273245be2ae7919b9812e8825e3",
+  "schedule.csv_sha256": "e6cde3aa7716856e46d24c3833354df90407313ece13a5ffbd1b789fa4fea23c",
+  "exit_code": 0,
+  "wall_time_s": 8.803
+}

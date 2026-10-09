@@ -1,0 +1,46 @@
+{
+  "case": "micro-step-guard64",
+  "parameters": {
+    "name": "micro-step-guard64",
+    "kind": "micro",
+    "cc": "TcpCubic",
+    "rate": 100.0,
+    "queue": 2000,
+    "duration": 20,
+    "parameters": "study_threshold=64;study_windows=9990000000:10300000000",
+    "trace": 1,
+    "before_ms": 50,
+    "after_ms": 45,
+    "event_s": 10,
+    "loss_s": -1,
+    "initial_ssthresh_pkts": 900,
+    "patch": "/work/study-v4.patch"
+  },
+  "command": [
+    "/home/ubuntu/ns-3.48/build/scratch/study_micro/ns3.48-study_micro",
+    "--run_dir=/tmp/cs30401-study/micro-step-guard64",
+    "--cc=TcpCubic",
+    "--duration=20",
+    "--rate=100.0",
+    "--queue_pkts=2000",
+    "--before_ms=50",
+    "--after_ms=45",
+    "--event_s=10",
+    "--loss_s=-1",
+    "--initial_ssthresh_pkts=900",
+    "--parameters=study_threshold=64;study_windows=9990000000:10300000000"
+  ],
+  "trace_environment": {
+    "CS30401_STUDY_TRACE": "1",
+    "CS30401_STUDY_TRACE_DIR": "/tmp/cs30401-study/micro-step-guard64/logs_ns3"
+  },
+  "official_image": "ghcr.io/yeonjong21/cs30401-lab1:2026f-v1",
+  "official_image_digest": "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+  "patch_sha256": "b4189c7689379a523decf564605b055e836981f948d8ca6e662cbe81dd8fbf99",
+  "binary_sha256": "62146821df53f0de1b67b18b1b03d91791d5e88a65e1188b463f2a5510576178",
+  "state": null,
+  "start_time_unix": 1791565760.561051,
+  "status": "complete",
+  "exit_code": 0,
+  "wall_time_s": 10.875
+}
