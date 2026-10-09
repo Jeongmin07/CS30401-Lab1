@@ -1,0 +1,42 @@
+{
+  "case": "q75-guard20",
+  "parameters": {
+    "name": "q75-guard20",
+    "kind": "leo",
+    "cc": "TcpCubic",
+    "rate": 10.0,
+    "queue": 75,
+    "duration": 200,
+    "parameters": "study_threshold=20;study_windows=26100000000:26500000000|74900000000:75300000000",
+    "trace": 1,
+    "before_ms": 50,
+    "after_ms": 45,
+    "event_s": 10,
+    "loss_s": -1,
+    "loss_seq": 0,
+    "initial_ssthresh_pkts": 900,
+    "max_bytes": 100000000000,
+    "flow_start_s": 0,
+    "state": "/home/ubuntu/lab/data/seoul_london/state",
+    "patch": "/work/ns3.patch"
+  },
+  "command": [
+    "/home/ubuntu/ns-3.48/build/scratch/main_satnet/ns3.48-main_satnet",
+    "--run_dir=/tmp/cs30401-study/q75-guard20"
+  ],
+  "trace_environment": {
+    "CS30401_STUDY_TRACE": "1",
+    "CS30401_STUDY_TRACE_DIR": "/tmp/cs30401-study/q75-guard20/logs_ns3"
+  },
+  "official_image": "ghcr.io/yeonjong21/cs30401-lab1:2026f-v1",
+  "official_image_digest": "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+  "patch_sha256": "473dd0e23447a58bd7ce644507cf4aa24b612020ff1e6029f5bfdb22e2cd4245",
+  "binary_sha256": "de9f678113c37a72df7e3215e876f18945c0ccecf9123f60fc8f655f9d9a6eab",
+  "state": "/home/ubuntu/lab/data/seoul_london/state",
+  "start_time_unix": 1791584598.9244277,
+  "status": "complete",
+  "config_ns3.properties_sha256": "d527899b0dd088365777c1855963af6a897533dfd746b4f2c251a953cba44b4e",
+  "schedule.csv_sha256": "0ecfd35c2541858ee6916d8cb457bbf488b60964ddf9f6ee22abea3344624a86",
+  "exit_code": 0,
+  "wall_time_s": 35.69
+}
