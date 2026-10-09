@@ -149,7 +149,8 @@ def packaged_markdown(path):
         content += ("\n\nDraft-package note: raw event excerpts are excluded from this ZIP. "
                     "The documented `extract_event26.py` command regenerates them after replay. "
                     "This package still requires the three verified author names and final team review.\n")
-    require("](evidence/event26_evidence.csv)" not in content,
+    require(not any("](" + target + ")" in content for target in
+                    ("evidence/event26_evidence.csv", "event26_replayed.csv")),
             "Excluded excerpt remains linked in packaged Markdown")
     return content.encode("utf-8")
 
@@ -203,7 +204,9 @@ def build(root, output):
                     "Top-level report differs from the selected draft PDF")
             for name in names:
                 if name.endswith(".md"):
-                    require(b"](evidence/event26_evidence.csv)" not in archive.read(name),
+                    require(not any(target in archive.read(name) for target in
+                                    (b"](evidence/event26_evidence.csv)",
+                                     b"](event26_replayed.csv)")),
                             "Packaged Markdown has an excluded raw-excerpt link")
         temporary.replace(output)
         temporary = None
