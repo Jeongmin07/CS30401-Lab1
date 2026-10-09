@@ -218,3 +218,12 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Course simulation outputs remain local; share reproducible code and small evidence.
+/runs/
+/states/
+/viz/
+/output/
+/ns-3*/
+/hypatia/
+/Lab1_*.zip
