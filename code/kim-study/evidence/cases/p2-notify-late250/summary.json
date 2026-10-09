@@ -1,0 +1,1038 @@
+{
+  "analysis_parameters": {
+    "bin_s": 0.1,
+    "event_after_s": 2.0,
+    "event_before_s": 0.5,
+    "maximum_case_samples": 100,
+    "maximum_evidence_rows_per_sample": 12,
+    "root_queue_disc_absence_independently_audited": false,
+    "tx_identity_retention_s": 10.0
+  },
+  "drop_coverage": {
+    "absence_of_drop_inference": "listed hooks connected with matching IPv4/TcDrop node coverage",
+    "available": true,
+    "connected": 50704,
+    "devices_without_root_queue_disc_absence_check": [],
+    "devices_without_root_queue_disc_absence_check_count": 0,
+    "ipv4_nodes_without_traffic_control_drop_hook": [],
+    "layer_entries": {
+      "DropAfterDequeue": 7922,
+      "DropBeforeEnqueue": 7922,
+      "MacTxDrop": 7922,
+      "PhyRxDrop": 7922,
+      "PhyTxDrop": 7922,
+      "TcDrop": 1586,
+      "ipv4": 1586,
+      "root_queue_disc_absent": 7922
+    },
+    "not_connected": [],
+    "qualification": "Manifest coverage is not an independent audit of every loss path.",
+    "root_queue_disc_absence_coverage_complete": true,
+    "traffic_control_drop_hook_present": true,
+    "traffic_control_node_coverage_complete": true
+  },
+  "drop_rows_by_layer": {
+    "TcDrop": 499
+  },
+  "drop_rows_without_usable_transmission_tag": 0,
+  "duration_s": 200.0,
+  "flows": {
+    "0": {
+      "counts": {
+        "ack_rows_with_sack": 7331,
+        "application_delivered_bytes": 238608900,
+        "drop_trace_rows": 499,
+        "loss_state_entries": 1,
+        "official_retransmission_rows": 523,
+        "out_of_order_payload_rows": 7079,
+        "overlapping_sequence_tx_rows": 523,
+        "recovery_state_entries": 41,
+        "repeated_cumulative_ack_rows": 7073,
+        "sender_new_sequence_bytes": 238720680,
+        "sender_payload_tx_bytes": 239442420,
+        "wire_payload_rx_bytes": 238608900,
+        "wire_unique_sequence_bytes": 238608900
+      },
+      "distinct_tagged_transmissions_dropped": 499,
+      "drop_case_samples": [
+        {
+          "accepted_fill_is_matching_retransmission": true,
+          "accepted_fill_tx_id": 786,
+          "end_seq": 534061,
+          "first_matching_recovery_state": {
+            "preceding_ack": 532681,
+            "repeated_ack_run": 2,
+            "sack_blocks": "540961:542341|535441:538201",
+            "state": "RECOVERY",
+            "time_ns": 946692527
+          },
+          "first_matching_retransmission": {
+            "end_seq": 534061,
+            "seq": 532681,
+            "time_ns": 946692527,
+            "tx_id": 786
+          },
+          "gap_resolution_delay_s": 0.405720966,
+          "layer": "TcDrop",
+          "qualification": "Sequence-gap resolution, not proof that a particular retransmission repaired this drop.",
+          "reason": "-1",
+          "retransmission_delay_s": 0.229586211,
+          "seq": 532681,
+          "time_ns": 717106316,
+          "tx_id": 389
+        },
+        {
+          "accepted_fill_is_matching_retransmission": false,
+          "accepted_fill_tx_id": null,
+          "end_seq": 535441,
+          "first_matching_recovery_state": null,
+          "first_matching_retransmission": {
+            "end_seq": 535441,
+            "seq": 534061,
+            "time_ns": 947839764,
+            "tx_id": 787
+          },
+          "gap_resolution_delay_s": null,
+          "layer": "TcDrop",
+          "qualification": "Sequence-gap resolution, not proof that a particular retransmission repaired this drop.",
+          "reason": "-1",
+          "retransmission_delay_s": 0.230733448,
+          "seq": 534061,
+          "time_ns": 717106316,
+          "tx_id": 390
+        },
+        {
+          "accepted_fill_is_matching_retransmission": false,
+          "accepted_fill_tx_id": null,
+          "end_seq": 539581,
+          "first_matching_recovery_state": null,
+          "first_matching_retransmission": {
+            "end_seq": 539581,
+            "seq": 538201,
+            "time_ns": 949057401,
+            "tx_id": 788
+          },
+          "gap_resolution_delay_s": null,
+          "layer": "TcDrop",
+          "qualification": "Sequence-gap resolution, not proof that a particular retransmission repaired this drop.",
+          "reason": "-1",
+          "retransmission_delay_s": 0.229656639,
+          "seq": 538201,
+          "time_ns": 719400762,
+          "tx_id": 393
+        }
+      ],
+      "drop_case_samples_truncated": true,
+      "drop_sample_selection": "First example per observed drop layer, then chronological rows to sample cap.",
+      "drop_trace_row_cases_total": 499,
+      "first_receiver_application_delivery_time_s": 0.161402717,
+      "gap_case_samples": [
+        {
+          "acceptance_evidence": "same-time receiver application delivery after wire fill",
+          "acceptance_observed_ns": 1122827282,
+          "ack_evidence": [
+            {
+              "ack": 532681,
+              "repeated_ack_run": 0,
+              "sack_blocks": "535441:536821",
+              "time_ns": 944327682
+            },
+            {
+              "ack": 532681,
+              "repeated_ack_run": 1,
+              "sack_blocks": "535441:538201",
+              "time_ns": 945474906
+            },
+            {
+              "ack": 532681,
+              "repeated_ack_run": 2,
+              "sack_blocks": "540961:542341|535441:538201",
+              "time_ns": 946692527
+            },
+            {
+              "ack": 532681,
+              "repeated_ack_run": 3,
+              "sack_blocks": "540961:543721|535441:538201",
+              "time_ns": 947839764
+            },
+            {
+              "ack": 532681,
+              "repeated_ack_run": 4,
+              "sack_blocks": "546481:547861|540961:543721|535441:538201",
+              "time_ns": 949057401
+            },
+            {
+              "ack": 532681,
+              "repeated_ack_run": 5,
+              "sack_blocks": "546481:549241|540961:543721|535441:538201",
+              "time_ns": 950204624
+            },
+            {
+              "ack": 532681,
+              "repeated_ack_run": 6,
+              "sack_blocks": "552001:553381|546481:549241|540961:543721",
+              "time_ns": 951351848
+            },
+            {
+              "ack": 532681,
+              "repeated_ack_run": 7,
+              "sack_blocks": "552001:554761|546481:549241|540961:543721",
+              "time_ns": 952499073
+            },
+            {
+              "ack": 532681,
+              "repeated_ack_run": 8,
+              "sack_blocks": "557521:558901|552001:554761|546481:549241",
+              "time_ns": 953646297
+            },
+            {
+              "ack": 532681,
+              "repeated_ack_run": 9,
+              "sack_blocks": "557521:560281|552001:554761|546481:549241",
+              "time_ns": 954793518
+            },
+            {
+              "ack": 532681,
+              "repeated_ack_run": 10,
+              "sack_blocks": "563041:564421|557521:560281|552001:554761",
+              "time_ns": 955940768
+            },
+            {
+              "ack": 532681,
+              "repeated_ack_run": 11,
+              "sack_blocks": "563041:565801|557521:560281|552001:554761",
+              "time_ns": 957087990
+            }
+          ],
+          "ack_evidence_count": 199,
+          "classification": "gap_with_observed_actual_drop",
+          "drop_evidence_for_original_fill": false,
+          "duration_s": 0.228295507,
+          "end_ns": 1122827282,
+          "fill_candidates": [
+            {
+              "original": false,
+              "tag_cache_miss": false,
+              "time_ns": 1122827282,
+              "tx_id": 786
+            }
+          ],
+          "fill_tag_cache_miss": false,
+          "fill_tx_id": 786,
+          "first_ahead_sequence": 535441,
+          "missing_sequence": 532681,
+          "network_loss_exclusion_supported": false,
+          "observed_distinct_drop_tx_ids": [
+            389
+          ],
+          "observed_drop_rows_for_missing_sequence": 1,
+          "original_fill_confirmed": false,
+          "recovery_evidence": [
+            {
+              "preceding_ack": 532681,
+              "repeated_ack_run": 2,
+              "sack_blocks": "540961:542341|535441:538201",
+              "state": "RECOVERY",
+              "time_ns": 946692527
+            }
+          ],
+          "recovery_evidence_count": 1,
+          "retransmission_evidence": [
+            {
+              "end_seq": 534061,
+              "seq": 532681,
+              "time_ns": 946692527,
+              "tx_id": 786
+            }
+          ],
+          "retransmission_evidence_count": 1,
+          "start_ns": 894531775
+        },
+        {
+          "acceptance_evidence": "same-time receiver application delivery after wire fill",
+          "acceptance_observed_ns": 2234650785,
+          "ack_evidence": [
+            {
+              "ack": 539581,
+              "repeated_ack_run": 0,
+              "sack_blocks": "1076401:1080541|1070881:1073641|1065361:1068121",
+              "time_ns": 1175061177
+            },
+            {
+              "ack": 539581,
+              "repeated_ack_run": 1,
+              "sack_blocks": "1076401:1081921|1070881:1073641|1065361:1068121",
+              "time_ns": 1176208401
+            },
+            {
+              "ack": 539581,
+              "repeated_ack_run": 2,
+              "sack_blocks": "543721:545101|1076401:1081921|1070881:1073641",
+              "time_ns": 1177355623
+            },
+            {
+              "ack": 539581,
+              "repeated_ack_run": 3,
+              "sack_blocks": "543721:546481|1076401:1081921|1070881:1073641",
+              "time_ns": 1178502847
+            },
+            {
+              "ack": 539581,
+              "repeated_ack_run": 4,
+              "sack_blocks": "549241:550621|543721:546481|1076401:1081921",
+              "time_ns": 1179650072
+            },
+            {
+              "ack": 539581,
+              "repeated_ack_run": 5,
+              "sack_blocks": "549241:552001|543721:546481|1076401:1081921",
+              "time_ns": 1180797293
+            },
+            {
+              "ack": 539581,
+              "repeated_ack_run": 6,
+              "sack_blocks": "554761:556141|549241:552001|543721:546481",
+              "time_ns": 1181944544
+            },
+            {
+              "ack": 539581,
+              "repeated_ack_run": 7,
+              "sack_blocks": "554761:557521|549241:552001|543721:546481",
+              "time_ns": 1183091768
+            },
+            {
+              "ack": 539581,
+              "repeated_ack_run": 8,
+              "sack_blocks": "560281:561661|554761:557521|549241:552001",
+              "time_ns": 1184238992
+            },
+            {
+              "ack": 539581,
+              "repeated_ack_run": 9,
+              "sack_blocks": "560281:563041|554761:557521|549241:552001",
+              "time_ns": 1185386215
+            },
+            {
+              "ack": 539581,
+              "repeated_ack_run": 10,
+              "sack_blocks": "565801:567181|560281:563041|554761:557521",
+              "time_ns": 1186533439
+            },
+            {
+              "ack": 539581,
+              "repeated_ack_run": 11,
+              "sack_blocks": "565801:568561|560281:563041|554761:557521",
+              "time_ns": 1187680663
+            }
+          ],
+          "ack_evidence_count": 566,
+          "classification": "gap_with_observed_actual_drop",
+          "drop_evidence_for_original_fill": false,
+          "duration_s": 1.108381853,
+          "end_ns": 2234650785,
+          "fill_candidates": [
+            {
+              "original": false,
+              "tag_cache_miss": false,
+              "time_ns": 2234650785,
+              "tx_id": 1433
+            }
+          ],
+          "fill_tag_cache_miss": false,
+          "fill_tx_id": 1433,
+          "first_ahead_sequence": 1080541,
+          "missing_sequence": 539581,
+          "network_loss_exclusion_supported": false,
+          "observed_distinct_drop_tx_ids": [
+            394,
+            789
+          ],
+          "observed_drop_rows_for_missing_sequence": 2,
+          "original_fill_confirmed": false,
+          "recovery_evidence": [
+            {
+              "preceding_ack": 539581,
+              "repeated_ack_run": 523,
+              "sack_blocks": "1186801:1588381|1184041:1185421|1181281:1182661",
+              "state": "LOSS",
+              "time_ns": 2172766703
+            }
+          ],
+          "recovery_evidence_count": 1,
+          "retransmission_evidence": [
+            {
+              "end_seq": 540961,
+              "seq": 539581,
+              "time_ns": 2172766703,
+              "tx_id": 1433
+            }
+          ],
+          "retransmission_evidence_count": 1,
+          "start_ns": 1126268932
+        },
+        {
+          "acceptance_evidence": "same-time receiver application delivery after wire fill",
+          "acceptance_observed_ns": 3782721847,
+          "ack_evidence": [
+            {
+              "ack": 2399821,
+              "repeated_ack_run": 0,
+              "sack_blocks": "",
+              "time_ns": 3601895559
+            },
+            {
+              "ack": 2399821,
+              "repeated_ack_run": 1,
+              "sack_blocks": "2401201:2402581",
+              "time_ns": 3603119534
+            },
+            {
+              "ack": 2399821,
+              "repeated_ack_run": 2,
+              "sack_blocks": "2401201:2403961",
+              "time_ns": 3604266712
+            },
+            {
+              "ack": 2399821,
+              "repeated_ack_run": 3,
+              "sack_blocks": "2401201:2405341",
+              "time_ns": 3605413890
+            },
+            {
+              "ack": 2399821,
+              "repeated_ack_run": 4,
+              "sack_blocks": "2401201:2406721",
+              "time_ns": 3606561065
+            },
+            {
+              "ack": 2399821,
+              "repeated_ack_run": 5,
+              "sack_blocks": "2401201:2408101",
+              "time_ns": 3607708241
+            },
+            {
+              "ack": 2399821,
+              "repeated_ack_run": 6,
+              "sack_blocks": "2401201:2409481",
+              "time_ns": 3608855417
+            },
+            {
+              "ack": 2399821,
+              "repeated_ack_run": 7,
+              "sack_blocks": "2401201:2410861",
+              "time_ns": 3610002574
+            },
+            {
+              "ack": 2399821,
+              "repeated_ack_run": 8,
+              "sack_blocks": "2401201:2412241",
+              "time_ns": 3611149751
+            },
+            {
+              "ack": 2399821,
+              "repeated_ack_run": 9,
+              "sack_blocks": "2401201:2413621",
+              "time_ns": 3612296928
+            },
+            {
+              "ack": 2399821,
+              "repeated_ack_run": 10,
+              "sack_blocks": "2401201:2415001",
+              "time_ns": 3613444104
+            },
+            {
+              "ack": 2399821,
+              "repeated_ack_run": 11,
+              "sack_blocks": "2401201:2416381",
+              "time_ns": 3614591282
+            }
+          ],
+          "ack_evidence_count": 201,
+          "classification": "gap_with_observed_actual_drop",
+          "drop_evidence_for_original_fill": false,
+          "duration_s": 0.229439517,
+          "end_ns": 3782721847,
+          "fill_candidates": [
+            {
+              "original": false,
+              "tag_cache_miss": false,
+              "time_ns": 3782721847,
+              "tx_id": 2224
+            }
+          ],
+          "fill_tag_cache_miss": false,
+          "fill_tx_id": 2224,
+          "first_ahead_sequence": 2401201,
+          "missing_sequence": 2399821,
+          "network_loss_exclusion_supported": false,
+          "observed_distinct_drop_tx_ids": [
+            2019
+          ],
+          "observed_drop_rows_for_missing_sequence": 1,
+          "original_fill_confirmed": false,
+          "recovery_evidence": [
+            {
+              "preceding_ack": 2399821,
+              "repeated_ack_run": 3,
+              "sack_blocks": "2401201:2405341",
+              "state": "RECOVERY",
+              "time_ns": 3605413890
+            }
+          ],
+          "recovery_evidence_count": 1,
+          "retransmission_evidence": [
+            {
+              "end_seq": 2401201,
+              "seq": 2399821,
+              "time_ns": 3605413890,
+              "tx_id": 2224
+            }
+          ],
+          "retransmission_evidence_count": 1,
+          "start_ns": 3553282330
+        },
+        {
+          "acceptance_evidence": "same-time receiver application delivery after wire fill",
+          "acceptance_observed_ns": 26279320534,
+          "ack_evidence": [
+            {
+              "ack": 29732101,
+              "repeated_ack_run": 0,
+              "sack_blocks": "",
+              "time_ns": 26322988882
+            },
+            {
+              "ack": 29732101,
+              "repeated_ack_run": 1,
+              "sack_blocks": "29739001:29740381",
+              "time_ns": 26324200077
+            }
+          ],
+          "ack_evidence_count": 2,
+          "classification": "original_eventually_arrived_after_reordering",
+          "drop_evidence_for_original_fill": false,
+          "duration_s": 0.001147203,
+          "end_ns": 26279320534,
+          "fill_candidates": [
+            {
+              "original": true,
+              "tag_cache_miss": false,
+              "time_ns": 26279320534,
+              "tx_id": 21857
+            }
+          ],
+          "fill_tag_cache_miss": false,
+          "fill_tx_id": 21857,
+          "first_ahead_sequence": 29739001,
+          "missing_sequence": 29732101,
+          "network_loss_exclusion_supported": true,
+          "observed_distinct_drop_tx_ids": [],
+          "observed_drop_rows_for_missing_sequence": 0,
+          "original_fill_confirmed": true,
+          "recovery_evidence": [],
+          "recovery_evidence_count": 0,
+          "retransmission_evidence": [],
+          "retransmission_evidence_count": 0,
+          "start_ns": 26278173331
+        },
+        {
+          "acceptance_evidence": "same-time receiver application delivery after wire fill",
+          "acceptance_observed_ns": 26281614939,
+          "ack_evidence": [
+            {
+              "ack": 29733481,
+              "repeated_ack_run": 0,
+              "sack_blocks": "29739001:29740381",
+              "time_ns": 26325347270
+            },
+            {
+              "ack": 29733481,
+              "repeated_ack_run": 1,
+              "sack_blocks": "29739001:29741761",
+              "time_ns": 26326494464
+            }
+          ],
+          "ack_evidence_count": 2,
+          "classification": "original_eventually_arrived_after_reordering",
+          "drop_evidence_for_original_fill": false,
+          "duration_s": 0.001147203,
+          "end_ns": 26281614939,
+          "fill_candidates": [
+            {
+              "original": true,
+              "tag_cache_miss": false,
+              "time_ns": 26281614939,
+              "tx_id": 21858
+            }
+          ],
+          "fill_tag_cache_miss": false,
+          "fill_tx_id": 21858,
+          "first_ahead_sequence": 29740381,
+          "missing_sequence": 29733481,
+          "network_loss_exclusion_supported": true,
+          "observed_distinct_drop_tx_ids": [],
+          "observed_drop_rows_for_missing_sequence": 0,
+          "original_fill_confirmed": true,
+          "recovery_evidence": [],
+          "recovery_evidence_count": 0,
+          "retransmission_evidence": [],
+          "retransmission_evidence_count": 0,
+          "start_ns": 26280467736
+        },
+        {
+          "acceptance_evidence": "same-time receiver application delivery after wire fill",
+          "acceptance_observed_ns": 26283909347,
+          "ack_evidence": [
+            {
+              "ack": 29734861,
+              "repeated_ack_run": 0,
+              "sack_blocks": "29739001:29741761",
+              "time_ns": 26327641659
+            },
+            {
+              "ack": 29734861,
+              "repeated_ack_run": 1,
+              "sack_blocks": "29739001:29743141",
+              "time_ns": 26328788841
+            }
+          ],
+          "ack_evidence_count": 2,
+          "classification": "candidate_unnecessary_recovery_original_arrived",
+          "drop_evidence_for_original_fill": false,
+          "duration_s": 0.001147205,
+          "end_ns": 26283909347,
+          "fill_candidates": [
+            {
+              "original": true,
+              "tag_cache_miss": false,
+              "time_ns": 26283909347,
+              "tx_id": 21859
+            }
+          ],
+          "fill_tag_cache_miss": false,
+          "fill_tx_id": 21859,
+          "first_ahead_sequence": 29741761,
+          "missing_sequence": 29734861,
+          "network_loss_exclusion_supported": true,
+          "observed_distinct_drop_tx_ids": [],
+          "observed_drop_rows_for_missing_sequence": 0,
+          "original_fill_confirmed": true,
+          "recovery_evidence": [
+            {
+              "preceding_ack": 29734861,
+              "repeated_ack_run": 1,
+              "sack_blocks": "29739001:29743141",
+              "state": "RECOVERY",
+              "time_ns": 26328788841
+            }
+          ],
+          "recovery_evidence_count": 1,
+          "retransmission_evidence": [
+            {
+              "end_seq": 29736241,
+              "seq": 29734861,
+              "time_ns": 26328788841,
+              "tx_id": 21979
+            }
+          ],
+          "retransmission_evidence_count": 1,
+          "start_ns": 26282762142
+        },
+        {
+          "acceptance_evidence": "same-time receiver application delivery after wire fill",
+          "acceptance_observed_ns": 26286203752,
+          "ack_evidence": [
+            {
+              "ack": 29736241,
+              "repeated_ack_run": 0,
+              "sack_blocks": "29739001:29743141",
+              "time_ns": 26329936038
+            },
+            {
+              "ack": 29736241,
+              "repeated_ack_run": 1,
+              "sack_blocks": "29739001:29744521",
+              "time_ns": 26331083235
+            }
+          ],
+          "ack_evidence_count": 2,
+          "classification": "original_eventually_arrived_after_reordering",
+          "drop_evidence_for_original_fill": false,
+          "duration_s": 0.001147202,
+          "end_ns": 26286203752,
+          "fill_candidates": [
+            {
+              "original": true,
+              "tag_cache_miss": false,
+              "time_ns": 26286203752,
+              "tx_id": 21860
+            }
+          ],
+          "fill_tag_cache_miss": false,
+          "fill_tx_id": 21860,
+          "first_ahead_sequence": 29743141,
+          "missing_sequence": 29736241,
+          "network_loss_exclusion_supported": true,
+          "observed_distinct_drop_tx_ids": [],
+          "observed_drop_rows_for_missing_sequence": 0,
+          "original_fill_confirmed": true,
+          "recovery_evidence": [],
+          "recovery_evidence_count": 0,
+          "retransmission_evidence": [
+            {
+              "end_seq": 29737621,
+              "seq": 29736241,
+              "time_ns": 26329936038,
+              "tx_id": 21980
+            }
+          ],
+          "retransmission_evidence_count": 1,
+          "start_ns": 26285056550
+        }
+      ],
+      "gap_case_samples_truncated": true,
+      "gap_cases_total": 198,
+      "gap_classifications": {
+        "accepted_original_also_retransmitted_gaps": 5,
+        "candidate_unnecessary_recovery_original_arrived": 2,
+        "gap_with_observed_actual_drop": 188,
+        "loss_excluded_original_also_retransmitted_gaps": 5,
+        "original_eventually_arrived_after_reordering": 8
+      },
+      "initial_retransmission_threshold": 3,
+      "last_receiver_application_delivery_time_s": 199.999310429,
+      "protection_intervals": [
+        {
+          "duration_s": 0.4,
+          "end_ns": 26750000000,
+          "start_ns": 26350000000
+        },
+        {
+          "duration_s": 0.4,
+          "end_ns": 75550000000,
+          "start_ns": 75150000000
+        }
+      ],
+      "receiver_application_goodput_mbps": 9.544356,
+      "recovery_periods": [
+        {
+          "duration_s": 1.909712095,
+          "end_ns": 2856404622,
+          "start_ns": 946692527
+        },
+        {
+          "duration_s": 0.343081727,
+          "end_ns": 3948495617,
+          "start_ns": 3605413890
+        },
+        {
+          "duration_s": 0.162745078,
+          "end_ns": 4112387873,
+          "start_ns": 3949642795
+        },
+        {
+          "duration_s": 0.387823558,
+          "end_ns": 14349947702,
+          "start_ns": 13962124144
+        },
+        {
+          "duration_s": 0.165040316,
+          "end_ns": 14516135201,
+          "start_ns": 14351094885
+        }
+      ],
+      "resolved_gap_tag_cache_misses": 0,
+      "restore_deadlines_missed": 0,
+      "restore_deferrals": 0,
+      "smoothed_rtt": {
+        "covered_duration_s": 199.900499797,
+        "maximum_ms": 227.252687,
+        "minimum_ms": 99.0,
+        "p50_ms": 135.759209,
+        "p95_ms": 210.939794,
+        "p99_ms": 221.773781,
+        "qualification": "Smoothed sender RTT held between trace changes; excludes initial unknown/zero SRTT; not raw packet RTT or isolated queueing delay.",
+        "time_weighted_mean_ms": 148.13482455455843,
+        "trace_rows": 82962
+      },
+      "unfinished_protection_start_ns": null,
+      "unfinished_recovery_start_ns": null,
+      "wire_unique_payload_rate_mbps": 9.544356,
+      "receiver_application_bins_omitted_from_export": 2000,
+      "gap_case_samples_additional_export_omissions": 93,
+      "drop_case_samples_additional_export_omissions": 97,
+      "recovery_periods_additional_export_omissions": 36
+    }
+  },
+  "inputs": [
+    {
+      "kind": "sender",
+      "path": "/tmp/cs30401-study/p2-notify-late250/logs_ns3/tcp_flow_0_study_packets.csv"
+    },
+    {
+      "kind": "drop",
+      "path": "/tmp/cs30401-study/p2-notify-late250/logs_ns3/study_drops.csv"
+    },
+    {
+      "kind": "receiver",
+      "path": "/tmp/cs30401-study/p2-notify-late250/logs_ns3/study_rx_node_1585_port_1024.csv"
+    },
+    {
+      "kind": "app",
+      "path": "/tmp/cs30401-study/p2-notify-late250/logs_ns3/study_app_rx_node_1585_port_1024.csv"
+    },
+    {
+      "kind": "state",
+      "path": "/tmp/cs30401-study/p2-notify-late250/logs_ns3/tcp_flow_0_study_events.csv"
+    }
+  ],
+  "legacy_sender_ack_summary": {},
+  "limitations": [
+    "Path-truth propagation RTT includes both directions; RTT decreases alone do not prove forward-path overtaking.",
+    "Repeated cumulative ACKs are observations, not an independent reconstruction of every duplicate-ACK predicate.",
+    "Exact tx_id tags, not packet UIDs, identify transmission instances; joins are retained for a bounded time.",
+    "Candidate unnecessary recovery associates a sequence gap, ACK evidence, retransmission and eventual original delivery; controlled comparisons are still needed for a causal performance claim.",
+    "LOSS state is reported directly and is not automatically called an RTO without a dedicated timer trace.",
+    "Drop trace rows can duplicate one physical loss; distinct tagged transmission counts and per-layer counts are separate.",
+    "No observed drop is not proof of no drop when coverage or packet parsing is incomplete.",
+    "Traffic-control TcDrop coverage is required before excluding network loss; pre-v3 coverage can omit this path.",
+    "Root queue-disc absence must be verified per device or explicitly independently audited; TcDrop does not observe a root queue-disc's own losses.",
+    "Receiver TCP window rejection and PAWS/input discards are not covered by queue/IP/device/traffic-control hooks.",
+    "Pre-processing wire Rx does not prove acceptance: a gap fill requires subsequent expected_seq advancement or same-time application delivery.",
+    "Application HandleRead bytes are ordered unique delivery; wire interval union is a separate metric.",
+    "Sequence epochs assume adjacent relevant sequence references differ by less than 2^31 bytes.",
+    "Static and dynamic path controls, actual loss tests and deployment-information errors remain separate experimental requirements."
+  ],
+  "path_event_windows": [
+    {
+      "flows": {
+        "0": {
+          "ack_rows_with_sack": 534,
+          "application_delivered_bytes": 2878680,
+          "drop_trace_rows": 7,
+          "gap_with_observed_actual_drop": 7,
+          "loss_state_entries": 1,
+          "official_retransmission_rows": 48,
+          "out_of_order_payload_rows": 467,
+          "overlapping_sequence_tx_rows": 48,
+          "receiver_application_goodput_mbps": 9.211775999999999,
+          "recovery_state_entries": 2,
+          "repeated_cumulative_ack_rows": 490,
+          "sender_new_sequence_bytes": 1999620,
+          "sender_payload_tx_bytes": 2065860,
+          "wire_payload_rx_bytes": 1999620,
+          "wire_unique_sequence_bytes": 1999620
+        }
+      },
+      "forward_path_changed": true,
+      "rtt_change_ms": 0.001,
+      "time_s": 2.4,
+      "window_end_s": 4.4,
+      "window_start_s": 1.9
+    },
+    {
+      "flows": {
+        "0": {
+          "ack_rows_with_sack": 9,
+          "application_delivered_bytes": 2964240,
+          "candidate_unnecessary_recovery_original_arrived": 1,
+          "official_retransmission_rows": 3,
+          "original_eventually_arrived_after_reordering": 4,
+          "out_of_order_payload_rows": 5,
+          "overlapping_sequence_tx_rows": 3,
+          "receiver_application_goodput_mbps": 9.485568,
+          "recovery_state_entries": 1,
+          "repeated_cumulative_ack_rows": 8,
+          "sender_new_sequence_bytes": 2949060,
+          "sender_payload_tx_bytes": 2953200,
+          "wire_payload_rx_bytes": 2964240,
+          "wire_unique_sequence_bytes": 2964240
+        }
+      },
+      "forward_path_changed": true,
+      "rtt_change_ms": -6.634,
+      "time_s": 26.2,
+      "window_end_s": 28.2,
+      "window_start_s": 25.7
+    },
+    {
+      "flows": {
+        "0": {
+          "ack_rows_with_sack": 1,
+          "application_delivered_bytes": 3008400,
+          "original_eventually_arrived_after_reordering": 1,
+          "out_of_order_payload_rows": 1,
+          "receiver_application_goodput_mbps": 9.62688,
+          "sender_new_sequence_bytes": 3087060,
+          "sender_payload_tx_bytes": 3087060,
+          "wire_payload_rx_bytes": 3008400,
+          "wire_unique_sequence_bytes": 3008400
+        }
+      },
+      "forward_path_changed": true,
+      "rtt_change_ms": -3.343,
+      "time_s": 75.0,
+      "window_end_s": 77.0,
+      "window_start_s": 74.5
+    },
+    {
+      "flows": {
+        "0": {
+          "ack_rows_with_sack": 7,
+          "application_delivered_bytes": 2982180,
+          "candidate_unnecessary_recovery_original_arrived": 1,
+          "official_retransmission_rows": 2,
+          "original_eventually_arrived_after_reordering": 3,
+          "out_of_order_payload_rows": 4,
+          "overlapping_sequence_tx_rows": 2,
+          "receiver_application_goodput_mbps": 9.542976,
+          "recovery_state_entries": 1,
+          "repeated_cumulative_ack_rows": 5,
+          "sender_new_sequence_bytes": 2969760,
+          "sender_payload_tx_bytes": 2972520,
+          "wire_payload_rx_bytes": 2982180,
+          "wire_unique_sequence_bytes": 2982180
+        }
+      },
+      "forward_path_changed": true,
+      "rtt_change_ms": 3.061,
+      "time_s": 121.6,
+      "window_end_s": 123.6,
+      "window_start_s": 121.1
+    },
+    {
+      "flows": {
+        "0": {
+          "application_delivered_bytes": 3000120,
+          "receiver_application_goodput_mbps": 9.600384,
+          "sender_new_sequence_bytes": 3000120,
+          "sender_payload_tx_bytes": 3000120,
+          "wire_payload_rx_bytes": 3000120,
+          "wire_unique_sequence_bytes": 3000120
+        }
+      },
+      "forward_path_changed": true,
+      "rtt_change_ms": 7.231,
+      "time_s": 187.4,
+      "window_end_s": 189.4,
+      "window_start_s": 186.9
+    },
+    {
+      "flows": {
+        "0": {
+          "ack_rows_with_sack": 351,
+          "application_delivered_bytes": 3005640,
+          "drop_trace_rows": 12,
+          "gap_with_observed_actual_drop": 10,
+          "official_retransmission_rows": 13,
+          "out_of_order_payload_rows": 340,
+          "overlapping_sequence_tx_rows": 13,
+          "receiver_application_goodput_mbps": 9.618048,
+          "recovery_state_entries": 2,
+          "repeated_cumulative_ack_rows": 341,
+          "sender_new_sequence_bytes": 2913180,
+          "sender_payload_tx_bytes": 2931120,
+          "wire_payload_rx_bytes": 3005640,
+          "wire_unique_sequence_bytes": 3005640
+        }
+      },
+      "forward_path_changed": true,
+      "rtt_change_ms": 0.004,
+      "time_s": 193.8,
+      "window_end_s": 195.8,
+      "window_start_s": 193.3
+    },
+    {
+      "flows": {
+        "0": {
+          "ack_rows_with_sack": 351,
+          "application_delivered_bytes": 3005640,
+          "drop_trace_rows": 12,
+          "gap_with_observed_actual_drop": 10,
+          "official_retransmission_rows": 13,
+          "out_of_order_payload_rows": 340,
+          "overlapping_sequence_tx_rows": 13,
+          "receiver_application_goodput_mbps": 9.618048,
+          "recovery_state_entries": 2,
+          "repeated_cumulative_ack_rows": 341,
+          "sender_new_sequence_bytes": 2904900,
+          "sender_payload_tx_bytes": 2922840,
+          "wire_payload_rx_bytes": 3005640,
+          "wire_unique_sequence_bytes": 3005640
+        }
+      },
+      "forward_path_changed": true,
+      "rtt_change_ms": 0.003,
+      "time_s": 194.0,
+      "window_end_s": 196.0,
+      "window_start_s": 193.5
+    }
+  ],
+  "run": "p2-notify-late250",
+  "schema_version": 1,
+  "trace_rows": {
+    "app_rows": 165826,
+    "drop_rows": 499,
+    "receiver_rows": 172905,
+    "sender_rows": 264152,
+    "state_rows": 184
+  },
+  "publication_export": {
+    "full_analysis_sha256": "a0ba5e88e402c2572db4bd7626ca80a20bff5bc177a1b3a102df5ae3e4a6d562",
+    "omissions": "0.1s bins; bounded case samples; recovery periods after first five; per-window gap samples. Aggregate metrics retained.",
+    "raw_inputs": [
+      {
+        "kind": "sender",
+        "path": "/tmp/cs30401-study/p2-notify-late250/logs_ns3/tcp_flow_0_study_packets.csv",
+        "sha256": "9effccb16659f17e0feba10ed7bb9afc4ca2dd3bc787d018e5ee1c9056332730",
+        "bytes": 19843752
+      },
+      {
+        "kind": "drop",
+        "path": "/tmp/cs30401-study/p2-notify-late250/logs_ns3/study_drops.csv",
+        "sha256": "c915297632311402f8a2b1b4d6d24b83691f5971f40477934b2e2826887e6821",
+        "bytes": 55405
+      },
+      {
+        "kind": "receiver",
+        "path": "/tmp/cs30401-study/p2-notify-late250/logs_ns3/study_rx_node_1585_port_1024.csv",
+        "sha256": "445161a24e3c943e61518cc5c67ce72aecbae5c1bb2caaf6bd4f4ce451b2f1cf",
+        "bytes": 19448001
+      },
+      {
+        "kind": "app",
+        "path": "/tmp/cs30401-study/p2-notify-late250/logs_ns3/study_app_rx_node_1585_port_1024.csv",
+        "sha256": "63defbe5710bafaafec06b3021dfda3c8d2df2bad3bf78ce15b54c84d7bc451d",
+        "bytes": 14466654
+      },
+      {
+        "kind": "state",
+        "path": "/tmp/cs30401-study/p2-notify-late250/logs_ns3/tcp_flow_0_study_events.csv",
+        "sha256": "a7d5da8d908af3f2d7d131bd0c7031bdca86cf1ee478946ce9404f23e2c194fb",
+        "bytes": 5786
+      }
+    ],
+    "legacy_inputs": [
+      {
+        "kind": "legacy_cwnd",
+        "path": "/tmp/cs30401-study/p2-notify-late250/logs_ns3/tcp_flow_0_cwnd.csv",
+        "sha256": "6651966bdd19d9cbcbcc99fb18ec854f152de7e81ed93e075e8baa5d09599860",
+        "bytes": 101682
+      },
+      {
+        "kind": "legacy_rtt",
+        "path": "/tmp/cs30401-study/p2-notify-late250/logs_ns3/tcp_flow_0_rtt.csv",
+        "sha256": "b959d51947cf5f8d37d672ef2a239c942b8b57e9f3d574ce2f7624de42ab1e38",
+        "bytes": 2029939
+      },
+      {
+        "kind": "legacy_progress",
+        "path": "/tmp/cs30401-study/p2-notify-late250/logs_ns3/tcp_flow_0_progress.csv",
+        "sha256": "2a9181e6a8a5bf7e1c25b8a770096f43714ec03779e7d7ccd2673b9992339534",
+        "bytes": 1994572
+      }
+    ],
+    "raw_trace_location": "/tmp/cs30401-study/p2-notify-late250/logs_ns3",
+    "raw_traces_published": false
+  }
+}

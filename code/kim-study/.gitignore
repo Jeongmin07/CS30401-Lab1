@@ -1,7 +1,12 @@
 /replay_execution.json
 /reproduction_v5.json
+/reproduction_v6.json
+/phase2_execution_replayed.json
 /event26_replayed.csv
 /evidence-replayed/
 /evidence-export/
 /figures/replayed/
 /figures/replayed-tail/
+/figures/replayed-phase2/
+/figures/replayed-phase2-k8/
+/Lab1_5_draft.zip

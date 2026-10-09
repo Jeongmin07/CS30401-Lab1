@@ -11,6 +11,7 @@ parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument('--runs-root', type=Path, default=Path('/tmp/cs30401-study'))
 parser.add_argument('--execution-record', type=Path, default=root/'matrix_execution.json')
 parser.add_argument('--out', type=Path, default=root/'evidence-export')
+parser.add_argument('--no-initial-extras', action='store_true', help='Do not append the three original v5 diagnostic controls')
 args = parser.parse_args()
 runs = args.runs_root
 evidence = args.out
@@ -19,7 +20,9 @@ evidence.mkdir(exist_ok=True)
 matrix = json.loads(args.execution_record.read_text())
 assert all(row['exit_code'] == 0 for row in matrix['cases'])
 names = [r['case'] for r in matrix['cases']]
-names = list(dict.fromkeys(names + ['micro-tail-base-v5', 'micro-tail-guard20-v5', 'leo-delay26-base-v5']))
+if not args.no_initial_extras:
+    names += ['micro-tail-base-v5', 'micro-tail-guard20-v5', 'leo-delay26-base-v5']
+names = list(dict.fromkeys(names))
 
 def digest(path):
     hasher = hashlib.sha256()

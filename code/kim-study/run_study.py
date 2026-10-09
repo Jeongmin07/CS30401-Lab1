@@ -20,8 +20,10 @@ p.add_argument('--before-ms', type=float, default=50)
 p.add_argument('--after-ms', type=float, default=45)
 p.add_argument('--event-s', type=float, default=10)
 p.add_argument('--loss-s', type=float, default=-1)
+p.add_argument('--loss-seq', type=int, default=0)
 p.add_argument('--initial-ssthresh-pkts', type=int, default=900)
 p.add_argument('--max-bytes', type=int, default=100000000000)
+p.add_argument('--flow-start-s', type=float, default=0)
 p.add_argument('--state', default='/home/ubuntu/lab/data/seoul_london/state')
 p.add_argument('--patch', default=str(Path(__file__).resolve().with_name('ns3.patch')))
 a = p.parse_args()
@@ -37,7 +39,8 @@ if a.kind == 'leo':
     subprocess.run(['bash', '/home/ubuntu/lab/scripts/make_run.sh', str(run), state,
                     a.cc, str(a.rate), str(a.queue), str(a.duration), '1584', '1585'], check=True)
     schedule = run/'schedule.csv'
-    schedule.write_text(f'0,1584,1585,100000000000,0,{a.parameters},\n')
+    start_ns = round(a.flow_start_s*1e9)
+    schedule.write_text(f'0,1584,1585,{a.max_bytes},{start_ns},{a.parameters},\n')
     binary = '/home/ubuntu/ns-3.48/build/scratch/main_satnet/ns3.48-main_satnet'
     command = [binary, '--run_dir='+str(run)]
 else:
@@ -50,6 +53,10 @@ else:
     # The v4 benchmark has the same default but does not expose this v5 option.
     if a.max_bytes != 100000000000:
         command.append('--max_bytes='+str(a.max_bytes))
+    if a.loss_seq != 0:
+        command.append('--loss_seq='+str(a.loss_seq))
+    if a.flow_start_s != 0:
+        command.append('--flow_start_s='+str(a.flow_start_s))
     if a.parameters:
         command.append('--parameters='+a.parameters)
 env = dict(os.environ, CS30401_STUDY_TRACE=str(a.trace),

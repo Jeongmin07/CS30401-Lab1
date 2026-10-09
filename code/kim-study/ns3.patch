@@ -1,5 +1,5 @@
 diff --git a/contrib/basic-sim/model/apps/tcp-flow-send-application.cc b/contrib/basic-sim/model/apps/tcp-flow-send-application.cc
-index bb9ab06..0f54e12 100644
+index bb9ab06..8495b26 100644
 --- a/contrib/basic-sim/model/apps/tcp-flow-send-application.cc
 +++ b/contrib/basic-sim/model/apps/tcp-flow-send-application.cc
 @@ -39,6 +39,10 @@
@@ -110,7 +110,7 @@ index bb9ab06..0f54e12 100644
      m_socket = 0;
  }
  
-@@ -379,7 +420,269 @@ TcpFlowSendApplication::FinalizeDetailedLogs() {
+@@ -379,7 +420,293 @@ TcpFlowSendApplication::FinalizeDetailedLogs() {
          InsertCwndLog(timestamp, m_current_cwnd_byte);
          InsertRttLog(timestamp, m_current_rtt_ns);
          InsertProgressLog(timestamp, GetAckedBytes());
@@ -131,7 +131,7 @@ index bb9ab06..0f54e12 100644
 +            auto eq = token.find('=');
 +            std::string key = trim(token.substr(0, eq));
 +            if (key != "study_threshold" && key != "study_windows" &&
-+                key != "study_restore_limit_ns") {
++                key != "study_restore_limit_ns" && key != "study_short_flow_cutoff_pkts") {
 +                NS_ABORT_MSG_IF(key.compare(0, 6, "study_") == 0,
 +                                "Unknown study parameter: " << key);
 +                continue; // Other metadata remains compatible with existing schedules.
@@ -144,6 +144,12 @@ index bb9ab06..0f54e12 100644
 +                                static_cast<uint64_t>(parsed) > std::numeric_limits<uint32_t>::max(),
 +                                "study_threshold must be between 3 and UINT32_MAX");
 +                m_studyThreshold = static_cast<uint32_t>(parsed);
++            } else if (key == "study_short_flow_cutoff_pkts") {
++                int64_t parsed = parse_positive_int64(value);
++                NS_ABORT_MSG_IF(parsed <= 0 ||
++                                static_cast<uint64_t>(parsed) > std::numeric_limits<uint32_t>::max(),
++                                "study_short_flow_cutoff_pkts must be between 1 and UINT32_MAX");
++                m_studyShortFlowCutoffPackets = static_cast<uint32_t>(parsed);
 +            } else if (key == "study_restore_limit_ns") {
 +                m_studyRestoreLimitNs = parse_positive_int64(value);
 +                NS_ABORT_MSG_IF(m_studyRestoreLimitNs <= 0,
@@ -196,8 +202,26 @@ index bb9ab06..0f54e12 100644
 +            "Rx", MakeCallback(&TcpFlowSendApplication::StudyRx, this));
 +        NS_ABORT_MSG_IF(!ok, "Missing TCP Rx trace");
 +    }
++    m_studyEffectiveThreshold = m_studyThreshold;
++    if (m_studyShortFlowCutoffPackets != 0 && m_maxBytes != 0) {
++        UintegerValue segmentSizeValue;
++        m_socket->GetAttribute("SegmentSize", segmentSizeValue);
++        uint64_t segmentSize = segmentSizeValue.Get();
++        NS_ABORT_MSG_IF(segmentSize == 0, "Short-flow cutoff requires a nonzero SegmentSize");
++        // This is a nominal MSS-equivalent size, not a measured packet count.
++        // Classify once, before Connect: no threshold lowering with live dupacks
++        // and no assumption that changing K reevaluates an existing SACK scoreboard.
++        uint64_t nominalPackets = m_maxBytes / segmentSize +
++                                  (m_maxBytes % segmentSize != 0);
++        InsertStudyEvent("SHORT_FLOW_SIZE_BYTES", m_maxBytes, segmentSize);
++        InsertStudyEvent("SHORT_FLOW_NOMINAL_MSS", nominalPackets, m_studyShortFlowCutoffPackets);
++        if (nominalPackets <= m_studyShortFlowCutoffPackets && m_studyThreshold > 3) {
++            m_studyEffectiveThreshold = 3;
++            InsertStudyEvent("SHORT_FLOW_GUARD_BYPASS", m_studyThreshold, 3);
++        }
++    }
 +    // Set explicitly to distinguish study baseline from unrecorded global defaults.
-+    SetStudyThreshold(m_studyWindows.empty() ? m_studyThreshold : 3, "THRESHOLD_INIT");
++    SetStudyThreshold(m_studyWindows.empty() ? m_studyEffectiveThreshold : 3, "THRESHOLD_INIT");
 +    int64_t now = Simulator::Now().GetNanoSeconds();
 +    for (const auto& interval : m_studyWindows) {
 +        if (interval.second <= now) {
@@ -233,7 +257,7 @@ index bb9ab06..0f54e12 100644
 +    ++m_studyActiveWindows;
 +    m_studyRestorePending = false;
 +    m_studyRestoreDeadlineEvent.Cancel();
-+    SetStudyThreshold(m_studyThreshold, "THRESHOLD_SET");
++    SetStudyThreshold(m_studyEffectiveThreshold, "THRESHOLD_SET");
 +}
 +
 +void TcpFlowSendApplication::EndStudyWindow() {
@@ -381,7 +405,7 @@ index bb9ab06..0f54e12 100644
  
  } // Namespace ns3
 diff --git a/contrib/basic-sim/model/apps/tcp-flow-send-application.h b/contrib/basic-sim/model/apps/tcp-flow-send-application.h
-index 1dd61ed..9b6ea3a 100644
+index 1dd61ed..994cd56 100644
 --- a/contrib/basic-sim/model/apps/tcp-flow-send-application.h
 +++ b/contrib/basic-sim/model/apps/tcp-flow-send-application.h
 @@ -29,11 +29,39 @@
@@ -433,14 +457,18 @@ index 1dd61ed..9b6ea3a 100644
    uint32_t        m_current_cwnd_byte;     //!< Current congestion window (detailed logging)
    int64_t         m_current_rtt_ns;        //!< Current last RTT sample (detailed logging)
  
-@@ -88,6 +116,43 @@ private:
+@@ -88,6 +116,49 @@ private:
    TracedCallback<Ptr<const Packet> > m_txTrace;
  
  private:
 +  // Study controls in AdditionalParameters:
 +  // study_threshold=K;study_windows=start_ns:end_ns|start_ns:end_ns;
-+  // study_restore_limit_ns=N. Windows use absolute simulation nanoseconds.
-+  // No windows means static K. Empty parameters retain baseline threshold 3.
++  // study_restore_limit_ns=N;study_short_flow_cutoff_pkts=P.
++  // Windows use absolute simulation nanoseconds. No windows means static K.
++  // Optional P classifies a known finite MaxBytes flow once, before Connect:
++  // ceil(MaxBytes / SegmentSize) <= P uses baseline K=3 for the whole flow.
++  // P counts nominal MSS equivalents; it is not an adaptive flight-size rule.
++  // Omitting P and empty parameters preserve the legacy controls and baseline.
 +  void InitializeStudy();
 +  void BeginStudyWindow();
 +  void EndStudyWindow();
@@ -464,6 +492,8 @@ index 1dd61ed..9b6ea3a 100644
 +
 +  bool m_studyLogging = false;
 +  uint32_t m_studyThreshold = 3;
++  uint32_t m_studyEffectiveThreshold = 3;
++  uint32_t m_studyShortFlowCutoffPackets = 0;
 +  uint32_t m_studyCurrentThreshold = 3;
 +  uint32_t m_studyActiveWindows = 0;
 +  bool m_studyRestorePending = false;
@@ -843,10 +873,10 @@ index 0000000..c9c2c0f
 +#endif
 diff --git a/scratch/study_micro/study_micro.cc b/scratch/study_micro/study_micro.cc
 new file mode 100755
-index 0000000..296e692
+index 0000000..6b58540
 --- /dev/null
 +++ b/scratch/study_micro/study_micro.cc
-@@ -0,0 +1,98 @@
+@@ -0,0 +1,103 @@
 +// Controlled delay-step diagnostic. It is not a replacement for the LEO model.
 +#include "ns3/core-module.h"
 +#include "ns3/network-module.h"
@@ -862,10 +892,11 @@ index 0000000..296e692
 +
 +class StudyDropOnce : public ErrorModel {
 +public:
-+    StudyDropOnce(double time) : m_time(time) {}
++    StudyDropOnce(double time, uint32_t sequence) : m_time(time), m_sequence(sequence) {}
 +private:
 +    bool DoCorrupt(Ptr<Packet> packet) override {
-+        if (m_used || m_time < 0 || Simulator::Now().GetSeconds() < m_time) return false;
++        if (m_used || (m_time < 0 && m_sequence == 0) ||
++            (m_time >= 0 && Simulator::Now().GetSeconds() < m_time)) return false;
 +        auto copy = packet->Copy();
 +        PppHeader ppp; Ipv4Header ip; TcpHeader tcp;
 +        if (copy->GetSize() < 42) return false;
@@ -875,18 +906,20 @@ index 0000000..296e692
 +        if (ip.GetProtocol() != 6) return false;
 +        copy->RemoveHeader(tcp);
 +        if (!copy->GetSize()) return false;
++        if (m_sequence != 0 && tcp.GetSequenceNumber().GetValue() != m_sequence) return false;
 +        m_used = true;
 +        return true;
 +    }
 +    void DoReset() override { m_used = false; }
 +    double m_time;
++    uint32_t m_sequence;
 +    bool m_used = false;
 +};
 +
 +int main(int argc, char** argv) {
 +    std::string run_dir, parameters, cc = "TcpCubic";
-+    double duration = 20, rate = 100, before_ms = 50, after_ms = 45, event_s = 10, loss_s = -1;
-+    uint32_t queue_pkts = 2000, initial_ssthresh_pkts = 900;
++    double duration = 20, rate = 100, before_ms = 50, after_ms = 45, event_s = 10, loss_s = -1, flow_start_s = 0;
++    uint32_t queue_pkts = 2000, initial_ssthresh_pkts = 900, loss_seq = 0;
 +    uint64_t max_bytes = 100000000000ULL;
 +    CommandLine cmd;
 +    cmd.AddValue("run_dir", "Output directory", run_dir);
@@ -898,9 +931,11 @@ index 0000000..296e692
 +    cmd.AddValue("after_ms", "One-way propagation after step ms", after_ms);
 +    cmd.AddValue("event_s", "Delay-step time", event_s);
 +    cmd.AddValue("loss_s", "Drop one data packet at or after this time (-1 disables)", loss_s);
++    cmd.AddValue("loss_seq", "Only drop this starting TCP data sequence once (0 uses time only)", loss_seq);
 +    cmd.AddValue("queue_pkts", "Drop-tail queue packets", queue_pkts);
 +    cmd.AddValue("initial_ssthresh_pkts", "Controlled initial slow-start threshold packets", initial_ssthresh_pkts);
 +    cmd.AddValue("max_bytes", "Finite transfer bytes (default effectively infinite)", max_bytes);
++    cmd.AddValue("flow_start_s", "Application start time in simulation seconds", flow_start_s);
 +    cmd.Parse(argc, argv);
 +    if (run_dir.empty()) throw std::runtime_error("run_dir required");
 +    std::filesystem::create_directories(run_dir + "/logs_ns3");
@@ -923,8 +958,8 @@ index 0000000..296e692
 +    // otherwise install a default AQM root qdisc and confound the delay-step test.
 +    TrafficControlHelper traffic;
 +    traffic.Uninstall(devices);
-+    if (loss_s >= 0) {
-+        auto em = CreateObject<StudyDropOnce>(loss_s);
++    if (loss_s >= 0 || loss_seq != 0) {
++        auto em = CreateObject<StudyDropOnce>(loss_s, loss_seq);
 +        devices.Get(1)->SetAttribute("ReceiveErrorModel", PointerValue(em));
 +    }
 +    cs30401study::Install(nodes);
@@ -932,7 +967,7 @@ index 0000000..296e692
 +    auto sinks = sink.Install(nodes.Get(1)); sinks.Start(Seconds(0));
 +    TcpFlowSendHelper source("ns3::TcpSocketFactory", InetSocketAddress(interfaces.GetAddress(1),1024),
 +                             max_bytes, 0, true, run_dir+"/logs_ns3", parameters);
-+    auto apps = source.Install(nodes.Get(0)); apps.Start(Seconds(0));
++    auto apps = source.Install(nodes.Get(0)); apps.Start(Seconds(flow_start_s));
 +    auto channel = DynamicCast<PointToPointChannel>(devices.Get(0)->GetChannel());
 +    Simulator::Schedule(Seconds(event_s), [channel, after_ms]() {
 +        channel->SetAttribute("Delay", TimeValue(MilliSeconds(after_ms)));
