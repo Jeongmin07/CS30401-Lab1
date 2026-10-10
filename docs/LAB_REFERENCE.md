@@ -50,15 +50,22 @@ Read baseline: `main` at `59e4f4f7f34aa71113c8a570a749ba0e3e0f7875`, verified in
 
 Three students work on separate laptops with separate AI conversations. Pushed files, Issues, PRs, and experiment records supply shared context. Chats, local changes, running experiments, and Docker volumes are not shared automatically. See [team context](START_HERE.md), [team workflow](TEAM_WORKFLOW.md), [common plan](PLAN.md), and [existing kim-seongchan handoff](work/kim-seongchan.md).
 
-The existing results were added at `fa99ffa6772b1d4d6826b557ad49b74b5b28eb61`. The following values were read from the existing `config_ns3.properties`, `tcp_flows.txt`, and `timing_results.txt` files. They were **not rerun** for this reference.
+The eight exploratory results were uploaded across several commits. The following values were read from their `config_ns3.properties`, `tcp_flows.txt`, and `timing_results.txt` files. They were **not rerun** for this reference.
 
 | Existing run | TCP | ISL and GSL queue in packets | Logged average rate in Mbit/s | Logged simulation execution time in seconds |
 | --- | --- | --- | --- | --- |
 | [cubic/q1000_200s](../shared-results/runs/cubic/q1000_200s/) | CUBIC | 1,000 | 95.9 | 1,614.7 |
-| [cubic/q100_200s](../shared-results/runs/cubic/q100_200s/) | CUBIC | 100 | 81.5 | 1,173.6 |
+| [cubic/q100_200s](../shared-results/runs/cubic/q100_200s/) | CUBIC | 100 | 81.5 | 320.9 |
 | [newreno/q1000_200s](../shared-results/runs/newreno/q1000_200s/) | NewReno | 1,000 | 70.8 | 1,327.7 |
+| [newreno/q100_200s](../shared-results/runs/newreno/q100_200s/) | NewReno | 100 | 47.3 | 903.8 |
+| [bbr/q1000_200s](../shared-results/runs/bbr/q1000_200s/) | BBR | 1,000 | 94.5 | 429.7 |
+| [bbr/q100_200s](../shared-results/runs/bbr/q100_200s/) | BBR | 100 | 93.4 | 465.3 |
+| [vegas/q1000_200s](../shared-results/runs/vegas/q1000_200s/) | Vegas | 1,000 | 41.5 | 142.6 |
+| [vegas/q100_200s](../shared-results/runs/vegas/q100_200s/) | Vegas | 100 | 41.5 | 143.2 |
 
-All three configurations specify a 200-second Seoul-London simulation, 100 Mbit/s ISL/GSL links, 100 ms routing updates, seed `123456789`, pacing disabled, and flow 0 logging. The flow summaries show sender 1584, receiver 1585, and an ongoing bulk flow when the simulation ends. The execution times are the logged `Run simulation` stage, including event/logging work, not simulated duration or isolated CPU time. An earlier 20-second check is also present under `shared-results/runs/r1/`.
+All eight configurations specify a 200-second Seoul-London simulation, 100 Mbit/s ISL/GSL links, 100 ms routing updates, seed `123456789`, and flow 0 logging. BBR enables pacing; the other three TCP types disable it. The flow summaries show sender 1584, receiver 1585, and an ongoing bulk flow when the simulation ends. The execution times are the logged `Run simulation` stage, including event/logging work, not simulated duration or isolated CPU time. The CUBIC queue-100 timing was replaced by a later run while its flow summary remained unchanged, so this table reports the currently committed files rather than a single original batch. An earlier 20-second check is also present under `shared-results/runs/r1/`.
+
+The BBR and Vegas folders contain configuration, output, flow summaries, and timing summaries, but no event-by-event `tcp_flow_0_cwnd.csv`, `tcp_flow_0_rtt.csv`, or `tcp_flow_0_progress.csv` files. Those traces cannot be reconstructed from the summaries. Ask the original runner for the local files or rerun the exact configuration in a separate run directory, then archive the raw traces outside Git and record a link and checksum. Do not describe a rerun as the original run.
 
 These rates are observations, not evidence of why the difference occurs. They do not establish a route-change failure, a handover outage, or a validated TCP fix. The exact execution-time code/patch, hardware, and independent reproduction still need to be recorded or checked before treating these runs as final evaluation evidence.
 
