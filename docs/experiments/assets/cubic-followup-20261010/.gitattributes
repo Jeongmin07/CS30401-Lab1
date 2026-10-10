@@ -1,0 +1,2 @@
+# Preserve the exact exported bytes used by SHA-256 records on Windows.
+* -text

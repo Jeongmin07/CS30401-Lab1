@@ -1,0 +1,12 @@
+{
+  "verdict": "PASS",
+  "test": "An altered raw hash is rejected",
+  "verifier_exit_code": 1,
+  "detected": [
+    {
+      "case": "q75-base",
+      "field": "raw_file",
+      "file": "tcp_flow_0_study_packets.csv"
+    }
+  ]
+}

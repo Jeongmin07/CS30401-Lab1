@@ -1,0 +1,277 @@
+{
+  "verdict": "PASS",
+  "cases_reviewed": 31,
+  "local_document_links_checked": 30,
+  "checks": [
+    "declared settings",
+    "config/schedule hashes where recorded; newly computed fingerprints otherwise",
+    "finished finite flows",
+    "receiver arithmetic",
+    "reported deficit and loss penalty",
+    "local documentation links"
+  ],
+  "source_hashes": {
+    "code/cubic-followup/archive_traces.py": "1aa56e8e089fa8d64b3f5831cf61b22bba515ce69292d32e7e65714a1c4c9bf3",
+    "code/cubic-followup/compare_traces.py": "eda938b4033fe69feca2a96e04998ae9d92f827f71bab4c5027cb3abc836158a",
+    "code/cubic-followup/draw_figures.py": "fc169451c19f9b03570690660482e6a49506db387ad8aadc944ba7e66b328212",
+    "code/cubic-followup/export_results.py": "5687c8e47c8ac78c1f1b3da806b3019903120e2886ed1e4b8105da0c86c51566",
+    "code/cubic-followup/run_controls.py": "53a69ffbf2c47aed084b59921ff4a61be05705beb24767429ede49709b33f577",
+    "code/cubic-followup/verify_replay.py": "be59d0dbc337faf5edbdfdd75ec42c29037706416ded2c885639483659d5944b",
+    "code/kim-study/run_study.py": "5df779c454ffb0eb6fce3b1878f16374180a42c375980d180d3e07578645c37c",
+    "code/kim-study/analyze_study.py": "5333d7f6d86c04f79bbaad82e5e2577ec3bdf2f281e115c854ad904c404aa696",
+    "code/kim-study/ns3.patch": "473dd0e23447a58bd7ce644507cf4aa24b612020ff1e6029f5bfdb22e2cd4245",
+    "code/kim-study/path_truth_200s.csv": "49bd5418f2b13bdbf6d703f719d61075f814cc86d44c745651bf797f4e5f656c"
+  },
+  "case_artifact_hashes": {
+    "q75-base": {
+      "config_ns3.properties": {
+        "sha256": "d527899b0dd088365777c1855963af6a897533dfd746b4f2c251a953cba44b4e",
+        "recorded_in_run_manifest": true
+      },
+      "schedule.csv": {
+        "sha256": "e6cde3aa7716856e46d24c3833354df90407313ece13a5ffbd1b789fa4fea23c",
+        "recorded_in_run_manifest": true
+      }
+    },
+    "q75-guard-first": {
+      "config_ns3.properties": {
+        "sha256": "d527899b0dd088365777c1855963af6a897533dfd746b4f2c251a953cba44b4e",
+        "recorded_in_run_manifest": true
+      },
+      "schedule.csv": {
+        "sha256": "804bfdc847488fe864d128fb61c5574d9edbdceaaf527f1670af1b4210cf3aca",
+        "recorded_in_run_manifest": true
+      }
+    },
+    "fup75-later20": {
+      "config_ns3.properties": {
+        "sha256": "51d691193ec64acb52155439886281b1c6e30614c088bdad3b9b236ed4233cd4",
+        "recorded_in_run_manifest": true
+      },
+      "schedule.csv": {
+        "sha256": "2fb191c4b7204e23bd150acbe3aac62cf153739b1f0f12d424190e1308ad523b",
+        "recorded_in_run_manifest": true
+      }
+    },
+    "fup75-first-later20": {
+      "config_ns3.properties": {
+        "sha256": "51d691193ec64acb52155439886281b1c6e30614c088bdad3b9b236ed4233cd4",
+        "recorded_in_run_manifest": true
+      },
+      "schedule.csv": {
+        "sha256": "caac6ec4039940752f7e2cae264db1c0a9e28be43f0f032bae55b3248212933b",
+        "recorded_in_run_manifest": true
+      }
+    },
+    "fup75-first4": {
+      "config_ns3.properties": {
+        "sha256": "51d691193ec64acb52155439886281b1c6e30614c088bdad3b9b236ed4233cd4",
+        "recorded_in_run_manifest": true
+      },
+      "schedule.csv": {
+        "sha256": "d54c1395226402fbbbc28c6bf5ed029b4747e28553618416fab9b591f970c536",
+        "recorded_in_run_manifest": true
+      }
+    },
+    "fup75-first-later4": {
+      "config_ns3.properties": {
+        "sha256": "51d691193ec64acb52155439886281b1c6e30614c088bdad3b9b236ed4233cd4",
+        "recorded_in_run_manifest": true
+      },
+      "schedule.csv": {
+        "sha256": "5ce15117e316f07336ba49d20ee81e1253baa5a832e4e2fdf6e7018277d1265f",
+        "recorded_in_run_manifest": true
+      }
+    },
+    "fup-start1-base": {
+      "config_ns3.properties": {
+        "sha256": "51d691193ec64acb52155439886281b1c6e30614c088bdad3b9b236ed4233cd4",
+        "recorded_in_run_manifest": true
+      },
+      "schedule.csv": {
+        "sha256": "e43be85f852aa76e499844e282ae1b2ee816cfcfda89153e1e1abaae8e803b6b",
+        "recorded_in_run_manifest": true
+      }
+    },
+    "fup-start1-k4": {
+      "config_ns3.properties": {
+        "sha256": "51d691193ec64acb52155439886281b1c6e30614c088bdad3b9b236ed4233cd4",
+        "recorded_in_run_manifest": true
+      },
+      "schedule.csv": {
+        "sha256": "a5293c925475b69ee8dcaa0a261ccfaba88d217133870275e73386879e3e9945",
+        "recorded_in_run_manifest": true
+      }
+    },
+    "fup-start1-k20": {
+      "config_ns3.properties": {
+        "sha256": "51d691193ec64acb52155439886281b1c6e30614c088bdad3b9b236ed4233cd4",
+        "recorded_in_run_manifest": true
+      },
+      "schedule.csv": {
+        "sha256": "d38bb7555f231d4cef2c75a211ccceea99fa78260d799e270fa3ddf1a97aab77",
+        "recorded_in_run_manifest": true
+      }
+    },
+    "fup-q50-base": {
+      "config_ns3.properties": {
+        "sha256": "09c8de7c36699d4c4d5af65132d6e25a65326c4e6e9289eea7a0ad2ce0ee48c6",
+        "recorded_in_run_manifest": true
+      },
+      "schedule.csv": {
+        "sha256": "e6cde3aa7716856e46d24c3833354df90407313ece13a5ffbd1b789fa4fea23c",
+        "recorded_in_run_manifest": true
+      }
+    },
+    "fup-q50-k4": {
+      "config_ns3.properties": {
+        "sha256": "09c8de7c36699d4c4d5af65132d6e25a65326c4e6e9289eea7a0ad2ce0ee48c6",
+        "recorded_in_run_manifest": true
+      },
+      "schedule.csv": {
+        "sha256": "5ce15117e316f07336ba49d20ee81e1253baa5a832e4e2fdf6e7018277d1265f",
+        "recorded_in_run_manifest": true
+      }
+    },
+    "fup-q50-k20": {
+      "config_ns3.properties": {
+        "sha256": "09c8de7c36699d4c4d5af65132d6e25a65326c4e6e9289eea7a0ad2ce0ee48c6",
+        "recorded_in_run_manifest": true
+      },
+      "schedule.csv": {
+        "sha256": "caac6ec4039940752f7e2cae264db1c0a9e28be43f0f032bae55b3248212933b",
+        "recorded_in_run_manifest": true
+      }
+    },
+    "fup-loss20-base": {
+      "config_ns3.properties": {
+        "sha256": "f3f2e1b48fdfdd1d6ae0913db5fb1a817dd66b0fbca791dc678692fd6f1496f9",
+        "recorded_in_run_manifest": false
+      }
+    },
+    "fup-loss20-k4": {
+      "config_ns3.properties": {
+        "sha256": "f3f2e1b48fdfdd1d6ae0913db5fb1a817dd66b0fbca791dc678692fd6f1496f9",
+        "recorded_in_run_manifest": false
+      }
+    },
+    "fup-loss20-k20": {
+      "config_ns3.properties": {
+        "sha256": "f3f2e1b48fdfdd1d6ae0913db5fb1a817dd66b0fbca791dc678692fd6f1496f9",
+        "recorded_in_run_manifest": false
+      }
+    },
+    "fup-loss20-exempt21": {
+      "config_ns3.properties": {
+        "sha256": "f3f2e1b48fdfdd1d6ae0913db5fb1a817dd66b0fbca791dc678692fd6f1496f9",
+        "recorded_in_run_manifest": false
+      }
+    },
+    "fup-loss22-base": {
+      "config_ns3.properties": {
+        "sha256": "f3f2e1b48fdfdd1d6ae0913db5fb1a817dd66b0fbca791dc678692fd6f1496f9",
+        "recorded_in_run_manifest": false
+      }
+    },
+    "fup-loss22-k4": {
+      "config_ns3.properties": {
+        "sha256": "f3f2e1b48fdfdd1d6ae0913db5fb1a817dd66b0fbca791dc678692fd6f1496f9",
+        "recorded_in_run_manifest": false
+      }
+    },
+    "fup-loss22-k20": {
+      "config_ns3.properties": {
+        "sha256": "f3f2e1b48fdfdd1d6ae0913db5fb1a817dd66b0fbca791dc678692fd6f1496f9",
+        "recorded_in_run_manifest": false
+      }
+    },
+    "fup-loss22-exempt21": {
+      "config_ns3.properties": {
+        "sha256": "f3f2e1b48fdfdd1d6ae0913db5fb1a817dd66b0fbca791dc678692fd6f1496f9",
+        "recorded_in_run_manifest": false
+      }
+    },
+    "fup-step80-base": {
+      "config_ns3.properties": {
+        "sha256": "f3f2e1b48fdfdd1d6ae0913db5fb1a817dd66b0fbca791dc678692fd6f1496f9",
+        "recorded_in_run_manifest": false
+      }
+    },
+    "fup-step80-k4": {
+      "config_ns3.properties": {
+        "sha256": "f3f2e1b48fdfdd1d6ae0913db5fb1a817dd66b0fbca791dc678692fd6f1496f9",
+        "recorded_in_run_manifest": false
+      }
+    },
+    "fup-step80-k20": {
+      "config_ns3.properties": {
+        "sha256": "f3f2e1b48fdfdd1d6ae0913db5fb1a817dd66b0fbca791dc678692fd6f1496f9",
+        "recorded_in_run_manifest": false
+      }
+    },
+    "fup75-both-k8-exempt21": {
+      "config_ns3.properties": {
+        "sha256": "51d691193ec64acb52155439886281b1c6e30614c088bdad3b9b236ed4233cd4",
+        "recorded_in_run_manifest": true
+      },
+      "schedule.csv": {
+        "sha256": "9904cc9a9519e9e94d1c450abccea85d3271d70c4206541efe7fc386082480ad",
+        "recorded_in_run_manifest": true
+      }
+    },
+    "fup-loss22-k8-exempt21": {
+      "config_ns3.properties": {
+        "sha256": "f3f2e1b48fdfdd1d6ae0913db5fb1a817dd66b0fbca791dc678692fd6f1496f9",
+        "recorded_in_run_manifest": false
+      }
+    },
+    "fup-step80-k8-exempt21": {
+      "config_ns3.properties": {
+        "sha256": "f3f2e1b48fdfdd1d6ae0913db5fb1a817dd66b0fbca791dc678692fd6f1496f9",
+        "recorded_in_run_manifest": false
+      }
+    },
+    "fup75-both-k9-exempt21": {
+      "config_ns3.properties": {
+        "sha256": "51d691193ec64acb52155439886281b1c6e30614c088bdad3b9b236ed4233cd4",
+        "recorded_in_run_manifest": true
+      },
+      "schedule.csv": {
+        "sha256": "88f8c25d166c31623f7213a403b29afe3c06621fe7ee640765527b28e68fead2",
+        "recorded_in_run_manifest": true
+      }
+    },
+    "fup-loss22-k9-exempt21": {
+      "config_ns3.properties": {
+        "sha256": "f3f2e1b48fdfdd1d6ae0913db5fb1a817dd66b0fbca791dc678692fd6f1496f9",
+        "recorded_in_run_manifest": false
+      }
+    },
+    "fup-step80-k9-exempt21": {
+      "config_ns3.properties": {
+        "sha256": "f3f2e1b48fdfdd1d6ae0913db5fb1a817dd66b0fbca791dc678692fd6f1496f9",
+        "recorded_in_run_manifest": false
+      }
+    },
+    "fup-start1-k8-exempt21": {
+      "config_ns3.properties": {
+        "sha256": "51d691193ec64acb52155439886281b1c6e30614c088bdad3b9b236ed4233cd4",
+        "recorded_in_run_manifest": true
+      },
+      "schedule.csv": {
+        "sha256": "d9b55b0f49fa23d5dcc747ff53f99641de8fa5cb46c26cc3cde0a341ec4d8e05",
+        "recorded_in_run_manifest": true
+      }
+    },
+    "fup-q50-k8-exempt21": {
+      "config_ns3.properties": {
+        "sha256": "09c8de7c36699d4c4d5af65132d6e25a65326c4e6e9289eea7a0ad2ce0ee48c6",
+        "recorded_in_run_manifest": true
+      },
+      "schedule.csv": {
+        "sha256": "9904cc9a9519e9e94d1c450abccea85d3271d70c4206541efe7fc386082480ad",
+        "recorded_in_run_manifest": true
+      }
+    }
+  }
+}

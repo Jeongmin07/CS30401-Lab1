@@ -20,6 +20,9 @@ def cases(stage):
     rows = []
     def add(name, **options):
         rows.append((name, options))
+    if stage == "originals":
+        add("q75-base", queue=75)
+        add("q75-guard-first", queue=75, parameters=protection(20,FIRST))
     if stage in ("all", "core"):
         add("fup75-later20", queue=75, parameters=protection(20,LATER))
         add("fup75-first-later20", queue=75, parameters=protection(20,FIRST+"|"+LATER))
@@ -43,13 +46,23 @@ def cases(stage):
         add("fup-step80-base", **common)
         for k in (4,20):
             add(f"fup-step80-k{k}", **common,parameters=protection(k,"0:500000000"))
+    if stage in ("all", "refinement"):
+        for k in (8,9):
+            add(f"fup75-both-k{k}-exempt21",queue=75,parameters=protection(k,FIRST+"|"+LATER,True))
+            common=dict(kind="micro",rate=100,queue=2000,duration=4,before_ms=50)
+            add(f"fup-loss22-k{k}-exempt21",**common,after_ms=50,max_bytes=22*1380,loss_s=0.15,
+                parameters=protection(k,"0:500000000",True))
+            add(f"fup-step80-k{k}-exempt21",**common,after_ms=45,max_bytes=80*1380,event_s=0.201,
+                parameters=protection(k,"0:500000000",True))
+        add("fup-start1-k8-exempt21",queue=75,flow_start_s=1,parameters=protection(8,FIRST+"|"+LATER,True))
+        add("fup-q50-k8-exempt21",queue=50,parameters=protection(8,FIRST+"|"+LATER,True))
     return rows
 
 
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument("--study-code",type=Path,required=True)
-    p.add_argument("--stage",choices=("all","core","robustness","micro"),default="all")
+    p.add_argument("--stage",choices=("all","core","robustness","micro","refinement","originals"),default="all")
     p.add_argument("--workers",type=int,default=2)
     p.add_argument("--out",type=Path,required=True)
     a=p.parse_args()

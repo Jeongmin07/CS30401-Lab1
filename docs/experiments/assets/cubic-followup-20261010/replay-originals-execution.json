@@ -1,0 +1,39 @@
+{
+  "stage": "originals",
+  "workers": 2,
+  "wall_time_s": 46.018,
+  "cases": [
+    {
+      "case": "q75-base",
+      "command": [
+        "/home/ubuntu/lab/.venv/bin/python3",
+        "/work/code/kim-study/run_study.py",
+        "q75-base",
+        "--patch",
+        "/work/code/kim-study/ns3.patch",
+        "--queue",
+        "75"
+      ],
+      "exit_code": 0,
+      "stdout": "Run directory ready: /tmp/cs30401-study/q75-base  (1 flow(s), TcpCubic, 10 Mbit/s, queue 75 pkts, 200 s)\n{\n  \"case\": \"q75-base\",\n  \"status\": \"complete\",\n  \"exit_code\": 0,\n  \"wall_time_s\": 45.065,\n  \"patch_sha256\": \"473dd0e23447a58bd7ce644507cf4aa24b612020ff1e6029f5bfdb22e2cd4245\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "case": "q75-guard-first",
+      "command": [
+        "/home/ubuntu/lab/.venv/bin/python3",
+        "/work/code/kim-study/run_study.py",
+        "q75-guard-first",
+        "--patch",
+        "/work/code/kim-study/ns3.patch",
+        "--queue",
+        "75",
+        "--parameters",
+        "study_threshold=20;study_windows=26100000000:26500000000"
+      ],
+      "exit_code": 0,
+      "stdout": "Run directory ready: /tmp/cs30401-study/q75-guard-first  (1 flow(s), TcpCubic, 10 Mbit/s, queue 75 pkts, 200 s)\n{\n  \"case\": \"q75-guard-first\",\n  \"status\": \"complete\",\n  \"exit_code\": 0,\n  \"wall_time_s\": 45.839,\n  \"patch_sha256\": \"473dd0e23447a58bd7ce644507cf4aa24b612020ff1e6029f5bfdb22e2cd4245\"\n}\n",
+      "stderr": ""
+    }
+  ]
+}

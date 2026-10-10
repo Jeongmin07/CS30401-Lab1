@@ -1,0 +1,8 @@
+start_s,end_s,baseline_bytes,baseline_drop_rows,baseline_distinct_drop_tx,baseline_retransmissions,baseline_recovery_entries,protected_bytes,protected_drop_rows,protected_distinct_drop_tx,protected_retransmissions,protected_recovery_entries,delta_bytes
+0,25.7,28720560,271,271,274,7,28720560,271,271,274,7,0
+25.7,28.2,2917320,0,0,2,1,3007020,0,0,0,0,89700
+28.2,120,110195760,90,90,99,18,110201280,100,100,110,20,5520
+120,130,12023940,0,0,2,1,11420880,0,0,2,1,-603060
+130,160,35798580,37,37,34,7,36012480,31,31,34,6,213900
+160,170,12206100,10,10,18,3,11839020,20,20,14,3,-367080
+170,200,35900700,32,32,35,6,36087000,32,32,43,7,186300

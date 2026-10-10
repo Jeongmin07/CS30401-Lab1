@@ -1,0 +1,111 @@
+{
+  "stage": "robustness",
+  "workers": 2,
+  "wall_time_s": 100.196,
+  "cases": [
+    {
+      "case": "fup-q50-base",
+      "command": [
+        "/home/ubuntu/lab/.venv/bin/python3",
+        "/work/run_study.py",
+        "fup-q50-base",
+        "--patch",
+        "/work/ns3.patch",
+        "--queue",
+        "50"
+      ],
+      "exit_code": 0,
+      "stdout": "Run directory ready: /tmp/cs30401-study/fup-q50-base  (1 flow(s), TcpCubic, 10 Mbit/s, queue 50 pkts, 200 s)\n{\n  \"case\": \"fup-q50-base\",\n  \"status\": \"complete\",\n  \"exit_code\": 0,\n  \"wall_time_s\": 34.738,\n  \"patch_sha256\": \"473dd0e23447a58bd7ce644507cf4aa24b612020ff1e6029f5bfdb22e2cd4245\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "case": "fup-q50-k20",
+      "command": [
+        "/home/ubuntu/lab/.venv/bin/python3",
+        "/work/run_study.py",
+        "fup-q50-k20",
+        "--patch",
+        "/work/ns3.patch",
+        "--queue",
+        "50",
+        "--parameters",
+        "study_threshold=20;study_windows=26100000000:26500000000|121500000000:121900000000"
+      ],
+      "exit_code": 0,
+      "stdout": "Run directory ready: /tmp/cs30401-study/fup-q50-k20  (1 flow(s), TcpCubic, 10 Mbit/s, queue 50 pkts, 200 s)\n{\n  \"case\": \"fup-q50-k20\",\n  \"status\": \"complete\",\n  \"exit_code\": 0,\n  \"wall_time_s\": 34.87,\n  \"patch_sha256\": \"473dd0e23447a58bd7ce644507cf4aa24b612020ff1e6029f5bfdb22e2cd4245\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "case": "fup-q50-k4",
+      "command": [
+        "/home/ubuntu/lab/.venv/bin/python3",
+        "/work/run_study.py",
+        "fup-q50-k4",
+        "--patch",
+        "/work/ns3.patch",
+        "--queue",
+        "50",
+        "--parameters",
+        "study_threshold=4;study_windows=26100000000:26500000000|121500000000:121900000000"
+      ],
+      "exit_code": 0,
+      "stdout": "Run directory ready: /tmp/cs30401-study/fup-q50-k4  (1 flow(s), TcpCubic, 10 Mbit/s, queue 50 pkts, 200 s)\n{\n  \"case\": \"fup-q50-k4\",\n  \"status\": \"complete\",\n  \"exit_code\": 0,\n  \"wall_time_s\": 35.08,\n  \"patch_sha256\": \"473dd0e23447a58bd7ce644507cf4aa24b612020ff1e6029f5bfdb22e2cd4245\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "case": "fup-start1-base",
+      "command": [
+        "/home/ubuntu/lab/.venv/bin/python3",
+        "/work/run_study.py",
+        "fup-start1-base",
+        "--patch",
+        "/work/ns3.patch",
+        "--queue",
+        "75",
+        "--flow-start-s",
+        "1"
+      ],
+      "exit_code": 0,
+      "stdout": "Run directory ready: /tmp/cs30401-study/fup-start1-base  (1 flow(s), TcpCubic, 10 Mbit/s, queue 75 pkts, 200 s)\n{\n  \"case\": \"fup-start1-base\",\n  \"status\": \"complete\",\n  \"exit_code\": 0,\n  \"wall_time_s\": 29.924,\n  \"patch_sha256\": \"473dd0e23447a58bd7ce644507cf4aa24b612020ff1e6029f5bfdb22e2cd4245\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "case": "fup-start1-k20",
+      "command": [
+        "/home/ubuntu/lab/.venv/bin/python3",
+        "/work/run_study.py",
+        "fup-start1-k20",
+        "--patch",
+        "/work/ns3.patch",
+        "--queue",
+        "75",
+        "--flow-start-s",
+        "1",
+        "--parameters",
+        "study_threshold=20;study_windows=26100000000:26500000000|121500000000:121900000000"
+      ],
+      "exit_code": 0,
+      "stdout": "Run directory ready: /tmp/cs30401-study/fup-start1-k20  (1 flow(s), TcpCubic, 10 Mbit/s, queue 75 pkts, 200 s)\n{\n  \"case\": \"fup-start1-k20\",\n  \"status\": \"complete\",\n  \"exit_code\": 0,\n  \"wall_time_s\": 35.162,\n  \"patch_sha256\": \"473dd0e23447a58bd7ce644507cf4aa24b612020ff1e6029f5bfdb22e2cd4245\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "case": "fup-start1-k4",
+      "command": [
+        "/home/ubuntu/lab/.venv/bin/python3",
+        "/work/run_study.py",
+        "fup-start1-k4",
+        "--patch",
+        "/work/ns3.patch",
+        "--queue",
+        "75",
+        "--flow-start-s",
+        "1",
+        "--parameters",
+        "study_threshold=4;study_windows=26100000000:26500000000|121500000000:121900000000"
+      ],
+      "exit_code": 0,
+      "stdout": "Run directory ready: /tmp/cs30401-study/fup-start1-k4  (1 flow(s), TcpCubic, 10 Mbit/s, queue 75 pkts, 200 s)\n{\n  \"case\": \"fup-start1-k4\",\n  \"status\": \"complete\",\n  \"exit_code\": 0,\n  \"wall_time_s\": 29.616,\n  \"patch_sha256\": \"473dd0e23447a58bd7ce644507cf4aa24b612020ff1e6029f5bfdb22e2cd4245\"\n}\n",
+      "stderr": ""
+    }
+  ]
+}

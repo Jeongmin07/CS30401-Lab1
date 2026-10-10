@@ -1,0 +1,51 @@
+{
+  "case": "fup-step80-k4",
+  "parameters": {
+    "name": "fup-step80-k4",
+    "kind": "micro",
+    "cc": "TcpCubic",
+    "rate": 100.0,
+    "queue": 2000,
+    "duration": 4,
+    "parameters": "study_threshold=4;study_windows=0:500000000",
+    "trace": 1,
+    "before_ms": 50.0,
+    "after_ms": 45.0,
+    "event_s": 0.201,
+    "loss_s": -1,
+    "loss_seq": 0,
+    "initial_ssthresh_pkts": 900,
+    "max_bytes": 110400,
+    "flow_start_s": 0,
+    "state": "/home/ubuntu/lab/data/seoul_london/state",
+    "patch": "/work/ns3.patch"
+  },
+  "command": [
+    "/home/ubuntu/ns-3.48/build/scratch/study_micro/ns3.48-study_micro",
+    "--run_dir=/tmp/cs30401-study/fup-step80-k4",
+    "--cc=TcpCubic",
+    "--duration=4",
+    "--rate=100.0",
+    "--queue_pkts=2000",
+    "--before_ms=50.0",
+    "--after_ms=45.0",
+    "--event_s=0.201",
+    "--loss_s=-1",
+    "--initial_ssthresh_pkts=900",
+    "--max_bytes=110400",
+    "--parameters=study_threshold=4;study_windows=0:500000000"
+  ],
+  "trace_environment": {
+    "CS30401_STUDY_TRACE": "1",
+    "CS30401_STUDY_TRACE_DIR": "/tmp/cs30401-study/fup-step80-k4/logs_ns3"
+  },
+  "official_image": "ghcr.io/yeonjong21/cs30401-lab1:2026f-v1",
+  "official_image_digest": "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+  "patch_sha256": "473dd0e23447a58bd7ce644507cf4aa24b612020ff1e6029f5bfdb22e2cd4245",
+  "binary_sha256": "6cd406069c283831b051c1d728e03804954e6638267b85f600b1ac5851ce2448",
+  "state": null,
+  "start_time_unix": 1791614214.2369196,
+  "status": "complete",
+  "exit_code": 0,
+  "wall_time_s": 0.03
+}

@@ -1,7 +1,6 @@
 """Export matched delivery timelines and source trace excerpts (standard library)."""
 import argparse
 import bisect
-import collections
 import csv
 import hashlib
 import json
@@ -49,11 +48,13 @@ def read_case(root, name):
         events = list(csv.DictReader(f))
     with (logs / "tcp_flow_0_study_packets.csv").open() as f:
         retx = [r for r in csv.DictReader(f) if r["event"] == "RETX"]
+    with (logs / "tcp_flow_0_cwnd.csv").open() as f:
+        cwnd = [(int(r[1]), int(r[2])) for r in csv.reader(f)]
     sources = [app_paths[0], logs / "study_drops.csv", logs / "tcp_flow_0_study_events.csv",
                logs / "tcp_flow_0_study_packets.csv", logs / "tcp_flow_0_cwnd.csv",
                logs / "tcp_flow_0_rtt.csv"]
     return dict(manifest=manifest, times=app_times, cumulative=cumulative,
-                drops=drops, events=events, retx=retx,
+                drops=drops, events=events, retx=retx, cwnd=cwnd,
                 sources=[dict(file=p.name, bytes=p.stat().st_size, sha256=digest(p)) for p in sources])
 
 
@@ -115,6 +116,16 @@ def main():
     csv_write(a.out / "delivery_windows.csv", windows)
     csv_write(a.out / "congestion_events.csv", [dict(case=n, **r) for n,c in ((a.baseline,base),(a.protected,guard)) for r in c["events"]])
     csv_write(a.out / "drop_events.csv", [dict(case=n, **r) for n,c in ((a.baseline,base),(a.protected,guard)) for r in c["drops"]])
+    checkpoints=[]
+    for t in (120, 121.6, 121.9, 125, 130, 160, 170, 200):
+        for name, case in ((a.baseline,base),(a.protected,guard)):
+            times=[r[0] for r in case["cwnd"]]
+            i=bisect.bisect_right(times,round(t*1e9))-1
+            if i<0:
+                raise ValueError("No congestion-window observation before checkpoint")
+            at, value=case["cwnd"][i]
+            checkpoints.append(dict(case=name,checkpoint_s=t,last_change_ns=at,cwnd_bytes=value))
+    csv_write(a.out / "cwnd_checkpoints.csv", checkpoints)
     (a.out / "provenance.json").write_text(json.dumps(dict(
         baseline=a.baseline, protected=a.protected, interval="[start,end)",
         metric="Unique ordered receiver application delivery; summed payload_bytes",

@@ -1,0 +1,11 @@
+{
+  "verdict": "PASS",
+  "cases": 31,
+  "raw_files_compared": 279,
+  "analysis_hashes_compared": 31,
+  "comparison": "Exact SHA-256 and result/settings equality; wall time and patch location excluded",
+  "numeric_comparison_fields": [
+    "rate_mbps"
+  ],
+  "differences": []
+}
