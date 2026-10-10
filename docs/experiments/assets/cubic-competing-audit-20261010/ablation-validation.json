@@ -1,0 +1,31 @@
+{
+  "declaration": "Four new first-only/later-only GD controls, same-start and join10. Existing DD and both-window controls reused. No independent statistical repetitions.",
+  "summary_input_hashes": [
+    {
+      "path": "cubic-competing-20261010/results.csv",
+      "sha256": "8b132b8c1bd28543cad75f8a1d885e523484c26598ea5a9a38baae76679ff6ba"
+    },
+    {
+      "path": "cubic-competing-audit-20261010/results.csv",
+      "sha256": "28aedc9642bc136b311095a9571ac492df25039dc3646cd37b4f8f9e685ca1e4"
+    }
+  ],
+  "comparisons": {
+    "same-start-gd-first": {
+      "control": "same-start-gd",
+      "common_active_metrics_equal": true
+    },
+    "same-start-gd-later": {
+      "control": "same-start-dd",
+      "common_active_metrics_equal": true
+    },
+    "join10-gd-first": {
+      "control": "join10-gd",
+      "common_active_metrics_equal": true
+    },
+    "join10-gd-later": {
+      "control": "join10-dd",
+      "common_active_metrics_equal": true
+    }
+  }
+}

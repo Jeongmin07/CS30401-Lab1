@@ -1,6 +1,8 @@
 # CUBIC reordering guard: competing flows
 
-**Status: completed exploratory comparison.** kim-seongchan with AI assistance, 2026-10-10. Based on merged `main` **b60e8e0**; the runner was executed from commit **95c306d**. This is an independent follow-up, not a team-approved topic. The [literature/context PR #11](https://github.com/Jeongmin07/CS30401-Lab1/pull/11) motivates the comparison. [Jeongmin07's Draft PR #10](https://github.com/Jeongmin07/CS30401-Lab1/pull/10) investigates the q75 deficit/K4/later-event/genuine-loss question; those controls are not repeated here.
+**Status: completed exploratory comparison.** kim-seongchan with AI assistance, 2026-10-10. Based on merged `main` **b60e8e0**; the runner was executed from commit **95c306d**. This is an independent follow-up, not a team-approved topic. The [literature/context PR #11](https://github.com/Jeongmin07/CS30401-Lab1/pull/11) motivates the comparison. [Jeongmin07's PR #10](https://github.com/Jeongmin07/CS30401-Lab1/pull/10) now reports q75 single-flow window/K8/genuine-loss follow-ups; those controls are not repeated here.
+
+The subsequent [four-control packet and terminal audit](20261010-cubic-competing-audit.md) identifies the first interval's effect, a local real-loss repair delay and the deadline-specific GG wire/app accounting. The eight original results below are preserved. The new record also links the shared raw archive and distinguishes PR #10's new 121.5-second window from this comparison's 74.9-second window.
 
 ## Question and declared comparisons
 
@@ -64,7 +66,7 @@ The first requested guard ends at 26.5 s, but recovery-state safety causes later
 
 Each listed socket has one restoration deferral and no recorded missed deadline. All second intervals and all join10 intervals restore at the requested end. Different protection duration is part of the measured behavior. We have not established that it causes the later delivery-share differences.
 
-**Finite-horizon metric caution:** same-start GG's wire unique payload union is 194,580 bytes larger than its ordered app delivery. Compared with DD, GG's app sum is 193,200 bytes lower while its wire-unique sum is 1,380 bytes higher. Pre-processing receiver wire observations do not prove application acceptance. Do not call the app deficit a proven decline in network transmission efficiency; terminal gaps/buffering/discards have not been causally audited. These values are retained in each flow's `counts`.
+**Finite-horizon metric caution:** same-start GG's wire unique payload union is 194,580 bytes larger than its ordered app delivery. Compared with DD, GG's app sum is 193,200 bytes lower while its wire-unique sum is 1,380 bytes higher. The [terminal audit](20261010-cubic-competing-audit.md#terminal-gg-deficit-ordered-delivery-versus-received-bytes) now matches five unresolved holes to actually dropped originals and accounts for the deficit at the 200-second cutoff. Pre-processing wire observations still do not prove acceptance of every received byte. Do not call the app deficit a proven decline in network transmission efficiency. These values are retained in each flow's `counts`.
 
 ## Reproduction, provenance, and size
 
@@ -74,7 +76,7 @@ Each listed socket has one restoration deferral and no recorded missed deadline.
 - Binary SHA-256: `de9f678113c37a72df7e3215e876f18945c0ccecf9123f60fc8f655f9d9a6eab`.
 - Runner revision: `95c306dd9fc1d6c09f9d5ebccfc27215f8c41a24`; exact runner/analyzer/exporter hashes are recorded separately. The exporter received stricter guard/data-RETX validation after that initial commit; it does not alter simulation inputs.
 - Original cases took **17.4–21.6 s each**, totaling **158.3 s of case wall times**, on this machine; seven were dispatched with two workers after the first baseline check. Replay took 22.1 s. Compilation and analysis are additional work; allow several minutes for a sequential reproduction.
-- The eight original cases' raw CSVs total **467,756,589 bytes** and remain local. Shared evidence is about **0.25 MB**, including settings, hashes, compact results, and one-second bins. No large traces are committed.
+- The eight original cases' raw CSVs total **467,756,589 bytes**. This original evidence is about **0.25 MB**, including settings, hashes, compact results, and one-second bins. The [follow-up record](20261010-cubic-competing-audit.md#provenance-raw-archive-and-reproduction) links the twelve-case shared raw archive and its manifest. No large traces are committed.
 
 Run from the repository root in PowerShell. The following uses **new** names and regenerates output under `/tmp`, leaving committed evidence available for comparison. A container/volume name already used for another experiment should be changed before starting a fresh replay.
 
@@ -96,10 +98,12 @@ New-Item -ItemType Directory -Force -Path ./runs | Out-Null
 docker cp competing-check:/tmp/competing-export ./runs/competing-replay
 ```
 
-The original container retains raw data at `/tmp/cs30401-competing/<case>/logs_ns3`. The representative replay container is `lab1-competing-replay-20261010`, volume `cs30401-competing-replay-ns3-20261010`. These local paths are not remote archives. Reproduction does not require our retained volumes. The current checkout's revision may differ from the original runner commit; compare actual script/settings/trace hashes and metrics, rather than expecting wall time or manifest creation timestamps to match.
+The original container retains raw data at `/tmp/cs30401-competing/<case>/logs_ns3`. The representative replay container is `lab1-competing-replay-20261010`, volume `cs30401-competing-replay-ns3-20261010`. These local paths are distinct from the [shared raw-data release](https://github.com/Jeongmin07/CS30401-Lab1/releases/tag/cubic-competing-20261010). Reproduction does not require our retained volumes. The current checkout's revision may differ from the original runner commit; compare actual script/settings/trace hashes and metrics, rather than expecting wall time or manifest creation timestamps to match.
 
 ## What this supports, and what remains open
 
 **Supported:** on this same-route two-CUBIC configuration, the aggregate delivery effect is small and delivery allocation depends on the guarded socket and start history. A single-flow gain is insufficient evidence of harmless coexistence. Both improvements and costs must be reported.
 
-**Open:** exact packet-level causes of the long-run allocation changes, the unique congestion location, why late-only guard has no displayed effect, and the end-of-run wire/app gap. Scheduler-order sensitivity was controlled through role swaps; scheduler order has not been established as the cause. We did not test independent seeds, other paths/RTTs, other controllers, background traffic distributions, or more start offsets. The patch/model does not implement RACK-TLP, variable capacity, wireless errors, or hard-handover outage, and no deployed Starlink benefit is inferred.
+**Follow-up evidence:** the [new audit](20261010-cubic-competing-audit.md) validates first-only=both and later-only=DD in both GD start schedules, matches the original late-socket guard comparisons' measured trajectories, identifies the first simultaneous-start real-loss repair delay and explains GG's cutoff-specific wire/app difference.
+
+**Open:** every intervening packet/queue interaction behind the long-run allocation changes, the unique congestion location, and the uninstrumented internal decisions behind an ineffective late guard. Scheduler-order sensitivity was controlled through role swaps; scheduler order has not been established as the cause. We did not test independent seeds, other paths/RTTs, other controllers, background traffic distributions, or more start offsets. The patch/model does not implement RACK-TLP, variable capacity, wireless errors, or hard-handover outage, and no deployed Starlink benefit is inferred.

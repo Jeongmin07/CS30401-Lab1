@@ -1,5 +1,17 @@
 # 작업 인수인계: kim-seongchan
 
+## 현재 공유 상태 — 2026-10-10, PR #11 / #12
+
+이 아래의 독립 연구·문서 기록은 과거 작업 이력이다. 현재 후속 작업은 `experiment/cubic-competing-flows` 브랜치의 [PR #12](https://github.com/Jeongmin07/CS30401-Lab1/pull/12)로 공유하며, 병합은 진행하지 않았다. 문헌과 내가 이해한 과제/연구 맥락은 [PR #11](https://github.com/Jeongmin07/CS30401-Lab1/pull/11)에 있다. 다른 조원의 AI 채팅이 실제로 검토했는지는 아직 확인되지 않았다.
+
+- [두-flow 비교](../experiments/20261010-cubic-competing.md): 동일 경로에서 DD/GD/DG/GG × 두 시작 조건의 8개 결정론적 실험을 수행했다. 합계 전달량 차이는 작지만, 어느 연결을 보호하느냐와 시작 이력에 따라 각 연결의 전달 몫이 크게 달라졌다.
+- [원인 후속 검증](../experiments/20261010-cubic-competing-audit.md): 첫 보호 구간만/두 번째 구간만 켜는 GD 대조 4개를 추가했다. 두 시작 조건 모두 first-only=both, later-only=DD이며 보호 설정 기록과 wall-clock timing을 제외한 15개 CSV가 각 비교쌍에서 일치한다. 동시 시작의 첫 실제 손실 복구는 K20에서 약 19.5ms 늦어졌다. 이 국소 지연 하나로 전체 전달 몫 변화의 모든 경로를 설명한 것은 아니다.
+- GG의 200초 종단 전달량 부족은 실제 손실 5개 뒤의 미복구 sequence hole과 수신된 후속 바이트로 계산이 맞는다. Wire 수신 전체를 TCP accepted buffer라고 부르지 않았으며 SACK 확인 범위도 구분했다.
+- canonical v6 patch와 기존 분석기는 그대로 사용한다. 원본 12개 사례/전체 분석은 [GitHub Release](https://github.com/Jeongmin07/CS30401-Lab1/releases/tag/cubic-competing-20261010)에 압축 보관하고 Git에는 작은 결과·재현 정보만 공유한다.
+- 조원의 [PR #10](https://github.com/Jeongmin07/CS30401-Lab1/pull/10)은 head `036c9d8`에서 읽었다. 새 두 번째 구간은 121.5–121.9초이고 우리 비교의 74.9–75.3초와 다르다. 조원의 K8/단일-flow 결과를 두-flow 검증 결과로 섞지 않았다.
+
+이 작업은 팀의 최종 주제·역할·공통 파라미터를 결정하지 않는다. 다른 조원은 PR의 해석과 연결별 측정/시간 구간, 실제 손실 비용, 결과 적용 범위를 검토할 수 있다. 보고서에 채택할 핵심 결과와 추가 경로·불완전한 알림 조건의 필요성은 팀이 정할 사항이다.
+
 ## 최신 독립 실험 — 2026-10-10 (KST)
 
 - 사용자 요청에 따라 다른 조원 결과를 입력으로 사용하지 않고 Docker에서 23개 조건을 직접 실행했다. 일정표 없이 원인 검증, 최소 변경, 대조군 및 부작용 평가를 진행했다.

@@ -7,6 +7,14 @@ check. This tool reuses the course
 build ns-3. Apply that patch to a fresh official ns-3 volume and build first.
 The runner uses Python's standard library only.
 
+The [four-control packet/terminal follow-up](../../docs/experiments/20261010-cubic-competing-audit.md)
+adds first-only/later-only GD controls and audits of the initial real-loss repair,
+complete measured-trajectory equality, and terminal wire/application gap.
+`audit_first_loss.py`, `audit_trajectory.py` and `audit_terminal_gap.py` read
+existing traces only. `archive_competing.py` packages the twelve declared cases
+outside Git with per-file hashes. Exact commands, exclusions, evidence and the
+shared raw archive are in that follow-up record.
+
 The defaults retain Seoul (1584) to London (1585), two 100-GB CUBIC transfers,
 10-Mbit/s ISL/GSL links, 100-packet queues, no pacing, seed 123456789, and 200
 seconds of the supplied state. Both flows start at zero by default. The mode
