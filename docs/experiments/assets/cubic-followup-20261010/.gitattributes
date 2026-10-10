@@ -1,2 +1,2 @@
 # Preserve the exact exported bytes used by SHA-256 records on Windows.
-* -text
+* -text whitespace=trailing-space,space-before-tab,cr-at-eol
