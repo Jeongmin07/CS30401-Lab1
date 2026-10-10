@@ -1,0 +1,85 @@
+{
+  "binary_sha256": "de9f678113c37a72df7e3215e876f18945c0ccecf9123f60fc8f655f9d9a6eab",
+  "case": "join10-gd-k8",
+  "command": [
+    "/home/ubuntu/ns-3.48/build/scratch/main_satnet/ns3.48-main_satnet",
+    "--run_dir=/tmp/cs30401-competing/join10-gd-k8"
+  ],
+  "config_ns3.properties_sha256": "7a8dcd72517feefb35df0f6f2750df2f0441080429ff77ba3b7b85dbff30f6ae",
+  "exit_code": 0,
+  "finished_at_utc": "2026-10-10T07:56:10.506382+00:00",
+  "flows": [
+    {
+      "additional_parameters": "study_threshold=8;study_windows=26100000000:26500000000|74900000000:75300000000",
+      "destination_node": 1585,
+      "flow_id": 0,
+      "role": "G",
+      "size_bytes": 100000000000,
+      "source_node": 1584,
+      "start_ns": 0
+    },
+    {
+      "additional_parameters": "",
+      "destination_node": 1585,
+      "flow_id": 1,
+      "role": "D",
+      "size_bytes": 100000000000,
+      "source_node": 1584,
+      "start_ns": 10000000000
+    }
+  ],
+  "image_digest_qualification": "Host-verified declaration; no in-container Docker inspection.",
+  "make_run_sha256": "ccf066bba1a23ed958518ea41929ca8cefac4ce2a1ef6f803a7b8bb40b54f887",
+  "official_image": "ghcr.io/yeonjong21/cs30401-lab1:2026f-v1",
+  "official_image_digest": "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+  "parameters": {
+    "duration": 200,
+    "guard_parameters": "study_threshold=8;study_windows=26100000000:26500000000|74900000000:75300000000",
+    "image_digest": "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+    "mode": "GD",
+    "name": "join10-gd-k8",
+    "parameters0": null,
+    "parameters1": null,
+    "patch": "/work/code/kim-study/ns3.patch",
+    "queue": 100,
+    "rate": 10,
+    "source_commit": null,
+    "start0_s": 0,
+    "start1_s": 10.0,
+    "state": "/home/ubuntu/lab/data/seoul_london/state",
+    "trace": 1
+  },
+  "patch_sha256": "473dd0e23447a58bd7ce644507cf4aa24b612020ff1e6029f5bfdb22e2cd4245",
+  "run_dir": "/tmp/cs30401-competing/join10-gd-k8",
+  "runner_sha256": "b844c9919d30262a8903bb460755a8a3cd221c58da2a178fe0f95c80fe360b77",
+  "schedule.csv_sha256": "0b143fa87486d44365985b67881fe3c21044288b04039609ba41217d5e059293",
+  "schema_version": 1,
+  "setup_command": [
+    "bash",
+    "/home/ubuntu/lab/scripts/make_run.sh",
+    "/tmp/cs30401-competing/join10-gd-k8",
+    "/home/ubuntu/lab/data/seoul_london/state",
+    "TcpCubic",
+    "10",
+    "100",
+    "200",
+    "1584",
+    "1585"
+  ],
+  "simulation_exit_code": 0,
+  "simulation_wall_time_s": 20.544799,
+  "source_commit": "7266051e6ed4cab15c13d59c555ca32f2803e479",
+  "source_commit_origin": "repository HEAD",
+  "stage": "simulation",
+  "start_time_unix": 1791618949.9236233,
+  "started_at_utc": "2026-10-10T07:55:49.923614+00:00",
+  "state": "/home/ubuntu/lab/data/seoul_london/state",
+  "status": "complete",
+  "trace_environment": {
+    "CS30401_STUDY_TRACE": "1",
+    "CS30401_STUDY_TRACE_DIR": "/tmp/cs30401-competing/join10-gd-k8/logs_ns3",
+    "FLOWS": "1584>1585,1584>1585",
+    "PACING": "false"
+  },
+  "wall_time_s": 20.583872
+}

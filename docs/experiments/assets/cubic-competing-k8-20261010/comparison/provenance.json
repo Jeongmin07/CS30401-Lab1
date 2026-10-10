@@ -1,0 +1,1024 @@
+{
+  "csv_outputs": [
+    {
+      "bytes": 14140,
+      "path": "windows.csv",
+      "rows": 70,
+      "sha256": "e97b0155ff704a887b5d06eff847abf39a52d1c195125a069dd47df128238650"
+    },
+    {
+      "bytes": 142085,
+      "path": "metrics.csv",
+      "rows": 1660,
+      "sha256": "5d5406752a9bc78e37045bb8ad683dc93493d338edb9f0459abe61f848462284"
+    },
+    {
+      "bytes": 208070,
+      "path": "contrasts.csv",
+      "rows": 1620,
+      "sha256": "2339c8e0ed41401c84f2ac1a35ebf7695c76a48ce12b4bca346429f27f958efd"
+    },
+    {
+      "bytes": 3834,
+      "path": "terminal.csv",
+      "rows": 42,
+      "sha256": "6b6b6d38e920c8fc4b5debc74dfa0e1ed8beed40e576a86478315099f89ec9ce"
+    },
+    {
+      "bytes": 3313,
+      "path": "guard_intervals.csv",
+      "rows": 32,
+      "sha256": "80feadc4291e349d62628c44ce16d34c1768a10c66ca65bc460b7f83ba131904"
+    }
+  ],
+  "full_comparison_json_sha256": "79a4f0313cdfac60cad45fa12ab53039bc2fe8a5464316a07f2ad079df02ef4d",
+  "inputs": [
+    {
+      "analysis_sha256": "39d0f72c6fdebc48878ca1af1cc2aaaabf5d7310a9909c657239afba5eef6536",
+      "case": "same-start-dd",
+      "directory": "/work/docs/experiments/assets/cubic-competing-20261010/cases/same-start-dd",
+      "drop_rows_without_usable_transmission_tag": 0,
+      "files": [
+        {
+          "bytes": 11402,
+          "file": "summary.json",
+          "sha256": "267a0397c9de4fa032c0120d07408de365736ce12e4ad33fe6faebe0d9e77462"
+        },
+        {
+          "bytes": 2963,
+          "file": "case.json",
+          "sha256": "b74ad337afa8a0aefda46926940c5acbbfe4f4f0d79d0a087e93c2a8dc26c031"
+        },
+        {
+          "bytes": 615,
+          "file": "config_ns3.properties",
+          "sha256": "7a8dcd72517feefb35df0f6f2750df2f0441080429ff77ba3b7b85dbff30f6ae"
+        },
+        {
+          "bytes": 58,
+          "file": "schedule.csv",
+          "sha256": "68fb778bf41d5f5c8cf36d25671d301b99bc68c6f45d2232109e7909552a3790"
+        }
+      ],
+      "guard_validation": {
+        "0": {
+          "expected_sets": [],
+          "initial_k": 3,
+          "matched": true,
+          "observed_sets": []
+        },
+        "1": {
+          "expected_sets": [],
+          "initial_k": 3,
+          "matched": true,
+          "observed_sets": []
+        }
+      },
+      "mode": "DD",
+      "policy": "K3",
+      "recorded_raw_input_count": 16,
+      "scenario": "same-start",
+      "source_commit": "95c306dd9fc1d6c09f9d5ebccfc27215f8c41a24",
+      "threshold": 3
+    },
+    {
+      "analysis_sha256": "d37bf9fe8de2af3d9da6f926411c61132a1156aec05578ed5c0452474a1a05a0",
+      "case": "same-start-gd-k8",
+      "directory": "/tmp/competing-k8-export/cases/same-start-gd-k8",
+      "drop_rows_without_usable_transmission_tag": 0,
+      "files": [
+        {
+          "bytes": 11891,
+          "file": "summary.json",
+          "sha256": "ae6bec0ca8c06dcf1e66e91429559d3b4b814b010a541bc1b2d6504c61bd73ea"
+        },
+        {
+          "bytes": 3060,
+          "file": "case.json",
+          "sha256": "7352ccb93603a81ce0a8519ff87e4a1cb734bc70d056e8aa6ae419ac15cf2965"
+        },
+        {
+          "bytes": 615,
+          "file": "config_ns3.properties",
+          "sha256": "7a8dcd72517feefb35df0f6f2750df2f0441080429ff77ba3b7b85dbff30f6ae"
+        },
+        {
+          "bytes": 137,
+          "file": "schedule.csv",
+          "sha256": "5692210c019dec3a94000b5d77ae045ab1529f1f8fe8f831a029b739488e2bb2"
+        }
+      ],
+      "guard_validation": {
+        "0": {
+          "expected_sets": [
+            [
+              26100000000,
+              8
+            ],
+            [
+              74900000000,
+              8
+            ]
+          ],
+          "initial_k": 3,
+          "matched": true,
+          "observed_sets": [
+            [
+              26100000000,
+              8
+            ],
+            [
+              74900000000,
+              8
+            ]
+          ]
+        },
+        "1": {
+          "expected_sets": [],
+          "initial_k": 3,
+          "matched": true,
+          "observed_sets": []
+        }
+      },
+      "mode": "GD",
+      "policy": "K8",
+      "recorded_raw_input_count": 16,
+      "scenario": "same-start",
+      "source_commit": "7266051e6ed4cab15c13d59c555ca32f2803e479",
+      "threshold": 8
+    },
+    {
+      "analysis_sha256": "9b44e3e54bb239788c9cb8e517195999a89aac666bd5c683f6145c15f66f17b8",
+      "case": "same-start-gd",
+      "directory": "/work/docs/experiments/assets/cubic-competing-20261010/cases/same-start-gd",
+      "drop_rows_without_usable_transmission_tag": 0,
+      "files": [
+        {
+          "bytes": 11884,
+          "file": "summary.json",
+          "sha256": "ee98e92f65a365bc4b6767811c18e42ad91c2881100531f24d51a5463145bb2f"
+        },
+        {
+          "bytes": 3043,
+          "file": "case.json",
+          "sha256": "a3f47cb429672396ebd00e2c99152c0c97472c644bb263938eb2d43c37120cfc"
+        },
+        {
+          "bytes": 615,
+          "file": "config_ns3.properties",
+          "sha256": "7a8dcd72517feefb35df0f6f2750df2f0441080429ff77ba3b7b85dbff30f6ae"
+        },
+        {
+          "bytes": 138,
+          "file": "schedule.csv",
+          "sha256": "f46002d9fe4926ef68426059ce7d0803cbf8bdbb16a1fa910d986449b1da6348"
+        }
+      ],
+      "guard_validation": {
+        "0": {
+          "expected_sets": [
+            [
+              26100000000,
+              20
+            ],
+            [
+              74900000000,
+              20
+            ]
+          ],
+          "initial_k": 3,
+          "matched": true,
+          "observed_sets": [
+            [
+              26100000000,
+              20
+            ],
+            [
+              74900000000,
+              20
+            ]
+          ]
+        },
+        "1": {
+          "expected_sets": [],
+          "initial_k": 3,
+          "matched": true,
+          "observed_sets": []
+        }
+      },
+      "mode": "GD",
+      "policy": "K20",
+      "recorded_raw_input_count": 16,
+      "scenario": "same-start",
+      "source_commit": "95c306dd9fc1d6c09f9d5ebccfc27215f8c41a24",
+      "threshold": 20
+    },
+    {
+      "analysis_sha256": "3601f371b6138898f8f89367f8277f979cb990714d8c4ed6de2b2adfaf27828b",
+      "case": "same-start-dg-k8",
+      "directory": "/tmp/competing-k8-export/cases/same-start-dg-k8",
+      "drop_rows_without_usable_transmission_tag": 0,
+      "files": [
+        {
+          "bytes": 11904,
+          "file": "summary.json",
+          "sha256": "06c82f7ce9d80c3f5436f485f95b5819283b1108d5b845b9392c4793b8c0d1d0"
+        },
+        {
+          "bytes": 3059,
+          "file": "case.json",
+          "sha256": "d2946337a5c63daf83dff51491cd2e849104b366fe12374391f42cef1444bd79"
+        },
+        {
+          "bytes": 615,
+          "file": "config_ns3.properties",
+          "sha256": "7a8dcd72517feefb35df0f6f2750df2f0441080429ff77ba3b7b85dbff30f6ae"
+        },
+        {
+          "bytes": 137,
+          "file": "schedule.csv",
+          "sha256": "a04b85b49217856c3f1d9eeea6b4b6173cebc1277478b809a6f6f4bca110005a"
+        }
+      ],
+      "guard_validation": {
+        "0": {
+          "expected_sets": [],
+          "initial_k": 3,
+          "matched": true,
+          "observed_sets": []
+        },
+        "1": {
+          "expected_sets": [
+            [
+              26100000000,
+              8
+            ],
+            [
+              74900000000,
+              8
+            ]
+          ],
+          "initial_k": 3,
+          "matched": true,
+          "observed_sets": [
+            [
+              26100000000,
+              8
+            ],
+            [
+              74900000000,
+              8
+            ]
+          ]
+        }
+      },
+      "mode": "DG",
+      "policy": "K8",
+      "recorded_raw_input_count": 16,
+      "scenario": "same-start",
+      "source_commit": "7266051e6ed4cab15c13d59c555ca32f2803e479",
+      "threshold": 8
+    },
+    {
+      "analysis_sha256": "f1baa7a4d16f079bd3c369f661c10a2b083dd8313c26332c69afd9cdcd2711ef",
+      "case": "same-start-dg",
+      "directory": "/work/docs/experiments/assets/cubic-competing-20261010/cases/same-start-dg",
+      "drop_rows_without_usable_transmission_tag": 0,
+      "files": [
+        {
+          "bytes": 11891,
+          "file": "summary.json",
+          "sha256": "6fd173647ccb9be773d61e1577d96be9613da6ff422ccb48e5bc2fa22c2979ec"
+        },
+        {
+          "bytes": 3044,
+          "file": "case.json",
+          "sha256": "fc403632485963f15fa15854540c6500101d17324a1a9c808616ebc4aebfcad4"
+        },
+        {
+          "bytes": 615,
+          "file": "config_ns3.properties",
+          "sha256": "7a8dcd72517feefb35df0f6f2750df2f0441080429ff77ba3b7b85dbff30f6ae"
+        },
+        {
+          "bytes": 138,
+          "file": "schedule.csv",
+          "sha256": "3d5a784dd4d60e51b875127b1e05c9e52c7fbf59d81fb843661ab76e7858d03f"
+        }
+      ],
+      "guard_validation": {
+        "0": {
+          "expected_sets": [],
+          "initial_k": 3,
+          "matched": true,
+          "observed_sets": []
+        },
+        "1": {
+          "expected_sets": [
+            [
+              26100000000,
+              20
+            ],
+            [
+              74900000000,
+              20
+            ]
+          ],
+          "initial_k": 3,
+          "matched": true,
+          "observed_sets": [
+            [
+              26100000000,
+              20
+            ],
+            [
+              74900000000,
+              20
+            ]
+          ]
+        }
+      },
+      "mode": "DG",
+      "policy": "K20",
+      "recorded_raw_input_count": 16,
+      "scenario": "same-start",
+      "source_commit": "95c306dd9fc1d6c09f9d5ebccfc27215f8c41a24",
+      "threshold": 20
+    },
+    {
+      "analysis_sha256": "edbceef683af6aeb7772819c9945d1740220b1d9f934075a7b29ec821834a44c",
+      "case": "same-start-gg-k8",
+      "directory": "/tmp/competing-k8-export/cases/same-start-gg-k8",
+      "drop_rows_without_usable_transmission_tag": 0,
+      "files": [
+        {
+          "bytes": 12384,
+          "file": "summary.json",
+          "sha256": "46ed2534b0d910f227386a98d78f3199fe5ea0ead7783b37c64df6425b3641b6"
+        },
+        {
+          "bytes": 3138,
+          "file": "case.json",
+          "sha256": "0c145e50d646a53a0c5a7991268d2f59fdee81d17dc3d11e8c1093117b1c0d5f"
+        },
+        {
+          "bytes": 615,
+          "file": "config_ns3.properties",
+          "sha256": "7a8dcd72517feefb35df0f6f2750df2f0441080429ff77ba3b7b85dbff30f6ae"
+        },
+        {
+          "bytes": 216,
+          "file": "schedule.csv",
+          "sha256": "53171bafc70561e76a8ccc35b24ff5c9035cfa15a6e43755bcb257b5d31fac03"
+        }
+      ],
+      "guard_validation": {
+        "0": {
+          "expected_sets": [
+            [
+              26100000000,
+              8
+            ],
+            [
+              74900000000,
+              8
+            ]
+          ],
+          "initial_k": 3,
+          "matched": true,
+          "observed_sets": [
+            [
+              26100000000,
+              8
+            ],
+            [
+              74900000000,
+              8
+            ]
+          ]
+        },
+        "1": {
+          "expected_sets": [
+            [
+              26100000000,
+              8
+            ],
+            [
+              74900000000,
+              8
+            ]
+          ],
+          "initial_k": 3,
+          "matched": true,
+          "observed_sets": [
+            [
+              26100000000,
+              8
+            ],
+            [
+              74900000000,
+              8
+            ]
+          ]
+        }
+      },
+      "mode": "GG",
+      "policy": "K8",
+      "recorded_raw_input_count": 16,
+      "scenario": "same-start",
+      "source_commit": "7266051e6ed4cab15c13d59c555ca32f2803e479",
+      "threshold": 8
+    },
+    {
+      "analysis_sha256": "ba969e097b6a5f1d1a08e9c55bb4c2e1a18a1140657e42b08b25171422bca50e",
+      "case": "same-start-gg",
+      "directory": "/work/docs/experiments/assets/cubic-competing-20261010/cases/same-start-gg",
+      "drop_rows_without_usable_transmission_tag": 0,
+      "files": [
+        {
+          "bytes": 12363,
+          "file": "summary.json",
+          "sha256": "9bd77a8f704d43d784d95b71d3be349b610d31902315be14fa526e739f567fd6"
+        },
+        {
+          "bytes": 3125,
+          "file": "case.json",
+          "sha256": "da6abfc0ea4a055113d875191a00214b129229fa06c63b29c5cf7b5829001b99"
+        },
+        {
+          "bytes": 615,
+          "file": "config_ns3.properties",
+          "sha256": "7a8dcd72517feefb35df0f6f2750df2f0441080429ff77ba3b7b85dbff30f6ae"
+        },
+        {
+          "bytes": 218,
+          "file": "schedule.csv",
+          "sha256": "6873bf3069055db502248a519001a44298f0f3f7bcd3dcb29fbcb4ef256e652f"
+        }
+      ],
+      "guard_validation": {
+        "0": {
+          "expected_sets": [
+            [
+              26100000000,
+              20
+            ],
+            [
+              74900000000,
+              20
+            ]
+          ],
+          "initial_k": 3,
+          "matched": true,
+          "observed_sets": [
+            [
+              26100000000,
+              20
+            ],
+            [
+              74900000000,
+              20
+            ]
+          ]
+        },
+        "1": {
+          "expected_sets": [
+            [
+              26100000000,
+              20
+            ],
+            [
+              74900000000,
+              20
+            ]
+          ],
+          "initial_k": 3,
+          "matched": true,
+          "observed_sets": [
+            [
+              26100000000,
+              20
+            ],
+            [
+              74900000000,
+              20
+            ]
+          ]
+        }
+      },
+      "mode": "GG",
+      "policy": "K20",
+      "recorded_raw_input_count": 16,
+      "scenario": "same-start",
+      "source_commit": "95c306dd9fc1d6c09f9d5ebccfc27215f8c41a24",
+      "threshold": 20
+    },
+    {
+      "analysis_sha256": "cc5ac6caa17ba573a88089ba263d1c9ce6b11625e5c495a2514982f8a45b9d83",
+      "case": "join10-dd",
+      "directory": "/work/docs/experiments/assets/cubic-competing-20261010/cases/join10-dd",
+      "drop_rows_without_usable_transmission_tag": 0,
+      "files": [
+        {
+          "bytes": 11401,
+          "file": "summary.json",
+          "sha256": "b79c8bd092ce8e86531fc7e9eda2267cc37ae6e7e4ef0a7ffda2f01d7a53cedf"
+        },
+        {
+          "bytes": 2951,
+          "file": "case.json",
+          "sha256": "35246455b2e0bd59aefcda28321bc3d32105a035b069fe1f9392228bde7db8bf"
+        },
+        {
+          "bytes": 615,
+          "file": "config_ns3.properties",
+          "sha256": "7a8dcd72517feefb35df0f6f2750df2f0441080429ff77ba3b7b85dbff30f6ae"
+        },
+        {
+          "bytes": 68,
+          "file": "schedule.csv",
+          "sha256": "770c23e23f2c0bd8058aca07dc86f4f1dc63ef99d660ede1e9b4f6602ed46814"
+        }
+      ],
+      "guard_validation": {
+        "0": {
+          "expected_sets": [],
+          "initial_k": 3,
+          "matched": true,
+          "observed_sets": []
+        },
+        "1": {
+          "expected_sets": [],
+          "initial_k": 3,
+          "matched": true,
+          "observed_sets": []
+        }
+      },
+      "mode": "DD",
+      "policy": "K3",
+      "recorded_raw_input_count": 16,
+      "scenario": "join10",
+      "source_commit": "95c306dd9fc1d6c09f9d5ebccfc27215f8c41a24",
+      "threshold": 3
+    },
+    {
+      "analysis_sha256": "f563eb1ba195226e64ccac06b5c073d90b750e894968a28617e285b92e824f11",
+      "case": "join10-gd-k8",
+      "directory": "/tmp/competing-k8-export/cases/join10-gd-k8",
+      "drop_rows_without_usable_transmission_tag": 0,
+      "files": [
+        {
+          "bytes": 11891,
+          "file": "summary.json",
+          "sha256": "5631c1829f0b7cf274214c4c1b5ce2c7b1dbb34079092f58683dd9316344c3a9"
+        },
+        {
+          "bytes": 3048,
+          "file": "case.json",
+          "sha256": "814458eaafef46bc23b646092f092a7166790309e810cd41ddf0c496bfe95a65"
+        },
+        {
+          "bytes": 615,
+          "file": "config_ns3.properties",
+          "sha256": "7a8dcd72517feefb35df0f6f2750df2f0441080429ff77ba3b7b85dbff30f6ae"
+        },
+        {
+          "bytes": 147,
+          "file": "schedule.csv",
+          "sha256": "0b143fa87486d44365985b67881fe3c21044288b04039609ba41217d5e059293"
+        }
+      ],
+      "guard_validation": {
+        "0": {
+          "expected_sets": [
+            [
+              26100000000,
+              8
+            ],
+            [
+              74900000000,
+              8
+            ]
+          ],
+          "initial_k": 3,
+          "matched": true,
+          "observed_sets": [
+            [
+              26100000000,
+              8
+            ],
+            [
+              74900000000,
+              8
+            ]
+          ]
+        },
+        "1": {
+          "expected_sets": [],
+          "initial_k": 3,
+          "matched": true,
+          "observed_sets": []
+        }
+      },
+      "mode": "GD",
+      "policy": "K8",
+      "recorded_raw_input_count": 16,
+      "scenario": "join10",
+      "source_commit": "7266051e6ed4cab15c13d59c555ca32f2803e479",
+      "threshold": 8
+    },
+    {
+      "analysis_sha256": "feca5a2b1385c38800e15d6f698794d6d6bcb1e9e38b7234cf522cafca13086f",
+      "case": "join10-gd",
+      "directory": "/work/docs/experiments/assets/cubic-competing-20261010/cases/join10-gd",
+      "drop_rows_without_usable_transmission_tag": 0,
+      "files": [
+        {
+          "bytes": 11871,
+          "file": "summary.json",
+          "sha256": "bcd0c8a5771ebece63ddb2a6d3135588282566eaac5e0aa06f09f65cd6be2330"
+        },
+        {
+          "bytes": 3031,
+          "file": "case.json",
+          "sha256": "093e5f901e99d2716308305d53f7bb4e5a3e0e26a8f285a566ebd293fe936b90"
+        },
+        {
+          "bytes": 615,
+          "file": "config_ns3.properties",
+          "sha256": "7a8dcd72517feefb35df0f6f2750df2f0441080429ff77ba3b7b85dbff30f6ae"
+        },
+        {
+          "bytes": 148,
+          "file": "schedule.csv",
+          "sha256": "0c0a5e55e3ad4a5996386f99ad12243c75ea943467239ad8912815cdee7f8226"
+        }
+      ],
+      "guard_validation": {
+        "0": {
+          "expected_sets": [
+            [
+              26100000000,
+              20
+            ],
+            [
+              74900000000,
+              20
+            ]
+          ],
+          "initial_k": 3,
+          "matched": true,
+          "observed_sets": [
+            [
+              26100000000,
+              20
+            ],
+            [
+              74900000000,
+              20
+            ]
+          ]
+        },
+        "1": {
+          "expected_sets": [],
+          "initial_k": 3,
+          "matched": true,
+          "observed_sets": []
+        }
+      },
+      "mode": "GD",
+      "policy": "K20",
+      "recorded_raw_input_count": 16,
+      "scenario": "join10",
+      "source_commit": "95c306dd9fc1d6c09f9d5ebccfc27215f8c41a24",
+      "threshold": 20
+    },
+    {
+      "analysis_sha256": "0a91a592cea7ffddd79ea07fedf48907945d9fae48391310e4f2de7206b6644a",
+      "case": "join10-dg-k8",
+      "directory": "/tmp/competing-k8-export/cases/join10-dg-k8",
+      "drop_rows_without_usable_transmission_tag": 0,
+      "files": [
+        {
+          "bytes": 11896,
+          "file": "summary.json",
+          "sha256": "c68ab8767e6d6e1fb7d156db34149306bf23abf0053cfe55cb4aca62e41c44af"
+        },
+        {
+          "bytes": 3048,
+          "file": "case.json",
+          "sha256": "6ef6190b2f7b69680e8a0e8d23e6f2b90b5e2523b218c506fd4b84603e321ef8"
+        },
+        {
+          "bytes": 615,
+          "file": "config_ns3.properties",
+          "sha256": "7a8dcd72517feefb35df0f6f2750df2f0441080429ff77ba3b7b85dbff30f6ae"
+        },
+        {
+          "bytes": 147,
+          "file": "schedule.csv",
+          "sha256": "a11b196fe7b026c82ce9aae05bf9c46a8a534741055a0f217af933d791d3d43e"
+        }
+      ],
+      "guard_validation": {
+        "0": {
+          "expected_sets": [],
+          "initial_k": 3,
+          "matched": true,
+          "observed_sets": []
+        },
+        "1": {
+          "expected_sets": [
+            [
+              26100000000,
+              8
+            ],
+            [
+              74900000000,
+              8
+            ]
+          ],
+          "initial_k": 3,
+          "matched": true,
+          "observed_sets": [
+            [
+              26100000000,
+              8
+            ],
+            [
+              74900000000,
+              8
+            ]
+          ]
+        }
+      },
+      "mode": "DG",
+      "policy": "K8",
+      "recorded_raw_input_count": 16,
+      "scenario": "join10",
+      "source_commit": "7266051e6ed4cab15c13d59c555ca32f2803e479",
+      "threshold": 8
+    },
+    {
+      "analysis_sha256": "7d2d7713cb78f604b6270bf6dcd5ea82dfefd332afed3a04a0343115076cf289",
+      "case": "join10-dg",
+      "directory": "/work/docs/experiments/assets/cubic-competing-20261010/cases/join10-dg",
+      "drop_rows_without_usable_transmission_tag": 0,
+      "files": [
+        {
+          "bytes": 11876,
+          "file": "summary.json",
+          "sha256": "49dc58227c6fb54bb38b37336ddf6d7353747c3d31d387a77588358a59de1d68"
+        },
+        {
+          "bytes": 3032,
+          "file": "case.json",
+          "sha256": "8f0dbc7192ba3e4274b2c0587d786213ab8db3dd60ffff6010805e3d35f69636"
+        },
+        {
+          "bytes": 615,
+          "file": "config_ns3.properties",
+          "sha256": "7a8dcd72517feefb35df0f6f2750df2f0441080429ff77ba3b7b85dbff30f6ae"
+        },
+        {
+          "bytes": 148,
+          "file": "schedule.csv",
+          "sha256": "5cb291e95e81547584106797dce0163e12965817c9d820ec956f35d44f4de619"
+        }
+      ],
+      "guard_validation": {
+        "0": {
+          "expected_sets": [],
+          "initial_k": 3,
+          "matched": true,
+          "observed_sets": []
+        },
+        "1": {
+          "expected_sets": [
+            [
+              26100000000,
+              20
+            ],
+            [
+              74900000000,
+              20
+            ]
+          ],
+          "initial_k": 3,
+          "matched": true,
+          "observed_sets": [
+            [
+              26100000000,
+              20
+            ],
+            [
+              74900000000,
+              20
+            ]
+          ]
+        }
+      },
+      "mode": "DG",
+      "policy": "K20",
+      "recorded_raw_input_count": 16,
+      "scenario": "join10",
+      "source_commit": "95c306dd9fc1d6c09f9d5ebccfc27215f8c41a24",
+      "threshold": 20
+    },
+    {
+      "analysis_sha256": "50f561173e89b7d33cf7bc2b7b048946a6db55ecbe19691999a314ea1eba2f01",
+      "case": "join10-gg-k8",
+      "directory": "/tmp/competing-k8-export/cases/join10-gg-k8",
+      "drop_rows_without_usable_transmission_tag": 0,
+      "files": [
+        {
+          "bytes": 12362,
+          "file": "summary.json",
+          "sha256": "8018ecea8a4a9b88f7f059766f5b09f42b37c26717f97996deac4a9e952cb7c8"
+        },
+        {
+          "bytes": 3127,
+          "file": "case.json",
+          "sha256": "c5b3fe1803c8f33e2a7af20e4afb3ec4a9c7ba893f00156938fde5ad08cd95e1"
+        },
+        {
+          "bytes": 615,
+          "file": "config_ns3.properties",
+          "sha256": "7a8dcd72517feefb35df0f6f2750df2f0441080429ff77ba3b7b85dbff30f6ae"
+        },
+        {
+          "bytes": 226,
+          "file": "schedule.csv",
+          "sha256": "da067e0d8767e943f049721aa42340d2d948c45fc44df81b694f2154f15c1073"
+        }
+      ],
+      "guard_validation": {
+        "0": {
+          "expected_sets": [
+            [
+              26100000000,
+              8
+            ],
+            [
+              74900000000,
+              8
+            ]
+          ],
+          "initial_k": 3,
+          "matched": true,
+          "observed_sets": [
+            [
+              26100000000,
+              8
+            ],
+            [
+              74900000000,
+              8
+            ]
+          ]
+        },
+        "1": {
+          "expected_sets": [
+            [
+              26100000000,
+              8
+            ],
+            [
+              74900000000,
+              8
+            ]
+          ],
+          "initial_k": 3,
+          "matched": true,
+          "observed_sets": [
+            [
+              26100000000,
+              8
+            ],
+            [
+              74900000000,
+              8
+            ]
+          ]
+        }
+      },
+      "mode": "GG",
+      "policy": "K8",
+      "recorded_raw_input_count": 16,
+      "scenario": "join10",
+      "source_commit": "7266051e6ed4cab15c13d59c555ca32f2803e479",
+      "threshold": 8
+    },
+    {
+      "analysis_sha256": "c17a68a2c58a644f8ec1a7d10407cd8b65b3385331c19b5bfb0ad3e5608bdfff",
+      "case": "join10-gg",
+      "directory": "/work/docs/experiments/assets/cubic-competing-20261010/cases/join10-gg",
+      "drop_rows_without_usable_transmission_tag": 0,
+      "files": [
+        {
+          "bytes": 12346,
+          "file": "summary.json",
+          "sha256": "d2d309aad7c084bb115c23b2c55ce683849c588619b3572c859b4de11e41370b"
+        },
+        {
+          "bytes": 3112,
+          "file": "case.json",
+          "sha256": "64d5c136daff4ba0a67792602e4dc2932c01b12cb7263e0ad96c4d148733d750"
+        },
+        {
+          "bytes": 615,
+          "file": "config_ns3.properties",
+          "sha256": "7a8dcd72517feefb35df0f6f2750df2f0441080429ff77ba3b7b85dbff30f6ae"
+        },
+        {
+          "bytes": 228,
+          "file": "schedule.csv",
+          "sha256": "fa30ab0a6bbc052d1ef5f4b40cafe85ecf10fc24b0515bf366ef1449e9a50e9d"
+        }
+      ],
+      "guard_validation": {
+        "0": {
+          "expected_sets": [
+            [
+              26100000000,
+              20
+            ],
+            [
+              74900000000,
+              20
+            ]
+          ],
+          "initial_k": 3,
+          "matched": true,
+          "observed_sets": [
+            [
+              26100000000,
+              20
+            ],
+            [
+              74900000000,
+              20
+            ]
+          ]
+        },
+        "1": {
+          "expected_sets": [
+            [
+              26100000000,
+              20
+            ],
+            [
+              74900000000,
+              20
+            ]
+          ],
+          "initial_k": 3,
+          "matched": true,
+          "observed_sets": [
+            [
+              26100000000,
+              20
+            ],
+            [
+              74900000000,
+              20
+            ]
+          ]
+        }
+      },
+      "mode": "GG",
+      "policy": "K20",
+      "recorded_raw_input_count": 16,
+      "scenario": "join10",
+      "source_commit": "95c306dd9fc1d6c09f9d5ebccfc27215f8c41a24",
+      "threshold": 20
+    }
+  ],
+  "matched_provenance": {
+    "analyzer_sha256": "5333d7f6d86c04f79bbaad82e5e2577ec3bdf2f281e115c854ad904c404aa696",
+    "binary_sha256": "de9f678113c37a72df7e3215e876f18945c0ccecf9123f60fc8f655f9d9a6eab",
+    "config_ns3.properties_sha256": "7a8dcd72517feefb35df0f6f2750df2f0441080429ff77ba3b7b85dbff30f6ae",
+    "exporter_sha256": "845d8b7548ea50eea07db28b678830e55dddc411f2cb0542927df396b5852f43",
+    "make_run_sha256": "ccf066bba1a23ed958518ea41929ca8cefac4ce2a1ef6f803a7b8bb40b54f887",
+    "official_image_digest": "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+    "patch_sha256": "473dd0e23447a58bd7ce644507cf4aa24b612020ff1e6029f5bfdb22e2cd4245",
+    "path_truth_sha256": "49bd5418f2b13bdbf6d703f719d61075f814cc86d44c745651bf797f4e5f656c",
+    "runner_sha256": "b844c9919d30262a8903bb460755a8a3cd221c58da2a178fe0f95c80fe360b77"
+  },
+  "method": {
+    "application": "Unique ordered per-connection application payload from the previously validated compact export.",
+    "contrasts": "Treatment minus reference; percent change=100*delta/reference and null for zero or unknown reference. Jain delta is an index change.",
+    "guards": "Actual intervals are paired with requested windows; restore overhang=end minus requested end. Per-flow deferral/miss totals are not assigned to particular intervals.",
+    "inputs": "Only compact export/config/schedule/manifest are read and hashed here. Their raw-input hashes remain in the input summaries; this script does not independently re-audit raw traces.",
+    "jain": "Two delivered byte totals over the same window; null when both are zero; identical to using goodput with a shared denominator.",
+    "limits": "Deterministic conditions without independent replicate/CI, no causal attribution of entire share changes, no eventual-delivery/drain-period inference, no universal K8 superiority claim.",
+    "matching": "Two starts (0/0,0/10), same direction/size/config/binary/patch/image/analyzer; K8 vs K20 differs only in guard threshold.",
+    "recovery_and_loss": "Congestion-state entry counts; LOSS is not automatically labeled timeout.",
+    "retransmission": "Payload RETX trace rows, not independent loss episodes; aggregate counters sum both flows.",
+    "terminal": "Wire unique sequence bytes minus ordered application bytes at 200s; pre-processing wire observation, not exact accepted-buffer occupancy or permanent loss.",
+    "windows": "Half-open [start,end) intervals with identical two-flow denominator; common-active begins at the later scheduled start."
+  },
+  "published_evidence_form": "Metadata and fingerprints from the complete comparison output; table values are published once in the five CSVs. Full comparison JSON is regenerated by compare_thresholds.py.",
+  "schema_version": 1,
+  "script_sha256": "41f95aefb0f2f72eba15c26ab44ecb2cab59795316a5d9a78fc31e187be86cd0"
+}

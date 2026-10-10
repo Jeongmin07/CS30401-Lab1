@@ -1,0 +1,7 @@
+{
+  "archive": "cubic-competing-20261010.tar.gz",
+  "files_checked": 240,
+  "all_hashes_match": true,
+  "archive_sha256": "ba03cfbe60d42ccc9486fb65a151c8d0d6823ef2c2e041636716e69c49a5ae79",
+  "qualification": "Every regular tar member was streamed, its size and SHA-256 checked against the embedded per-file manifest; no files were extracted."
+}

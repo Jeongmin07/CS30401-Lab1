@@ -1,0 +1,12 @@
+{
+  "asset_bytes": 63853717,
+  "asset_digest": "sha256:4c0c4ffe7b978d31c3d345c4b63ebdc198b4e07f016070c4be44be52674d8e72",
+  "asset_name": "cubic-competing-k8-20261010.tar.gz",
+  "asset_state": "uploaded",
+  "asset_url": "https://github.com/Jeongmin07/CS30401-Lab1/releases/download/cubic-competing-20261010/cubic-competing-k8-20261010.tar.gz",
+  "checked_at_utc": "2026-10-10T08:11:59.506051+00:00",
+  "original_twelve_case_asset_size_and_digest_preserved": true,
+  "qualification": "GitHub-reported uploaded asset state/size/digest checked against the locally stream-verified archive; not a second full download.",
+  "release_url": "https://github.com/Jeongmin07/CS30401-Lab1/releases/tag/cubic-competing-20261010",
+  "size_and_digest_match_local_verified_archive": true
+}

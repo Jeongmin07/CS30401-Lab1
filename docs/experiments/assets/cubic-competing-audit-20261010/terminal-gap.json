@@ -1,0 +1,687 @@
+{
+  "accounting": {
+    "guarded_minus_baseline_application_bytes": -193200,
+    "guarded_minus_baseline_wire_unique_bytes": 1380,
+    "guarded_wire_above_unresolved_frontiers_bytes": 194580,
+    "identity_verified": "application_delta = wire_delta - guarded_wire_above_frontiers"
+  },
+  "audit_script_sha256": "b9c20cbaaabbf6168a28900858537d02c0b42206172eaaf0a65f8598e959af55",
+  "baseline": {
+    "application_bytes": 239472780,
+    "binary_sha256": "de9f678113c37a72df7e3215e876f18945c0ccecf9123f60fc8f655f9d9a6eab",
+    "case": "same-start-dd",
+    "cutoff_ns": 200000000000,
+    "flows": {
+      "0": {
+        "application_bytes": 117494580,
+        "application_sequence_frontier": 117494581,
+        "first_data_sequence": 1,
+        "last_application_delivery": {
+          "connection_total_rx_bytes": 117494580,
+          "file": "study_app_rx_node_1585_port_1024.csv",
+          "flow_id": "0",
+          "line": 163762,
+          "payload_bytes": 1380,
+          "time_ns": 199933580953
+        },
+        "last_receiver_payload": {
+          "expected_seq": 117493201,
+          "file": "study_rx_node_1585_port_1024.csv",
+          "flow_id": "0",
+          "line": 173475,
+          "payload_bytes": 1380,
+          "seq": 117493201,
+          "time_ns": 199933580953,
+          "tx_id": 85546
+        },
+        "last_sender_ack": {
+          "ack": "117494581",
+          "cong_state": 0,
+          "file": "tcp_flow_0_study_packets.csv",
+          "line": 131130,
+          "sack_blocks": "",
+          "threshold": 3,
+          "time_ns": 199983267766
+        },
+        "received_ranges_above_frontier": [],
+        "sack_confirmed_bytes_above_frontier": 0,
+        "sack_confirmed_ranges_above_frontier": [],
+        "syn_sequences": [
+          0
+        ],
+        "unreceived_holes_below_highest_received_end": [],
+        "verified_terminal_holes": [],
+        "wire_bytes_above_frontier_without_sender_sack_confirmation": 0,
+        "wire_minus_application_bytes": 0,
+        "wire_unique_bytes": 117494580
+      },
+      "1": {
+        "application_bytes": 121978200,
+        "application_sequence_frontier": 121978201,
+        "first_data_sequence": 1,
+        "last_application_delivery": {
+          "connection_total_rx_bytes": 121978200,
+          "file": "study_app_rx_node_1585_port_1024.csv",
+          "flow_id": "1",
+          "line": 163819,
+          "payload_bytes": 1380,
+          "time_ns": 199998972522
+        },
+        "last_receiver_payload": {
+          "expected_seq": 121976821,
+          "file": "study_rx_node_1585_port_1024.csv",
+          "flow_id": "1",
+          "line": 173532,
+          "payload_bytes": 1380,
+          "seq": 121976821,
+          "time_ns": 199998972522,
+          "tx_id": 88685
+        },
+        "last_sender_ack": {
+          "ack": "121917481",
+          "cong_state": 0,
+          "file": "tcp_flow_1_study_packets.csv",
+          "line": 135777,
+          "sack_blocks": "",
+          "threshold": 3,
+          "time_ns": 199998181920
+        },
+        "received_ranges_above_frontier": [],
+        "sack_confirmed_bytes_above_frontier": 0,
+        "sack_confirmed_ranges_above_frontier": [],
+        "syn_sequences": [
+          0
+        ],
+        "unreceived_holes_below_highest_received_end": [],
+        "verified_terminal_holes": [],
+        "wire_bytes_above_frontier_without_sender_sack_confirmation": 0,
+        "wire_minus_application_bytes": 0,
+        "wire_unique_bytes": 121978200
+      }
+    },
+    "patch_sha256": "473dd0e23447a58bd7ce644507cf4aa24b612020ff1e6029f5bfdb22e2cd4245",
+    "raw_input_hashes": [
+      {
+        "bytes": 14217144,
+        "path": "logs_ns3/study_app_rx_node_1585_port_1024.csv",
+        "sha256": "af88a077678ed75b36780bb87e1f391fe0cb2c6e49d586d569df27330b80902f"
+      },
+      {
+        "bytes": 19192130,
+        "path": "logs_ns3/study_rx_node_1585_port_1024.csv",
+        "sha256": "51059009e096cf0fd4de8dd08b69f56e5ed277014c2f8c226b9dad0529220538"
+      },
+      {
+        "bytes": 9709430,
+        "path": "logs_ns3/tcp_flow_0_study_packets.csv",
+        "sha256": "21f296c417b874c71f9cd58fe045043fe12fd30fbba14e68d308e9ff35f5c68e"
+      },
+      {
+        "bytes": 10059186,
+        "path": "logs_ns3/tcp_flow_1_study_packets.csv",
+        "sha256": "c21ebfa7450f37ab3831d319cddb4a79fd27186fba8c5a288082f2ad138ad682"
+      },
+      {
+        "bytes": 73440,
+        "path": "logs_ns3/study_drops.csv",
+        "sha256": "b795778fd4c4f94e805dcee6fe0c9059b90bd50e042c419d7a98b8d2f3933852"
+      },
+      {
+        "bytes": 2963,
+        "path": "case.json",
+        "sha256": "b74ad337afa8a0aefda46926940c5acbbfe4f4f0d79d0a087e93c2a8dc26c031"
+      },
+      {
+        "bytes": 615,
+        "path": "config_ns3.properties",
+        "sha256": "7a8dcd72517feefb35df0f6f2750df2f0441080429ff77ba3b7b85dbff30f6ae"
+      },
+      {
+        "bytes": 58,
+        "path": "schedule.csv",
+        "sha256": "68fb778bf41d5f5c8cf36d25671d301b99bc68c6f45d2232109e7909552a3790"
+      },
+      {
+        "bytes": 1498883,
+        "path": "study_analysis.json",
+        "sha256": "39d0f72c6fdebc48878ca1af1cc2aaaabf5d7310a9909c657239afba5eef6536"
+      }
+    ],
+    "run_dir": "/tmp/cs30401-competing/same-start-dd",
+    "source_commit": "95c306dd9fc1d6c09f9d5ebccfc27215f8c41a24",
+    "wire_unique_bytes": 239472780
+  },
+  "guarded": {
+    "application_bytes": 239279580,
+    "binary_sha256": "de9f678113c37a72df7e3215e876f18945c0ccecf9123f60fc8f655f9d9a6eab",
+    "case": "same-start-gg",
+    "cutoff_ns": 200000000000,
+    "flows": {
+      "0": {
+        "application_bytes": 112263000,
+        "application_sequence_frontier": 112263001,
+        "first_data_sequence": 1,
+        "last_application_delivery": {
+          "connection_total_rx_bytes": 112263000,
+          "file": "study_app_rx_node_1585_port_1024.csv",
+          "flow_id": "0",
+          "line": 163788,
+          "payload_bytes": 26220,
+          "time_ns": 199928992063
+        },
+        "last_receiver_payload": {
+          "expected_seq": 112263001,
+          "file": "study_rx_node_1585_port_1024.csv",
+          "flow_id": "0",
+          "line": 173474,
+          "payload_bytes": 1380,
+          "seq": 112344421,
+          "time_ns": 199931286517,
+          "tx_id": 81843
+        },
+        "last_sender_ack": {
+          "ack": "112263001",
+          "cong_state": 3,
+          "file": "tcp_flow_0_study_packets.csv",
+          "line": 125601,
+          "sack_blocks": "112279561:112345801|112274041:112278181|112269901:112272661",
+          "threshold": 3,
+          "time_ns": 199981203692
+        },
+        "received_ranges_above_frontier": [
+          [
+            112264381,
+            112268521
+          ],
+          [
+            112269901,
+            112272661
+          ],
+          [
+            112274041,
+            112278181
+          ],
+          [
+            112279561,
+            112345801
+          ]
+        ],
+        "sack_confirmed_bytes_above_frontier": 77280,
+        "sack_confirmed_ranges_above_frontier": [
+          [
+            112264381,
+            112268521
+          ],
+          [
+            112269901,
+            112272661
+          ],
+          [
+            112274041,
+            112278181
+          ],
+          [
+            112279561,
+            112345801
+          ]
+        ],
+        "syn_sequences": [
+          0
+        ],
+        "unreceived_holes_below_highest_received_end": [
+          [
+            112263001,
+            112264381
+          ],
+          [
+            112268521,
+            112269901
+          ],
+          [
+            112272661,
+            112274041
+          ],
+          [
+            112278181,
+            112279561
+          ]
+        ],
+        "verified_terminal_holes": [
+          {
+            "any_receiver_payload_overlap_by_cutoff": false,
+            "original": {
+              "cong_state": 3,
+              "event": "TX",
+              "file": "tcp_flow_0_study_packets.csv",
+              "flow_id": "0",
+              "line": 125275,
+              "payload_bytes": 1380,
+              "seq": 112263001,
+              "threshold": 3,
+              "time_ns": 199674736360,
+              "tx_id": 81779,
+              "tx_time_ns": 199674736360
+            },
+            "original_drop_rows": [
+              {
+                "device": "4294967295",
+                "file": "study_drops.csv",
+                "flow_id": "0",
+                "layer": "TcDrop",
+                "line": 674,
+                "node": "1584",
+                "payload_bytes": 1380,
+                "seq": 112263001,
+                "time_ns": 199674736360,
+                "tx_id": 81779,
+                "tx_time_ns": 199674736360
+              }
+            ],
+            "retransmissions": [
+              {
+                "cong_state": 3,
+                "event": "RETX",
+                "file": "tcp_flow_0_study_packets.csv",
+                "flow_id": "0",
+                "line": 125476,
+                "payload_bytes": 1380,
+                "seq": 112263001,
+                "threshold": 3,
+                "time_ns": 199914663617,
+                "tx_id": 81861,
+                "tx_time_ns": 199914663617
+              },
+              {
+                "cong_state": 3,
+                "event": "RETX",
+                "file": "tcp_flow_0_study_packets.csv",
+                "flow_id": "0",
+                "line": 125599,
+                "payload_bytes": 1380,
+                "seq": 112263001,
+                "threshold": 3,
+                "time_ns": 199980056455,
+                "tx_id": 81923,
+                "tx_time_ns": 199980056455
+              }
+            ],
+            "sequence_range": [
+              112263001,
+              112264381
+            ]
+          },
+          {
+            "any_receiver_payload_overlap_by_cutoff": false,
+            "original": {
+              "cong_state": 3,
+              "event": "TX",
+              "file": "tcp_flow_0_study_packets.csv",
+              "flow_id": "0",
+              "line": 125282,
+              "payload_bytes": 1380,
+              "seq": 112268521,
+              "threshold": 3,
+              "time_ns": 199678178107,
+              "tx_id": 81783,
+              "tx_time_ns": 199678178107
+            },
+            "original_drop_rows": [
+              {
+                "device": "4294967295",
+                "file": "study_drops.csv",
+                "flow_id": "0",
+                "layer": "TcDrop",
+                "line": 675,
+                "node": "1584",
+                "payload_bytes": 1380,
+                "seq": 112268521,
+                "time_ns": 199678178107,
+                "tx_id": 81783,
+                "tx_time_ns": 199678178107
+              }
+            ],
+            "retransmissions": [
+              {
+                "cong_state": 3,
+                "event": "RETX",
+                "file": "tcp_flow_0_study_packets.csv",
+                "flow_id": "0",
+                "line": 125484,
+                "payload_bytes": 1380,
+                "seq": 112268521,
+                "threshold": 3,
+                "time_ns": 199918105363,
+                "tx_id": 81865,
+                "tx_time_ns": 199918105363
+              }
+            ],
+            "sequence_range": [
+              112268521,
+              112269901
+            ]
+          },
+          {
+            "any_receiver_payload_overlap_by_cutoff": false,
+            "original": {
+              "cong_state": 3,
+              "event": "TX",
+              "file": "tcp_flow_0_study_packets.csv",
+              "flow_id": "0",
+              "line": 125287,
+              "payload_bytes": 1380,
+              "seq": 112272661,
+              "threshold": 3,
+              "time_ns": 199680472582,
+              "tx_id": 81786,
+              "tx_time_ns": 199680472582
+            },
+            "original_drop_rows": [
+              {
+                "device": "4294967295",
+                "file": "study_drops.csv",
+                "flow_id": "0",
+                "layer": "TcDrop",
+                "line": 676,
+                "node": "1584",
+                "payload_bytes": 1380,
+                "seq": 112272661,
+                "time_ns": 199680472582,
+                "tx_id": 81786,
+                "tx_time_ns": 199680472582
+              }
+            ],
+            "retransmissions": [
+              {
+                "cong_state": 3,
+                "event": "RETX",
+                "file": "tcp_flow_0_study_packets.csv",
+                "flow_id": "0",
+                "line": 125490,
+                "payload_bytes": 1380,
+                "seq": 112272661,
+                "threshold": 3,
+                "time_ns": 199920399837,
+                "tx_id": 81868,
+                "tx_time_ns": 199920399837
+              }
+            ],
+            "sequence_range": [
+              112272661,
+              112274041
+            ]
+          },
+          {
+            "any_receiver_payload_overlap_by_cutoff": false,
+            "original": {
+              "cong_state": 3,
+              "event": "TX",
+              "file": "tcp_flow_0_study_packets.csv",
+              "flow_id": "0",
+              "line": 125294,
+              "payload_bytes": 1380,
+              "seq": 112278181,
+              "threshold": 3,
+              "time_ns": 199683914329,
+              "tx_id": 81790,
+              "tx_time_ns": 199683914329
+            },
+            "original_drop_rows": [
+              {
+                "device": "4294967295",
+                "file": "study_drops.csv",
+                "flow_id": "0",
+                "layer": "TcDrop",
+                "line": 677,
+                "node": "1584",
+                "payload_bytes": 1380,
+                "seq": 112278181,
+                "time_ns": 199683914329,
+                "tx_id": 81790,
+                "tx_time_ns": 199683914329
+              }
+            ],
+            "retransmissions": [
+              {
+                "cong_state": 3,
+                "event": "RETX",
+                "file": "tcp_flow_0_study_packets.csv",
+                "flow_id": "0",
+                "line": 125504,
+                "payload_bytes": 1380,
+                "seq": 112278181,
+                "threshold": 3,
+                "time_ns": 199927283297,
+                "tx_id": 81875,
+                "tx_time_ns": 199927283297
+              }
+            ],
+            "sequence_range": [
+              112278181,
+              112279561
+            ]
+          }
+        ],
+        "wire_bytes_above_frontier_without_sender_sack_confirmation": 0,
+        "wire_minus_application_bytes": 77280,
+        "wire_unique_bytes": 112340280
+      },
+      "1": {
+        "application_bytes": 127016580,
+        "application_sequence_frontier": 127016581,
+        "first_data_sequence": 1,
+        "last_application_delivery": {
+          "connection_total_rx_bytes": 127016580,
+          "file": "study_app_rx_node_1585_port_1024.csv",
+          "flow_id": "1",
+          "line": 163782,
+          "payload_bytes": 1380,
+          "time_ns": 199814270014
+        },
+        "last_receiver_payload": {
+          "expected_seq": 127016581,
+          "file": "study_rx_node_1585_port_1024.csv",
+          "flow_id": "1",
+          "line": 173533,
+          "payload_bytes": 1380,
+          "seq": 127133881,
+          "time_ns": 199998972522,
+          "tx_id": 92407
+        },
+        "last_sender_ack": {
+          "ack": "127016581",
+          "cong_state": 3,
+          "file": "tcp_flow_1_study_packets.csv",
+          "line": 141354,
+          "sack_blocks": "127017961:127075921",
+          "threshold": 3,
+          "time_ns": 199999405955
+        },
+        "received_ranges_above_frontier": [
+          [
+            127017961,
+            127135261
+          ]
+        ],
+        "sack_confirmed_bytes_above_frontier": 57960,
+        "sack_confirmed_ranges_above_frontier": [
+          [
+            127017961,
+            127075921
+          ]
+        ],
+        "syn_sequences": [
+          0
+        ],
+        "unreceived_holes_below_highest_received_end": [
+          [
+            127016581,
+            127017961
+          ]
+        ],
+        "verified_terminal_holes": [
+          {
+            "any_receiver_payload_overlap_by_cutoff": false,
+            "original": {
+              "cong_state": 0,
+              "event": "TX",
+              "file": "tcp_flow_1_study_packets.csv",
+              "flow_id": "1",
+              "line": 141141,
+              "payload_bytes": 1380,
+              "seq": 127016581,
+              "threshold": 3,
+              "time_ns": 199627622627,
+              "tx_id": 92322,
+              "tx_time_ns": 199627622627
+            },
+            "original_drop_rows": [
+              {
+                "device": "4294967295",
+                "file": "study_drops.csv",
+                "flow_id": "1",
+                "layer": "TcDrop",
+                "line": 673,
+                "node": "1584",
+                "payload_bytes": 1380,
+                "seq": 127016581,
+                "time_ns": 199627622627,
+                "tx_id": 92322,
+                "tx_time_ns": 199627622627
+              }
+            ],
+            "retransmissions": [
+              {
+                "cong_state": 3,
+                "event": "RETX",
+                "file": "tcp_flow_1_study_packets.csv",
+                "flow_id": "1",
+                "line": 141294,
+                "payload_bytes": 1380,
+                "seq": 127016581,
+                "threshold": 3,
+                "time_ns": 199867473081,
+                "tx_id": 92423,
+                "tx_time_ns": 199867473081
+              }
+            ],
+            "sequence_range": [
+              127016581,
+              127017961
+            ]
+          }
+        ],
+        "wire_bytes_above_frontier_without_sender_sack_confirmation": 59340,
+        "wire_minus_application_bytes": 117300,
+        "wire_unique_bytes": 127133880
+      }
+    },
+    "patch_sha256": "473dd0e23447a58bd7ce644507cf4aa24b612020ff1e6029f5bfdb22e2cd4245",
+    "raw_input_hashes": [
+      {
+        "bytes": 14214628,
+        "path": "logs_ns3/study_app_rx_node_1585_port_1024.csv",
+        "sha256": "4f2c7a94110436ee91356a489d5200291bf0f9075ef307936b02c800234f6268"
+      },
+      {
+        "bytes": 19192232,
+        "path": "logs_ns3/study_rx_node_1585_port_1024.csv",
+        "sha256": "9af0b586fa486cc1b71d272b1683671b363de33d2e071a0a0e02aa5098cb7c39"
+      },
+      {
+        "bytes": 9280865,
+        "path": "logs_ns3/tcp_flow_0_study_packets.csv",
+        "sha256": "407843520b4de0dae3de88cd080f9a6c8ede8989bab8c39e8d9e8b0adcec8acf"
+      },
+      {
+        "bytes": 10514252,
+        "path": "logs_ns3/tcp_flow_1_study_packets.csv",
+        "sha256": "97898b923c0a06bdd5636df53e0ef831069b3f9f61a227a1775910771d2851fb"
+      },
+      {
+        "bytes": 75735,
+        "path": "logs_ns3/study_drops.csv",
+        "sha256": "d643748b6913f3e910e11288255636f98c7028272c9e3896d568409986af8e35"
+      },
+      {
+        "bytes": 3125,
+        "path": "case.json",
+        "sha256": "da6abfc0ea4a055113d875191a00214b129229fa06c63b29c5cf7b5829001b99"
+      },
+      {
+        "bytes": 615,
+        "path": "config_ns3.properties",
+        "sha256": "7a8dcd72517feefb35df0f6f2750df2f0441080429ff77ba3b7b85dbff30f6ae"
+      },
+      {
+        "bytes": 218,
+        "path": "schedule.csv",
+        "sha256": "6873bf3069055db502248a519001a44298f0f3f7bcd3dcb29fbcb4ef256e652f"
+      },
+      {
+        "bytes": 1479426,
+        "path": "study_analysis.json",
+        "sha256": "ba969e097b6a5f1d1a08e9c55bb4c2e1a18a1140657e42b08b25171422bca50e"
+      }
+    ],
+    "run_dir": "/tmp/cs30401-competing/same-start-gg",
+    "source_commit": "95c306dd9fc1d6c09f9d5ebccfc27215f8c41a24",
+    "wire_unique_bytes": 239474160
+  },
+  "limitations": [
+    "Wire Rx is emitted before TCP processing; wire-union excess is not an exact accepted-buffer measurement.",
+    "SACK confirms only the reported subset; late receiver arrivals may not have sender feedback by cutoff.",
+    "Application frontier assumes verified SYN seq0/data seq1, one connection per flow and no sequence wrap.",
+    "Terminal holes have tagged original drops and retransmission attempts, with no receiver payload overlap before cutoff.",
+    "No observed arrival by cutoff does not prove a retransmission was lost or would never arrive.",
+    "The accounting explains this deadline-specific application deficit, not all earlier trajectory differences or long-run superiority.",
+    "Guard had ended earlier; late loss recovery uses K3. Earlier guard causation of the eventual queue history is not isolated.",
+    "No simulator execution, duration extension, drain control or independent statistical replication is performed."
+  ],
+  "schema_version": 1,
+  "source_contracts": [
+    {
+      "path": "/home/ubuntu/ns-3.48/src/internet/model/tcp-socket-base.cc",
+      "sha256": "b6ee80a1d33538f36f0f9f2170a6ca2512beed6850133a47fd00db96f3d70afe",
+      "verified_fragments": {
+        "SetNextRxSequence(tcpHeader.GetSequenceNumber() + SequenceNumber32(1));": [
+          2403,
+          2431,
+          2523
+        ],
+        "if (!m_tcb->m_rxBuffer->Add(p, tcpHeader))": [
+          3716
+        ],
+        "if (expectedSeq < m_tcb->m_rxBuffer->NextRxSequence())": [
+          3732
+        ],
+        "m_rxTrace(packet, tcpHeader, this);": [
+          1408
+        ]
+      }
+    },
+    {
+      "path": "/home/ubuntu/ns-3.48/src/internet/model/tcp-rx-buffer.cc",
+      "sha256": "2ff3e25846385a04887ae10520621348ea9235b2ba32f73812b8ab10f2df1554",
+      "verified_fragments": {
+        "else if (i->first > m_nextRxSeq)": [
+          219
+        ],
+        "m_nextRxSeq = i->first + SequenceNumber32(i->second->GetSize());": [
+          223
+        ]
+      }
+    },
+    {
+      "path": "/home/ubuntu/ns-3.48/contrib/basic-sim/model/apps/tcp-flow-sink.cc",
+      "sha256": "5f1c5bd3600aaea83703cd55cdf21f73b01cf13acd9792a86b3c3bd51e69e131",
+      "verified_fragments": {
+        "connection.appRxBytes += packet->GetSize();": [
+          254
+        ],
+        "while ((packet = socket->RecvFrom(from)))": [
+          242
+        ]
+      }
+    }
+  ]
+}

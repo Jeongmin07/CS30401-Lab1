@@ -1,0 +1,2483 @@
+{
+  "all_pairs_normalized_equal": true,
+  "audit_script_sha256": "604d285a24a05106523ac2a359b42c8b8a983032d6f13c6ad7aa25a872c3d0c4",
+  "comparison_helper": {
+    "path": "/work/code/competing-flows/audit_trajectory.py",
+    "sha256": "57a22417369cf0475896dd720c5303ef9053e4dab0acfeb6aa194316f5d5b0ae"
+  },
+  "comparisons": [
+    {
+      "actual_config_sha256": "7a8dcd72517feefb35df0f6f2750df2f0441080429ff77ba3b7b85dbff30f6ae",
+      "all_normalized_equal": true,
+      "files": [
+        {
+          "first_difference": null,
+          "normalized_equal": true,
+          "normalized_rows": [
+            163465,
+            163465
+          ],
+          "normalized_sha256": [
+            "b51e97bab69800aaaabd041990381ea653ffb7d37c2e1e18d6c2d607ef2ff874",
+            "b51e97bab69800aaaabd041990381ea653ffb7d37c2e1e18d6c2d607ef2ff874"
+          ],
+          "path": "logs_ns3/study_app_rx_node_1585_port_1024.csv",
+          "raw_equal": true,
+          "raw_sha256": [
+            "f3280167d854c150c520ca106e33754112e60073823a8cbc366ed04844150090",
+            "f3280167d854c150c520ca106e33754112e60073823a8cbc366ed04844150090"
+          ]
+        },
+        {
+          "first_difference": null,
+          "normalized_equal": true,
+          "normalized_rows": [
+            50705,
+            50705
+          ],
+          "normalized_sha256": [
+            "d94b7a5cecdee4a00250c9d789ba16e92f47db4b20ebc226a415b4adbe7bd7ac",
+            "d94b7a5cecdee4a00250c9d789ba16e92f47db4b20ebc226a415b4adbe7bd7ac"
+          ],
+          "path": "logs_ns3/study_drop_coverage.csv",
+          "raw_equal": true,
+          "raw_sha256": [
+            "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499",
+            "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+          ]
+        },
+        {
+          "first_difference": null,
+          "normalized_equal": true,
+          "normalized_rows": [
+            736,
+            736
+          ],
+          "normalized_sha256": [
+            "5d336a38d4b55a04523da09107d006aca03c4f82467dc5625a7637893599d143",
+            "5d336a38d4b55a04523da09107d006aca03c4f82467dc5625a7637893599d143"
+          ],
+          "path": "logs_ns3/study_drops.csv",
+          "raw_equal": true,
+          "raw_sha256": [
+            "dde7a77776d704deb768a5ae661f8b557d5e7a66985981b60e0753ac4b24420b",
+            "dde7a77776d704deb768a5ae661f8b557d5e7a66985981b60e0753ac4b24420b"
+          ]
+        },
+        {
+          "first_difference": null,
+          "normalized_equal": true,
+          "normalized_rows": [
+            172839,
+            172839
+          ],
+          "normalized_sha256": [
+            "dc2772560452d0763437bcf885ea1b3dc76a3afed1506db1b7785c39e7cb9836",
+            "dc2772560452d0763437bcf885ea1b3dc76a3afed1506db1b7785c39e7cb9836"
+          ],
+          "path": "logs_ns3/study_rx_node_1585_port_1024.csv",
+          "raw_equal": true,
+          "raw_sha256": [
+            "886c9b458661e358d7a990a651436b2ab4e15e239560dbcde6c0eaa67d800a0c",
+            "886c9b458661e358d7a990a651436b2ab4e15e239560dbcde6c0eaa67d800a0c"
+          ]
+        },
+        {
+          "first_difference": null,
+          "normalized_equal": true,
+          "normalized_rows": [
+            3749,
+            3749
+          ],
+          "normalized_sha256": [
+            "9f316b534d1de460bc88902a5fc4a6481e3bbe0b9cec2560361897a1a4c3c3fc",
+            "9f316b534d1de460bc88902a5fc4a6481e3bbe0b9cec2560361897a1a4c3c3fc"
+          ],
+          "path": "logs_ns3/tcp_flow_0_cwnd.csv",
+          "raw_equal": true,
+          "raw_sha256": [
+            "f1ea9cdf9943146129f0d8711e3b469f699dd1381921fdb15b734c3883ae183c",
+            "f1ea9cdf9943146129f0d8711e3b469f699dd1381921fdb15b734c3883ae183c"
+          ]
+        },
+        {
+          "first_difference": null,
+          "normalized_equal": true,
+          "normalized_rows": [
+            39147,
+            39147
+          ],
+          "normalized_sha256": [
+            "ff04244c08fb1ada4e42b59bbd9d4749d743ce3ab8f3966e04d1cef511de6d7e",
+            "ff04244c08fb1ada4e42b59bbd9d4749d743ce3ab8f3966e04d1cef511de6d7e"
+          ],
+          "path": "logs_ns3/tcp_flow_0_progress.csv",
+          "raw_equal": true,
+          "raw_sha256": [
+            "76163d5ff24314703df3e35242989ae4d80bd72626e0ecfb505a0ab05205d6e2",
+            "76163d5ff24314703df3e35242989ae4d80bd72626e0ecfb505a0ab05205d6e2"
+          ]
+        },
+        {
+          "first_difference": null,
+          "normalized_equal": true,
+          "normalized_rows": [
+            39077,
+            39077
+          ],
+          "normalized_sha256": [
+            "14a011fe2ab0a23994ae89263df4d0b5e1e8e97e5a90d519b931810b46e72061",
+            "14a011fe2ab0a23994ae89263df4d0b5e1e8e97e5a90d519b931810b46e72061"
+          ],
+          "path": "logs_ns3/tcp_flow_0_rtt.csv",
+          "raw_equal": true,
+          "raw_sha256": [
+            "257d2270cc16da0f31d76010d7daf3382071a190ae6830aa623f95e315ecaa06",
+            "257d2270cc16da0f31d76010d7daf3382071a190ae6830aa623f95e315ecaa06"
+          ]
+        },
+        {
+          "first_difference": null,
+          "normalized_equal": true,
+          "normalized_rows": [
+            201,
+            201
+          ],
+          "normalized_sha256": [
+            "ccb1f407e558ce19de2459d96bc6cbba14869f733e5fd1f17f190984a36c538a",
+            "ccb1f407e558ce19de2459d96bc6cbba14869f733e5fd1f17f190984a36c538a"
+          ],
+          "path": "logs_ns3/tcp_flow_0_study_events.csv",
+          "raw_equal": false,
+          "raw_sha256": [
+            "8073da1961902d1d1476878caaf42c1a37e490cbf5c8fc9feddabe5f4c15dfe7",
+            "ab2a3f464108f717acdfb4564f67427d24fafb66898290ea4d0ffde8d6072bb7"
+          ]
+        },
+        {
+          "first_difference": null,
+          "normalized_equal": true,
+          "normalized_rows": [
+            128334,
+            128334
+          ],
+          "normalized_sha256": [
+            "05fcfe74cbd2f91c63c9f5f9e337afe29e0c600e09a297ff4d377e5291e33924",
+            "05fcfe74cbd2f91c63c9f5f9e337afe29e0c600e09a297ff4d377e5291e33924"
+          ],
+          "path": "logs_ns3/tcp_flow_0_study_packets.csv",
+          "raw_equal": false,
+          "raw_sha256": [
+            "864afe6f2edfe98f296154e5834eee2c9c45932cfdf640c8eb6e57a3715b5366",
+            "236acc7177316ec5d45bbdf6527c5abe57a92142dc50282eddce3bb95785fc48"
+          ]
+        },
+        {
+          "first_difference": null,
+          "normalized_equal": true,
+          "normalized_rows": [
+            3038,
+            3038
+          ],
+          "normalized_sha256": [
+            "f4f892e067fd6552adcb3557192b3a117178236aa56658ecd2ed464c99327d22",
+            "f4f892e067fd6552adcb3557192b3a117178236aa56658ecd2ed464c99327d22"
+          ],
+          "path": "logs_ns3/tcp_flow_1_cwnd.csv",
+          "raw_equal": true,
+          "raw_sha256": [
+            "13db7dc57494dc6163610e50d6c447ceadffd02b6ad3201e83e96b64edcdc066",
+            "13db7dc57494dc6163610e50d6c447ceadffd02b6ad3201e83e96b64edcdc066"
+          ]
+        },
+        {
+          "first_difference": null,
+          "normalized_equal": true,
+          "normalized_rows": [
+            42896,
+            42896
+          ],
+          "normalized_sha256": [
+            "734940968306e0cf44169186e3dc971ab188a83326e7a3997b92f31f23853f4c",
+            "734940968306e0cf44169186e3dc971ab188a83326e7a3997b92f31f23853f4c"
+          ],
+          "path": "logs_ns3/tcp_flow_1_progress.csv",
+          "raw_equal": true,
+          "raw_sha256": [
+            "8f7bbf549ed39e67f2eb50826ffef4534965318ed16793253e1c51156a8a8d3e",
+            "8f7bbf549ed39e67f2eb50826ffef4534965318ed16793253e1c51156a8a8d3e"
+          ]
+        },
+        {
+          "first_difference": null,
+          "normalized_equal": true,
+          "normalized_rows": [
+            42869,
+            42869
+          ],
+          "normalized_sha256": [
+            "f85a4cb96a93479e416820051e18ea4586883ad7696b0c938db8ec68462a1a7d",
+            "f85a4cb96a93479e416820051e18ea4586883ad7696b0c938db8ec68462a1a7d"
+          ],
+          "path": "logs_ns3/tcp_flow_1_rtt.csv",
+          "raw_equal": true,
+          "raw_sha256": [
+            "9ee966fef5bc48a72609c84ce880b4266b1112e45fb513c376b3c6e103a20f00",
+            "9ee966fef5bc48a72609c84ce880b4266b1112e45fb513c376b3c6e103a20f00"
+          ]
+        },
+        {
+          "first_difference": null,
+          "normalized_equal": true,
+          "normalized_rows": [
+            156,
+            156
+          ],
+          "normalized_sha256": [
+            "8f60cd25c7593f2da120404f36a0a9e83b08ee8eb4b563a2dcd7cc11d7336242",
+            "8f60cd25c7593f2da120404f36a0a9e83b08ee8eb4b563a2dcd7cc11d7336242"
+          ],
+          "path": "logs_ns3/tcp_flow_1_study_events.csv",
+          "raw_equal": true,
+          "raw_sha256": [
+            "74b231cb2a2b0924938788c5164b8d110547702b3deb56fd17708acb55d56c61",
+            "74b231cb2a2b0924938788c5164b8d110547702b3deb56fd17708acb55d56c61"
+          ]
+        },
+        {
+          "first_difference": null,
+          "normalized_equal": true,
+          "normalized_rows": [
+            137524,
+            137524
+          ],
+          "normalized_sha256": [
+            "f1db983279754bf5e51fe8101f148404585809e06f1c13135ad4013fb3d26943",
+            "f1db983279754bf5e51fe8101f148404585809e06f1c13135ad4013fb3d26943"
+          ],
+          "path": "logs_ns3/tcp_flow_1_study_packets.csv",
+          "raw_equal": true,
+          "raw_sha256": [
+            "361fc73b1c8d00f1d9a2abc11c67a87e0f817bb9322c58c822bcae5293045473",
+            "361fc73b1c8d00f1d9a2abc11c67a87e0f817bb9322c58c822bcae5293045473"
+          ]
+        },
+        {
+          "first_difference": null,
+          "normalized_equal": true,
+          "normalized_rows": [
+            2,
+            2
+          ],
+          "normalized_sha256": [
+            "a17610b8501bdf805327721611978f1b72f8557241aca5a6f1a9feb77c54abf7",
+            "a17610b8501bdf805327721611978f1b72f8557241aca5a6f1a9feb77c54abf7"
+          ],
+          "path": "logs_ns3/tcp_flows.csv",
+          "raw_equal": true,
+          "raw_sha256": [
+            "6011fa998fa57d661fef7ba95465805f18c503f4f7a65fe6d0c2a85dd85fc79f",
+            "6011fa998fa57d661fef7ba95465805f18c503f4f7a65fe6d0c2a85dd85fc79f"
+          ]
+        }
+      ],
+      "files_compared": 15,
+      "left": "join10-gd",
+      "normalized_equal_files": 15,
+      "raw_equal_files": 13,
+      "right": "join10-gd-k8",
+      "source_commits": [
+        "95c306dd9fc1d6c09f9d5ebccfc27215f8c41a24",
+        "7266051e6ed4cab15c13d59c555ca32f2803e479"
+      ],
+      "verified_equal_provenance": {
+        "binary_sha256": "de9f678113c37a72df7e3215e876f18945c0ccecf9123f60fc8f655f9d9a6eab",
+        "make_run_sha256": "ccf066bba1a23ed958518ea41929ca8cefac4ce2a1ef6f803a7b8bb40b54f887",
+        "official_image": "ghcr.io/yeonjong21/cs30401-lab1:2026f-v1",
+        "official_image_digest": "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+        "patch_sha256": "473dd0e23447a58bd7ce644507cf4aa24b612020ff1e6029f5bfdb22e2cd4245",
+        "runner_sha256": "b844c9919d30262a8903bb460755a8a3cd221c58da2a178fe0f95c80fe360b77"
+      }
+    },
+    {
+      "actual_config_sha256": "7a8dcd72517feefb35df0f6f2750df2f0441080429ff77ba3b7b85dbff30f6ae",
+      "all_normalized_equal": true,
+      "files": [
+        {
+          "first_difference": null,
+          "normalized_equal": true,
+          "normalized_rows": [
+            163621,
+            163621
+          ],
+          "normalized_sha256": [
+            "9f2f4e7a79db2434966e26706783c588cc84b077b405c4b3d70d1ac7ed41a34d",
+            "9f2f4e7a79db2434966e26706783c588cc84b077b405c4b3d70d1ac7ed41a34d"
+          ],
+          "path": "logs_ns3/study_app_rx_node_1585_port_1024.csv",
+          "raw_equal": true,
+          "raw_sha256": [
+            "0732f6242984af37c21ff7c81ecba0bb487a624802a84abe8c6cafea5cfc2ea4",
+            "0732f6242984af37c21ff7c81ecba0bb487a624802a84abe8c6cafea5cfc2ea4"
+          ]
+        },
+        {
+          "first_difference": null,
+          "normalized_equal": true,
+          "normalized_rows": [
+            50705,
+            50705
+          ],
+          "normalized_sha256": [
+            "d94b7a5cecdee4a00250c9d789ba16e92f47db4b20ebc226a415b4adbe7bd7ac",
+            "d94b7a5cecdee4a00250c9d789ba16e92f47db4b20ebc226a415b4adbe7bd7ac"
+          ],
+          "path": "logs_ns3/study_drop_coverage.csv",
+          "raw_equal": true,
+          "raw_sha256": [
+            "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499",
+            "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+          ]
+        },
+        {
+          "first_difference": null,
+          "normalized_equal": true,
+          "normalized_rows": [
+            752,
+            752
+          ],
+          "normalized_sha256": [
+            "ef1a34c7bcf23b32b4c236e6375cbe302ab26ce70bc77daab710ce80e2d3c535",
+            "ef1a34c7bcf23b32b4c236e6375cbe302ab26ce70bc77daab710ce80e2d3c535"
+          ],
+          "path": "logs_ns3/study_drops.csv",
+          "raw_equal": true,
+          "raw_sha256": [
+            "045dd90c3125ec7cdcd185a5bc9acd7d5cb97c5c9370d1ebfc527b0906642a7f",
+            "045dd90c3125ec7cdcd185a5bc9acd7d5cb97c5c9370d1ebfc527b0906642a7f"
+          ]
+        },
+        {
+          "first_difference": null,
+          "normalized_equal": true,
+          "normalized_rows": [
+            172837,
+            172837
+          ],
+          "normalized_sha256": [
+            "a177edda067777864d06f3fd25b8d67950662379874d5cb3c232793efa98ec40",
+            "a177edda067777864d06f3fd25b8d67950662379874d5cb3c232793efa98ec40"
+          ],
+          "path": "logs_ns3/study_rx_node_1585_port_1024.csv",
+          "raw_equal": true,
+          "raw_sha256": [
+            "d5a6476476715fa4fdfc25caaefd3c9d13f6c29b601e8d961a32152708fa87fa",
+            "d5a6476476715fa4fdfc25caaefd3c9d13f6c29b601e8d961a32152708fa87fa"
+          ]
+        },
+        {
+          "first_difference": null,
+          "normalized_equal": true,
+          "normalized_rows": [
+            3868,
+            3868
+          ],
+          "normalized_sha256": [
+            "4ac2155cb058fa60c5185fb9a83835cc97357e18bb5b1e5943d8cdaf36706deb",
+            "4ac2155cb058fa60c5185fb9a83835cc97357e18bb5b1e5943d8cdaf36706deb"
+          ],
+          "path": "logs_ns3/tcp_flow_0_cwnd.csv",
+          "raw_equal": true,
+          "raw_sha256": [
+            "6d846b1806e878e799c15d6b0b774a81ebee110e0917b3c3f2fa8a34c21852e6",
+            "6d846b1806e878e799c15d6b0b774a81ebee110e0917b3c3f2fa8a34c21852e6"
+          ]
+        },
+        {
+          "first_difference": null,
+          "normalized_equal": true,
+          "normalized_rows": [
+            32725,
+            32725
+          ],
+          "normalized_sha256": [
+            "16f3fc1062b6992b62ef7ace93141cd6aa9734e5d69c670a65f62583816e3eb2",
+            "16f3fc1062b6992b62ef7ace93141cd6aa9734e5d69c670a65f62583816e3eb2"
+          ],
+          "path": "logs_ns3/tcp_flow_0_progress.csv",
+          "raw_equal": true,
+          "raw_sha256": [
+            "85826bc621c213ad55f53acfc504f0bd2b2757819cdd17196f9028d35c35e788",
+            "85826bc621c213ad55f53acfc504f0bd2b2757819cdd17196f9028d35c35e788"
+          ]
+        },
+        {
+          "first_difference": null,
+          "normalized_equal": true,
+          "normalized_rows": [
+            32652,
+            32652
+          ],
+          "normalized_sha256": [
+            "c1dc32d888e2e1a819c4b19dc9c6e56e2d83c15be95c54d7aae234aa452aaf99",
+            "c1dc32d888e2e1a819c4b19dc9c6e56e2d83c15be95c54d7aae234aa452aaf99"
+          ],
+          "path": "logs_ns3/tcp_flow_0_rtt.csv",
+          "raw_equal": true,
+          "raw_sha256": [
+            "75a597a9f897272803572c8588f13d40c2351c7b74b08790e39e6511a89493aa",
+            "75a597a9f897272803572c8588f13d40c2351c7b74b08790e39e6511a89493aa"
+          ]
+        },
+        {
+          "first_difference": null,
+          "normalized_equal": true,
+          "normalized_rows": [
+            211,
+            211
+          ],
+          "normalized_sha256": [
+            "e214cc00b13ff640f43a6bd36f178b0f2bb9b1588680c7b5be21a794d0922804",
+            "e214cc00b13ff640f43a6bd36f178b0f2bb9b1588680c7b5be21a794d0922804"
+          ],
+          "path": "logs_ns3/tcp_flow_0_study_events.csv",
+          "raw_equal": true,
+          "raw_sha256": [
+            "517cdbf3af022d99a33131751cb264ac8b265c3cc2e1e0661bf9468e6345a688",
+            "517cdbf3af022d99a33131751cb264ac8b265c3cc2e1e0661bf9468e6345a688"
+          ]
+        },
+        {
+          "first_difference": null,
+          "normalized_equal": true,
+          "normalized_rows": [
+            108451,
+            108451
+          ],
+          "normalized_sha256": [
+            "52d799e97fee65756e58d51f85b40e6ceba85eceb5962f59187929e58c8806cf",
+            "52d799e97fee65756e58d51f85b40e6ceba85eceb5962f59187929e58c8806cf"
+          ],
+          "path": "logs_ns3/tcp_flow_0_study_packets.csv",
+          "raw_equal": true,
+          "raw_sha256": [
+            "a3253ea42904e7501ab26914f19f9b3cc7c5e2a597623de47a2a4b90e59ddd48",
+            "a3253ea42904e7501ab26914f19f9b3cc7c5e2a597623de47a2a4b90e59ddd48"
+          ]
+        },
+        {
+          "first_difference": null,
+          "normalized_equal": true,
+          "normalized_rows": [
+            2959,
+            2959
+          ],
+          "normalized_sha256": [
+            "c02c0bbb7c0edb869c009db4299d5214f82cf759360a9c7ada3c629205bfdbaa",
+            "c02c0bbb7c0edb869c009db4299d5214f82cf759360a9c7ada3c629205bfdbaa"
+          ],
+          "path": "logs_ns3/tcp_flow_1_cwnd.csv",
+          "raw_equal": true,
+          "raw_sha256": [
+            "6c683ad04819e0837fab50cac86a14477123084064fb6a820f9f8af6dddd0eac",
+            "6c683ad04819e0837fab50cac86a14477123084064fb6a820f9f8af6dddd0eac"
+          ]
+        },
+        {
+          "first_difference": null,
+          "normalized_equal": true,
+          "normalized_rows": [
+            49403,
+            49403
+          ],
+          "normalized_sha256": [
+            "02220d1102786fa1baac14add8320f5800d56b22b16363f7a6032d442be07142",
+            "02220d1102786fa1baac14add8320f5800d56b22b16363f7a6032d442be07142"
+          ],
+          "path": "logs_ns3/tcp_flow_1_progress.csv",
+          "raw_equal": true,
+          "raw_sha256": [
+            "4e75340b3c2d6e6adf0284ccf61f187d0d5e55def25577d16c22ee4def077b53",
+            "4e75340b3c2d6e6adf0284ccf61f187d0d5e55def25577d16c22ee4def077b53"
+          ]
+        },
+        {
+          "first_difference": null,
+          "normalized_equal": true,
+          "normalized_rows": [
+            49363,
+            49363
+          ],
+          "normalized_sha256": [
+            "cdbbf6e9ac829769ae33ee43298a738bb3f0c7d66284af206af4be3eea84e5e9",
+            "cdbbf6e9ac829769ae33ee43298a738bb3f0c7d66284af206af4be3eea84e5e9"
+          ],
+          "path": "logs_ns3/tcp_flow_1_rtt.csv",
+          "raw_equal": true,
+          "raw_sha256": [
+            "98d7a7efdfc22fd0d0c5576c56a5e0421e03ca85d28e4764acaf5eb156e176ee",
+            "98d7a7efdfc22fd0d0c5576c56a5e0421e03ca85d28e4764acaf5eb156e176ee"
+          ]
+        },
+        {
+          "first_difference": null,
+          "normalized_equal": true,
+          "normalized_rows": [
+            140,
+            140
+          ],
+          "normalized_sha256": [
+            "a6dfe2fad8dcc835d2d9e6e6d407f82b79745abeee8f1a0749490e116b7a35bf",
+            "a6dfe2fad8dcc835d2d9e6e6d407f82b79745abeee8f1a0749490e116b7a35bf"
+          ],
+          "path": "logs_ns3/tcp_flow_1_study_events.csv",
+          "raw_equal": false,
+          "raw_sha256": [
+            "e29aedbbe1eacfd8839f2752bd0bf9e3d2b6045eef4acd1180b30c165ebb3c1d",
+            "933f62267348b4781b54ea3aae07bd48b8c502cbfa4d2c326aaf67cc9836c207"
+          ]
+        },
+        {
+          "first_difference": null,
+          "normalized_equal": true,
+          "normalized_rows": [
+            157395,
+            157395
+          ],
+          "normalized_sha256": [
+            "d30070a7111f808f9f94b2d74d2ed2e0d913cd2fd237ac361c033556e31fd1f6",
+            "d30070a7111f808f9f94b2d74d2ed2e0d913cd2fd237ac361c033556e31fd1f6"
+          ],
+          "path": "logs_ns3/tcp_flow_1_study_packets.csv",
+          "raw_equal": false,
+          "raw_sha256": [
+            "07429c45d4c02f4cd10ee7d1f9b9c702e8b23a08956d079a805de2057bdec1e8",
+            "e3159a9fbc738f17ea85dcd0dd26fad66ddc9976b19d9afb4bfbfc3c42a4c2b2"
+          ]
+        },
+        {
+          "first_difference": null,
+          "normalized_equal": true,
+          "normalized_rows": [
+            2,
+            2
+          ],
+          "normalized_sha256": [
+            "35acdf3e4e6b4a774e293688e8566bffd8decb4975dadbe1fb82486545a3b945",
+            "35acdf3e4e6b4a774e293688e8566bffd8decb4975dadbe1fb82486545a3b945"
+          ],
+          "path": "logs_ns3/tcp_flows.csv",
+          "raw_equal": true,
+          "raw_sha256": [
+            "68a7370a462f603d05fefe4c099b13f7194b5b6abe1daa09901b6973510b78db",
+            "68a7370a462f603d05fefe4c099b13f7194b5b6abe1daa09901b6973510b78db"
+          ]
+        }
+      ],
+      "files_compared": 15,
+      "left": "join10-dg",
+      "normalized_equal_files": 15,
+      "raw_equal_files": 13,
+      "right": "join10-dg-k8",
+      "source_commits": [
+        "95c306dd9fc1d6c09f9d5ebccfc27215f8c41a24",
+        "7266051e6ed4cab15c13d59c555ca32f2803e479"
+      ],
+      "verified_equal_provenance": {
+        "binary_sha256": "de9f678113c37a72df7e3215e876f18945c0ccecf9123f60fc8f655f9d9a6eab",
+        "make_run_sha256": "ccf066bba1a23ed958518ea41929ca8cefac4ce2a1ef6f803a7b8bb40b54f887",
+        "official_image": "ghcr.io/yeonjong21/cs30401-lab1:2026f-v1",
+        "official_image_digest": "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+        "patch_sha256": "473dd0e23447a58bd7ce644507cf4aa24b612020ff1e6029f5bfdb22e2cd4245",
+        "runner_sha256": "b844c9919d30262a8903bb460755a8a3cd221c58da2a178fe0f95c80fe360b77"
+      }
+    },
+    {
+      "actual_config_sha256": "7a8dcd72517feefb35df0f6f2750df2f0441080429ff77ba3b7b85dbff30f6ae",
+      "all_normalized_equal": true,
+      "files": [
+        {
+          "first_difference": null,
+          "normalized_equal": true,
+          "normalized_rows": [
+            163465,
+            163465
+          ],
+          "normalized_sha256": [
+            "b51e97bab69800aaaabd041990381ea653ffb7d37c2e1e18d6c2d607ef2ff874",
+            "b51e97bab69800aaaabd041990381ea653ffb7d37c2e1e18d6c2d607ef2ff874"
+          ],
+          "path": "logs_ns3/study_app_rx_node_1585_port_1024.csv",
+          "raw_equal": true,
+          "raw_sha256": [
+            "f3280167d854c150c520ca106e33754112e60073823a8cbc366ed04844150090",
+            "f3280167d854c150c520ca106e33754112e60073823a8cbc366ed04844150090"
+          ]
+        },
+        {
+          "first_difference": null,
+          "normalized_equal": true,
+          "normalized_rows": [
+            50705,
+            50705
+          ],
+          "normalized_sha256": [
+            "d94b7a5cecdee4a00250c9d789ba16e92f47db4b20ebc226a415b4adbe7bd7ac",
+            "d94b7a5cecdee4a00250c9d789ba16e92f47db4b20ebc226a415b4adbe7bd7ac"
+          ],
+          "path": "logs_ns3/study_drop_coverage.csv",
+          "raw_equal": true,
+          "raw_sha256": [
+            "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499",
+            "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+          ]
+        },
+        {
+          "first_difference": null,
+          "normalized_equal": true,
+          "normalized_rows": [
+            736,
+            736
+          ],
+          "normalized_sha256": [
+            "5d336a38d4b55a04523da09107d006aca03c4f82467dc5625a7637893599d143",
+            "5d336a38d4b55a04523da09107d006aca03c4f82467dc5625a7637893599d143"
+          ],
+          "path": "logs_ns3/study_drops.csv",
+          "raw_equal": true,
+          "raw_sha256": [
+            "dde7a77776d704deb768a5ae661f8b557d5e7a66985981b60e0753ac4b24420b",
+            "dde7a77776d704deb768a5ae661f8b557d5e7a66985981b60e0753ac4b24420b"
+          ]
+        },
+        {
+          "first_difference": null,
+          "normalized_equal": true,
+          "normalized_rows": [
+            172839,
+            172839
+          ],
+          "normalized_sha256": [
+            "dc2772560452d0763437bcf885ea1b3dc76a3afed1506db1b7785c39e7cb9836",
+            "dc2772560452d0763437bcf885ea1b3dc76a3afed1506db1b7785c39e7cb9836"
+          ],
+          "path": "logs_ns3/study_rx_node_1585_port_1024.csv",
+          "raw_equal": true,
+          "raw_sha256": [
+            "886c9b458661e358d7a990a651436b2ab4e15e239560dbcde6c0eaa67d800a0c",
+            "886c9b458661e358d7a990a651436b2ab4e15e239560dbcde6c0eaa67d800a0c"
+          ]
+        },
+        {
+          "first_difference": null,
+          "normalized_equal": true,
+          "normalized_rows": [
+            3749,
+            3749
+          ],
+          "normalized_sha256": [
+            "9f316b534d1de460bc88902a5fc4a6481e3bbe0b9cec2560361897a1a4c3c3fc",
+            "9f316b534d1de460bc88902a5fc4a6481e3bbe0b9cec2560361897a1a4c3c3fc"
+          ],
+          "path": "logs_ns3/tcp_flow_0_cwnd.csv",
+          "raw_equal": true,
+          "raw_sha256": [
+            "f1ea9cdf9943146129f0d8711e3b469f699dd1381921fdb15b734c3883ae183c",
+            "f1ea9cdf9943146129f0d8711e3b469f699dd1381921fdb15b734c3883ae183c"
+          ]
+        },
+        {
+          "first_difference": null,
+          "normalized_equal": true,
+          "normalized_rows": [
+            39147,
+            39147
+          ],
+          "normalized_sha256": [
+            "ff04244c08fb1ada4e42b59bbd9d4749d743ce3ab8f3966e04d1cef511de6d7e",
+            "ff04244c08fb1ada4e42b59bbd9d4749d743ce3ab8f3966e04d1cef511de6d7e"
+          ],
+          "path": "logs_ns3/tcp_flow_0_progress.csv",
+          "raw_equal": true,
+          "raw_sha256": [
+            "76163d5ff24314703df3e35242989ae4d80bd72626e0ecfb505a0ab05205d6e2",
+            "76163d5ff24314703df3e35242989ae4d80bd72626e0ecfb505a0ab05205d6e2"
+          ]
+        },
+        {
+          "first_difference": null,
+          "normalized_equal": true,
+          "normalized_rows": [
+            39077,
+            39077
+          ],
+          "normalized_sha256": [
+            "14a011fe2ab0a23994ae89263df4d0b5e1e8e97e5a90d519b931810b46e72061",
+            "14a011fe2ab0a23994ae89263df4d0b5e1e8e97e5a90d519b931810b46e72061"
+          ],
+          "path": "logs_ns3/tcp_flow_0_rtt.csv",
+          "raw_equal": true,
+          "raw_sha256": [
+            "257d2270cc16da0f31d76010d7daf3382071a190ae6830aa623f95e315ecaa06",
+            "257d2270cc16da0f31d76010d7daf3382071a190ae6830aa623f95e315ecaa06"
+          ]
+        },
+        {
+          "first_difference": null,
+          "normalized_equal": true,
+          "normalized_rows": [
+            201,
+            201
+          ],
+          "normalized_sha256": [
+            "ccb1f407e558ce19de2459d96bc6cbba14869f733e5fd1f17f190984a36c538a",
+            "ccb1f407e558ce19de2459d96bc6cbba14869f733e5fd1f17f190984a36c538a"
+          ],
+          "path": "logs_ns3/tcp_flow_0_study_events.csv",
+          "raw_equal": false,
+          "raw_sha256": [
+            "8073da1961902d1d1476878caaf42c1a37e490cbf5c8fc9feddabe5f4c15dfe7",
+            "ab2a3f464108f717acdfb4564f67427d24fafb66898290ea4d0ffde8d6072bb7"
+          ]
+        },
+        {
+          "first_difference": null,
+          "normalized_equal": true,
+          "normalized_rows": [
+            128334,
+            128334
+          ],
+          "normalized_sha256": [
+            "05fcfe74cbd2f91c63c9f5f9e337afe29e0c600e09a297ff4d377e5291e33924",
+            "05fcfe74cbd2f91c63c9f5f9e337afe29e0c600e09a297ff4d377e5291e33924"
+          ],
+          "path": "logs_ns3/tcp_flow_0_study_packets.csv",
+          "raw_equal": false,
+          "raw_sha256": [
+            "864afe6f2edfe98f296154e5834eee2c9c45932cfdf640c8eb6e57a3715b5366",
+            "236acc7177316ec5d45bbdf6527c5abe57a92142dc50282eddce3bb95785fc48"
+          ]
+        },
+        {
+          "first_difference": null,
+          "normalized_equal": true,
+          "normalized_rows": [
+            3038,
+            3038
+          ],
+          "normalized_sha256": [
+            "f4f892e067fd6552adcb3557192b3a117178236aa56658ecd2ed464c99327d22",
+            "f4f892e067fd6552adcb3557192b3a117178236aa56658ecd2ed464c99327d22"
+          ],
+          "path": "logs_ns3/tcp_flow_1_cwnd.csv",
+          "raw_equal": true,
+          "raw_sha256": [
+            "13db7dc57494dc6163610e50d6c447ceadffd02b6ad3201e83e96b64edcdc066",
+            "13db7dc57494dc6163610e50d6c447ceadffd02b6ad3201e83e96b64edcdc066"
+          ]
+        },
+        {
+          "first_difference": null,
+          "normalized_equal": true,
+          "normalized_rows": [
+            42896,
+            42896
+          ],
+          "normalized_sha256": [
+            "734940968306e0cf44169186e3dc971ab188a83326e7a3997b92f31f23853f4c",
+            "734940968306e0cf44169186e3dc971ab188a83326e7a3997b92f31f23853f4c"
+          ],
+          "path": "logs_ns3/tcp_flow_1_progress.csv",
+          "raw_equal": true,
+          "raw_sha256": [
+            "8f7bbf549ed39e67f2eb50826ffef4534965318ed16793253e1c51156a8a8d3e",
+            "8f7bbf549ed39e67f2eb50826ffef4534965318ed16793253e1c51156a8a8d3e"
+          ]
+        },
+        {
+          "first_difference": null,
+          "normalized_equal": true,
+          "normalized_rows": [
+            42869,
+            42869
+          ],
+          "normalized_sha256": [
+            "f85a4cb96a93479e416820051e18ea4586883ad7696b0c938db8ec68462a1a7d",
+            "f85a4cb96a93479e416820051e18ea4586883ad7696b0c938db8ec68462a1a7d"
+          ],
+          "path": "logs_ns3/tcp_flow_1_rtt.csv",
+          "raw_equal": true,
+          "raw_sha256": [
+            "9ee966fef5bc48a72609c84ce880b4266b1112e45fb513c376b3c6e103a20f00",
+            "9ee966fef5bc48a72609c84ce880b4266b1112e45fb513c376b3c6e103a20f00"
+          ]
+        },
+        {
+          "first_difference": null,
+          "normalized_equal": true,
+          "normalized_rows": [
+            156,
+            156
+          ],
+          "normalized_sha256": [
+            "8f60cd25c7593f2da120404f36a0a9e83b08ee8eb4b563a2dcd7cc11d7336242",
+            "8f60cd25c7593f2da120404f36a0a9e83b08ee8eb4b563a2dcd7cc11d7336242"
+          ],
+          "path": "logs_ns3/tcp_flow_1_study_events.csv",
+          "raw_equal": false,
+          "raw_sha256": [
+            "e3a144e03f56e8c158982632271874cd2e3ce66d3edbebf733e1c3ad95c01e2a",
+            "e92c2b1389e36f8d9ea9182a77e799f2a3b5b394640c1061123509773e275624"
+          ]
+        },
+        {
+          "first_difference": null,
+          "normalized_equal": true,
+          "normalized_rows": [
+            137524,
+            137524
+          ],
+          "normalized_sha256": [
+            "f1db983279754bf5e51fe8101f148404585809e06f1c13135ad4013fb3d26943",
+            "f1db983279754bf5e51fe8101f148404585809e06f1c13135ad4013fb3d26943"
+          ],
+          "path": "logs_ns3/tcp_flow_1_study_packets.csv",
+          "raw_equal": false,
+          "raw_sha256": [
+            "2d0fd816e9f8aaede9988030498982073ef51c005945d7ca67b4af8f5d54796f",
+            "915ec2c90c372ab95ea0d2304bf0b38874faeda1b3c0952409992e34f9ce051b"
+          ]
+        },
+        {
+          "first_difference": null,
+          "normalized_equal": true,
+          "normalized_rows": [
+            2,
+            2
+          ],
+          "normalized_sha256": [
+            "a17610b8501bdf805327721611978f1b72f8557241aca5a6f1a9feb77c54abf7",
+            "a17610b8501bdf805327721611978f1b72f8557241aca5a6f1a9feb77c54abf7"
+          ],
+          "path": "logs_ns3/tcp_flows.csv",
+          "raw_equal": true,
+          "raw_sha256": [
+            "6011fa998fa57d661fef7ba95465805f18c503f4f7a65fe6d0c2a85dd85fc79f",
+            "6011fa998fa57d661fef7ba95465805f18c503f4f7a65fe6d0c2a85dd85fc79f"
+          ]
+        }
+      ],
+      "files_compared": 15,
+      "left": "join10-gg",
+      "normalized_equal_files": 15,
+      "raw_equal_files": 11,
+      "right": "join10-gg-k8",
+      "source_commits": [
+        "95c306dd9fc1d6c09f9d5ebccfc27215f8c41a24",
+        "7266051e6ed4cab15c13d59c555ca32f2803e479"
+      ],
+      "verified_equal_provenance": {
+        "binary_sha256": "de9f678113c37a72df7e3215e876f18945c0ccecf9123f60fc8f655f9d9a6eab",
+        "make_run_sha256": "ccf066bba1a23ed958518ea41929ca8cefac4ce2a1ef6f803a7b8bb40b54f887",
+        "official_image": "ghcr.io/yeonjong21/cs30401-lab1:2026f-v1",
+        "official_image_digest": "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+        "patch_sha256": "473dd0e23447a58bd7ce644507cf4aa24b612020ff1e6029f5bfdb22e2cd4245",
+        "runner_sha256": "b844c9919d30262a8903bb460755a8a3cd221c58da2a178fe0f95c80fe360b77"
+      }
+    }
+  ],
+  "excluded_control_validation": "Validate complete INIT/SET/RESTORE lifecycle, K and actual schedule for both flows before comparison; these declared join10 cases restore at their requested ends.",
+  "excluded_files": [
+    "timing_results.csv"
+  ],
+  "limitations": [
+    "Equality concerns the retained traced outputs of these three deterministic join10 K20/K8 pairs; no simulation or independent seed sample is generated.",
+    "Equal traces do not expose every internal TCP decision, duplicate-ACK counter or SACK scoreboard state; they do not prove equal latent state or general threshold insensitivity.",
+    "Wall-clock timing_results.csv is excluded from trajectory equality but its raw size and SHA are retained for every run.",
+    "Image identity is a host-verified manifest declaration. Runtime artifact and config hashes are checked against retained files; the full external state tree is not rehashed.",
+    "Source commits may differ while the verified runtime artifacts and simulation controls agree. This audit makes no fairness claim for other start orders, durations, queues or thresholds."
+  ],
+  "normalization": "Reuse audit_trajectory.compare_file; ignore threshold column in named study traces and THRESHOLD_* sender control events only. Preserve every other row/field, UID, transmission tag and timestamp.",
+  "root": "/tmp/cs30401-competing",
+  "runs": {
+    "join10-dg": {
+      "actual_config_sha256": "7a8dcd72517feefb35df0f6f2750df2f0441080429ff77ba3b7b85dbff30f6ae",
+      "actual_schedule_sha256": "5cb291e95e81547584106797dce0163e12965817c9d820ec956f35d44f4de619",
+      "case": "join10-dg",
+      "guard_k": 20,
+      "raw_inputs": [
+        {
+          "bytes": 3032,
+          "path": "case.json",
+          "sha256": "8f0dbc7192ba3e4274b2c0587d786213ab8db3dd60ffff6010805e3d35f69636"
+        },
+        {
+          "bytes": 615,
+          "path": "config_ns3.properties",
+          "sha256": "7a8dcd72517feefb35df0f6f2750df2f0441080429ff77ba3b7b85dbff30f6ae"
+        },
+        {
+          "bytes": 148,
+          "path": "schedule.csv",
+          "sha256": "5cb291e95e81547584106797dce0163e12965817c9d820ec956f35d44f4de619"
+        },
+        {
+          "bytes": 14200955,
+          "path": "logs_ns3/study_app_rx_node_1585_port_1024.csv",
+          "sha256": "0732f6242984af37c21ff7c81ecba0bb487a624802a84abe8c6cafea5cfc2ea4"
+        },
+        {
+          "bytes": 1140184,
+          "path": "logs_ns3/study_drop_coverage.csv",
+          "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+        },
+        {
+          "bytes": 84319,
+          "path": "logs_ns3/study_drops.csv",
+          "sha256": "045dd90c3125ec7cdcd185a5bc9acd7d5cb97c5c9370d1ebfc527b0906642a7f"
+        },
+        {
+          "bytes": 19178640,
+          "path": "logs_ns3/study_rx_node_1585_port_1024.csv",
+          "sha256": "d5a6476476715fa4fdfc25caaefd3c9d13f6c29b601e8d961a32152708fa87fa"
+        },
+        {
+          "bytes": 80052,
+          "path": "logs_ns3/tcp_flow_0_cwnd.csv",
+          "sha256": "6d846b1806e878e799c15d6b0b774a81ebee110e0917b3c3f2fa8a34c21852e6"
+        },
+        {
+          "bytes": 762969,
+          "path": "logs_ns3/tcp_flow_0_progress.csv",
+          "sha256": "85826bc621c213ad55f53acfc504f0bd2b2757819cdd17196f9028d35c35e788"
+        },
+        {
+          "bytes": 797350,
+          "path": "logs_ns3/tcp_flow_0_rtt.csv",
+          "sha256": "75a597a9f897272803572c8588f13d40c2351c7b74b08790e39e6511a89493aa"
+        },
+        {
+          "bytes": 6519,
+          "path": "logs_ns3/tcp_flow_0_study_events.csv",
+          "sha256": "517cdbf3af022d99a33131751cb264ac8b265c3cc2e1e0661bf9468e6345a688"
+        },
+        {
+          "bytes": 8017739,
+          "path": "logs_ns3/tcp_flow_0_study_packets.csv",
+          "sha256": "a3253ea42904e7501ab26914f19f9b3cc7c5e2a597623de47a2a4b90e59ddd48"
+        },
+        {
+          "bytes": 63341,
+          "path": "logs_ns3/tcp_flow_1_cwnd.csv",
+          "sha256": "6c683ad04819e0837fab50cac86a14477123084064fb6a820f9f8af6dddd0eac"
+        },
+        {
+          "bytes": 1172068,
+          "path": "logs_ns3/tcp_flow_1_progress.csv",
+          "sha256": "4e75340b3c2d6e6adf0284ccf61f187d0d5e55def25577d16c22ee4def077b53"
+        },
+        {
+          "bytes": 1209353,
+          "path": "logs_ns3/tcp_flow_1_rtt.csv",
+          "sha256": "98d7a7efdfc22fd0d0c5576c56a5e0421e03ca85d28e4764acaf5eb156e176ee"
+        },
+        {
+          "bytes": 4574,
+          "path": "logs_ns3/tcp_flow_1_study_events.csv",
+          "sha256": "e29aedbbe1eacfd8839f2752bd0bf9e3d2b6045eef4acd1180b30c165ebb3c1d"
+        },
+        {
+          "bytes": 11721797,
+          "path": "logs_ns3/tcp_flow_1_study_packets.csv",
+          "sha256": "07429c45d4c02f4cd10ee7d1f9b9c702e8b23a08956d079a805de2057bdec1e8"
+        },
+        {
+          "bytes": 159,
+          "path": "logs_ns3/tcp_flows.csv",
+          "sha256": "68a7370a462f603d05fefe4c099b13f7194b5b6abe1daa09901b6973510b78db"
+        },
+        {
+          "bytes": 560,
+          "path": "logs_ns3/timing_results.csv",
+          "sha256": "9638c06bd301aca4dcf8b13b3285bf9d752b09f30fa3fdc401d701a297a873a8"
+        }
+      ],
+      "run_dir": "/tmp/cs30401-competing/join10-dg",
+      "source_commit": "95c306dd9fc1d6c09f9d5ebccfc27215f8c41a24",
+      "threshold_schedule_validation": [
+        {
+          "expected_lifecycle": [
+            [
+              0,
+              "THRESHOLD_INIT",
+              3,
+              3
+            ]
+          ],
+          "final_k": 3,
+          "flow_id": 0,
+          "guard_k": null,
+          "initial_k": 3,
+          "matched": true,
+          "observed_lifecycle": [
+            {
+              "cong_state": 0,
+              "event": "THRESHOLD_INIT",
+              "line": 2,
+              "new_value": 3,
+              "old_value": 3,
+              "threshold": 3,
+              "time_ns": 0
+            }
+          ],
+          "role": "D"
+        },
+        {
+          "expected_lifecycle": [
+            [
+              10000000000,
+              "THRESHOLD_INIT",
+              3,
+              3
+            ],
+            [
+              26100000000,
+              "THRESHOLD_SET",
+              3,
+              20
+            ],
+            [
+              26500000000,
+              "THRESHOLD_RESTORE",
+              20,
+              3
+            ],
+            [
+              74900000000,
+              "THRESHOLD_SET",
+              3,
+              20
+            ],
+            [
+              75300000000,
+              "THRESHOLD_RESTORE",
+              20,
+              3
+            ]
+          ],
+          "final_k": 3,
+          "flow_id": 1,
+          "guard_k": 20,
+          "initial_k": 3,
+          "matched": true,
+          "observed_lifecycle": [
+            {
+              "cong_state": 0,
+              "event": "THRESHOLD_INIT",
+              "line": 2,
+              "new_value": 3,
+              "old_value": 3,
+              "threshold": 3,
+              "time_ns": 10000000000
+            },
+            {
+              "cong_state": 0,
+              "event": "THRESHOLD_SET",
+              "line": 14,
+              "new_value": 20,
+              "old_value": 3,
+              "threshold": 20,
+              "time_ns": 26100000000
+            },
+            {
+              "cong_state": 0,
+              "event": "THRESHOLD_RESTORE",
+              "line": 15,
+              "new_value": 3,
+              "old_value": 20,
+              "threshold": 3,
+              "time_ns": 26500000000
+            },
+            {
+              "cong_state": 0,
+              "event": "THRESHOLD_SET",
+              "line": 48,
+              "new_value": 20,
+              "old_value": 3,
+              "threshold": 20,
+              "time_ns": 74900000000
+            },
+            {
+              "cong_state": 0,
+              "event": "THRESHOLD_RESTORE",
+              "line": 51,
+              "new_value": 3,
+              "old_value": 20,
+              "threshold": 3,
+              "time_ns": 75300000000
+            }
+          ],
+          "role": "G"
+        }
+      ],
+      "verified_actual_runtime_artifacts": {
+        "binary_sha256": {
+          "actual_sha256": "de9f678113c37a72df7e3215e876f18945c0ccecf9123f60fc8f655f9d9a6eab",
+          "manifest_matches": true,
+          "path": "/home/ubuntu/ns-3.48/build/scratch/main_satnet/ns3.48-main_satnet"
+        },
+        "make_run_sha256": {
+          "actual_sha256": "ccf066bba1a23ed958518ea41929ca8cefac4ce2a1ef6f803a7b8bb40b54f887",
+          "manifest_matches": true,
+          "path": "/home/ubuntu/lab/scripts/make_run.sh"
+        },
+        "patch_sha256": {
+          "actual_sha256": "473dd0e23447a58bd7ce644507cf4aa24b612020ff1e6029f5bfdb22e2cd4245",
+          "manifest_matches": true,
+          "path": "/work/code/kim-study/ns3.patch"
+        },
+        "runner_sha256": {
+          "actual_sha256": "b844c9919d30262a8903bb460755a8a3cd221c58da2a178fe0f95c80fe360b77",
+          "manifest_matches": true,
+          "path": "/work/code/competing-flows/run_competing.py"
+        }
+      }
+    },
+    "join10-dg-k8": {
+      "actual_config_sha256": "7a8dcd72517feefb35df0f6f2750df2f0441080429ff77ba3b7b85dbff30f6ae",
+      "actual_schedule_sha256": "a11b196fe7b026c82ce9aae05bf9c46a8a534741055a0f217af933d791d3d43e",
+      "case": "join10-dg-k8",
+      "guard_k": 8,
+      "raw_inputs": [
+        {
+          "bytes": 3048,
+          "path": "case.json",
+          "sha256": "6ef6190b2f7b69680e8a0e8d23e6f2b90b5e2523b218c506fd4b84603e321ef8"
+        },
+        {
+          "bytes": 615,
+          "path": "config_ns3.properties",
+          "sha256": "7a8dcd72517feefb35df0f6f2750df2f0441080429ff77ba3b7b85dbff30f6ae"
+        },
+        {
+          "bytes": 147,
+          "path": "schedule.csv",
+          "sha256": "a11b196fe7b026c82ce9aae05bf9c46a8a534741055a0f217af933d791d3d43e"
+        },
+        {
+          "bytes": 14200955,
+          "path": "logs_ns3/study_app_rx_node_1585_port_1024.csv",
+          "sha256": "0732f6242984af37c21ff7c81ecba0bb487a624802a84abe8c6cafea5cfc2ea4"
+        },
+        {
+          "bytes": 1140184,
+          "path": "logs_ns3/study_drop_coverage.csv",
+          "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+        },
+        {
+          "bytes": 84319,
+          "path": "logs_ns3/study_drops.csv",
+          "sha256": "045dd90c3125ec7cdcd185a5bc9acd7d5cb97c5c9370d1ebfc527b0906642a7f"
+        },
+        {
+          "bytes": 19178640,
+          "path": "logs_ns3/study_rx_node_1585_port_1024.csv",
+          "sha256": "d5a6476476715fa4fdfc25caaefd3c9d13f6c29b601e8d961a32152708fa87fa"
+        },
+        {
+          "bytes": 80052,
+          "path": "logs_ns3/tcp_flow_0_cwnd.csv",
+          "sha256": "6d846b1806e878e799c15d6b0b774a81ebee110e0917b3c3f2fa8a34c21852e6"
+        },
+        {
+          "bytes": 762969,
+          "path": "logs_ns3/tcp_flow_0_progress.csv",
+          "sha256": "85826bc621c213ad55f53acfc504f0bd2b2757819cdd17196f9028d35c35e788"
+        },
+        {
+          "bytes": 797350,
+          "path": "logs_ns3/tcp_flow_0_rtt.csv",
+          "sha256": "75a597a9f897272803572c8588f13d40c2351c7b74b08790e39e6511a89493aa"
+        },
+        {
+          "bytes": 6519,
+          "path": "logs_ns3/tcp_flow_0_study_events.csv",
+          "sha256": "517cdbf3af022d99a33131751cb264ac8b265c3cc2e1e0661bf9468e6345a688"
+        },
+        {
+          "bytes": 8017739,
+          "path": "logs_ns3/tcp_flow_0_study_packets.csv",
+          "sha256": "a3253ea42904e7501ab26914f19f9b3cc7c5e2a597623de47a2a4b90e59ddd48"
+        },
+        {
+          "bytes": 63341,
+          "path": "logs_ns3/tcp_flow_1_cwnd.csv",
+          "sha256": "6c683ad04819e0837fab50cac86a14477123084064fb6a820f9f8af6dddd0eac"
+        },
+        {
+          "bytes": 1172068,
+          "path": "logs_ns3/tcp_flow_1_progress.csv",
+          "sha256": "4e75340b3c2d6e6adf0284ccf61f187d0d5e55def25577d16c22ee4def077b53"
+        },
+        {
+          "bytes": 1209353,
+          "path": "logs_ns3/tcp_flow_1_rtt.csv",
+          "sha256": "98d7a7efdfc22fd0d0c5576c56a5e0421e03ca85d28e4764acaf5eb156e176ee"
+        },
+        {
+          "bytes": 4566,
+          "path": "logs_ns3/tcp_flow_1_study_events.csv",
+          "sha256": "933f62267348b4781b54ea3aae07bd48b8c502cbfa4d2c326aaf67cc9836c207"
+        },
+        {
+          "bytes": 11721101,
+          "path": "logs_ns3/tcp_flow_1_study_packets.csv",
+          "sha256": "e3159a9fbc738f17ea85dcd0dd26fad66ddc9976b19d9afb4bfbfc3c42a4c2b2"
+        },
+        {
+          "bytes": 159,
+          "path": "logs_ns3/tcp_flows.csv",
+          "sha256": "68a7370a462f603d05fefe4c099b13f7194b5b6abe1daa09901b6973510b78db"
+        },
+        {
+          "bytes": 560,
+          "path": "logs_ns3/timing_results.csv",
+          "sha256": "ea5000904fcc0f94307b088161859c526b4d734b33e6b604258e38d34c242929"
+        }
+      ],
+      "run_dir": "/tmp/cs30401-competing/join10-dg-k8",
+      "source_commit": "7266051e6ed4cab15c13d59c555ca32f2803e479",
+      "threshold_schedule_validation": [
+        {
+          "expected_lifecycle": [
+            [
+              0,
+              "THRESHOLD_INIT",
+              3,
+              3
+            ]
+          ],
+          "final_k": 3,
+          "flow_id": 0,
+          "guard_k": null,
+          "initial_k": 3,
+          "matched": true,
+          "observed_lifecycle": [
+            {
+              "cong_state": 0,
+              "event": "THRESHOLD_INIT",
+              "line": 2,
+              "new_value": 3,
+              "old_value": 3,
+              "threshold": 3,
+              "time_ns": 0
+            }
+          ],
+          "role": "D"
+        },
+        {
+          "expected_lifecycle": [
+            [
+              10000000000,
+              "THRESHOLD_INIT",
+              3,
+              3
+            ],
+            [
+              26100000000,
+              "THRESHOLD_SET",
+              3,
+              8
+            ],
+            [
+              26500000000,
+              "THRESHOLD_RESTORE",
+              8,
+              3
+            ],
+            [
+              74900000000,
+              "THRESHOLD_SET",
+              3,
+              8
+            ],
+            [
+              75300000000,
+              "THRESHOLD_RESTORE",
+              8,
+              3
+            ]
+          ],
+          "final_k": 3,
+          "flow_id": 1,
+          "guard_k": 8,
+          "initial_k": 3,
+          "matched": true,
+          "observed_lifecycle": [
+            {
+              "cong_state": 0,
+              "event": "THRESHOLD_INIT",
+              "line": 2,
+              "new_value": 3,
+              "old_value": 3,
+              "threshold": 3,
+              "time_ns": 10000000000
+            },
+            {
+              "cong_state": 0,
+              "event": "THRESHOLD_SET",
+              "line": 14,
+              "new_value": 8,
+              "old_value": 3,
+              "threshold": 8,
+              "time_ns": 26100000000
+            },
+            {
+              "cong_state": 0,
+              "event": "THRESHOLD_RESTORE",
+              "line": 15,
+              "new_value": 3,
+              "old_value": 8,
+              "threshold": 3,
+              "time_ns": 26500000000
+            },
+            {
+              "cong_state": 0,
+              "event": "THRESHOLD_SET",
+              "line": 48,
+              "new_value": 8,
+              "old_value": 3,
+              "threshold": 8,
+              "time_ns": 74900000000
+            },
+            {
+              "cong_state": 0,
+              "event": "THRESHOLD_RESTORE",
+              "line": 51,
+              "new_value": 3,
+              "old_value": 8,
+              "threshold": 3,
+              "time_ns": 75300000000
+            }
+          ],
+          "role": "G"
+        }
+      ],
+      "verified_actual_runtime_artifacts": {
+        "binary_sha256": {
+          "actual_sha256": "de9f678113c37a72df7e3215e876f18945c0ccecf9123f60fc8f655f9d9a6eab",
+          "manifest_matches": true,
+          "path": "/home/ubuntu/ns-3.48/build/scratch/main_satnet/ns3.48-main_satnet"
+        },
+        "make_run_sha256": {
+          "actual_sha256": "ccf066bba1a23ed958518ea41929ca8cefac4ce2a1ef6f803a7b8bb40b54f887",
+          "manifest_matches": true,
+          "path": "/home/ubuntu/lab/scripts/make_run.sh"
+        },
+        "patch_sha256": {
+          "actual_sha256": "473dd0e23447a58bd7ce644507cf4aa24b612020ff1e6029f5bfdb22e2cd4245",
+          "manifest_matches": true,
+          "path": "/work/code/kim-study/ns3.patch"
+        },
+        "runner_sha256": {
+          "actual_sha256": "b844c9919d30262a8903bb460755a8a3cd221c58da2a178fe0f95c80fe360b77",
+          "manifest_matches": true,
+          "path": "/work/code/competing-flows/run_competing.py"
+        }
+      }
+    },
+    "join10-gd": {
+      "actual_config_sha256": "7a8dcd72517feefb35df0f6f2750df2f0441080429ff77ba3b7b85dbff30f6ae",
+      "actual_schedule_sha256": "0c0a5e55e3ad4a5996386f99ad12243c75ea943467239ad8912815cdee7f8226",
+      "case": "join10-gd",
+      "guard_k": 20,
+      "raw_inputs": [
+        {
+          "bytes": 3031,
+          "path": "case.json",
+          "sha256": "093e5f901e99d2716308305d53f7bb4e5a3e0e26a8f285a566ebd293fe936b90"
+        },
+        {
+          "bytes": 615,
+          "path": "config_ns3.properties",
+          "sha256": "7a8dcd72517feefb35df0f6f2750df2f0441080429ff77ba3b7b85dbff30f6ae"
+        },
+        {
+          "bytes": 148,
+          "path": "schedule.csv",
+          "sha256": "0c0a5e55e3ad4a5996386f99ad12243c75ea943467239ad8912815cdee7f8226"
+        },
+        {
+          "bytes": 14185268,
+          "path": "logs_ns3/study_app_rx_node_1585_port_1024.csv",
+          "sha256": "f3280167d854c150c520ca106e33754112e60073823a8cbc366ed04844150090"
+        },
+        {
+          "bytes": 1140184,
+          "path": "logs_ns3/study_drop_coverage.csv",
+          "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+        },
+        {
+          "bytes": 82484,
+          "path": "logs_ns3/study_drops.csv",
+          "sha256": "dde7a77776d704deb768a5ae661f8b557d5e7a66985981b60e0753ac4b24420b"
+        },
+        {
+          "bytes": 19170144,
+          "path": "logs_ns3/study_rx_node_1585_port_1024.csv",
+          "sha256": "886c9b458661e358d7a990a651436b2ab4e15e239560dbcde6c0eaa67d800a0c"
+        },
+        {
+          "bytes": 78107,
+          "path": "logs_ns3/tcp_flow_0_cwnd.csv",
+          "sha256": "f1ea9cdf9943146129f0d8711e3b469f699dd1381921fdb15b734c3883ae183c"
+        },
+        {
+          "bytes": 919562,
+          "path": "logs_ns3/tcp_flow_0_progress.csv",
+          "sha256": "76163d5ff24314703df3e35242989ae4d80bd72626e0ecfb505a0ab05205d6e2"
+        },
+        {
+          "bytes": 955338,
+          "path": "logs_ns3/tcp_flow_0_rtt.csv",
+          "sha256": "257d2270cc16da0f31d76010d7daf3382071a190ae6830aa623f95e315ecaa06"
+        },
+        {
+          "bytes": 6359,
+          "path": "logs_ns3/tcp_flow_0_study_events.csv",
+          "sha256": "8073da1961902d1d1476878caaf42c1a37e490cbf5c8fc9feddabe5f4c15dfe7"
+        },
+        {
+          "bytes": 9500151,
+          "path": "logs_ns3/tcp_flow_0_study_packets.csv",
+          "sha256": "864afe6f2edfe98f296154e5834eee2c9c45932cfdf640c8eb6e57a3715b5366"
+        },
+        {
+          "bytes": 64715,
+          "path": "logs_ns3/tcp_flow_1_cwnd.csv",
+          "sha256": "13db7dc57494dc6163610e50d6c447ceadffd02b6ad3201e83e96b64edcdc066"
+        },
+        {
+          "bytes": 1012302,
+          "path": "logs_ns3/tcp_flow_1_progress.csv",
+          "sha256": "8f7bbf549ed39e67f2eb50826ffef4534965318ed16793253e1c51156a8a8d3e"
+        },
+        {
+          "bytes": 1049707,
+          "path": "logs_ns3/tcp_flow_1_rtt.csv",
+          "sha256": "9ee966fef5bc48a72609c84ce880b4266b1112e45fb513c376b3c6e103a20f00"
+        },
+        {
+          "bytes": 4899,
+          "path": "logs_ns3/tcp_flow_1_study_events.csv",
+          "sha256": "74b231cb2a2b0924938788c5164b8d110547702b3deb56fd17708acb55d56c61"
+        },
+        {
+          "bytes": 10244867,
+          "path": "logs_ns3/tcp_flow_1_study_packets.csv",
+          "sha256": "361fc73b1c8d00f1d9a2abc11c67a87e0f817bb9322c58c822bcae5293045473"
+        },
+        {
+          "bytes": 160,
+          "path": "logs_ns3/tcp_flows.csv",
+          "sha256": "6011fa998fa57d661fef7ba95465805f18c503f4f7a65fe6d0c2a85dd85fc79f"
+        },
+        {
+          "bytes": 560,
+          "path": "logs_ns3/timing_results.csv",
+          "sha256": "733a0d815b9c54f35f2c2c025e111637b6e22b9b69d6028db4d41804f5b13e29"
+        }
+      ],
+      "run_dir": "/tmp/cs30401-competing/join10-gd",
+      "source_commit": "95c306dd9fc1d6c09f9d5ebccfc27215f8c41a24",
+      "threshold_schedule_validation": [
+        {
+          "expected_lifecycle": [
+            [
+              0,
+              "THRESHOLD_INIT",
+              3,
+              3
+            ],
+            [
+              26100000000,
+              "THRESHOLD_SET",
+              3,
+              20
+            ],
+            [
+              26500000000,
+              "THRESHOLD_RESTORE",
+              20,
+              3
+            ],
+            [
+              74900000000,
+              "THRESHOLD_SET",
+              3,
+              20
+            ],
+            [
+              75300000000,
+              "THRESHOLD_RESTORE",
+              20,
+              3
+            ]
+          ],
+          "final_k": 3,
+          "flow_id": 0,
+          "guard_k": 20,
+          "initial_k": 3,
+          "matched": true,
+          "observed_lifecycle": [
+            {
+              "cong_state": 0,
+              "event": "THRESHOLD_INIT",
+              "line": 2,
+              "new_value": 3,
+              "old_value": 3,
+              "threshold": 3,
+              "time_ns": 0
+            },
+            {
+              "cong_state": 0,
+              "event": "THRESHOLD_SET",
+              "line": 34,
+              "new_value": 20,
+              "old_value": 3,
+              "threshold": 20,
+              "time_ns": 26100000000
+            },
+            {
+              "cong_state": 0,
+              "event": "THRESHOLD_RESTORE",
+              "line": 45,
+              "new_value": 3,
+              "old_value": 20,
+              "threshold": 3,
+              "time_ns": 26500000000
+            },
+            {
+              "cong_state": 0,
+              "event": "THRESHOLD_SET",
+              "line": 98,
+              "new_value": 20,
+              "old_value": 3,
+              "threshold": 20,
+              "time_ns": 74900000000
+            },
+            {
+              "cong_state": 0,
+              "event": "THRESHOLD_RESTORE",
+              "line": 99,
+              "new_value": 3,
+              "old_value": 20,
+              "threshold": 3,
+              "time_ns": 75300000000
+            }
+          ],
+          "role": "G"
+        },
+        {
+          "expected_lifecycle": [
+            [
+              10000000000,
+              "THRESHOLD_INIT",
+              3,
+              3
+            ]
+          ],
+          "final_k": 3,
+          "flow_id": 1,
+          "guard_k": null,
+          "initial_k": 3,
+          "matched": true,
+          "observed_lifecycle": [
+            {
+              "cong_state": 0,
+              "event": "THRESHOLD_INIT",
+              "line": 2,
+              "new_value": 3,
+              "old_value": 3,
+              "threshold": 3,
+              "time_ns": 10000000000
+            }
+          ],
+          "role": "D"
+        }
+      ],
+      "verified_actual_runtime_artifacts": {
+        "binary_sha256": {
+          "actual_sha256": "de9f678113c37a72df7e3215e876f18945c0ccecf9123f60fc8f655f9d9a6eab",
+          "manifest_matches": true,
+          "path": "/home/ubuntu/ns-3.48/build/scratch/main_satnet/ns3.48-main_satnet"
+        },
+        "make_run_sha256": {
+          "actual_sha256": "ccf066bba1a23ed958518ea41929ca8cefac4ce2a1ef6f803a7b8bb40b54f887",
+          "manifest_matches": true,
+          "path": "/home/ubuntu/lab/scripts/make_run.sh"
+        },
+        "patch_sha256": {
+          "actual_sha256": "473dd0e23447a58bd7ce644507cf4aa24b612020ff1e6029f5bfdb22e2cd4245",
+          "manifest_matches": true,
+          "path": "/work/code/kim-study/ns3.patch"
+        },
+        "runner_sha256": {
+          "actual_sha256": "b844c9919d30262a8903bb460755a8a3cd221c58da2a178fe0f95c80fe360b77",
+          "manifest_matches": true,
+          "path": "/work/code/competing-flows/run_competing.py"
+        }
+      }
+    },
+    "join10-gd-k8": {
+      "actual_config_sha256": "7a8dcd72517feefb35df0f6f2750df2f0441080429ff77ba3b7b85dbff30f6ae",
+      "actual_schedule_sha256": "0b143fa87486d44365985b67881fe3c21044288b04039609ba41217d5e059293",
+      "case": "join10-gd-k8",
+      "guard_k": 8,
+      "raw_inputs": [
+        {
+          "bytes": 3048,
+          "path": "case.json",
+          "sha256": "814458eaafef46bc23b646092f092a7166790309e810cd41ddf0c496bfe95a65"
+        },
+        {
+          "bytes": 615,
+          "path": "config_ns3.properties",
+          "sha256": "7a8dcd72517feefb35df0f6f2750df2f0441080429ff77ba3b7b85dbff30f6ae"
+        },
+        {
+          "bytes": 147,
+          "path": "schedule.csv",
+          "sha256": "0b143fa87486d44365985b67881fe3c21044288b04039609ba41217d5e059293"
+        },
+        {
+          "bytes": 14185268,
+          "path": "logs_ns3/study_app_rx_node_1585_port_1024.csv",
+          "sha256": "f3280167d854c150c520ca106e33754112e60073823a8cbc366ed04844150090"
+        },
+        {
+          "bytes": 1140184,
+          "path": "logs_ns3/study_drop_coverage.csv",
+          "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+        },
+        {
+          "bytes": 82484,
+          "path": "logs_ns3/study_drops.csv",
+          "sha256": "dde7a77776d704deb768a5ae661f8b557d5e7a66985981b60e0753ac4b24420b"
+        },
+        {
+          "bytes": 19170144,
+          "path": "logs_ns3/study_rx_node_1585_port_1024.csv",
+          "sha256": "886c9b458661e358d7a990a651436b2ab4e15e239560dbcde6c0eaa67d800a0c"
+        },
+        {
+          "bytes": 78107,
+          "path": "logs_ns3/tcp_flow_0_cwnd.csv",
+          "sha256": "f1ea9cdf9943146129f0d8711e3b469f699dd1381921fdb15b734c3883ae183c"
+        },
+        {
+          "bytes": 919562,
+          "path": "logs_ns3/tcp_flow_0_progress.csv",
+          "sha256": "76163d5ff24314703df3e35242989ae4d80bd72626e0ecfb505a0ab05205d6e2"
+        },
+        {
+          "bytes": 955338,
+          "path": "logs_ns3/tcp_flow_0_rtt.csv",
+          "sha256": "257d2270cc16da0f31d76010d7daf3382071a190ae6830aa623f95e315ecaa06"
+        },
+        {
+          "bytes": 6343,
+          "path": "logs_ns3/tcp_flow_0_study_events.csv",
+          "sha256": "ab2a3f464108f717acdfb4564f67427d24fafb66898290ea4d0ffde8d6072bb7"
+        },
+        {
+          "bytes": 9499666,
+          "path": "logs_ns3/tcp_flow_0_study_packets.csv",
+          "sha256": "236acc7177316ec5d45bbdf6527c5abe57a92142dc50282eddce3bb95785fc48"
+        },
+        {
+          "bytes": 64715,
+          "path": "logs_ns3/tcp_flow_1_cwnd.csv",
+          "sha256": "13db7dc57494dc6163610e50d6c447ceadffd02b6ad3201e83e96b64edcdc066"
+        },
+        {
+          "bytes": 1012302,
+          "path": "logs_ns3/tcp_flow_1_progress.csv",
+          "sha256": "8f7bbf549ed39e67f2eb50826ffef4534965318ed16793253e1c51156a8a8d3e"
+        },
+        {
+          "bytes": 1049707,
+          "path": "logs_ns3/tcp_flow_1_rtt.csv",
+          "sha256": "9ee966fef5bc48a72609c84ce880b4266b1112e45fb513c376b3c6e103a20f00"
+        },
+        {
+          "bytes": 4899,
+          "path": "logs_ns3/tcp_flow_1_study_events.csv",
+          "sha256": "74b231cb2a2b0924938788c5164b8d110547702b3deb56fd17708acb55d56c61"
+        },
+        {
+          "bytes": 10244867,
+          "path": "logs_ns3/tcp_flow_1_study_packets.csv",
+          "sha256": "361fc73b1c8d00f1d9a2abc11c67a87e0f817bb9322c58c822bcae5293045473"
+        },
+        {
+          "bytes": 160,
+          "path": "logs_ns3/tcp_flows.csv",
+          "sha256": "6011fa998fa57d661fef7ba95465805f18c503f4f7a65fe6d0c2a85dd85fc79f"
+        },
+        {
+          "bytes": 560,
+          "path": "logs_ns3/timing_results.csv",
+          "sha256": "a4512f393f85f9a7b708e1862c3f64c142687412b0205f4895fcdc974eeb2724"
+        }
+      ],
+      "run_dir": "/tmp/cs30401-competing/join10-gd-k8",
+      "source_commit": "7266051e6ed4cab15c13d59c555ca32f2803e479",
+      "threshold_schedule_validation": [
+        {
+          "expected_lifecycle": [
+            [
+              0,
+              "THRESHOLD_INIT",
+              3,
+              3
+            ],
+            [
+              26100000000,
+              "THRESHOLD_SET",
+              3,
+              8
+            ],
+            [
+              26500000000,
+              "THRESHOLD_RESTORE",
+              8,
+              3
+            ],
+            [
+              74900000000,
+              "THRESHOLD_SET",
+              3,
+              8
+            ],
+            [
+              75300000000,
+              "THRESHOLD_RESTORE",
+              8,
+              3
+            ]
+          ],
+          "final_k": 3,
+          "flow_id": 0,
+          "guard_k": 8,
+          "initial_k": 3,
+          "matched": true,
+          "observed_lifecycle": [
+            {
+              "cong_state": 0,
+              "event": "THRESHOLD_INIT",
+              "line": 2,
+              "new_value": 3,
+              "old_value": 3,
+              "threshold": 3,
+              "time_ns": 0
+            },
+            {
+              "cong_state": 0,
+              "event": "THRESHOLD_SET",
+              "line": 34,
+              "new_value": 8,
+              "old_value": 3,
+              "threshold": 8,
+              "time_ns": 26100000000
+            },
+            {
+              "cong_state": 0,
+              "event": "THRESHOLD_RESTORE",
+              "line": 45,
+              "new_value": 3,
+              "old_value": 8,
+              "threshold": 3,
+              "time_ns": 26500000000
+            },
+            {
+              "cong_state": 0,
+              "event": "THRESHOLD_SET",
+              "line": 98,
+              "new_value": 8,
+              "old_value": 3,
+              "threshold": 8,
+              "time_ns": 74900000000
+            },
+            {
+              "cong_state": 0,
+              "event": "THRESHOLD_RESTORE",
+              "line": 99,
+              "new_value": 3,
+              "old_value": 8,
+              "threshold": 3,
+              "time_ns": 75300000000
+            }
+          ],
+          "role": "G"
+        },
+        {
+          "expected_lifecycle": [
+            [
+              10000000000,
+              "THRESHOLD_INIT",
+              3,
+              3
+            ]
+          ],
+          "final_k": 3,
+          "flow_id": 1,
+          "guard_k": null,
+          "initial_k": 3,
+          "matched": true,
+          "observed_lifecycle": [
+            {
+              "cong_state": 0,
+              "event": "THRESHOLD_INIT",
+              "line": 2,
+              "new_value": 3,
+              "old_value": 3,
+              "threshold": 3,
+              "time_ns": 10000000000
+            }
+          ],
+          "role": "D"
+        }
+      ],
+      "verified_actual_runtime_artifacts": {
+        "binary_sha256": {
+          "actual_sha256": "de9f678113c37a72df7e3215e876f18945c0ccecf9123f60fc8f655f9d9a6eab",
+          "manifest_matches": true,
+          "path": "/home/ubuntu/ns-3.48/build/scratch/main_satnet/ns3.48-main_satnet"
+        },
+        "make_run_sha256": {
+          "actual_sha256": "ccf066bba1a23ed958518ea41929ca8cefac4ce2a1ef6f803a7b8bb40b54f887",
+          "manifest_matches": true,
+          "path": "/home/ubuntu/lab/scripts/make_run.sh"
+        },
+        "patch_sha256": {
+          "actual_sha256": "473dd0e23447a58bd7ce644507cf4aa24b612020ff1e6029f5bfdb22e2cd4245",
+          "manifest_matches": true,
+          "path": "/work/code/kim-study/ns3.patch"
+        },
+        "runner_sha256": {
+          "actual_sha256": "b844c9919d30262a8903bb460755a8a3cd221c58da2a178fe0f95c80fe360b77",
+          "manifest_matches": true,
+          "path": "/work/code/competing-flows/run_competing.py"
+        }
+      }
+    },
+    "join10-gg": {
+      "actual_config_sha256": "7a8dcd72517feefb35df0f6f2750df2f0441080429ff77ba3b7b85dbff30f6ae",
+      "actual_schedule_sha256": "fa30ab0a6bbc052d1ef5f4b40cafe85ecf10fc24b0515bf366ef1449e9a50e9d",
+      "case": "join10-gg",
+      "guard_k": 20,
+      "raw_inputs": [
+        {
+          "bytes": 3112,
+          "path": "case.json",
+          "sha256": "64d5c136daff4ba0a67792602e4dc2932c01b12cb7263e0ad96c4d148733d750"
+        },
+        {
+          "bytes": 615,
+          "path": "config_ns3.properties",
+          "sha256": "7a8dcd72517feefb35df0f6f2750df2f0441080429ff77ba3b7b85dbff30f6ae"
+        },
+        {
+          "bytes": 228,
+          "path": "schedule.csv",
+          "sha256": "fa30ab0a6bbc052d1ef5f4b40cafe85ecf10fc24b0515bf366ef1449e9a50e9d"
+        },
+        {
+          "bytes": 14185268,
+          "path": "logs_ns3/study_app_rx_node_1585_port_1024.csv",
+          "sha256": "f3280167d854c150c520ca106e33754112e60073823a8cbc366ed04844150090"
+        },
+        {
+          "bytes": 1140184,
+          "path": "logs_ns3/study_drop_coverage.csv",
+          "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+        },
+        {
+          "bytes": 82484,
+          "path": "logs_ns3/study_drops.csv",
+          "sha256": "dde7a77776d704deb768a5ae661f8b557d5e7a66985981b60e0753ac4b24420b"
+        },
+        {
+          "bytes": 19170144,
+          "path": "logs_ns3/study_rx_node_1585_port_1024.csv",
+          "sha256": "886c9b458661e358d7a990a651436b2ab4e15e239560dbcde6c0eaa67d800a0c"
+        },
+        {
+          "bytes": 78107,
+          "path": "logs_ns3/tcp_flow_0_cwnd.csv",
+          "sha256": "f1ea9cdf9943146129f0d8711e3b469f699dd1381921fdb15b734c3883ae183c"
+        },
+        {
+          "bytes": 919562,
+          "path": "logs_ns3/tcp_flow_0_progress.csv",
+          "sha256": "76163d5ff24314703df3e35242989ae4d80bd72626e0ecfb505a0ab05205d6e2"
+        },
+        {
+          "bytes": 955338,
+          "path": "logs_ns3/tcp_flow_0_rtt.csv",
+          "sha256": "257d2270cc16da0f31d76010d7daf3382071a190ae6830aa623f95e315ecaa06"
+        },
+        {
+          "bytes": 6359,
+          "path": "logs_ns3/tcp_flow_0_study_events.csv",
+          "sha256": "8073da1961902d1d1476878caaf42c1a37e490cbf5c8fc9feddabe5f4c15dfe7"
+        },
+        {
+          "bytes": 9500151,
+          "path": "logs_ns3/tcp_flow_0_study_packets.csv",
+          "sha256": "864afe6f2edfe98f296154e5834eee2c9c45932cfdf640c8eb6e57a3715b5366"
+        },
+        {
+          "bytes": 64715,
+          "path": "logs_ns3/tcp_flow_1_cwnd.csv",
+          "sha256": "13db7dc57494dc6163610e50d6c447ceadffd02b6ad3201e83e96b64edcdc066"
+        },
+        {
+          "bytes": 1012302,
+          "path": "logs_ns3/tcp_flow_1_progress.csv",
+          "sha256": "8f7bbf549ed39e67f2eb50826ffef4534965318ed16793253e1c51156a8a8d3e"
+        },
+        {
+          "bytes": 1049707,
+          "path": "logs_ns3/tcp_flow_1_rtt.csv",
+          "sha256": "9ee966fef5bc48a72609c84ce880b4266b1112e45fb513c376b3c6e103a20f00"
+        },
+        {
+          "bytes": 5059,
+          "path": "logs_ns3/tcp_flow_1_study_events.csv",
+          "sha256": "e3a144e03f56e8c158982632271874cd2e3ce66d3edbebf733e1c3ad95c01e2a"
+        },
+        {
+          "bytes": 10245450,
+          "path": "logs_ns3/tcp_flow_1_study_packets.csv",
+          "sha256": "2d0fd816e9f8aaede9988030498982073ef51c005945d7ca67b4af8f5d54796f"
+        },
+        {
+          "bytes": 160,
+          "path": "logs_ns3/tcp_flows.csv",
+          "sha256": "6011fa998fa57d661fef7ba95465805f18c503f4f7a65fe6d0c2a85dd85fc79f"
+        },
+        {
+          "bytes": 562,
+          "path": "logs_ns3/timing_results.csv",
+          "sha256": "12de01e89438febc79f5071ec77da9f4003147d1717f3c41210238bd24b16f47"
+        }
+      ],
+      "run_dir": "/tmp/cs30401-competing/join10-gg",
+      "source_commit": "95c306dd9fc1d6c09f9d5ebccfc27215f8c41a24",
+      "threshold_schedule_validation": [
+        {
+          "expected_lifecycle": [
+            [
+              0,
+              "THRESHOLD_INIT",
+              3,
+              3
+            ],
+            [
+              26100000000,
+              "THRESHOLD_SET",
+              3,
+              20
+            ],
+            [
+              26500000000,
+              "THRESHOLD_RESTORE",
+              20,
+              3
+            ],
+            [
+              74900000000,
+              "THRESHOLD_SET",
+              3,
+              20
+            ],
+            [
+              75300000000,
+              "THRESHOLD_RESTORE",
+              20,
+              3
+            ]
+          ],
+          "final_k": 3,
+          "flow_id": 0,
+          "guard_k": 20,
+          "initial_k": 3,
+          "matched": true,
+          "observed_lifecycle": [
+            {
+              "cong_state": 0,
+              "event": "THRESHOLD_INIT",
+              "line": 2,
+              "new_value": 3,
+              "old_value": 3,
+              "threshold": 3,
+              "time_ns": 0
+            },
+            {
+              "cong_state": 0,
+              "event": "THRESHOLD_SET",
+              "line": 34,
+              "new_value": 20,
+              "old_value": 3,
+              "threshold": 20,
+              "time_ns": 26100000000
+            },
+            {
+              "cong_state": 0,
+              "event": "THRESHOLD_RESTORE",
+              "line": 45,
+              "new_value": 3,
+              "old_value": 20,
+              "threshold": 3,
+              "time_ns": 26500000000
+            },
+            {
+              "cong_state": 0,
+              "event": "THRESHOLD_SET",
+              "line": 98,
+              "new_value": 20,
+              "old_value": 3,
+              "threshold": 20,
+              "time_ns": 74900000000
+            },
+            {
+              "cong_state": 0,
+              "event": "THRESHOLD_RESTORE",
+              "line": 99,
+              "new_value": 3,
+              "old_value": 20,
+              "threshold": 3,
+              "time_ns": 75300000000
+            }
+          ],
+          "role": "G"
+        },
+        {
+          "expected_lifecycle": [
+            [
+              10000000000,
+              "THRESHOLD_INIT",
+              3,
+              3
+            ],
+            [
+              26100000000,
+              "THRESHOLD_SET",
+              3,
+              20
+            ],
+            [
+              26500000000,
+              "THRESHOLD_RESTORE",
+              20,
+              3
+            ],
+            [
+              74900000000,
+              "THRESHOLD_SET",
+              3,
+              20
+            ],
+            [
+              75300000000,
+              "THRESHOLD_RESTORE",
+              20,
+              3
+            ]
+          ],
+          "final_k": 3,
+          "flow_id": 1,
+          "guard_k": 20,
+          "initial_k": 3,
+          "matched": true,
+          "observed_lifecycle": [
+            {
+              "cong_state": 0,
+              "event": "THRESHOLD_INIT",
+              "line": 2,
+              "new_value": 3,
+              "old_value": 3,
+              "threshold": 3,
+              "time_ns": 10000000000
+            },
+            {
+              "cong_state": 0,
+              "event": "THRESHOLD_SET",
+              "line": 14,
+              "new_value": 20,
+              "old_value": 3,
+              "threshold": 20,
+              "time_ns": 26100000000
+            },
+            {
+              "cong_state": 0,
+              "event": "THRESHOLD_RESTORE",
+              "line": 15,
+              "new_value": 3,
+              "old_value": 20,
+              "threshold": 3,
+              "time_ns": 26500000000
+            },
+            {
+              "cong_state": 0,
+              "event": "THRESHOLD_SET",
+              "line": 56,
+              "new_value": 20,
+              "old_value": 3,
+              "threshold": 20,
+              "time_ns": 74900000000
+            },
+            {
+              "cong_state": 0,
+              "event": "THRESHOLD_RESTORE",
+              "line": 59,
+              "new_value": 3,
+              "old_value": 20,
+              "threshold": 3,
+              "time_ns": 75300000000
+            }
+          ],
+          "role": "G"
+        }
+      ],
+      "verified_actual_runtime_artifacts": {
+        "binary_sha256": {
+          "actual_sha256": "de9f678113c37a72df7e3215e876f18945c0ccecf9123f60fc8f655f9d9a6eab",
+          "manifest_matches": true,
+          "path": "/home/ubuntu/ns-3.48/build/scratch/main_satnet/ns3.48-main_satnet"
+        },
+        "make_run_sha256": {
+          "actual_sha256": "ccf066bba1a23ed958518ea41929ca8cefac4ce2a1ef6f803a7b8bb40b54f887",
+          "manifest_matches": true,
+          "path": "/home/ubuntu/lab/scripts/make_run.sh"
+        },
+        "patch_sha256": {
+          "actual_sha256": "473dd0e23447a58bd7ce644507cf4aa24b612020ff1e6029f5bfdb22e2cd4245",
+          "manifest_matches": true,
+          "path": "/work/code/kim-study/ns3.patch"
+        },
+        "runner_sha256": {
+          "actual_sha256": "b844c9919d30262a8903bb460755a8a3cd221c58da2a178fe0f95c80fe360b77",
+          "manifest_matches": true,
+          "path": "/work/code/competing-flows/run_competing.py"
+        }
+      }
+    },
+    "join10-gg-k8": {
+      "actual_config_sha256": "7a8dcd72517feefb35df0f6f2750df2f0441080429ff77ba3b7b85dbff30f6ae",
+      "actual_schedule_sha256": "da067e0d8767e943f049721aa42340d2d948c45fc44df81b694f2154f15c1073",
+      "case": "join10-gg-k8",
+      "guard_k": 8,
+      "raw_inputs": [
+        {
+          "bytes": 3127,
+          "path": "case.json",
+          "sha256": "c5b3fe1803c8f33e2a7af20e4afb3ec4a9c7ba893f00156938fde5ad08cd95e1"
+        },
+        {
+          "bytes": 615,
+          "path": "config_ns3.properties",
+          "sha256": "7a8dcd72517feefb35df0f6f2750df2f0441080429ff77ba3b7b85dbff30f6ae"
+        },
+        {
+          "bytes": 226,
+          "path": "schedule.csv",
+          "sha256": "da067e0d8767e943f049721aa42340d2d948c45fc44df81b694f2154f15c1073"
+        },
+        {
+          "bytes": 14185268,
+          "path": "logs_ns3/study_app_rx_node_1585_port_1024.csv",
+          "sha256": "f3280167d854c150c520ca106e33754112e60073823a8cbc366ed04844150090"
+        },
+        {
+          "bytes": 1140184,
+          "path": "logs_ns3/study_drop_coverage.csv",
+          "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+        },
+        {
+          "bytes": 82484,
+          "path": "logs_ns3/study_drops.csv",
+          "sha256": "dde7a77776d704deb768a5ae661f8b557d5e7a66985981b60e0753ac4b24420b"
+        },
+        {
+          "bytes": 19170144,
+          "path": "logs_ns3/study_rx_node_1585_port_1024.csv",
+          "sha256": "886c9b458661e358d7a990a651436b2ab4e15e239560dbcde6c0eaa67d800a0c"
+        },
+        {
+          "bytes": 78107,
+          "path": "logs_ns3/tcp_flow_0_cwnd.csv",
+          "sha256": "f1ea9cdf9943146129f0d8711e3b469f699dd1381921fdb15b734c3883ae183c"
+        },
+        {
+          "bytes": 919562,
+          "path": "logs_ns3/tcp_flow_0_progress.csv",
+          "sha256": "76163d5ff24314703df3e35242989ae4d80bd72626e0ecfb505a0ab05205d6e2"
+        },
+        {
+          "bytes": 955338,
+          "path": "logs_ns3/tcp_flow_0_rtt.csv",
+          "sha256": "257d2270cc16da0f31d76010d7daf3382071a190ae6830aa623f95e315ecaa06"
+        },
+        {
+          "bytes": 6343,
+          "path": "logs_ns3/tcp_flow_0_study_events.csv",
+          "sha256": "ab2a3f464108f717acdfb4564f67427d24fafb66898290ea4d0ffde8d6072bb7"
+        },
+        {
+          "bytes": 9499666,
+          "path": "logs_ns3/tcp_flow_0_study_packets.csv",
+          "sha256": "236acc7177316ec5d45bbdf6527c5abe57a92142dc50282eddce3bb95785fc48"
+        },
+        {
+          "bytes": 64715,
+          "path": "logs_ns3/tcp_flow_1_cwnd.csv",
+          "sha256": "13db7dc57494dc6163610e50d6c447ceadffd02b6ad3201e83e96b64edcdc066"
+        },
+        {
+          "bytes": 1012302,
+          "path": "logs_ns3/tcp_flow_1_progress.csv",
+          "sha256": "8f7bbf549ed39e67f2eb50826ffef4534965318ed16793253e1c51156a8a8d3e"
+        },
+        {
+          "bytes": 1049707,
+          "path": "logs_ns3/tcp_flow_1_rtt.csv",
+          "sha256": "9ee966fef5bc48a72609c84ce880b4266b1112e45fb513c376b3c6e103a20f00"
+        },
+        {
+          "bytes": 5051,
+          "path": "logs_ns3/tcp_flow_1_study_events.csv",
+          "sha256": "e92c2b1389e36f8d9ea9182a77e799f2a3b5b394640c1061123509773e275624"
+        },
+        {
+          "bytes": 10244867,
+          "path": "logs_ns3/tcp_flow_1_study_packets.csv",
+          "sha256": "915ec2c90c372ab95ea0d2304bf0b38874faeda1b3c0952409992e34f9ce051b"
+        },
+        {
+          "bytes": 160,
+          "path": "logs_ns3/tcp_flows.csv",
+          "sha256": "6011fa998fa57d661fef7ba95465805f18c503f4f7a65fe6d0c2a85dd85fc79f"
+        },
+        {
+          "bytes": 561,
+          "path": "logs_ns3/timing_results.csv",
+          "sha256": "383d71ed73cfaef54070bfec8977ed1ae4e2f86793117a9c8a08ec9d271c66e6"
+        }
+      ],
+      "run_dir": "/tmp/cs30401-competing/join10-gg-k8",
+      "source_commit": "7266051e6ed4cab15c13d59c555ca32f2803e479",
+      "threshold_schedule_validation": [
+        {
+          "expected_lifecycle": [
+            [
+              0,
+              "THRESHOLD_INIT",
+              3,
+              3
+            ],
+            [
+              26100000000,
+              "THRESHOLD_SET",
+              3,
+              8
+            ],
+            [
+              26500000000,
+              "THRESHOLD_RESTORE",
+              8,
+              3
+            ],
+            [
+              74900000000,
+              "THRESHOLD_SET",
+              3,
+              8
+            ],
+            [
+              75300000000,
+              "THRESHOLD_RESTORE",
+              8,
+              3
+            ]
+          ],
+          "final_k": 3,
+          "flow_id": 0,
+          "guard_k": 8,
+          "initial_k": 3,
+          "matched": true,
+          "observed_lifecycle": [
+            {
+              "cong_state": 0,
+              "event": "THRESHOLD_INIT",
+              "line": 2,
+              "new_value": 3,
+              "old_value": 3,
+              "threshold": 3,
+              "time_ns": 0
+            },
+            {
+              "cong_state": 0,
+              "event": "THRESHOLD_SET",
+              "line": 34,
+              "new_value": 8,
+              "old_value": 3,
+              "threshold": 8,
+              "time_ns": 26100000000
+            },
+            {
+              "cong_state": 0,
+              "event": "THRESHOLD_RESTORE",
+              "line": 45,
+              "new_value": 3,
+              "old_value": 8,
+              "threshold": 3,
+              "time_ns": 26500000000
+            },
+            {
+              "cong_state": 0,
+              "event": "THRESHOLD_SET",
+              "line": 98,
+              "new_value": 8,
+              "old_value": 3,
+              "threshold": 8,
+              "time_ns": 74900000000
+            },
+            {
+              "cong_state": 0,
+              "event": "THRESHOLD_RESTORE",
+              "line": 99,
+              "new_value": 3,
+              "old_value": 8,
+              "threshold": 3,
+              "time_ns": 75300000000
+            }
+          ],
+          "role": "G"
+        },
+        {
+          "expected_lifecycle": [
+            [
+              10000000000,
+              "THRESHOLD_INIT",
+              3,
+              3
+            ],
+            [
+              26100000000,
+              "THRESHOLD_SET",
+              3,
+              8
+            ],
+            [
+              26500000000,
+              "THRESHOLD_RESTORE",
+              8,
+              3
+            ],
+            [
+              74900000000,
+              "THRESHOLD_SET",
+              3,
+              8
+            ],
+            [
+              75300000000,
+              "THRESHOLD_RESTORE",
+              8,
+              3
+            ]
+          ],
+          "final_k": 3,
+          "flow_id": 1,
+          "guard_k": 8,
+          "initial_k": 3,
+          "matched": true,
+          "observed_lifecycle": [
+            {
+              "cong_state": 0,
+              "event": "THRESHOLD_INIT",
+              "line": 2,
+              "new_value": 3,
+              "old_value": 3,
+              "threshold": 3,
+              "time_ns": 10000000000
+            },
+            {
+              "cong_state": 0,
+              "event": "THRESHOLD_SET",
+              "line": 14,
+              "new_value": 8,
+              "old_value": 3,
+              "threshold": 8,
+              "time_ns": 26100000000
+            },
+            {
+              "cong_state": 0,
+              "event": "THRESHOLD_RESTORE",
+              "line": 15,
+              "new_value": 3,
+              "old_value": 8,
+              "threshold": 3,
+              "time_ns": 26500000000
+            },
+            {
+              "cong_state": 0,
+              "event": "THRESHOLD_SET",
+              "line": 56,
+              "new_value": 8,
+              "old_value": 3,
+              "threshold": 8,
+              "time_ns": 74900000000
+            },
+            {
+              "cong_state": 0,
+              "event": "THRESHOLD_RESTORE",
+              "line": 59,
+              "new_value": 3,
+              "old_value": 8,
+              "threshold": 3,
+              "time_ns": 75300000000
+            }
+          ],
+          "role": "G"
+        }
+      ],
+      "verified_actual_runtime_artifacts": {
+        "binary_sha256": {
+          "actual_sha256": "de9f678113c37a72df7e3215e876f18945c0ccecf9123f60fc8f655f9d9a6eab",
+          "manifest_matches": true,
+          "path": "/home/ubuntu/ns-3.48/build/scratch/main_satnet/ns3.48-main_satnet"
+        },
+        "make_run_sha256": {
+          "actual_sha256": "ccf066bba1a23ed958518ea41929ca8cefac4ce2a1ef6f803a7b8bb40b54f887",
+          "manifest_matches": true,
+          "path": "/home/ubuntu/lab/scripts/make_run.sh"
+        },
+        "patch_sha256": {
+          "actual_sha256": "473dd0e23447a58bd7ce644507cf4aa24b612020ff1e6029f5bfdb22e2cd4245",
+          "manifest_matches": true,
+          "path": "/work/code/kim-study/ns3.patch"
+        },
+        "runner_sha256": {
+          "actual_sha256": "b844c9919d30262a8903bb460755a8a3cd221c58da2a178fe0f95c80fe360b77",
+          "manifest_matches": true,
+          "path": "/work/code/competing-flows/run_competing.py"
+        }
+      }
+    }
+  },
+  "schema_version": 1
+}

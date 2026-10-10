@@ -1,0 +1,12 @@
+{
+  "new_full_regression_audit_sha256": "7f762782a52110ac6926b123e4528f562b266499f99464d1b9c531d0b9e52e3c",
+  "original_artifact_sha256": "b46fa38b31be14013815cee8bf8a47ec50b8d74aae0a70938deab4ceed3775b1",
+  "original_artifact_untouched": true,
+  "original_existing_fields_preserved": {
+    "accounting": true,
+    "baseline": true,
+    "guarded": true
+  },
+  "scope": "Existing K20 fixture re-audited from retained traces with updated pre-processing frontier validation. Previous baseline/guarded/accounting fields and input fingerprints compared recursively; new observation/contract/schema/script fields remain separate.",
+  "updated_audit_script_sha256": "cb75bf280decff3092a1be7b18e95e579df908c4fae316475cfd0e56f9f2bbeb"
+}

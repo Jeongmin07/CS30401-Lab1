@@ -1,0 +1,639 @@
+{
+  "accounting": {
+    "guarded_minus_baseline_application_bytes": -102120,
+    "guarded_minus_baseline_wire_unique_bytes": 5520,
+    "guarded_wire_above_unresolved_frontiers_bytes": 107640,
+    "identity_verified": "application_delta = wire_delta - guarded_wire_above_frontiers"
+  },
+  "audit_script_sha256": "cb75bf280decff3092a1be7b18e95e579df908c4fae316475cfd0e56f9f2bbeb",
+  "baseline": {
+    "application_bytes": 239472780,
+    "binary_sha256": "de9f678113c37a72df7e3215e876f18945c0ccecf9123f60fc8f655f9d9a6eab",
+    "case": "same-start-dd",
+    "cutoff_ns": 200000000000,
+    "flows": {
+      "0": {
+        "application_bytes": 117494580,
+        "application_sequence_frontier": 117494581,
+        "first_data_sequence": 1,
+        "last_application_delivery": {
+          "connection_total_rx_bytes": 117494580,
+          "file": "study_app_rx_node_1585_port_1024.csv",
+          "flow_id": "0",
+          "line": 163762,
+          "payload_bytes": 1380,
+          "time_ns": 199933580953
+        },
+        "last_receiver_payload": {
+          "expected_seq": 117493201,
+          "file": "study_rx_node_1585_port_1024.csv",
+          "flow_id": "0",
+          "line": 173475,
+          "payload_bytes": 1380,
+          "seq": 117493201,
+          "time_ns": 199933580953,
+          "tx_id": 85546
+        },
+        "last_sender_ack": {
+          "ack": "117494581",
+          "cong_state": 0,
+          "file": "tcp_flow_0_study_packets.csv",
+          "line": 131130,
+          "sack_blocks": "",
+          "threshold": 3,
+          "time_ns": 199983267766
+        },
+        "received_ranges_above_frontier": [],
+        "sack_confirmed_bytes_above_frontier": 0,
+        "sack_confirmed_ranges_above_frontier": [],
+        "syn_sequences": [
+          0
+        ],
+        "terminal_frontier_observation": {
+          "application_frontier_after_timestamp": 117494581,
+          "application_frontier_before_timestamp": 117493201,
+          "final_frontier_minus_pre_processing_expected_seq": 1380,
+          "last_timestamp_payload_rows": 1,
+          "pre_processing_expected_seq": 117493201,
+          "qualification": "Wire expected_seq is before processing. Same-time app delivery can advance the final frontier; app UIDs are not joined to wire packets.",
+          "same_time_application_delivery_rows": [
+            {
+              "connection_total_rx_bytes": 117494580,
+              "file": "study_app_rx_node_1585_port_1024.csv",
+              "flow_id": "0",
+              "line": 163762,
+              "payload_bytes": 1380,
+              "time_ns": 199933580953
+            }
+          ],
+          "validated_payload_rows": 85141
+        },
+        "unreceived_holes_below_highest_received_end": [],
+        "verified_terminal_holes": [],
+        "wire_bytes_above_frontier_without_sender_sack_confirmation": 0,
+        "wire_minus_application_bytes": 0,
+        "wire_unique_bytes": 117494580
+      },
+      "1": {
+        "application_bytes": 121978200,
+        "application_sequence_frontier": 121978201,
+        "first_data_sequence": 1,
+        "last_application_delivery": {
+          "connection_total_rx_bytes": 121978200,
+          "file": "study_app_rx_node_1585_port_1024.csv",
+          "flow_id": "1",
+          "line": 163819,
+          "payload_bytes": 1380,
+          "time_ns": 199998972522
+        },
+        "last_receiver_payload": {
+          "expected_seq": 121976821,
+          "file": "study_rx_node_1585_port_1024.csv",
+          "flow_id": "1",
+          "line": 173532,
+          "payload_bytes": 1380,
+          "seq": 121976821,
+          "time_ns": 199998972522,
+          "tx_id": 88685
+        },
+        "last_sender_ack": {
+          "ack": "121917481",
+          "cong_state": 0,
+          "file": "tcp_flow_1_study_packets.csv",
+          "line": 135777,
+          "sack_blocks": "",
+          "threshold": 3,
+          "time_ns": 199998181920
+        },
+        "received_ranges_above_frontier": [],
+        "sack_confirmed_bytes_above_frontier": 0,
+        "sack_confirmed_ranges_above_frontier": [],
+        "syn_sequences": [
+          0
+        ],
+        "terminal_frontier_observation": {
+          "application_frontier_after_timestamp": 121978201,
+          "application_frontier_before_timestamp": 121976821,
+          "final_frontier_minus_pre_processing_expected_seq": 1380,
+          "last_timestamp_payload_rows": 1,
+          "pre_processing_expected_seq": 121976821,
+          "qualification": "Wire expected_seq is before processing. Same-time app delivery can advance the final frontier; app UIDs are not joined to wire packets.",
+          "same_time_application_delivery_rows": [
+            {
+              "connection_total_rx_bytes": 121978200,
+              "file": "study_app_rx_node_1585_port_1024.csv",
+              "flow_id": "1",
+              "line": 163819,
+              "payload_bytes": 1380,
+              "time_ns": 199998972522
+            }
+          ],
+          "validated_payload_rows": 88390
+        },
+        "unreceived_holes_below_highest_received_end": [],
+        "verified_terminal_holes": [],
+        "wire_bytes_above_frontier_without_sender_sack_confirmation": 0,
+        "wire_minus_application_bytes": 0,
+        "wire_unique_bytes": 121978200
+      }
+    },
+    "patch_sha256": "473dd0e23447a58bd7ce644507cf4aa24b612020ff1e6029f5bfdb22e2cd4245",
+    "raw_input_hashes": [
+      {
+        "bytes": 14217144,
+        "path": "logs_ns3/study_app_rx_node_1585_port_1024.csv",
+        "sha256": "af88a077678ed75b36780bb87e1f391fe0cb2c6e49d586d569df27330b80902f"
+      },
+      {
+        "bytes": 19192130,
+        "path": "logs_ns3/study_rx_node_1585_port_1024.csv",
+        "sha256": "51059009e096cf0fd4de8dd08b69f56e5ed277014c2f8c226b9dad0529220538"
+      },
+      {
+        "bytes": 9709430,
+        "path": "logs_ns3/tcp_flow_0_study_packets.csv",
+        "sha256": "21f296c417b874c71f9cd58fe045043fe12fd30fbba14e68d308e9ff35f5c68e"
+      },
+      {
+        "bytes": 10059186,
+        "path": "logs_ns3/tcp_flow_1_study_packets.csv",
+        "sha256": "c21ebfa7450f37ab3831d319cddb4a79fd27186fba8c5a288082f2ad138ad682"
+      },
+      {
+        "bytes": 73440,
+        "path": "logs_ns3/study_drops.csv",
+        "sha256": "b795778fd4c4f94e805dcee6fe0c9059b90bd50e042c419d7a98b8d2f3933852"
+      },
+      {
+        "bytes": 2963,
+        "path": "case.json",
+        "sha256": "b74ad337afa8a0aefda46926940c5acbbfe4f4f0d79d0a087e93c2a8dc26c031"
+      },
+      {
+        "bytes": 615,
+        "path": "config_ns3.properties",
+        "sha256": "7a8dcd72517feefb35df0f6f2750df2f0441080429ff77ba3b7b85dbff30f6ae"
+      },
+      {
+        "bytes": 58,
+        "path": "schedule.csv",
+        "sha256": "68fb778bf41d5f5c8cf36d25671d301b99bc68c6f45d2232109e7909552a3790"
+      },
+      {
+        "bytes": 1498883,
+        "path": "study_analysis.json",
+        "sha256": "39d0f72c6fdebc48878ca1af1cc2aaaabf5d7310a9909c657239afba5eef6536"
+      }
+    ],
+    "run_dir": "/tmp/cs30401-competing/same-start-dd",
+    "source_commit": "95c306dd9fc1d6c09f9d5ebccfc27215f8c41a24",
+    "wire_unique_bytes": 239472780
+  },
+  "guarded": {
+    "application_bytes": 239370660,
+    "binary_sha256": "de9f678113c37a72df7e3215e876f18945c0ccecf9123f60fc8f655f9d9a6eab",
+    "case": "same-start-gg-k8",
+    "cutoff_ns": 200000000000,
+    "flows": {
+      "0": {
+        "application_bytes": 136749720,
+        "application_sequence_frontier": 136749721,
+        "first_data_sequence": 1,
+        "last_application_delivery": {
+          "connection_total_rx_bytes": 136749720,
+          "file": "study_app_rx_node_1585_port_1024.csv",
+          "flow_id": "0",
+          "line": 163790,
+          "payload_bytes": 1380,
+          "time_ns": 199931286517
+        },
+        "last_receiver_payload": {
+          "expected_seq": 136748341,
+          "file": "study_rx_node_1585_port_1024.csv",
+          "flow_id": "0",
+          "line": 173477,
+          "payload_bytes": 1380,
+          "seq": 136748341,
+          "time_ns": 199931286517,
+          "tx_id": 99458
+        },
+        "last_sender_ack": {
+          "ack": "136749721",
+          "cong_state": 0,
+          "file": "tcp_flow_0_study_packets.csv",
+          "line": 152038,
+          "sack_blocks": "",
+          "threshold": 3,
+          "time_ns": 199980973292
+        },
+        "received_ranges_above_frontier": [],
+        "sack_confirmed_bytes_above_frontier": 0,
+        "sack_confirmed_ranges_above_frontier": [],
+        "syn_sequences": [
+          0
+        ],
+        "terminal_frontier_observation": {
+          "application_frontier_after_timestamp": 136749721,
+          "application_frontier_before_timestamp": 136748341,
+          "final_frontier_minus_pre_processing_expected_seq": 1380,
+          "last_timestamp_payload_rows": 1,
+          "pre_processing_expected_seq": 136748341,
+          "qualification": "Wire expected_seq is before processing. Same-time app delivery can advance the final frontier; app UIDs are not joined to wire packets.",
+          "same_time_application_delivery_rows": [
+            {
+              "connection_total_rx_bytes": 136749720,
+              "file": "study_app_rx_node_1585_port_1024.csv",
+              "flow_id": "0",
+              "line": 163790,
+              "payload_bytes": 1380,
+              "time_ns": 199931286517
+            }
+          ],
+          "validated_payload_rows": 99094
+        },
+        "unreceived_holes_below_highest_received_end": [],
+        "verified_terminal_holes": [],
+        "wire_bytes_above_frontier_without_sender_sack_confirmation": 0,
+        "wire_minus_application_bytes": 0,
+        "wire_unique_bytes": 136749720
+      },
+      "1": {
+        "application_bytes": 102620940,
+        "application_sequence_frontier": 102620941,
+        "first_data_sequence": 1,
+        "last_application_delivery": {
+          "connection_total_rx_bytes": 102620940,
+          "file": "study_app_rx_node_1585_port_1024.csv",
+          "flow_id": "1",
+          "line": 163796,
+          "payload_bytes": 5520,
+          "time_ns": 199998972522
+        },
+        "last_receiver_payload": {
+          "expected_seq": 102615421,
+          "file": "study_rx_node_1585_port_1024.csv",
+          "flow_id": "1",
+          "line": 173536,
+          "payload_bytes": 1380,
+          "seq": 102615421,
+          "time_ns": 199998972522,
+          "tx_id": 74787
+        },
+        "last_sender_ack": {
+          "ack": "102580921",
+          "cong_state": 3,
+          "file": "tcp_flow_1_study_packets.csv",
+          "line": 114880,
+          "sack_blocks": "102630601:102678901|102626461:102629221|102622321:102625081",
+          "threshold": 3,
+          "time_ns": 199999559557
+        },
+        "received_ranges_above_frontier": [
+          [
+            102622321,
+            102625081
+          ],
+          [
+            102626461,
+            102629221
+          ],
+          [
+            102630601,
+            102732721
+          ]
+        ],
+        "sack_confirmed_bytes_above_frontier": 53820,
+        "sack_confirmed_ranges_above_frontier": [
+          [
+            102622321,
+            102625081
+          ],
+          [
+            102626461,
+            102629221
+          ],
+          [
+            102630601,
+            102678901
+          ]
+        ],
+        "syn_sequences": [
+          0
+        ],
+        "terminal_frontier_observation": {
+          "application_frontier_after_timestamp": 102620941,
+          "application_frontier_before_timestamp": 102615421,
+          "final_frontier_minus_pre_processing_expected_seq": 5520,
+          "last_timestamp_payload_rows": 1,
+          "pre_processing_expected_seq": 102615421,
+          "qualification": "Wire expected_seq is before processing. Same-time app delivery can advance the final frontier; app UIDs are not joined to wire packets.",
+          "same_time_application_delivery_rows": [
+            {
+              "connection_total_rx_bytes": 102620940,
+              "file": "study_app_rx_node_1585_port_1024.csv",
+              "flow_id": "1",
+              "line": 163796,
+              "payload_bytes": 5520,
+              "time_ns": 199998972522
+            }
+          ],
+          "validated_payload_rows": 74441
+        },
+        "unreceived_holes_below_highest_received_end": [
+          [
+            102620941,
+            102622321
+          ],
+          [
+            102625081,
+            102626461
+          ],
+          [
+            102629221,
+            102630601
+          ]
+        ],
+        "verified_terminal_holes": [
+          {
+            "any_receiver_payload_overlap_by_cutoff": false,
+            "original": {
+              "cong_state": 3,
+              "event": "TX",
+              "file": "tcp_flow_1_study_packets.csv",
+              "flow_id": "1",
+              "line": 114566,
+              "payload_bytes": 1380,
+              "seq": 102620941,
+              "threshold": 3,
+              "time_ns": 199612785294,
+              "tx_id": 74698,
+              "tx_time_ns": 199612785294
+            },
+            "original_drop_rows": [
+              {
+                "device": "4294967295",
+                "file": "study_drops.csv",
+                "flow_id": "1",
+                "layer": "TcDrop",
+                "line": 670,
+                "node": "1584",
+                "payload_bytes": 1380,
+                "seq": 102620941,
+                "time_ns": 199612785294,
+                "tx_id": 74698,
+                "tx_time_ns": 199612785294
+              }
+            ],
+            "retransmissions": [
+              {
+                "cong_state": 3,
+                "event": "RETX",
+                "file": "tcp_flow_1_study_packets.csv",
+                "flow_id": "1",
+                "line": 114794,
+                "payload_bytes": 1380,
+                "seq": 102620941,
+                "threshold": 3,
+                "time_ns": 199852712526,
+                "tx_id": 74791,
+                "tx_time_ns": 199852712526
+              }
+            ],
+            "sequence_range": [
+              102620941,
+              102622321
+            ]
+          },
+          {
+            "any_receiver_payload_overlap_by_cutoff": false,
+            "original": {
+              "cong_state": 3,
+              "event": "TX",
+              "file": "tcp_flow_1_study_packets.csv",
+              "flow_id": "1",
+              "line": 114571,
+              "payload_bytes": 1380,
+              "seq": 102625081,
+              "threshold": 3,
+              "time_ns": 199615079786,
+              "tx_id": 74701,
+              "tx_time_ns": 199615079786
+            },
+            "original_drop_rows": [
+              {
+                "device": "4294967295",
+                "file": "study_drops.csv",
+                "flow_id": "1",
+                "layer": "TcDrop",
+                "line": 671,
+                "node": "1584",
+                "payload_bytes": 1380,
+                "seq": 102625081,
+                "time_ns": 199615079786,
+                "tx_id": 74701,
+                "tx_time_ns": 199615079786
+              }
+            ],
+            "retransmissions": [
+              {
+                "cong_state": 3,
+                "event": "RETX",
+                "file": "tcp_flow_1_study_packets.csv",
+                "flow_id": "1",
+                "line": 114804,
+                "payload_bytes": 1380,
+                "seq": 102625081,
+                "threshold": 3,
+                "time_ns": 199857301510,
+                "tx_id": 74796,
+                "tx_time_ns": 199857301510
+              }
+            ],
+            "sequence_range": [
+              102625081,
+              102626461
+            ]
+          },
+          {
+            "any_receiver_payload_overlap_by_cutoff": false,
+            "original": {
+              "cong_state": 3,
+              "event": "TX",
+              "file": "tcp_flow_1_study_packets.csv",
+              "flow_id": "1",
+              "line": 114576,
+              "payload_bytes": 1380,
+              "seq": 102629221,
+              "threshold": 3,
+              "time_ns": 199617374258,
+              "tx_id": 74704,
+              "tx_time_ns": 199617374258
+            },
+            "original_drop_rows": [
+              {
+                "device": "4294967295",
+                "file": "study_drops.csv",
+                "flow_id": "1",
+                "layer": "TcDrop",
+                "line": 672,
+                "node": "1584",
+                "payload_bytes": 1380,
+                "seq": 102629221,
+                "time_ns": 199617374258,
+                "tx_id": 74704,
+                "tx_time_ns": 199617374258
+              }
+            ],
+            "retransmissions": [
+              {
+                "cong_state": 3,
+                "event": "RETX",
+                "file": "tcp_flow_1_study_packets.csv",
+                "flow_id": "1",
+                "line": 114810,
+                "payload_bytes": 1380,
+                "seq": 102629221,
+                "threshold": 3,
+                "time_ns": 199859595987,
+                "tx_id": 74799,
+                "tx_time_ns": 199859595987
+              }
+            ],
+            "sequence_range": [
+              102629221,
+              102630601
+            ]
+          }
+        ],
+        "wire_bytes_above_frontier_without_sender_sack_confirmation": 53820,
+        "wire_minus_application_bytes": 107640,
+        "wire_unique_bytes": 102728580
+      }
+    },
+    "patch_sha256": "473dd0e23447a58bd7ce644507cf4aa24b612020ff1e6029f5bfdb22e2cd4245",
+    "raw_input_hashes": [
+      {
+        "bytes": 14215257,
+        "path": "logs_ns3/study_app_rx_node_1585_port_1024.csv",
+        "sha256": "20cdacd8e0f59a5913e7e7aed53b9761ee2d8d29049b1efe00b303246c3464a5"
+      },
+      {
+        "bytes": 19192573,
+        "path": "logs_ns3/study_rx_node_1585_port_1024.csv",
+        "sha256": "c1fd1ee736d8a1a72433d08734954d74177d7543d02971d66d24437a51b02f9a"
+      },
+      {
+        "bytes": 11269181,
+        "path": "logs_ns3/tcp_flow_0_study_packets.csv",
+        "sha256": "cac348cf167edd8e32ddb2d2966ec94e7b7e257cfe5a444648b6bc2132152d42"
+      },
+      {
+        "bytes": 8515253,
+        "path": "logs_ns3/tcp_flow_1_study_packets.csv",
+        "sha256": "8b13dac1a9ca03eb864ca847e8657c63f838adec287cdcd430dd4a817aee5ae9"
+      },
+      {
+        "bytes": 75125,
+        "path": "logs_ns3/study_drops.csv",
+        "sha256": "30e79c1a0b66f9a2e41c238c24b09aa7b09a4668e4f25ead4fe6d30be07932d5"
+      },
+      {
+        "bytes": 3138,
+        "path": "case.json",
+        "sha256": "0c145e50d646a53a0c5a7991268d2f59fdee81d17dc3d11e8c1093117b1c0d5f"
+      },
+      {
+        "bytes": 615,
+        "path": "config_ns3.properties",
+        "sha256": "7a8dcd72517feefb35df0f6f2750df2f0441080429ff77ba3b7b85dbff30f6ae"
+      },
+      {
+        "bytes": 216,
+        "path": "schedule.csv",
+        "sha256": "53171bafc70561e76a8ccc35b24ff5c9035cfa15a6e43755bcb257b5d31fac03"
+      },
+      {
+        "bytes": 1464852,
+        "path": "study_analysis.json",
+        "sha256": "edbceef683af6aeb7772819c9945d1740220b1d9f934075a7b29ec821834a44c"
+      }
+    ],
+    "run_dir": "/tmp/cs30401-competing/same-start-gg-k8",
+    "source_commit": "7266051e6ed4cab15c13d59c555ca32f2803e479",
+    "wire_unique_bytes": 239478300
+  },
+  "limitations": [
+    "Wire Rx is emitted before TCP processing; wire-union excess is not an exact accepted-buffer measurement.",
+    "SACK confirms only the reported subset; late receiver arrivals may not have sender feedback by cutoff.",
+    "Application frontier assumes verified SYN seq0/data seq1, one connection per flow and no sequence wrap.",
+    "Pre-processing receiver expected_seq is checked against drained application history; it need not equal the final frontier when that payload produces same-time app delivery.",
+    "Terminal holes have tagged original drops and retransmission attempts, with no receiver payload overlap before cutoff.",
+    "No observed arrival by cutoff does not prove a retransmission was lost or would never arrive.",
+    "The accounting explains this deadline-specific application deficit, not all earlier trajectory differences or long-run superiority.",
+    "Guard had ended earlier; late loss recovery uses K3. Earlier guard causation of the eventual queue history is not isolated.",
+    "No simulator execution, duration extension, drain control or independent statistical replication is performed."
+  ],
+  "schema_version": 2,
+  "source_contracts": [
+    {
+      "path": "/home/ubuntu/ns-3.48/src/internet/model/tcp-socket-base.cc",
+      "sha256": "b6ee80a1d33538f36f0f9f2170a6ca2512beed6850133a47fd00db96f3d70afe",
+      "verified_fragments": {
+        "NotifyDataRecv();": [
+          2654,
+          3736
+        ],
+        "SetNextRxSequence(tcpHeader.GetSequenceNumber() + SequenceNumber32(1));": [
+          2403,
+          2431,
+          2523
+        ],
+        "if (!m_tcb->m_rxBuffer->Add(p, tcpHeader))": [
+          3716
+        ],
+        "if (expectedSeq < m_tcb->m_rxBuffer->NextRxSequence())": [
+          3732
+        ],
+        "m_rxTrace(packet, tcpHeader, this);": [
+          1408
+        ]
+      }
+    },
+    {
+      "path": "/home/ubuntu/ns-3.48/src/network/model/socket.cc",
+      "sha256": "8166e1c5a69cc6c1ebd2f215ee9cd4e79b6d2330c27aa7d24f68f0a7007f1b3a",
+      "verified_fragments": {
+        "m_receivedData(this);": [
+          296
+        ]
+      }
+    },
+    {
+      "path": "/home/ubuntu/ns-3.48/src/internet/model/tcp-rx-buffer.cc",
+      "sha256": "2ff3e25846385a04887ae10520621348ea9235b2ba32f73812b8ab10f2df1554",
+      "verified_fragments": {
+        "else if (i->first > m_nextRxSeq)": [
+          219
+        ],
+        "m_nextRxSeq = i->first + SequenceNumber32(i->second->GetSize());": [
+          223
+        ]
+      }
+    },
+    {
+      "path": "/home/ubuntu/ns-3.48/contrib/basic-sim/model/apps/tcp-flow-sink.cc",
+      "sha256": "5f1c5bd3600aaea83703cd55cdf21f73b01cf13acd9792a86b3c3bd51e69e131",
+      "verified_fragments": {
+        "connection.appRxBytes += packet->GetSize();": [
+          254
+        ],
+        "socket->GetRxBuffer()->NextRxSequence().GetValue()": [
+          227
+        ],
+        "while ((packet = socket->RecvFrom(from)))": [
+          242
+        ]
+      }
+    }
+  ]
+}

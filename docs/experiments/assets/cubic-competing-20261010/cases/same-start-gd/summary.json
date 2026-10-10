@@ -1,0 +1,379 @@
+{
+  "analysis_command": [
+    "/home/ubuntu/lab/.venv/bin/python3",
+    "/work/code/kim-study/analyze_study.py",
+    "/tmp/cs30401-competing/same-start-gd",
+    "--path-truth",
+    "/work/code/kim-study/path_truth_200s.csv",
+    "--include-bins",
+    "--output",
+    "/tmp/cs30401-competing/same-start-gd/study_analysis.json"
+  ],
+  "analysis_sha256": "9b44e3e54bb239788c9cb8e517195999a89aac666bd5c683f6145c15f66f17b8",
+  "analyzer_sha256": "5333d7f6d86c04f79bbaad82e5e2577ec3bdf2f281e115c854ad904c404aa696",
+  "case": "same-start-gd",
+  "connection_validation": [
+    {
+      "connection_id": "0",
+      "delivered_bytes": 109029660,
+      "flow_id": "0",
+      "local_port": "1024",
+      "node": "1585",
+      "peer_ip": "10.18.144.1",
+      "peer_port": "49153"
+    },
+    {
+      "connection_id": "1",
+      "delivered_bytes": 130441740,
+      "flow_id": "1",
+      "local_port": "1024",
+      "node": "1585",
+      "peer_ip": "10.18.144.1",
+      "peer_port": "49154"
+    }
+  ],
+  "drop_coverage": {
+    "absence_of_drop_inference": "listed hooks connected with matching IPv4/TcDrop node coverage",
+    "available": true,
+    "connected": 50704,
+    "devices_without_root_queue_disc_absence_check": [],
+    "devices_without_root_queue_disc_absence_check_count": 0,
+    "ipv4_nodes_without_traffic_control_drop_hook": [],
+    "layer_entries": {
+      "DropAfterDequeue": 7922,
+      "DropBeforeEnqueue": 7922,
+      "MacTxDrop": 7922,
+      "PhyRxDrop": 7922,
+      "PhyTxDrop": 7922,
+      "TcDrop": 1586,
+      "ipv4": 1586,
+      "root_queue_disc_absent": 7922
+    },
+    "not_connected": [],
+    "qualification": "Manifest coverage is not an independent audit of every loss path.",
+    "root_queue_disc_absence_coverage_complete": true,
+    "traffic_control_drop_hook_present": true,
+    "traffic_control_node_coverage_complete": true
+  },
+  "drop_rows_without_usable_transmission_tag": 0,
+  "exporter_sha256": "845d8b7548ea50eea07db28b678830e55dddc411f2cb0542927df396b5852f43",
+  "flows": {
+    "0": {
+      "counts": {
+        "ack_rows_with_sack": 4887,
+        "application_delivered_bytes": 109029660,
+        "drop_trace_rows": 422,
+        "loss_state_entries": 1,
+        "official_retransmission_rows": 444,
+        "out_of_order_payload_rows": 4634,
+        "overlapping_sequence_tx_rows": 444,
+        "recovery_state_entries": 46,
+        "repeated_cumulative_ack_rows": 4632,
+        "sender_new_sequence_bytes": 109112460,
+        "sender_payload_tx_bytes": 109725180,
+        "wire_payload_rx_bytes": 109029660,
+        "wire_unique_sequence_bytes": 109029660
+      },
+      "distinct_tagged_transmissions_dropped": 422,
+      "initial_retransmission_threshold": 3,
+      "protection_intervals": [
+        {
+          "duration_s": 0.646742827,
+          "end_ns": 26746742827,
+          "start_ns": 26100000000
+        },
+        {
+          "duration_s": 0.4,
+          "end_ns": 75300000000,
+          "start_ns": 74900000000
+        }
+      ],
+      "restore_deadlines_missed": 0,
+      "restore_deferrals": 1,
+      "smoothed_rtt": {
+        "covered_duration_s": 199.900499797,
+        "maximum_ms": 248.893408,
+        "minimum_ms": 99.0,
+        "p50_ms": 188.195391,
+        "p95_ms": 222.150367,
+        "p99_ms": 235.259891,
+        "qualification": "Smoothed sender RTT held between trace changes; excludes initial unknown/zero SRTT; not raw packet RTT or isolated queueing delay.",
+        "time_weighted_mean_ms": 186.03233727850056,
+        "trace_rows": 37284
+      },
+      "unfinished_protection_start_ns": null
+    },
+    "1": {
+      "counts": {
+        "ack_rows_with_sack": 4995,
+        "application_delivered_bytes": 130441740,
+        "drop_trace_rows": 244,
+        "loss_state_entries": 1,
+        "official_retransmission_rows": 262,
+        "out_of_order_payload_rows": 4797,
+        "overlapping_sequence_tx_rows": 262,
+        "recovery_state_entries": 41,
+        "repeated_cumulative_ack_rows": 4795,
+        "sender_new_sequence_bytes": 130516260,
+        "sender_payload_tx_bytes": 130877820,
+        "wire_payload_rx_bytes": 130441740,
+        "wire_unique_sequence_bytes": 130441740
+      },
+      "distinct_tagged_transmissions_dropped": 244,
+      "initial_retransmission_threshold": 3,
+      "protection_intervals": [],
+      "restore_deadlines_missed": 0,
+      "restore_deferrals": 0,
+      "smoothed_rtt": {
+        "covered_duration_s": 199.900453397,
+        "maximum_ms": 245.746328,
+        "minimum_ms": 99.0,
+        "p50_ms": 188.227734,
+        "p95_ms": 221.352726,
+        "p99_ms": 233.298029,
+        "qualification": "Smoothed sender RTT held between trace changes; excludes initial unknown/zero SRTT; not raw packet RTT or isolated queueing delay.",
+        "time_weighted_mean_ms": 185.73019824423957,
+        "trace_rows": 44975
+      },
+      "unfinished_protection_start_ns": null
+    }
+  },
+  "guard_validation": {
+    "0": {
+      "expected_sets": [
+        [
+          26100000000,
+          20
+        ],
+        [
+          74900000000,
+          20
+        ]
+      ],
+      "initial_k": 3,
+      "matched": true,
+      "observed_sets": [
+        [
+          26100000000,
+          20
+        ],
+        [
+          74900000000,
+          20
+        ]
+      ]
+    },
+    "1": {
+      "expected_sets": [],
+      "initial_k": 3,
+      "matched": true,
+      "observed_sets": []
+    }
+  },
+  "path_truth_sha256": "49bd5418f2b13bdbf6d703f719d61075f814cc86d44c745651bf797f4e5f656c",
+  "raw_inputs": [
+    {
+      "bytes": 14241554,
+      "path": "logs_ns3/study_app_rx_node_1585_port_1024.csv",
+      "sha256": "50ac9dbc1281789fe56a671935eac22e1fb529c3f93c010dc185a1b1716182df"
+    },
+    {
+      "bytes": 1140184,
+      "path": "logs_ns3/study_drop_coverage.csv",
+      "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+    },
+    {
+      "bytes": 74535,
+      "path": "logs_ns3/study_drops.csv",
+      "sha256": "f72f5f185fd505b182e221ac998494fec94a5c2789503ea89ea3ae8bbeeec546"
+    },
+    {
+      "bytes": 19192022,
+      "path": "logs_ns3/study_rx_node_1585_port_1024.csv",
+      "sha256": "07db7220b62d36386c8323fb8746e59ff00e1ed465bfb5cba44f0137c2af68f9"
+    },
+    {
+      "bytes": 74659,
+      "path": "logs_ns3/tcp_flow_0_cwnd.csv",
+      "sha256": "d7ed7056c48f68996489b6dc437cbbb0a37eafcda0798d977ae55faaf3fa4b00"
+    },
+    {
+      "bytes": 875942,
+      "path": "logs_ns3/tcp_flow_0_progress.csv",
+      "sha256": "dd3072c822ceef637124c328b20d5134c3f81ef587abc34e8866f8b5b47dc50e"
+    },
+    {
+      "bytes": 911891,
+      "path": "logs_ns3/tcp_flow_0_rtt.csv",
+      "sha256": "477c7c05a9e41797136af6869308b076c15c60c096621c78600674afd283f879"
+    },
+    {
+      "bytes": 6063,
+      "path": "logs_ns3/tcp_flow_0_study_events.csv",
+      "sha256": "e6349485f286b4de7ad0b4c04bc01dd83452afee33c8472d5ed953cb96df3d93"
+    },
+    {
+      "bytes": 9012829,
+      "path": "logs_ns3/tcp_flow_0_study_packets.csv",
+      "sha256": "271878a42a57c5b3327c1f7b50815dbf86630da3f0bbf680859acb446892cf24"
+    },
+    {
+      "bytes": 70881,
+      "path": "logs_ns3/tcp_flow_1_cwnd.csv",
+      "sha256": "28f68b44eaac35a7abb3dd033561ceaaa3e8f8c28e6fd22ce0fb722a6f7622dc"
+    },
+    {
+      "bytes": 1063487,
+      "path": "logs_ns3/tcp_flow_1_progress.csv",
+      "sha256": "5d3ab63d74128cbf078f4483cc36ab6556d92fe5f7305e80b2cb9ebd79faf84b"
+    },
+    {
+      "bytes": 1100504,
+      "path": "logs_ns3/tcp_flow_1_rtt.csv",
+      "sha256": "ed7d9eac0055a7a28572f79b03ed4c734a63a19eeac360bc3f5a1fc3d921e599"
+    },
+    {
+      "bytes": 5385,
+      "path": "logs_ns3/tcp_flow_1_study_events.csv",
+      "sha256": "c3c7695ee0d5f23f0a9897762515203dba4991b561a3a2b748a4fb86efea24dd"
+    },
+    {
+      "bytes": 10750856,
+      "path": "logs_ns3/tcp_flow_1_study_packets.csv",
+      "sha256": "c58cc1e5bca60c38cacac8607290ef160175c8938b4c3dd413d0ab0d6ae07000"
+    },
+    {
+      "bytes": 150,
+      "path": "logs_ns3/tcp_flows.csv",
+      "sha256": "bbe0c97e023ba68ff44871d38365c1fd543d5232d612e6a13afbf42d506613fa"
+    },
+    {
+      "bytes": 562,
+      "path": "logs_ns3/timing_results.csv",
+      "sha256": "6986acf4bb390f7d995a001cd8e428b61cf0119a682143ae9e6cc313a479656e"
+    }
+  ],
+  "source_commit": "95c306dd9fc1d6c09f9d5ebccfc27215f8c41a24",
+  "windows": [
+    {
+      "case": "same-start-gd",
+      "end_s": 200.0,
+      "flow0_bytes": 109029660,
+      "flow0_goodput_mbps": 4.3611864,
+      "flow0_loss_entries": 1,
+      "flow0_recovery_entries": 46,
+      "flow0_retransmission_rows": 444,
+      "flow0_share": 0.4552930329049732,
+      "flow1_bytes": 130441740,
+      "flow1_goodput_mbps": 5.2176696,
+      "flow1_loss_entries": 1,
+      "flow1_recovery_entries": 41,
+      "flow1_retransmission_rows": 262,
+      "flow1_share": 0.5447069670950268,
+      "guard0": true,
+      "guard1": false,
+      "jain_index": 0.9920685590661142,
+      "start0_s": 0.0,
+      "start1_s": 0.0,
+      "start_s": 0.0,
+      "total_goodput_mbps": 9.578856,
+      "window": "whole"
+    },
+    {
+      "case": "same-start-gd",
+      "end_s": 200.0,
+      "flow0_bytes": 109029660,
+      "flow0_goodput_mbps": 4.3611864,
+      "flow0_loss_entries": 1,
+      "flow0_recovery_entries": 46,
+      "flow0_retransmission_rows": 444,
+      "flow0_share": 0.4552930329049732,
+      "flow1_bytes": 130441740,
+      "flow1_goodput_mbps": 5.2176696,
+      "flow1_loss_entries": 1,
+      "flow1_recovery_entries": 41,
+      "flow1_retransmission_rows": 262,
+      "flow1_share": 0.5447069670950268,
+      "guard0": true,
+      "guard1": false,
+      "jain_index": 0.9920685590661142,
+      "start0_s": 0.0,
+      "start1_s": 0.0,
+      "start_s": 0.0,
+      "total_goodput_mbps": 9.578856,
+      "window": "common-active"
+    },
+    {
+      "case": "same-start-gd",
+      "end_s": 200.0,
+      "flow0_bytes": 95556720,
+      "flow0_goodput_mbps": 4.246965333333333,
+      "flow0_loss_entries": 0,
+      "flow0_recovery_entries": 41,
+      "flow0_retransmission_rows": 238,
+      "flow0_share": 0.44144385367657374,
+      "flow1_bytes": 120907320,
+      "flow1_goodput_mbps": 5.373658666666667,
+      "flow1_loss_entries": 0,
+      "flow1_recovery_entries": 35,
+      "flow1_retransmission_rows": 145,
+      "flow1_share": 0.5585561463234263,
+      "guard0": true,
+      "guard1": false,
+      "jain_index": 0.9864702750006586,
+      "start0_s": 0.0,
+      "start1_s": 0.0,
+      "start_s": 20.0,
+      "total_goodput_mbps": 9.620624,
+      "window": "steady"
+    },
+    {
+      "case": "same-start-gd",
+      "end_s": 28.2,
+      "flow0_bytes": 1741560,
+      "flow0_goodput_mbps": 5.572992,
+      "flow0_loss_entries": 0,
+      "flow0_recovery_entries": 2,
+      "flow0_retransmission_rows": 9,
+      "flow0_share": 0.5802298850574713,
+      "flow1_bytes": 1259940,
+      "flow1_goodput_mbps": 4.031808,
+      "flow1_loss_entries": 0,
+      "flow1_recovery_entries": 2,
+      "flow1_retransmission_rows": 12,
+      "flow1_share": 0.41977011494252875,
+      "guard0": true,
+      "guard1": false,
+      "jain_index": 0.9748989474543249,
+      "start0_s": 0.0,
+      "start1_s": 0.0,
+      "start_s": 25.7,
+      "total_goodput_mbps": 9.604800000000001,
+      "window": "event26"
+    },
+    {
+      "case": "same-start-gd",
+      "end_s": 77.0,
+      "flow0_bytes": 727260,
+      "flow0_goodput_mbps": 2.327232,
+      "flow0_loss_entries": 0,
+      "flow0_recovery_entries": 0,
+      "flow0_retransmission_rows": 0,
+      "flow0_share": 0.24174311926605505,
+      "flow1_bytes": 2281140,
+      "flow1_goodput_mbps": 7.299648,
+      "flow1_loss_entries": 0,
+      "flow1_recovery_entries": 0,
+      "flow1_retransmission_rows": 0,
+      "flow1_share": 0.7582568807339449,
+      "guard0": true,
+      "guard1": false,
+      "jain_index": 0.7893990242307828,
+      "start0_s": 0.0,
+      "start1_s": 0.0,
+      "start_s": 74.5,
+      "total_goodput_mbps": 9.62688,
+      "window": "event75"
+    }
+  ]
+}
