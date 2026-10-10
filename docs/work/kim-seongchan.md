@@ -1,5 +1,15 @@
 # 작업 인수인계: kim-seongchan
 
+## 최신 Vegas 후속 실험 — PR14, 2026-10-10 (KST)
+
+- [PR14](https://github.com/Jeongmin07/CS30401-Lab1/pull/14), `experiment/vegas-rtt-renewal`: PR13에서 찾은 오래된 Vegas RTT 기준값 문제를 opt-in 갱신으로 검증했다. [실험 기록](../experiments/20261010-vegas-rtt-renewal.md), [실행/분석/patch](../../code/vegas-study/README.md), [결과표](../../code/vegas-study/evidence/results.csv)를 먼저 읽는다.
+- 고정 경로/지연 증가/실제 CUBIC 경쟁/제공된 LEO의 off/on 10개 조건이 완료됐다. 시뮬레이션 launch commit은 `82ad34a975d4b15f8a536527f8ea4f0cf6e41624`; 후속 분석·문서 commit과 구별한다.
+- 제공된 200초 LEO 수신 goodput은 41.5113 -> 69.3432 Mbps (+67.0465%). 초기 CA 갱신 효과도 포함하므로 모든 이득을 후반 경로 변경에만 귀속하지 않는다. 단독 고정 조건은 off/on 기록이 같다.
+- 혼잡 구별은 아직 해결하지 못했다. 고정 propagation RTT에서도 CUBIC이 만든 실제 큐 지연을 reference에 흡수한다. 경쟁 공통 80–200초에서 Vegas 몫/공정성은 좋아지지만 aggregate 증가는 작고 큐 지연·TcDrop 비용이 존재한다. QueueDrop=0은 TcDrop=0이 아니다.
+- 원본과 두 분석기의 app 합산/bin, actual socket/delay/queue/state 기록을 교차 확인했다. 새 공식 volume에서 대표 3조건을 재실행해 measurement CSV 48개가 byte-exact로 일치했다. 기본 동작 보존도 이전 측정 CSV 27개로 확인했다. 내부 AI 감사는 다른 조원의 실제 검토를 대신하지 않는다.
+- 변경 범위는 새 `code/vegas-study/`, 이 실험 문서와 본인 인수인계다. PR10–13/이전 CUBIC 코드·원본은 보존했다. 공통 PLAN, 팀 최종 주제, 보고서나 병합을 확정하지 않았다.
+- 다음 판단은 이 prototype을 측정된 효과·비용 경계의 연구로 사용할지, 큐 지연 흡수를 줄일 추가 정보/탐색을 구현할지다. 그 경우 필요한 정보와 비용도 측정해야 한다. 조원 3명은 별도 노트북/AI를 사용하며, PR의 근거를 읽고 현재 해석을 비판적으로 검토하면 된다; 별도 프롬프트/역할을 강제하지 않는다.
+
 ## 최신 독립 실험 — 2026-10-10 (KST)
 
 - 사용자 요청에 따라 다른 조원 결과를 입력으로 사용하지 않고 Docker에서 23개 조건을 직접 실행했다. 일정표 없이 원인 검증, 최소 변경, 대조군 및 부작용 평가를 진행했다.

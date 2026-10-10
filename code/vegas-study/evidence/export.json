@@ -1,0 +1,213 @@
+{
+  "analysis_matrix": {
+    "bytes": 53503,
+    "path": "/tmp/cs30401-vegas-analysis-v1/matrix.json",
+    "sha256": "078e60271c5f48dad9356e1309074ac54f116ff09f8077136d6befb0306dae59"
+  },
+  "analysis_sources": [
+    {
+      "bytes": 10411,
+      "path": "/work/code/vegas-study/analyze_matrix.py",
+      "sha256": "fbbb1f677a376a4bac94ee4474766b937445fbba3cd54a5dfe30a7274755cd81"
+    },
+    {
+      "bytes": 36868,
+      "path": "/work/code/kim-study/analyze_study.py",
+      "sha256": "5333d7f6d86c04f79bbaad82e5e2577ec3bdf2f281e115c854ad904c404aa696"
+    },
+    {
+      "bytes": 39038,
+      "path": "/work/code/vegas-study/analyze_vegas.py",
+      "sha256": "7b7deee1416d6458b71b406043b19f0d3fc7e63290ace6e9ec06a194bb2c5eab"
+    },
+    {
+      "bytes": 135964,
+      "path": "/work/code/kim-study/path_truth_200s.csv",
+      "sha256": "49bd5418f2b13bdbf6d703f719d61075f814cc86d44c745651bf797f4e5f656c"
+    }
+  ],
+  "cases": [
+    {
+      "case": "v1-fixed-base",
+      "original_bytes": 743479796,
+      "original_regular_files": 23,
+      "renewals": 0,
+      "simulation_launch_commit": "82ad34a975d4b15f8a536527f8ea4f0cf6e41624",
+      "whole_application_bytes_by_flow": {
+        "0": 1406760960
+      },
+      "whole_network_drop_layer_rows": {},
+      "whole_queue_drop_rows": {},
+      "windows": 4
+    },
+    {
+      "case": "v1-fixed-renew",
+      "original_bytes": 743521777,
+      "original_regular_files": 23,
+      "renewals": 0,
+      "simulation_launch_commit": "82ad34a975d4b15f8a536527f8ea4f0cf6e41624",
+      "whole_application_bytes_by_flow": {
+        "0": 1406760960
+      },
+      "whole_network_drop_layer_rows": {},
+      "whole_queue_drop_rows": {},
+      "windows": 4
+    },
+    {
+      "case": "v1-step-base",
+      "original_bytes": 440093539,
+      "original_regular_files": 23,
+      "renewals": 0,
+      "simulation_launch_commit": "82ad34a975d4b15f8a536527f8ea4f0cf6e41624",
+      "whole_application_bytes_by_flow": {
+        "0": 845292780
+      },
+      "whole_network_drop_layer_rows": {},
+      "whole_queue_drop_rows": {},
+      "windows": 4
+    },
+    {
+      "case": "v1-step-renew",
+      "original_bytes": 912097145,
+      "original_regular_files": 23,
+      "renewals": 2,
+      "simulation_launch_commit": "82ad34a975d4b15f8a536527f8ea4f0cf6e41624",
+      "whole_application_bytes_by_flow": {
+        "0": 1709614380
+      },
+      "whole_network_drop_layer_rows": {},
+      "whole_queue_drop_rows": {},
+      "windows": 4
+    },
+    {
+      "case": "v1-fixed-comp-base",
+      "original_bytes": 995456681,
+      "original_regular_files": 30,
+      "renewals": 0,
+      "simulation_launch_commit": "82ad34a975d4b15f8a536527f8ea4f0cf6e41624",
+      "whole_application_bytes_by_flow": {
+        "0": 1018664940,
+        "1": 839102100
+      },
+      "whole_network_drop_layer_rows": {
+        "TcDrop": 204
+      },
+      "whole_queue_drop_rows": {},
+      "windows": 6
+    },
+    {
+      "case": "v1-fixed-comp-renew",
+      "original_bytes": 1001122689,
+      "original_regular_files": 30,
+      "renewals": 28,
+      "simulation_launch_commit": "82ad34a975d4b15f8a536527f8ea4f0cf6e41624",
+      "whole_application_bytes_by_flow": {
+        "0": 1034813700,
+        "1": 830743440
+      },
+      "whole_network_drop_layer_rows": {
+        "TcDrop": 186
+      },
+      "whole_queue_drop_rows": {},
+      "windows": 6
+    },
+    {
+      "case": "v1-step-comp-base",
+      "original_bytes": 987743156,
+      "original_regular_files": 30,
+      "renewals": 0,
+      "simulation_launch_commit": "82ad34a975d4b15f8a536527f8ea4f0cf6e41624",
+      "whole_application_bytes_by_flow": {
+        "0": 751495560,
+        "1": 1091339880
+      },
+      "whole_network_drop_layer_rows": {
+        "TcDrop": 189
+      },
+      "whole_queue_drop_rows": {},
+      "windows": 5
+    },
+    {
+      "case": "v1-step-comp-renew",
+      "original_bytes": 994552378,
+      "original_regular_files": 30,
+      "renewals": 22,
+      "simulation_launch_commit": "82ad34a975d4b15f8a536527f8ea4f0cf6e41624",
+      "whole_application_bytes_by_flow": {
+        "0": 1014193740,
+        "1": 840798120
+      },
+      "whole_network_drop_layer_rows": {
+        "TcDrop": 199
+      },
+      "whole_queue_drop_rows": {},
+      "windows": 5
+    },
+    {
+      "case": "v1-leo-base",
+      "original_bytes": 257565576,
+      "original_regular_files": 19,
+      "renewals": 0,
+      "simulation_launch_commit": "82ad34a975d4b15f8a536527f8ea4f0cf6e41624",
+      "whole_application_bytes_by_flow": {
+        "0": 1037783460
+      },
+      "whole_network_drop_layer_rows": {},
+      "whole_queue_drop_rows": {},
+      "windows": 6
+    },
+    {
+      "case": "v1-leo-renew",
+      "original_bytes": 435702680,
+      "original_regular_files": 19,
+      "renewals": 3,
+      "simulation_launch_commit": "82ad34a975d4b15f8a536527f8ea4f0cf6e41624",
+      "whole_application_bytes_by_flow": {
+        "0": 1733580840
+      },
+      "whole_network_drop_layer_rows": {},
+      "whole_queue_drop_rows": {},
+      "windows": 6
+    }
+  ],
+  "export_helper": {
+    "bytes": 18204,
+    "path": "/work/code/vegas-study/export_evidence.py",
+    "sha256": "763f6d82a0465f7410fa5f03b3e2747da25f6d9d9de1a84ffaf2ef69060837c2"
+  },
+  "files": {
+    "queue_sojourn.csv": {
+      "bytes": 19677,
+      "path": "/tmp/cs30401-vegas-export-v1/queue_sojourn.csv",
+      "sha256": "97dfa795b0563cb7cd2989148637fdb5aceca96dd7c91b14e5cc7ee694fd1d02"
+    },
+    "renewals.csv": {
+      "bytes": 8138,
+      "path": "/tmp/cs30401-vegas-export-v1/renewals.csv",
+      "sha256": "538026f5e8d8cdf08196b78216d9479e92d02480c8185f65b9cd2214263b400f"
+    },
+    "results.csv": {
+      "bytes": 14383,
+      "path": "/tmp/cs30401-vegas-export-v1/results.csv",
+      "sha256": "e90307ea0ad12a754d7ca1cda1ffc7004dfd4d4f9010a3f187792f880c3c3169"
+    }
+  },
+  "posthoc_analysis_identity": {
+    "git_head": "21f828aabd1cd15b6912de65cf96342a437ff1a9",
+    "qualification": "Post-hoc helper checkout at analysis time; launch commit is separately read and validated from each original run. Dirty/untracked helpers are identified by their SHA256, not assumed to belong to git_head.",
+    "worktree_status": ""
+  },
+  "posthoc_export_git_head": "a75c7f41cd76d230022a666edc05685064bc7384",
+  "qualifications": [
+    "Export and analysis helpers were added after simulation; their Git identities/hashes are separate from original launch commit82ad34a975d4b15f8a536527f8ea4f0cf6e41624 (or the explicit replay launch commit).",
+    "App rate=delivered bytes/full matched-window duration; active-interval rate is separately named and excludes the competitor's pre-start time. Whole flow1 has120 active seconds inside200 observation seconds; these denominators must not be compared interchangeably.",
+    "Jain is emitted only when two or more flows are active throughout the identical common window. Whole-window Jain is blank when competitor starts at80 seconds.",
+    "Queue packet-weighted waiting excludes serialization/propagation; queue occupancy is time weighted. Absent LEO queue observations remain unavailable. Smoothed RTT is separately labeled and is not queue delay.",
+    "Queue-drop zero is not network-drop zero. Raw per-layer TcDrop counts and distinct tagged transmissions are independently recounted. LOSS state is not automatically an RTO; repeated layer rows are not independent physical losses.",
+    "Wire payload union minus receiver app delivery is a terminal observation, not proof of eventual delivery or accepted TCP bytes. No new implementation/causality/fairness claim is inferred solely from higher foreground throughput.",
+    "Every original regular run file is SHA256/byte inventoried. Raw logs, full original analyses and console outputs remain outside this Git-oriented export. Per-case summary contains bounded derived evidence; original manifests/small config are copied unchanged."
+  ],
+  "simulation_launch_commits": [
+    "82ad34a975d4b15f8a536527f8ea4f0cf6e41624"
+  ]
+}

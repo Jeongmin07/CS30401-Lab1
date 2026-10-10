@@ -1,0 +1,133 @@
+{
+  "case": "v1-step-base",
+  "commands": [
+    [
+      "/home/ubuntu/lab/.venv/bin/python3",
+      "/work/code/kim-study/analyze_study.py",
+      "/tmp/cs30401-vegas/v1-step-base",
+      "--include-bins",
+      "--output",
+      "/tmp/cs30401-vegas-analysis-v1/v1-step-base/study-analysis.json",
+      "--events",
+      "100",
+      "--root-qdisc-absence-audited"
+    ],
+    [
+      "/home/ubuntu/lab/.venv/bin/python3",
+      "/work/code/vegas-study/analyze_vegas.py",
+      "/tmp/cs30401-vegas/v1-step-base",
+      "--out",
+      "/tmp/cs30401-vegas-analysis-v1/v1-step-base/vegas",
+      "--study-analysis",
+      "/tmp/cs30401-vegas-analysis-v1/v1-step-base/study-analysis.json",
+      "--event-s",
+      "100"
+    ]
+  ],
+  "end_time_unix": 1791625163.1852357,
+  "original_manifest": {
+    "bytes": 7706,
+    "path": "/tmp/cs30401-vegas/v1-step-base/case.json",
+    "sha256": "2a0cd506b98421a400455acc9268205f67e4a880ff6d2ef60af6310f5f2efc07"
+  },
+  "out": "/tmp/cs30401-vegas-analysis-v1/v1-step-base",
+  "output_artifacts": [
+    {
+      "bytes": 314487,
+      "path": "/tmp/cs30401-vegas-analysis-v1/v1-step-base/study-analysis.json",
+      "sha256": "9914abcb943ba4b7197ee651c6b36c38fac10f43d749bc0b7e7abbd22482f546"
+    },
+    {
+      "bytes": 30668,
+      "path": "/tmp/cs30401-vegas-analysis-v1/v1-step-base/vegas/summary.json",
+      "sha256": "12e7bf35d7d0d46a950c79a527eedbab4b99131d0a9d7698e845f38a1fbcfc86"
+    },
+    {
+      "bytes": 951,
+      "path": "/tmp/cs30401-vegas-analysis-v1/v1-step-base/vegas/windows.csv",
+      "sha256": "a7c6893c219e67e34f35cd714ab1224f14f3a314512d507214fe20985419527e"
+    }
+  ],
+  "phases": [
+    {
+      "analysis_source": {
+        "bytes": 36868,
+        "path": "/work/code/kim-study/analyze_study.py",
+        "sha256": "5333d7f6d86c04f79bbaad82e5e2577ec3bdf2f281e115c854ad904c404aa696"
+      },
+      "analysis_source_after": {
+        "bytes": 36868,
+        "path": "/work/code/kim-study/analyze_study.py",
+        "sha256": "5333d7f6d86c04f79bbaad82e5e2577ec3bdf2f281e115c854ad904c404aa696"
+      },
+      "command": [
+        "/home/ubuntu/lab/.venv/bin/python3",
+        "/work/code/kim-study/analyze_study.py",
+        "/tmp/cs30401-vegas/v1-step-base",
+        "--include-bins",
+        "--output",
+        "/tmp/cs30401-vegas-analysis-v1/v1-step-base/study-analysis.json",
+        "--events",
+        "100",
+        "--root-qdisc-absence-audited"
+      ],
+      "console": {
+        "bytes": 64,
+        "path": "/tmp/cs30401-vegas-analysis-v1/v1-step-base/phase-1.console.log",
+        "sha256": "054233816e7a88cad2814f7e0eb2d61982df1bf4508dd9116e0e448c1d0301b4"
+      },
+      "end_time_unix": 1791625134.7869124,
+      "exit_code": 0,
+      "phase": 1,
+      "start_time_unix": 1791625122.3757799,
+      "wall_time_s": 12.411134
+    },
+    {
+      "analysis_source": {
+        "bytes": 39038,
+        "path": "/work/code/vegas-study/analyze_vegas.py",
+        "sha256": "7b7deee1416d6458b71b406043b19f0d3fc7e63290ace6e9ec06a194bb2c5eab"
+      },
+      "analysis_source_after": {
+        "bytes": 39038,
+        "path": "/work/code/vegas-study/analyze_vegas.py",
+        "sha256": "7b7deee1416d6458b71b406043b19f0d3fc7e63290ace6e9ec06a194bb2c5eab"
+      },
+      "command": [
+        "/home/ubuntu/lab/.venv/bin/python3",
+        "/work/code/vegas-study/analyze_vegas.py",
+        "/tmp/cs30401-vegas/v1-step-base",
+        "--out",
+        "/tmp/cs30401-vegas-analysis-v1/v1-step-base/vegas",
+        "--study-analysis",
+        "/tmp/cs30401-vegas-analysis-v1/v1-step-base/study-analysis.json",
+        "--event-s",
+        "100"
+      ],
+      "console": {
+        "bytes": 233,
+        "path": "/tmp/cs30401-vegas-analysis-v1/v1-step-base/phase-2.console.log",
+        "sha256": "80f95686495346936e051c7fc16df9199760a11bd303e5127109cec9ad845a46"
+      },
+      "end_time_unix": 1791625163.174943,
+      "exit_code": 0,
+      "phase": 2,
+      "start_time_unix": 1791625134.8009465,
+      "wall_time_s": 28.376515
+    }
+  ],
+  "policy": {
+    "alpha": 2,
+    "beta": 4,
+    "gamma": 1,
+    "input": "existing socket SRTT; loss/startup unchanged",
+    "min_rise_ns": 1000000,
+    "recent_min_renewal": false,
+    "rounds": 20
+  },
+  "run": "/tmp/cs30401-vegas/v1-step-base",
+  "simulation_launch_commit": "82ad34a975d4b15f8a536527f8ea4f0cf6e41624",
+  "start_time_unix": 1791625122.3685718,
+  "status": "complete",
+  "wall_time_s": 40.819182
+}

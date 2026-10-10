@@ -8,9 +8,9 @@ Read the [experiment note](../../docs/experiments/20261010-vegas-rtt-renewal.md)
 
 `RecentMinRenewal=false` retains the original ns-3.48 Vegas decisions. When enabled, completed valid congestion-avoidance cycles contribute their minimum existing socket **SRTT** to a history. With 20 cycles present, the reference rises to that history's minimum if the rise is at least 1 ms. History then clears. Invalid cycles and Vegas disable/enable clear history. The current cycle is included, so the new reference cannot exceed its minimum SRTT. This retains ordinary downward minimum updates, slow-start rules, loss recovery and the original +/-1-MSS congestion-avoidance adjustment. It does not directly boost cwnd or obtain route information.
 
-Twenty means **20 valid ACK-boundary Vegas cycles**, not exactly 20 RTTs, independent samples or 20 packets. The measured history elapsed time is recorded. The constants 20 and 1 ms are exploratory choices declared before this matrix; they are not an optimum or a safety guarantee. Queue delay can enter this reference, and the competition controls demonstrate that limitation. The LEO run also renews during early congestion avoidance, so whole-run gain includes initial reference correction.
+Twenty means **20 valid ACK-boundary Vegas cycles**, not exactly 20 RTTs, independent samples or 20 packets. The measured history elapsed time is recorded. The constants 20 and 1 ms are exploratory choices declared before this matrix; they are not an optimum or a safety guarantee. Queue delay can enter this reference, and the competition controls demonstrate that limitation. The LEO run also renews during early congestion avoidance, so whole-run gain includes early CA reference adjustment.
 
-`vegas_state.csv` records actual minimum/reference, sample count, cwnd, threshold, diff, announced congestion state, history and each renewal. The new two-node driver records actual channel delay and socket types, application delivery, queue Enqueue-to-Dequeue wait, occupancy, pending packets and hook coverage. Passive observations schedule no extra simulation events. Existing transmission/drop/application observers are reused from the main branch's `code/kim-study/` patch; its experimental CUBIC threshold protection is not enabled by these runs.
+`vegas_state.csv` records actual minimum/reference, sample count, cwnd, threshold, diff, announced congestion state, history and each renewal. The new two-node driver records actual channel delay and socket types, application delivery, queue Enqueue-to-Dequeue wait, occupancy, pending packets and hook coverage. Trace hooks observe existing events; startup socket-class assertions use observation-only checks at start+1 ns. Existing transmission/drop/application observers are reused from the main branch's `code/kim-study/` patch; its experimental CUBIC threshold protection is not enabled by these runs.
 
 ## Files and patch choice
 
@@ -33,6 +33,7 @@ Run from a clean checkout of this PR's branch/review commit, with Docker running
 
 ```powershell
 $studyImage = 'ghcr.io/yeonjong21/cs30401-lab1@sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4'
+$studyLaunchCommit = (git rev-parse HEAD).Trim()
 $studyContainer = 'vegas-review'
 $studyVolume = 'vegas-review-ns3'
 docker volume create $studyVolume
@@ -49,6 +50,20 @@ Check the inspected image identity equals the pinned SHA before running. The run
 The matrix declares ten 200-second runs before launching: fixed solo, +6-ms RTT step solo, fixed plus CUBIC, step plus CUBIC, and supplied LEO; each has renewal off/on. Micro controls have a 100-Mbit/s full-duplex link, 100-packet FIFO per direction, initial one-way delay 45 ms, and a 100-s no-op or rise to 48 ms. CUBIC starts at 80 s on the same forward device queue. Each flow requests 100 GB, MSS 1380, initial cwnd 10, initial micro ssthresh 900 MSS, 32-MiB TCP buffers, no pacing or error model, seed 123456789/run 1. The driver removes root queue discs and checks their absence and the actual Vegas/CUBIC socket types. LEO uses the unmodified supplied Seoul 1584 to London 1585 state, official defaults and 100-Mbit/s ISL/GSL, queue 100, one 100-GB Vegas flow over 200 s. Micro-only parameters are excluded from LEO declarations.
 
 To run just the LEO pair, add `--only leo` and use a new prefix/record path. To change a parameter, use `run_case.py` directly with a new ID, and label it a new experiment rather than a replay of v1. Remaining defaults are in the unchanged course ns-3.48 stack.
+
+## Analyze and export
+
+These commands run no simulations. Use a new output directory every time. For the primary v1 runs, the analysis helper is recorded at post-hoc commit `21f828a` (full identity is in `evidence/`), separately from the simulation launch `82ad34a`. For a newly launched `review-v1` matrix, replace the prefix and supply that checkout's full launch commit. The wrapper checks each case's actual condition and launch identity before analyzing.
+
+```powershell
+docker exec $studyContainer python3 /work/code/vegas-study/analyze_matrix.py --prefix review-v1 --launch-commit $studyLaunchCommit --root /tmp/cs30401-vegas --out /tmp/vegas-review-analysis --workers 2
+docker exec $studyContainer python3 /work/code/vegas-study/export_evidence.py --analysis-root /tmp/vegas-review-analysis --out /tmp/vegas-review-evidence
+docker exec $studyContainer python3 /work/code/vegas-study/archive_raw.py --root /tmp/cs30401-vegas --pattern 'review-v1-*' --extra matrix-review-v1.json --attach-tree analysis=/tmp/vegas-review-analysis --out /tmp/vegas-review-raw.tar.gz
+```
+
+For an individual case, `analyze_vegas.py RUN --out NEW_DIR` works directly. The matrix first runs the original `code/kim-study/analyze_study.py` with bins, then cross-checks its delivery totals/bins with the independent analyzer. LEO event windows use 121.6 and 187.4 s; micro uses 100 s. Competition also uses the common 80–200-s window. The fixed-competition first-false-renew history window is declared explicitly and the same in both modes. Each analysis phase keeps commands, source fingerprints, console status and elapsed time. Export independently recounts TcDrop by flow/layer and fingerprints all original run files; it copies small original manifests/configs without relabeling them.
+
+`archive_raw.py` includes the per-file inventory and verifies every compressed member against original bytes/SHA256, then writes an archive receipt. The recorded primary archive/release identity is linked from the experiment note. `docker cp` can copy the resulting small export directory and large archive to separate host output folders; only the compact export belongs in Git.
 
 ## Metrics, storage and interpretation
 

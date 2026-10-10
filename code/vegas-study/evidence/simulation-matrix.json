@@ -1,0 +1,324 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "workers": 2,
+  "declared_tasks_before_launch": [
+    {
+      "case": "v1-fixed-base",
+      "family": "fixed",
+      "renewal": false,
+      "command": [
+        "/home/ubuntu/lab/.venv/bin/python3",
+        "/work/code/vegas-study/run_case.py",
+        "v1-fixed-base",
+        "--image-digest",
+        "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+        "--after-ms",
+        "45"
+      ]
+    },
+    {
+      "case": "v1-fixed-renew",
+      "family": "fixed",
+      "renewal": true,
+      "command": [
+        "/home/ubuntu/lab/.venv/bin/python3",
+        "/work/code/vegas-study/run_case.py",
+        "v1-fixed-renew",
+        "--image-digest",
+        "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+        "--after-ms",
+        "45",
+        "--renewal"
+      ]
+    },
+    {
+      "case": "v1-step-base",
+      "family": "step",
+      "renewal": false,
+      "command": [
+        "/home/ubuntu/lab/.venv/bin/python3",
+        "/work/code/vegas-study/run_case.py",
+        "v1-step-base",
+        "--image-digest",
+        "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4"
+      ]
+    },
+    {
+      "case": "v1-step-renew",
+      "family": "step",
+      "renewal": true,
+      "command": [
+        "/home/ubuntu/lab/.venv/bin/python3",
+        "/work/code/vegas-study/run_case.py",
+        "v1-step-renew",
+        "--image-digest",
+        "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+        "--renewal"
+      ]
+    },
+    {
+      "case": "v1-fixed-comp-base",
+      "family": "fixed-comp",
+      "renewal": false,
+      "command": [
+        "/home/ubuntu/lab/.venv/bin/python3",
+        "/work/code/vegas-study/run_case.py",
+        "v1-fixed-comp-base",
+        "--image-digest",
+        "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+        "--after-ms",
+        "45",
+        "--competitor"
+      ]
+    },
+    {
+      "case": "v1-fixed-comp-renew",
+      "family": "fixed-comp",
+      "renewal": true,
+      "command": [
+        "/home/ubuntu/lab/.venv/bin/python3",
+        "/work/code/vegas-study/run_case.py",
+        "v1-fixed-comp-renew",
+        "--image-digest",
+        "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+        "--after-ms",
+        "45",
+        "--competitor",
+        "--renewal"
+      ]
+    },
+    {
+      "case": "v1-step-comp-base",
+      "family": "step-comp",
+      "renewal": false,
+      "command": [
+        "/home/ubuntu/lab/.venv/bin/python3",
+        "/work/code/vegas-study/run_case.py",
+        "v1-step-comp-base",
+        "--image-digest",
+        "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+        "--competitor"
+      ]
+    },
+    {
+      "case": "v1-step-comp-renew",
+      "family": "step-comp",
+      "renewal": true,
+      "command": [
+        "/home/ubuntu/lab/.venv/bin/python3",
+        "/work/code/vegas-study/run_case.py",
+        "v1-step-comp-renew",
+        "--image-digest",
+        "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+        "--competitor",
+        "--renewal"
+      ]
+    },
+    {
+      "case": "v1-leo-base",
+      "family": "leo",
+      "renewal": false,
+      "command": [
+        "/home/ubuntu/lab/.venv/bin/python3",
+        "/work/code/vegas-study/run_case.py",
+        "v1-leo-base",
+        "--image-digest",
+        "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+        "--kind",
+        "leo"
+      ]
+    },
+    {
+      "case": "v1-leo-renew",
+      "family": "leo",
+      "renewal": true,
+      "command": [
+        "/home/ubuntu/lab/.venv/bin/python3",
+        "/work/code/vegas-study/run_case.py",
+        "v1-leo-renew",
+        "--image-digest",
+        "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+        "--kind",
+        "leo",
+        "--renewal"
+      ]
+    }
+  ],
+  "results": [
+    {
+      "case": "v1-fixed-renew",
+      "family": "fixed",
+      "renewal": true,
+      "command": [
+        "/home/ubuntu/lab/.venv/bin/python3",
+        "/work/code/vegas-study/run_case.py",
+        "v1-fixed-renew",
+        "--image-digest",
+        "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+        "--after-ms",
+        "45",
+        "--renewal"
+      ],
+      "runner_exit_code": 0,
+      "runner_wall_s": 25.467,
+      "output": "{\"case\": \"v1-fixed-renew\", \"status\": \"complete\", \"exit_code\": 0, \"wall_time_s\": 22.563, \"source_commit\": \"82ad34a975d4b15f8a536527f8ea4f0cf6e41624\"}\n"
+    },
+    {
+      "case": "v1-fixed-base",
+      "family": "fixed",
+      "renewal": false,
+      "command": [
+        "/home/ubuntu/lab/.venv/bin/python3",
+        "/work/code/vegas-study/run_case.py",
+        "v1-fixed-base",
+        "--image-digest",
+        "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+        "--after-ms",
+        "45"
+      ],
+      "runner_exit_code": 0,
+      "runner_wall_s": 25.513,
+      "output": "{\"case\": \"v1-fixed-base\", \"status\": \"complete\", \"exit_code\": 0, \"wall_time_s\": 22.621, \"source_commit\": \"82ad34a975d4b15f8a536527f8ea4f0cf6e41624\"}\n"
+    },
+    {
+      "case": "v1-step-base",
+      "family": "step",
+      "renewal": false,
+      "command": [
+        "/home/ubuntu/lab/.venv/bin/python3",
+        "/work/code/vegas-study/run_case.py",
+        "v1-step-base",
+        "--image-digest",
+        "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4"
+      ],
+      "runner_exit_code": 0,
+      "runner_wall_s": 15.305,
+      "output": "{\"case\": \"v1-step-base\", \"status\": \"complete\", \"exit_code\": 0, \"wall_time_s\": 14.313, \"source_commit\": \"82ad34a975d4b15f8a536527f8ea4f0cf6e41624\"}\n"
+    },
+    {
+      "case": "v1-step-renew",
+      "family": "step",
+      "renewal": true,
+      "command": [
+        "/home/ubuntu/lab/.venv/bin/python3",
+        "/work/code/vegas-study/run_case.py",
+        "v1-step-renew",
+        "--image-digest",
+        "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+        "--renewal"
+      ],
+      "runner_exit_code": 0,
+      "runner_wall_s": 33.065,
+      "output": "{\"case\": \"v1-step-renew\", \"status\": \"complete\", \"exit_code\": 0, \"wall_time_s\": 32.121, \"source_commit\": \"82ad34a975d4b15f8a536527f8ea4f0cf6e41624\"}\n"
+    },
+    {
+      "case": "v1-fixed-comp-base",
+      "family": "fixed-comp",
+      "renewal": false,
+      "command": [
+        "/home/ubuntu/lab/.venv/bin/python3",
+        "/work/code/vegas-study/run_case.py",
+        "v1-fixed-comp-base",
+        "--image-digest",
+        "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+        "--after-ms",
+        "45",
+        "--competitor"
+      ],
+      "runner_exit_code": 0,
+      "runner_wall_s": 36.232,
+      "output": "{\"case\": \"v1-fixed-comp-base\", \"status\": \"complete\", \"exit_code\": 0, \"wall_time_s\": 34.406, \"source_commit\": \"82ad34a975d4b15f8a536527f8ea4f0cf6e41624\"}\n"
+    },
+    {
+      "case": "v1-fixed-comp-renew",
+      "family": "fixed-comp",
+      "renewal": true,
+      "command": [
+        "/home/ubuntu/lab/.venv/bin/python3",
+        "/work/code/vegas-study/run_case.py",
+        "v1-fixed-comp-renew",
+        "--image-digest",
+        "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+        "--after-ms",
+        "45",
+        "--competitor",
+        "--renewal"
+      ],
+      "runner_exit_code": 0,
+      "runner_wall_s": 36.794,
+      "output": "{\"case\": \"v1-fixed-comp-renew\", \"status\": \"complete\", \"exit_code\": 0, \"wall_time_s\": 33.603, \"source_commit\": \"82ad34a975d4b15f8a536527f8ea4f0cf6e41624\"}\n"
+    },
+    {
+      "case": "v1-step-comp-base",
+      "family": "step-comp",
+      "renewal": false,
+      "command": [
+        "/home/ubuntu/lab/.venv/bin/python3",
+        "/work/code/vegas-study/run_case.py",
+        "v1-step-comp-base",
+        "--image-digest",
+        "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+        "--competitor"
+      ],
+      "runner_exit_code": 0,
+      "runner_wall_s": 37.371,
+      "output": "{\"case\": \"v1-step-comp-base\", \"status\": \"complete\", \"exit_code\": 0, \"wall_time_s\": 35.509, \"source_commit\": \"82ad34a975d4b15f8a536527f8ea4f0cf6e41624\"}\n"
+    },
+    {
+      "case": "v1-step-comp-renew",
+      "family": "step-comp",
+      "renewal": true,
+      "command": [
+        "/home/ubuntu/lab/.venv/bin/python3",
+        "/work/code/vegas-study/run_case.py",
+        "v1-step-comp-renew",
+        "--image-digest",
+        "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+        "--competitor",
+        "--renewal"
+      ],
+      "runner_exit_code": 0,
+      "runner_wall_s": 38.093,
+      "output": "{\"case\": \"v1-step-comp-renew\", \"status\": \"complete\", \"exit_code\": 0, \"wall_time_s\": 35.362, \"source_commit\": \"82ad34a975d4b15f8a536527f8ea4f0cf6e41624\"}\n"
+    },
+    {
+      "case": "v1-leo-base",
+      "family": "leo",
+      "renewal": false,
+      "command": [
+        "/home/ubuntu/lab/.venv/bin/python3",
+        "/work/code/vegas-study/run_case.py",
+        "v1-leo-base",
+        "--image-digest",
+        "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+        "--kind",
+        "leo"
+      ],
+      "runner_exit_code": 0,
+      "runner_wall_s": 97.631,
+      "output": "Run directory ready: /tmp/cs30401-vegas/v1-leo-base  (1 flow(s), TcpVegas, 100 Mbit/s, queue 100 pkts, 200 s)\n{\"case\": \"v1-leo-base\", \"status\": \"complete\", \"exit_code\": 0, \"wall_time_s\": 95.595, \"source_commit\": \"82ad34a975d4b15f8a536527f8ea4f0cf6e41624\"}\n"
+    },
+    {
+      "case": "v1-leo-renew",
+      "family": "leo",
+      "renewal": true,
+      "command": [
+        "/home/ubuntu/lab/.venv/bin/python3",
+        "/work/code/vegas-study/run_case.py",
+        "v1-leo-renew",
+        "--image-digest",
+        "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+        "--kind",
+        "leo",
+        "--renewal"
+      ],
+      "runner_exit_code": 0,
+      "runner_wall_s": 166.302,
+      "output": "Run directory ready: /tmp/cs30401-vegas/v1-leo-renew  (1 flow(s), TcpVegas, 100 Mbit/s, queue 100 pkts, 200 s)\n{\"case\": \"v1-leo-renew\", \"status\": \"complete\", \"exit_code\": 0, \"wall_time_s\": 164.348, \"source_commit\": \"82ad34a975d4b15f8a536527f8ea4f0cf6e41624\"}\n"
+    }
+  ],
+  "start_time_unix": 1791624109.6053205,
+  "wall_time_s": 299.778,
+  "end_time_unix": 1791624409.3534338
+}

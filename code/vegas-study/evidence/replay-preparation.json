@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "container": "lab1-vegas-replay-20261010",
+  "volume": "cs30401-vegas-replay-ns3-20261010",
+  "source_commit": "82ad34a975d4b15f8a536527f8ea4f0cf6e41624",
+  "official_image_digest": "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+  "host_repository_mount_read_only": true,
+  "host_preparation_records": [
+    {
+      "phase": "fresh_pinned_container_and_volume",
+      "command": "docker run -d --name lab1-vegas-replay-20261010 --mount 'type=bind,source=C:\\Users\\Newbiedev\\Desktop\\\ub124\ub5a1CS30401\\CS30401-Lab1,target=/hostwork,readonly' --mount 'type=volume,source=cs30401-vegas-replay-ns3-20261010,target=/home/ubuntu/ns-3.48' ghcr.io/yeonjong21/cs30401-lab1@sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4 sleep infinity",
+      "start_unix": 1791624701.825,
+      "elapsed_s": 5.181,
+      "exit_code": 0,
+      "output": "93555bede4e70393bdf2e5ee6beb620f7714752ee1614e373ea3713ff9bcc4b7\n"
+    },
+    {
+      "phase": "initial_readonly_check_0",
+      "result": {
+        "chunk_id": "1ed494",
+        "wall_time_seconds": 0.1545365,
+        "exit_code": 0,
+        "original_token_count": 158,
+        "output": "93555bede4e70393bdf2e5ee6beb620f7714752ee1614e373ea3713ff9bcc4b7 sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4 ghcr.io/yeonjong21/cs30401-lab1@sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4 [{\"Destination\":\"/hostwork\",\"Mode\":\"\",\"Propagation\":\"rprivate\",\"RW\":false,\"Source\":\"C:\\\\Users\\\\Newbiedev\\\\Desktop\\\\\ub124\ub5a1CS30401\\\\CS30401-Lab1\",\"Type\":\"bind\"},{\"Destination\":\"/home/ubuntu/ns-3.48\",\"Driver\":\"local\",\"Mode\":\"z\",\"Name\":\"cs30401-vegas-replay-ns3-20261010\",\"Propagation\":\"\",\"RW\":true,\"Source\":\"/var/lib/docker/volumes/cs30401-vegas-replay-ns3-20261010/_data\",\"Type\":\"volume\"}]\n"
+      }
+    },
+    {
+      "phase": "initial_readonly_check_1",
+      "result": {
+        "chunk_id": "23c9d3",
+        "wall_time_seconds": 1.1997909,
+        "exit_code": 0,
+        "original_token_count": 105,
+        "output": "ns3source git True\n['status', '--porcelain'] 0  \n['rev-parse', 'HEAD'] 0 99bc6f733274475b7a6e804128651e17ee2a2536\n \n['rev-parse', 'cs30401-base'] 0 99bc6f733274475b7a6e804128651e17ee2a2536\n \n['diff', '--cached', '--stat', 'cs30401-base'] 0  \nsource user uid=1000(ubuntu) gid=1000(ubuntu) groups=1000(ubuntu),4(adm),20(dialout),24(cdrom),25(floppy),27(sudo),29(audio),30(dip),44(video),46(plugdev)\nbasebuildfiles True\n"
+      }
+    },
+    {
+      "phase": "prepare_private_work_copy",
+      "command": "docker exec --user root lab1-vegas-replay-20261010 install -d -o ubuntu -g ubuntu /work",
+      "start_unix": 1791624755.628,
+      "elapsed_s": 1.292,
+      "exit_code": 0,
+      "output": ""
+    }
+  ],
+  "stages": [
+    {
+      "label": "clone_immutable_repository",
+      "command": [
+        "git",
+        "-c",
+        "safe.directory=/hostwork",
+        "clone",
+        "--no-hardlinks",
+        "/hostwork",
+        "/work"
+      ],
+      "cwd": null,
+      "exit_code": 128,
+      "wall_time_s": 0.057,
+      "log": "/tmp/vegas-replay-audit/clone_immutable_repository.log"
+    },
+    {
+      "label": "clone_immutable_repository_exact_safe_paths",
+      "command": [
+        "git",
+        "-c",
+        "safe.directory=/hostwork",
+        "-c",
+        "safe.directory=/hostwork/.git",
+        "clone",
+        "--no-hardlinks",
+        "/hostwork",
+        "/work"
+      ],
+      "cwd": null,
+      "exit_code": 128,
+      "wall_time_s": 0.045,
+      "log": "/tmp/vegas-replay-audit/clone_immutable_repository_exact_safe_paths.log"
+    },
+    {
+      "label": "clone_immutable_repository_inherited_exact_safe_paths",
+      "command": [
+        "git",
+        "clone",
+        "--no-hardlinks",
+        "/hostwork",
+        "/work"
+      ],
+      "cwd": null,
+      "exit_code": 0,
+      "wall_time_s": 6.728,
+      "log": "/tmp/vegas-replay-audit/clone_immutable_repository_inherited_exact_safe_paths.log"
+    },
+    {
+      "label": "checkout_source_commit",
+      "command": [
+        "git",
+        "checkout",
+        "--detach",
+        "82ad34a975d4b15f8a536527f8ea4f0cf6e41624"
+      ],
+      "cwd": "/work",
+      "exit_code": 0,
+      "wall_time_s": 0.221,
+      "log": "/tmp/vegas-replay-audit/checkout_source_commit.log"
+    },
+    {
+      "label": "check_complete_patch",
+      "command": [
+        "git",
+        "apply",
+        "--check",
+        "/work/code/vegas-study/ns3.patch"
+      ],
+      "cwd": "/home/ubuntu/ns-3.48",
+      "exit_code": 0,
+      "wall_time_s": 0.01,
+      "log": "/tmp/vegas-replay-audit/check_complete_patch.log"
+    },
+    {
+      "label": "apply_complete_patch_to_index",
+      "command": [
+        "git",
+        "apply",
+        "--index",
+        "/work/code/vegas-study/ns3.patch"
+      ],
+      "cwd": "/home/ubuntu/ns-3.48",
+      "exit_code": 0,
+      "wall_time_s": 0.021,
+      "log": "/tmp/vegas-replay-audit/apply_complete_patch_to_index.log"
+    },
+    {
+      "label": "build",
+      "command": [
+        "./ns3",
+        "build",
+        "-j",
+        "2"
+      ],
+      "cwd": "/home/ubuntu/ns-3.48",
+      "exit_code": 0,
+      "wall_time_s": 45.732,
+      "log": "/tmp/vegas-replay-audit/build.log"
+    }
+  ],
+  "status": "prepared",
+  "started_unix": 1791624780.5690794,
+  "local_clone_trust": {
+    "configuration": "/tmp/vegas-replay-audit/local-source.gitconfig",
+    "qualification": "Temporary exact read-only source paths; global/home/host Git configuration unchanged. Inherited by local upload-pack subprocess."
+  },
+  "declared_patch_sha256": "25ac4286f68373ee4e33d43f5f00e8676a65fc9c8747d65f643cd0fc28202f59",
+  "staged_patch_sha256": "25ac4286f68373ee4e33d43f5f00e8676a65fc9c8747d65f643cd0fc28202f59",
+  "base_commit": "99bc6f733274475b7a6e804128651e17ee2a2536",
+  "source_and_patch_checks_passed": true,
+  "finished_unix": 1791624928.7481368
+}
