@@ -1,0 +1,34 @@
+{
+  "command": [
+    "python3",
+    "-B",
+    "/tmp/vegas-replay-audit/audit_mechanism.py",
+    "--root",
+    "/tmp/cs30401-vegas",
+    "--out",
+    "/tmp/vegas-replay-audit/mechanism-audit.json"
+  ],
+  "exit_code": 0,
+  "output": {
+    "bytes": 97994,
+    "path": "/tmp/vegas-replay-audit/mechanism-audit.json",
+    "sha256": "08efcf19c0d26a6e92a2a09d3a9a407cefcad000f92ed4a29854c67fbe9d619a"
+  },
+  "post_run_only": true,
+  "schema_version": 1,
+  "script": {
+    "bytes": 26018,
+    "path": "/tmp/vegas-replay-audit/audit_mechanism.py",
+    "sha256": "3db271bd8dd075f01af15054e58ee329fa0a25f98a328b8e674f1a157f8c847c"
+  },
+  "simulations_launched": 0,
+  "summary": {
+    "all_prefix_checks_match": true,
+    "case_count": 10,
+    "error_count": 0,
+    "prefix_files_checked": 59,
+    "prefix_pairs": 5,
+    "renewals": 55,
+    "state_rows": 21865
+  }
+}

@@ -22,6 +22,7 @@ Twenty means **20 valid ACK-boundary Vegas cycles**, not exactly 20 RTTs, indepe
 | `run_case.py`, `run_matrix.py` | Refuse reused output IDs and dirty launch checkout; record exact source, patch, binary, shared-library, settings, command and runtime identities |
 | `analyze_vegas.py` | Independent application sums, internal-state checks, actual queue distributions/occupancy and loss/terminal metrics |
 | `analyze_matrix.py`, `export_evidence.py` | Reproducible full analysis and compact Git evidence |
+| `audit_mechanism.py` | Independent reconstruction of the original v1 cycle history, queue windows and off/on trace prefixes |
 | `archive_raw.py` | Compress completed run trees outside Git and independently verify every archived member's bytes/hash |
 | `evidence/` | Small launch/configuration/analysis records and result tables; original packet logs are in the linked release |
 
@@ -64,6 +65,8 @@ docker exec $studyContainer python3 /work/code/vegas-study/archive_raw.py --root
 For an individual case, `analyze_vegas.py RUN --out NEW_DIR` works directly. The matrix first runs the original `code/kim-study/analyze_study.py` with bins, then cross-checks its delivery totals/bins with the independent analyzer. LEO event windows use 121.6 and 187.4 s; micro uses 100 s. Competition also uses the common 80–200-s window. The fixed-competition first-false-renew history window is declared explicitly and the same in both modes. Each analysis phase keeps commands, source fingerprints, console status and elapsed time. Export independently recounts TcDrop by flow/layer and fingerprints all original run files; it copies small original manifests/configs without relabeling them.
 
 `archive_raw.py` includes the per-file inventory and verifies every compressed member against original bytes/SHA256, then writes an archive receipt. The recorded primary archive/release identity is linked from the experiment note. `docker cp` can copy the resulting small export directory and large archive to separate host output folders; only the compact export belongs in Git.
+
+`audit_mechanism.py` audits the **original v1 matrix** (fixed case IDs and original launch identity), independently of the two analyzers. After extracting the raw release into a new root, run `python3 audit_mechanism.py --root EXTRACTED_RUN_ROOT --out NEW_JSON`. It reads existing traces, not ns-3. The installed ns-3 source should still carry this exact patch for its source checks. The recorded [audit](evidence/mechanism-audit.json) and [execution](evidence/mechanism-execution.json) are separate post-hoc artifacts; they were authored after the raw archive and are supplied in Git rather than claimed to be inside its 380 members. The helper is not a generic assertion of different prefixes, policies or launch commits.
 
 ## Metrics, storage and interpretation
 

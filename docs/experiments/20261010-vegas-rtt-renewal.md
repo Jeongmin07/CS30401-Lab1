@@ -1,6 +1,6 @@
 # Vegas RTT-reference renewal: mechanism and matched controls
 
-**Status: implementation, ten matched simulations, cross-analysis and fresh replay verified; raw publication finishing, 2026-10-10.** Owner: kim-seongchan with AI assistance. [PR14](https://github.com/Jeongmin07/CS30401-Lab1/pull/14), branch `experiment/vegas-rtt-renewal`, starts from latest main `b60e8e019053c7d33b853510ec06c3d94ee78faf`. The user requested continuation after [PR13](https://github.com/Jeongmin07/CS30401-Lab1/pull/13) screened Vegas's propagation/congestion confusion. This branch references that evidence without modifying its runs or assuming teammate approval.
+**Status: implementation, ten matched simulations, cross-analysis, fresh replay and raw publication verified; ready for teammate review, 2026-10-10.** Owner: kim-seongchan with AI assistance. [PR14](https://github.com/Jeongmin07/CS30401-Lab1/pull/14), branch `experiment/vegas-rtt-renewal`, starts from latest main `b60e8e019053c7d33b853510ec06c3d94ee78faf`. The user requested continuation after [PR13](https://github.com/Jeongmin07/CS30401-Lab1/pull/13) screened Vegas's propagation/congestion confusion. This branch references that evidence without modifying its runs or assuming teammate approval.
 
 ## Research question and finding
 
@@ -16,7 +16,7 @@ The opt-in `RecentMinRenewal` policy retains the existing socket SRTT input and 
 
 The constants were declared before the v1 matrix and are exploratory, not optimized. Twenty cycles are not exactly twenty RTTs, packets or independent samples. The actual history span is traced. Implementation state needs at most 20 history entries per socket; instrumentation I/O and simulated wall time are not a measured deployment cost.
 
-The independent internal audit reconstructed all 21,865 Vegas trace rows across ten cases: valid-cycle gates, history minima/length/time, clearing, reference bound, diff and counts all agreed. This is an AI-assisted local audit, **not review by another human teammate**.
+The independent internal audit reconstructed all 21,865 Vegas trace rows across ten cases: valid-cycle gates, history minima/length/time, clearing, reference bound, diff and counts all agreed. It also compared 59 pre-first-renewal measurement trace prefixes across the five off/on pairs, all identical; fixed with no renewal uses the whole trace. [Independent audit script](../../code/vegas-study/audit_mechanism.py), [full audit result](../../code/vegas-study/evidence/mechanism-audit.json) and [execution/hash receipt](../../code/vegas-study/evidence/mechanism-execution.json) are separately preserved post-hoc artifacts. Its descriptive dequeues do not join every SRTT sample to a packet or prove continuous occupancy by themselves. This is an AI-assisted local audit, **not review by another human teammate**.
 
 | Case | Direct internal evidence |
 | --- | --- |
@@ -49,7 +49,7 @@ These are unique ordered `HandleRead` payload bytes divided by exact common half
 
 ## Genuine congestion counterexample and cost
 
-First false-renewal history **[90.194745440,91.958450720)** has the same app/queue observations in fixed competition baseline and renewal. Actual forward FIFO occupancy is positive for the entire history, mean 25.60749 packets, maximum 49. For 15,374 dequeued packets, wait is minimum 0.96864, mean 2.929543, p95 5.21328, maximum 5.55744 ms. All 8,808 Vegas-tagged dequeues wait more than 1 ms. There are no observed drops **in this history window**. Raising the reference from 90 to 91.030581 ms therefore also happens under persistent real queueing without a propagation change.
+First false-renewal history **[90.194745440,91.958450720)** has the same app/queue observations in fixed competition baseline and renewal. Actual forward FIFO time-mean occupancy is 25.60749 packets, maximum 49. For 15,374 dequeued packets, wait is minimum 0.96864, mean 2.929543, p95 5.21328, maximum 5.55744 ms. All 8,808 Vegas-tagged dequeues wait more than 1 ms. There are no observed drops **in this history window**. Raising the reference from 90 to 91.030581 ms therefore also happens under sustained real queueing without a propagation change. Positive dequeue samples alone do not establish that the queue never emptied at every instant.
 
 At the fixed competition maximum-reference renewal, its history [179.640105440,181.546637120) contains 3,636 Vegas forward dequeues, all positive wait: minimum 9.228480, mean 10.290870, maximum 11.408160 ms. The reference reaches 99.452851 ms while propagation remains 90 ms. These direct queue records establish absorption more strongly than inferring queueing by subtracting geometric delay from sender SRTT. They characterize these windows, not all dequeues over the run.
 
@@ -93,7 +93,7 @@ SHA256 5f63e78ef2eec9c5206b16185c9595617d54257a836863b8139367c9eea77723
 Inventory SHA256 5e4ed2b68907368afadb4d299bd81239313bfd6ba39876dac2a79e0764fbfa27
 ```
 
-The per-file inventory is both embedded and supplied separately. The release tag targets simulation launch `82ad34a`, not the later analysis/documentation checkout. The small Git export plus verification records total about 0.7 MB; no large original CSV was committed. Prior PR13 originals remain in its separate release and were not moved or overwritten.
+The per-file inventory is both embedded and supplied separately. The release tag targets simulation launch `82ad34a`, not the later analysis/documentation checkout. After publication, both GitHub asset states/sizes/SHA256 digests matched the local archive and inventory; [publication receipt](../../code/vegas-study/evidence/raw-publication.json) links the downloadable assets. The small Git evidence plus verification records total about 0.8 MB; no large original CSV was committed. The independent mechanism audit was written after this raw archive and is separately supplied in Git, not relabeled as one of the archive's 380 members. Prior PR13 originals remain in its separate release and were not moved or overwritten.
 
 ## Prior work and scope
 
