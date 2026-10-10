@@ -73,7 +73,7 @@ No drain period or duration-extension control was run. The accounting does not e
 
 [PR #10](https://github.com/Jeongmin07/CS30401-Lab1/pull/10), reviewed at **036c9d84653a92944705c8af9d88313d3402443d**, is now ready for review. It is a different, single-flow q75 investigation. Its new second target is **121.5–121.9 seconds**, whereas this comparison preserves **74.9–75.3 seconds**. PR #10's K8 plus known-size exemption matches K20's reported bulk delivery in its tested LEO conditions while reducing a 22-MSS real-loss cost; K8 does not preserve K20's synthetic 80-MSS reordering benefit. Those teammate experiments were read, not rerun here.
 
-The two investigations support evaluating local recovery, total delivery, competitor delivery and genuine-loss costs separately. K8 and the new 121.5-second window have **not** been tested in this two-flow comparison. No final shared parameter or research topic is chosen by either PR.
+The two investigations support evaluating local recovery, total delivery, competitor delivery and genuine-loss costs separately. This audit initially covered K20 only. The later [six-case K8 extension](20261010-cubic-k8-competing.md) evaluates K8 with this comparison's original windows; the new 121.5-second window remains untested here. No final shared parameter or research topic is chosen by either PR.
 
 ## Provenance, raw archive and reproduction
 

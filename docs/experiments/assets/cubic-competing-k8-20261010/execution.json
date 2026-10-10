@@ -1,0 +1,114 @@
+{
+  "declaration": "Six K8 G-socket comparisons. Same q100,10Mbps,starts,seed and absolute windows as eight existing DD/K20 controls. Existing runs never overwritten.",
+  "workers": 2,
+  "runs": [
+    {
+      "case": "same-start-gd-k8",
+      "command": [
+        "python3",
+        "/work/code/competing-flows/run_competing.py",
+        "same-start-gd-k8",
+        "--mode",
+        "GD",
+        "--start1-s",
+        "0",
+        "--guard-parameters",
+        "study_threshold=8;study_windows=26100000000:26500000000|74900000000:75300000000"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 19.214335737999136,
+      "stdout": "{\n  \"case\": \"same-start-gd-k8\",\n  \"status\": \"complete\",\n  \"stage\": \"simulation\",\n  \"exit_code\": 0,\n  \"wall_time_s\": 19.109562,\n  \"patch_sha256\": \"473dd0e23447a58bd7ce644507cf4aa24b612020ff1e6029f5bfdb22e2cd4245\",\n  \"error\": null\n}\n",
+      "stderr": ""
+    },
+    {
+      "case": "same-start-dg-k8",
+      "command": [
+        "python3",
+        "/work/code/competing-flows/run_competing.py",
+        "same-start-dg-k8",
+        "--mode",
+        "DG",
+        "--start1-s",
+        "0",
+        "--guard-parameters",
+        "study_threshold=8;study_windows=26100000000:26500000000|74900000000:75300000000"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 19.215640208999503,
+      "stdout": "{\n  \"case\": \"same-start-dg-k8\",\n  \"status\": \"complete\",\n  \"stage\": \"simulation\",\n  \"exit_code\": 0,\n  \"wall_time_s\": 19.11099,\n  \"patch_sha256\": \"473dd0e23447a58bd7ce644507cf4aa24b612020ff1e6029f5bfdb22e2cd4245\",\n  \"error\": null\n}\n",
+      "stderr": ""
+    },
+    {
+      "case": "same-start-gg-k8",
+      "command": [
+        "python3",
+        "/work/code/competing-flows/run_competing.py",
+        "same-start-gg-k8",
+        "--mode",
+        "GG",
+        "--start1-s",
+        "0",
+        "--guard-parameters",
+        "study_threshold=8;study_windows=26100000000:26500000000|74900000000:75300000000"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 20.67301399600001,
+      "stdout": "{\n  \"case\": \"same-start-gg-k8\",\n  \"status\": \"complete\",\n  \"stage\": \"simulation\",\n  \"exit_code\": 0,\n  \"wall_time_s\": 20.58034,\n  \"patch_sha256\": \"473dd0e23447a58bd7ce644507cf4aa24b612020ff1e6029f5bfdb22e2cd4245\",\n  \"error\": null\n}\n",
+      "stderr": ""
+    },
+    {
+      "case": "join10-gd-k8",
+      "command": [
+        "python3",
+        "/work/code/competing-flows/run_competing.py",
+        "join10-gd-k8",
+        "--mode",
+        "GD",
+        "--start1-s",
+        "10",
+        "--guard-parameters",
+        "study_threshold=8;study_windows=26100000000:26500000000|74900000000:75300000000"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 20.676089276999846,
+      "stdout": "{\n  \"case\": \"join10-gd-k8\",\n  \"status\": \"complete\",\n  \"stage\": \"simulation\",\n  \"exit_code\": 0,\n  \"wall_time_s\": 20.583872,\n  \"patch_sha256\": \"473dd0e23447a58bd7ce644507cf4aa24b612020ff1e6029f5bfdb22e2cd4245\",\n  \"error\": null\n}\n",
+      "stderr": ""
+    },
+    {
+      "case": "join10-dg-k8",
+      "command": [
+        "python3",
+        "/work/code/competing-flows/run_competing.py",
+        "join10-dg-k8",
+        "--mode",
+        "DG",
+        "--start1-s",
+        "10",
+        "--guard-parameters",
+        "study_threshold=8;study_windows=26100000000:26500000000|74900000000:75300000000"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 20.55405862399948,
+      "stdout": "{\n  \"case\": \"join10-dg-k8\",\n  \"status\": \"complete\",\n  \"stage\": \"simulation\",\n  \"exit_code\": 0,\n  \"wall_time_s\": 20.456578,\n  \"patch_sha256\": \"473dd0e23447a58bd7ce644507cf4aa24b612020ff1e6029f5bfdb22e2cd4245\",\n  \"error\": null\n}\n",
+      "stderr": ""
+    },
+    {
+      "case": "join10-gg-k8",
+      "command": [
+        "python3",
+        "/work/code/competing-flows/run_competing.py",
+        "join10-gg-k8",
+        "--mode",
+        "GG",
+        "--start1-s",
+        "10",
+        "--guard-parameters",
+        "study_threshold=8;study_windows=26100000000:26500000000|74900000000:75300000000"
+      ],
+      "exit_code": 0,
+      "elapsed_s": 20.077768841999386,
+      "stdout": "{\n  \"case\": \"join10-gg-k8\",\n  \"status\": \"complete\",\n  \"stage\": \"simulation\",\n  \"exit_code\": 0,\n  \"wall_time_s\": 19.985541,\n  \"patch_sha256\": \"473dd0e23447a58bd7ce644507cf4aa24b612020ff1e6029f5bfdb22e2cd4245\",\n  \"error\": null\n}\n",
+      "stderr": ""
+    }
+  ]
+}

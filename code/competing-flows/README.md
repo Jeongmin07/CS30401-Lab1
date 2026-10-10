@@ -15,6 +15,17 @@ existing traces only. `archive_competing.py` packages the twelve declared cases
 outside Git with per-file hashes. Exact commands, exclusions, evidence and the
 shared raw archive are in that follow-up record.
 
+The [six-case K8 extension](../../docs/experiments/20261010-cubic-k8-competing.md)
+reuses the original DD/K20 controls. K8 reduces the first genuine-loss repair
+delay but lowers all three simultaneous-start Jain indices relative to K20.
+`compare_thresholds.py` combines validated compact exports into five matched
+windows, metrics, contrasts and actual guard intervals. `audit_k8_join.py`
+checks complete observed K20/K8 trajectory equality in the three join10 pairs,
+with intended threshold controls validated separately. Both read existing
+evidence only. `archive_competing.py --cases NAME ...` also packages an explicit
+case set; its original twelve-case default is retained. Exact reproduction,
+fresh-volume replay and the additional raw asset are in the extension record.
+
 The defaults retain Seoul (1584) to London (1585), two 100-GB CUBIC transfers,
 10-Mbit/s ISL/GSL links, 100-packet queues, no pacing, seed 123456789, and 200
 seconds of the supplied state. Both flows start at zero by default. The mode

@@ -6,6 +6,7 @@ import hashlib
 import io
 import json
 from pathlib import Path
+import re
 import tarfile
 
 
@@ -27,12 +28,19 @@ def main():
     parser.add_argument("--root", type=Path, default=Path("/tmp/cs30401-competing"))
     parser.add_argument("--out", type=Path, required=True)
     parser.add_argument("--manifest", type=Path, required=True)
+    parser.add_argument("--cases", nargs="+", default=CASES,
+                        help="Explicit case names; default is the original twelve-case archive")
     args = parser.parse_args()
     if args.out.exists() or args.manifest.exists() or args.out == args.manifest:
         raise SystemExit("Archive and manifest must use distinct, new output paths")
+    if len(args.cases) != len(set(args.cases)) or any(
+            not re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9_-]{0,127}", name) for name in args.cases):
+        raise SystemExit("Case names must be unique simple directory names")
     entries = []
-    for name in CASES:
+    for name in args.cases:
         run = args.root / name
+        if run.is_symlink() or run.resolve().parent != args.root.resolve():
+            raise ValueError(f"Case is not directly under the declared root: {name}")
         case = json.loads((run / "case.json").read_text())
         if case["status"] != "complete" or case["exit_code"] != 0:
             raise ValueError(f"Incomplete case: {name}")
@@ -46,7 +54,7 @@ def main():
             entries.append({"path": str(path.relative_to(args.root)), "bytes": path.stat().st_size,
                             "sha256": digest(path)})
     manifest = {"schema_version": 1, "script_sha256": digest(Path(__file__)),
-                "cases": list(CASES), "files": entries,
+                "cases": list(args.cases), "files": entries,
                 "uncompressed_bytes": sum(e["bytes"] for e in entries),
                 "qualification": "Original case/settings, all measurement and timing CSVs, and full analysis. No ns-3 tree/build, generated constellation state, or local authentication files."}
     args.out.parent.mkdir(parents=True, exist_ok=True)

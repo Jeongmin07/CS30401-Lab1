@@ -1,0 +1,2250 @@
+{
+  "audit_script_sha256": "a2e4e3f164b83101b227adf88ad7a84236f963fa5cd76572d874ade2150150e4",
+  "baseline": "/tmp/cs30401-competing/same-start-dd",
+  "comparison_policy": {
+    "congestion_events": "Compare only CONG/SSTHRESH; record threshold lifecycle separately.",
+    "excluded_metadata": [
+      "threshold",
+      "packet_uid",
+      "uid",
+      "tx_id",
+      "tx_time_ns"
+    ],
+    "identity_reason": "Packet UID and generated transmission tags are not transport behavior; full rows retain them for evidence joins.",
+    "tag_join": "Match original/drop/repair by flow_id plus tx_id and tx_time_ns; never use packet UID.",
+    "threshold_reason": "Scheduled K changes are the intervention, not a transport-behavior divergence."
+  },
+  "connection_mapping": {
+    "baseline": [
+      {
+        "application_bytes": 117494580,
+        "connection_id": "0",
+        "flow_id": "0",
+        "local_port": "1024",
+        "node": "1585",
+        "peer_ip": "10.18.144.1",
+        "peer_port": "49153"
+      },
+      {
+        "application_bytes": 121978200,
+        "connection_id": "1",
+        "flow_id": "1",
+        "local_port": "1024",
+        "node": "1585",
+        "peer_ip": "10.18.144.1",
+        "peer_port": "49154"
+      }
+    ],
+    "guarded": [
+      {
+        "application_bytes": 97745400,
+        "connection_id": "0",
+        "flow_id": "0",
+        "local_port": "1024",
+        "node": "1585",
+        "peer_ip": "10.18.144.1",
+        "peer_port": "49153"
+      },
+      {
+        "application_bytes": 141721860,
+        "connection_id": "1",
+        "flow_id": "1",
+        "local_port": "1024",
+        "node": "1585",
+        "peer_ip": "10.18.144.1",
+        "peer_port": "49154"
+      }
+    ]
+  },
+  "first_semantic_differences": [
+    {
+      "baseline": {
+        "line": 20941,
+        "row": {
+          "ack": "1",
+          "cong_state": "3",
+          "event": "TX",
+          "flags": "16",
+          "flow_id": "0",
+          "local_port": "49153",
+          "packet_uid": "143",
+          "payload_bytes": "1380",
+          "peer_port": "1024",
+          "sack_blocks": "",
+          "seq": "18269821",
+          "threshold": "3",
+          "time_ns": "26360010740",
+          "tx_id": "13569",
+          "tx_time_ns": "26360010740"
+        }
+      },
+      "comparison_fields": [
+        "time_ns",
+        "flow_id",
+        "event",
+        "seq",
+        "ack",
+        "payload_bytes",
+        "flags",
+        "sack_blocks",
+        "cong_state",
+        "local_port",
+        "peer_port"
+      ],
+      "different_fields": [
+        "seq",
+        "cong_state"
+      ],
+      "equal_semantic_rows": 20939,
+      "file": "tcp_flow_0_study_packets.csv",
+      "following_baseline": [
+        {
+          "line": 20942,
+          "row": {
+            "ack": "1",
+            "cong_state": "3",
+            "event": "RETX",
+            "flags": "16",
+            "flow_id": "0",
+            "local_port": "49153",
+            "packet_uid": "143",
+            "payload_bytes": "1380",
+            "peer_port": "1024",
+            "sack_blocks": "",
+            "seq": "18269821",
+            "threshold": "3",
+            "time_ns": "26360010740",
+            "tx_id": "13569",
+            "tx_time_ns": "26360010740"
+          }
+        },
+        {
+          "line": 20943,
+          "row": {
+            "ack": "18269821",
+            "cong_state": "3",
+            "event": "RX_ACK",
+            "flags": "16",
+            "flow_id": "0",
+            "local_port": "49153",
+            "packet_uid": "43351",
+            "payload_bytes": "0",
+            "peer_port": "1024",
+            "sack_blocks": "18271201:18276721",
+            "seq": "1",
+            "threshold": "3",
+            "time_ns": "26361157937",
+            "tx_id": "0",
+            "tx_time_ns": "-1"
+          }
+        }
+      ],
+      "following_guarded": [
+        {
+          "line": 20942,
+          "row": {
+            "ack": "18269821",
+            "cong_state": "1",
+            "event": "RX_ACK",
+            "flags": "16",
+            "flow_id": "0",
+            "local_port": "49153",
+            "packet_uid": "43351",
+            "payload_bytes": "0",
+            "peer_port": "1024",
+            "sack_blocks": "18271201:18276721",
+            "seq": "1",
+            "threshold": "8",
+            "time_ns": "26361157937",
+            "tx_id": "0",
+            "tx_time_ns": "-1"
+          }
+        },
+        {
+          "line": 20943,
+          "row": {
+            "ack": "1",
+            "cong_state": "1",
+            "event": "TX",
+            "flags": "16",
+            "flow_id": "0",
+            "local_port": "49153",
+            "packet_uid": "143",
+            "payload_bytes": "1380",
+            "peer_port": "1024",
+            "sack_blocks": "",
+            "seq": "18438181",
+            "threshold": "8",
+            "time_ns": "26361157937",
+            "tx_id": "13570",
+            "tx_time_ns": "26361157937"
+          }
+        }
+      ],
+      "guarded": {
+        "line": 20941,
+        "row": {
+          "ack": "1",
+          "cong_state": "1",
+          "event": "TX",
+          "flags": "16",
+          "flow_id": "0",
+          "local_port": "49153",
+          "packet_uid": "143",
+          "payload_bytes": "1380",
+          "peer_port": "1024",
+          "sack_blocks": "",
+          "seq": "18436801",
+          "threshold": "8",
+          "time_ns": "26360010740",
+          "tx_id": "13569",
+          "tx_time_ns": "26360010740"
+        }
+      },
+      "kind": "sender",
+      "preceding_baseline": [
+        {
+          "line": 20939,
+          "row": {
+            "ack": "1",
+            "cong_state": "1",
+            "event": "TX",
+            "flags": "16",
+            "flow_id": "0",
+            "local_port": "49153",
+            "packet_uid": "143",
+            "payload_bytes": "1380",
+            "peer_port": "1024",
+            "sack_blocks": "",
+            "seq": "18435421",
+            "threshold": "3",
+            "time_ns": "26358863547",
+            "tx_id": "13568",
+            "tx_time_ns": "26358863547"
+          }
+        },
+        {
+          "line": 20940,
+          "row": {
+            "ack": "18269821",
+            "cong_state": "1",
+            "event": "RX_ACK",
+            "flags": "16",
+            "flow_id": "0",
+            "local_port": "49153",
+            "packet_uid": "43350",
+            "payload_bytes": "0",
+            "peer_port": "1024",
+            "sack_blocks": "18271201:18275341",
+            "seq": "1",
+            "threshold": "3",
+            "time_ns": "26360010740",
+            "tx_id": "0",
+            "tx_time_ns": "-1"
+          }
+        }
+      ],
+      "preceding_guarded": [
+        {
+          "line": 20939,
+          "row": {
+            "ack": "1",
+            "cong_state": "1",
+            "event": "TX",
+            "flags": "16",
+            "flow_id": "0",
+            "local_port": "49153",
+            "packet_uid": "143",
+            "payload_bytes": "1380",
+            "peer_port": "1024",
+            "sack_blocks": "",
+            "seq": "18435421",
+            "threshold": "8",
+            "time_ns": "26358863547",
+            "tx_id": "13568",
+            "tx_time_ns": "26358863547"
+          }
+        },
+        {
+          "line": 20940,
+          "row": {
+            "ack": "18269821",
+            "cong_state": "1",
+            "event": "RX_ACK",
+            "flags": "16",
+            "flow_id": "0",
+            "local_port": "49153",
+            "packet_uid": "43350",
+            "payload_bytes": "0",
+            "peer_port": "1024",
+            "sack_blocks": "18271201:18275341",
+            "seq": "1",
+            "threshold": "8",
+            "time_ns": "26360010740",
+            "tx_id": "0",
+            "tx_time_ns": "-1"
+          }
+        }
+      ]
+    },
+    {
+      "baseline": {
+        "line": 14458,
+        "row": {
+          "ack": "12335821",
+          "cong_state": "3",
+          "event": "RX_ACK",
+          "flags": "16",
+          "flow_id": "1",
+          "local_port": "49154",
+          "packet_uid": "43586",
+          "payload_bytes": "0",
+          "peer_port": "1024",
+          "sack_blocks": "12400681:12446221|12391021:12399301|12341341:12388261",
+          "seq": "1",
+          "threshold": "3",
+          "time_ns": "26599902095",
+          "tx_id": "0",
+          "tx_time_ns": "-1"
+        }
+      },
+      "comparison_fields": [
+        "time_ns",
+        "flow_id",
+        "event",
+        "seq",
+        "ack",
+        "payload_bytes",
+        "flags",
+        "sack_blocks",
+        "cong_state",
+        "local_port",
+        "peer_port"
+      ],
+      "different_fields": [
+        "time_ns"
+      ],
+      "equal_semantic_rows": 14456,
+      "file": "tcp_flow_1_study_packets.csv",
+      "following_baseline": [
+        {
+          "line": 14459,
+          "row": {
+            "ack": "1",
+            "cong_state": "3",
+            "event": "TX",
+            "flags": "16",
+            "flow_id": "1",
+            "local_port": "49154",
+            "packet_uid": "412",
+            "payload_bytes": "1380",
+            "peer_port": "1024",
+            "sack_blocks": "",
+            "seq": "12517981",
+            "threshold": "3",
+            "time_ns": "26599902095",
+            "tx_id": "9199",
+            "tx_time_ns": "26599902095"
+          }
+        },
+        {
+          "line": 14460,
+          "row": {
+            "ack": "12335821",
+            "cong_state": "3",
+            "event": "RX_ACK",
+            "flags": "16",
+            "flow_id": "1",
+            "local_port": "49154",
+            "packet_uid": "43587",
+            "payload_bytes": "0",
+            "peer_port": "1024",
+            "sack_blocks": "12400681:12447601|12391021:12399301|12341341:12388261",
+            "seq": "1",
+            "threshold": "3",
+            "time_ns": "26601049292",
+            "tx_id": "0",
+            "tx_time_ns": "-1"
+          }
+        }
+      ],
+      "following_guarded": [
+        {
+          "line": 14459,
+          "row": {
+            "ack": "1",
+            "cong_state": "3",
+            "event": "TX",
+            "flags": "16",
+            "flow_id": "1",
+            "local_port": "49154",
+            "packet_uid": "412",
+            "payload_bytes": "1380",
+            "peer_port": "1024",
+            "sack_blocks": "",
+            "seq": "12517981",
+            "threshold": "3",
+            "time_ns": "26605638069",
+            "tx_id": "9199",
+            "tx_time_ns": "26605638069"
+          }
+        },
+        {
+          "line": 14460,
+          "row": {
+            "ack": "12335821",
+            "cong_state": "3",
+            "event": "RX_ACK",
+            "flags": "16",
+            "flow_id": "1",
+            "local_port": "49154",
+            "packet_uid": "43592",
+            "payload_bytes": "0",
+            "peer_port": "1024",
+            "sack_blocks": "12400681:12447601|12391021:12399301|12341341:12388261",
+            "seq": "1",
+            "threshold": "3",
+            "time_ns": "26606785253",
+            "tx_id": "0",
+            "tx_time_ns": "-1"
+          }
+        }
+      ],
+      "guarded": {
+        "line": 14458,
+        "row": {
+          "ack": "12335821",
+          "cong_state": "3",
+          "event": "RX_ACK",
+          "flags": "16",
+          "flow_id": "1",
+          "local_port": "49154",
+          "packet_uid": "43591",
+          "payload_bytes": "0",
+          "peer_port": "1024",
+          "sack_blocks": "12400681:12446221|12391021:12399301|12341341:12388261",
+          "seq": "1",
+          "threshold": "3",
+          "time_ns": "26605638069",
+          "tx_id": "0",
+          "tx_time_ns": "-1"
+        }
+      },
+      "kind": "sender",
+      "preceding_baseline": [
+        {
+          "line": 14456,
+          "row": {
+            "ack": "12335821",
+            "cong_state": "3",
+            "event": "RX_ACK",
+            "flags": "16",
+            "flow_id": "1",
+            "local_port": "49154",
+            "packet_uid": "43492",
+            "payload_bytes": "0",
+            "peer_port": "1024",
+            "sack_blocks": "12400681:12444841|12391021:12399301|12341341:12388261",
+            "seq": "1",
+            "threshold": "3",
+            "time_ns": "26493213139",
+            "tx_id": "0",
+            "tx_time_ns": "-1"
+          }
+        },
+        {
+          "line": 14457,
+          "row": {
+            "ack": "1",
+            "cong_state": "3",
+            "event": "TX",
+            "flags": "16",
+            "flow_id": "1",
+            "local_port": "49154",
+            "packet_uid": "412",
+            "payload_bytes": "1380",
+            "peer_port": "1024",
+            "sack_blocks": "",
+            "seq": "12516601",
+            "threshold": "3",
+            "time_ns": "26493213139",
+            "tx_id": "9198",
+            "tx_time_ns": "26493213139"
+          }
+        }
+      ],
+      "preceding_guarded": [
+        {
+          "line": 14456,
+          "row": {
+            "ack": "12335821",
+            "cong_state": "3",
+            "event": "RX_ACK",
+            "flags": "16",
+            "flow_id": "1",
+            "local_port": "49154",
+            "packet_uid": "43492",
+            "payload_bytes": "0",
+            "peer_port": "1024",
+            "sack_blocks": "12400681:12444841|12391021:12399301|12341341:12388261",
+            "seq": "1",
+            "threshold": "3",
+            "time_ns": "26493213139",
+            "tx_id": "0",
+            "tx_time_ns": "-1"
+          }
+        },
+        {
+          "line": 14457,
+          "row": {
+            "ack": "1",
+            "cong_state": "3",
+            "event": "TX",
+            "flags": "16",
+            "flow_id": "1",
+            "local_port": "49154",
+            "packet_uid": "412",
+            "payload_bytes": "1380",
+            "peer_port": "1024",
+            "sack_blocks": "",
+            "seq": "12516601",
+            "threshold": "3",
+            "time_ns": "26493213139",
+            "tx_id": "9198",
+            "tx_time_ns": "26493213139"
+          }
+        }
+      ]
+    },
+    {
+      "baseline": {
+        "line": 22372,
+        "row": {
+          "ack": "1",
+          "connection_id": "0",
+          "expected_seq": "18269821",
+          "flags": "16",
+          "flow_id": "0",
+          "local_ip": "10.18.145.1",
+          "local_port": "1024",
+          "node_id": "1585",
+          "packet_uid": "143",
+          "payload_bytes": "1380",
+          "peer_ip": "10.18.144.1",
+          "peer_port": "49153",
+          "seq": "18269821",
+          "tagged": "1",
+          "time_ns": "26537688916",
+          "tx_id": "13569",
+          "tx_time_ns": "26360010740"
+        }
+      },
+      "comparison_fields": [
+        "time_ns",
+        "node_id",
+        "connection_id",
+        "local_port",
+        "peer_ip",
+        "peer_port",
+        "flow_id",
+        "seq",
+        "ack",
+        "payload_bytes",
+        "flags",
+        "expected_seq"
+      ],
+      "different_fields": [
+        "seq"
+      ],
+      "equal_semantic_rows": 22370,
+      "file": "study_rx_node_1585_port_1024.csv",
+      "following_baseline": [
+        {
+          "line": 22373,
+          "row": {
+            "ack": "1",
+            "connection_id": "0",
+            "expected_seq": "18329161",
+            "flags": "16",
+            "flow_id": "0",
+            "local_ip": "10.18.145.1",
+            "local_port": "1024",
+            "node_id": "1585",
+            "packet_uid": "143",
+            "payload_bytes": "1380",
+            "peer_ip": "10.18.144.1",
+            "peer_port": "49153",
+            "seq": "18436801",
+            "tagged": "1",
+            "time_ns": "26538836122",
+            "tx_id": "13570",
+            "tx_time_ns": "26361157937"
+          }
+        },
+        {
+          "line": 22374,
+          "row": {
+            "ack": "1",
+            "connection_id": "0",
+            "expected_seq": "18329161",
+            "flags": "16",
+            "flow_id": "0",
+            "local_ip": "10.18.145.1",
+            "local_port": "1024",
+            "node_id": "1585",
+            "packet_uid": "143",
+            "payload_bytes": "1380",
+            "peer_ip": "10.18.144.1",
+            "peer_port": "49153",
+            "seq": "18438181",
+            "tagged": "1",
+            "time_ns": "26539983324",
+            "tx_id": "13571",
+            "tx_time_ns": "26362305131"
+          }
+        }
+      ],
+      "following_guarded": [
+        {
+          "line": 22373,
+          "row": {
+            "ack": "1",
+            "connection_id": "0",
+            "expected_seq": "18269821",
+            "flags": "16",
+            "flow_id": "0",
+            "local_ip": "10.18.145.1",
+            "local_port": "1024",
+            "node_id": "1585",
+            "packet_uid": "143",
+            "payload_bytes": "1380",
+            "peer_ip": "10.18.144.1",
+            "peer_port": "49153",
+            "seq": "18438181",
+            "tagged": "1",
+            "time_ns": "26538836122",
+            "tx_id": "13570",
+            "tx_time_ns": "26361157937"
+          }
+        },
+        {
+          "line": 22374,
+          "row": {
+            "ack": "1",
+            "connection_id": "0",
+            "expected_seq": "18269821",
+            "flags": "16",
+            "flow_id": "0",
+            "local_ip": "10.18.145.1",
+            "local_port": "1024",
+            "node_id": "1585",
+            "packet_uid": "143",
+            "payload_bytes": "1380",
+            "peer_ip": "10.18.144.1",
+            "peer_port": "49153",
+            "seq": "18439561",
+            "tagged": "1",
+            "time_ns": "26539983324",
+            "tx_id": "13571",
+            "tx_time_ns": "26362305131"
+          }
+        }
+      ],
+      "guarded": {
+        "line": 22372,
+        "row": {
+          "ack": "1",
+          "connection_id": "0",
+          "expected_seq": "18269821",
+          "flags": "16",
+          "flow_id": "0",
+          "local_ip": "10.18.145.1",
+          "local_port": "1024",
+          "node_id": "1585",
+          "packet_uid": "143",
+          "payload_bytes": "1380",
+          "peer_ip": "10.18.144.1",
+          "peer_port": "49153",
+          "seq": "18436801",
+          "tagged": "1",
+          "time_ns": "26537688916",
+          "tx_id": "13569",
+          "tx_time_ns": "26360010740"
+        }
+      },
+      "kind": "receiver",
+      "preceding_baseline": [
+        {
+          "line": 22370,
+          "row": {
+            "ack": "1",
+            "connection_id": "0",
+            "expected_seq": "18269821",
+            "flags": "16",
+            "flow_id": "0",
+            "local_ip": "10.18.145.1",
+            "local_port": "1024",
+            "node_id": "1585",
+            "packet_uid": "143",
+            "payload_bytes": "1380",
+            "peer_ip": "10.18.144.1",
+            "peer_port": "49153",
+            "seq": "18434041",
+            "tagged": "1",
+            "time_ns": "26535394511",
+            "tx_id": "13567",
+            "tx_time_ns": "26357716349"
+          }
+        },
+        {
+          "line": 22371,
+          "row": {
+            "ack": "1",
+            "connection_id": "0",
+            "expected_seq": "18269821",
+            "flags": "16",
+            "flow_id": "0",
+            "local_ip": "10.18.145.1",
+            "local_port": "1024",
+            "node_id": "1585",
+            "packet_uid": "143",
+            "payload_bytes": "1380",
+            "peer_ip": "10.18.144.1",
+            "peer_port": "49153",
+            "seq": "18435421",
+            "tagged": "1",
+            "time_ns": "26536541714",
+            "tx_id": "13568",
+            "tx_time_ns": "26358863547"
+          }
+        }
+      ],
+      "preceding_guarded": [
+        {
+          "line": 22370,
+          "row": {
+            "ack": "1",
+            "connection_id": "0",
+            "expected_seq": "18269821",
+            "flags": "16",
+            "flow_id": "0",
+            "local_ip": "10.18.145.1",
+            "local_port": "1024",
+            "node_id": "1585",
+            "packet_uid": "143",
+            "payload_bytes": "1380",
+            "peer_ip": "10.18.144.1",
+            "peer_port": "49153",
+            "seq": "18434041",
+            "tagged": "1",
+            "time_ns": "26535394511",
+            "tx_id": "13567",
+            "tx_time_ns": "26357716349"
+          }
+        },
+        {
+          "line": 22371,
+          "row": {
+            "ack": "1",
+            "connection_id": "0",
+            "expected_seq": "18269821",
+            "flags": "16",
+            "flow_id": "0",
+            "local_ip": "10.18.145.1",
+            "local_port": "1024",
+            "node_id": "1585",
+            "packet_uid": "143",
+            "payload_bytes": "1380",
+            "peer_ip": "10.18.144.1",
+            "peer_port": "49153",
+            "seq": "18435421",
+            "tagged": "1",
+            "time_ns": "26536541714",
+            "tx_id": "13568",
+            "tx_time_ns": "26358863547"
+          }
+        }
+      ]
+    },
+    {
+      "baseline": {
+        "line": 20065,
+        "row": {
+          "connection_id": "0",
+          "connection_total_rx_bytes": "18329160",
+          "flow_id": "0",
+          "local_ip": "10.18.145.1",
+          "local_port": "1024",
+          "node_id": "1585",
+          "packet_uid": "43571",
+          "payload_bytes": "59340",
+          "peer_ip": "10.18.144.1",
+          "peer_port": "49153",
+          "sink_total_rx_bytes": "30664980",
+          "time_ns": "26537688916"
+        }
+      },
+      "comparison_fields": [
+        "time_ns",
+        "node_id",
+        "connection_id",
+        "local_port",
+        "peer_ip",
+        "peer_port",
+        "flow_id",
+        "payload_bytes",
+        "connection_total_rx_bytes",
+        "sink_total_rx_bytes"
+      ],
+      "different_fields": [
+        "time_ns"
+      ],
+      "equal_semantic_rows": 20063,
+      "file": "study_app_rx_node_1585_port_1024.csv",
+      "following_baseline": [
+        {
+          "line": 20066,
+          "row": {
+            "connection_id": "1",
+            "connection_total_rx_bytes": "12339960",
+            "flow_id": "1",
+            "local_ip": "10.18.145.1",
+            "local_port": "1024",
+            "node_id": "1585",
+            "packet_uid": "43597",
+            "payload_bytes": "4140",
+            "peer_ip": "10.18.144.1",
+            "peer_port": "49154",
+            "sink_total_rx_bytes": "30669120",
+            "time_ns": "26566368995"
+          }
+        },
+        {
+          "line": 20067,
+          "row": {
+            "connection_id": "1",
+            "connection_total_rx_bytes": "12388260",
+            "flow_id": "1",
+            "local_ip": "10.18.145.1",
+            "local_port": "1024",
+            "node_id": "1585",
+            "packet_uid": "43600",
+            "payload_bytes": "48300",
+            "peer_ip": "10.18.144.1",
+            "peer_port": "49154",
+            "sink_total_rx_bytes": "30717420",
+            "time_ns": "26568663401"
+          }
+        }
+      ],
+      "following_guarded": [
+        {
+          "line": 20066,
+          "row": {
+            "connection_id": "1",
+            "connection_total_rx_bytes": "12339960",
+            "flow_id": "1",
+            "local_ip": "10.18.145.1",
+            "local_port": "1024",
+            "node_id": "1585",
+            "packet_uid": "43602",
+            "payload_bytes": "4140",
+            "peer_ip": "10.18.144.1",
+            "peer_port": "49154",
+            "sink_total_rx_bytes": "30669120",
+            "time_ns": "26572105012"
+          }
+        },
+        {
+          "line": 20067,
+          "row": {
+            "connection_id": "1",
+            "connection_total_rx_bytes": "12388260",
+            "flow_id": "1",
+            "local_ip": "10.18.145.1",
+            "local_port": "1024",
+            "node_id": "1585",
+            "packet_uid": "43605",
+            "payload_bytes": "48300",
+            "peer_ip": "10.18.144.1",
+            "peer_port": "49154",
+            "sink_total_rx_bytes": "30717420",
+            "time_ns": "26574399417"
+          }
+        }
+      ],
+      "guarded": {
+        "line": 20065,
+        "row": {
+          "connection_id": "0",
+          "connection_total_rx_bytes": "18329160",
+          "flow_id": "0",
+          "local_ip": "10.18.145.1",
+          "local_port": "1024",
+          "node_id": "1585",
+          "packet_uid": "43576",
+          "payload_bytes": "59340",
+          "peer_ip": "10.18.144.1",
+          "peer_port": "49153",
+          "sink_total_rx_bytes": "30664980",
+          "time_ns": "26543424933"
+        }
+      },
+      "kind": "application",
+      "preceding_baseline": [
+        {
+          "line": 20063,
+          "row": {
+            "connection_id": "1",
+            "connection_total_rx_bytes": "12334440",
+            "flow_id": "1",
+            "local_ip": "10.18.145.1",
+            "local_port": "1024",
+            "node_id": "1585",
+            "packet_uid": "43413",
+            "payload_bytes": "1380",
+            "peer_ip": "10.18.144.1",
+            "peer_port": "49154",
+            "sink_total_rx_bytes": "30604260",
+            "time_ns": "26361019639"
+          }
+        },
+        {
+          "line": 20064,
+          "row": {
+            "connection_id": "1",
+            "connection_total_rx_bytes": "12335820",
+            "flow_id": "1",
+            "local_ip": "10.18.145.1",
+            "local_port": "1024",
+            "node_id": "1585",
+            "packet_uid": "43414",
+            "payload_bytes": "1380",
+            "peer_ip": "10.18.144.1",
+            "peer_port": "49154",
+            "sink_total_rx_bytes": "30605640",
+            "time_ns": "26362166842"
+          }
+        }
+      ],
+      "preceding_guarded": [
+        {
+          "line": 20063,
+          "row": {
+            "connection_id": "1",
+            "connection_total_rx_bytes": "12334440",
+            "flow_id": "1",
+            "local_ip": "10.18.145.1",
+            "local_port": "1024",
+            "node_id": "1585",
+            "packet_uid": "43413",
+            "payload_bytes": "1380",
+            "peer_ip": "10.18.144.1",
+            "peer_port": "49154",
+            "sink_total_rx_bytes": "30604260",
+            "time_ns": "26361019639"
+          }
+        },
+        {
+          "line": 20064,
+          "row": {
+            "connection_id": "1",
+            "connection_total_rx_bytes": "12335820",
+            "flow_id": "1",
+            "local_ip": "10.18.145.1",
+            "local_port": "1024",
+            "node_id": "1585",
+            "packet_uid": "43414",
+            "payload_bytes": "1380",
+            "peer_ip": "10.18.144.1",
+            "peer_port": "49154",
+            "sink_total_rx_bytes": "30605640",
+            "time_ns": "26362166842"
+          }
+        }
+      ]
+    },
+    {
+      "baseline": {
+        "line": 26,
+        "row": {
+          "cong_state": "3",
+          "event": "CONG",
+          "flow_id": "0",
+          "new_value": "3",
+          "old_value": "1",
+          "threshold": "3",
+          "time_ns": "26360010740"
+        }
+      },
+      "comparison_fields": [
+        "time_ns",
+        "flow_id",
+        "event",
+        "old_value",
+        "new_value",
+        "cong_state"
+      ],
+      "different_fields": [
+        "time_ns"
+      ],
+      "equal_semantic_rows": 23,
+      "file": "tcp_flow_0_study_events.csv",
+      "following_baseline": [
+        {
+          "line": 27,
+          "row": {
+            "cong_state": "3",
+            "event": "SSTHRESH",
+            "flow_id": "0",
+            "new_value": "114540",
+            "old_value": "104880",
+            "threshold": "3",
+            "time_ns": "26360010740"
+          }
+        },
+        {
+          "line": 28,
+          "row": {
+            "cong_state": "0",
+            "event": "CONG",
+            "flow_id": "0",
+            "new_value": "0",
+            "old_value": "3",
+            "threshold": "3",
+            "time_ns": "26730682130"
+          }
+        }
+      ],
+      "following_guarded": [
+        {
+          "line": 28,
+          "row": {
+            "cong_state": "3",
+            "event": "SSTHRESH",
+            "flow_id": "0",
+            "new_value": "114540",
+            "old_value": "104880",
+            "threshold": "8",
+            "time_ns": "26365746702"
+          }
+        },
+        {
+          "line": 30,
+          "row": {
+            "cong_state": "0",
+            "event": "CONG",
+            "flow_id": "0",
+            "new_value": "0",
+            "old_value": "3",
+            "threshold": "8",
+            "time_ns": "26736418096"
+          }
+        }
+      ],
+      "guarded": {
+        "line": 27,
+        "row": {
+          "cong_state": "3",
+          "event": "CONG",
+          "flow_id": "0",
+          "new_value": "3",
+          "old_value": "1",
+          "threshold": "8",
+          "time_ns": "26365746702"
+        }
+      },
+      "kind": "congestion",
+      "preceding_baseline": [
+        {
+          "line": 24,
+          "row": {
+            "cong_state": "0",
+            "event": "CONG",
+            "flow_id": "0",
+            "new_value": "0",
+            "old_value": "3",
+            "threshold": "3",
+            "time_ns": "19193441474"
+          }
+        },
+        {
+          "line": 25,
+          "row": {
+            "cong_state": "1",
+            "event": "CONG",
+            "flow_id": "0",
+            "new_value": "1",
+            "old_value": "0",
+            "threshold": "3",
+            "time_ns": "26357716349"
+          }
+        }
+      ],
+      "preceding_guarded": [
+        {
+          "line": 24,
+          "row": {
+            "cong_state": "0",
+            "event": "CONG",
+            "flow_id": "0",
+            "new_value": "0",
+            "old_value": "3",
+            "threshold": "3",
+            "time_ns": "19193441474"
+          }
+        },
+        {
+          "line": 26,
+          "row": {
+            "cong_state": "1",
+            "event": "CONG",
+            "flow_id": "0",
+            "new_value": "1",
+            "old_value": "0",
+            "threshold": "8",
+            "time_ns": "26357716349"
+          }
+        }
+      ]
+    },
+    {
+      "baseline": {
+        "line": 33,
+        "row": {
+          "cong_state": "0",
+          "event": "CONG",
+          "flow_id": "1",
+          "new_value": "0",
+          "old_value": "3",
+          "threshold": "3",
+          "time_ns": "26643303444"
+        }
+      },
+      "comparison_fields": [
+        "time_ns",
+        "flow_id",
+        "event",
+        "old_value",
+        "new_value",
+        "cong_state"
+      ],
+      "different_fields": [
+        "time_ns"
+      ],
+      "equal_semantic_rows": 30,
+      "file": "tcp_flow_1_study_events.csv",
+      "following_baseline": [
+        {
+          "line": 34,
+          "row": {
+            "cong_state": "1",
+            "event": "CONG",
+            "flow_id": "1",
+            "new_value": "1",
+            "old_value": "0",
+            "threshold": "3",
+            "time_ns": "34185030806"
+          }
+        },
+        {
+          "line": 35,
+          "row": {
+            "cong_state": "3",
+            "event": "CONG",
+            "flow_id": "1",
+            "new_value": "3",
+            "old_value": "1",
+            "threshold": "3",
+            "time_ns": "34187325203"
+          }
+        }
+      ],
+      "following_guarded": [
+        {
+          "line": 34,
+          "row": {
+            "cong_state": "1",
+            "event": "CONG",
+            "flow_id": "1",
+            "new_value": "1",
+            "old_value": "0",
+            "threshold": "3",
+            "time_ns": "34190766792"
+          }
+        },
+        {
+          "line": 35,
+          "row": {
+            "cong_state": "3",
+            "event": "CONG",
+            "flow_id": "1",
+            "new_value": "3",
+            "old_value": "1",
+            "threshold": "3",
+            "time_ns": "34193061193"
+          }
+        }
+      ],
+      "guarded": {
+        "line": 33,
+        "row": {
+          "cong_state": "0",
+          "event": "CONG",
+          "flow_id": "1",
+          "new_value": "0",
+          "old_value": "3",
+          "threshold": "3",
+          "time_ns": "26649039409"
+        }
+      },
+      "kind": "congestion",
+      "preceding_baseline": [
+        {
+          "line": 31,
+          "row": {
+            "cong_state": "3",
+            "event": "CONG",
+            "flow_id": "1",
+            "new_value": "3",
+            "old_value": "1",
+            "threshold": "3",
+            "time_ns": "26411698423"
+          }
+        },
+        {
+          "line": 32,
+          "row": {
+            "cong_state": "3",
+            "event": "SSTHRESH",
+            "flow_id": "1",
+            "new_value": "84180",
+            "old_value": "67620",
+            "threshold": "3",
+            "time_ns": "26411698423"
+          }
+        }
+      ],
+      "preceding_guarded": [
+        {
+          "line": 31,
+          "row": {
+            "cong_state": "3",
+            "event": "CONG",
+            "flow_id": "1",
+            "new_value": "3",
+            "old_value": "1",
+            "threshold": "3",
+            "time_ns": "26411698423"
+          }
+        },
+        {
+          "line": 32,
+          "row": {
+            "cong_state": "3",
+            "event": "SSTHRESH",
+            "flow_id": "1",
+            "new_value": "84180",
+            "old_value": "67620",
+            "threshold": "3",
+            "time_ns": "26411698423"
+          }
+        }
+      ]
+    },
+    {
+      "baseline": {
+        "line": 330,
+        "row": {
+          "device": "4294967295",
+          "dst": "10.18.145.1",
+          "dst_port": "1024",
+          "flags": "16",
+          "flow_id": "0",
+          "layer": "TcDrop",
+          "node": "1584",
+          "payload_bytes": "1380",
+          "reason": "-1",
+          "seq": "18439561",
+          "src": "10.18.144.1",
+          "src_port": "49153",
+          "time_ns": "26362305131",
+          "tx_id": "13572",
+          "tx_time_ns": "26362305131",
+          "uid": "143"
+        }
+      },
+      "comparison_fields": [
+        "time_ns",
+        "layer",
+        "node",
+        "device",
+        "reason",
+        "src",
+        "dst",
+        "src_port",
+        "dst_port",
+        "seq",
+        "payload_bytes",
+        "flags",
+        "flow_id"
+      ],
+      "different_fields": [
+        "time_ns",
+        "seq"
+      ],
+      "equal_semantic_rows": 328,
+      "file": "study_drops.csv",
+      "following_baseline": [
+        {
+          "line": 331,
+          "row": {
+            "device": "4294967295",
+            "dst": "10.18.145.1",
+            "dst_port": "1024",
+            "flags": "16",
+            "flow_id": "0",
+            "layer": "TcDrop",
+            "node": "1584",
+            "payload_bytes": "1380",
+            "reason": "-1",
+            "seq": "18443701",
+            "src": "10.18.144.1",
+            "src_port": "49153",
+            "time_ns": "26364599520",
+            "tx_id": "13575",
+            "tx_time_ns": "26364599520",
+            "uid": "143"
+          }
+        },
+        {
+          "line": 332,
+          "row": {
+            "device": "4294967295",
+            "dst": "10.18.145.1",
+            "dst_port": "1024",
+            "flags": "16",
+            "flow_id": "0",
+            "layer": "TcDrop",
+            "node": "1584",
+            "payload_bytes": "1380",
+            "reason": "-1",
+            "seq": "18449221",
+            "src": "10.18.144.1",
+            "src_port": "49153",
+            "time_ns": "26368041095",
+            "tx_id": "13579",
+            "tx_time_ns": "26368041095",
+            "uid": "143"
+          }
+        }
+      ],
+      "following_guarded": [
+        {
+          "line": 331,
+          "row": {
+            "device": "4294967295",
+            "dst": "10.18.145.1",
+            "dst_port": "1024",
+            "flags": "16",
+            "flow_id": "0",
+            "layer": "TcDrop",
+            "node": "1584",
+            "payload_bytes": "1380",
+            "reason": "-1",
+            "seq": "18450601",
+            "src": "10.18.144.1",
+            "src_port": "49153",
+            "time_ns": "26370335483",
+            "tx_id": "13580",
+            "tx_time_ns": "26370335483",
+            "uid": "143"
+          }
+        },
+        {
+          "line": 332,
+          "row": {
+            "device": "4294967295",
+            "dst": "10.18.145.1",
+            "dst_port": "1024",
+            "flags": "16",
+            "flow_id": "0",
+            "layer": "TcDrop",
+            "node": "1584",
+            "payload_bytes": "1380",
+            "reason": "-1",
+            "seq": "18456121",
+            "src": "10.18.144.1",
+            "src_port": "49153",
+            "time_ns": "26373777054",
+            "tx_id": "13584",
+            "tx_time_ns": "26373777054",
+            "uid": "143"
+          }
+        }
+      ],
+      "guarded": {
+        "line": 330,
+        "row": {
+          "device": "4294967295",
+          "dst": "10.18.145.1",
+          "dst_port": "1024",
+          "flags": "16",
+          "flow_id": "0",
+          "layer": "TcDrop",
+          "node": "1584",
+          "payload_bytes": "1380",
+          "reason": "-1",
+          "seq": "18446461",
+          "src": "10.18.144.1",
+          "src_port": "49153",
+          "time_ns": "26368041095",
+          "tx_id": "13577",
+          "tx_time_ns": "26368041095",
+          "uid": "143"
+        }
+      },
+      "kind": "drop",
+      "preceding_baseline": [
+        {
+          "line": 328,
+          "row": {
+            "device": "4294967295",
+            "dst": "10.18.145.1",
+            "dst_port": "1024",
+            "flags": "16",
+            "flow_id": "0",
+            "layer": "TcDrop",
+            "node": "1584",
+            "payload_bytes": "1380",
+            "reason": "-1",
+            "seq": "18329161",
+            "src": "10.18.144.1",
+            "src_port": "49153",
+            "time_ns": "26271612886",
+            "tx_id": "13491",
+            "tx_time_ns": "26271612886",
+            "uid": "143"
+          }
+        },
+        {
+          "line": 329,
+          "row": {
+            "device": "4294967295",
+            "dst": "10.18.145.1",
+            "dst_port": "1024",
+            "flags": "16",
+            "flow_id": "0",
+            "layer": "TcDrop",
+            "node": "1584",
+            "payload_bytes": "1380",
+            "reason": "-1",
+            "seq": "18418861",
+            "src": "10.18.144.1",
+            "src_port": "49153",
+            "time_ns": "26345033234",
+            "tx_id": "13556",
+            "tx_time_ns": "26345033234",
+            "uid": "143"
+          }
+        }
+      ],
+      "preceding_guarded": [
+        {
+          "line": 328,
+          "row": {
+            "device": "4294967295",
+            "dst": "10.18.145.1",
+            "dst_port": "1024",
+            "flags": "16",
+            "flow_id": "0",
+            "layer": "TcDrop",
+            "node": "1584",
+            "payload_bytes": "1380",
+            "reason": "-1",
+            "seq": "18329161",
+            "src": "10.18.144.1",
+            "src_port": "49153",
+            "time_ns": "26271612886",
+            "tx_id": "13491",
+            "tx_time_ns": "26271612886",
+            "uid": "143"
+          }
+        },
+        {
+          "line": 329,
+          "row": {
+            "device": "4294967295",
+            "dst": "10.18.145.1",
+            "dst_port": "1024",
+            "flags": "16",
+            "flow_id": "0",
+            "layer": "TcDrop",
+            "node": "1584",
+            "payload_bytes": "1380",
+            "reason": "-1",
+            "seq": "18418861",
+            "src": "10.18.144.1",
+            "src_port": "49153",
+            "time_ns": "26345033234",
+            "tx_id": "13556",
+            "tx_time_ns": "26345033234",
+            "uid": "143"
+          }
+        }
+      ]
+    }
+  ],
+  "guarded": "/tmp/cs30401-competing/same-start-gd-k8",
+  "input_hashes": {
+    "baseline": [
+      {
+        "bytes": 2963,
+        "path": "case.json",
+        "sha256": "b74ad337afa8a0aefda46926940c5acbbfe4f4f0d79d0a087e93c2a8dc26c031"
+      },
+      {
+        "bytes": 615,
+        "path": "config_ns3.properties",
+        "sha256": "7a8dcd72517feefb35df0f6f2750df2f0441080429ff77ba3b7b85dbff30f6ae"
+      },
+      {
+        "bytes": 58,
+        "path": "schedule.csv",
+        "sha256": "68fb778bf41d5f5c8cf36d25671d301b99bc68c6f45d2232109e7909552a3790"
+      },
+      {
+        "bytes": 9709430,
+        "path": "logs_ns3/tcp_flow_0_study_packets.csv",
+        "sha256": "21f296c417b874c71f9cd58fe045043fe12fd30fbba14e68d308e9ff35f5c68e"
+      },
+      {
+        "bytes": 10059186,
+        "path": "logs_ns3/tcp_flow_1_study_packets.csv",
+        "sha256": "c21ebfa7450f37ab3831d319cddb4a79fd27186fba8c5a288082f2ad138ad682"
+      },
+      {
+        "bytes": 19192130,
+        "path": "logs_ns3/study_rx_node_1585_port_1024.csv",
+        "sha256": "51059009e096cf0fd4de8dd08b69f56e5ed277014c2f8c226b9dad0529220538"
+      },
+      {
+        "bytes": 14217144,
+        "path": "logs_ns3/study_app_rx_node_1585_port_1024.csv",
+        "sha256": "af88a077678ed75b36780bb87e1f391fe0cb2c6e49d586d569df27330b80902f"
+      },
+      {
+        "bytes": 5722,
+        "path": "logs_ns3/tcp_flow_0_study_events.csv",
+        "sha256": "5fdb2b2a23dc1d551f0d2ec298052df588a38456e476b9231105aca9a09b1530"
+      },
+      {
+        "bytes": 5381,
+        "path": "logs_ns3/tcp_flow_1_study_events.csv",
+        "sha256": "3f45c9f413d1d702107fcae4c8c9d84b3d5f8661fe75f67a60a63ed3b4a51d96"
+      },
+      {
+        "bytes": 73440,
+        "path": "logs_ns3/study_drops.csv",
+        "sha256": "b795778fd4c4f94e805dcee6fe0c9059b90bd50e042c419d7a98b8d2f3933852"
+      }
+    ],
+    "guarded": [
+      {
+        "bytes": 3060,
+        "path": "case.json",
+        "sha256": "7352ccb93603a81ce0a8519ff87e4a1cb734bc70d056e8aa6ae419ac15cf2965"
+      },
+      {
+        "bytes": 615,
+        "path": "config_ns3.properties",
+        "sha256": "7a8dcd72517feefb35df0f6f2750df2f0441080429ff77ba3b7b85dbff30f6ae"
+      },
+      {
+        "bytes": 137,
+        "path": "schedule.csv",
+        "sha256": "5692210c019dec3a94000b5d77ae045ab1529f1f8fe8f831a029b739488e2bb2"
+      },
+      {
+        "bytes": 8095661,
+        "path": "logs_ns3/tcp_flow_0_study_packets.csv",
+        "sha256": "a177de8b81606c50fca796b283e7eab03bc0e17c00e997400b356b88ac02c8b1"
+      },
+      {
+        "bytes": 11695144,
+        "path": "logs_ns3/tcp_flow_1_study_packets.csv",
+        "sha256": "d0cef9d8d9c9ca5f187d7deb47ef1ce6bafdd477d801d421ceef49193e46dfc5"
+      },
+      {
+        "bytes": 19197879,
+        "path": "logs_ns3/study_rx_node_1585_port_1024.csv",
+        "sha256": "3aaeab9ef1ef4eb3eff09622160f3f99dde8fbf15c459ed3b1fc03f58218ea22"
+      },
+      {
+        "bytes": 14222472,
+        "path": "logs_ns3/study_app_rx_node_1585_port_1024.csv",
+        "sha256": "64b7f1c60fde476259d8acdd0c358417db4cf9e4a87bb035ce5650007601cdb3"
+      },
+      {
+        "bytes": 6634,
+        "path": "logs_ns3/tcp_flow_0_study_events.csv",
+        "sha256": "f0338d0cd89536ec3b7d7a9fe8ae358cd9ed26d41517cb9ea78f31cca1aed1e7"
+      },
+      {
+        "bytes": 5043,
+        "path": "logs_ns3/tcp_flow_1_study_events.csv",
+        "sha256": "76308d648066cf55f23996ba85e2ab53097e8fd200600dcc05aae03293059287"
+      },
+      {
+        "bytes": 76733,
+        "path": "logs_ns3/study_drops.csv",
+        "sha256": "6307365129fec3e11930038f3e9060f4a9635a2a5973c844d9b976f8c060f91f"
+      }
+    ]
+  },
+  "input_source_commits": {
+    "baseline": "95c306dd9fc1d6c09f9d5ebccfc27215f8c41a24",
+    "guarded": "7266051e6ed4cab15c13d59c555ca32f2803e479"
+  },
+  "limitations": [
+    "This validates a local actual-loss repair delay after the first guard activation; it does not explain the eventual whole-run delivery-share difference.",
+    "No new simulation, parameter sweep, or independent statistical sample is generated.",
+    "A TcDrop row identifies traffic-control rejection at the recorded node; this trace uses a sentinel device index and does not identify the outgoing device.",
+    "Receiver expected_seq is recorded before TCP processing; acceptance is supported separately by same-time ordered application delivery and subsequent expected_seq advancement.",
+    "App packet UID may refer to coalesced bytes and is not joined to a wire packet.",
+    "Both duplicate-ACK and SACK presumed-loss thresholds change; existing traces do not separately expose which recovery predicate fired.",
+    "Following cross-flow timing and congestion differences are observations, not a proof that this single delay accounts for all later interactions."
+  ],
+  "measured_differences": {
+    "baseline_same_time_application_bytes": 59340,
+    "confirmed_ordered_delivery_delay_ns": 5736017,
+    "guarded_same_time_application_bytes": 59340,
+    "recovery_and_retransmission_delay_ns": 5735962
+  },
+  "schema_version": 1,
+  "selected_loss": {
+    "baseline": {
+      "first_matching_retransmission": {
+        "line": 20942,
+        "row": {
+          "ack": "1",
+          "cong_state": "3",
+          "event": "RETX",
+          "flags": "16",
+          "flow_id": "0",
+          "local_port": "49153",
+          "packet_uid": "143",
+          "payload_bytes": "1380",
+          "peer_port": "1024",
+          "sack_blocks": "",
+          "seq": "18269821",
+          "threshold": "3",
+          "time_ns": "26360010740",
+          "tx_id": "13569",
+          "tx_time_ns": "26360010740"
+        }
+      },
+      "local_threshold_and_congestion_events": [
+        {
+          "line": 25,
+          "row": {
+            "cong_state": "1",
+            "event": "CONG",
+            "flow_id": "0",
+            "new_value": "1",
+            "old_value": "0",
+            "threshold": "3",
+            "time_ns": "26357716349"
+          }
+        },
+        {
+          "line": 26,
+          "row": {
+            "cong_state": "3",
+            "event": "CONG",
+            "flow_id": "0",
+            "new_value": "3",
+            "old_value": "1",
+            "threshold": "3",
+            "time_ns": "26360010740"
+          }
+        },
+        {
+          "line": 27,
+          "row": {
+            "cong_state": "3",
+            "event": "SSTHRESH",
+            "flow_id": "0",
+            "new_value": "114540",
+            "old_value": "104880",
+            "threshold": "3",
+            "time_ns": "26360010740"
+          }
+        },
+        {
+          "line": 28,
+          "row": {
+            "cong_state": "0",
+            "event": "CONG",
+            "flow_id": "0",
+            "new_value": "0",
+            "old_value": "3",
+            "threshold": "3",
+            "time_ns": "26730682130"
+          }
+        },
+        {
+          "line": 29,
+          "row": {
+            "cong_state": "1",
+            "event": "CONG",
+            "flow_id": "0",
+            "new_value": "1",
+            "old_value": "0",
+            "threshold": "3",
+            "time_ns": "26731829314"
+          }
+        },
+        {
+          "line": 30,
+          "row": {
+            "cong_state": "3",
+            "event": "CONG",
+            "flow_id": "0",
+            "new_value": "3",
+            "old_value": "1",
+            "threshold": "3",
+            "time_ns": "26731829314"
+          }
+        },
+        {
+          "line": 31,
+          "row": {
+            "cong_state": "3",
+            "event": "SSTHRESH",
+            "flow_id": "0",
+            "new_value": "80040",
+            "old_value": "114540",
+            "threshold": "3",
+            "time_ns": "26731829314"
+          }
+        },
+        {
+          "line": 32,
+          "row": {
+            "cong_state": "0",
+            "event": "CONG",
+            "flow_id": "0",
+            "new_value": "0",
+            "old_value": "3",
+            "threshold": "3",
+            "time_ns": "26901421932"
+          }
+        }
+      ],
+      "matched_repair_receiver_row": {
+        "line": 22372,
+        "row": {
+          "ack": "1",
+          "connection_id": "0",
+          "expected_seq": "18269821",
+          "flags": "16",
+          "flow_id": "0",
+          "local_ip": "10.18.145.1",
+          "local_port": "1024",
+          "node_id": "1585",
+          "packet_uid": "143",
+          "payload_bytes": "1380",
+          "peer_ip": "10.18.144.1",
+          "peer_port": "49153",
+          "seq": "18269821",
+          "tagged": "1",
+          "time_ns": "26537688916",
+          "tx_id": "13569",
+          "tx_time_ns": "26360010740"
+        }
+      },
+      "next_flow0_receiver_row": {
+        "line": 22373,
+        "row": {
+          "ack": "1",
+          "connection_id": "0",
+          "expected_seq": "18329161",
+          "flags": "16",
+          "flow_id": "0",
+          "local_ip": "10.18.145.1",
+          "local_port": "1024",
+          "node_id": "1585",
+          "packet_uid": "143",
+          "payload_bytes": "1380",
+          "peer_ip": "10.18.144.1",
+          "peer_port": "49153",
+          "seq": "18436801",
+          "tagged": "1",
+          "time_ns": "26538836122",
+          "tx_id": "13570",
+          "tx_time_ns": "26361157937"
+        }
+      },
+      "original_tagged_drop_rows": [
+        {
+          "line": 322,
+          "row": {
+            "device": "4294967295",
+            "dst": "10.18.145.1",
+            "dst_port": "1024",
+            "flags": "16",
+            "flow_id": "0",
+            "layer": "TcDrop",
+            "node": "1584",
+            "payload_bytes": "1380",
+            "reason": "-1",
+            "seq": "18269821",
+            "src": "10.18.144.1",
+            "src_port": "49153",
+            "time_ns": "26133910438",
+            "tx_id": "13448",
+            "tx_time_ns": "26133910438",
+            "uid": "143"
+          }
+        }
+      ],
+      "original_transmission": {
+        "line": 20759,
+        "row": {
+          "ack": "1",
+          "cong_state": "0",
+          "event": "TX",
+          "flags": "16",
+          "flow_id": "0",
+          "local_port": "49153",
+          "packet_uid": "143",
+          "payload_bytes": "1380",
+          "peer_port": "1024",
+          "sack_blocks": "",
+          "seq": "18269821",
+          "threshold": "3",
+          "time_ns": "26133910438",
+          "tx_id": "13448",
+          "tx_time_ns": "26133910438"
+        }
+      },
+      "original_wire_rows_found": [],
+      "recovery_state_entry": {
+        "line": 26,
+        "row": {
+          "cong_state": "3",
+          "event": "CONG",
+          "flow_id": "0",
+          "new_value": "3",
+          "old_value": "1",
+          "threshold": "3",
+          "time_ns": "26360010740"
+        }
+      },
+      "same_time_application_bytes": 59340,
+      "same_time_application_delivery": [
+        {
+          "line": 20065,
+          "row": {
+            "connection_id": "0",
+            "connection_total_rx_bytes": "18329160",
+            "flow_id": "0",
+            "local_ip": "10.18.145.1",
+            "local_port": "1024",
+            "node_id": "1585",
+            "packet_uid": "43571",
+            "payload_bytes": "59340",
+            "peer_ip": "10.18.144.1",
+            "peer_port": "49153",
+            "sink_total_rx_bytes": "30664980",
+            "time_ns": "26537688916"
+          }
+        }
+      ],
+      "triggering_ack_observation": {
+        "line": 20940,
+        "row": {
+          "ack": "18269821",
+          "cong_state": "1",
+          "event": "RX_ACK",
+          "flags": "16",
+          "flow_id": "0",
+          "local_port": "49153",
+          "packet_uid": "43350",
+          "payload_bytes": "0",
+          "peer_port": "1024",
+          "sack_blocks": "18271201:18275341",
+          "seq": "1",
+          "threshold": "3",
+          "time_ns": "26360010740",
+          "tx_id": "0",
+          "tx_time_ns": "-1"
+        }
+      }
+    },
+    "guarded": {
+      "first_matching_retransmission": {
+        "line": 20952,
+        "row": {
+          "ack": "1",
+          "cong_state": "3",
+          "event": "RETX",
+          "flags": "16",
+          "flow_id": "0",
+          "local_port": "49153",
+          "packet_uid": "143",
+          "payload_bytes": "1380",
+          "peer_port": "1024",
+          "sack_blocks": "",
+          "seq": "18269821",
+          "threshold": "8",
+          "time_ns": "26365746702",
+          "tx_id": "13574",
+          "tx_time_ns": "26365746702"
+        }
+      },
+      "local_threshold_and_congestion_events": [
+        {
+          "line": 25,
+          "row": {
+            "cong_state": "0",
+            "event": "THRESHOLD_SET",
+            "flow_id": "0",
+            "new_value": "8",
+            "old_value": "3",
+            "threshold": "8",
+            "time_ns": "26100000000"
+          }
+        },
+        {
+          "line": 26,
+          "row": {
+            "cong_state": "1",
+            "event": "CONG",
+            "flow_id": "0",
+            "new_value": "1",
+            "old_value": "0",
+            "threshold": "8",
+            "time_ns": "26357716349"
+          }
+        },
+        {
+          "line": 27,
+          "row": {
+            "cong_state": "3",
+            "event": "CONG",
+            "flow_id": "0",
+            "new_value": "3",
+            "old_value": "1",
+            "threshold": "8",
+            "time_ns": "26365746702"
+          }
+        },
+        {
+          "line": 28,
+          "row": {
+            "cong_state": "3",
+            "event": "SSTHRESH",
+            "flow_id": "0",
+            "new_value": "114540",
+            "old_value": "104880",
+            "threshold": "8",
+            "time_ns": "26365746702"
+          }
+        },
+        {
+          "line": 29,
+          "row": {
+            "cong_state": "3",
+            "event": "THRESHOLD_RESTORE_DEFERRED",
+            "flow_id": "0",
+            "new_value": "8",
+            "old_value": "8",
+            "threshold": "8",
+            "time_ns": "26500000000"
+          }
+        },
+        {
+          "line": 30,
+          "row": {
+            "cong_state": "0",
+            "event": "CONG",
+            "flow_id": "0",
+            "new_value": "0",
+            "old_value": "3",
+            "threshold": "8",
+            "time_ns": "26736418096"
+          }
+        },
+        {
+          "line": 31,
+          "row": {
+            "cong_state": "0",
+            "event": "THRESHOLD_RESTORE",
+            "flow_id": "0",
+            "new_value": "3",
+            "old_value": "8",
+            "threshold": "3",
+            "time_ns": "26736418096"
+          }
+        },
+        {
+          "line": 32,
+          "row": {
+            "cong_state": "1",
+            "event": "CONG",
+            "flow_id": "0",
+            "new_value": "1",
+            "old_value": "0",
+            "threshold": "3",
+            "time_ns": "26737565291"
+          }
+        },
+        {
+          "line": 33,
+          "row": {
+            "cong_state": "3",
+            "event": "CONG",
+            "flow_id": "0",
+            "new_value": "3",
+            "old_value": "1",
+            "threshold": "3",
+            "time_ns": "26737565291"
+          }
+        },
+        {
+          "line": 34,
+          "row": {
+            "cong_state": "3",
+            "event": "SSTHRESH",
+            "flow_id": "0",
+            "new_value": "80040",
+            "old_value": "114540",
+            "threshold": "3",
+            "time_ns": "26737565291"
+          }
+        },
+        {
+          "line": 35,
+          "row": {
+            "cong_state": "0",
+            "event": "CONG",
+            "flow_id": "0",
+            "new_value": "0",
+            "old_value": "3",
+            "threshold": "3",
+            "time_ns": "26908305092"
+          }
+        }
+      ],
+      "matched_repair_receiver_row": {
+        "line": 22377,
+        "row": {
+          "ack": "1",
+          "connection_id": "0",
+          "expected_seq": "18269821",
+          "flags": "16",
+          "flow_id": "0",
+          "local_ip": "10.18.145.1",
+          "local_port": "1024",
+          "node_id": "1585",
+          "packet_uid": "143",
+          "payload_bytes": "1380",
+          "peer_ip": "10.18.144.1",
+          "peer_port": "49153",
+          "seq": "18269821",
+          "tagged": "1",
+          "time_ns": "26543424933",
+          "tx_id": "13574",
+          "tx_time_ns": "26365746702"
+        }
+      },
+      "next_flow0_receiver_row": {
+        "line": 22378,
+        "row": {
+          "ack": "1",
+          "connection_id": "0",
+          "expected_seq": "18329161",
+          "flags": "16",
+          "flow_id": "0",
+          "local_ip": "10.18.145.1",
+          "local_port": "1024",
+          "node_id": "1585",
+          "packet_uid": "143",
+          "payload_bytes": "1380",
+          "peer_ip": "10.18.144.1",
+          "peer_port": "49153",
+          "seq": "18443701",
+          "tagged": "1",
+          "time_ns": "26544572135",
+          "tx_id": "13575",
+          "tx_time_ns": "26366893899"
+        }
+      },
+      "original_tagged_drop_rows": [
+        {
+          "line": 322,
+          "row": {
+            "device": "4294967295",
+            "dst": "10.18.145.1",
+            "dst_port": "1024",
+            "flags": "16",
+            "flow_id": "0",
+            "layer": "TcDrop",
+            "node": "1584",
+            "payload_bytes": "1380",
+            "reason": "-1",
+            "seq": "18269821",
+            "src": "10.18.144.1",
+            "src_port": "49153",
+            "time_ns": "26133910438",
+            "tx_id": "13448",
+            "tx_time_ns": "26133910438",
+            "uid": "143"
+          }
+        }
+      ],
+      "original_transmission": {
+        "line": 20759,
+        "row": {
+          "ack": "1",
+          "cong_state": "0",
+          "event": "TX",
+          "flags": "16",
+          "flow_id": "0",
+          "local_port": "49153",
+          "packet_uid": "143",
+          "payload_bytes": "1380",
+          "peer_port": "1024",
+          "sack_blocks": "",
+          "seq": "18269821",
+          "threshold": "8",
+          "time_ns": "26133910438",
+          "tx_id": "13448",
+          "tx_time_ns": "26133910438"
+        }
+      },
+      "original_wire_rows_found": [],
+      "recovery_state_entry": {
+        "line": 27,
+        "row": {
+          "cong_state": "3",
+          "event": "CONG",
+          "flow_id": "0",
+          "new_value": "3",
+          "old_value": "1",
+          "threshold": "8",
+          "time_ns": "26365746702"
+        }
+      },
+      "same_time_application_bytes": 59340,
+      "same_time_application_delivery": [
+        {
+          "line": 20065,
+          "row": {
+            "connection_id": "0",
+            "connection_total_rx_bytes": "18329160",
+            "flow_id": "0",
+            "local_ip": "10.18.145.1",
+            "local_port": "1024",
+            "node_id": "1585",
+            "packet_uid": "43576",
+            "payload_bytes": "59340",
+            "peer_ip": "10.18.144.1",
+            "peer_port": "49153",
+            "sink_total_rx_bytes": "30664980",
+            "time_ns": "26543424933"
+          }
+        }
+      ],
+      "triggering_ack_observation": {
+        "line": 20950,
+        "row": {
+          "ack": "18269821",
+          "cong_state": "1",
+          "event": "RX_ACK",
+          "flags": "16",
+          "flow_id": "0",
+          "local_port": "49153",
+          "packet_uid": "43357",
+          "payload_bytes": "0",
+          "peer_port": "1024",
+          "sack_blocks": "18271201:18282241",
+          "seq": "1",
+          "threshold": "8",
+          "time_ns": "26365746702",
+          "tx_id": "0",
+          "tx_time_ns": "-1"
+        }
+      }
+    }
+  },
+  "selected_sequence": "18269821",
+  "source_evidence": {
+    "files": {
+      "contrib/basic-sim/model/apps/tcp-flow-sink.cc": {
+        "available": true,
+        "locators": {
+          "ordered_application_delivery": [
+            236,
+            261
+          ],
+          "pre_processing_expected_seq": [
+            203,
+            233
+          ]
+        },
+        "path": "/home/ubuntu/ns-3.48/contrib/basic-sim/model/apps/tcp-flow-sink.cc",
+        "sha256": "5f1c5bd3600aaea83703cd55cdf21f73b01cf13acd9792a86b3c3bd51e69e131"
+      },
+      "src/internet/model/tcp-socket-base.cc": {
+        "available": true,
+        "locators": {
+          "DupAck_recovery_tests": [
+            1857,
+            1870
+          ],
+          "EnterRecovery": [
+            1714,
+            1764
+          ],
+          "SACK_duplicate_ACK_definition": [
+            2066,
+            2083
+          ],
+          "SetRetxThresh": [
+            4708,
+            4711
+          ]
+        },
+        "path": "/home/ubuntu/ns-3.48/src/internet/model/tcp-socket-base.cc",
+        "sha256": "b6ee80a1d33538f36f0f9f2170a6ca2512beed6850133a47fd00db96f3d70afe"
+      },
+      "src/internet/model/tcp-tx-buffer.cc": {
+        "available": true,
+        "locators": {
+          "UpdateLostCount": [
+            866,
+            909
+          ]
+        },
+        "path": "/home/ubuntu/ns-3.48/src/internet/model/tcp-tx-buffer.cc",
+        "sha256": "25a8e84215fd02b2db9e9ecaba6124362f27d5b5c88aaa04bea143f8ef2a16b4"
+      },
+      "src/traffic-control/model/traffic-control-layer.cc": {
+        "available": true,
+        "locators": {
+          "stopped_queue_TcDrop": [
+            373,
+            390
+          ]
+        },
+        "path": "/home/ubuntu/ns-3.48/src/traffic-control/model/traffic-control-layer.cc",
+        "sha256": "2f2c72858820c2e4310145bb9d3c4f6083a13605abd601ebab3df8e25066a429"
+      }
+    },
+    "qualification": "Locators refer to the retained canonical course source; hashes identify the inspected files.",
+    "root": "/home/ubuntu/ns-3.48"
+  }
+}

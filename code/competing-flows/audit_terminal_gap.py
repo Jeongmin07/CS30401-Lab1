@@ -76,11 +76,14 @@ def source_contracts():
             "SetNextRxSequence(tcpHeader.GetSequenceNumber() + SequenceNumber32(1));",
             "m_rxTrace(packet, tcpHeader, this);",
             "if (!m_tcb->m_rxBuffer->Add(p, tcpHeader))",
-            "if (expectedSeq < m_tcb->m_rxBuffer->NextRxSequence())"],
+            "if (expectedSeq < m_tcb->m_rxBuffer->NextRxSequence())",
+            "NotifyDataRecv();"],
+        "src/network/model/socket.cc": ["m_receivedData(this);"],
         "src/internet/model/tcp-rx-buffer.cc": [
             "else if (i->first > m_nextRxSeq)",
             "m_nextRxSeq = i->first + SequenceNumber32(i->second->GetSize());"],
         "contrib/basic-sim/model/apps/tcp-flow-sink.cc": [
+            "socket->GetRxBuffer()->NextRxSequence().GetValue()",
             "while ((packet = socket->RecvFrom(from)))",
             "connection.appRxBytes += packet->GetSize();"],
     }
@@ -113,6 +116,8 @@ def audit_case(run, expected_mode):
     require(app_paths and rx_paths, "Receiver application and wire traces are required")
     app_bytes = {fid: 0 for fid in ids}
     app_last, connections, totals = {}, {}, {}
+    app_marks = {fid: [] for fid in ids}
+    app_last_time_rows = {fid: [] for fid in ids}
     for path in app_paths:
         for line, row in rows(path, cutoff):
             fid, size = row["flow_id"], int(row["payload_bytes"])
@@ -124,12 +129,22 @@ def audit_case(run, expected_mode):
             totals[key] = totals.get(key, 0) + size
             require(totals[key] == int(row["connection_total_rx_bytes"]), "Application connection total mismatch")
             app_bytes[fid] += size
-            app_last[fid] = evidence(path, line, row, (
+            item = evidence(path, line, row, (
                 "flow_id", "time_ns", "payload_bytes", "connection_total_rx_bytes"))
+            require(not app_marks[fid] or app_marks[fid][-1][0] <= item["time_ns"],
+                    "Application time order changed across trace files")
+            app_marks[fid].append((item["time_ns"], app_bytes[fid] + 1))
+            if fid not in app_last or app_last[fid]["time_ns"] != item["time_ns"]:
+                app_last_time_rows[fid] = []
+            app_last_time_rows[fid].append(item)
+            app_last[fid] = item
     require(len(connections) == 2 and all(sum(v[0] == fid for v in connections.values()) == 1 for fid in ids),
             "Expected one application connection per flow")
     wire = {fid: Union() for fid in ids}
     rx_last = {}
+    app_times = {fid: [time for time, _ in app_marks[fid]] for fid in ids}
+    app_frontiers = {fid: [frontier for _, frontier in app_marks[fid]] for fid in ids}
+    rx_validation = {fid: {"validated_payload_rows": 0, "last_timestamp_payload_rows": 0} for fid in ids}
     for path in rx_paths:
         for line, row in rows(path, cutoff):
             size = int(row["payload_bytes"])
@@ -138,6 +153,30 @@ def audit_case(run, expected_mode):
             fid, seq = row["flow_id"], int(row["seq"])
             require(fid in ids and row["tagged"] == "1", "Untagged/unmapped receiver payload")
             require(0 < seq < seq + size < (1 << 31), "This audit does not support sequence wrap")
+            key = (row["node_id"], row["local_port"], row["connection_id"])
+            identity = (fid, row["peer_ip"], row["peer_port"])
+            require(connections.get(key) == identity, "Wire/application connection identities differ")
+            time, expected = int(row["time_ns"]), int(row["expected_seq"])
+            earlier = bisect.bisect_left(app_times[fid], time)
+            through = bisect.bisect_right(app_times[fid], time)
+            before = app_frontiers[fid][earlier - 1] if earlier else 1
+            after = app_frontiers[fid][through - 1] if through else 1
+            # Rx is before processing; a callback may subsequently drain data
+            # at the same timestamp. Bound it by the actual app history rather
+            # than equating a pre-processing observation to the final frontier.
+            require(before <= expected <= after, "Pre-processing receiver sequence disagrees with application history")
+            if expected > before:
+                index = bisect.bisect_left(app_frontiers[fid], expected, earlier, through)
+                require(index < through and app_frontiers[fid][index] == expected,
+                        "Receiver sequence is not an observed application frontier at this timestamp")
+            previous = rx_last.get(fid)
+            require(previous is None or previous["time_ns"] <= time and previous["expected_seq"] <= expected,
+                    "Receiver time/expected sequence moved backwards")
+            if previous is None or previous["time_ns"] != time:
+                require(expected == before, "First payload at timestamp does not match prior drained application frontier")
+                rx_validation[fid]["last_timestamp_payload_rows"] = 0
+            rx_validation[fid]["last_timestamp_payload_rows"] += 1
+            rx_validation[fid]["validated_payload_rows"] += 1
             wire[fid].add(seq, seq + size)
             rx_last[fid] = evidence(path, line, row, (
                 "flow_id", "time_ns", "seq", "expected_seq", "payload_bytes", "tx_id"))
@@ -164,8 +203,28 @@ def audit_case(run, expected_mode):
         require(prefix[0] == 1 and prefix[1] >= frontier, "Wire trace does not cover delivered sequence prefix")
         excess = sum(right - left for left, right in above)
         require(wire[fid].total - app_bytes[fid] == excess, "Wire/app frontier accounting mismatch")
-        if holes:
-            require(rx_last[fid]["expected_seq"] == frontier, "Last receiver expected sequence disagrees with app frontier")
+        last_rx = rx_last[fid]
+        require(app_last[fid]["time_ns"] <= last_rx["time_ns"], "Application delivery occurs after final receiver payload")
+        last_time = last_rx["time_ns"]
+        earlier = bisect.bisect_left(app_times[fid], last_time)
+        before = app_frontiers[fid][earlier - 1] if earlier else 1
+        same_time_apps = app_last_time_rows[fid] if app_last[fid]["time_ns"] == last_time else []
+        advance = frontier - last_rx["expected_seq"]
+        require(advance >= 0, "Final application frontier precedes last pre-processing receiver sequence")
+        if advance:
+            require(same_time_apps and last_rx["seq"] <= last_rx["expected_seq"] < last_rx["seq"] + last_rx["payload_bytes"],
+                    "Final frontier advance lacks same-time application delivery and a payload covering the prior hole")
+            if rx_validation[fid]["last_timestamp_payload_rows"] == 1:
+                require(sum(row["payload_bytes"] for row in same_time_apps) == advance,
+                        "Unique final receiver payload and same-time drained-byte advance disagree")
+        terminal_observation = {
+            "pre_processing_expected_seq": last_rx["expected_seq"],
+            "application_frontier_before_timestamp": before,
+            "application_frontier_after_timestamp": frontier,
+            "final_frontier_minus_pre_processing_expected_seq": advance,
+            "same_time_application_delivery_rows": same_time_apps,
+            **rx_validation[fid],
+            "qualification": "Wire expected_seq is before processing. Same-time app delivery can advance the final frontier; app UIDs are not joined to wire packets."}
         packet_path = logs / f"tcp_flow_{fid}_study_packets.csv"
         inputs.append(packet_path)
         syn_sequences, first_data, selected = set(), None, []
@@ -195,6 +254,7 @@ def audit_case(run, expected_mode):
                        "wire_minus_application_bytes": excess, "first_data_sequence": first_data,
                        "syn_sequences": sorted(syn_sequences), "application_sequence_frontier": frontier,
                        "last_application_delivery": app_last[fid], "last_receiver_payload": rx_last[fid],
+                       "terminal_frontier_observation": terminal_observation,
                        "received_ranges_above_frontier": above, "unreceived_holes_below_highest_received_end": holes,
                        "sack_confirmed_ranges_above_frontier": sacks.ranges, "sack_confirmed_bytes_above_frontier": sacks.total,
                        "wire_bytes_above_frontier_without_sender_sack_confirmation": excess - sacks.total,
@@ -268,12 +328,12 @@ def main():
     require(all(flow["wire_minus_application_bytes"] == 0 for flow in base["flows"].values()),
             "This DD/GG diagnostic requires no baseline terminal wire/app excess")
     excess = sum(flow["wire_minus_application_bytes"] for flow in guard["flows"].values())
-    require(excess > 0 and all(flow["verified_terminal_holes"] for flow in guard["flows"].values()),
-            "Expected guarded terminal holes in both flows")
+    require(excess > 0 and any(flow["verified_terminal_holes"] for flow in guard["flows"].values()),
+            "Expected a guarded terminal hole in at least one flow")
     app_delta = guard["application_bytes"] - base["application_bytes"]
     wire_delta = guard["wire_unique_bytes"] - base["wire_unique_bytes"]
     require(app_delta == wire_delta - excess, "DD/GG terminal accounting identity failed")
-    result = {"schema_version": 1, "source_contracts": contracts, "baseline": base, "guarded": guard,
+    result = {"schema_version": 2, "source_contracts": contracts, "baseline": base, "guarded": guard,
               "accounting": {"guarded_minus_baseline_application_bytes": app_delta,
                              "guarded_minus_baseline_wire_unique_bytes": wire_delta,
                              "guarded_wire_above_unresolved_frontiers_bytes": excess,
@@ -282,6 +342,7 @@ def main():
                   "Wire Rx is emitted before TCP processing; wire-union excess is not an exact accepted-buffer measurement.",
                   "SACK confirms only the reported subset; late receiver arrivals may not have sender feedback by cutoff.",
                   "Application frontier assumes verified SYN seq0/data seq1, one connection per flow and no sequence wrap.",
+                  "Pre-processing receiver expected_seq is checked against drained application history; it need not equal the final frontier when that payload produces same-time app delivery.",
                   "Terminal holes have tagged original drops and retransmission attempts, with no receiver payload overlap before cutoff.",
                   "No observed arrival by cutoff does not prove a retransmission was lost or would never arrive.",
                   "The accounting explains this deadline-specific application deficit, not all earlier trajectory differences or long-run superiority.",

@@ -1,0 +1,56 @@
+{
+  "all_csv_hashes_match": false,
+  "case": "same-start-gd-k8",
+  "checked_at_utc": "2026-10-10T08:07:09.272475+00:00",
+  "checks": {
+    "analysis_sha256": true,
+    "analyzer_sha256": true,
+    "binary_sha256": true,
+    "config_ns3.properties_sha256": true,
+    "connection_validation": true,
+    "exporter_sha256": true,
+    "flows": true,
+    "guard_validation": true,
+    "make_run_sha256": true,
+    "measurement_and_legacy_csv_hashes": true,
+    "official_image_digest": true,
+    "patch_sha256": true,
+    "path_truth_sha256": true,
+    "runner_sha256": true,
+    "schedule.csv_sha256": true,
+    "source_commit": true,
+    "windows": true
+  },
+  "csv_differences": [
+    {
+      "original": {
+        "bytes": 561,
+        "path": "logs_ns3/timing_results.csv",
+        "sha256": "dbdf3fdfb6497da805570d73f695d47064c8efa7c1970137487aeeb3ab0d4c9d"
+      },
+      "path": "logs_ns3/timing_results.csv",
+      "replay": {
+        "bytes": 561,
+        "path": "logs_ns3/timing_results.csv",
+        "sha256": "5908b83d2cd3f0d1d35255ba7a8b5201818d8d27f6258d03637563d2f44cd94d"
+      }
+    }
+  ],
+  "fresh_official_ns3_volume": true,
+  "full_analysis_sha256": "d37bf9fe8de2af3d9da6f926411c61132a1156aec05578ed5c0452474a1a05a0",
+  "matched": true,
+  "measurement_csv_bytes_checked": 58534973,
+  "measurement_csv_files_checked": 15,
+  "nondeterministic_file_exclusion": {
+    "path": "logs_ns3/timing_results.csv",
+    "reason": "Wall-clock stage profiling; hashes retained and differences disclosed, excluded from simulation measurement equality."
+  },
+  "official_image_digest": "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+  "original_container": "lab1-competing-20261010",
+  "original_volume": "cs30401-competing-ns3-20261010",
+  "original_wall_time_s": 19.109562,
+  "qualification": "One representative fresh-volume replay of K8; deterministic reproduction, not an independent statistical sample. Other five K8 cases were validated but not replayed on this volume.",
+  "replay_container": "lab1-competing-k8-replay-20261010",
+  "replay_volume": "cs30401-competing-k8-replay-ns3-20261010",
+  "replay_wall_time_s": 20.571484
+}
