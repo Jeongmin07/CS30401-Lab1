@@ -1,0 +1,7 @@
+# Vegas RTT-reference renewal: mechanism and matched controls
+
+**Status: implementation and evaluation in progress, 2026-10-10.** Owner: kim-seongchan with AI assistance. Branch `experiment/vegas-rtt-renewal` starts from latest main `b60e8e019053c7d33b853510ec06c3d94ee78faf`. The user requested continuation after [PR13](https://github.com/Jeongmin07/CS30401-Lab1/pull/13) screened Vegas's propagation/congestion confusion. This branch references that evidence without modifying its runs or assuming teammate approval.
+
+Scope: opt-in Vegas internal-decision traces, one bounded RTT-reference experiment, matched fixed/changed-propagation and genuine sustained-queue controls, then supplied-state LEO evaluation if justified. Keep SRTT input, startup and existing loss recovery unchanged. Exact-event information, if used to bound benefit, must be labeled diagnostic oracle information rather than a deployable solution. Any endpoint-only method must be tested against persistent congestion and competition.
+
+Use a separately initialized official ns-3 volume; export the complete patch, exact source/image/binary/settings/runtime identities, compact evidence and accessible compressed originals. Do not overwrite previous patches or results. No final topic, successful fix, report or merge is claimed at declaration. Other teammates use separate AI chats/laptops; this PR is shared evidence, not role assignment.
