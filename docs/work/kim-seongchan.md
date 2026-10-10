@@ -1,5 +1,9 @@
 # 작업 인수인계: kim-seongchan
 
+## 진행 중 — Vegas beta 여유 보존 v2
+
+PR14를 Draft로 되돌리고 같은 브랜치에서 후속 검증을 시작했다. v1은 그대로 보존하고 `code/vegas-study/v2/` 및 [별도 기록](../experiments/20261010-vegas-budget-renewal.md)에 한 가지 변경을 분리한다. 20-cycle 최소 SRTT로 올릴 때 원래 beta=4 혼잡 추정 여유를 남기는 가설이며 지속 큐/경로 지연 구분의 해결을 주장하지 않는다. 실행 전 10 matched 조건, v1 호환성 검증, 양 흐름/큐/TcDrop 평가를 선언했다. 결과는 아직 없다.
+
 ## 최신 Vegas 후속 실험 — PR14, 2026-10-10 (KST)
 
 - [PR14](https://github.com/Jeongmin07/CS30401-Lab1/pull/14), `experiment/vegas-rtt-renewal`: PR13에서 찾은 오래된 Vegas RTT 기준값 문제를 opt-in 갱신으로 검증했다. [실험 기록](../experiments/20261010-vegas-rtt-renewal.md), [실행/분석/patch](../../code/vegas-study/README.md), [결과표](../../code/vegas-study/evidence/results.csv)를 먼저 읽는다.
