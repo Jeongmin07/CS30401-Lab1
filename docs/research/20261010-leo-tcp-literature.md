@@ -54,7 +54,7 @@ The ten paper entries below were read in the linked primary-source versions. “
 
 **Ding Zhao, Xinyu Zhang, Myungjin Lee.** “SatPipe: Deterministic TCP Adaptation for Highly Dynamic LEO Satellite Networks.” IEEE INFOCOM 2025, pp. 1–10. [Author PDF](https://xyzhang.ucsd.edu/papers/Ding.Zhao_INFOCOM25_SatPipe.pdf), [DOI](https://doi.org/10.1109/INFOCOM55648.2025.11044600), [code](https://github.com/dzhao99/SatPipe).
 
-- **Read:** §III–V, Algorithm 2, Figs. 8–20. Timing from synchronization/initial delay measurements drives queue maintenance followed by propagation-RTT remeasurement in a Linux BBR patch. Evaluation uses a Gen-2 Starlink client in San Diego, six AWS locations, Linux 6.8.10, and multiple three-minute iperf3 runs, plus application/competition tests.
+- **Read:** §III–V, Algorithm 2, Figs. 8–20. Timing from synchronization/initial inter-packet-delay (IPD) measurements drives queue maintenance followed by propagation-RTT remeasurement in a Linux BBR patch. Evaluation uses a Gen-2 Starlink client in San Diego, six AWS locations with Linux 6.8.10 servers, and multiple three-minute iperf3 runs, plus application/competition tests.
 - **Borrow:** report goodput, low-throughput percentiles, RTT, and retransmission together; test flow joins/leaves rather than only a permanent single flow.
 - **Fit:** evaluation ideas transfer more readily than the implementation. Porting BBR states and access-outage behavior is substantial work; real-network gains are not expected gains for our default ISL model.
 
@@ -62,15 +62,15 @@ The ten paper entries below were read in the linked primary-source versions. “
 
 **Johan Garcia, Simon Sundberg, Anna Brunstrom.** “TCP Congestion Control Performance over Starlink.” ANRW 2025, pp. 70–77. [University PDF](https://www.diva-portal.org/smash/get/diva2%3A1992495/FULLTEXT01.pdf), [DOI](https://doi.org/10.1145/3744200.3744760).
 
-- **Read:** §3–7, Figs. 4–5. Rooftop Gen-2 measurements compare 14 Linux controllers using 180-second runs, one/ten parallel flows, and randomized replication blocks. BBRv3 uses a separately patched kernel. Startup and competition matter alongside averages.
+- **Read:** §3–7, Figs. 4–5. Rooftop Gen-2 measurements compare 14 Linux controllers using 180-second runs, one/ten parallel flows, and 15 randomized replication blocks in the main campaign. Client/server kernels are 6.3.2/6.8.0; BBRv3-250318 uses patched 6.13.7. Startup and competition matter alongside averages.
 - **Borrow:** separate startup/steady state and change competitor start order. **§6 completion curves measure time from SYNACK to byte prefixes of long-flow captures**; they are not separate finite transfers at each size. Label that method if reused; our finite-flow controls actually terminate at their declared size.
-- **Fit:** queue size was not a controlled course parameter. Real capacity/scheduling variability differs from our deterministic model; its repeated measurement blocks do not justify treating identical ns-3 reruns as independent samples.
+- **Fit:** physical bottleneck queue sizes were not reported as a controlled setting in the reviewed setup. Real capacity/scheduling variability differs from our deterministic model; its repeated measurement blocks do not justify treating identical ns-3 reruns as independent samples.
 
 ### P7. A first look at Starlink performance
 
 **François Michel, Martino Trevisan, Danilo Giordano, Olivier Bonaventure.** “A First Look at Starlink Performance.” ACM IMC 2022, pp. 130–136. [Accepted manuscript](https://iris.polito.it/retrieve/bb117d3d-877f-4116-953f-5f80f1f5cc79/Starlink_characterization.pdf), [DOI](https://doi.org/10.1145/3517745.3561416). The repository cover precedes the manuscript.
 
-- **Read:** §2–3, Table 2, Figs. 3–4. Belgium measurements compare idle/light/heavy load, upload/download, RTT distributions, and loss bursts. Loads include 100-MB HTTP/3 bulk and two-minute light QUIC traffic.
+- **Read:** §2–3, Table 2, Figs. 3–4. Belgium measurements compare idle/light/heavy load, upload/download, RTT distributions, and loss bursts. Loads include 100-MB HTTP/3 bulk and two-minute light QUIC traffic (25 messages/s, 5–25 kB, average 3 Mbit/s), using quiche ba87786 with CUBIC.
 - **Borrow:** distinguish propagation delay from load-induced delay; examine loss duration/burst structure and direction instead of an overall loss percentage alone.
 - **Fit:** the authors infer that ISLs were inactive in their observed deployment. This is not a direct measurement of our ISL topology. Observed loss mixes possible causes; inserting that percentage as independent random wireless errors, or equating QUIC loss with TCP retransmission counts, would need separate justification.
 
@@ -122,14 +122,14 @@ Very small flights may not supply three duplicate ACKs. Early Retransmit conditi
 
 **Zeqi Lai, Zonglun Li, Qian Wu, Hewu Li, Jihao Li, Xin Xie, Yuanjie Li, Jun Liu, Jianping Wu.** “LeoCC: Making Internet Congestion Control Robust to LEO Satellite Dynamics.” ACM SIGCOMM 2025, pp. 129–146. [DOI](https://doi.org/10.1145/3718958.3750491), [official program/abstract](https://conferences.sigcomm.org/sigcomm/2025/program/papers-info/), [author repository and replay traces](https://github.com/SpaceNetLab/LeoCC).
 
-The official abstract describes detecting network reconfiguration and resetting a model. The repository provides measured traces and replay support. We verified those sources, **not the full paper's experiment conditions**; do not cite an unverified result or call this an implemented comparator. It is a promising next read for endpoint information and trace-driven evaluation.
+The official abstract describes detecting network reconfiguration and using a reconfiguration-aware model to estimate conditions and regulate sending rate. The repository provides measured traces and replay support. We verified those sources, **not the full paper's experiment conditions**; do not cite an unverified result or call this an implemented comparator. It is a promising next read for endpoint information and trace-driven evaluation.
 
 ## Proposed use in the assignment
 
 These are suggestions based on the review, not completed tests or new team rules:
 
 1. **Position the existing study honestly.** Established work motivates reordering robustness. Our narrower evidence concerns one supplied CUBIC/SACK/PRR implementation, externally scheduled activation, and loss-recovery tradeoffs. Both local benefit and whole-run harm belong in the report.
-2. **Close a causal gap before a large sweep.** The q75 experiment already supplies a negative result. Packet identity, drop location, ACK evidence, congestion state, and accumulated receiver-byte differences can explain more than another average-throughput table.
+2. **Close a causal gap before a large sweep.** The q75 experiment already supplies a negative result. Packet identity, drop location, ACK evidence, congestion state, and accumulated receiver-byte differences can explain more than another average-throughput table. [Jeongmin07's Draft PR #10](https://github.com/Jeongmin07/CS30401-Lab1/pull/10) already investigates this question; read its current status before duplicating work.
 3. **Add one discriminating comparison if time allows.** Competing guarded/default flows, a second geometry, or broader K8 finite-flow coverage answer different questions. Choose one, control its inputs, and include a failure case. Our current offset sweep already tests shifted schedules; repeating it is not a new notification mechanism.
 4. **State information costs.** The schedule uses known simulation events; the exemption needs known total transfer size. Obtaining reliable advance notice, telemetry, or remaining-flight information at a real endpoint remains unimplemented.
 5. **Avoid a deadline-driven full protocol port.** RACK, SaTCP, SatPipe, and OrbCC are useful comparison designs, but a partial port without its dependencies could create a misleading baseline. A clearly bounded course study with causal evidence is the lower-risk submission path.

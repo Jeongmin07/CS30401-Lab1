@@ -1,6 +1,6 @@
 # 문헌 조사와 현재 연구의 인수인계
 
-작성: kim-seongchan, AI 보조. 날짜: **2026-10-10**. 기준: [`main` b60e8e0](https://github.com/Jeongmin07/CS30401-Lab1/tree/b60e8e019053c7d33b853510ec06c3d94ee78faf), PR #9 병합 이후.
+작성: kim-seongchan, AI 보조. 날짜: **2026-10-10**. 기준: [`main` b60e8e0](https://github.com/Jeongmin07/CS30401-Lab1/tree/b60e8e019053c7d33b853510ec06c3d94ee78faf), PR #9 병합 이후. 미병합 작업은 Draft PR #10의 `46e27cf`까지 확인했다.
 
 이 문서는 관련 연구 조사와 그에 따른 **제안**이다. 새 실험을 실행하지 않았으며, 팀 연구 주제·역할·공통 조건을 확정하지 않는다. 합의 상태는 [PLAN](../PLAN.md), 실제 문헌 근거는 [문헌 조사](20261010-leo-tcp-literature.md)에 있다. 이 기록 이후 올라온 PR과 작업 기록도 확인해야 한다.
 
@@ -26,6 +26,7 @@
 | [독립 CUBIC 연구](../../code/kim-study/README.md) | 초기 23 + 후속 52 = 75개 case ID, v6 patch, 분석/그림/초안 | 팀이 승인한 최종 주제가 아님. 회귀용 중복도 있어 75개 독립 조건/seed 표본이 아님 |
 | [v6 재현 기록](../../code/kim-study/evidence/reproduction_v6.json) | 공식 이미지의 fresh volume에서 전체 75-case replay 및 분석 hash 일치가 기록됨 | 이번 문헌 조사에서 재실행한 결과가 아님. 그림 파일의 byte 일치 주장도 아님 |
 | [q75 기록](../experiments/20261010-cubic-q75.md) | 새 q75 네 조건과 q100 두 조건의 별도 replay | 해당 작업의 기존 patch를 변경하지 않음 |
+| [진행 중 Draft PR #10](https://github.com/Jeongmin07/CS30401-Lab1/pull/10) | q75 후반 deficit, K4, 121.6초 전환 주변 guard, 시작 시각/큐 변경, genuine-loss controls 조사 | [확인한 기록](https://github.com/Jeongmin07/CS30401-Lab1/blob/46e27cf2f791f67c16ec1ed38342da1f4f63c4ef/docs/experiments/20261010-cubic-followup.md)은 진행 중 상태. 선언한 실험을 완료 결과로 취급하지 않음 |
 | [shared-results](../../shared-results/) | BBR/CUBIC/NewReno/Vegas × q100/q1000, 200초·100 Mbit/s 탐색 | 주로 10 Mbit/s인 독립 연구와 같은 조건으로 합쳐 비교하면 안 됨 |
 | [김성찬 작업 기록](../work/kim-seongchan.md), [정민 작업 기록](../work/Jeongmin07.md) | 각 작업의 진행·남은 일 | 오래된 항목 뒤에 갱신 기록이 있음. 기록만으로 지금 실행 중이라고 단정하지 않음 |
 
@@ -51,6 +52,8 @@
 
 앞의 네 행은 [기존 독립 연구](../../code/kim-study/README.md), 마지막 행은 [별도 q75 기록](../experiments/20261010-cubic-q75.md)에서 가져왔다. 합쳐서 통계적 일반화나 실제 Starlink/Linux 개선을 주장하지 않는다. synthetic 80-MSS delay-step의 FCT 감소도 whole-run LEO throughput 증가와 별개의 결과다.
 
+**공유 중인 후속 작업:** [PR #10의 예비 기록](https://github.com/Jeongmin07/CS30401-Lab1/blob/46e27cf2f791f67c16ec1ed38342da1f4f63c4ef/docs/experiments/20261010-cubic-followup.md)은 q75 first-only가 120초에는 앞서지만 120–130초와 160–170초 구간에서 손해가 쌓이고, 121.6초 전환 주변에 두 실행의 회복이 관측된다고 적었다. 이는 인과 증명 전의 시간적 연관이며, 새 controls의 결과는 아직 그 commit에 없다. 해당 작업은 Jeongmin07이 진행 중으로 공유했으므로 먼저 최신 PR을 읽어 이어갈 부분을 확인한다.
+
 ## 문헌을 더 읽어서 얻은 판단
 
 관련 연구는 이미 풍부하다. **재정렬 자체를 처음 발견했다거나 임계값을 올리는 원리를 처음 제안했다는 설명은 피해야 한다.** 현재 코드에 맞는 잠정 주제는 다음과 같다.
@@ -67,12 +70,12 @@
 
 | 우선순위/질문 | 구체적으로 확인할 것 | 완료라고 볼 근거와 중복 주의 |
 | --- | --- | --- |
-| **1. q75 후반 손해의 원인** | 28.2초 이후 baseline/first-only의 누적 receiver-byte 차이를 먼저 좁히고 해당 packet/drop/ACK/recovery를 추적. 보호 요청/실제 복원 시각도 대조 | 어떤 사건이 deficit을 만들고 지속시키는지 재현 가능한 trace로 설명. [정민의 남은 일](../work/Jeongmin07.md)에 이미 있으므로 현재 진행 여부부터 확인하고 중복 배정하지 않음 |
+| **1. 진행 중 q75 원인 분석과 연결** | [Draft PR #10](https://github.com/Jeongmin07/CS30401-Lab1/pull/10)의 최신 결과/남은 질문부터 읽기. 그 분석에서 packet/drop/ACK/recovery와 보호 요청/실제 복원 시각을 대조할 필요가 있는지 확인 | 어떤 사건이 deficit을 만들고 지속시키는지 재현 가능한 trace로 설명. Jeongmin07의 후반 분석·K4·later guard·20/22-MSS controls·flow-start/q50 checks를 새로 중복 배정하지 않음 |
 | **2. 공유 병목에서 부작용** | 같은 병목을 실제로 통과하는 두 flow: default/default 대 guarded/default 비교. flow별 delivered bytes, RTT, 손실/회복, Jain fairness; 시작 순서도 기록 | 단일 flow 이득이 상대 flow에 비용을 전가하는지 확인. 두 flow를 만들기만 하고 경로가 다른 실험은 답이 되지 않음. 구현 난도가 크면 다음 후보 선택 |
 | **3. 작은 추가 일반화 한 가지** | 두 번째 도시쌍/전환 또는 추가 finite-flow K8 조건 중 하나를 선택. 각 조건에 맞춘 baseline 및 필요한 genuine-loss/no-loss control 유지 | 한 경로 또는 20-MSS K8 한 점에 대한 의존을 확인. 기존 K8/K20/K32 bulk·3/4/8/20/21/22/80-MSS matrix·첫/중간/마지막 손실·delay-step·6개 nonzero offset은 이미 수행됐으므로 새 실험으로 다시 소개하지 않음 |
 | **병행 가능: 제출물 정리** | 확정된 주제에 맞는 보고서 claim/그림/참고문헌, 팀 저자, canonical patch 하나, clean replay와 figure/table mapping 확인 | 사람이 연구 범위를 합의한 뒤 최종화. 이번 PR은 문헌 조사만 했으며 제출물 검증 완료를 뜻하지 않음 |
 
-시간이 부족하면 1번과 제출물 정리에 집중해도 연구의 인과 설명은 강해진다. 2/3번 중 하나는 여유와 구현 가능성에 따라 고르면 된다. q75/q50 음수 결과를 숨기고 평균 이득을 크게 보이는 조건만 고르는 방식은 권하지 않는다.
+시간이 부족하면 진행 중인 1번의 결과를 통합하고 제출물을 정리하는 데 집중해도 연구의 인과 설명은 강해진다. 2/3번 중 하나는 여유와 구현 가능성에 따라 고르면 된다. q75/q50 음수 결과를 숨기고 평균 이득을 크게 보이는 조건만 고르는 방식은 권하지 않는다.
 
 팀이 CUBIC 방향을 선택하지 않는다면 [Vegas-A](20261010-leo-tcp-literature.md#p10-tcp-vegas-a)를 참고해 base RTT·전파 지연 변화와 큐 지연을 분리하는 대안이 있다. 기존 Vegas 평균만으로 원인을 확정하거나, 현재 최종 주제가 결정됐다고 간주하지 않는다.
 
