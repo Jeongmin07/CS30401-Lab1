@@ -1,6 +1,8 @@
 # Same-path CUBIC competition runner
 
-This is a new experiment tool, not an experiment result. It reuses the course
+The [completed eight-case experiment](../../docs/experiments/20261010-cubic-competing.md)
+records the results, limitations, exact reproduction workflow and fresh-volume
+check. This tool reuses the course
 `make_run.sh` and the canonical `../kim-study/ns3.patch`; it does not modify or
 build ns-3. Apply that patch to a fresh official ns-3 volume and build first.
 The runner uses Python's standard library only.
@@ -54,6 +56,24 @@ python3 /work/code/kim-study/analyze_study.py /tmp/cs30401-competing/same-start-
   --path-truth /work/code/kim-study/path_truth_200s.csv --include-bins \
   --output /tmp/cs30401-competing/same-start-gd/analysis.json
 ```
+
+Or validate and export compact evidence for multiple cases into a **new** folder:
+
+```sh
+python3 /work/code/competing-flows/summarize_competing.py \
+  --cases same-start-dd same-start-gd same-start-dg same-start-gg \
+  --analyzer /work/code/kim-study/analyze_study.py \
+  --path-truth /work/code/kim-study/path_truth_200s.csv --out /tmp/competing-export
+```
+
+The exporter checks independent per-connection delivery totals, both flow IDs,
+app/bin/count agreement with the existing analyzer, initial K3 and each actual
+guard activation's time/K. It records actual restoration, which can be later
+than requested. Its `results.csv` uses matched half-open intervals; one-second
+bins show shorter sharing changes. For staggered starts, compare fairness over
+the common-active interval, not solely over the initial single-flow period.
+All original CSV hashes are retained. `timing_results.csv` profiles wall-clock
+execution and is expected to differ during replay, unlike measurement traces.
 
 Receiver `payload_bytes` are unique ordered application delivery. Compare
 each flow and their sum over matched active intervals; do not sum the sink's

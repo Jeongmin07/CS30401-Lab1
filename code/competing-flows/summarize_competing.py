@@ -48,6 +48,7 @@ def export_case(run, out, analyzer, path_truth):
     duration_ns = round(analysis["duration_s"] * 1e9)
     starts = [int(row[4]) for row in schedule]
     guards = [bool(row[5]) for row in schedule]
+    guard_checks = {}
     windows = {"whole": (0, duration_ns), "common-active": (max(starts), duration_ns),
                "steady": (20_000_000_000, duration_ns),
                "event26": (25_700_000_000, 28_200_000_000),
@@ -110,13 +111,26 @@ def export_case(run, out, analyzer, path_truth):
                     for name, (left, right) in windows.items():
                         if left <= time < right:
                             counters[name][fid][field] += 1
-        if bool(threshold_sets) != guards[int(fid)]:
-            raise ValueError(f"Guard trace does not match schedule for flow {fid}")
+        if flow["initial_retransmission_threshold"] != 3:
+            raise ValueError(f"Expected initial K3 for flow {fid}")
+        controls = dict(token.split("=", 1) for token in schedule[int(fid)][5].split(";") if "=" in token)
+        expected_sets = []
+        if guards[int(fid)]:
+            threshold = int(controls["study_threshold"])
+            requested = [tuple(map(int, part.split(":"))) for part in controls["study_windows"].split("|")]
+            if any(left <= starts[int(fid)] or right > duration_ns for left, right in requested):
+                raise ValueError("This validator expects guards after both starts and before simulation end")
+            expected_sets = [(left, threshold) for left, _ in requested]
+        actual_sets = [(int(row["time_ns"]), int(row["new_value"])) for row in threshold_sets]
+        if actual_sets != expected_sets or any(int(row["threshold"]) != int(row["new_value"]) for row in threshold_sets):
+            raise ValueError(f"Guard activation time/K does not match schedule for flow {fid}")
+        guard_checks[fid] = {"initial_k": 3, "expected_sets": expected_sets,
+                             "observed_sets": actual_sets, "matched": True}
         with (run / "logs_ns3" / f"tcp_flow_{fid}_study_packets.csv").open(newline="") as source:
             for row in csv.DictReader(source):
                 if row["flow_id"] != fid:
                     raise ValueError("Packet trace belongs to another flow")
-                if row["event"] == "RETX":
+                if row["event"] == "RETX" and int(row["payload_bytes"]) > 0:
                     time = int(row["time_ns"])
                     for name, (left, right) in windows.items():
                         if left <= time < right:
@@ -158,6 +172,7 @@ def export_case(run, out, analyzer, path_truth):
                    {"node": k[0], "local_port": k[1], "connection_id": k[2],
                     "peer_ip": v[0], "peer_port": v[1], "flow_id": v[2],
                     "delivered_bytes": totals[k]} for k, v in sorted(connections.items())],
+               "guard_validation": guard_checks,
                "drop_coverage": analysis["drop_coverage"],
                "drop_rows_without_usable_transmission_tag": analysis["drop_rows_without_usable_transmission_tag"],
                "raw_inputs": inputs, "windows": rows, "flows": {}}
@@ -205,7 +220,7 @@ def main():
         "common_active": "Begins at max(declared start times), not first app delivery",
         "bins": "1s from app timestamps; fairness omitted before both scheduled starts",
         "rtt": "Whole-run time-weighted sender smoothed RTT; not raw RTT/queueing-only delay",
-        "retransmission": "RETX trace rows, not independent loss episodes",
+        "retransmission": "RETX trace rows with data payload>0, not independent loss episodes",
         "loss": "LOSS state entries; not automatically interpreted as timeout",
         "inputs": "All raw/legacy CSV hashes retained; raw traces and full analysis stay outside Git",
         "sampling": "Deterministic cases, no independent seed samples/confidence intervals"})

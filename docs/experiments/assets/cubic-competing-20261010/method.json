@@ -1,0 +1,12 @@
+{
+  "bins": "1s from app timestamps; fairness omitted before both scheduled starts",
+  "common_active": "Begins at max(declared start times), not first app delivery",
+  "fairness": "Jain index on two flows over the same window; null for no delivery",
+  "goodput": "Unique ordered application payload bytes, not sink-wide totals or sender ACK progress",
+  "inputs": "All raw/legacy CSV hashes retained; raw traces and full analysis stay outside Git",
+  "loss": "LOSS state entries; not automatically interpreted as timeout",
+  "retransmission": "RETX trace rows with data payload>0, not independent loss episodes",
+  "rtt": "Whole-run time-weighted sender smoothed RTT; not raw RTT/queueing-only delay",
+  "sampling": "Deterministic cases, no independent seed samples/confidence intervals",
+  "windows": "Half-open [start,end) nanosecond intervals; same denominator for both flows"
+}

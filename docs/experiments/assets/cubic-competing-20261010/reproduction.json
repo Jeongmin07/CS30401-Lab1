@@ -1,0 +1,52 @@
+{
+  "all_csv_hashes_match": false,
+  "case": "same-start-gd",
+  "checked_at_utc": "2026-10-10T07:03:40.099042+00:00",
+  "checks": {
+    "binary_sha256": true,
+    "config_ns3.properties_sha256": true,
+    "connection_validation": true,
+    "flow_metrics": true,
+    "full_analysis_hash": true,
+    "guard_validation": true,
+    "make_run_sha256": true,
+    "measurement_and_legacy_csv_hashes": true,
+    "metrics": true,
+    "official_image_digest": true,
+    "patch_sha256": true,
+    "runner_sha256": true,
+    "schedule.csv_sha256": true,
+    "source_commit": true
+  },
+  "csv_differences": [
+    {
+      "original": {
+        "bytes": 562,
+        "path": "logs_ns3/timing_results.csv",
+        "sha256": "6986acf4bb390f7d995a001cd8e428b61cf0119a682143ae9e6cc313a479656e"
+      },
+      "path": "logs_ns3/timing_results.csv",
+      "replay": {
+        "bytes": 560,
+        "path": "logs_ns3/timing_results.csv",
+        "sha256": "86974d20bad14755320df02e50bf193bf5f48f49ab76b006f1e67fe71e940391"
+      }
+    }
+  ],
+  "fresh_official_ns3_volume": true,
+  "full_analysis_sha256": "9b44e3e54bb239788c9cb8e517195999a89aac666bd5c683f6145c15f66f17b8",
+  "matched": true,
+  "measurement_csv_bytes_checked": 58520942,
+  "measurement_csv_files_checked": 15,
+  "nondeterministic_file_exclusion": {
+    "path": "logs_ns3/timing_results.csv",
+    "reason": "Wall-clock stage profiling; execution times differ. Hashes retained and difference disclosed, excluded from simulation measurement equality."
+  },
+  "original_container": "lab1-competing-20261010",
+  "original_volume": "cs30401-competing-ns3-20261010",
+  "original_wall_time_s": 20.000478,
+  "qualification": "One representative fresh-volume replay; deterministic reproduction, not an independent statistical sample. Other seven cases were validated but not replayed on the second volume.",
+  "replay_container": "lab1-competing-replay-20261010",
+  "replay_volume": "cs30401-competing-replay-ns3-20261010",
+  "replay_wall_time_s": 22.119291
+}
