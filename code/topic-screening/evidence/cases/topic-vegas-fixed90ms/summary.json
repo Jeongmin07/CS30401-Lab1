@@ -1,0 +1,197 @@
+{
+  "all_original_regular_files": [
+    {
+      "bytes": 36276,
+      "path": "analysis.json",
+      "sha256": "8dc1aa5a86d3119d7f2846351de672e7e432564008cb94b9c872047f4ea8b750"
+    },
+    {
+      "bytes": 1495,
+      "path": "case.json",
+      "sha256": "645afdb725bcae8638cc404fc49b40eac4d425d0b024e3b4f01126f46dfc9748"
+    },
+    {
+      "bytes": 35,
+      "path": "config_ns3.properties",
+      "sha256": "977024095d4af3186fee7069e98a88979590acf57c0b134f8e253e09b2ec103d"
+    },
+    {
+      "bytes": 0,
+      "path": "console.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 2143636,
+      "path": "logs_ns3/study_app_rx_node_1_port_1024.csv",
+      "sha256": "f2599e7fc3e9fcd8e79f18b69366730fe1a68a008042ec3af8657b6e95cc3d0a"
+    },
+    {
+      "bytes": 328,
+      "path": "logs_ns3/study_drop_coverage.csv",
+      "sha256": "f2bbce727ae1f61019ef8f727753e3a8f64abdeb41d660a20a3607802f4524f4"
+    },
+    {
+      "bytes": 112,
+      "path": "logs_ns3/study_drops.csv",
+      "sha256": "ec37c4087cf6eb0bf412760b74ba37e2279e44d6bfff2d89f87c8135ec82b959"
+    },
+    {
+      "bytes": 2775593,
+      "path": "logs_ns3/study_rx_node_1_port_1024.csv",
+      "sha256": "f1cf97c7ebac2eae57df27958ea7e4b3b555a51e778b8fc6c8acf52d4bcc1d08"
+    },
+    {
+      "bytes": 4726,
+      "path": "logs_ns3/tcp_flow_0_cwnd.csv",
+      "sha256": "e1ec2cc446b8b1f79f17ab33993eeafc33a5458a86bcd25d03fb7a8d526e8dc6"
+    },
+    {
+      "bytes": 318162,
+      "path": "logs_ns3/tcp_flow_0_progress.csv",
+      "sha256": "36ea586704c02a48c4ecafbc510ad4aee407ee3b8ca451d83fa5f1658bc2c857"
+    },
+    {
+      "bytes": 322165,
+      "path": "logs_ns3/tcp_flow_0_rtt.csv",
+      "sha256": "d0bd80e4d4fb241f338e9890a23e43c7597b30ac5743693d4e8d92188f88595d"
+    },
+    {
+      "bytes": 8732,
+      "path": "logs_ns3/tcp_flow_0_study_events.csv",
+      "sha256": "179cdebae6d73f546daf146a396e1bac52cf8b16f786418c0b86e821db7bd529"
+    },
+    {
+      "bytes": 2967029,
+      "path": "logs_ns3/tcp_flow_0_study_packets.csv",
+      "sha256": "b7e624473ebb30b7b1ac7fd643e57997151470d3cfbae9c3f61a89e1347e1ff8"
+    }
+  ],
+  "application_validation": {
+    "connection_count": 1,
+    "first_delivery_ns": 135128320,
+    "last_delivery_ns": 19999977760,
+    "matched_analyzer_total_goodput_and_bins": true,
+    "payload_rows": 28592
+  },
+  "case": "topic-vegas-fixed90ms",
+  "counts_from_existing_analysis": {
+    "application_delivered_bytes": 39456960,
+    "sender_new_sequence_bytes": 39476280,
+    "sender_payload_tx_bytes": 39476280,
+    "wire_payload_rx_bytes": 39456960,
+    "wire_unique_sequence_bytes": 39456960
+  },
+  "guard_validation": {
+    "initial_threshold": 3,
+    "parameters_empty": true,
+    "protection_intervals": []
+  },
+  "run_dir": "/tmp/cs30401-study/topic-vegas-fixed90ms",
+  "smoothed_rtt_from_existing_analysis": {
+    "covered_duration_s": 19.90999072,
+    "maximum_ms": 105.765222,
+    "minimum_ms": 90.0,
+    "p50_ms": 90.42415,
+    "p95_ms": 91.827041,
+    "p99_ms": 95.303111,
+    "qualification": "Smoothed sender RTT held between trace changes; excludes initial unknown/zero SRTT; not raw packet RTT or isolated queueing delay.",
+    "time_weighted_mean_ms": 90.63307576091032,
+    "trace_rows": 14181
+  },
+  "synthetic_delay_contract": {
+    "effective_one_way_after_ms": 45,
+    "effective_one_way_before_ms": 45,
+    "effective_propagation_rtt_after_ms": 90,
+    "effective_propagation_rtt_before_ms": 90,
+    "effective_propagation_rtt_change_ms": 0,
+    "event_s": 5.0,
+    "inspected_source": [
+      {
+        "bytes": 5579,
+        "locators": [
+          73,
+          93,
+          94
+        ],
+        "path": "/home/ubuntu/ns-3.48/scratch/study_micro/study_micro.cc",
+        "sha256": "9346a8044c5c9acb024c276997fbe82016aa97627545eda51c75033bc0a84fc9"
+      },
+      {
+        "bytes": 34963,
+        "locators": [
+          1290,
+          1292
+        ],
+        "path": "/home/ubuntu/ns-3.48/src/core/model/nstime.h",
+        "sha256": "15e22fdc2426b9b07f7d5c7c4fbccd5421875d3f722b404c919360a7bdc2c3d2"
+      }
+    ],
+    "late_forward_latency_max_ns": 45344160,
+    "late_forward_latency_min_ns": 45114720,
+    "late_payload_observations": 5179,
+    "nominal_effective_mismatch": false,
+    "nominal_propagation_rtt_after_ms": 90.0,
+    "nominal_propagation_rtt_before_ms": 90.0,
+    "qualification": "MilliSeconds(uint64_t) truncates nonnegative double millisecond arguments; original run ID/manifest retained. Forward latency includes serialization/queueing, not RTT.",
+    "requested_one_way_after_ms": 45.0,
+    "requested_one_way_before_ms": 45.0
+  },
+  "windows": [
+    {
+      "application_bytes": 39456960,
+      "application_goodput_mbps": 15.782784,
+      "case": "topic-vegas-fixed90ms",
+      "cc": "TcpVegas",
+      "end_ns": 20000000000,
+      "end_s": 20.0,
+      "kind": "micro",
+      "queue_pkts": 100,
+      "rate_mbps": 100.0,
+      "start_ns": 0,
+      "start_s": 0.0,
+      "window": "whole"
+    },
+    {
+      "application_bytes": 3307860,
+      "application_goodput_mbps": 5.292576,
+      "case": "topic-vegas-fixed90ms",
+      "cc": "TcpVegas",
+      "end_ns": 5000000000,
+      "end_s": 5.0,
+      "kind": "micro",
+      "queue_pkts": 100,
+      "rate_mbps": 100.0,
+      "start_ns": 0,
+      "start_s": 0.0,
+      "window": "pre-step"
+    },
+    {
+      "application_bytes": 36149100,
+      "application_goodput_mbps": 19.27952,
+      "case": "topic-vegas-fixed90ms",
+      "cc": "TcpVegas",
+      "end_ns": 20000000000,
+      "end_s": 20.0,
+      "kind": "micro",
+      "queue_pkts": 100,
+      "rate_mbps": 100.0,
+      "start_ns": 5000000000,
+      "start_s": 5.0,
+      "window": "post-step"
+    },
+    {
+      "application_bytes": 16441320,
+      "application_goodput_mbps": 26.306112,
+      "case": "topic-vegas-fixed90ms",
+      "cc": "TcpVegas",
+      "end_ns": 20000000000,
+      "end_s": 20.0,
+      "kind": "micro",
+      "queue_pkts": 100,
+      "rate_mbps": 100.0,
+      "start_ns": 15000000000,
+      "start_s": 15.0,
+      "window": "late"
+    }
+  ]
+}

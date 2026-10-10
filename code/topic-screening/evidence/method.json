@@ -1,0 +1,51 @@
+{
+  "cases": [
+    {
+      "case": "topic-vegas-q100-100m-dynamic",
+      "original_bytes": 257829704,
+      "original_regular_files": 19,
+      "whole_application_bytes": 1037783460
+    },
+    {
+      "case": "topic-vegas-fixed90ms",
+      "original_bytes": 8578289,
+      "original_regular_files": 13,
+      "whole_application_bytes": 39456960
+    },
+    {
+      "case": "topic-vegas-step90to97ms",
+      "original_bytes": 3425539,
+      "original_regular_files": 13,
+      "whole_application_bytes": 16001100
+    }
+  ],
+  "current_scripts": {
+    "analyzer": {
+      "bytes": 36868,
+      "path": "/work/code/kim-study/analyze_study.py",
+      "sha256": "5333d7f6d86c04f79bbaad82e5e2577ec3bdf2f281e115c854ad904c404aa696"
+    },
+    "export_helper": {
+      "bytes": 14323,
+      "path": "/work/code/topic-screening/export_screen.py",
+      "sha256": "3e787c9ea4117577168e6c5bcfb84de59342b9a9efa4bb1cfb49c1d4766e3b0c"
+    },
+    "runner": {
+      "bytes": 4496,
+      "path": "/work/code/kim-study/run_study.py",
+      "sha256": "5df779c454ffb0eb6fce3b1878f16374180a42c375980d180d3e07578645c37c"
+    }
+  },
+  "current_scripts_qualification": "Hashes read at export time; helper added after simulation. Original binary/patch hashes and commands remain in unchanged copied manifests.",
+  "launch_source_commit": "76885d178cd28838e9d4f97a23836cffb3cde7fc",
+  "launch_source_commit_qualification": "Operator-supplied launch git HEAD. The original run_study.py runner did NOT record source commit; this field is a later provenance annotation, not an original manifest field.",
+  "leo_events": "Pre/post window names refer to121.6s/187.4s path events; throughput windows alone do not establish cause. Post121 starts10s after its event and post187 begins190s.",
+  "limitations": "Three deterministic screening cases, no confidence intervals, no improvement implemented, no eventual-delivery/drain control; synthetic two-node network differs from multi-hop LEO.",
+  "metric": "Independent sum of payload_bytes from validated flow0/per-connection app trace, checked against full-analysis application total/goodput/bins. Includes startup for whole; Mbps=bytes*8/window_seconds/1e6.",
+  "official_image_digest": "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+  "official_image_digest_qualification": "Host-verified by the operator; this exporter checks original declarations and does not inspect Docker image identity itself.",
+  "original_data": "SHA256/byte inventory covers EVERY original regular run file, including full analysis and raw logs. Only compact summaries, original manifests and small LEO config/schedule are copied here.",
+  "schema_version": 1,
+  "synthetic_event": "Micro event is at5s. The nominal step90to97ms name/after_ms48.5 manifest is retained, but MilliSeconds(uint64_t) makes actual one-way delay45\u219248ms and propagation RTT90\u219296ms (+6ms). Per-case source hashes and late wire latency corroborate the mismatch.",
+  "window_convention": "Exact half-open [start_ns,end_ns) intervals on receiver application delivery timestamps. A row at an event timestamp belongs to the post-event interval; packets sent before an event can arrive after it."
+}

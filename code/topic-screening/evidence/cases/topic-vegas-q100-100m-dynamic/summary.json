@@ -1,0 +1,224 @@
+{
+  "all_original_regular_files": [
+    {
+      "bytes": 481018,
+      "path": "analysis.json",
+      "sha256": "88317abf620ef6c0303cbe43d7795f5138bbd7f6bc0769616204878ca9bca8c4"
+    },
+    {
+      "bytes": 1547,
+      "path": "case.json",
+      "sha256": "a343e6ebc95401ea3d51c4a97782430957b3db1819203dc92aeef86f77f7dcc9"
+    },
+    {
+      "bytes": 619,
+      "path": "config_ns3.properties",
+      "sha256": "0eb9191f06cdf549eb1d13947203ab2acd329112c97f5b7c550eeb52b4affe5b"
+    },
+    {
+      "bytes": 6631,
+      "path": "console.log",
+      "sha256": "18489a91edc4c8e25df6fce6917a419f4cdfd86ef60bb3cd4daba9fbb7b713f7"
+    },
+    {
+      "bytes": 4,
+      "path": "logs_ns3/finished.txt",
+      "sha256": "927580bf287560d4a26a5d6e129f91ffa9cb63031b1a8c772be6ec584e65e82b"
+    },
+    {
+      "bytes": 66643314,
+      "path": "logs_ns3/study_app_rx_node_1585_port_1024.csv",
+      "sha256": "ab7f762a746837533402ff69a84e0a9d83db059239204c7100a61a168fd9e06e"
+    },
+    {
+      "bytes": 1140184,
+      "path": "logs_ns3/study_drop_coverage.csv",
+      "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+    },
+    {
+      "bytes": 112,
+      "path": "logs_ns3/study_drops.csv",
+      "sha256": "ec37c4087cf6eb0bf412760b74ba37e2279e44d6bfff2d89f87c8135ec82b959"
+    },
+    {
+      "bytes": 86344549,
+      "path": "logs_ns3/study_rx_node_1585_port_1024.csv",
+      "sha256": "f05c05c59b60671342647718d1c8ad6fade665a0166015f56de0ad8bd6502b8c"
+    },
+    {
+      "bytes": 38123,
+      "path": "logs_ns3/tcp_flow_0_cwnd.csv",
+      "sha256": "cb8c49e0edba087a76f28d6cfbd9d64f30dfb577846710888af82578d4ae446a"
+    },
+    {
+      "bytes": 9185071,
+      "path": "logs_ns3/tcp_flow_0_progress.csv",
+      "sha256": "f9de62c20acdc52767e36590fce1692f002d55b2d7a8b96fcc334e0f1ba01ca2"
+    },
+    {
+      "bytes": 8764361,
+      "path": "logs_ns3/tcp_flow_0_rtt.csv",
+      "sha256": "9b93139aebbdbde9cefd147368cd7afaed2f5edb1a36a0d93cbc32d658f26845"
+    },
+    {
+      "bytes": 54153,
+      "path": "logs_ns3/tcp_flow_0_study_events.csv",
+      "sha256": "1a22945cb295da37d0f72fccacee3094eabbce6b58fbfa1a7b11db6d2ac8f7c1"
+    },
+    {
+      "bytes": 85168107,
+      "path": "logs_ns3/tcp_flow_0_study_packets.csv",
+      "sha256": "6cc1a247399f17c152cfb1b35b656f661fb3b144347317217187c95b5e58f015"
+    },
+    {
+      "bytes": 76,
+      "path": "logs_ns3/tcp_flows.csv",
+      "sha256": "8ef213989a82efb7b1e74e4b6ba8affe9ec0deec5cc9bbb79f6bf1e363076a8f"
+    },
+    {
+      "bytes": 336,
+      "path": "logs_ns3/tcp_flows.txt",
+      "sha256": "69987e0cc8683ef44804e279704e1daec77a47b325bda6172a3d5d3e1d6d8926"
+    },
+    {
+      "bytes": 561,
+      "path": "logs_ns3/timing_results.csv",
+      "sha256": "8aef051dcb5bfb438018e695e9e3d25622c96f63b71097699802bc394e484aca"
+    },
+    {
+      "bytes": 909,
+      "path": "logs_ns3/timing_results.txt",
+      "sha256": "44dd0d7a768bca34034dd2a7d924c38cc0935fac0a354f62e01daabd9e3f3fd3"
+    },
+    {
+      "bytes": 29,
+      "path": "schedule.csv",
+      "sha256": "e6cde3aa7716856e46d24c3833354df90407313ece13a5ffbd1b789fa4fea23c"
+    }
+  ],
+  "application_validation": {
+    "connection_count": 1,
+    "first_delivery_ns": 149087845,
+    "last_delivery_ns": 199988489681,
+    "matched_analyzer_total_goodput_and_bins": true,
+    "payload_rows": 751972
+  },
+  "case": "topic-vegas-q100-100m-dynamic",
+  "counts_from_existing_analysis": {
+    "ack_rows_with_sack": 88,
+    "application_delivered_bytes": 1037783460,
+    "official_retransmission_rows": 41,
+    "out_of_order_payload_rows": 45,
+    "overlapping_sequence_tx_rows": 41,
+    "recovery_state_entries": 2,
+    "repeated_cumulative_ack_rows": 84,
+    "sender_new_sequence_bytes": 1037783460,
+    "sender_payload_tx_bytes": 1037840040,
+    "wire_payload_rx_bytes": 1037783460,
+    "wire_unique_sequence_bytes": 1037783460
+  },
+  "guard_validation": {
+    "initial_threshold": 3,
+    "parameters_empty": true,
+    "protection_intervals": []
+  },
+  "run_dir": "/tmp/cs30401-study/topic-vegas-q100-100m-dynamic",
+  "smoothed_rtt_from_existing_analysis": {
+    "covered_duration_s": 199.901418529,
+    "maximum_ms": 116.970489,
+    "minimum_ms": 88.55642,
+    "p50_ms": 91.926983,
+    "p95_ms": 100.267284,
+    "p99_ms": 101.768866,
+    "qualification": "Smoothed sender RTT held between trace changes; excludes initial unknown/zero SRTT; not raw packet RTT or isolated queueing delay.",
+    "time_weighted_mean_ms": 92.91168051402572,
+    "trace_rows": 372594
+  },
+  "synthetic_delay_contract": null,
+  "windows": [
+    {
+      "application_bytes": 1037783460,
+      "application_goodput_mbps": 41.5113384,
+      "case": "topic-vegas-q100-100m-dynamic",
+      "cc": "TcpVegas",
+      "end_ns": 200000000000,
+      "end_s": 200.0,
+      "kind": "leo",
+      "queue_pkts": 100,
+      "rate_mbps": 100.0,
+      "start_ns": 0,
+      "start_s": 0.0,
+      "window": "whole"
+    },
+    {
+      "application_bytes": 120287700,
+      "application_goodput_mbps": 96.23016,
+      "case": "topic-vegas-q100-100m-dynamic",
+      "cc": "TcpVegas",
+      "end_ns": 121600000000,
+      "end_s": 121.6,
+      "kind": "leo",
+      "queue_pkts": 100,
+      "rate_mbps": 100.0,
+      "start_ns": 111600000000,
+      "start_s": 111.6,
+      "window": "pre121"
+    },
+    {
+      "application_bytes": 62802420,
+      "application_goodput_mbps": 50.241936,
+      "case": "topic-vegas-q100-100m-dynamic",
+      "cc": "TcpVegas",
+      "end_ns": 141600000000,
+      "end_s": 141.6,
+      "kind": "leo",
+      "queue_pkts": 100,
+      "rate_mbps": 100.0,
+      "start_ns": 131600000000,
+      "start_s": 131.6,
+      "window": "post121"
+    },
+    {
+      "application_bytes": 32614920,
+      "application_goodput_mbps": 26.091936,
+      "case": "topic-vegas-q100-100m-dynamic",
+      "cc": "TcpVegas",
+      "end_ns": 160000000000,
+      "end_s": 160.0,
+      "kind": "leo",
+      "queue_pkts": 100,
+      "rate_mbps": 100.0,
+      "start_ns": 150000000000,
+      "start_s": 150.0,
+      "window": "middle"
+    },
+    {
+      "application_bytes": 16543440,
+      "application_goodput_mbps": 13.234752,
+      "case": "topic-vegas-q100-100m-dynamic",
+      "cc": "TcpVegas",
+      "end_ns": 187400000000,
+      "end_s": 187.4,
+      "kind": "leo",
+      "queue_pkts": 100,
+      "rate_mbps": 100.0,
+      "start_ns": 177400000000,
+      "start_s": 177.4,
+      "window": "pre187"
+    },
+    {
+      "application_bytes": 6245880,
+      "application_goodput_mbps": 4.996704,
+      "case": "topic-vegas-q100-100m-dynamic",
+      "cc": "TcpVegas",
+      "end_ns": 200000000000,
+      "end_s": 200.0,
+      "kind": "leo",
+      "queue_pkts": 100,
+      "rate_mbps": 100.0,
+      "start_ns": 190000000000,
+      "start_s": 190.0,
+      "window": "post187"
+    }
+  ]
+}
