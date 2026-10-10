@@ -1,5 +1,7 @@
 # Vegas RTT-reference renewal experiment
 
+For the narrowed v1 research question, start with the [English research brief and figures](report/RESEARCH_BRIEF.md), [regeneration instructions](report/README.md), and [paper-based alternative selection](../../docs/research/20261010-vegas-scope-and-alternatives.md). These reorganize existing evidence; no new simulations or TCP changes are included.
+
 This is kim-seongchan's bounded follow-up to [PR13](https://github.com/Jeongmin07/CS30401-Lab1/pull/13), shared in [PR14](https://github.com/Jeongmin07/CS30401-Lab1/pull/14). Three teammates use separate AI chats and laptops. These files make one person's code, observations and limits reviewable; they do not assign other teammates work or select the team's final topic.
 
 Read the [experiment note](../../docs/experiments/20261010-vegas-rtt-renewal.md) for results and interpretation. The question is whether retiring an old Vegas RTT reference restores delivery under changing propagation delay, and what happens when persistent queueing causes the same signal.

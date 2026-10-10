@@ -1,0 +1,5 @@
+case,window,Vegas_Mbps,aggregate_Mbps,forward_packet_mean_queue_ms
+v1-fixed-comp-base,80-200s,37.34326,93.2834,4.0348033580304135
+v1-step-comp-base,80-200s,19.531968,92.28796,3.847876916675554
+v1-fixed-comp-renew,80-200s,38.419844,93.80274,4.723996642015867
+v1-step-comp-renew,80-200s,37.04518,93.098388,4.434009708383025

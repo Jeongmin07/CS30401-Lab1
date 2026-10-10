@@ -1,5 +1,14 @@
 # 작업 인수인계: kim-seongchan
 
+## 최신 — v1 범위 수렴과 문헌 기반 후보 선별, PR14
+
+- 사용자 요청대로 첫 Vegas 수정의 이득·원인·경쟁 비용을 주된 연구 범위로 정리했다. [영어 연구 정리/핵심 그림](../../code/vegas-study/report/RESEARCH_BRIEF.md), [재생성 명령](../../code/vegas-study/report/README.md), [원문을 읽고 고른 추가 후보](../research/20261010-vegas-scope-and-alternatives.md).
+- 신규 시뮬레이션이나 TCP 정책 변경 없이 기존 원본 네 조건에서 800개 1초 bin과 10개 구간을 만들고 16 measurement/4 manifest hash 및 수신 bytes 전체합을 확인했다. LEO +67%는 초기 CA 갱신까지 포함한 전체 정책의 효과이며, 18.27%의 추가 bytes가 121.6초 이전에 발생한다. 그 비율을 초기 동작의 인과 기여율로 해석하지 않는다.
+- 최근 최소 지연으로 기준을 갱신하는 원리는 La 등의 1999 원문에 있다. 우리 기여는 현재 course ns-3의 SRTT/CA cycle 변형 적용·원인 대조·실제 큐 반례 검증으로 한정한다. 20 cycle/1ms의 최적성이나 보편적 안전은 검증하지 않았다.
+- 다음 후보는 **Vegas-A-inspired CA 임계값 적응**이다. 원문 §3/4.1/5.3과 저자 Code3를 확인했고 기존 2/4 초기값과 SRTT 입력을 유지하는 변형으로 구분한다. 아직 후보 구현/실험은 없다. 먼저 제공 LEO와 고정+CUBIC의 두 조건에서 효과·비용/기본 호환을 판단하며 전체 matrix부터 벌리지 않는다.
+- SaTCP/SatPipe/StarTCP는 기본 모델에 없는 단절, OrbCC는 per-hop telemetry 포팅, LEDBAT++ 재측정은 fresh RTT/probe state 비용 때문에 우선 보류한다. LeoCC는 전체 PDF를 확보하지 못했으므로 원문을 읽었다고 쓰지 않는다.
+- v2와 CUBIC 기존 결과는 보존하며 주된 개선안에 묶지 않는다. 다른 조원 세 명의 최종 합의/실제 리뷰/공통 PLAN/병합을 대신 확정하지 않는다. 최종 제출에는 영어 IEEE 보고서·이름·ZIP에서의 비Git 재현 검증이 남는다.
+
 ## 완료 — Vegas beta 여유 보존 v2, PR14
 
 - 같은 브랜치에서 v1을 보존하고 후속10 matched+2 compatibility 조건을 검증했다. [별도 결정/근거](../experiments/20261010-vegas-budget-renewal.md), [v2 코드/재현](../../code/vegas-study/v2/README.md), [기본/v1/v2 비교](../../code/vegas-study/v2/evidence/comparison/compare.csv).
