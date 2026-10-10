@@ -1,0 +1,9 @@
+{
+  "release_url": "https://github.com/Jeongmin07/CS30401-Lab1/releases/tag/cubic-followup-20261010",
+  "asset_url": "https://github.com/Jeongmin07/CS30401-Lab1/releases/download/cubic-followup-20261010/cubic-followup-20261010-raw.tar.gz",
+  "asset_id": 627259147,
+  "bytes": 191233253,
+  "sha256": "0bacafdff634835bd88180b579b89cc2e5c50d84eadfeb1b2da4bc2b6be7c3b8",
+  "server_digest": "sha256:0bacafdff634835bd88180b579b89cc2e5c50d84eadfeb1b2da4bc2b6be7c3b8",
+  "commit": "605fbac373ed961852fe8f1d72677a0e5b864e2a"
+}
