@@ -1,0 +1,213 @@
+{
+  "analysis_matrix": {
+    "bytes": 55367,
+    "path": "/tmp/vegas-v2-analysis/matrix.json",
+    "sha256": "1ca24dcbd3156765e37ad523cfe71fd380f0d052b99d9da48959f54dbcb0a432"
+  },
+  "analysis_sources": [
+    {
+      "bytes": 10419,
+      "path": "/work/code/vegas-study/v2/analyze_matrix.py",
+      "sha256": "5ce07c2f1d393a57035045ae7f4f217f21a1ac14f7f136cf6f117180352e58d7"
+    },
+    {
+      "bytes": 36868,
+      "path": "/work/code/kim-study/analyze_study.py",
+      "sha256": "5333d7f6d86c04f79bbaad82e5e2577ec3bdf2f281e115c854ad904c404aa696"
+    },
+    {
+      "bytes": 39550,
+      "path": "/work/code/vegas-study/v2/analyze_vegas.py",
+      "sha256": "8d041c2c3d2caf2e9d1e9f28d1ad408c1c33ad242b43e10b5ad944707245f14f"
+    },
+    {
+      "bytes": 135964,
+      "path": "/work/code/kim-study/path_truth_200s.csv",
+      "sha256": "49bd5418f2b13bdbf6d703f719d61075f814cc86d44c745651bf797f4e5f656c"
+    }
+  ],
+  "cases": [
+    {
+      "case": "v2-fixed-base",
+      "original_bytes": 743491223,
+      "original_regular_files": 23,
+      "renewals": 0,
+      "simulation_launch_commit": "ac133157c5faa3dac56534ab105cd2ed804fd12c",
+      "whole_application_bytes_by_flow": {
+        "0": 1406760960
+      },
+      "whole_network_drop_layer_rows": {},
+      "whole_queue_drop_rows": {},
+      "windows": 4
+    },
+    {
+      "case": "v2-fixed-comp-base",
+      "original_bytes": 995467918,
+      "original_regular_files": 30,
+      "renewals": 0,
+      "simulation_launch_commit": "ac133157c5faa3dac56534ab105cd2ed804fd12c",
+      "whole_application_bytes_by_flow": {
+        "0": 1018664940,
+        "1": 839102100
+      },
+      "whole_network_drop_layer_rows": {
+        "TcDrop": 204
+      },
+      "whole_queue_drop_rows": {},
+      "windows": 6
+    },
+    {
+      "case": "v2-fixed-comp-renew",
+      "original_bytes": 999083361,
+      "original_regular_files": 30,
+      "renewals": 13,
+      "simulation_launch_commit": "ac133157c5faa3dac56534ab105cd2ed804fd12c",
+      "whole_application_bytes_by_flow": {
+        "0": 968605440,
+        "1": 894347640
+      },
+      "whole_network_drop_layer_rows": {
+        "TcDrop": 183
+      },
+      "whole_queue_drop_rows": {},
+      "windows": 6
+    },
+    {
+      "case": "v2-fixed-renew",
+      "original_bytes": 743550798,
+      "original_regular_files": 23,
+      "renewals": 0,
+      "simulation_launch_commit": "ac133157c5faa3dac56534ab105cd2ed804fd12c",
+      "whole_application_bytes_by_flow": {
+        "0": 1406760960
+      },
+      "whole_network_drop_layer_rows": {},
+      "whole_queue_drop_rows": {},
+      "windows": 4
+    },
+    {
+      "case": "v2-leo-base",
+      "original_bytes": 257577367,
+      "original_regular_files": 19,
+      "renewals": 0,
+      "simulation_launch_commit": "ac133157c5faa3dac56534ab105cd2ed804fd12c",
+      "whole_application_bytes_by_flow": {
+        "0": 1037783460
+      },
+      "whole_network_drop_layer_rows": {},
+      "whole_queue_drop_rows": {},
+      "windows": 6
+    },
+    {
+      "case": "v2-leo-renew",
+      "original_bytes": 335856654,
+      "original_regular_files": 19,
+      "renewals": 2,
+      "simulation_launch_commit": "ac133157c5faa3dac56534ab105cd2ed804fd12c",
+      "whole_application_bytes_by_flow": {
+        "0": 1343272680
+      },
+      "whole_network_drop_layer_rows": {},
+      "whole_queue_drop_rows": {},
+      "windows": 6
+    },
+    {
+      "case": "v2-step-base",
+      "original_bytes": 440104720,
+      "original_regular_files": 23,
+      "renewals": 0,
+      "simulation_launch_commit": "ac133157c5faa3dac56534ab105cd2ed804fd12c",
+      "whole_application_bytes_by_flow": {
+        "0": 845292780
+      },
+      "whole_network_drop_layer_rows": {},
+      "whole_queue_drop_rows": {},
+      "windows": 4
+    },
+    {
+      "case": "v2-step-comp-base",
+      "original_bytes": 987754293,
+      "original_regular_files": 30,
+      "renewals": 0,
+      "simulation_launch_commit": "ac133157c5faa3dac56534ab105cd2ed804fd12c",
+      "whole_application_bytes_by_flow": {
+        "0": 751495560,
+        "1": 1091339880
+      },
+      "whole_network_drop_layer_rows": {
+        "TcDrop": 189
+      },
+      "whole_queue_drop_rows": {},
+      "windows": 5
+    },
+    {
+      "case": "v2-step-comp-renew",
+      "original_bytes": 998412083,
+      "original_regular_files": 30,
+      "renewals": 13,
+      "simulation_launch_commit": "ac133157c5faa3dac56534ab105cd2ed804fd12c",
+      "whole_application_bytes_by_flow": {
+        "0": 852437040,
+        "1": 1005784020
+      },
+      "whole_network_drop_layer_rows": {
+        "TcDrop": 190
+      },
+      "whole_queue_drop_rows": {},
+      "windows": 5
+    },
+    {
+      "case": "v2-step-renew",
+      "original_bytes": 659757111,
+      "original_regular_files": 23,
+      "renewals": 2,
+      "simulation_launch_commit": "ac133157c5faa3dac56534ab105cd2ed804fd12c",
+      "whole_application_bytes_by_flow": {
+        "0": 1252025700
+      },
+      "whole_network_drop_layer_rows": {},
+      "whole_queue_drop_rows": {},
+      "windows": 4
+    }
+  ],
+  "export_helper": {
+    "bytes": 18199,
+    "path": "/work/code/vegas-study/v2/export_evidence.py",
+    "sha256": "670b4ad674a8421519ddf108bbf582b97e49f65d97879aba39193784580a2130"
+  },
+  "files": {
+    "queue_sojourn.csv": {
+      "bytes": 19651,
+      "path": "/tmp/vegas-v2-export/queue_sojourn.csv",
+      "sha256": "9ca05d3f9f1d2689635373dcf00f4711cbac70ce9b726681ab71f2a1d18d8430"
+    },
+    "renewals.csv": {
+      "bytes": 4993,
+      "path": "/tmp/vegas-v2-export/renewals.csv",
+      "sha256": "25778725cf091102a5c97b55a33dcceecb200252ca27dc2b748c640756d5b8b6"
+    },
+    "results.csv": {
+      "bytes": 14311,
+      "path": "/tmp/vegas-v2-export/results.csv",
+      "sha256": "a2112941f62ef81dbedd6158c5f27fa92058cf99b05502a5d9bda8fd5d911c31"
+    }
+  },
+  "posthoc_analysis_identity": {
+    "git_head": "ac133157c5faa3dac56534ab105cd2ed804fd12c",
+    "qualification": "Post-hoc helper checkout at analysis time; launch commit is separately read and validated from each original run. Dirty/untracked helpers are identified by their SHA256, not assumed to belong to git_head.",
+    "worktree_status": ""
+  },
+  "posthoc_export_git_head": "ac133157c5faa3dac56534ab105cd2ed804fd12c",
+  "qualifications": [
+    "Simulation launch, post-hoc analysis and export identities are recorded separately; full commits come from each original case manifest.",
+    "App rate=delivered bytes/full matched-window duration; active-interval rate is separately named and excludes the competitor's pre-start time. Whole flow1 has120 active seconds inside200 observation seconds; these denominators must not be compared interchangeably.",
+    "Jain is emitted only when two or more flows are active throughout the identical common window. Whole-window Jain is blank when competitor starts at80 seconds.",
+    "Queue packet-weighted waiting excludes serialization/propagation; queue occupancy is time weighted. Absent LEO queue observations remain unavailable. Smoothed RTT is separately labeled and is not queue delay.",
+    "Queue-drop zero is not network-drop zero. Raw per-layer TcDrop counts and distinct tagged transmissions are independently recounted. LOSS state is not automatically an RTO; repeated layer rows are not independent physical losses.",
+    "Wire payload union minus receiver app delivery is a terminal observation, not proof of eventual delivery or accepted TCP bytes. No new implementation/causality/fairness claim is inferred solely from higher foreground throughput.",
+    "Every original regular run file is SHA256/byte inventoried. Raw logs, full original analyses and console outputs remain outside this Git-oriented export. Per-case summary contains bounded derived evidence; original manifests/small config are copied unchanged."
+  ],
+  "simulation_launch_commits": [
+    "ac133157c5faa3dac56534ab105cd2ed804fd12c"
+  ]
+}

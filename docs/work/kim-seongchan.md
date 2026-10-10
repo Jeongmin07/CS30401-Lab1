@@ -1,8 +1,12 @@
 # 작업 인수인계: kim-seongchan
 
-## 진행 중 — Vegas beta 여유 보존 v2
+## 완료 — Vegas beta 여유 보존 v2, PR14
 
-PR14를 Draft로 되돌리고 같은 브랜치에서 후속 검증을 시작했다. v1은 그대로 보존하고 `code/vegas-study/v2/` 및 [별도 기록](../experiments/20261010-vegas-budget-renewal.md)에 한 가지 변경을 분리한다. 20-cycle 최소 SRTT로 올릴 때 원래 beta=4 혼잡 추정 여유를 남기는 가설이며 지속 큐/경로 지연 구분의 해결을 주장하지 않는다. 실행 전 10 matched 조건, v1 호환성 검증, 양 흐름/큐/TcDrop 평가를 선언했다. 결과는 아직 없다.
+- 같은 브랜치에서 v1을 보존하고 후속10 matched+2 compatibility 조건을 검증했다. [별도 결정/근거](../experiments/20261010-vegas-budget-renewal.md), [v2 코드/재현](../../code/vegas-study/v2/README.md), [기본/v1/v2 비교](../../code/vegas-study/v2/evidence/comparison/compare.csv).
+- **v2를 v1의 대체 개선안으로 채택하지 않는다.** LEO 41.5113 -> 53.7309 Mbps(+29.44%)지만 v1의 69.3432보다 낮고, step+CUBIC 공통80–200초 실제 평균 큐 대기가 v1의 4.4340 -> v2의 5.7721ms로 늘었다. 내부 beta 여유/갱신 횟수 감소가 실제 큐 감소를 보장하지 않는다. v2를 보고서의 주된 개선안에 묶도록 제안하지 않는다.
+- Launch `ac133157c5faa3dac56534ab105cd2ed804fd12c`,10/10 양 분석기 통과,12 primary 상태26,223행/갱신61개 독립 감사0오류, 호환131/131 measurement CSV 일치, fresh patch 대표2조건37/37 measurement+source/binary/libs 일치. 같은 입력 결정적 검증이며 무작위 반복 표본이 아니다.
+- 원본은 [별도 release](https://github.com/Jeongmin07/CS30401-Lab1/releases/tag/vegas-budget-20261010)에389파일 stream hash 검증 후 공유한다. v1 원본 release와 기존 코드/결과는 그대로다. 초기 fresh clone 권한 오류2회 로그도 보존했다; sim 재시도/결과 후 policy 조정은 없다.
+- 공통 PLAN/팀 최종 주제/보고서/병합을 확정하지 않았다. 조원은 세 방식의 같은 구간 처리량/양 흐름/큐/TcDrop을 보고 해석을 검토하면 된다. 별도 AI 프롬프트/역할을 강제하지 않는다.
 
 ## 최신 Vegas 후속 실험 — PR14, 2026-10-10 (KST)
 

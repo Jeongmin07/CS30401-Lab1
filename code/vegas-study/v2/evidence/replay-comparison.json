@@ -1,0 +1,1584 @@
+{
+  "argv": [
+    "/tmp/compare_records.py",
+    "--reference",
+    "/tmp/vegas-v2-replay-inventory.json",
+    "--root",
+    "/tmp/cs30401-vegas-v2",
+    "--map",
+    "v2-fixed-comp-renew=replay-v2-fixed-comp-renew",
+    "--map",
+    "v2-leo-renew=replay-v2-leo-renew",
+    "--strict-policy-replay",
+    "--out",
+    "/tmp/vegas-v2-replay-comparison.json"
+  ],
+  "comparisons": [
+    {
+      "excluded_files": {
+        "new": {},
+        "reference": {}
+      },
+      "manifests": {
+        "all_match": true,
+        "differences": {
+          "binary": {},
+          "launch_identity": {},
+          "parameters": {},
+          "policy": {},
+          "shared_libraries": {},
+          "sources": {}
+        },
+        "excluded_parameter_fields": [
+          "name",
+          "root"
+        ],
+        "identity_scope": "recorded executable/source/library paths and content hashes"
+      },
+      "mapping": "v2-fixed-comp-renew=replay-v2-fixed-comp-renew",
+      "match": true,
+      "measurements": {
+        "all_match": true,
+        "files": [
+          {
+            "file": "delay_events.csv",
+            "match": true,
+            "new": {
+              "bytes": 162,
+              "sha256": "346e2e27550015f28425194bfe5a174f0c6ab87d89be7d9b81357111a4ea4f54"
+            },
+            "reference": {
+              "bytes": 162,
+              "sha256": "346e2e27550015f28425194bfe5a174f0c6ab87d89be7d9b81357111a4ea4f54"
+            }
+          },
+          {
+            "file": "flow_summary.csv",
+            "match": true,
+            "new": {
+              "bytes": 371,
+              "sha256": "9add7da55afe8518f603946fcccd9fecd126d8eda896ac4de5fd4e50f0743d0d"
+            },
+            "reference": {
+              "bytes": 371,
+              "sha256": "9add7da55afe8518f603946fcccd9fecd126d8eda896ac4de5fd4e50f0743d0d"
+            }
+          },
+          {
+            "file": "queue_coverage.csv",
+            "match": true,
+            "new": {
+              "bytes": 316,
+              "sha256": "82e2f2dd7290ec35da6592dd3f306a241471861265a21e8f88853c0053b73499"
+            },
+            "reference": {
+              "bytes": 316,
+              "sha256": "82e2f2dd7290ec35da6592dd3f306a241471861265a21e8f88853c0053b73499"
+            }
+          },
+          {
+            "file": "queue_events.csv",
+            "match": true,
+            "new": {
+              "bytes": 278548590,
+              "sha256": "df7405e15bd1891c8eaa9e298ad03e8edb0b9b4fce36b77c08edcd7f3721b683"
+            },
+            "reference": {
+              "bytes": 278548590,
+              "sha256": "df7405e15bd1891c8eaa9e298ad03e8edb0b9b4fce36b77c08edcd7f3721b683"
+            }
+          },
+          {
+            "file": "queue_occupancy.csv",
+            "match": true,
+            "new": {
+              "bytes": 137210417,
+              "sha256": "1b650f53fe8386a558f6effa3f638c0a0200b2253115521913b041493e9b9d22"
+            },
+            "reference": {
+              "bytes": 137210417,
+              "sha256": "1b650f53fe8386a558f6effa3f638c0a0200b2253115521913b041493e9b9d22"
+            }
+          },
+          {
+            "file": "queue_pending.csv",
+            "match": true,
+            "new": {
+              "bytes": 206,
+              "sha256": "3c34bc6417ab52711a9eaecd878b9e903f759bd5f68df5160b16d19c25c0cf48"
+            },
+            "reference": {
+              "bytes": 206,
+              "sha256": "3c34bc6417ab52711a9eaecd878b9e903f759bd5f68df5160b16d19c25c0cf48"
+            }
+          },
+          {
+            "file": "queue_sojourn.csv",
+            "match": true,
+            "new": {
+              "bytes": 145353474,
+              "sha256": "fe643968c6bfa20731a3558ef324e48e6d3ac914d49ad85244a08a93a018c4ec"
+            },
+            "reference": {
+              "bytes": 145353474,
+              "sha256": "fe643968c6bfa20731a3558ef324e48e6d3ac914d49ad85244a08a93a018c4ec"
+            }
+          },
+          {
+            "file": "queue_summary.csv",
+            "match": true,
+            "new": {
+              "bytes": 186,
+              "sha256": "4f1d1018fbf98dbc3260150871f2a7cb6ef35e52d5226113b88a4b3d6f14bac8"
+            },
+            "reference": {
+              "bytes": 186,
+              "sha256": "4f1d1018fbf98dbc3260150871f2a7cb6ef35e52d5226113b88a4b3d6f14bac8"
+            }
+          },
+          {
+            "file": "socket_types.csv",
+            "match": true,
+            "new": {
+              "bytes": 179,
+              "sha256": "d725d52c86dd0cbcb0d1092469d90abc5458d5d9ff966e7226fcf83a89b38994"
+            },
+            "reference": {
+              "bytes": 179,
+              "sha256": "d725d52c86dd0cbcb0d1092469d90abc5458d5d9ff966e7226fcf83a89b38994"
+            }
+          },
+          {
+            "file": "study_app_rx_node_1_port_1024.csv",
+            "match": true,
+            "new": {
+              "bytes": 55620010,
+              "sha256": "e03891f287cf804c70549783d448d579a6c40ce1623ed4b483dda8b06f0a7830"
+            },
+            "reference": {
+              "bytes": 55620010,
+              "sha256": "e03891f287cf804c70549783d448d579a6c40ce1623ed4b483dda8b06f0a7830"
+            }
+          },
+          {
+            "file": "study_app_rx_node_1_port_1025.csv",
+            "match": true,
+            "new": {
+              "bytes": 51535040,
+              "sha256": "cc6994cf18331989c5a229eeadfb1c3c31266cffd1dcc4ce4e6f3820465d06f3"
+            },
+            "reference": {
+              "bytes": 51535040,
+              "sha256": "cc6994cf18331989c5a229eeadfb1c3c31266cffd1dcc4ce4e6f3820465d06f3"
+            }
+          },
+          {
+            "file": "study_drop_coverage.csv",
+            "match": true,
+            "new": {
+              "bytes": 328,
+              "sha256": "f2bbce727ae1f61019ef8f727753e3a8f64abdeb41d660a20a3607802f4524f4"
+            },
+            "reference": {
+              "bytes": 328,
+              "sha256": "f2bbce727ae1f61019ef8f727753e3a8f64abdeb41d660a20a3607802f4524f4"
+            }
+          },
+          {
+            "file": "study_drops.csv",
+            "match": true,
+            "new": {
+              "bytes": 19517,
+              "sha256": "75828aba82094a566daf566234bef849a2c0cdff9e59dc97d07459bcd26505a5"
+            },
+            "reference": {
+              "bytes": 19517,
+              "sha256": "75828aba82094a566daf566234bef849a2c0cdff9e59dc97d07459bcd26505a5"
+            }
+          },
+          {
+            "file": "study_rx_node_1_port_1024.csv",
+            "match": true,
+            "new": {
+              "bytes": 74053881,
+              "sha256": "ec19148f845902b033529d50fe05d5ef6c1b0cdc63085fecc7d4cfe1bbd186eb"
+            },
+            "reference": {
+              "bytes": 74053881,
+              "sha256": "ec19148f845902b033529d50fe05d5ef6c1b0cdc63085fecc7d4cfe1bbd186eb"
+            }
+          },
+          {
+            "file": "study_rx_node_1_port_1025.csv",
+            "match": true,
+            "new": {
+              "bytes": 69506330,
+              "sha256": "bf697d4f11a26bc6cc6257fbe6a37a67442e434c3299e2a47931969f3270f643"
+            },
+            "reference": {
+              "bytes": 69506330,
+              "sha256": "bf697d4f11a26bc6cc6257fbe6a37a67442e434c3299e2a47931969f3270f643"
+            }
+          },
+          {
+            "file": "tcp_flow_0_cwnd.csv",
+            "match": true,
+            "new": {
+              "bytes": 36981,
+              "sha256": "757a5531e9057ddd3d9934ebdb3dfd717a2e2e165d29d7882fccc0e0edb19868"
+            },
+            "reference": {
+              "bytes": 36981,
+              "sha256": "757a5531e9057ddd3d9934ebdb3dfd717a2e2e165d29d7882fccc0e0edb19868"
+            }
+          },
+          {
+            "file": "tcp_flow_0_progress.csv",
+            "match": true,
+            "new": {
+              "bytes": 8492641,
+              "sha256": "dc5c72aa63e9a69a3b7ef632d4e2b62e2ebcd46009e08eb5a6f2eef532c1fcb7"
+            },
+            "reference": {
+              "bytes": 8492641,
+              "sha256": "dc5c72aa63e9a69a3b7ef632d4e2b62e2ebcd46009e08eb5a6f2eef532c1fcb7"
+            }
+          },
+          {
+            "file": "tcp_flow_0_rtt.csv",
+            "match": true,
+            "new": {
+              "bytes": 8165310,
+              "sha256": "8937eef4f8e2453a38fecaac7e0d96a423d28c54b76feca0e6c03b3c3c6af157"
+            },
+            "reference": {
+              "bytes": 8165310,
+              "sha256": "8937eef4f8e2453a38fecaac7e0d96a423d28c54b76feca0e6c03b3c3c6af157"
+            }
+          },
+          {
+            "file": "tcp_flow_0_study_events.csv",
+            "match": true,
+            "new": {
+              "bytes": 36635,
+              "sha256": "b8b7a6b2e46e851bce529e590895bc505b6513ac20a2065bf1fb39c36a1fd01f"
+            },
+            "reference": {
+              "bytes": 36635,
+              "sha256": "b8b7a6b2e46e851bce529e590895bc505b6513ac20a2065bf1fb39c36a1fd01f"
+            }
+          },
+          {
+            "file": "tcp_flow_0_study_packets.csv",
+            "match": true,
+            "new": {
+              "bytes": 79347759,
+              "sha256": "c549b73bf7e924dd5478348db08fcf4dcaf4e8b9b1ca76c531c9f4bdf8efe3b0"
+            },
+            "reference": {
+              "bytes": 79347759,
+              "sha256": "c549b73bf7e924dd5478348db08fcf4dcaf4e8b9b1ca76c531c9f4bdf8efe3b0"
+            }
+          },
+          {
+            "file": "tcp_flow_1_cwnd.csv",
+            "match": true,
+            "new": {
+              "bytes": 102361,
+              "sha256": "f0c9c5d610ec849f4bd71151d3302bd13bab5f7f88ba07461e195bbc38735860"
+            },
+            "reference": {
+              "bytes": 102361,
+              "sha256": "f0c9c5d610ec849f4bd71151d3302bd13bab5f7f88ba07461e195bbc38735860"
+            }
+          },
+          {
+            "file": "tcp_flow_1_progress.csv",
+            "match": true,
+            "new": {
+              "bytes": 7925178,
+              "sha256": "4a85c893200e21b05493897871b2f75b7cfd41db762ce1fb1574eb7a273883b7"
+            },
+            "reference": {
+              "bytes": 7925178,
+              "sha256": "4a85c893200e21b05493897871b2f75b7cfd41db762ce1fb1574eb7a273883b7"
+            }
+          },
+          {
+            "file": "tcp_flow_1_rtt.csv",
+            "match": true,
+            "new": {
+              "bytes": 7562944,
+              "sha256": "fecbc5ea2408d108fd58d71c53cd57b8698c981dd40a2f622c928ae0158a2179"
+            },
+            "reference": {
+              "bytes": 7562944,
+              "sha256": "fecbc5ea2408d108fd58d71c53cd57b8698c981dd40a2f622c928ae0158a2179"
+            }
+          },
+          {
+            "file": "tcp_flow_1_study_events.csv",
+            "match": true,
+            "new": {
+              "bytes": 1760,
+              "sha256": "b91f9cff2c50734e86894ac334045d8849ce68f57d43f447609f22a6233c650c"
+            },
+            "reference": {
+              "bytes": 1760,
+              "sha256": "b91f9cff2c50734e86894ac334045d8849ce68f57d43f447609f22a6233c650c"
+            }
+          },
+          {
+            "file": "tcp_flow_1_study_packets.csv",
+            "match": true,
+            "new": {
+              "bytes": 75277509,
+              "sha256": "bb8b0dbd7919b9ab79c374db7a7ab7f6947bd959ab528f3304a0230e62dd0ea1"
+            },
+            "reference": {
+              "bytes": 75277509,
+              "sha256": "bb8b0dbd7919b9ab79c374db7a7ab7f6947bd959ab528f3304a0230e62dd0ea1"
+            }
+          },
+          {
+            "file": "vegas_state.csv",
+            "match": true,
+            "new": {
+              "bytes": 276076,
+              "sha256": "e2fae1897a5b5a1c3c956e091010ac05c02bb352e59ca877d3d1438b57539fd0"
+            },
+            "reference": {
+              "bytes": 276076,
+              "sha256": "e2fae1897a5b5a1c3c956e091010ac05c02bb352e59ca877d3d1438b57539fd0"
+            }
+          }
+        ],
+        "matched_count": 26,
+        "new_count": 26,
+        "reference_count": 26
+      },
+      "new_case": "replay-v2-fixed-comp-renew",
+      "new_case_manifest": {
+        "actual_driver_settings_checked": {
+          "after_one_way_delay_ns": 45000000,
+          "before_one_way_delay_ns": 45000000,
+          "competitor": true,
+          "duration_ns": 200000000000,
+          "event_ns": 100000000000,
+          "queue_pkts_per_direction": 100,
+          "renewal": true,
+          "renewal_min_rise_ns": 1000000,
+          "renewal_preserve_beta": true,
+          "renewal_rounds": 20,
+          "seed": 123456789
+        },
+        "binary": {
+          "bytes": 323256,
+          "path": "/home/ubuntu/ns-3.48/build/scratch/vegas_micro_v2/ns3.48-vegas_micro_v2",
+          "sha256": "bca1a847d1fe6f37176a837475aea2392393ec643e11619660faf944e671f850"
+        },
+        "binary_sha256": "bca1a847d1fe6f37176a837475aea2392393ec643e11619660faf944e671f850",
+        "case": "replay-v2-fixed-comp-renew",
+        "command": [
+          "/home/ubuntu/ns-3.48/build/scratch/vegas_micro_v2/ns3.48-vegas_micro_v2",
+          "--run_dir=/tmp/cs30401-vegas-v2/replay-v2-fixed-comp-renew",
+          "--duration=200",
+          "--rate=100",
+          "--queue_pkts=100",
+          "--before_ms=45",
+          "--after_ms=45.0",
+          "--event_s=100",
+          "--competitor=1",
+          "--competitor_start_s=80",
+          "--seed=123456789",
+          "--initial_ssthresh_pkts=900",
+          "--renewal=1",
+          "--renewal_rounds=20",
+          "--renewal_preserve_beta=1",
+          "--renewal_min_rise_ms=1",
+          "--ns3::TcpVegas::RenewalRounds=20",
+          "--ns3::TcpVegas::RenewalMinRise=1000000ns",
+          "--ns3::TcpVegas::RenewalPreserveBeta=true"
+        ],
+        "config_driver.json_sha256": "3adea0b1d47e1afce25449aa065411201ce2d8e7da51d74f1dbb7a8e6342e29f",
+        "config_ns3.properties_sha256": "3c4c19c08bb23933cce0c1895c539e062b0fd04207aa4832d69e2d135ab1ae3e",
+        "end_time_unix": 1791627545.1888156,
+        "exit_code": 0,
+        "image_verification": "Host operator inspected Docker identity before launch; supplied to runner",
+        "official_image_digest": "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+        "parameters": {
+          "after_ms": 45.0,
+          "before_ms": 45,
+          "cc": "TcpVegas",
+          "competitor": true,
+          "competitor_start": 80,
+          "duration": 200,
+          "event_s": 100,
+          "image_digest": "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+          "initial_ssthresh_pkts": 900,
+          "kind": "micro",
+          "min_rise_ms": 1,
+          "name": "replay-v2-fixed-comp-renew",
+          "preserve_beta": true,
+          "queue": 100,
+          "rate": 100,
+          "renewal": true,
+          "root": "/tmp/cs30401-vegas-v2",
+          "rounds": 20,
+          "seed": 123456789,
+          "state": "/home/ubuntu/lab/data/seoul_london/state",
+          "trace": 1
+        },
+        "patch_sha256": "d3a762251deb1c6f88af2c2fde07f872c5853d00de70c5e5d13aaa6d0560686d",
+        "policy": {
+          "alpha": 2,
+          "beta": 4,
+          "gamma": 1,
+          "input": "existing socket SRTT; loss/startup unchanged",
+          "min_rise_ns": 1000000,
+          "preserve_beta": true,
+          "recent_min_renewal": true,
+          "rounds": 20
+        },
+        "schema_version": 1,
+        "shared_libraries": [
+          {
+            "bytes": 275168,
+            "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-antenna.so",
+            "sha256": "edf56f782f446d54291425c4b357fb2a609f64da3a3a88a2d48e18dbcf4200b8"
+          },
+          {
+            "bytes": 2450392,
+            "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-applications.so",
+            "sha256": "029ee91a59a88fd8cff0c865053f31dfc36f6cc6f10484ebb3843864025750ca"
+          },
+          {
+            "bytes": 1626000,
+            "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-basic-sim.so",
+            "sha256": "e0ad0039c02b39ad3a302a077e72c6935d8db476df0bc48e105b4952a7d25ac9"
+          },
+          {
+            "bytes": 165088,
+            "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-bridge.so",
+            "sha256": "5c0e5f9092dc8a215a2d77aaa75ba0e3db181578566db25b9463cc220a94a1a0"
+          },
+          {
+            "bytes": 2246560,
+            "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-core.so",
+            "sha256": "5f6e271f0e98438059ac55c8dc5c94ee411050cb7cd7f23956963310674982a1"
+          },
+          {
+            "bytes": 490280,
+            "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-flow-monitor.so",
+            "sha256": "5fbe40f2a843bf01f38b943a28377f7e9628b748506498298cfd6096c621b1ad"
+          },
+          {
+            "bytes": 1379408,
+            "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-internet-apps.so",
+            "sha256": "c31699838a1a449773562164af013663951dbd78c7b0e1bcddc4b451f2eaa6bc"
+          },
+          {
+            "bytes": 7243280,
+            "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-internet.so",
+            "sha256": "2195a5d615702a2e19992085c606a41991e3ee01c013fd8ef0ea31a8db4bd480"
+          },
+          {
+            "bytes": 1146440,
+            "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-mobility.so",
+            "sha256": "45dc648f0ff11a8c83574fdea0dd189a35ccc606d625d3e3612afa3a6f806351"
+          },
+          {
+            "bytes": 2378368,
+            "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-network.so",
+            "sha256": "7930b3ed5f927eb731b7a010e5664ebd7927d1b25ecd2ef1f950857b434621b7"
+          },
+          {
+            "bytes": 517296,
+            "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-point-to-point.so",
+            "sha256": "af4a8a6c3378e80fc6347fd77ad9c0bad5783eb34c2ea90e416f797b985e3f89"
+          },
+          {
+            "bytes": 761504,
+            "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-satellite-network.so",
+            "sha256": "6c54072c67b2a2470abe2aca9f561d57093df69fa832ae2035753e2e52ebf907"
+          },
+          {
+            "bytes": 568888,
+            "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-satellite.so",
+            "sha256": "68e7ce4d29d13efe374989d3279a8587bedb7a8104757938ab2c14605e3d4002"
+          },
+          {
+            "bytes": 974776,
+            "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-stats.so",
+            "sha256": "ab02ae3cfe9c8453b6b251528884a678fe470cb1aac2e6500064a6fd44caf447"
+          },
+          {
+            "bytes": 1364680,
+            "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-traffic-control.so",
+            "sha256": "354fd4e2ef550af211e9abf272fd64b45818636c845b4876b606a0ffa6520d53"
+          }
+        ],
+        "source_commit": "ac133157c5faa3dac56534ab105cd2ed804fd12c",
+        "source_worktree_dirty": false,
+        "sources": [
+          {
+            "bytes": 10024,
+            "path": "/work/code/vegas-study/v2/run_case.py",
+            "sha256": "6c34f76742143f2f106f4293e88ec7b867e1e5084aef717fb55dc0a60ae3a0f7"
+          },
+          {
+            "bytes": 109913,
+            "path": "/work/code/vegas-study/v2/ns3.patch",
+            "sha256": "d3a762251deb1c6f88af2c2fde07f872c5853d00de70c5e5d13aaa6d0560686d"
+          },
+          {
+            "bytes": 25821,
+            "path": "/work/code/vegas-study/v2/vegas_micro_v2.cc",
+            "sha256": "f7a82bf28f5939d7dccfe7e792b3078969cbf6029a30fc5db557fa50cb82ecb7"
+          },
+          {
+            "bytes": 39550,
+            "path": "/work/code/vegas-study/v2/analyze_vegas.py",
+            "sha256": "8d041c2c3d2caf2e9d1e9f28d1ad408c1c33ad242b43e10b5ad944707245f14f"
+          },
+          {
+            "bytes": 36868,
+            "path": "/work/code/kim-study/analyze_study.py",
+            "sha256": "5333d7f6d86c04f79bbaad82e5e2577ec3bdf2f281e115c854ad904c404aa696"
+          },
+          {
+            "bytes": 135964,
+            "path": "/work/code/kim-study/path_truth_200s.csv",
+            "sha256": "49bd5418f2b13bdbf6d703f719d61075f814cc86d44c745651bf797f4e5f656c"
+          },
+          {
+            "bytes": 17011,
+            "path": "/home/ubuntu/ns-3.48/src/internet/model/tcp-vegas.cc",
+            "sha256": "78130553ba593ab3163234ab40b617b47838eeab9ed44094300d5006f97fcb98"
+          },
+          {
+            "bytes": 5855,
+            "path": "/home/ubuntu/ns-3.48/src/internet/model/tcp-vegas.h",
+            "sha256": "18e5ffe8edfe0156f79eca539584bba8a5f1e51cc2d56fe588194739c31cd0ea"
+          },
+          {
+            "bytes": 179724,
+            "path": "/home/ubuntu/ns-3.48/src/internet/model/tcp-socket-base.cc",
+            "sha256": "b6ee80a1d33538f36f0f9f2170a6ca2512beed6850133a47fd00db96f3d70afe"
+          },
+          {
+            "bytes": 25821,
+            "path": "/home/ubuntu/ns-3.48/scratch/vegas_micro_v2/vegas_micro_v2.cc",
+            "sha256": "f7a82bf28f5939d7dccfe7e792b3078969cbf6029a30fc5db557fa50cb82ecb7"
+          }
+        ],
+        "start_time_unix": 1791627440.9354343,
+        "state": null,
+        "status": "complete",
+        "trace_environment": {
+          "CS30401_STUDY_TRACE": "1",
+          "CS30401_STUDY_TRACE_DIR": "/tmp/cs30401-vegas-v2/replay-v2-fixed-comp-renew/logs_ns3",
+          "CS30401_VEGAS_TRACE_DIR": "/tmp/cs30401-vegas-v2/replay-v2-fixed-comp-renew/logs_ns3"
+        },
+        "wall_time_s": 104.27
+      },
+      "reference_case_manifest": {
+        "actual_driver_settings_checked": {
+          "after_one_way_delay_ns": 45000000,
+          "before_one_way_delay_ns": 45000000,
+          "competitor": true,
+          "duration_ns": 200000000000,
+          "event_ns": 100000000000,
+          "queue_pkts_per_direction": 100,
+          "renewal": true,
+          "renewal_min_rise_ns": 1000000,
+          "renewal_preserve_beta": true,
+          "renewal_rounds": 20,
+          "seed": 123456789
+        },
+        "binary": {
+          "bytes": 323256,
+          "path": "/home/ubuntu/ns-3.48/build/scratch/vegas_micro_v2/ns3.48-vegas_micro_v2",
+          "sha256": "bca1a847d1fe6f37176a837475aea2392393ec643e11619660faf944e671f850"
+        },
+        "binary_sha256": "bca1a847d1fe6f37176a837475aea2392393ec643e11619660faf944e671f850",
+        "case": "v2-fixed-comp-renew",
+        "command": [
+          "/home/ubuntu/ns-3.48/build/scratch/vegas_micro_v2/ns3.48-vegas_micro_v2",
+          "--run_dir=/tmp/cs30401-vegas-v2/v2-fixed-comp-renew",
+          "--duration=200",
+          "--rate=100",
+          "--queue_pkts=100",
+          "--before_ms=45",
+          "--after_ms=45.0",
+          "--event_s=100",
+          "--competitor=1",
+          "--competitor_start_s=80",
+          "--seed=123456789",
+          "--initial_ssthresh_pkts=900",
+          "--renewal=1",
+          "--renewal_rounds=20",
+          "--renewal_preserve_beta=1",
+          "--renewal_min_rise_ms=1",
+          "--ns3::TcpVegas::RenewalRounds=20",
+          "--ns3::TcpVegas::RenewalMinRise=1000000ns",
+          "--ns3::TcpVegas::RenewalPreserveBeta=true"
+        ],
+        "config_driver.json_sha256": "504bec040e88d1f8754e34ba0c0a37e8c02bbcb6ff66f6d77c59c6c2db4e32e5",
+        "config_ns3.properties_sha256": "3c4c19c08bb23933cce0c1895c539e062b0fd04207aa4832d69e2d135ab1ae3e",
+        "end_time_unix": 1791627167.5166664,
+        "exit_code": 0,
+        "image_verification": "Host operator inspected Docker identity before launch; supplied to runner",
+        "official_image_digest": "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+        "parameters": {
+          "after_ms": 45.0,
+          "before_ms": 45,
+          "cc": "TcpVegas",
+          "competitor": true,
+          "competitor_start": 80,
+          "duration": 200,
+          "event_s": 100,
+          "image_digest": "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+          "initial_ssthresh_pkts": 900,
+          "kind": "micro",
+          "min_rise_ms": 1,
+          "name": "v2-fixed-comp-renew",
+          "preserve_beta": true,
+          "queue": 100,
+          "rate": 100,
+          "renewal": true,
+          "root": "/tmp/cs30401-vegas-v2",
+          "rounds": 20,
+          "seed": 123456789,
+          "state": "/home/ubuntu/lab/data/seoul_london/state",
+          "trace": 1
+        },
+        "patch_sha256": "d3a762251deb1c6f88af2c2fde07f872c5853d00de70c5e5d13aaa6d0560686d",
+        "policy": {
+          "alpha": 2,
+          "beta": 4,
+          "gamma": 1,
+          "input": "existing socket SRTT; loss/startup unchanged",
+          "min_rise_ns": 1000000,
+          "preserve_beta": true,
+          "recent_min_renewal": true,
+          "rounds": 20
+        },
+        "schema_version": 1,
+        "shared_libraries": [
+          {
+            "bytes": 275168,
+            "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-antenna.so",
+            "sha256": "edf56f782f446d54291425c4b357fb2a609f64da3a3a88a2d48e18dbcf4200b8"
+          },
+          {
+            "bytes": 2450392,
+            "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-applications.so",
+            "sha256": "029ee91a59a88fd8cff0c865053f31dfc36f6cc6f10484ebb3843864025750ca"
+          },
+          {
+            "bytes": 1626000,
+            "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-basic-sim.so",
+            "sha256": "e0ad0039c02b39ad3a302a077e72c6935d8db476df0bc48e105b4952a7d25ac9"
+          },
+          {
+            "bytes": 165088,
+            "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-bridge.so",
+            "sha256": "5c0e5f9092dc8a215a2d77aaa75ba0e3db181578566db25b9463cc220a94a1a0"
+          },
+          {
+            "bytes": 2246560,
+            "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-core.so",
+            "sha256": "5f6e271f0e98438059ac55c8dc5c94ee411050cb7cd7f23956963310674982a1"
+          },
+          {
+            "bytes": 490280,
+            "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-flow-monitor.so",
+            "sha256": "5fbe40f2a843bf01f38b943a28377f7e9628b748506498298cfd6096c621b1ad"
+          },
+          {
+            "bytes": 1379408,
+            "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-internet-apps.so",
+            "sha256": "c31699838a1a449773562164af013663951dbd78c7b0e1bcddc4b451f2eaa6bc"
+          },
+          {
+            "bytes": 7243280,
+            "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-internet.so",
+            "sha256": "2195a5d615702a2e19992085c606a41991e3ee01c013fd8ef0ea31a8db4bd480"
+          },
+          {
+            "bytes": 1146440,
+            "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-mobility.so",
+            "sha256": "45dc648f0ff11a8c83574fdea0dd189a35ccc606d625d3e3612afa3a6f806351"
+          },
+          {
+            "bytes": 2378368,
+            "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-network.so",
+            "sha256": "7930b3ed5f927eb731b7a010e5664ebd7927d1b25ecd2ef1f950857b434621b7"
+          },
+          {
+            "bytes": 517296,
+            "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-point-to-point.so",
+            "sha256": "af4a8a6c3378e80fc6347fd77ad9c0bad5783eb34c2ea90e416f797b985e3f89"
+          },
+          {
+            "bytes": 761504,
+            "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-satellite-network.so",
+            "sha256": "6c54072c67b2a2470abe2aca9f561d57093df69fa832ae2035753e2e52ebf907"
+          },
+          {
+            "bytes": 568888,
+            "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-satellite.so",
+            "sha256": "68e7ce4d29d13efe374989d3279a8587bedb7a8104757938ab2c14605e3d4002"
+          },
+          {
+            "bytes": 974776,
+            "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-stats.so",
+            "sha256": "ab02ae3cfe9c8453b6b251528884a678fe470cb1aac2e6500064a6fd44caf447"
+          },
+          {
+            "bytes": 1364680,
+            "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-traffic-control.so",
+            "sha256": "354fd4e2ef550af211e9abf272fd64b45818636c845b4876b606a0ffa6520d53"
+          }
+        ],
+        "source_commit": "ac133157c5faa3dac56534ab105cd2ed804fd12c",
+        "source_worktree_dirty": false,
+        "sources": [
+          {
+            "bytes": 10024,
+            "path": "/work/code/vegas-study/v2/run_case.py",
+            "sha256": "6c34f76742143f2f106f4293e88ec7b867e1e5084aef717fb55dc0a60ae3a0f7"
+          },
+          {
+            "bytes": 109913,
+            "path": "/work/code/vegas-study/v2/ns3.patch",
+            "sha256": "d3a762251deb1c6f88af2c2fde07f872c5853d00de70c5e5d13aaa6d0560686d"
+          },
+          {
+            "bytes": 25821,
+            "path": "/work/code/vegas-study/v2/vegas_micro_v2.cc",
+            "sha256": "f7a82bf28f5939d7dccfe7e792b3078969cbf6029a30fc5db557fa50cb82ecb7"
+          },
+          {
+            "bytes": 39550,
+            "path": "/work/code/vegas-study/v2/analyze_vegas.py",
+            "sha256": "8d041c2c3d2caf2e9d1e9f28d1ad408c1c33ad242b43e10b5ad944707245f14f"
+          },
+          {
+            "bytes": 36868,
+            "path": "/work/code/kim-study/analyze_study.py",
+            "sha256": "5333d7f6d86c04f79bbaad82e5e2577ec3bdf2f281e115c854ad904c404aa696"
+          },
+          {
+            "bytes": 135964,
+            "path": "/work/code/kim-study/path_truth_200s.csv",
+            "sha256": "49bd5418f2b13bdbf6d703f719d61075f814cc86d44c745651bf797f4e5f656c"
+          },
+          {
+            "bytes": 17011,
+            "path": "/home/ubuntu/ns-3.48/src/internet/model/tcp-vegas.cc",
+            "sha256": "78130553ba593ab3163234ab40b617b47838eeab9ed44094300d5006f97fcb98"
+          },
+          {
+            "bytes": 5855,
+            "path": "/home/ubuntu/ns-3.48/src/internet/model/tcp-vegas.h",
+            "sha256": "18e5ffe8edfe0156f79eca539584bba8a5f1e51cc2d56fe588194739c31cd0ea"
+          },
+          {
+            "bytes": 179724,
+            "path": "/home/ubuntu/ns-3.48/src/internet/model/tcp-socket-base.cc",
+            "sha256": "b6ee80a1d33538f36f0f9f2170a6ca2512beed6850133a47fd00db96f3d70afe"
+          },
+          {
+            "bytes": 25821,
+            "path": "/home/ubuntu/ns-3.48/scratch/vegas_micro_v2/vegas_micro_v2.cc",
+            "sha256": "f7a82bf28f5939d7dccfe7e792b3078969cbf6029a30fc5db557fa50cb82ecb7"
+          }
+        ],
+        "start_time_unix": 1791627130.2344809,
+        "state": null,
+        "status": "complete",
+        "trace_environment": {
+          "CS30401_STUDY_TRACE": "1",
+          "CS30401_STUDY_TRACE_DIR": "/tmp/cs30401-vegas-v2/v2-fixed-comp-renew/logs_ns3",
+          "CS30401_VEGAS_TRACE_DIR": "/tmp/cs30401-vegas-v2/v2-fixed-comp-renew/logs_ns3"
+        },
+        "wall_time_s": 37.284
+      },
+      "reference_key": "v2-fixed-comp-renew"
+    },
+    {
+      "excluded_files": {
+        "new": {
+          "timing_results.csv": {
+            "bytes": 566,
+            "sha256": "58d678122870aefe8ba908f8599d3ec29390182cc2944facdb1bd124fd918713"
+          }
+        },
+        "reference": {
+          "timing_results.csv": {
+            "bytes": 565,
+            "sha256": "7bfeb1b71b4a4001213e5cb5393371952b01dcdc315315acdd6da0f6405865b8"
+          }
+        }
+      },
+      "manifests": {
+        "all_match": true,
+        "differences": {
+          "binary": {},
+          "launch_identity": {},
+          "parameters": {},
+          "policy": {},
+          "shared_libraries": {},
+          "sources": {}
+        },
+        "excluded_parameter_fields": [
+          "name",
+          "root"
+        ],
+        "identity_scope": "recorded executable/source/library paths and content hashes"
+      },
+      "mapping": "v2-leo-renew=replay-v2-leo-renew",
+      "match": true,
+      "measurements": {
+        "all_match": true,
+        "files": [
+          {
+            "file": "study_app_rx_node_1585_port_1024.csv",
+            "match": true,
+            "new": {
+              "bytes": 87008894,
+              "sha256": "1e632d5949396c6a2d2731347ec9053a563221305e485b5e69755ac116b203eb"
+            },
+            "reference": {
+              "bytes": 87008894,
+              "sha256": "1e632d5949396c6a2d2731347ec9053a563221305e485b5e69755ac116b203eb"
+            }
+          },
+          {
+            "file": "study_drop_coverage.csv",
+            "match": true,
+            "new": {
+              "bytes": 1140184,
+              "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+            },
+            "reference": {
+              "bytes": 1140184,
+              "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+            }
+          },
+          {
+            "file": "study_drops.csv",
+            "match": true,
+            "new": {
+              "bytes": 112,
+              "sha256": "ec37c4087cf6eb0bf412760b74ba37e2279e44d6bfff2d89f87c8135ec82b959"
+            },
+            "reference": {
+              "bytes": 112,
+              "sha256": "ec37c4087cf6eb0bf412760b74ba37e2279e44d6bfff2d89f87c8135ec82b959"
+            }
+          },
+          {
+            "file": "study_rx_node_1585_port_1024.csv",
+            "match": true,
+            "new": {
+              "bytes": 112687460,
+              "sha256": "974ea62fef87564202520867cdcc5a629d29b5827cdb87341b2ec7bda124daff"
+            },
+            "reference": {
+              "bytes": 112687460,
+              "sha256": "974ea62fef87564202520867cdcc5a629d29b5827cdb87341b2ec7bda124daff"
+            }
+          },
+          {
+            "file": "tcp_flow_0_cwnd.csv",
+            "match": true,
+            "new": {
+              "bytes": 31325,
+              "sha256": "242d12f939c365ba0c7218063053814cbc35b7ddfc165284faa4091144a31ea9"
+            },
+            "reference": {
+              "bytes": 31325,
+              "sha256": "242d12f939c365ba0c7218063053814cbc35b7ddfc165284faa4091144a31ea9"
+            }
+          },
+          {
+            "file": "tcp_flow_0_progress.csv",
+            "match": true,
+            "new": {
+              "bytes": 12059891,
+              "sha256": "3707870e1be61c38f067d5d15daecbc2d62bf9a4b47384ca8f85230e34e0a0a0"
+            },
+            "reference": {
+              "bytes": 12059891,
+              "sha256": "3707870e1be61c38f067d5d15daecbc2d62bf9a4b47384ca8f85230e34e0a0a0"
+            }
+          },
+          {
+            "file": "tcp_flow_0_rtt.csv",
+            "match": true,
+            "new": {
+              "bytes": 11413810,
+              "sha256": "7912faa2509dc8d5e38d34d3db195b29321ad309bf8bb45733677bc23ae8b0e7"
+            },
+            "reference": {
+              "bytes": 11413810,
+              "sha256": "7912faa2509dc8d5e38d34d3db195b29321ad309bf8bb45733677bc23ae8b0e7"
+            }
+          },
+          {
+            "file": "tcp_flow_0_study_events.csv",
+            "match": true,
+            "new": {
+              "bytes": 41332,
+              "sha256": "6f7f05ec02cd84c0dfef018d41a1bccc69d6571a7914fd1b5d19f9d6b9433b1c"
+            },
+            "reference": {
+              "bytes": 41332,
+              "sha256": "6f7f05ec02cd84c0dfef018d41a1bccc69d6571a7914fd1b5d19f9d6b9433b1c"
+            }
+          },
+          {
+            "file": "tcp_flow_0_study_packets.csv",
+            "match": true,
+            "new": {
+              "bytes": 111178380,
+              "sha256": "38d458969272b311f8031606248d7e7ff8754c866b8dcc3167ed9149ebba6d11"
+            },
+            "reference": {
+              "bytes": 111178380,
+              "sha256": "38d458969272b311f8031606248d7e7ff8754c866b8dcc3167ed9149ebba6d11"
+            }
+          },
+          {
+            "file": "tcp_flows.csv",
+            "match": true,
+            "new": {
+              "bytes": 76,
+              "sha256": "88162f46170f4b9b67bba87756326eeff7d7569f549fa86654db04d1f966b9f5"
+            },
+            "reference": {
+              "bytes": 76,
+              "sha256": "88162f46170f4b9b67bba87756326eeff7d7569f549fa86654db04d1f966b9f5"
+            }
+          },
+          {
+            "file": "vegas_state.csv",
+            "match": true,
+            "new": {
+              "bytes": 278243,
+              "sha256": "923367dc97ad223f66aa5aa3cd98e0384c105b663cc0ae6f8e9fafc10d65a849"
+            },
+            "reference": {
+              "bytes": 278243,
+              "sha256": "923367dc97ad223f66aa5aa3cd98e0384c105b663cc0ae6f8e9fafc10d65a849"
+            }
+          }
+        ],
+        "matched_count": 11,
+        "new_count": 11,
+        "reference_count": 11
+      },
+      "new_case": "replay-v2-leo-renew",
+      "new_case_manifest": {
+        "binary": {
+          "bytes": 181104,
+          "path": "/home/ubuntu/ns-3.48/build/scratch/main_satnet/ns3.48-main_satnet",
+          "sha256": "041d6d86761db040412ae95dad748033fc714a4480d7cc16843dba03fe40ce4f"
+        },
+        "binary_sha256": "041d6d86761db040412ae95dad748033fc714a4480d7cc16843dba03fe40ce4f",
+        "case": "replay-v2-leo-renew",
+        "command": [
+          "/home/ubuntu/ns-3.48/build/scratch/main_satnet/ns3.48-main_satnet",
+          "--run_dir=/tmp/cs30401-vegas-v2/replay-v2-leo-renew",
+          "--ns3::TcpVegas::RenewalRounds=20",
+          "--ns3::TcpVegas::RenewalMinRise=1000000ns",
+          "--ns3::TcpVegas::RenewalPreserveBeta=true",
+          "--ns3::TcpVegas::RecentMinRenewal=true"
+        ],
+        "config_ns3.properties_sha256": "16f9f0801cd196ac9fbf0063344cf07a60f11f5330b7a71c019d815ef76e5ec4",
+        "end_time_unix": 1791627657.2313302,
+        "exit_code": 0,
+        "image_verification": "Host operator inspected Docker identity before launch; supplied to runner",
+        "official_image_digest": "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+        "parameters": {
+          "cc": "TcpVegas",
+          "competitor": false,
+          "duration": 200,
+          "image_digest": "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+          "kind": "leo",
+          "min_rise_ms": 1,
+          "name": "replay-v2-leo-renew",
+          "preserve_beta": true,
+          "queue": 100,
+          "rate": 100,
+          "renewal": true,
+          "root": "/tmp/cs30401-vegas-v2",
+          "rounds": 20,
+          "seed": 123456789,
+          "state": "/home/ubuntu/lab/data/seoul_london/state",
+          "trace": 1
+        },
+        "patch_sha256": "d3a762251deb1c6f88af2c2fde07f872c5853d00de70c5e5d13aaa6d0560686d",
+        "policy": {
+          "alpha": 2,
+          "beta": 4,
+          "gamma": 1,
+          "input": "existing socket SRTT; loss/startup unchanged",
+          "min_rise_ns": 1000000,
+          "preserve_beta": true,
+          "recent_min_renewal": true,
+          "rounds": 20
+        },
+        "schedule.csv_sha256": "e6cde3aa7716856e46d24c3833354df90407313ece13a5ffbd1b789fa4fea23c",
+        "schema_version": 1,
+        "shared_libraries": [
+          {
+            "bytes": 275168,
+            "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-antenna.so",
+            "sha256": "edf56f782f446d54291425c4b357fb2a609f64da3a3a88a2d48e18dbcf4200b8"
+          },
+          {
+            "bytes": 2450392,
+            "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-applications.so",
+            "sha256": "029ee91a59a88fd8cff0c865053f31dfc36f6cc6f10484ebb3843864025750ca"
+          },
+          {
+            "bytes": 1626000,
+            "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-basic-sim.so",
+            "sha256": "e0ad0039c02b39ad3a302a077e72c6935d8db476df0bc48e105b4952a7d25ac9"
+          },
+          {
+            "bytes": 165088,
+            "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-bridge.so",
+            "sha256": "5c0e5f9092dc8a215a2d77aaa75ba0e3db181578566db25b9463cc220a94a1a0"
+          },
+          {
+            "bytes": 2246560,
+            "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-core.so",
+            "sha256": "5f6e271f0e98438059ac55c8dc5c94ee411050cb7cd7f23956963310674982a1"
+          },
+          {
+            "bytes": 490280,
+            "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-flow-monitor.so",
+            "sha256": "5fbe40f2a843bf01f38b943a28377f7e9628b748506498298cfd6096c621b1ad"
+          },
+          {
+            "bytes": 1379408,
+            "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-internet-apps.so",
+            "sha256": "c31699838a1a449773562164af013663951dbd78c7b0e1bcddc4b451f2eaa6bc"
+          },
+          {
+            "bytes": 7243280,
+            "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-internet.so",
+            "sha256": "2195a5d615702a2e19992085c606a41991e3ee01c013fd8ef0ea31a8db4bd480"
+          },
+          {
+            "bytes": 1146440,
+            "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-mobility.so",
+            "sha256": "45dc648f0ff11a8c83574fdea0dd189a35ccc606d625d3e3612afa3a6f806351"
+          },
+          {
+            "bytes": 2378368,
+            "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-network.so",
+            "sha256": "7930b3ed5f927eb731b7a010e5664ebd7927d1b25ecd2ef1f950857b434621b7"
+          },
+          {
+            "bytes": 517296,
+            "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-point-to-point.so",
+            "sha256": "af4a8a6c3378e80fc6347fd77ad9c0bad5783eb34c2ea90e416f797b985e3f89"
+          },
+          {
+            "bytes": 761504,
+            "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-satellite-network.so",
+            "sha256": "6c54072c67b2a2470abe2aca9f561d57093df69fa832ae2035753e2e52ebf907"
+          },
+          {
+            "bytes": 568888,
+            "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-satellite.so",
+            "sha256": "68e7ce4d29d13efe374989d3279a8587bedb7a8104757938ab2c14605e3d4002"
+          },
+          {
+            "bytes": 974776,
+            "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-stats.so",
+            "sha256": "ab02ae3cfe9c8453b6b251528884a678fe470cb1aac2e6500064a6fd44caf447"
+          },
+          {
+            "bytes": 1364680,
+            "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-traffic-control.so",
+            "sha256": "354fd4e2ef550af211e9abf272fd64b45818636c845b4876b606a0ffa6520d53"
+          }
+        ],
+        "source_commit": "ac133157c5faa3dac56534ab105cd2ed804fd12c",
+        "source_worktree_dirty": false,
+        "sources": [
+          {
+            "bytes": 10024,
+            "path": "/work/code/vegas-study/v2/run_case.py",
+            "sha256": "6c34f76742143f2f106f4293e88ec7b867e1e5084aef717fb55dc0a60ae3a0f7"
+          },
+          {
+            "bytes": 109913,
+            "path": "/work/code/vegas-study/v2/ns3.patch",
+            "sha256": "d3a762251deb1c6f88af2c2fde07f872c5853d00de70c5e5d13aaa6d0560686d"
+          },
+          {
+            "bytes": 25821,
+            "path": "/work/code/vegas-study/v2/vegas_micro_v2.cc",
+            "sha256": "f7a82bf28f5939d7dccfe7e792b3078969cbf6029a30fc5db557fa50cb82ecb7"
+          },
+          {
+            "bytes": 39550,
+            "path": "/work/code/vegas-study/v2/analyze_vegas.py",
+            "sha256": "8d041c2c3d2caf2e9d1e9f28d1ad408c1c33ad242b43e10b5ad944707245f14f"
+          },
+          {
+            "bytes": 36868,
+            "path": "/work/code/kim-study/analyze_study.py",
+            "sha256": "5333d7f6d86c04f79bbaad82e5e2577ec3bdf2f281e115c854ad904c404aa696"
+          },
+          {
+            "bytes": 135964,
+            "path": "/work/code/kim-study/path_truth_200s.csv",
+            "sha256": "49bd5418f2b13bdbf6d703f719d61075f814cc86d44c745651bf797f4e5f656c"
+          },
+          {
+            "bytes": 17011,
+            "path": "/home/ubuntu/ns-3.48/src/internet/model/tcp-vegas.cc",
+            "sha256": "78130553ba593ab3163234ab40b617b47838eeab9ed44094300d5006f97fcb98"
+          },
+          {
+            "bytes": 5855,
+            "path": "/home/ubuntu/ns-3.48/src/internet/model/tcp-vegas.h",
+            "sha256": "18e5ffe8edfe0156f79eca539584bba8a5f1e51cc2d56fe588194739c31cd0ea"
+          },
+          {
+            "bytes": 179724,
+            "path": "/home/ubuntu/ns-3.48/src/internet/model/tcp-socket-base.cc",
+            "sha256": "b6ee80a1d33538f36f0f9f2170a6ca2512beed6850133a47fd00db96f3d70afe"
+          },
+          {
+            "bytes": 25821,
+            "path": "/home/ubuntu/ns-3.48/scratch/vegas_micro_v2/vegas_micro_v2.cc",
+            "sha256": "f7a82bf28f5939d7dccfe7e792b3078969cbf6029a30fc5db557fa50cb82ecb7"
+          }
+        ],
+        "start_time_unix": 1791627440.9455178,
+        "state": "/home/ubuntu/lab/data/seoul_london/state",
+        "status": "complete",
+        "trace_environment": {
+          "CS30401_STUDY_TRACE": "1",
+          "CS30401_STUDY_TRACE_DIR": "/tmp/cs30401-vegas-v2/replay-v2-leo-renew/logs_ns3",
+          "CS30401_VEGAS_TRACE_DIR": "/tmp/cs30401-vegas-v2/replay-v2-leo-renew/logs_ns3"
+        },
+        "wall_time_s": 216.309
+      },
+      "reference_case_manifest": {
+        "binary": {
+          "bytes": 181104,
+          "path": "/home/ubuntu/ns-3.48/build/scratch/main_satnet/ns3.48-main_satnet",
+          "sha256": "041d6d86761db040412ae95dad748033fc714a4480d7cc16843dba03fe40ce4f"
+        },
+        "binary_sha256": "041d6d86761db040412ae95dad748033fc714a4480d7cc16843dba03fe40ce4f",
+        "case": "v2-leo-renew",
+        "command": [
+          "/home/ubuntu/ns-3.48/build/scratch/main_satnet/ns3.48-main_satnet",
+          "--run_dir=/tmp/cs30401-vegas-v2/v2-leo-renew",
+          "--ns3::TcpVegas::RenewalRounds=20",
+          "--ns3::TcpVegas::RenewalMinRise=1000000ns",
+          "--ns3::TcpVegas::RenewalPreserveBeta=true",
+          "--ns3::TcpVegas::RecentMinRenewal=true"
+        ],
+        "config_ns3.properties_sha256": "16f9f0801cd196ac9fbf0063344cf07a60f11f5330b7a71c019d815ef76e5ec4",
+        "end_time_unix": 1791627585.654947,
+        "exit_code": 0,
+        "image_verification": "Host operator inspected Docker identity before launch; supplied to runner",
+        "official_image_digest": "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+        "parameters": {
+          "cc": "TcpVegas",
+          "competitor": false,
+          "duration": 200,
+          "image_digest": "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+          "kind": "leo",
+          "min_rise_ms": 1,
+          "name": "v2-leo-renew",
+          "preserve_beta": true,
+          "queue": 100,
+          "rate": 100,
+          "renewal": true,
+          "root": "/tmp/cs30401-vegas-v2",
+          "rounds": 20,
+          "seed": 123456789,
+          "state": "/home/ubuntu/lab/data/seoul_london/state",
+          "trace": 1
+        },
+        "patch_sha256": "d3a762251deb1c6f88af2c2fde07f872c5853d00de70c5e5d13aaa6d0560686d",
+        "policy": {
+          "alpha": 2,
+          "beta": 4,
+          "gamma": 1,
+          "input": "existing socket SRTT; loss/startup unchanged",
+          "min_rise_ns": 1000000,
+          "preserve_beta": true,
+          "recent_min_renewal": true,
+          "rounds": 20
+        },
+        "schedule.csv_sha256": "e6cde3aa7716856e46d24c3833354df90407313ece13a5ffbd1b789fa4fea23c",
+        "schema_version": 1,
+        "shared_libraries": [
+          {
+            "bytes": 275168,
+            "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-antenna.so",
+            "sha256": "edf56f782f446d54291425c4b357fb2a609f64da3a3a88a2d48e18dbcf4200b8"
+          },
+          {
+            "bytes": 2450392,
+            "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-applications.so",
+            "sha256": "029ee91a59a88fd8cff0c865053f31dfc36f6cc6f10484ebb3843864025750ca"
+          },
+          {
+            "bytes": 1626000,
+            "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-basic-sim.so",
+            "sha256": "e0ad0039c02b39ad3a302a077e72c6935d8db476df0bc48e105b4952a7d25ac9"
+          },
+          {
+            "bytes": 165088,
+            "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-bridge.so",
+            "sha256": "5c0e5f9092dc8a215a2d77aaa75ba0e3db181578566db25b9463cc220a94a1a0"
+          },
+          {
+            "bytes": 2246560,
+            "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-core.so",
+            "sha256": "5f6e271f0e98438059ac55c8dc5c94ee411050cb7cd7f23956963310674982a1"
+          },
+          {
+            "bytes": 490280,
+            "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-flow-monitor.so",
+            "sha256": "5fbe40f2a843bf01f38b943a28377f7e9628b748506498298cfd6096c621b1ad"
+          },
+          {
+            "bytes": 1379408,
+            "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-internet-apps.so",
+            "sha256": "c31699838a1a449773562164af013663951dbd78c7b0e1bcddc4b451f2eaa6bc"
+          },
+          {
+            "bytes": 7243280,
+            "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-internet.so",
+            "sha256": "2195a5d615702a2e19992085c606a41991e3ee01c013fd8ef0ea31a8db4bd480"
+          },
+          {
+            "bytes": 1146440,
+            "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-mobility.so",
+            "sha256": "45dc648f0ff11a8c83574fdea0dd189a35ccc606d625d3e3612afa3a6f806351"
+          },
+          {
+            "bytes": 2378368,
+            "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-network.so",
+            "sha256": "7930b3ed5f927eb731b7a010e5664ebd7927d1b25ecd2ef1f950857b434621b7"
+          },
+          {
+            "bytes": 517296,
+            "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-point-to-point.so",
+            "sha256": "af4a8a6c3378e80fc6347fd77ad9c0bad5783eb34c2ea90e416f797b985e3f89"
+          },
+          {
+            "bytes": 761504,
+            "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-satellite-network.so",
+            "sha256": "6c54072c67b2a2470abe2aca9f561d57093df69fa832ae2035753e2e52ebf907"
+          },
+          {
+            "bytes": 568888,
+            "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-satellite.so",
+            "sha256": "68e7ce4d29d13efe374989d3279a8587bedb7a8104757938ab2c14605e3d4002"
+          },
+          {
+            "bytes": 974776,
+            "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-stats.so",
+            "sha256": "ab02ae3cfe9c8453b6b251528884a678fe470cb1aac2e6500064a6fd44caf447"
+          },
+          {
+            "bytes": 1364680,
+            "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-traffic-control.so",
+            "sha256": "354fd4e2ef550af211e9abf272fd64b45818636c845b4876b606a0ffa6520d53"
+          }
+        ],
+        "source_commit": "ac133157c5faa3dac56534ab105cd2ed804fd12c",
+        "source_worktree_dirty": false,
+        "sources": [
+          {
+            "bytes": 10024,
+            "path": "/work/code/vegas-study/v2/run_case.py",
+            "sha256": "6c34f76742143f2f106f4293e88ec7b867e1e5084aef717fb55dc0a60ae3a0f7"
+          },
+          {
+            "bytes": 109913,
+            "path": "/work/code/vegas-study/v2/ns3.patch",
+            "sha256": "d3a762251deb1c6f88af2c2fde07f872c5853d00de70c5e5d13aaa6d0560686d"
+          },
+          {
+            "bytes": 25821,
+            "path": "/work/code/vegas-study/v2/vegas_micro_v2.cc",
+            "sha256": "f7a82bf28f5939d7dccfe7e792b3078969cbf6029a30fc5db557fa50cb82ecb7"
+          },
+          {
+            "bytes": 39550,
+            "path": "/work/code/vegas-study/v2/analyze_vegas.py",
+            "sha256": "8d041c2c3d2caf2e9d1e9f28d1ad408c1c33ad242b43e10b5ad944707245f14f"
+          },
+          {
+            "bytes": 36868,
+            "path": "/work/code/kim-study/analyze_study.py",
+            "sha256": "5333d7f6d86c04f79bbaad82e5e2577ec3bdf2f281e115c854ad904c404aa696"
+          },
+          {
+            "bytes": 135964,
+            "path": "/work/code/kim-study/path_truth_200s.csv",
+            "sha256": "49bd5418f2b13bdbf6d703f719d61075f814cc86d44c745651bf797f4e5f656c"
+          },
+          {
+            "bytes": 17011,
+            "path": "/home/ubuntu/ns-3.48/src/internet/model/tcp-vegas.cc",
+            "sha256": "78130553ba593ab3163234ab40b617b47838eeab9ed44094300d5006f97fcb98"
+          },
+          {
+            "bytes": 5855,
+            "path": "/home/ubuntu/ns-3.48/src/internet/model/tcp-vegas.h",
+            "sha256": "18e5ffe8edfe0156f79eca539584bba8a5f1e51cc2d56fe588194739c31cd0ea"
+          },
+          {
+            "bytes": 179724,
+            "path": "/home/ubuntu/ns-3.48/src/internet/model/tcp-socket-base.cc",
+            "sha256": "b6ee80a1d33538f36f0f9f2170a6ca2512beed6850133a47fd00db96f3d70afe"
+          },
+          {
+            "bytes": 25821,
+            "path": "/home/ubuntu/ns-3.48/scratch/vegas_micro_v2/vegas_micro_v2.cc",
+            "sha256": "f7a82bf28f5939d7dccfe7e792b3078969cbf6029a30fc5db557fa50cb82ecb7"
+          }
+        ],
+        "start_time_unix": 1791627230.2457662,
+        "state": "/home/ubuntu/lab/data/seoul_london/state",
+        "status": "complete",
+        "trace_environment": {
+          "CS30401_STUDY_TRACE": "1",
+          "CS30401_STUDY_TRACE_DIR": "/tmp/cs30401-vegas-v2/v2-leo-renew/logs_ns3",
+          "CS30401_VEGAS_TRACE_DIR": "/tmp/cs30401-vegas-v2/v2-leo-renew/logs_ns3"
+        },
+        "wall_time_s": 355.586
+      },
+      "reference_key": "v2-leo-renew"
+    }
+  ],
+  "current_git": {
+    "available": true,
+    "dirty": false,
+    "head": "ac133157c5faa3dac56534ab105cd2ed804fd12c",
+    "repository": "/work",
+    "scope": "post-run helper observation; launch commits remain in case manifests",
+    "status_porcelain": ""
+  },
+  "current_git_head": "ac133157c5faa3dac56534ab105cd2ed804fd12c",
+  "errors": [],
+  "helper": {
+    "bytes": 18099,
+    "path": "/tmp/compare_records.py",
+    "sha256": "8dc526545f34594e1a869bdcea055de2dcd0799a6782ac3209bfc13f56a80a92"
+  },
+  "input_receipts": {
+    "/tmp/cs30401-vegas-v2/replay-v2-fixed-comp-renew/case.json": {
+      "bytes": 7993,
+      "sha256": "e3e2083fa2fa3542f3db302b14166cbf7b1dff0d1ba22a61e6daf0a016edf72c"
+    },
+    "/tmp/cs30401-vegas-v2/replay-v2-fixed-comp-renew/config_driver.json": {
+      "bytes": 1213,
+      "sha256": "3adea0b1d47e1afce25449aa065411201ce2d8e7da51d74f1dbb7a8e6342e29f"
+    },
+    "/tmp/cs30401-vegas-v2/replay-v2-fixed-comp-renew/config_ns3.properties": {
+      "bytes": 36,
+      "sha256": "3c4c19c08bb23933cce0c1895c539e062b0fd04207aa4832d69e2d135ab1ae3e"
+    },
+    "/tmp/cs30401-vegas-v2/replay-v2-fixed-comp-renew/logs_ns3/delay_events.csv": {
+      "bytes": 162,
+      "sha256": "346e2e27550015f28425194bfe5a174f0c6ab87d89be7d9b81357111a4ea4f54"
+    },
+    "/tmp/cs30401-vegas-v2/replay-v2-fixed-comp-renew/logs_ns3/flow_summary.csv": {
+      "bytes": 371,
+      "sha256": "9add7da55afe8518f603946fcccd9fecd126d8eda896ac4de5fd4e50f0743d0d"
+    },
+    "/tmp/cs30401-vegas-v2/replay-v2-fixed-comp-renew/logs_ns3/queue_coverage.csv": {
+      "bytes": 316,
+      "sha256": "82e2f2dd7290ec35da6592dd3f306a241471861265a21e8f88853c0053b73499"
+    },
+    "/tmp/cs30401-vegas-v2/replay-v2-fixed-comp-renew/logs_ns3/queue_events.csv": {
+      "bytes": 278548590,
+      "sha256": "df7405e15bd1891c8eaa9e298ad03e8edb0b9b4fce36b77c08edcd7f3721b683"
+    },
+    "/tmp/cs30401-vegas-v2/replay-v2-fixed-comp-renew/logs_ns3/queue_occupancy.csv": {
+      "bytes": 137210417,
+      "sha256": "1b650f53fe8386a558f6effa3f638c0a0200b2253115521913b041493e9b9d22"
+    },
+    "/tmp/cs30401-vegas-v2/replay-v2-fixed-comp-renew/logs_ns3/queue_pending.csv": {
+      "bytes": 206,
+      "sha256": "3c34bc6417ab52711a9eaecd878b9e903f759bd5f68df5160b16d19c25c0cf48"
+    },
+    "/tmp/cs30401-vegas-v2/replay-v2-fixed-comp-renew/logs_ns3/queue_sojourn.csv": {
+      "bytes": 145353474,
+      "sha256": "fe643968c6bfa20731a3558ef324e48e6d3ac914d49ad85244a08a93a018c4ec"
+    },
+    "/tmp/cs30401-vegas-v2/replay-v2-fixed-comp-renew/logs_ns3/queue_summary.csv": {
+      "bytes": 186,
+      "sha256": "4f1d1018fbf98dbc3260150871f2a7cb6ef35e52d5226113b88a4b3d6f14bac8"
+    },
+    "/tmp/cs30401-vegas-v2/replay-v2-fixed-comp-renew/logs_ns3/socket_types.csv": {
+      "bytes": 179,
+      "sha256": "d725d52c86dd0cbcb0d1092469d90abc5458d5d9ff966e7226fcf83a89b38994"
+    },
+    "/tmp/cs30401-vegas-v2/replay-v2-fixed-comp-renew/logs_ns3/study_app_rx_node_1_port_1024.csv": {
+      "bytes": 55620010,
+      "sha256": "e03891f287cf804c70549783d448d579a6c40ce1623ed4b483dda8b06f0a7830"
+    },
+    "/tmp/cs30401-vegas-v2/replay-v2-fixed-comp-renew/logs_ns3/study_app_rx_node_1_port_1025.csv": {
+      "bytes": 51535040,
+      "sha256": "cc6994cf18331989c5a229eeadfb1c3c31266cffd1dcc4ce4e6f3820465d06f3"
+    },
+    "/tmp/cs30401-vegas-v2/replay-v2-fixed-comp-renew/logs_ns3/study_drop_coverage.csv": {
+      "bytes": 328,
+      "sha256": "f2bbce727ae1f61019ef8f727753e3a8f64abdeb41d660a20a3607802f4524f4"
+    },
+    "/tmp/cs30401-vegas-v2/replay-v2-fixed-comp-renew/logs_ns3/study_drops.csv": {
+      "bytes": 19517,
+      "sha256": "75828aba82094a566daf566234bef849a2c0cdff9e59dc97d07459bcd26505a5"
+    },
+    "/tmp/cs30401-vegas-v2/replay-v2-fixed-comp-renew/logs_ns3/study_rx_node_1_port_1024.csv": {
+      "bytes": 74053881,
+      "sha256": "ec19148f845902b033529d50fe05d5ef6c1b0cdc63085fecc7d4cfe1bbd186eb"
+    },
+    "/tmp/cs30401-vegas-v2/replay-v2-fixed-comp-renew/logs_ns3/study_rx_node_1_port_1025.csv": {
+      "bytes": 69506330,
+      "sha256": "bf697d4f11a26bc6cc6257fbe6a37a67442e434c3299e2a47931969f3270f643"
+    },
+    "/tmp/cs30401-vegas-v2/replay-v2-fixed-comp-renew/logs_ns3/tcp_flow_0_cwnd.csv": {
+      "bytes": 36981,
+      "sha256": "757a5531e9057ddd3d9934ebdb3dfd717a2e2e165d29d7882fccc0e0edb19868"
+    },
+    "/tmp/cs30401-vegas-v2/replay-v2-fixed-comp-renew/logs_ns3/tcp_flow_0_progress.csv": {
+      "bytes": 8492641,
+      "sha256": "dc5c72aa63e9a69a3b7ef632d4e2b62e2ebcd46009e08eb5a6f2eef532c1fcb7"
+    },
+    "/tmp/cs30401-vegas-v2/replay-v2-fixed-comp-renew/logs_ns3/tcp_flow_0_rtt.csv": {
+      "bytes": 8165310,
+      "sha256": "8937eef4f8e2453a38fecaac7e0d96a423d28c54b76feca0e6c03b3c3c6af157"
+    },
+    "/tmp/cs30401-vegas-v2/replay-v2-fixed-comp-renew/logs_ns3/tcp_flow_0_study_events.csv": {
+      "bytes": 36635,
+      "sha256": "b8b7a6b2e46e851bce529e590895bc505b6513ac20a2065bf1fb39c36a1fd01f"
+    },
+    "/tmp/cs30401-vegas-v2/replay-v2-fixed-comp-renew/logs_ns3/tcp_flow_0_study_packets.csv": {
+      "bytes": 79347759,
+      "sha256": "c549b73bf7e924dd5478348db08fcf4dcaf4e8b9b1ca76c531c9f4bdf8efe3b0"
+    },
+    "/tmp/cs30401-vegas-v2/replay-v2-fixed-comp-renew/logs_ns3/tcp_flow_1_cwnd.csv": {
+      "bytes": 102361,
+      "sha256": "f0c9c5d610ec849f4bd71151d3302bd13bab5f7f88ba07461e195bbc38735860"
+    },
+    "/tmp/cs30401-vegas-v2/replay-v2-fixed-comp-renew/logs_ns3/tcp_flow_1_progress.csv": {
+      "bytes": 7925178,
+      "sha256": "4a85c893200e21b05493897871b2f75b7cfd41db762ce1fb1574eb7a273883b7"
+    },
+    "/tmp/cs30401-vegas-v2/replay-v2-fixed-comp-renew/logs_ns3/tcp_flow_1_rtt.csv": {
+      "bytes": 7562944,
+      "sha256": "fecbc5ea2408d108fd58d71c53cd57b8698c981dd40a2f622c928ae0158a2179"
+    },
+    "/tmp/cs30401-vegas-v2/replay-v2-fixed-comp-renew/logs_ns3/tcp_flow_1_study_events.csv": {
+      "bytes": 1760,
+      "sha256": "b91f9cff2c50734e86894ac334045d8849ce68f57d43f447609f22a6233c650c"
+    },
+    "/tmp/cs30401-vegas-v2/replay-v2-fixed-comp-renew/logs_ns3/tcp_flow_1_study_packets.csv": {
+      "bytes": 75277509,
+      "sha256": "bb8b0dbd7919b9ab79c374db7a7ab7f6947bd959ab528f3304a0230e62dd0ea1"
+    },
+    "/tmp/cs30401-vegas-v2/replay-v2-fixed-comp-renew/logs_ns3/vegas_state.csv": {
+      "bytes": 276076,
+      "sha256": "e2fae1897a5b5a1c3c956e091010ac05c02bb352e59ca877d3d1438b57539fd0"
+    },
+    "/tmp/cs30401-vegas-v2/replay-v2-leo-renew/case.json": {
+      "bytes": 7159,
+      "sha256": "16f114a943125904dd228f5d9fc11884bd85f7ca3d89fa062938d6cd710e09da"
+    },
+    "/tmp/cs30401-vegas-v2/replay-v2-leo-renew/config_ns3.properties": {
+      "bytes": 615,
+      "sha256": "16f9f0801cd196ac9fbf0063344cf07a60f11f5330b7a71c019d815ef76e5ec4"
+    },
+    "/tmp/cs30401-vegas-v2/replay-v2-leo-renew/logs_ns3/study_app_rx_node_1585_port_1024.csv": {
+      "bytes": 87008894,
+      "sha256": "1e632d5949396c6a2d2731347ec9053a563221305e485b5e69755ac116b203eb"
+    },
+    "/tmp/cs30401-vegas-v2/replay-v2-leo-renew/logs_ns3/study_drop_coverage.csv": {
+      "bytes": 1140184,
+      "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+    },
+    "/tmp/cs30401-vegas-v2/replay-v2-leo-renew/logs_ns3/study_drops.csv": {
+      "bytes": 112,
+      "sha256": "ec37c4087cf6eb0bf412760b74ba37e2279e44d6bfff2d89f87c8135ec82b959"
+    },
+    "/tmp/cs30401-vegas-v2/replay-v2-leo-renew/logs_ns3/study_rx_node_1585_port_1024.csv": {
+      "bytes": 112687460,
+      "sha256": "974ea62fef87564202520867cdcc5a629d29b5827cdb87341b2ec7bda124daff"
+    },
+    "/tmp/cs30401-vegas-v2/replay-v2-leo-renew/logs_ns3/tcp_flow_0_cwnd.csv": {
+      "bytes": 31325,
+      "sha256": "242d12f939c365ba0c7218063053814cbc35b7ddfc165284faa4091144a31ea9"
+    },
+    "/tmp/cs30401-vegas-v2/replay-v2-leo-renew/logs_ns3/tcp_flow_0_progress.csv": {
+      "bytes": 12059891,
+      "sha256": "3707870e1be61c38f067d5d15daecbc2d62bf9a4b47384ca8f85230e34e0a0a0"
+    },
+    "/tmp/cs30401-vegas-v2/replay-v2-leo-renew/logs_ns3/tcp_flow_0_rtt.csv": {
+      "bytes": 11413810,
+      "sha256": "7912faa2509dc8d5e38d34d3db195b29321ad309bf8bb45733677bc23ae8b0e7"
+    },
+    "/tmp/cs30401-vegas-v2/replay-v2-leo-renew/logs_ns3/tcp_flow_0_study_events.csv": {
+      "bytes": 41332,
+      "sha256": "6f7f05ec02cd84c0dfef018d41a1bccc69d6571a7914fd1b5d19f9d6b9433b1c"
+    },
+    "/tmp/cs30401-vegas-v2/replay-v2-leo-renew/logs_ns3/tcp_flow_0_study_packets.csv": {
+      "bytes": 111178380,
+      "sha256": "38d458969272b311f8031606248d7e7ff8754c866b8dcc3167ed9149ebba6d11"
+    },
+    "/tmp/cs30401-vegas-v2/replay-v2-leo-renew/logs_ns3/tcp_flows.csv": {
+      "bytes": 76,
+      "sha256": "88162f46170f4b9b67bba87756326eeff7d7569f549fa86654db04d1f966b9f5"
+    },
+    "/tmp/cs30401-vegas-v2/replay-v2-leo-renew/logs_ns3/timing_results.csv": {
+      "bytes": 566,
+      "sha256": "58d678122870aefe8ba908f8599d3ec29390182cc2944facdb1bd124fd918713"
+    },
+    "/tmp/cs30401-vegas-v2/replay-v2-leo-renew/logs_ns3/vegas_state.csv": {
+      "bytes": 278243,
+      "sha256": "923367dc97ad223f66aa5aa3cd98e0384c105b663cc0ae6f8e9fafc10d65a849"
+    },
+    "/tmp/cs30401-vegas-v2/replay-v2-leo-renew/schedule.csv": {
+      "bytes": 29,
+      "sha256": "e6cde3aa7716856e46d24c3833354df90407313ece13a5ffbd1b789fa4fea23c"
+    },
+    "/tmp/vegas-v2-replay-inventory.json": {
+      "bytes": 34612,
+      "sha256": "73ababe432ea8eb7393c9d107d7da41d03703e076cb93b4a073eeef7c105594d"
+    }
+  },
+  "limits": [
+    "timing_results.csv is excluded wall-clock metadata and retained separately when present.",
+    "Strict source/executable/library comparisons use launch-manifest hash records; live binaries or Docker identity are not independently inspected by this post-run helper.",
+    "Deterministic replay is not an independent statistical replication."
+  ],
+  "matched_file_count": 37,
+  "measurement_file_count": 37,
+  "method": "Compare original CSV byte sizes and SHA-256 hashes and complete file sets; no CSV row/column/value normalization.",
+  "mode": "strict-policy-replay",
+  "reference": "/tmp/vegas-v2-replay-inventory.json",
+  "root": "/tmp/cs30401-vegas-v2",
+  "schema_version": 1,
+  "status": "pass"
+}

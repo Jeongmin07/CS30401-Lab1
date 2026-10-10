@@ -1,0 +1,1169 @@
+{
+  "schema_version": 1,
+  "status": "pass",
+  "configured_mss_bytes": 1380,
+  "cases": {
+    "v2-compat-fixed-comp-renew": {
+      "errors": 0,
+      "policy": {
+        "alpha": 2,
+        "beta": 4,
+        "gamma": 1,
+        "input": "existing socket SRTT; loss/startup unchanged",
+        "min_rise_ns": 1000000,
+        "preserve_beta": false,
+        "recent_min_renewal": true,
+        "rounds": 20
+      },
+      "source_commit": "ac133157c5faa3dac56534ab105cd2ed804fd12c",
+      "patch_sha256": "d3a762251deb1c6f88af2c2fde07f872c5853d00de70c5e5d13aaa6d0560686d",
+      "official_image_digest": "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+      "binary_sha256": "bca1a847d1fe6f37176a837475aea2392393ec643e11619660faf944e671f850",
+      "launch_sources": [
+        {
+          "bytes": 10024,
+          "path": "/work/code/vegas-study/v2/run_case.py",
+          "sha256": "6c34f76742143f2f106f4293e88ec7b867e1e5084aef717fb55dc0a60ae3a0f7"
+        },
+        {
+          "bytes": 109913,
+          "path": "/work/code/vegas-study/v2/ns3.patch",
+          "sha256": "d3a762251deb1c6f88af2c2fde07f872c5853d00de70c5e5d13aaa6d0560686d"
+        },
+        {
+          "bytes": 25821,
+          "path": "/work/code/vegas-study/v2/vegas_micro_v2.cc",
+          "sha256": "f7a82bf28f5939d7dccfe7e792b3078969cbf6029a30fc5db557fa50cb82ecb7"
+        },
+        {
+          "bytes": 39550,
+          "path": "/work/code/vegas-study/v2/analyze_vegas.py",
+          "sha256": "8d041c2c3d2caf2e9d1e9f28d1ad408c1c33ad242b43e10b5ad944707245f14f"
+        },
+        {
+          "bytes": 36868,
+          "path": "/work/code/kim-study/analyze_study.py",
+          "sha256": "5333d7f6d86c04f79bbaad82e5e2577ec3bdf2f281e115c854ad904c404aa696"
+        },
+        {
+          "bytes": 135964,
+          "path": "/work/code/kim-study/path_truth_200s.csv",
+          "sha256": "49bd5418f2b13bdbf6d703f719d61075f814cc86d44c745651bf797f4e5f656c"
+        },
+        {
+          "bytes": 17011,
+          "path": "/home/ubuntu/ns-3.48/src/internet/model/tcp-vegas.cc",
+          "sha256": "78130553ba593ab3163234ab40b617b47838eeab9ed44094300d5006f97fcb98"
+        },
+        {
+          "bytes": 5855,
+          "path": "/home/ubuntu/ns-3.48/src/internet/model/tcp-vegas.h",
+          "sha256": "18e5ffe8edfe0156f79eca539584bba8a5f1e51cc2d56fe588194739c31cd0ea"
+        },
+        {
+          "bytes": 179724,
+          "path": "/home/ubuntu/ns-3.48/src/internet/model/tcp-socket-base.cc",
+          "sha256": "b6ee80a1d33538f36f0f9f2170a6ca2512beed6850133a47fd00db96f3d70afe"
+        },
+        {
+          "bytes": 25821,
+          "path": "/home/ubuntu/ns-3.48/scratch/vegas_micro_v2/vegas_micro_v2.cc",
+          "sha256": "f7a82bf28f5939d7dccfe7e792b3078969cbf6029a30fc5db557fa50cb82ecb7"
+        }
+      ],
+      "rows": 2205,
+      "event_counts": {
+        "ENABLE": 9,
+        "CYCLE_INCREASE": 872,
+        "CYCLE_DECREASE": 481,
+        "CYCLE_HOLD": 803,
+        "DISABLE": 12,
+        "RENEW": 28
+      },
+      "history_clear_reasons": {
+        "ENABLE": 9,
+        "INVALID_OR_DISABLED": 3,
+        "DISABLE": 12
+      },
+      "instances": [
+        1,
+        2,
+        3
+      ],
+      "full_history_candidates": 1562,
+      "w_le_beta_candidates": 0,
+      "double_guard_rejections": 0,
+      "renewal_count": 28,
+      "fixed_propagation_renewal_count": 28,
+      "maximum_observed_baseline_ns": 99452851,
+      "maximum_renewed_baseline_ns": 99452851,
+      "min_postrenew_double_diff": 1,
+      "min_postrenew_exact_diff": 1,
+      "double_vs_exact_diff_disagreements": []
+    },
+    "v2-compat-leo-renew": {
+      "errors": 0,
+      "policy": {
+        "alpha": 2,
+        "beta": 4,
+        "gamma": 1,
+        "input": "existing socket SRTT; loss/startup unchanged",
+        "min_rise_ns": 1000000,
+        "preserve_beta": false,
+        "recent_min_renewal": true,
+        "rounds": 20
+      },
+      "source_commit": "ac133157c5faa3dac56534ab105cd2ed804fd12c",
+      "patch_sha256": "d3a762251deb1c6f88af2c2fde07f872c5853d00de70c5e5d13aaa6d0560686d",
+      "official_image_digest": "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+      "binary_sha256": "041d6d86761db040412ae95dad748033fc714a4480d7cc16843dba03fe40ce4f",
+      "launch_sources": [
+        {
+          "bytes": 10024,
+          "path": "/work/code/vegas-study/v2/run_case.py",
+          "sha256": "6c34f76742143f2f106f4293e88ec7b867e1e5084aef717fb55dc0a60ae3a0f7"
+        },
+        {
+          "bytes": 109913,
+          "path": "/work/code/vegas-study/v2/ns3.patch",
+          "sha256": "d3a762251deb1c6f88af2c2fde07f872c5853d00de70c5e5d13aaa6d0560686d"
+        },
+        {
+          "bytes": 25821,
+          "path": "/work/code/vegas-study/v2/vegas_micro_v2.cc",
+          "sha256": "f7a82bf28f5939d7dccfe7e792b3078969cbf6029a30fc5db557fa50cb82ecb7"
+        },
+        {
+          "bytes": 39550,
+          "path": "/work/code/vegas-study/v2/analyze_vegas.py",
+          "sha256": "8d041c2c3d2caf2e9d1e9f28d1ad408c1c33ad242b43e10b5ad944707245f14f"
+        },
+        {
+          "bytes": 36868,
+          "path": "/work/code/kim-study/analyze_study.py",
+          "sha256": "5333d7f6d86c04f79bbaad82e5e2577ec3bdf2f281e115c854ad904c404aa696"
+        },
+        {
+          "bytes": 135964,
+          "path": "/work/code/kim-study/path_truth_200s.csv",
+          "sha256": "49bd5418f2b13bdbf6d703f719d61075f814cc86d44c745651bf797f4e5f656c"
+        },
+        {
+          "bytes": 17011,
+          "path": "/home/ubuntu/ns-3.48/src/internet/model/tcp-vegas.cc",
+          "sha256": "78130553ba593ab3163234ab40b617b47838eeab9ed44094300d5006f97fcb98"
+        },
+        {
+          "bytes": 5855,
+          "path": "/home/ubuntu/ns-3.48/src/internet/model/tcp-vegas.h",
+          "sha256": "18e5ffe8edfe0156f79eca539584bba8a5f1e51cc2d56fe588194739c31cd0ea"
+        },
+        {
+          "bytes": 179724,
+          "path": "/home/ubuntu/ns-3.48/src/internet/model/tcp-socket-base.cc",
+          "sha256": "b6ee80a1d33538f36f0f9f2170a6ca2512beed6850133a47fd00db96f3d70afe"
+        },
+        {
+          "bytes": 25821,
+          "path": "/home/ubuntu/ns-3.48/scratch/vegas_micro_v2/vegas_micro_v2.cc",
+          "sha256": "f7a82bf28f5939d7dccfe7e792b3078969cbf6029a30fc5db557fa50cb82ecb7"
+        }
+      ],
+      "rows": 2195,
+      "event_counts": {
+        "ENABLE": 14,
+        "CYCLE_INCREASE": 1242,
+        "CYCLE_DECREASE": 42,
+        "CYCLE_HOLD": 878,
+        "RENEW": 3,
+        "DISABLE": 16
+      },
+      "history_clear_reasons": {
+        "ENABLE": 14,
+        "INVALID_OR_DISABLED": 3,
+        "DISABLE": 16
+      },
+      "instances": [
+        1,
+        2
+      ],
+      "full_history_candidates": 2007,
+      "w_le_beta_candidates": 0,
+      "double_guard_rejections": 0,
+      "renewal_count": 3,
+      "fixed_propagation_renewal_count": null,
+      "maximum_observed_baseline_ns": 100177877,
+      "maximum_renewed_baseline_ns": 100177877,
+      "min_postrenew_double_diff": 1,
+      "min_postrenew_exact_diff": 1,
+      "double_vs_exact_diff_disagreements": []
+    },
+    "v2-fixed-base": {
+      "errors": 0,
+      "policy": {
+        "alpha": 2,
+        "beta": 4,
+        "gamma": 1,
+        "input": "existing socket SRTT; loss/startup unchanged",
+        "min_rise_ns": 1000000,
+        "preserve_beta": false,
+        "recent_min_renewal": false,
+        "rounds": 20
+      },
+      "source_commit": "ac133157c5faa3dac56534ab105cd2ed804fd12c",
+      "patch_sha256": "d3a762251deb1c6f88af2c2fde07f872c5853d00de70c5e5d13aaa6d0560686d",
+      "official_image_digest": "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+      "binary_sha256": "bca1a847d1fe6f37176a837475aea2392393ec643e11619660faf944e671f850",
+      "launch_sources": [
+        {
+          "bytes": 10024,
+          "path": "/work/code/vegas-study/v2/run_case.py",
+          "sha256": "6c34f76742143f2f106f4293e88ec7b867e1e5084aef717fb55dc0a60ae3a0f7"
+        },
+        {
+          "bytes": 109913,
+          "path": "/work/code/vegas-study/v2/ns3.patch",
+          "sha256": "d3a762251deb1c6f88af2c2fde07f872c5853d00de70c5e5d13aaa6d0560686d"
+        },
+        {
+          "bytes": 25821,
+          "path": "/work/code/vegas-study/v2/vegas_micro_v2.cc",
+          "sha256": "f7a82bf28f5939d7dccfe7e792b3078969cbf6029a30fc5db557fa50cb82ecb7"
+        },
+        {
+          "bytes": 39550,
+          "path": "/work/code/vegas-study/v2/analyze_vegas.py",
+          "sha256": "8d041c2c3d2caf2e9d1e9f28d1ad408c1c33ad242b43e10b5ad944707245f14f"
+        },
+        {
+          "bytes": 36868,
+          "path": "/work/code/kim-study/analyze_study.py",
+          "sha256": "5333d7f6d86c04f79bbaad82e5e2577ec3bdf2f281e115c854ad904c404aa696"
+        },
+        {
+          "bytes": 135964,
+          "path": "/work/code/kim-study/path_truth_200s.csv",
+          "sha256": "49bd5418f2b13bdbf6d703f719d61075f814cc86d44c745651bf797f4e5f656c"
+        },
+        {
+          "bytes": 17011,
+          "path": "/home/ubuntu/ns-3.48/src/internet/model/tcp-vegas.cc",
+          "sha256": "78130553ba593ab3163234ab40b617b47838eeab9ed44094300d5006f97fcb98"
+        },
+        {
+          "bytes": 5855,
+          "path": "/home/ubuntu/ns-3.48/src/internet/model/tcp-vegas.h",
+          "sha256": "18e5ffe8edfe0156f79eca539584bba8a5f1e51cc2d56fe588194739c31cd0ea"
+        },
+        {
+          "bytes": 179724,
+          "path": "/home/ubuntu/ns-3.48/src/internet/model/tcp-socket-base.cc",
+          "sha256": "b6ee80a1d33538f36f0f9f2170a6ca2512beed6850133a47fd00db96f3d70afe"
+        },
+        {
+          "bytes": 25821,
+          "path": "/home/ubuntu/ns-3.48/scratch/vegas_micro_v2/vegas_micro_v2.cc",
+          "sha256": "f7a82bf28f5939d7dccfe7e792b3078969cbf6029a30fc5db557fa50cb82ecb7"
+        }
+      ],
+      "rows": 2224,
+      "event_counts": {
+        "ENABLE": 2,
+        "CYCLE_INCREASE": 498,
+        "CYCLE_DECREASE": 1,
+        "CYCLE_HOLD": 1723
+      },
+      "history_clear_reasons": {
+        "ENABLE": 2,
+        "INVALID_OR_DISABLED": 2222
+      },
+      "instances": [
+        1,
+        2
+      ],
+      "full_history_candidates": 0,
+      "w_le_beta_candidates": 0,
+      "double_guard_rejections": 0,
+      "renewal_count": 0,
+      "fixed_propagation_renewal_count": 0,
+      "maximum_observed_baseline_ns": 90000000,
+      "maximum_renewed_baseline_ns": null,
+      "min_postrenew_double_diff": null,
+      "min_postrenew_exact_diff": null,
+      "double_vs_exact_diff_disagreements": []
+    },
+    "v2-fixed-comp-base": {
+      "errors": 0,
+      "policy": {
+        "alpha": 2,
+        "beta": 4,
+        "gamma": 1,
+        "input": "existing socket SRTT; loss/startup unchanged",
+        "min_rise_ns": 1000000,
+        "preserve_beta": false,
+        "recent_min_renewal": false,
+        "rounds": 20
+      },
+      "source_commit": "ac133157c5faa3dac56534ab105cd2ed804fd12c",
+      "patch_sha256": "d3a762251deb1c6f88af2c2fde07f872c5853d00de70c5e5d13aaa6d0560686d",
+      "official_image_digest": "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+      "binary_sha256": "bca1a847d1fe6f37176a837475aea2392393ec643e11619660faf944e671f850",
+      "launch_sources": [
+        {
+          "bytes": 10024,
+          "path": "/work/code/vegas-study/v2/run_case.py",
+          "sha256": "6c34f76742143f2f106f4293e88ec7b867e1e5084aef717fb55dc0a60ae3a0f7"
+        },
+        {
+          "bytes": 109913,
+          "path": "/work/code/vegas-study/v2/ns3.patch",
+          "sha256": "d3a762251deb1c6f88af2c2fde07f872c5853d00de70c5e5d13aaa6d0560686d"
+        },
+        {
+          "bytes": 25821,
+          "path": "/work/code/vegas-study/v2/vegas_micro_v2.cc",
+          "sha256": "f7a82bf28f5939d7dccfe7e792b3078969cbf6029a30fc5db557fa50cb82ecb7"
+        },
+        {
+          "bytes": 39550,
+          "path": "/work/code/vegas-study/v2/analyze_vegas.py",
+          "sha256": "8d041c2c3d2caf2e9d1e9f28d1ad408c1c33ad242b43e10b5ad944707245f14f"
+        },
+        {
+          "bytes": 36868,
+          "path": "/work/code/kim-study/analyze_study.py",
+          "sha256": "5333d7f6d86c04f79bbaad82e5e2577ec3bdf2f281e115c854ad904c404aa696"
+        },
+        {
+          "bytes": 135964,
+          "path": "/work/code/kim-study/path_truth_200s.csv",
+          "sha256": "49bd5418f2b13bdbf6d703f719d61075f814cc86d44c745651bf797f4e5f656c"
+        },
+        {
+          "bytes": 17011,
+          "path": "/home/ubuntu/ns-3.48/src/internet/model/tcp-vegas.cc",
+          "sha256": "78130553ba593ab3163234ab40b617b47838eeab9ed44094300d5006f97fcb98"
+        },
+        {
+          "bytes": 5855,
+          "path": "/home/ubuntu/ns-3.48/src/internet/model/tcp-vegas.h",
+          "sha256": "18e5ffe8edfe0156f79eca539584bba8a5f1e51cc2d56fe588194739c31cd0ea"
+        },
+        {
+          "bytes": 179724,
+          "path": "/home/ubuntu/ns-3.48/src/internet/model/tcp-socket-base.cc",
+          "sha256": "b6ee80a1d33538f36f0f9f2170a6ca2512beed6850133a47fd00db96f3d70afe"
+        },
+        {
+          "bytes": 25821,
+          "path": "/home/ubuntu/ns-3.48/scratch/vegas_micro_v2/vegas_micro_v2.cc",
+          "sha256": "f7a82bf28f5939d7dccfe7e792b3078969cbf6029a30fc5db557fa50cb82ecb7"
+        }
+      ],
+      "rows": 2186,
+      "event_counts": {
+        "ENABLE": 7,
+        "CYCLE_INCREASE": 870,
+        "CYCLE_DECREASE": 658,
+        "CYCLE_HOLD": 643,
+        "DISABLE": 8
+      },
+      "history_clear_reasons": {
+        "ENABLE": 7,
+        "INVALID_OR_DISABLED": 2171,
+        "DISABLE": 8
+      },
+      "instances": [
+        1,
+        2,
+        3
+      ],
+      "full_history_candidates": 0,
+      "w_le_beta_candidates": 0,
+      "double_guard_rejections": 0,
+      "renewal_count": 0,
+      "fixed_propagation_renewal_count": 0,
+      "maximum_observed_baseline_ns": 90000000,
+      "maximum_renewed_baseline_ns": null,
+      "min_postrenew_double_diff": null,
+      "min_postrenew_exact_diff": null,
+      "double_vs_exact_diff_disagreements": []
+    },
+    "v2-fixed-comp-renew": {
+      "errors": 0,
+      "policy": {
+        "alpha": 2,
+        "beta": 4,
+        "gamma": 1,
+        "input": "existing socket SRTT; loss/startup unchanged",
+        "min_rise_ns": 1000000,
+        "preserve_beta": true,
+        "recent_min_renewal": true,
+        "rounds": 20
+      },
+      "source_commit": "ac133157c5faa3dac56534ab105cd2ed804fd12c",
+      "patch_sha256": "d3a762251deb1c6f88af2c2fde07f872c5853d00de70c5e5d13aaa6d0560686d",
+      "official_image_digest": "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+      "binary_sha256": "bca1a847d1fe6f37176a837475aea2392393ec643e11619660faf944e671f850",
+      "launch_sources": [
+        {
+          "bytes": 10024,
+          "path": "/work/code/vegas-study/v2/run_case.py",
+          "sha256": "6c34f76742143f2f106f4293e88ec7b867e1e5084aef717fb55dc0a60ae3a0f7"
+        },
+        {
+          "bytes": 109913,
+          "path": "/work/code/vegas-study/v2/ns3.patch",
+          "sha256": "d3a762251deb1c6f88af2c2fde07f872c5853d00de70c5e5d13aaa6d0560686d"
+        },
+        {
+          "bytes": 25821,
+          "path": "/work/code/vegas-study/v2/vegas_micro_v2.cc",
+          "sha256": "f7a82bf28f5939d7dccfe7e792b3078969cbf6029a30fc5db557fa50cb82ecb7"
+        },
+        {
+          "bytes": 39550,
+          "path": "/work/code/vegas-study/v2/analyze_vegas.py",
+          "sha256": "8d041c2c3d2caf2e9d1e9f28d1ad408c1c33ad242b43e10b5ad944707245f14f"
+        },
+        {
+          "bytes": 36868,
+          "path": "/work/code/kim-study/analyze_study.py",
+          "sha256": "5333d7f6d86c04f79bbaad82e5e2577ec3bdf2f281e115c854ad904c404aa696"
+        },
+        {
+          "bytes": 135964,
+          "path": "/work/code/kim-study/path_truth_200s.csv",
+          "sha256": "49bd5418f2b13bdbf6d703f719d61075f814cc86d44c745651bf797f4e5f656c"
+        },
+        {
+          "bytes": 17011,
+          "path": "/home/ubuntu/ns-3.48/src/internet/model/tcp-vegas.cc",
+          "sha256": "78130553ba593ab3163234ab40b617b47838eeab9ed44094300d5006f97fcb98"
+        },
+        {
+          "bytes": 5855,
+          "path": "/home/ubuntu/ns-3.48/src/internet/model/tcp-vegas.h",
+          "sha256": "18e5ffe8edfe0156f79eca539584bba8a5f1e51cc2d56fe588194739c31cd0ea"
+        },
+        {
+          "bytes": 179724,
+          "path": "/home/ubuntu/ns-3.48/src/internet/model/tcp-socket-base.cc",
+          "sha256": "b6ee80a1d33538f36f0f9f2170a6ca2512beed6850133a47fd00db96f3d70afe"
+        },
+        {
+          "bytes": 25821,
+          "path": "/home/ubuntu/ns-3.48/scratch/vegas_micro_v2/vegas_micro_v2.cc",
+          "sha256": "f7a82bf28f5939d7dccfe7e792b3078969cbf6029a30fc5db557fa50cb82ecb7"
+        }
+      ],
+      "rows": 2189,
+      "event_counts": {
+        "ENABLE": 7,
+        "CYCLE_INCREASE": 872,
+        "CYCLE_DECREASE": 569,
+        "CYCLE_HOLD": 720,
+        "DISABLE": 8,
+        "RENEW": 13
+      },
+      "history_clear_reasons": {
+        "ENABLE": 7,
+        "INVALID_OR_DISABLED": 3,
+        "DISABLE": 8
+      },
+      "instances": [
+        1,
+        2,
+        3
+      ],
+      "full_history_candidates": 1855,
+      "w_le_beta_candidates": 0,
+      "double_guard_rejections": 0,
+      "renewal_count": 13,
+      "fixed_propagation_renewal_count": 13,
+      "maximum_observed_baseline_ns": 95701028,
+      "maximum_renewed_baseline_ns": 95701028,
+      "min_postrenew_double_diff": 5,
+      "min_postrenew_exact_diff": 5,
+      "double_vs_exact_diff_disagreements": []
+    },
+    "v2-fixed-renew": {
+      "errors": 0,
+      "policy": {
+        "alpha": 2,
+        "beta": 4,
+        "gamma": 1,
+        "input": "existing socket SRTT; loss/startup unchanged",
+        "min_rise_ns": 1000000,
+        "preserve_beta": true,
+        "recent_min_renewal": true,
+        "rounds": 20
+      },
+      "source_commit": "ac133157c5faa3dac56534ab105cd2ed804fd12c",
+      "patch_sha256": "d3a762251deb1c6f88af2c2fde07f872c5853d00de70c5e5d13aaa6d0560686d",
+      "official_image_digest": "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+      "binary_sha256": "bca1a847d1fe6f37176a837475aea2392393ec643e11619660faf944e671f850",
+      "launch_sources": [
+        {
+          "bytes": 10024,
+          "path": "/work/code/vegas-study/v2/run_case.py",
+          "sha256": "6c34f76742143f2f106f4293e88ec7b867e1e5084aef717fb55dc0a60ae3a0f7"
+        },
+        {
+          "bytes": 109913,
+          "path": "/work/code/vegas-study/v2/ns3.patch",
+          "sha256": "d3a762251deb1c6f88af2c2fde07f872c5853d00de70c5e5d13aaa6d0560686d"
+        },
+        {
+          "bytes": 25821,
+          "path": "/work/code/vegas-study/v2/vegas_micro_v2.cc",
+          "sha256": "f7a82bf28f5939d7dccfe7e792b3078969cbf6029a30fc5db557fa50cb82ecb7"
+        },
+        {
+          "bytes": 39550,
+          "path": "/work/code/vegas-study/v2/analyze_vegas.py",
+          "sha256": "8d041c2c3d2caf2e9d1e9f28d1ad408c1c33ad242b43e10b5ad944707245f14f"
+        },
+        {
+          "bytes": 36868,
+          "path": "/work/code/kim-study/analyze_study.py",
+          "sha256": "5333d7f6d86c04f79bbaad82e5e2577ec3bdf2f281e115c854ad904c404aa696"
+        },
+        {
+          "bytes": 135964,
+          "path": "/work/code/kim-study/path_truth_200s.csv",
+          "sha256": "49bd5418f2b13bdbf6d703f719d61075f814cc86d44c745651bf797f4e5f656c"
+        },
+        {
+          "bytes": 17011,
+          "path": "/home/ubuntu/ns-3.48/src/internet/model/tcp-vegas.cc",
+          "sha256": "78130553ba593ab3163234ab40b617b47838eeab9ed44094300d5006f97fcb98"
+        },
+        {
+          "bytes": 5855,
+          "path": "/home/ubuntu/ns-3.48/src/internet/model/tcp-vegas.h",
+          "sha256": "18e5ffe8edfe0156f79eca539584bba8a5f1e51cc2d56fe588194739c31cd0ea"
+        },
+        {
+          "bytes": 179724,
+          "path": "/home/ubuntu/ns-3.48/src/internet/model/tcp-socket-base.cc",
+          "sha256": "b6ee80a1d33538f36f0f9f2170a6ca2512beed6850133a47fd00db96f3d70afe"
+        },
+        {
+          "bytes": 25821,
+          "path": "/home/ubuntu/ns-3.48/scratch/vegas_micro_v2/vegas_micro_v2.cc",
+          "sha256": "f7a82bf28f5939d7dccfe7e792b3078969cbf6029a30fc5db557fa50cb82ecb7"
+        }
+      ],
+      "rows": 2224,
+      "event_counts": {
+        "ENABLE": 2,
+        "CYCLE_INCREASE": 498,
+        "CYCLE_DECREASE": 1,
+        "CYCLE_HOLD": 1723
+      },
+      "history_clear_reasons": {
+        "ENABLE": 2,
+        "INVALID_OR_DISABLED": 3
+      },
+      "instances": [
+        1,
+        2
+      ],
+      "full_history_candidates": 2200,
+      "w_le_beta_candidates": 0,
+      "double_guard_rejections": 0,
+      "renewal_count": 0,
+      "fixed_propagation_renewal_count": 0,
+      "maximum_observed_baseline_ns": 90000000,
+      "maximum_renewed_baseline_ns": null,
+      "min_postrenew_double_diff": null,
+      "min_postrenew_exact_diff": null,
+      "double_vs_exact_diff_disagreements": []
+    },
+    "v2-leo-base": {
+      "errors": 0,
+      "policy": {
+        "alpha": 2,
+        "beta": 4,
+        "gamma": 1,
+        "input": "existing socket SRTT; loss/startup unchanged",
+        "min_rise_ns": 1000000,
+        "preserve_beta": false,
+        "recent_min_renewal": false,
+        "rounds": 20
+      },
+      "source_commit": "ac133157c5faa3dac56534ab105cd2ed804fd12c",
+      "patch_sha256": "d3a762251deb1c6f88af2c2fde07f872c5853d00de70c5e5d13aaa6d0560686d",
+      "official_image_digest": "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+      "binary_sha256": "041d6d86761db040412ae95dad748033fc714a4480d7cc16843dba03fe40ce4f",
+      "launch_sources": [
+        {
+          "bytes": 10024,
+          "path": "/work/code/vegas-study/v2/run_case.py",
+          "sha256": "6c34f76742143f2f106f4293e88ec7b867e1e5084aef717fb55dc0a60ae3a0f7"
+        },
+        {
+          "bytes": 109913,
+          "path": "/work/code/vegas-study/v2/ns3.patch",
+          "sha256": "d3a762251deb1c6f88af2c2fde07f872c5853d00de70c5e5d13aaa6d0560686d"
+        },
+        {
+          "bytes": 25821,
+          "path": "/work/code/vegas-study/v2/vegas_micro_v2.cc",
+          "sha256": "f7a82bf28f5939d7dccfe7e792b3078969cbf6029a30fc5db557fa50cb82ecb7"
+        },
+        {
+          "bytes": 39550,
+          "path": "/work/code/vegas-study/v2/analyze_vegas.py",
+          "sha256": "8d041c2c3d2caf2e9d1e9f28d1ad408c1c33ad242b43e10b5ad944707245f14f"
+        },
+        {
+          "bytes": 36868,
+          "path": "/work/code/kim-study/analyze_study.py",
+          "sha256": "5333d7f6d86c04f79bbaad82e5e2577ec3bdf2f281e115c854ad904c404aa696"
+        },
+        {
+          "bytes": 135964,
+          "path": "/work/code/kim-study/path_truth_200s.csv",
+          "sha256": "49bd5418f2b13bdbf6d703f719d61075f814cc86d44c745651bf797f4e5f656c"
+        },
+        {
+          "bytes": 17011,
+          "path": "/home/ubuntu/ns-3.48/src/internet/model/tcp-vegas.cc",
+          "sha256": "78130553ba593ab3163234ab40b617b47838eeab9ed44094300d5006f97fcb98"
+        },
+        {
+          "bytes": 5855,
+          "path": "/home/ubuntu/ns-3.48/src/internet/model/tcp-vegas.h",
+          "sha256": "18e5ffe8edfe0156f79eca539584bba8a5f1e51cc2d56fe588194739c31cd0ea"
+        },
+        {
+          "bytes": 179724,
+          "path": "/home/ubuntu/ns-3.48/src/internet/model/tcp-socket-base.cc",
+          "sha256": "b6ee80a1d33538f36f0f9f2170a6ca2512beed6850133a47fd00db96f3d70afe"
+        },
+        {
+          "bytes": 25821,
+          "path": "/home/ubuntu/ns-3.48/scratch/vegas_micro_v2/vegas_micro_v2.cc",
+          "sha256": "f7a82bf28f5939d7dccfe7e792b3078969cbf6029a30fc5db557fa50cb82ecb7"
+        }
+      ],
+      "rows": 2189,
+      "event_counts": {
+        "ENABLE": 8,
+        "CYCLE_INCREASE": 908,
+        "CYCLE_DECREASE": 551,
+        "CYCLE_HOLD": 714,
+        "DISABLE": 8
+      },
+      "history_clear_reasons": {
+        "ENABLE": 8,
+        "INVALID_OR_DISABLED": 2173,
+        "DISABLE": 8
+      },
+      "instances": [
+        1,
+        2
+      ],
+      "full_history_candidates": 0,
+      "w_le_beta_candidates": 0,
+      "double_guard_rejections": 0,
+      "renewal_count": 0,
+      "fixed_propagation_renewal_count": null,
+      "maximum_observed_baseline_ns": 98250000,
+      "maximum_renewed_baseline_ns": null,
+      "min_postrenew_double_diff": null,
+      "min_postrenew_exact_diff": null,
+      "double_vs_exact_diff_disagreements": []
+    },
+    "v2-leo-renew": {
+      "errors": 0,
+      "policy": {
+        "alpha": 2,
+        "beta": 4,
+        "gamma": 1,
+        "input": "existing socket SRTT; loss/startup unchanged",
+        "min_rise_ns": 1000000,
+        "preserve_beta": true,
+        "recent_min_renewal": true,
+        "rounds": 20
+      },
+      "source_commit": "ac133157c5faa3dac56534ab105cd2ed804fd12c",
+      "patch_sha256": "d3a762251deb1c6f88af2c2fde07f872c5853d00de70c5e5d13aaa6d0560686d",
+      "official_image_digest": "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+      "binary_sha256": "041d6d86761db040412ae95dad748033fc714a4480d7cc16843dba03fe40ce4f",
+      "launch_sources": [
+        {
+          "bytes": 10024,
+          "path": "/work/code/vegas-study/v2/run_case.py",
+          "sha256": "6c34f76742143f2f106f4293e88ec7b867e1e5084aef717fb55dc0a60ae3a0f7"
+        },
+        {
+          "bytes": 109913,
+          "path": "/work/code/vegas-study/v2/ns3.patch",
+          "sha256": "d3a762251deb1c6f88af2c2fde07f872c5853d00de70c5e5d13aaa6d0560686d"
+        },
+        {
+          "bytes": 25821,
+          "path": "/work/code/vegas-study/v2/vegas_micro_v2.cc",
+          "sha256": "f7a82bf28f5939d7dccfe7e792b3078969cbf6029a30fc5db557fa50cb82ecb7"
+        },
+        {
+          "bytes": 39550,
+          "path": "/work/code/vegas-study/v2/analyze_vegas.py",
+          "sha256": "8d041c2c3d2caf2e9d1e9f28d1ad408c1c33ad242b43e10b5ad944707245f14f"
+        },
+        {
+          "bytes": 36868,
+          "path": "/work/code/kim-study/analyze_study.py",
+          "sha256": "5333d7f6d86c04f79bbaad82e5e2577ec3bdf2f281e115c854ad904c404aa696"
+        },
+        {
+          "bytes": 135964,
+          "path": "/work/code/kim-study/path_truth_200s.csv",
+          "sha256": "49bd5418f2b13bdbf6d703f719d61075f814cc86d44c745651bf797f4e5f656c"
+        },
+        {
+          "bytes": 17011,
+          "path": "/home/ubuntu/ns-3.48/src/internet/model/tcp-vegas.cc",
+          "sha256": "78130553ba593ab3163234ab40b617b47838eeab9ed44094300d5006f97fcb98"
+        },
+        {
+          "bytes": 5855,
+          "path": "/home/ubuntu/ns-3.48/src/internet/model/tcp-vegas.h",
+          "sha256": "18e5ffe8edfe0156f79eca539584bba8a5f1e51cc2d56fe588194739c31cd0ea"
+        },
+        {
+          "bytes": 179724,
+          "path": "/home/ubuntu/ns-3.48/src/internet/model/tcp-socket-base.cc",
+          "sha256": "b6ee80a1d33538f36f0f9f2170a6ca2512beed6850133a47fd00db96f3d70afe"
+        },
+        {
+          "bytes": 25821,
+          "path": "/home/ubuntu/ns-3.48/scratch/vegas_micro_v2/vegas_micro_v2.cc",
+          "sha256": "f7a82bf28f5939d7dccfe7e792b3078969cbf6029a30fc5db557fa50cb82ecb7"
+        }
+      ],
+      "rows": 2189,
+      "event_counts": {
+        "ENABLE": 11,
+        "CYCLE_INCREASE": 908,
+        "CYCLE_DECREASE": 239,
+        "CYCLE_HOLD": 1017,
+        "DISABLE": 12,
+        "RENEW": 2
+      },
+      "history_clear_reasons": {
+        "ENABLE": 11,
+        "INVALID_OR_DISABLED": 3,
+        "DISABLE": 12
+      },
+      "instances": [
+        1,
+        2
+      ],
+      "full_history_candidates": 2047,
+      "w_le_beta_candidates": 0,
+      "double_guard_rejections": 0,
+      "renewal_count": 2,
+      "fixed_propagation_renewal_count": null,
+      "maximum_observed_baseline_ns": 98367298,
+      "maximum_renewed_baseline_ns": 98367298,
+      "min_postrenew_double_diff": 5,
+      "min_postrenew_exact_diff": 5,
+      "double_vs_exact_diff_disagreements": []
+    },
+    "v2-step-base": {
+      "errors": 0,
+      "policy": {
+        "alpha": 2,
+        "beta": 4,
+        "gamma": 1,
+        "input": "existing socket SRTT; loss/startup unchanged",
+        "min_rise_ns": 1000000,
+        "preserve_beta": false,
+        "recent_min_renewal": false,
+        "rounds": 20
+      },
+      "source_commit": "ac133157c5faa3dac56534ab105cd2ed804fd12c",
+      "patch_sha256": "d3a762251deb1c6f88af2c2fde07f872c5853d00de70c5e5d13aaa6d0560686d",
+      "official_image_digest": "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+      "binary_sha256": "bca1a847d1fe6f37176a837475aea2392393ec643e11619660faf944e671f850",
+      "launch_sources": [
+        {
+          "bytes": 10024,
+          "path": "/work/code/vegas-study/v2/run_case.py",
+          "sha256": "6c34f76742143f2f106f4293e88ec7b867e1e5084aef717fb55dc0a60ae3a0f7"
+        },
+        {
+          "bytes": 109913,
+          "path": "/work/code/vegas-study/v2/ns3.patch",
+          "sha256": "d3a762251deb1c6f88af2c2fde07f872c5853d00de70c5e5d13aaa6d0560686d"
+        },
+        {
+          "bytes": 25821,
+          "path": "/work/code/vegas-study/v2/vegas_micro_v2.cc",
+          "sha256": "f7a82bf28f5939d7dccfe7e792b3078969cbf6029a30fc5db557fa50cb82ecb7"
+        },
+        {
+          "bytes": 39550,
+          "path": "/work/code/vegas-study/v2/analyze_vegas.py",
+          "sha256": "8d041c2c3d2caf2e9d1e9f28d1ad408c1c33ad242b43e10b5ad944707245f14f"
+        },
+        {
+          "bytes": 36868,
+          "path": "/work/code/kim-study/analyze_study.py",
+          "sha256": "5333d7f6d86c04f79bbaad82e5e2577ec3bdf2f281e115c854ad904c404aa696"
+        },
+        {
+          "bytes": 135964,
+          "path": "/work/code/kim-study/path_truth_200s.csv",
+          "sha256": "49bd5418f2b13bdbf6d703f719d61075f814cc86d44c745651bf797f4e5f656c"
+        },
+        {
+          "bytes": 17011,
+          "path": "/home/ubuntu/ns-3.48/src/internet/model/tcp-vegas.cc",
+          "sha256": "78130553ba593ab3163234ab40b617b47838eeab9ed44094300d5006f97fcb98"
+        },
+        {
+          "bytes": 5855,
+          "path": "/home/ubuntu/ns-3.48/src/internet/model/tcp-vegas.h",
+          "sha256": "18e5ffe8edfe0156f79eca539584bba8a5f1e51cc2d56fe588194739c31cd0ea"
+        },
+        {
+          "bytes": 179724,
+          "path": "/home/ubuntu/ns-3.48/src/internet/model/tcp-socket-base.cc",
+          "sha256": "b6ee80a1d33538f36f0f9f2170a6ca2512beed6850133a47fd00db96f3d70afe"
+        },
+        {
+          "bytes": 25821,
+          "path": "/home/ubuntu/ns-3.48/scratch/vegas_micro_v2/vegas_micro_v2.cc",
+          "sha256": "f7a82bf28f5939d7dccfe7e792b3078969cbf6029a30fc5db557fa50cb82ecb7"
+        }
+      ],
+      "rows": 2175,
+      "event_counts": {
+        "ENABLE": 2,
+        "CYCLE_INCREASE": 498,
+        "CYCLE_DECREASE": 460,
+        "CYCLE_HOLD": 1215
+      },
+      "history_clear_reasons": {
+        "ENABLE": 2,
+        "INVALID_OR_DISABLED": 2173
+      },
+      "instances": [
+        1,
+        2
+      ],
+      "full_history_candidates": 0,
+      "w_le_beta_candidates": 0,
+      "double_guard_rejections": 0,
+      "renewal_count": 0,
+      "fixed_propagation_renewal_count": null,
+      "maximum_observed_baseline_ns": 90000000,
+      "maximum_renewed_baseline_ns": null,
+      "min_postrenew_double_diff": null,
+      "min_postrenew_exact_diff": null,
+      "double_vs_exact_diff_disagreements": []
+    },
+    "v2-step-comp-base": {
+      "errors": 0,
+      "policy": {
+        "alpha": 2,
+        "beta": 4,
+        "gamma": 1,
+        "input": "existing socket SRTT; loss/startup unchanged",
+        "min_rise_ns": 1000000,
+        "preserve_beta": false,
+        "recent_min_renewal": false,
+        "rounds": 20
+      },
+      "source_commit": "ac133157c5faa3dac56534ab105cd2ed804fd12c",
+      "patch_sha256": "d3a762251deb1c6f88af2c2fde07f872c5853d00de70c5e5d13aaa6d0560686d",
+      "official_image_digest": "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+      "binary_sha256": "bca1a847d1fe6f37176a837475aea2392393ec643e11619660faf944e671f850",
+      "launch_sources": [
+        {
+          "bytes": 10024,
+          "path": "/work/code/vegas-study/v2/run_case.py",
+          "sha256": "6c34f76742143f2f106f4293e88ec7b867e1e5084aef717fb55dc0a60ae3a0f7"
+        },
+        {
+          "bytes": 109913,
+          "path": "/work/code/vegas-study/v2/ns3.patch",
+          "sha256": "d3a762251deb1c6f88af2c2fde07f872c5853d00de70c5e5d13aaa6d0560686d"
+        },
+        {
+          "bytes": 25821,
+          "path": "/work/code/vegas-study/v2/vegas_micro_v2.cc",
+          "sha256": "f7a82bf28f5939d7dccfe7e792b3078969cbf6029a30fc5db557fa50cb82ecb7"
+        },
+        {
+          "bytes": 39550,
+          "path": "/work/code/vegas-study/v2/analyze_vegas.py",
+          "sha256": "8d041c2c3d2caf2e9d1e9f28d1ad408c1c33ad242b43e10b5ad944707245f14f"
+        },
+        {
+          "bytes": 36868,
+          "path": "/work/code/kim-study/analyze_study.py",
+          "sha256": "5333d7f6d86c04f79bbaad82e5e2577ec3bdf2f281e115c854ad904c404aa696"
+        },
+        {
+          "bytes": 135964,
+          "path": "/work/code/kim-study/path_truth_200s.csv",
+          "sha256": "49bd5418f2b13bdbf6d703f719d61075f814cc86d44c745651bf797f4e5f656c"
+        },
+        {
+          "bytes": 17011,
+          "path": "/home/ubuntu/ns-3.48/src/internet/model/tcp-vegas.cc",
+          "sha256": "78130553ba593ab3163234ab40b617b47838eeab9ed44094300d5006f97fcb98"
+        },
+        {
+          "bytes": 5855,
+          "path": "/home/ubuntu/ns-3.48/src/internet/model/tcp-vegas.h",
+          "sha256": "18e5ffe8edfe0156f79eca539584bba8a5f1e51cc2d56fe588194739c31cd0ea"
+        },
+        {
+          "bytes": 179724,
+          "path": "/home/ubuntu/ns-3.48/src/internet/model/tcp-socket-base.cc",
+          "sha256": "b6ee80a1d33538f36f0f9f2170a6ca2512beed6850133a47fd00db96f3d70afe"
+        },
+        {
+          "bytes": 25821,
+          "path": "/home/ubuntu/ns-3.48/scratch/vegas_micro_v2/vegas_micro_v2.cc",
+          "sha256": "f7a82bf28f5939d7dccfe7e792b3078969cbf6029a30fc5db557fa50cb82ecb7"
+        }
+      ],
+      "rows": 2166,
+      "event_counts": {
+        "ENABLE": 6,
+        "CYCLE_INCREASE": 655,
+        "CYCLE_DECREASE": 466,
+        "CYCLE_HOLD": 1033,
+        "DISABLE": 6
+      },
+      "history_clear_reasons": {
+        "ENABLE": 6,
+        "INVALID_OR_DISABLED": 2154,
+        "DISABLE": 6
+      },
+      "instances": [
+        1,
+        2,
+        3
+      ],
+      "full_history_candidates": 0,
+      "w_le_beta_candidates": 0,
+      "double_guard_rejections": 0,
+      "renewal_count": 0,
+      "fixed_propagation_renewal_count": null,
+      "maximum_observed_baseline_ns": 90000000,
+      "maximum_renewed_baseline_ns": null,
+      "min_postrenew_double_diff": null,
+      "min_postrenew_exact_diff": null,
+      "double_vs_exact_diff_disagreements": []
+    },
+    "v2-step-comp-renew": {
+      "errors": 0,
+      "policy": {
+        "alpha": 2,
+        "beta": 4,
+        "gamma": 1,
+        "input": "existing socket SRTT; loss/startup unchanged",
+        "min_rise_ns": 1000000,
+        "preserve_beta": true,
+        "recent_min_renewal": true,
+        "rounds": 20
+      },
+      "source_commit": "ac133157c5faa3dac56534ab105cd2ed804fd12c",
+      "patch_sha256": "d3a762251deb1c6f88af2c2fde07f872c5853d00de70c5e5d13aaa6d0560686d",
+      "official_image_digest": "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+      "binary_sha256": "bca1a847d1fe6f37176a837475aea2392393ec643e11619660faf944e671f850",
+      "launch_sources": [
+        {
+          "bytes": 10024,
+          "path": "/work/code/vegas-study/v2/run_case.py",
+          "sha256": "6c34f76742143f2f106f4293e88ec7b867e1e5084aef717fb55dc0a60ae3a0f7"
+        },
+        {
+          "bytes": 109913,
+          "path": "/work/code/vegas-study/v2/ns3.patch",
+          "sha256": "d3a762251deb1c6f88af2c2fde07f872c5853d00de70c5e5d13aaa6d0560686d"
+        },
+        {
+          "bytes": 25821,
+          "path": "/work/code/vegas-study/v2/vegas_micro_v2.cc",
+          "sha256": "f7a82bf28f5939d7dccfe7e792b3078969cbf6029a30fc5db557fa50cb82ecb7"
+        },
+        {
+          "bytes": 39550,
+          "path": "/work/code/vegas-study/v2/analyze_vegas.py",
+          "sha256": "8d041c2c3d2caf2e9d1e9f28d1ad408c1c33ad242b43e10b5ad944707245f14f"
+        },
+        {
+          "bytes": 36868,
+          "path": "/work/code/kim-study/analyze_study.py",
+          "sha256": "5333d7f6d86c04f79bbaad82e5e2577ec3bdf2f281e115c854ad904c404aa696"
+        },
+        {
+          "bytes": 135964,
+          "path": "/work/code/kim-study/path_truth_200s.csv",
+          "sha256": "49bd5418f2b13bdbf6d703f719d61075f814cc86d44c745651bf797f4e5f656c"
+        },
+        {
+          "bytes": 17011,
+          "path": "/home/ubuntu/ns-3.48/src/internet/model/tcp-vegas.cc",
+          "sha256": "78130553ba593ab3163234ab40b617b47838eeab9ed44094300d5006f97fcb98"
+        },
+        {
+          "bytes": 5855,
+          "path": "/home/ubuntu/ns-3.48/src/internet/model/tcp-vegas.h",
+          "sha256": "18e5ffe8edfe0156f79eca539584bba8a5f1e51cc2d56fe588194739c31cd0ea"
+        },
+        {
+          "bytes": 179724,
+          "path": "/home/ubuntu/ns-3.48/src/internet/model/tcp-socket-base.cc",
+          "sha256": "b6ee80a1d33538f36f0f9f2170a6ca2512beed6850133a47fd00db96f3d70afe"
+        },
+        {
+          "bytes": 25821,
+          "path": "/home/ubuntu/ns-3.48/scratch/vegas_micro_v2/vegas_micro_v2.cc",
+          "sha256": "f7a82bf28f5939d7dccfe7e792b3078969cbf6029a30fc5db557fa50cb82ecb7"
+        }
+      ],
+      "rows": 2120,
+      "event_counts": {
+        "ENABLE": 9,
+        "CYCLE_INCREASE": 794,
+        "CYCLE_DECREASE": 583,
+        "CYCLE_HOLD": 709,
+        "DISABLE": 12,
+        "RENEW": 13
+      },
+      "history_clear_reasons": {
+        "ENABLE": 9,
+        "INVALID_OR_DISABLED": 3,
+        "DISABLE": 12
+      },
+      "instances": [
+        1,
+        2,
+        3
+      ],
+      "full_history_candidates": 1715,
+      "w_le_beta_candidates": 0,
+      "double_guard_rejections": 0,
+      "renewal_count": 13,
+      "fixed_propagation_renewal_count": null,
+      "maximum_observed_baseline_ns": 102621483,
+      "maximum_renewed_baseline_ns": 102621483,
+      "min_postrenew_double_diff": 5,
+      "min_postrenew_exact_diff": 5,
+      "double_vs_exact_diff_disagreements": []
+    },
+    "v2-step-renew": {
+      "errors": 0,
+      "policy": {
+        "alpha": 2,
+        "beta": 4,
+        "gamma": 1,
+        "input": "existing socket SRTT; loss/startup unchanged",
+        "min_rise_ns": 1000000,
+        "preserve_beta": true,
+        "recent_min_renewal": true,
+        "rounds": 20
+      },
+      "source_commit": "ac133157c5faa3dac56534ab105cd2ed804fd12c",
+      "patch_sha256": "d3a762251deb1c6f88af2c2fde07f872c5853d00de70c5e5d13aaa6d0560686d",
+      "official_image_digest": "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+      "binary_sha256": "bca1a847d1fe6f37176a837475aea2392393ec643e11619660faf944e671f850",
+      "launch_sources": [
+        {
+          "bytes": 10024,
+          "path": "/work/code/vegas-study/v2/run_case.py",
+          "sha256": "6c34f76742143f2f106f4293e88ec7b867e1e5084aef717fb55dc0a60ae3a0f7"
+        },
+        {
+          "bytes": 109913,
+          "path": "/work/code/vegas-study/v2/ns3.patch",
+          "sha256": "d3a762251deb1c6f88af2c2fde07f872c5853d00de70c5e5d13aaa6d0560686d"
+        },
+        {
+          "bytes": 25821,
+          "path": "/work/code/vegas-study/v2/vegas_micro_v2.cc",
+          "sha256": "f7a82bf28f5939d7dccfe7e792b3078969cbf6029a30fc5db557fa50cb82ecb7"
+        },
+        {
+          "bytes": 39550,
+          "path": "/work/code/vegas-study/v2/analyze_vegas.py",
+          "sha256": "8d041c2c3d2caf2e9d1e9f28d1ad408c1c33ad242b43e10b5ad944707245f14f"
+        },
+        {
+          "bytes": 36868,
+          "path": "/work/code/kim-study/analyze_study.py",
+          "sha256": "5333d7f6d86c04f79bbaad82e5e2577ec3bdf2f281e115c854ad904c404aa696"
+        },
+        {
+          "bytes": 135964,
+          "path": "/work/code/kim-study/path_truth_200s.csv",
+          "sha256": "49bd5418f2b13bdbf6d703f719d61075f814cc86d44c745651bf797f4e5f656c"
+        },
+        {
+          "bytes": 17011,
+          "path": "/home/ubuntu/ns-3.48/src/internet/model/tcp-vegas.cc",
+          "sha256": "78130553ba593ab3163234ab40b617b47838eeab9ed44094300d5006f97fcb98"
+        },
+        {
+          "bytes": 5855,
+          "path": "/home/ubuntu/ns-3.48/src/internet/model/tcp-vegas.h",
+          "sha256": "18e5ffe8edfe0156f79eca539584bba8a5f1e51cc2d56fe588194739c31cd0ea"
+        },
+        {
+          "bytes": 179724,
+          "path": "/home/ubuntu/ns-3.48/src/internet/model/tcp-socket-base.cc",
+          "sha256": "b6ee80a1d33538f36f0f9f2170a6ca2512beed6850133a47fd00db96f3d70afe"
+        },
+        {
+          "bytes": 25821,
+          "path": "/home/ubuntu/ns-3.48/scratch/vegas_micro_v2/vegas_micro_v2.cc",
+          "sha256": "f7a82bf28f5939d7dccfe7e792b3078969cbf6029a30fc5db557fa50cb82ecb7"
+        }
+      ],
+      "rows": 2161,
+      "event_counts": {
+        "ENABLE": 2,
+        "CYCLE_INCREASE": 498,
+        "CYCLE_DECREASE": 78,
+        "CYCLE_HOLD": 1581,
+        "RENEW": 2
+      },
+      "history_clear_reasons": {
+        "ENABLE": 2,
+        "INVALID_OR_DISABLED": 3
+      },
+      "instances": [
+        1,
+        2
+      ],
+      "full_history_candidates": 2097,
+      "w_le_beta_candidates": 0,
+      "double_guard_rejections": 0,
+      "renewal_count": 2,
+      "fixed_propagation_renewal_count": null,
+      "maximum_observed_baseline_ns": 95356613,
+      "maximum_renewed_baseline_ns": 95356613,
+      "min_postrenew_double_diff": 5,
+      "min_postrenew_exact_diff": 5,
+      "double_vs_exact_diff_disagreements": []
+    }
+  },
+  "errors": [],
+  "limits": [
+    "Only manifests and policy-state traces are audited; application delivery, queues, drops and routing are not recomputed.",
+    "Configured MSS is an explicit audit input; it is not inferable solely from this state trace.",
+    "The beta guarantee is for each accepted update's current decision, not a lasting congestion classifier or total queue-absorption bound.",
+    "Launch source/binary/image identities are copied from manifests, not independently inspected in this post-run audit."
+  ]
+}

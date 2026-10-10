@@ -1,0 +1,37 @@
+{
+  "assets": [
+    {
+      "apiUrl": "https://api.github.com/repos/Jeongmin07/CS30401-Lab1/releases/assets/627680051",
+      "contentType": "application/x-gtar",
+      "createdAt": "2026-10-10T10:33:47Z",
+      "digest": "sha256:780baeaf73468f4b914f9c49abf3048a480c9275ed2b49518c826ad9ce67bf4a",
+      "downloadCount": 0,
+      "id": "RA_kwDOVCZIjM4laaMz",
+      "label": "",
+      "name": "cs30401-vegas-budget-raw-20261010.tar.gz",
+      "size": 1570260935,
+      "state": "uploaded",
+      "updatedAt": "2026-10-10T10:37:39Z",
+      "url": "https://github.com/Jeongmin07/CS30401-Lab1/releases/download/vegas-budget-20261010/cs30401-vegas-budget-raw-20261010.tar.gz"
+    },
+    {
+      "apiUrl": "https://api.github.com/repos/Jeongmin07/CS30401-Lab1/releases/assets/627680053",
+      "contentType": "application/json",
+      "createdAt": "2026-10-10T10:33:47Z",
+      "digest": "sha256:2ff1f56b9e2334d122786e23f812d4df9a3bdef2ac76ee0e61a424e4250ef303",
+      "downloadCount": 0,
+      "id": "RA_kwDOVCZIjM4laaM1",
+      "label": "",
+      "name": "cs30401-vegas-budget-raw-20261010.tar.gz.inventory.json",
+      "size": 71297,
+      "state": "uploaded",
+      "updatedAt": "2026-10-10T10:33:48Z",
+      "url": "https://github.com/Jeongmin07/CS30401-Lab1/releases/download/vegas-budget-20261010/cs30401-vegas-budget-raw-20261010.tar.gz.inventory.json"
+    }
+  ],
+  "isDraft": false,
+  "isPrerelease": true,
+  "tagName": "vegas-budget-20261010",
+  "targetCommitish": "ac133157c5faa3dac56534ab105cd2ed804fd12c",
+  "url": "https://github.com/Jeongmin07/CS30401-Lab1/releases/tag/vegas-budget-20261010"
+}

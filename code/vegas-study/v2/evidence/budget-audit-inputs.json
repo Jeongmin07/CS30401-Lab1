@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "root": "/tmp/cs30401-vegas-v2",
+  "selected_cases": [
+    "v2-compat-fixed-comp-renew",
+    "v2-compat-leo-renew",
+    "v2-fixed-base",
+    "v2-fixed-comp-base",
+    "v2-fixed-comp-renew",
+    "v2-fixed-renew",
+    "v2-leo-base",
+    "v2-leo-renew",
+    "v2-step-base",
+    "v2-step-comp-base",
+    "v2-step-comp-renew",
+    "v2-step-renew"
+  ],
+  "configured_mss_bytes": 1380,
+  "auditor": {
+    "bytes": 20982,
+    "sha256": "b5d9c8ddb192ff909d67eb106b7179524463b0ec222e3c7f01175219b866a264"
+  },
+  "inputs": {
+    "matrix-v2.json": {
+      "bytes": 11650,
+      "sha256": "b430947cacd39213eb7fe5cb3a6194b2126d31308e3d74089e32af7301e0accb"
+    },
+    "v2-compat-fixed-comp-renew/case.json": {
+      "bytes": 7993,
+      "sha256": "3180f7fb20f3545f5f4736e09467091ea012786b9cb8abf09416e9d0df188688"
+    },
+    "v2-compat-fixed-comp-renew/logs_ns3/vegas_state.csv": {
+      "bytes": 273338,
+      "sha256": "6f46612eb5690705b94dda006569bd8c4cfe7b07203be9bb182ddddaaf893e41"
+    },
+    "v2-compat-leo-renew/case.json": {
+      "bytes": 7160,
+      "sha256": "3bd6b2c91051861f25ecaf234f4c7319a970a9f293c30356e147ec3c1bed7b94"
+    },
+    "v2-compat-leo-renew/logs_ns3/vegas_state.csv": {
+      "bytes": 280312,
+      "sha256": "798e72046e71de1c5944ff1e16e051e9256601d57a91e6f4d11e3c0be4d4d2eb"
+    },
+    "v2-fixed-base/case.json": {
+      "bytes": 7937,
+      "sha256": "67adf6771e2ac23d0abaf01b639939042fcfca879ea0f12e04a236fd5b29f8d2"
+    },
+    "v2-fixed-base/logs_ns3/vegas_state.csv": {
+      "bytes": 223016,
+      "sha256": "520ff4146e01d10a571eb7dceff9aacdfcb0e6457b508559ac05837c1e7df89b"
+    },
+    "v2-fixed-comp-base/case.json": {
+      "bytes": 7959,
+      "sha256": "8fce7ed9d74dc166929b676ca4f75221d42f2edb31b95e5cfea22e6eedf1e409"
+    },
+    "v2-fixed-comp-base/logs_ns3/vegas_state.csv": {
+      "bytes": 222515,
+      "sha256": "c332ec313a2f36b82351fe776b1abab0bba34377cc0b5346cb8ecbba61ce10c9"
+    },
+    "v2-fixed-comp-renew/case.json": {
+      "bytes": 7958,
+      "sha256": "369cb937f4ba53136102c7906745ab60a8b511b7d0b2d5db9382ae5b0dd797af"
+    },
+    "v2-fixed-comp-renew/logs_ns3/vegas_state.csv": {
+      "bytes": 276076,
+      "sha256": "e2fae1897a5b5a1c3c956e091010ac05c02bb352e59ca877d3d1438b57539fd0"
+    },
+    "v2-fixed-renew/case.json": {
+      "bytes": 7934,
+      "sha256": "152e8636b1d580990681710503915d6265ab845683b082b4bf4a3a110be9d98a"
+    },
+    "v2-fixed-renew/logs_ns3/vegas_state.csv": {
+      "bytes": 282595,
+      "sha256": "f6e45fa7a653865881d3e8b8e38181d35a54373a63257d0984aca798a9b2be5d"
+    },
+    "v2-leo-base/case.json": {
+      "bytes": 7124,
+      "sha256": "8c6f046b118a16b82c82f0b172665c561518dbe2d12ebdf6f17f2c32bfb8a012"
+    },
+    "v2-leo-base/logs_ns3/vegas_state.csv": {
+      "bytes": 222564,
+      "sha256": "a3249e908bd1c5402c1db80aa51ba64f3f1fb8d21bb23a3c049a8ef6c62021e6"
+    },
+    "v2-leo-renew/case.json": {
+      "bytes": 7123,
+      "sha256": "6624ec9be756e4597720a0378a9f40ab558e48d8acfb4eed427108ba778852aa"
+    },
+    "v2-leo-renew/logs_ns3/vegas_state.csv": {
+      "bytes": 278243,
+      "sha256": "923367dc97ad223f66aa5aa3cd98e0384c105b663cc0ae6f8e9fafc10d65a849"
+    },
+    "v2-step-base/case.json": {
+      "bytes": 7927,
+      "sha256": "4ff772098d8c67a5f6584d6b791e731d2234fb36543eb8fefe6436aa043448e2"
+    },
+    "v2-step-base/logs_ns3/vegas_state.csv": {
+      "bytes": 217129,
+      "sha256": "6faebb6c2675885e46553a9d0ffdf8d2cef409c0c23ab885b63eff15dba72056"
+    },
+    "v2-step-comp-base/case.json": {
+      "bytes": 7951,
+      "sha256": "d75df751d539aa39ef244849e35c2202541b0311c8fbcf27d4bc56dcada8b843"
+    },
+    "v2-step-comp-base/logs_ns3/vegas_state.csv": {
+      "bytes": 217042,
+      "sha256": "49da00958c437ed3be007cea78a9f3973c9ef3547fe604bc5690309f48f37924"
+    },
+    "v2-step-comp-renew/case.json": {
+      "bytes": 7948,
+      "sha256": "cdb5db01e90fd2b0436ef454ffc56de8965289203a4e9419e58da2b48cba5641"
+    },
+    "v2-step-comp-renew/logs_ns3/vegas_state.csv": {
+      "bytes": 266987,
+      "sha256": "ae7194c0de9459055461a9436e2f262caea43c2b550f527f2c06644933d4395f"
+    },
+    "v2-step-renew/case.json": {
+      "bytes": 7925,
+      "sha256": "f4b99b705ac6f145ecd66daeb3ff00a2b86d4261f0157e38a21b454f753ae7c7"
+    },
+    "v2-step-renew/logs_ns3/vegas_state.csv": {
+      "bytes": 274257,
+      "sha256": "21c14073e74b4e837fa09751d4c7c27b10c689d6b00bb4c913bd19d23a6162da"
+    }
+  }
+}

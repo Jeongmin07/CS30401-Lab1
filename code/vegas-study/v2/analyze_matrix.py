@@ -85,7 +85,7 @@ def plan_case(name, args, repo):
         if competitor:
             second += ["--window", "competition:80:200"]
         if "-fixed-comp-" in name:
-            second += ["--window", "first-false-renew:90.194745440:91.958450720"]
+            second += ["--window", "v1-false-reference:90.194745440:91.958450720"]
     return {"case": name, "run": str(run), "out": str(output),
             "simulation_launch_commit": manifest["source_commit"],
             "original_manifest": sha(manifest_path), "policy": manifest["policy"],
@@ -156,7 +156,7 @@ def main():
               "posthoc_helper_identity": git_identity(repo),
               "sources": sources, "workers": args.workers, "cases": cases,
               "method": "No simulations. Phase1 original analyzer with bins; Phase2 independent app/queue/Vegas validation against phase1. Micro root-qdisc absence is established by reviewed driver/actual config. All outputs are new, failures retained.",
-              "extra_window": "Fixed-comp common first-false-renew window [90.194745440,91.958450720) is the first renewal's actual20-cycle history; end is excluded. Both modes use identical endpoints.",
+              "extra_window": "Fixed-comp v1-false-reference [90.194745440,91.958450720) is the V1 first false-renewal history used as common reference endpoints; it is not the actual V2 history. End is excluded.",
               "status": "planned"}
     if args.plan_only:
         print(json.dumps(record, indent=2, sort_keys=True))
