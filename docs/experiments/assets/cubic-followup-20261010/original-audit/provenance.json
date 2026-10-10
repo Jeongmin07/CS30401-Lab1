@@ -1,0 +1,75 @@
+{
+  "baseline": "q75-base",
+  "protected": "q75-guard-first",
+  "interval": "[start,end)",
+  "metric": "Unique ordered receiver application delivery; summed payload_bytes",
+  "final_delta_bytes": -474720,
+  "sources": {
+    "q75-base": [
+      {
+        "file": "study_app_rx_node_1585_port_1024.csv",
+        "bytes": 14465557,
+        "sha256": "d424c5aca017b2313914d5477db0d740403a01288ba5c957f8d4bc5434581591"
+      },
+      {
+        "file": "study_drops.csv",
+        "bytes": 48789,
+        "sha256": "a874c354dfcd4dbc05006ed65ca1b17c0dc1df3f050560bd4c005fef1b9eaf78"
+      },
+      {
+        "file": "tcp_flow_0_study_events.csv",
+        "bytes": 5732,
+        "sha256": "f6af82c4261b657baa76d3ae0da5d5d2de2c228d58ab0c3e0903b7e2a40450d2"
+      },
+      {
+        "file": "tcp_flow_0_study_packets.csv",
+        "bytes": 19707545,
+        "sha256": "382b89e64b476678291871620888df2f82b6dd29f95e6ac83ef22625a0d586b5"
+      },
+      {
+        "file": "tcp_flow_0_cwnd.csv",
+        "bytes": 95454,
+        "sha256": "f7e100a9142af18d857b6fdf60e6f9aa66cff7892b782cc79fa145323d44f27b"
+      },
+      {
+        "file": "tcp_flow_0_rtt.csv",
+        "bytes": 1934429,
+        "sha256": "db7c57c189a4a1b3a33cea0c452dac69df514ed46c0da13e1a4017af5d777b93"
+      }
+    ],
+    "q75-guard-first": [
+      {
+        "file": "study_app_rx_node_1585_port_1024.csv",
+        "bytes": 14408581,
+        "sha256": "e4f1ca56b7f27c168a35c9494ec7b44807627b442960d668537e475ed939da76"
+      },
+      {
+        "file": "study_drops.csv",
+        "bytes": 50476,
+        "sha256": "4ab960b6766ae4841858983b4b2901b046b8ea0ba13e0a14cefa8838933d7bda"
+      },
+      {
+        "file": "tcp_flow_0_study_events.csv",
+        "bytes": 6109,
+        "sha256": "35446a1ee6ad653b655e2bf898f38871060de5a6a26eb5a440d0c1b611553ad6"
+      },
+      {
+        "file": "tcp_flow_0_study_packets.csv",
+        "bytes": 19698182,
+        "sha256": "093b396080337b5432481900829466aae9e792f55c889ea8f720743e5dcad31d"
+      },
+      {
+        "file": "tcp_flow_0_cwnd.csv",
+        "bytes": 98030,
+        "sha256": "4df2074fba30d3358e33c24d5a63520303506a2fd995104bc54bfa8e77de4bfd"
+      },
+      {
+        "file": "tcp_flow_0_rtt.csv",
+        "bytes": 1932969,
+        "sha256": "099094eac734895e51a4be5259469db921c6316e745478f6ca34f725999b07a9"
+      }
+    ]
+  },
+  "patch_sha256": "473dd0e23447a58bd7ce644507cf4aa24b612020ff1e6029f5bfdb22e2cd4245",
+  "binary_sha256": "de9f678113c37a72df7e3215e876f18945c0ccecf9123f60fc8f655f9d9a6eab"
+}

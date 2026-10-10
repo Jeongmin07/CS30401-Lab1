@@ -1,0 +1,75 @@
+{
+  "stage": "core",
+  "workers": 2,
+  "wall_time_s": 54.44,
+  "cases": [
+    {
+      "case": "fup75-first-later20",
+      "command": [
+        "/home/ubuntu/lab/.venv/bin/python3",
+        "/work/run_study.py",
+        "fup75-first-later20",
+        "--patch",
+        "/work/ns3.patch",
+        "--queue",
+        "75",
+        "--parameters",
+        "study_threshold=20;study_windows=26100000000:26500000000|121500000000:121900000000"
+      ],
+      "exit_code": 0,
+      "stdout": "Run directory ready: /tmp/cs30401-study/fup75-first-later20  (1 flow(s), TcpCubic, 10 Mbit/s, queue 75 pkts, 200 s)\n{\n  \"case\": \"fup75-first-later20\",\n  \"status\": \"complete\",\n  \"exit_code\": 0,\n  \"wall_time_s\": 26.9,\n  \"patch_sha256\": \"473dd0e23447a58bd7ce644507cf4aa24b612020ff1e6029f5bfdb22e2cd4245\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "case": "fup75-first-later4",
+      "command": [
+        "/home/ubuntu/lab/.venv/bin/python3",
+        "/work/run_study.py",
+        "fup75-first-later4",
+        "--patch",
+        "/work/ns3.patch",
+        "--queue",
+        "75",
+        "--parameters",
+        "study_threshold=4;study_windows=26100000000:26500000000|121500000000:121900000000"
+      ],
+      "exit_code": 0,
+      "stdout": "Run directory ready: /tmp/cs30401-study/fup75-first-later4  (1 flow(s), TcpCubic, 10 Mbit/s, queue 75 pkts, 200 s)\n{\n  \"case\": \"fup75-first-later4\",\n  \"status\": \"complete\",\n  \"exit_code\": 0,\n  \"wall_time_s\": 27.194,\n  \"patch_sha256\": \"473dd0e23447a58bd7ce644507cf4aa24b612020ff1e6029f5bfdb22e2cd4245\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "case": "fup75-first4",
+      "command": [
+        "/home/ubuntu/lab/.venv/bin/python3",
+        "/work/run_study.py",
+        "fup75-first4",
+        "--patch",
+        "/work/ns3.patch",
+        "--queue",
+        "75",
+        "--parameters",
+        "study_threshold=4;study_windows=26100000000:26500000000"
+      ],
+      "exit_code": 0,
+      "stdout": "Run directory ready: /tmp/cs30401-study/fup75-first4  (1 flow(s), TcpCubic, 10 Mbit/s, queue 75 pkts, 200 s)\n{\n  \"case\": \"fup75-first4\",\n  \"status\": \"complete\",\n  \"exit_code\": 0,\n  \"wall_time_s\": 26.989,\n  \"patch_sha256\": \"473dd0e23447a58bd7ce644507cf4aa24b612020ff1e6029f5bfdb22e2cd4245\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "case": "fup75-later20",
+      "command": [
+        "/home/ubuntu/lab/.venv/bin/python3",
+        "/work/run_study.py",
+        "fup75-later20",
+        "--patch",
+        "/work/ns3.patch",
+        "--queue",
+        "75",
+        "--parameters",
+        "study_threshold=20;study_windows=121500000000:121900000000"
+      ],
+      "exit_code": 0,
+      "stdout": "Run directory ready: /tmp/cs30401-study/fup75-later20  (1 flow(s), TcpCubic, 10 Mbit/s, queue 75 pkts, 200 s)\n{\n  \"case\": \"fup75-later20\",\n  \"status\": \"complete\",\n  \"exit_code\": 0,\n  \"wall_time_s\": 26.9,\n  \"patch_sha256\": \"473dd0e23447a58bd7ce644507cf4aa24b612020ff1e6029f5bfdb22e2cd4245\"\n}\n",
+      "stderr": ""
+    }
+  ]
+}

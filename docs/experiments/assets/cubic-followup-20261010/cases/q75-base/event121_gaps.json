@@ -1,0 +1,200 @@
+[
+  {
+    "acceptance_evidence": "same-time receiver application delivery after wire fill",
+    "acceptance_observed_ns": 121621101671,
+    "ack_evidence": [
+      {
+        "ack": 143773921,
+        "repeated_ack_run": 0,
+        "sack_blocks": "",
+        "time_ns": 121665669364
+      },
+      {
+        "ack": 143773921,
+        "repeated_ack_run": 1,
+        "sack_blocks": "143779441:143780821",
+        "time_ns": 121665796078
+      }
+    ],
+    "ack_evidence_count": 2,
+    "classification": "original_eventually_arrived_after_reordering",
+    "drop_evidence_for_original_fill": false,
+    "duration_s": 0.001084498,
+    "end_ns": 121621101671,
+    "fill_candidates": [
+      {
+        "original": true,
+        "tag_cache_miss": false,
+        "time_ns": 121621101671,
+        "tx_id": 104562
+      }
+    ],
+    "fill_tag_cache_miss": false,
+    "fill_tx_id": 104562,
+    "first_ahead_sequence": 143779441,
+    "missing_sequence": 143773921,
+    "network_loss_exclusion_supported": true,
+    "observed_distinct_drop_tx_ids": [],
+    "observed_drop_rows_for_missing_sequence": 0,
+    "original_fill_confirmed": true,
+    "recovery_evidence": [],
+    "recovery_evidence_count": 0,
+    "retransmission_evidence": [],
+    "retransmission_evidence_count": 0,
+    "start_ns": 121620017173
+  },
+  {
+    "acceptance_evidence": "same-time receiver application delivery after wire fill",
+    "acceptance_observed_ns": 121622248877,
+    "ack_evidence": [
+      {
+        "ack": 143775301,
+        "repeated_ack_run": 0,
+        "sack_blocks": "143779441:143780821",
+        "time_ns": 121666880565
+      },
+      {
+        "ack": 143775301,
+        "repeated_ack_run": 1,
+        "sack_blocks": "143779441:143782201",
+        "time_ns": 121666943270
+      }
+    ],
+    "ack_evidence_count": 2,
+    "classification": "original_eventually_arrived_after_reordering",
+    "drop_evidence_for_original_fill": false,
+    "duration_s": 0.001084501,
+    "end_ns": 121622248877,
+    "fill_candidates": [
+      {
+        "original": true,
+        "tag_cache_miss": false,
+        "time_ns": 121622248877,
+        "tx_id": 104563
+      }
+    ],
+    "fill_tag_cache_miss": false,
+    "fill_tx_id": 104563,
+    "first_ahead_sequence": 143780821,
+    "missing_sequence": 143775301,
+    "network_loss_exclusion_supported": true,
+    "observed_distinct_drop_tx_ids": [],
+    "observed_drop_rows_for_missing_sequence": 0,
+    "original_fill_confirmed": true,
+    "recovery_evidence": [],
+    "recovery_evidence_count": 0,
+    "retransmission_evidence": [],
+    "retransmission_evidence_count": 0,
+    "start_ns": 121621164376
+  },
+  {
+    "acceptance_evidence": "same-time receiver application delivery after wire fill",
+    "acceptance_observed_ns": 121623396082,
+    "ack_evidence": [
+      {
+        "ack": 143776681,
+        "repeated_ack_run": 0,
+        "sack_blocks": "143779441:143782201",
+        "time_ns": 121668027747
+      },
+      {
+        "ack": 143776681,
+        "repeated_ack_run": 1,
+        "sack_blocks": "143779441:143783581",
+        "time_ns": 121668090452
+      }
+    ],
+    "ack_evidence_count": 2,
+    "classification": "candidate_unnecessary_recovery_original_arrived",
+    "drop_evidence_for_original_fill": false,
+    "duration_s": 0.0010845,
+    "end_ns": 121623396082,
+    "fill_candidates": [
+      {
+        "original": true,
+        "tag_cache_miss": false,
+        "time_ns": 121623396082,
+        "tx_id": 104564
+      }
+    ],
+    "fill_tag_cache_miss": false,
+    "fill_tx_id": 104564,
+    "first_ahead_sequence": 143782201,
+    "missing_sequence": 143776681,
+    "network_loss_exclusion_supported": true,
+    "observed_distinct_drop_tx_ids": [],
+    "observed_drop_rows_for_missing_sequence": 0,
+    "original_fill_confirmed": true,
+    "recovery_evidence": [
+      {
+        "preceding_ack": 143776681,
+        "repeated_ack_run": 1,
+        "sack_blocks": "143779441:143783581",
+        "state": "RECOVERY",
+        "time_ns": 121668090452
+      }
+    ],
+    "recovery_evidence_count": 1,
+    "retransmission_evidence": [
+      {
+        "end_seq": 143778061,
+        "seq": 143776681,
+        "time_ns": 121668090452,
+        "tx_id": 104698
+      }
+    ],
+    "retransmission_evidence_count": 1,
+    "start_ns": 121622311582
+  },
+  {
+    "acceptance_evidence": "same-time receiver application delivery after wire fill",
+    "acceptance_observed_ns": 121624543287,
+    "ack_evidence": [
+      {
+        "ack": 143778061,
+        "repeated_ack_run": 0,
+        "sack_blocks": "143779441:143783581",
+        "time_ns": 121669174943
+      },
+      {
+        "ack": 143778061,
+        "repeated_ack_run": 1,
+        "sack_blocks": "143779441:143784961",
+        "time_ns": 121669237647
+      }
+    ],
+    "ack_evidence_count": 2,
+    "classification": "original_eventually_arrived_after_reordering",
+    "drop_evidence_for_original_fill": false,
+    "duration_s": 0.001084501,
+    "end_ns": 121624543287,
+    "fill_candidates": [
+      {
+        "original": true,
+        "tag_cache_miss": false,
+        "time_ns": 121624543287,
+        "tx_id": 104565
+      }
+    ],
+    "fill_tag_cache_miss": false,
+    "fill_tx_id": 104565,
+    "first_ahead_sequence": 143783581,
+    "missing_sequence": 143778061,
+    "network_loss_exclusion_supported": true,
+    "observed_distinct_drop_tx_ids": [],
+    "observed_drop_rows_for_missing_sequence": 0,
+    "original_fill_confirmed": true,
+    "recovery_evidence": [],
+    "recovery_evidence_count": 0,
+    "retransmission_evidence": [
+      {
+        "end_seq": 143779441,
+        "seq": 143778061,
+        "time_ns": 121669174943,
+        "tx_id": 104699
+      }
+    ],
+    "retransmission_evidence_count": 1,
+    "start_ns": 121623458786
+  }
+]

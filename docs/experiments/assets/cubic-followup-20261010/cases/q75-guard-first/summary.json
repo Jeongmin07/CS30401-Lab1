@@ -1,0 +1,67 @@
+{
+  "counts": {
+    "ack_rows_with_sack": 6998,
+    "application_delivered_bytes": 237288240,
+    "drop_trace_rows": 454,
+    "loss_state_entries": 1,
+    "official_retransmission_rows": 477,
+    "out_of_order_payload_rows": 6765,
+    "overlapping_sequence_tx_rows": 477,
+    "recovery_state_entries": 44,
+    "repeated_cumulative_ack_rows": 6766,
+    "sender_new_sequence_bytes": 237364140,
+    "sender_payload_tx_bytes": 238022400,
+    "wire_payload_rx_bytes": 237288240,
+    "wire_unique_sequence_bytes": 237288240
+  },
+  "goodput_mbps": 9.4915296,
+  "completion_s": "",
+  "gap_classifications": {
+    "accepted_original_also_retransmitted_gaps": 2,
+    "candidate_unnecessary_recovery_original_arrived": 1,
+    "gap_with_observed_actual_drop": 195,
+    "loss_excluded_original_also_retransmitted_gaps": 2,
+    "original_eventually_arrived_after_reordering": 8
+  },
+  "protection_intervals": [
+    {
+      "duration_s": 0.4,
+      "end_ns": 26500000000,
+      "start_ns": 26100000000
+    }
+  ],
+  "drop_coverage": {
+    "absence_of_drop_inference": "listed hooks connected with matching IPv4/TcDrop node coverage",
+    "available": true,
+    "connected": 50704,
+    "devices_without_root_queue_disc_absence_check": [],
+    "devices_without_root_queue_disc_absence_check_count": 0,
+    "ipv4_nodes_without_traffic_control_drop_hook": [],
+    "layer_entries": {
+      "DropAfterDequeue": 7922,
+      "DropBeforeEnqueue": 7922,
+      "MacTxDrop": 7922,
+      "PhyRxDrop": 7922,
+      "PhyTxDrop": 7922,
+      "TcDrop": 1586,
+      "ipv4": 1586,
+      "root_queue_disc_absent": 7922
+    },
+    "not_connected": [],
+    "qualification": "Manifest coverage is not an independent audit of every loss path.",
+    "root_queue_disc_absence_coverage_complete": true,
+    "traffic_control_drop_hook_present": true,
+    "traffic_control_node_coverage_complete": true
+  },
+  "analysis_parameters": {
+    "bin_s": 0.1,
+    "event_after_s": 2.0,
+    "event_before_s": 0.5,
+    "maximum_case_samples": 1000,
+    "maximum_evidence_rows_per_sample": 12,
+    "root_queue_disc_absence_independently_audited": false,
+    "tx_identity_retention_s": 10.0
+  },
+  "full_analysis_sha256": "1061778eaba088e903aad65efce3289aee00bcc1422a072d307c9b816b4e0892",
+  "full_analysis_omitted": "Receiver time bins, full packet examples, and detailed recovery periods remain in Docker."
+}

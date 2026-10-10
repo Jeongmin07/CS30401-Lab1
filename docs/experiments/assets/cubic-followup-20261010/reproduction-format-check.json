@@ -1,0 +1,21 @@
+{
+  "verdict": "FAIL",
+  "cases": 31,
+  "raw_files_compared": 279,
+  "analysis_hashes_compared": 31,
+  "comparison": "Exact SHA-256 and result/settings equality; wall time and patch location excluded",
+  "differences": [
+    {
+      "case": "q75-base",
+      "field": "rate_mbps",
+      "reference": "10.0",
+      "replay": "10"
+    },
+    {
+      "case": "q75-guard-first",
+      "field": "rate_mbps",
+      "reference": "10.0",
+      "replay": "10"
+    }
+  ]
+}

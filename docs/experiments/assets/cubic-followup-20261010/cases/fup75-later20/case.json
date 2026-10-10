@@ -1,0 +1,42 @@
+{
+  "case": "fup75-later20",
+  "parameters": {
+    "name": "fup75-later20",
+    "kind": "leo",
+    "cc": "TcpCubic",
+    "rate": 10,
+    "queue": 75,
+    "duration": 200,
+    "parameters": "study_threshold=20;study_windows=121500000000:121900000000",
+    "trace": 1,
+    "before_ms": 50,
+    "after_ms": 45,
+    "event_s": 10,
+    "loss_s": -1,
+    "loss_seq": 0,
+    "initial_ssthresh_pkts": 900,
+    "max_bytes": 100000000000,
+    "flow_start_s": 0,
+    "state": "/home/ubuntu/lab/data/seoul_london/state",
+    "patch": "/work/ns3.patch"
+  },
+  "command": [
+    "/home/ubuntu/ns-3.48/build/scratch/main_satnet/ns3.48-main_satnet",
+    "--run_dir=/tmp/cs30401-study/fup75-later20"
+  ],
+  "trace_environment": {
+    "CS30401_STUDY_TRACE": "1",
+    "CS30401_STUDY_TRACE_DIR": "/tmp/cs30401-study/fup75-later20/logs_ns3"
+  },
+  "official_image": "ghcr.io/yeonjong21/cs30401-lab1:2026f-v1",
+  "official_image_digest": "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+  "patch_sha256": "473dd0e23447a58bd7ce644507cf4aa24b612020ff1e6029f5bfdb22e2cd4245",
+  "binary_sha256": "de9f678113c37a72df7e3215e876f18945c0ccecf9123f60fc8f655f9d9a6eab",
+  "state": "/home/ubuntu/lab/data/seoul_london/state",
+  "start_time_unix": 1791614000.0627005,
+  "status": "complete",
+  "config_ns3.properties_sha256": "51d691193ec64acb52155439886281b1c6e30614c088bdad3b9b236ed4233cd4",
+  "schedule.csv_sha256": "2fb191c4b7204e23bd150acbe3aac62cf153739b1f0f12d424190e1308ad523b",
+  "exit_code": 0,
+  "wall_time_s": 26.9
+}
