@@ -7,6 +7,7 @@ This repository holds the team's shared lab work. Use the map below to find a re
 | Location | What you will find | Start with |
 | --- | --- | --- |
 | [`docs/`](docs/) | Course handout and environment guide, team workflow, and experiment records | [`docs/START_HERE.md`](docs/START_HERE.md) for collaboration; [`docs/LAB_REFERENCE.md`](docs/LAB_REFERENCE.md) for the assignment |
+| [`docs/research/`](docs/research/) | Dated literature reviews and research proposals | [2026-10-10 literature review](docs/research/20261010-leo-tcp-literature.md) and [context/handoff](docs/research/20261010-context-and-handoff.md): sources, current evidence, and proposed next checks; not an agreed team plan |
 | [`code/kim-study/`](code/kim-study/) | Seongchan's **independent** CUBIC/SACK/PRR investigation: patch, scripts, compact evidence, figures, and report draft | [`code/kim-study/README.md`](code/kim-study/README.md) for the question, main findings, limits, and replay commands |
 | [`docs/experiments/20261010-cubic-q75.md`](docs/experiments/20261010-cubic-q75.md) | A separate six-run check of the CUBIC queue-size result, including a new 75-packet condition | Read this experiment record, then its linked small data files |
 | [`shared-results/`](shared-results/) | Eight 200-second, 100-Mbit/s exploratory runs (BBR, CUBIC, NewReno, Vegas at two queue sizes) and an earlier 20-second check | Compare each run's configuration and flow summary. The newer BBR/Vegas folders contain summaries only; detailed traces are not in Git. These are **different settings** from the 10-Mbit/s CUBIC study |
@@ -25,6 +26,7 @@ The 10-Mbit/s study is research evidence, **not a team-approved final topic or s
 | Kind | Location |
 | --- | --- |
 | One experiment's question, commands, results, and limits | `docs/experiments/<date>-<topic>.md` |
+| Source-backed literature notes and research proposals | `docs/research/<date>-<topic>.md` |
 | Its small CSV/JSON evidence and exact run settings | `docs/experiments/assets/<date-or-topic>/` |
 | Reusable simulation/analysis code and ns-3 patches | `code/` |
 | Current work handoff | `docs/work/<github-login>.md` |
