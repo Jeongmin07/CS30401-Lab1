@@ -12,6 +12,9 @@ import time
 IMAGE = "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4"
 NS3 = Path("/home/ubuntu/ns-3.48")
 REPO = Path("/work")
+# The trusted Windows bind mount uses CRLF for ordinary documents; compare its
+# canonical Git text using the same normalization without changing host config.
+REPO_GIT = ["git", "-c", "safe.directory=/work", "-c", "core.autocrlf=true"]
 
 
 def sha(path):
@@ -64,10 +67,10 @@ def main():
         p.error("This LEO runner supports supplied state, one flow, seed123456789, duration<=200")
     if a.kind == "micro" and a.trace != 1:
         p.error("The micro queue diagnostic always records passive observations")
-    dirty = subprocess.check_output(["git", "status", "--porcelain"], cwd=REPO, text=True)
+    dirty = subprocess.check_output(REPO_GIT + ["status", "--porcelain"], cwd=REPO, text=True)
     if dirty:
         raise SystemExit("Commit simulation code before launch; repository has local changes")
-    commit = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=REPO, text=True).strip()
+    commit = subprocess.check_output(REPO_GIT + ["rev-parse", "HEAD"], cwd=REPO, text=True).strip()
     if sha(REPO / "code/vegas-study/vegas_micro.cc") != sha(NS3 / "scratch/vegas_micro/vegas_micro.cc"):
         raise SystemExit("Live micro driver differs from committed driver; copy and rebuild first")
     actual_patch = subprocess.check_output(["git", "diff", "--cached", "--binary", "cs30401-base"], cwd=NS3)
