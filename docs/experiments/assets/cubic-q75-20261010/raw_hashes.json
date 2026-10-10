@@ -1,0 +1,164 @@
+{
+  "leo10-base": [
+    {
+      "kind": "sender",
+      "file": "tcp_flow_0_study_packets.csv",
+      "sha256": "78fc54184c4481b1421d2139870debcbe72259c18ccb011ba180ef77784e146f"
+    },
+    {
+      "kind": "drop",
+      "file": "study_drops.csv",
+      "sha256": "c915297632311402f8a2b1b4d6d24b83691f5971f40477934b2e2826887e6821"
+    },
+    {
+      "kind": "receiver",
+      "file": "study_rx_node_1585_port_1024.csv",
+      "sha256": "445161a24e3c943e61518cc5c67ce72aecbae5c1bb2caaf6bd4f4ce451b2f1cf"
+    },
+    {
+      "kind": "app",
+      "file": "study_app_rx_node_1585_port_1024.csv",
+      "sha256": "63defbe5710bafaafec06b3021dfda3c8d2df2bad3bf78ce15b54c84d7bc451d"
+    },
+    {
+      "kind": "state",
+      "file": "tcp_flow_0_study_events.csv",
+      "sha256": "8809b380277e387dcc400a5d27a5679ccbdf446a08c7efb06fa7a021a42df78b"
+    }
+  ],
+  "leo10-guard20": [
+    {
+      "kind": "sender",
+      "file": "tcp_flow_0_study_packets.csv",
+      "sha256": "6531d453d482133c6e1515206afddcf7277f061447db615bb5b8360a3787df3d"
+    },
+    {
+      "kind": "drop",
+      "file": "study_drops.csv",
+      "sha256": "9aca2d266ffc1b98cd56f7803d04bdc7d807e11e44d25952b6c1ede94b8ef02e"
+    },
+    {
+      "kind": "receiver",
+      "file": "study_rx_node_1585_port_1024.csv",
+      "sha256": "4fb3a7e70c6e79f54007de46368fd1e303359ef2882e0a314587c9e02292b71c"
+    },
+    {
+      "kind": "app",
+      "file": "study_app_rx_node_1585_port_1024.csv",
+      "sha256": "bd7722c1cbb78f51335b6b181d55f2a2c10e427b2a4326a02c74b873712cb23d"
+    },
+    {
+      "kind": "state",
+      "file": "tcp_flow_0_study_events.csv",
+      "sha256": "40cec6bcefee134a3455aff489c1e7a0fb28121a88b497ad15aa52693b04e019"
+    }
+  ],
+  "q75-base": [
+    {
+      "kind": "sender",
+      "file": "tcp_flow_0_study_packets.csv",
+      "sha256": "382b89e64b476678291871620888df2f82b6dd29f95e6ac83ef22625a0d586b5"
+    },
+    {
+      "kind": "drop",
+      "file": "study_drops.csv",
+      "sha256": "a874c354dfcd4dbc05006ed65ca1b17c0dc1df3f050560bd4c005fef1b9eaf78"
+    },
+    {
+      "kind": "receiver",
+      "file": "study_rx_node_1585_port_1024.csv",
+      "sha256": "165486beca87817cb47bf5fd10104452f7f7844ba777e37b5e866af19ad1d14e"
+    },
+    {
+      "kind": "app",
+      "file": "study_app_rx_node_1585_port_1024.csv",
+      "sha256": "d424c5aca017b2313914d5477db0d740403a01288ba5c957f8d4bc5434581591"
+    },
+    {
+      "kind": "state",
+      "file": "tcp_flow_0_study_events.csv",
+      "sha256": "f6af82c4261b657baa76d3ae0da5d5d2de2c228d58ab0c3e0903b7e2a40450d2"
+    }
+  ],
+  "q75-guard20": [
+    {
+      "kind": "sender",
+      "file": "tcp_flow_0_study_packets.csv",
+      "sha256": "239f31c4a67adaa79bf9ef67d2bd892b77d96ac335232d7894a7f374365b78c4"
+    },
+    {
+      "kind": "drop",
+      "file": "study_drops.csv",
+      "sha256": "4ab960b6766ae4841858983b4b2901b046b8ea0ba13e0a14cefa8838933d7bda"
+    },
+    {
+      "kind": "receiver",
+      "file": "study_rx_node_1585_port_1024.csv",
+      "sha256": "1e30f1a2263d4ec3d8ee44a11263d6ffe3824b771424b489050200e63c27609d"
+    },
+    {
+      "kind": "app",
+      "file": "study_app_rx_node_1585_port_1024.csv",
+      "sha256": "e4f1ca56b7f27c168a35c9494ec7b44807627b442960d668537e475ed939da76"
+    },
+    {
+      "kind": "state",
+      "file": "tcp_flow_0_study_events.csv",
+      "sha256": "9c7377b71dc3a0d26f98e2d7be9efe1796883e3075c70ba74bb6ab043d8904b0"
+    }
+  ],
+  "q75-guard-first": [
+    {
+      "kind": "sender",
+      "file": "tcp_flow_0_study_packets.csv",
+      "sha256": "093b396080337b5432481900829466aae9e792f55c889ea8f720743e5dcad31d"
+    },
+    {
+      "kind": "drop",
+      "file": "study_drops.csv",
+      "sha256": "4ab960b6766ae4841858983b4b2901b046b8ea0ba13e0a14cefa8838933d7bda"
+    },
+    {
+      "kind": "receiver",
+      "file": "study_rx_node_1585_port_1024.csv",
+      "sha256": "1e30f1a2263d4ec3d8ee44a11263d6ffe3824b771424b489050200e63c27609d"
+    },
+    {
+      "kind": "app",
+      "file": "study_app_rx_node_1585_port_1024.csv",
+      "sha256": "e4f1ca56b7f27c168a35c9494ec7b44807627b442960d668537e475ed939da76"
+    },
+    {
+      "kind": "state",
+      "file": "tcp_flow_0_study_events.csv",
+      "sha256": "35446a1ee6ad653b655e2bf898f38871060de5a6a26eb5a440d0c1b611553ad6"
+    }
+  ],
+  "q75-guard-second": [
+    {
+      "kind": "sender",
+      "file": "tcp_flow_0_study_packets.csv",
+      "sha256": "068cc3064b326d3a7dd8ea3c727cba058c31c15879dfcf1c59d9af68b69451b7"
+    },
+    {
+      "kind": "drop",
+      "file": "study_drops.csv",
+      "sha256": "d647c6ab9b0434a1c8102394bf260c61b43d03bc8f84fe950dfab8f4d1eb6b51"
+    },
+    {
+      "kind": "receiver",
+      "file": "study_rx_node_1585_port_1024.csv",
+      "sha256": "2adcffc13dd717bff1f477de9047e6ed19d54c62d842a3c15faa0c9dd65400c3"
+    },
+    {
+      "kind": "app",
+      "file": "study_app_rx_node_1585_port_1024.csv",
+      "sha256": "a68493346a5f897c4e7f94cf5e47682a9cdb15edbc52e8c6f6fdb8ced64991b7"
+    },
+    {
+      "kind": "state",
+      "file": "tcp_flow_0_study_events.csv",
+      "sha256": "17f080c3f00d1de38353ece75f0eb6d2e61a0af3e2052fb2f208a471bd13e890"
+    }
+  ]
+}

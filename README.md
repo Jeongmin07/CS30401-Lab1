@@ -1,36 +1,38 @@
-# CS30401 Lab 1 - Team 5
+# CS30401 Lab 1 — Team 5
 
-Shared repository: <https://github.com/Jeongmin07/CS30401-Lab1>.
+This repository holds the team's shared lab work. Use the map below to find a result without reading every study file.
 
-We are three students working on the lab on separate laptops. Each student uses their own AI assistant. The assistants share information through this repository; they do not share a chat history, filesystem, Docker volume, or live view of another student's work.
+## What is here?
 
-## Start here
+| Location | What you will find | Start with |
+| --- | --- | --- |
+| [`docs/`](docs/) | Course handout and environment guide, team workflow, and experiment records | [`docs/START_HERE.md`](docs/START_HERE.md) for collaboration; [`docs/LAB_REFERENCE.md`](docs/LAB_REFERENCE.md) for the assignment |
+| [`code/kim-study/`](code/kim-study/) | Seongchan's **independent** CUBIC/SACK/PRR investigation: patch, scripts, compact evidence, figures, and report draft | [`code/kim-study/README.md`](code/kim-study/README.md) for the question, main findings, limits, and replay commands |
+| [`docs/experiments/20261010-cubic-q75.md`](docs/experiments/20261010-cubic-q75.md) | A separate six-run check of the CUBIC queue-size result, including a new 75-packet condition | Read this experiment record, then its linked small data files |
+| [`shared-results/`](shared-results/) | Earlier 100-Mbit/s exploratory runs and raw logs (CUBIC, NewReno, and a 20-second check) | Browse the run's configuration and `logs_ns3/` files; these are **different settings** from the 10-Mbit/s CUBIC study |
 
-- **Students and new AI chats:** read [the team context](docs/START_HERE.md). Use your own wording when asking your assistant to work; there is no required starting prompt.
-- **AI assistants:** read [AGENTS.md](AGENTS.md), then check the latest GitHub Issues and open PRs, including draft PRs.
-- **Working together:** follow [the team workflow](docs/TEAM_WORKFLOW.md).
-- **Agreed research direction and experiment settings:** see [the current plan](docs/PLAN.md).
+The 10-Mbit/s study is research evidence, **not a team-approved final topic or submission**. Agreed decisions belong in [`docs/PLAN.md`](docs/PLAN.md). The older 100-Mbit/s `shared-results/` runs are not inputs to Seongchan's study or the new 75-packet check. Compare runs only after checking their rate, queue, duration, flow, TCP implementation, and patch.
 
-Track tasks and questions in [Issues](https://github.com/Jeongmin07/CS30401-Lab1/issues). Share code and work in progress through [pull requests](https://github.com/Jeongmin07/CS30401-Lab1/pulls). One coherent deliverable uses one working branch and one PR; an assistant can stay on that branch through multiple conversations and experiments.
+## Which study files matter?
 
-## Where to put shared records
+1. [`code/kim-study/EXPERIMENT_NOTE.md`](code/kim-study/EXPERIMENT_NOTE.md) explains the first 23 recorded cases. [`PHASE2_NOTE.md`](code/kim-study/PHASE2_NOTE.md) explains the 52 follow-up cases and the limits of the short-flow exemption.
+2. [`code/kim-study/evidence/results.csv`](code/kim-study/evidence/results.csv) and [`code/kim-study/phase2_results.csv`](code/kim-study/phase2_results.csv) are compact result tables. The `evidence/cases/<case>/` folders hold exact settings and compact summaries. Large packet traces stay outside Git and can be regenerated.
+3. [`code/kim-study/ns3.patch`](code/kim-study/ns3.patch) is the **canonical version-6 patch** for a fresh ns-3 source tree. `ns3-v6.patch` is the same preserved artifact; `study-v4.patch` and `study-v5.patch` document earlier versions. Apply **one** patch to a clean volume. The various `reproduction*.json` files document different historical replay checks; use `evidence/reproduction_v6.json` for the complete 75-case check.
+4. [`code/kim-study/report/kim-study-draft.pdf`](code/kim-study/report/kim-study-draft.pdf) is a review draft. It lacks confirmed team author names and is not ready to submit.
 
-| Location | Purpose |
+## Where do new files go?
+
+| Kind | Location |
 | --- | --- |
-| `docs/PLAN.md` | Decisions the students have agreed on |
-| `docs/work/<github-login>.md` | Each student's latest progress and handoff, following the work template |
-| `docs/experiments/issue-<number>-<run-id>.md` | Reproducible experiment evidence, following the experiment template |
-| `docs/experiments/assets/` | Small plots or summary tables referenced by experiment records |
-| `code/` | Reproducible experiment/analysis scripts and ns-3 patches, when added |
+| One experiment's question, commands, results, and limits | `docs/experiments/<date>-<topic>.md` |
+| Its small CSV/JSON evidence and exact run settings | `docs/experiments/assets/<date-or-topic>/` |
+| Reusable simulation/analysis code and ns-3 patches | `code/` |
+| Current work handoff | `docs/work/<github-login>.md` |
+| Team-approved plan | `docs/PLAN.md` |
+| Large raw traces, generated state, and temporary runs | Local Docker/container storage or an agreed shared archive; record where and how to regenerate them |
 
-Templates: [work record](docs/templates/work.md), [experiment record](docs/templates/experiment.md). These are guides to useful information, not required prompt or response formats. Records on another branch are visible after that branch is pushed; read its draft PR and branch contents instead of assuming all progress is already on `main`.
+The repository root's `runs/` directory, if present on your computer, is a **local output folder ignored by Git**. It is not automatically uploaded or visible to teammates. GitHub shows only committed and pushed files. Existing tracked files under `shared-results/` remain available for historical context.
 
-## Environment and current state
+## Work together
 
-The course environment is `ghcr.io/yeonjong21/cs30401-lab1:2026f-v1`, containing ns-3.48 and the course Hypatia modules. Source: <https://github.com/Yeonjong21/cs30401-lab1-env>.
-
-As of 2026-10-09, `main` includes [shared experiment outputs](https://github.com/Jeongmin07/CS30401-Lab1/tree/fa99ffa6772b1d4d6826b557ad49b74b5b28eb61/shared-results): 200-second CUBIC runs with queues of 1,000 and 100 packets, a 200-second NewReno run with a queue of 1,000 packets, and an earlier 20-second check. These are existing observations, not an agreed final research design. This PR adds collaboration documentation and GitHub templates. Shared analysis tools and a research implementation have not yet been integrated here. Existing setup files from <https://github.com/kim-seongchan/cs30401-2026f-lab1-team05> can be proposed in a separate setup PR.
-
-Git tracks pushed files. Each laptop's ns-3 Docker volume must be shared through an exported patch. For future experiments, keep code, configurations, small summaries and plots in Git; archive large raw logs in an accessible shared location and link them from the experiment record. See [result sharing](docs/TEAM_WORKFLOW.md#실험-결과-공유). Existing uploaded results are preserved. A small plot or summary without its exact command, code revision and configuration is insufficient evidence for a research result.
-
-Collaboration notes may be written in Korean. All materials included in the final course submission must be written in English.
+Read [`docs/TEAM_WORKFLOW.md`](docs/TEAM_WORKFLOW.md) and check [open pull requests, including drafts](https://github.com/Jeongmin07/CS30401-Lab1/pulls) before editing another person's work. Use a task branch for new evidence; merge into `main` after a teammate reviews it. The course environment is `ghcr.io/yeonjong21/cs30401-lab1:2026f-v1` (ns-3.48 with the supplied Hypatia modules). Final submission materials must be in English.
