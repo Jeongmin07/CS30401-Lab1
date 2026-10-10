@@ -1,0 +1,15 @@
+case,kind,cc,rate_mbps,queue_pkts,window,start_ns,end_ns,start_s,end_s,application_bytes,application_goodput_mbps
+topic-vegas-q100-100m-dynamic,leo,TcpVegas,100.0,100,whole,0,200000000000,0.0,200.0,1037783460,41.5113384
+topic-vegas-q100-100m-dynamic,leo,TcpVegas,100.0,100,pre121,111600000000,121600000000,111.6,121.6,120287700,96.23016
+topic-vegas-q100-100m-dynamic,leo,TcpVegas,100.0,100,post121,131600000000,141600000000,131.6,141.6,62802420,50.241936
+topic-vegas-q100-100m-dynamic,leo,TcpVegas,100.0,100,middle,150000000000,160000000000,150.0,160.0,32614920,26.091936
+topic-vegas-q100-100m-dynamic,leo,TcpVegas,100.0,100,pre187,177400000000,187400000000,177.4,187.4,16543440,13.234752
+topic-vegas-q100-100m-dynamic,leo,TcpVegas,100.0,100,post187,190000000000,200000000000,190.0,200.0,6245880,4.996704
+topic-vegas-fixed90ms,micro,TcpVegas,100.0,100,whole,0,20000000000,0.0,20.0,39456960,15.782784
+topic-vegas-fixed90ms,micro,TcpVegas,100.0,100,pre-step,0,5000000000,0.0,5.0,3307860,5.292576
+topic-vegas-fixed90ms,micro,TcpVegas,100.0,100,post-step,5000000000,20000000000,5.0,20.0,36149100,19.27952
+topic-vegas-fixed90ms,micro,TcpVegas,100.0,100,late,15000000000,20000000000,15.0,20.0,16441320,26.306112
+topic-vegas-step90to97ms,micro,TcpVegas,100.0,100,whole,0,20000000000,0.0,20.0,16001100,6.40044
+topic-vegas-step90to97ms,micro,TcpVegas,100.0,100,pre-step,0,5000000000,0.0,5.0,3307860,5.292576
+topic-vegas-step90to97ms,micro,TcpVegas,100.0,100,post-step,5000000000,20000000000,5.0,20.0,12693240,6.769728
+topic-vegas-step90to97ms,micro,TcpVegas,100.0,100,late,15000000000,20000000000,15.0,20.0,4162080,6.659328
