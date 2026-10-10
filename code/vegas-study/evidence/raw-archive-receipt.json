@@ -1,0 +1,10 @@
+{
+  "archive": "/tmp/cs30401-vegas-raw-20261010.tar.gz",
+  "archive_bytes": 1373614586,
+  "archive_sha256": "5f63e78ef2eec9c5206b16185c9595617d54257a836863b8139367c9eea77723",
+  "inventory_sha256": "5e4ed2b68907368afadb4d299bd81239313bfd6ba39876dac2a79e0764fbfa27",
+  "schema_version": 1,
+  "verification": "Every archived file independently streamed and matched to pre-archive size/SHA256; no raw logs were edited.",
+  "verified_file_count": 380,
+  "wall_time_s": 70.882
+}

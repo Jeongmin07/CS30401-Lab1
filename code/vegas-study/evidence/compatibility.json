@@ -1,0 +1,215 @@
+{
+  "schema_version": 1,
+  "qualification": "Instrumentation-disabled compatibility controls; exact measurement bytes, not wall-clock timing. Existing runs were neither edited nor relabeled.",
+  "micro": {
+    "source_commit": "fb1385223a85d0eef9d9e79f314b408b9b17e139",
+    "original_archive": "https://github.com/Jeongmin07/CS30401-Lab1/releases/tag/leo-topic-screening-20261010",
+    "comparisons": [
+      {
+        "original": "topic-vegas-fixed90ms",
+        "new": "v1-compat-fixed90",
+        "files": [
+          {
+            "file": "tcp_flow_0_progress.csv",
+            "original_sha256": "36ea586704c02a48c4ecafbc510ad4aee407ee3b8ca451d83fa5f1658bc2c857",
+            "new_sha256": "36ea586704c02a48c4ecafbc510ad4aee407ee3b8ca451d83fa5f1658bc2c857",
+            "match": true
+          },
+          {
+            "file": "tcp_flow_0_study_packets.csv",
+            "original_sha256": "b7e624473ebb30b7b1ac7fd643e57997151470d3cfbae9c3f61a89e1347e1ff8",
+            "new_sha256": "b7e624473ebb30b7b1ac7fd643e57997151470d3cfbae9c3f61a89e1347e1ff8",
+            "match": true
+          },
+          {
+            "file": "tcp_flow_0_study_events.csv",
+            "original_sha256": "179cdebae6d73f546daf146a396e1bac52cf8b16f786418c0b86e821db7bd529",
+            "new_sha256": "179cdebae6d73f546daf146a396e1bac52cf8b16f786418c0b86e821db7bd529",
+            "match": true
+          },
+          {
+            "file": "study_app_rx_node_1_port_1024.csv",
+            "original_sha256": "f2599e7fc3e9fcd8e79f18b69366730fe1a68a008042ec3af8657b6e95cc3d0a",
+            "new_sha256": "f2599e7fc3e9fcd8e79f18b69366730fe1a68a008042ec3af8657b6e95cc3d0a",
+            "match": true
+          },
+          {
+            "file": "tcp_flow_0_rtt.csv",
+            "original_sha256": "d0bd80e4d4fb241f338e9890a23e43c7597b30ac5743693d4e8d92188f88595d",
+            "new_sha256": "d0bd80e4d4fb241f338e9890a23e43c7597b30ac5743693d4e8d92188f88595d",
+            "match": true
+          },
+          {
+            "file": "tcp_flow_0_cwnd.csv",
+            "original_sha256": "e1ec2cc446b8b1f79f17ab33993eeafc33a5458a86bcd25d03fb7a8d526e8dc6",
+            "new_sha256": "e1ec2cc446b8b1f79f17ab33993eeafc33a5458a86bcd25d03fb7a8d526e8dc6",
+            "match": true
+          },
+          {
+            "file": "study_drops.csv",
+            "original_sha256": "ec37c4087cf6eb0bf412760b74ba37e2279e44d6bfff2d89f87c8135ec82b959",
+            "new_sha256": "ec37c4087cf6eb0bf412760b74ba37e2279e44d6bfff2d89f87c8135ec82b959",
+            "match": true
+          },
+          {
+            "file": "study_rx_node_1_port_1024.csv",
+            "original_sha256": "f1cf97c7ebac2eae57df27958ea7e4b3b555a51e778b8fc6c8acf52d4bcc1d08",
+            "new_sha256": "f1cf97c7ebac2eae57df27958ea7e4b3b555a51e778b8fc6c8acf52d4bcc1d08",
+            "match": true
+          },
+          {
+            "file": "study_drop_coverage.csv",
+            "original_sha256": "f2bbce727ae1f61019ef8f727753e3a8f64abdeb41d660a20a3607802f4524f4",
+            "new_sha256": "f2bbce727ae1f61019ef8f727753e3a8f64abdeb41d660a20a3607802f4524f4",
+            "match": true
+          }
+        ]
+      },
+      {
+        "original": "topic-vegas-step90to97ms",
+        "new": "v1-compat-step96",
+        "files": [
+          {
+            "file": "tcp_flow_0_progress.csv",
+            "original_sha256": "344dd1cf5cf3bd2482c55570ea94c5c6aee6cfe5ee42bf5418a515428d96fb93",
+            "new_sha256": "344dd1cf5cf3bd2482c55570ea94c5c6aee6cfe5ee42bf5418a515428d96fb93",
+            "match": true
+          },
+          {
+            "file": "tcp_flow_0_study_packets.csv",
+            "original_sha256": "520c99711c26bfef8ce61629f605c9daaa9d58a176c77b6905202e9442f933e5",
+            "new_sha256": "520c99711c26bfef8ce61629f605c9daaa9d58a176c77b6905202e9442f933e5",
+            "match": true
+          },
+          {
+            "file": "tcp_flow_0_study_events.csv",
+            "original_sha256": "976a974a24fc3842c01e77ce89504f5de3f8e8c5d36e0a199af83b4736286981",
+            "new_sha256": "976a974a24fc3842c01e77ce89504f5de3f8e8c5d36e0a199af83b4736286981",
+            "match": true
+          },
+          {
+            "file": "study_app_rx_node_1_port_1024.csv",
+            "original_sha256": "38691885ad70eeb5edb41117ccca8cb9a74feb34d2602308794c920f07b2978e",
+            "new_sha256": "38691885ad70eeb5edb41117ccca8cb9a74feb34d2602308794c920f07b2978e",
+            "match": true
+          },
+          {
+            "file": "tcp_flow_0_rtt.csv",
+            "original_sha256": "a32ac57b9f6a061c5a2e64e9eec6c7053f806eede27c3988abe593d10f286d4a",
+            "new_sha256": "a32ac57b9f6a061c5a2e64e9eec6c7053f806eede27c3988abe593d10f286d4a",
+            "match": true
+          },
+          {
+            "file": "tcp_flow_0_cwnd.csv",
+            "original_sha256": "cb32bb94fc63e004c59298d277151227473e504614de54961aee863c8efdc39b",
+            "new_sha256": "cb32bb94fc63e004c59298d277151227473e504614de54961aee863c8efdc39b",
+            "match": true
+          },
+          {
+            "file": "study_drops.csv",
+            "original_sha256": "ec37c4087cf6eb0bf412760b74ba37e2279e44d6bfff2d89f87c8135ec82b959",
+            "new_sha256": "ec37c4087cf6eb0bf412760b74ba37e2279e44d6bfff2d89f87c8135ec82b959",
+            "match": true
+          },
+          {
+            "file": "study_rx_node_1_port_1024.csv",
+            "original_sha256": "f4e1773856f42a9a7aec1eed4cc8e07b281cc9b1410b625cd9fc57c52cabe5a3",
+            "new_sha256": "f4e1773856f42a9a7aec1eed4cc8e07b281cc9b1410b625cd9fc57c52cabe5a3",
+            "match": true
+          },
+          {
+            "file": "study_drop_coverage.csv",
+            "original_sha256": "f2bbce727ae1f61019ef8f727753e3a8f64abdeb41d660a20a3607802f4524f4",
+            "new_sha256": "f2bbce727ae1f61019ef8f727753e3a8f64abdeb41d660a20a3607802f4524f4",
+            "match": true
+          }
+        ]
+      }
+    ]
+  },
+  "leo": {
+    "source_commit": "82ad34a975d4b15f8a536527f8ea4f0cf6e41624",
+    "original": "topic-vegas-q100-100m-dynamic",
+    "new": "v1-leo-base",
+    "comparisons": [
+      {
+        "file": "study_app_rx_node_1585_port_1024.csv",
+        "bytes": 66643314,
+        "original_sha256": "ab7f762a746837533402ff69a84e0a9d83db059239204c7100a61a168fd9e06e",
+        "new_sha256": "ab7f762a746837533402ff69a84e0a9d83db059239204c7100a61a168fd9e06e",
+        "match": true
+      },
+      {
+        "file": "study_drop_coverage.csv",
+        "bytes": 1140184,
+        "original_sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499",
+        "new_sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499",
+        "match": true
+      },
+      {
+        "file": "study_drops.csv",
+        "bytes": 112,
+        "original_sha256": "ec37c4087cf6eb0bf412760b74ba37e2279e44d6bfff2d89f87c8135ec82b959",
+        "new_sha256": "ec37c4087cf6eb0bf412760b74ba37e2279e44d6bfff2d89f87c8135ec82b959",
+        "match": true
+      },
+      {
+        "file": "study_rx_node_1585_port_1024.csv",
+        "bytes": 86344549,
+        "original_sha256": "f05c05c59b60671342647718d1c8ad6fade665a0166015f56de0ad8bd6502b8c",
+        "new_sha256": "f05c05c59b60671342647718d1c8ad6fade665a0166015f56de0ad8bd6502b8c",
+        "match": true
+      },
+      {
+        "file": "tcp_flow_0_cwnd.csv",
+        "bytes": 38123,
+        "original_sha256": "cb8c49e0edba087a76f28d6cfbd9d64f30dfb577846710888af82578d4ae446a",
+        "new_sha256": "cb8c49e0edba087a76f28d6cfbd9d64f30dfb577846710888af82578d4ae446a",
+        "match": true
+      },
+      {
+        "file": "tcp_flow_0_progress.csv",
+        "bytes": 9185071,
+        "original_sha256": "f9de62c20acdc52767e36590fce1692f002d55b2d7a8b96fcc334e0f1ba01ca2",
+        "new_sha256": "f9de62c20acdc52767e36590fce1692f002d55b2d7a8b96fcc334e0f1ba01ca2",
+        "match": true
+      },
+      {
+        "file": "tcp_flow_0_rtt.csv",
+        "bytes": 8764361,
+        "original_sha256": "9b93139aebbdbde9cefd147368cd7afaed2f5edb1a36a0d93cbc32d658f26845",
+        "new_sha256": "9b93139aebbdbde9cefd147368cd7afaed2f5edb1a36a0d93cbc32d658f26845",
+        "match": true
+      },
+      {
+        "file": "tcp_flow_0_study_events.csv",
+        "bytes": 54153,
+        "original_sha256": "1a22945cb295da37d0f72fccacee3094eabbce6b58fbfa1a7b11db6d2ac8f7c1",
+        "new_sha256": "1a22945cb295da37d0f72fccacee3094eabbce6b58fbfa1a7b11db6d2ac8f7c1",
+        "match": true
+      },
+      {
+        "file": "tcp_flow_0_study_packets.csv",
+        "bytes": 85168107,
+        "original_sha256": "6cc1a247399f17c152cfb1b35b656f661fb3b144347317217187c95b5e58f015",
+        "new_sha256": "6cc1a247399f17c152cfb1b35b656f661fb3b144347317217187c95b5e58f015",
+        "match": true
+      },
+      {
+        "file": "tcp_flows.csv",
+        "bytes": 76,
+        "original_sha256": "8ef213989a82efb7b1e74e4b6ba8affe9ec0deec5cc9bbb79f6bf1e363076a8f",
+        "new_sha256": "8ef213989a82efb7b1e74e4b6ba8affe9ec0deec5cc9bbb79f6bf1e363076a8f",
+        "match": true
+      },
+      {
+        "file": "timing_results.csv",
+        "bytes": 561,
+        "original_sha256": "8aef051dcb5bfb438018e695e9e3d25622c96f63b71097699802bc394e484aca",
+        "new_sha256": "966f19e6abcb2172a2aef334ad44f8eb968af7e02c3f89be7089d5fdbf00dbdf",
+        "match": false
+      }
+    ],
+    "expected_nonmeasurement_difference": "timing_results.csv is wall-clock performance, excluded from deterministic measurement comparison. vegas_state.csv is additional observer output."
+  }
+}

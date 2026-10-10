@@ -1,0 +1,1459 @@
+{
+  "cases": [
+    {
+      "case": "v2-fixed-base",
+      "commands": [
+        [
+          "/home/ubuntu/lab/.venv/bin/python3",
+          "/work/code/kim-study/analyze_study.py",
+          "/tmp/cs30401-vegas-v2/v2-fixed-base",
+          "--include-bins",
+          "--output",
+          "/tmp/vegas-v2-analysis-micro/v2-fixed-base/study-analysis.json",
+          "--events",
+          "100",
+          "--root-qdisc-absence-audited"
+        ],
+        [
+          "/home/ubuntu/lab/.venv/bin/python3",
+          "/work/code/vegas-study/v2/analyze_vegas.py",
+          "/tmp/cs30401-vegas-v2/v2-fixed-base",
+          "--out",
+          "/tmp/vegas-v2-analysis-micro/v2-fixed-base/vegas",
+          "--study-analysis",
+          "/tmp/vegas-v2-analysis-micro/v2-fixed-base/study-analysis.json",
+          "--event-s",
+          "100"
+        ]
+      ],
+      "end_time_unix": 1791627495.25025,
+      "original_manifest": {
+        "bytes": 7937,
+        "path": "/tmp/cs30401-vegas-v2/v2-fixed-base/case.json",
+        "sha256": "67adf6771e2ac23d0abaf01b639939042fcfca879ea0f12e04a236fd5b29f8d2"
+      },
+      "out": "/tmp/vegas-v2-analysis-micro/v2-fixed-base",
+      "output_artifacts": [
+        {
+          "bytes": 314937,
+          "path": "/tmp/vegas-v2-analysis-micro/v2-fixed-base/study-analysis.json",
+          "sha256": "a1167d816600853105efd114610a4165515f8f008bb370833565852779b9407d"
+        },
+        {
+          "bytes": 31217,
+          "path": "/tmp/vegas-v2-analysis-micro/v2-fixed-base/vegas/summary.json",
+          "sha256": "25f87036538ffa5d2b2446c62141246d0ffb9c9e55c7f30b90817c2fadb6e255"
+        },
+        {
+          "bytes": 970,
+          "path": "/tmp/vegas-v2-analysis-micro/v2-fixed-base/vegas/windows.csv",
+          "sha256": "f1bdf810bf9a8412c88f85add06ef278b148544b271a5ce594998c0521b1d2fe"
+        }
+      ],
+      "phases": [
+        {
+          "analysis_source": {
+            "bytes": 36868,
+            "path": "/work/code/kim-study/analyze_study.py",
+            "sha256": "5333d7f6d86c04f79bbaad82e5e2577ec3bdf2f281e115c854ad904c404aa696"
+          },
+          "analysis_source_after": {
+            "bytes": 36868,
+            "path": "/work/code/kim-study/analyze_study.py",
+            "sha256": "5333d7f6d86c04f79bbaad82e5e2577ec3bdf2f281e115c854ad904c404aa696"
+          },
+          "command": [
+            "/home/ubuntu/lab/.venv/bin/python3",
+            "/work/code/kim-study/analyze_study.py",
+            "/tmp/cs30401-vegas-v2/v2-fixed-base",
+            "--include-bins",
+            "--output",
+            "/tmp/vegas-v2-analysis-micro/v2-fixed-base/study-analysis.json",
+            "--events",
+            "100",
+            "--root-qdisc-absence-audited"
+          ],
+          "console": {
+            "bytes": 63,
+            "path": "/tmp/vegas-v2-analysis-micro/v2-fixed-base/phase-1.console.log",
+            "sha256": "e1e777791b9ed57311b8e5ebb7d0548813cdf3be9792c1b93149d8f9219e26c9"
+          },
+          "end_time_unix": 1791627400.7733452,
+          "exit_code": 0,
+          "phase": 1,
+          "start_time_unix": 1791627339.6684453,
+          "wall_time_s": 61.12426
+        },
+        {
+          "analysis_source": {
+            "bytes": 39550,
+            "path": "/work/code/vegas-study/v2/analyze_vegas.py",
+            "sha256": "8d041c2c3d2caf2e9d1e9f28d1ad408c1c33ad242b43e10b5ad944707245f14f"
+          },
+          "analysis_source_after": {
+            "bytes": 39550,
+            "path": "/work/code/vegas-study/v2/analyze_vegas.py",
+            "sha256": "8d041c2c3d2caf2e9d1e9f28d1ad408c1c33ad242b43e10b5ad944707245f14f"
+          },
+          "command": [
+            "/home/ubuntu/lab/.venv/bin/python3",
+            "/work/code/vegas-study/v2/analyze_vegas.py",
+            "/tmp/cs30401-vegas-v2/v2-fixed-base",
+            "--out",
+            "/tmp/vegas-v2-analysis-micro/v2-fixed-base/vegas",
+            "--study-analysis",
+            "/tmp/vegas-v2-analysis-micro/v2-fixed-base/study-analysis.json",
+            "--event-s",
+            "100"
+          ],
+          "console": {
+            "bytes": 233,
+            "path": "/tmp/vegas-v2-analysis-micro/v2-fixed-base/phase-2.console.log",
+            "sha256": "1acae169278e2a2e0400988e04539954f98dde7091e99f6b1aa865f7920b3d22"
+          },
+          "end_time_unix": 1791627495.2049098,
+          "exit_code": 0,
+          "phase": 2,
+          "start_time_unix": 1791627400.8032403,
+          "wall_time_s": 94.417607
+        }
+      ],
+      "policy": {
+        "alpha": 2,
+        "beta": 4,
+        "gamma": 1,
+        "input": "existing socket SRTT; loss/startup unchanged",
+        "min_rise_ns": 1000000,
+        "preserve_beta": false,
+        "recent_min_renewal": false,
+        "rounds": 20
+      },
+      "run": "/tmp/cs30401-vegas-v2/v2-fixed-base",
+      "simulation_launch_commit": "ac133157c5faa3dac56534ab105cd2ed804fd12c",
+      "start_time_unix": 1791627339.184883,
+      "status": "complete",
+      "wall_time_s": 156.100674
+    },
+    {
+      "case": "v2-fixed-comp-base",
+      "commands": [
+        [
+          "/home/ubuntu/lab/.venv/bin/python3",
+          "/work/code/kim-study/analyze_study.py",
+          "/tmp/cs30401-vegas-v2/v2-fixed-comp-base",
+          "--include-bins",
+          "--output",
+          "/tmp/vegas-v2-analysis-micro/v2-fixed-comp-base/study-analysis.json",
+          "--events",
+          "100",
+          "--root-qdisc-absence-audited"
+        ],
+        [
+          "/home/ubuntu/lab/.venv/bin/python3",
+          "/work/code/vegas-study/v2/analyze_vegas.py",
+          "/tmp/cs30401-vegas-v2/v2-fixed-comp-base",
+          "--out",
+          "/tmp/vegas-v2-analysis-micro/v2-fixed-comp-base/vegas",
+          "--study-analysis",
+          "/tmp/vegas-v2-analysis-micro/v2-fixed-comp-base/study-analysis.json",
+          "--event-s",
+          "100",
+          "--window",
+          "competition:80:200",
+          "--window",
+          "first-false-renew:90.194745440:91.958450720"
+        ]
+      ],
+      "end_time_unix": 1791627694.9164474,
+      "original_manifest": {
+        "bytes": 7959,
+        "path": "/tmp/cs30401-vegas-v2/v2-fixed-comp-base/case.json",
+        "sha256": "8fce7ed9d74dc166929b676ca4f75221d42f2edb31b95e5cfea22e6eedf1e409"
+      },
+      "out": "/tmp/vegas-v2-analysis-micro/v2-fixed-comp-base",
+      "output_artifacts": [
+        {
+          "bytes": 978834,
+          "path": "/tmp/vegas-v2-analysis-micro/v2-fixed-comp-base/study-analysis.json",
+          "sha256": "265b41472edd31834839f7616d9abb25da2fcb57dafc3cf28852c17381824bf3"
+        },
+        {
+          "bytes": 46623,
+          "path": "/tmp/vegas-v2-analysis-micro/v2-fixed-comp-base/vegas/summary.json",
+          "sha256": "6e1f9c20f73345d8fabcfe2e4bfc8134eeb9553b770d28f7e49d945cfb6acc58"
+        },
+        {
+          "bytes": 2234,
+          "path": "/tmp/vegas-v2-analysis-micro/v2-fixed-comp-base/vegas/windows.csv",
+          "sha256": "593f6ac2e6008b95e88615e889f904c2a55dcd57bcf956be33cffe68c3b9ae81"
+        }
+      ],
+      "phases": [
+        {
+          "analysis_source": {
+            "bytes": 36868,
+            "path": "/work/code/kim-study/analyze_study.py",
+            "sha256": "5333d7f6d86c04f79bbaad82e5e2577ec3bdf2f281e115c854ad904c404aa696"
+          },
+          "analysis_source_after": {
+            "bytes": 36868,
+            "path": "/work/code/kim-study/analyze_study.py",
+            "sha256": "5333d7f6d86c04f79bbaad82e5e2577ec3bdf2f281e115c854ad904c404aa696"
+          },
+          "command": [
+            "/home/ubuntu/lab/.venv/bin/python3",
+            "/work/code/kim-study/analyze_study.py",
+            "/tmp/cs30401-vegas-v2/v2-fixed-comp-base",
+            "--include-bins",
+            "--output",
+            "/tmp/vegas-v2-analysis-micro/v2-fixed-comp-base/study-analysis.json",
+            "--events",
+            "100",
+            "--root-qdisc-absence-audited"
+          ],
+          "console": {
+            "bytes": 68,
+            "path": "/tmp/vegas-v2-analysis-micro/v2-fixed-comp-base/phase-1.console.log",
+            "sha256": "a50a157777a6a3650ad37a213036c71b48ac95af59bfa744625e64fab0a8bd6b"
+          },
+          "end_time_unix": 1791627620.9014654,
+          "exit_code": 0,
+          "phase": 1,
+          "start_time_unix": 1791627584.777435,
+          "wall_time_s": 36.126378
+        },
+        {
+          "analysis_source": {
+            "bytes": 39550,
+            "path": "/work/code/vegas-study/v2/analyze_vegas.py",
+            "sha256": "8d041c2c3d2caf2e9d1e9f28d1ad408c1c33ad242b43e10b5ad944707245f14f"
+          },
+          "analysis_source_after": {
+            "bytes": 39550,
+            "path": "/work/code/vegas-study/v2/analyze_vegas.py",
+            "sha256": "8d041c2c3d2caf2e9d1e9f28d1ad408c1c33ad242b43e10b5ad944707245f14f"
+          },
+          "command": [
+            "/home/ubuntu/lab/.venv/bin/python3",
+            "/work/code/vegas-study/v2/analyze_vegas.py",
+            "/tmp/cs30401-vegas-v2/v2-fixed-comp-base",
+            "--out",
+            "/tmp/vegas-v2-analysis-micro/v2-fixed-comp-base/vegas",
+            "--study-analysis",
+            "/tmp/vegas-v2-analysis-micro/v2-fixed-comp-base/study-analysis.json",
+            "--event-s",
+            "100",
+            "--window",
+            "competition:80:200",
+            "--window",
+            "first-false-renew:90.194745440:91.958450720"
+          ],
+          "console": {
+            "bytes": 247,
+            "path": "/tmp/vegas-v2-analysis-micro/v2-fixed-comp-base/phase-2.console.log",
+            "sha256": "7102c5fdee2b18d65b3754b8c265752b85d3aed52d1ffc569e3d3f847079c003"
+          },
+          "end_time_unix": 1791627694.8912456,
+          "exit_code": 0,
+          "phase": 2,
+          "start_time_unix": 1791627620.9205952,
+          "wall_time_s": 73.975696
+        }
+      ],
+      "policy": {
+        "alpha": 2,
+        "beta": 4,
+        "gamma": 1,
+        "input": "existing socket SRTT; loss/startup unchanged",
+        "min_rise_ns": 1000000,
+        "preserve_beta": false,
+        "recent_min_renewal": false,
+        "rounds": 20
+      },
+      "run": "/tmp/cs30401-vegas-v2/v2-fixed-comp-base",
+      "simulation_launch_commit": "ac133157c5faa3dac56534ab105cd2ed804fd12c",
+      "start_time_unix": 1791627584.76611,
+      "status": "complete",
+      "wall_time_s": 110.157728
+    },
+    {
+      "case": "v2-fixed-comp-renew",
+      "commands": [
+        [
+          "/home/ubuntu/lab/.venv/bin/python3",
+          "/work/code/kim-study/analyze_study.py",
+          "/tmp/cs30401-vegas-v2/v2-fixed-comp-renew",
+          "--include-bins",
+          "--output",
+          "/tmp/vegas-v2-analysis-micro/v2-fixed-comp-renew/study-analysis.json",
+          "--events",
+          "100",
+          "--root-qdisc-absence-audited"
+        ],
+        [
+          "/home/ubuntu/lab/.venv/bin/python3",
+          "/work/code/vegas-study/v2/analyze_vegas.py",
+          "/tmp/cs30401-vegas-v2/v2-fixed-comp-renew",
+          "--out",
+          "/tmp/vegas-v2-analysis-micro/v2-fixed-comp-renew/vegas",
+          "--study-analysis",
+          "/tmp/vegas-v2-analysis-micro/v2-fixed-comp-renew/study-analysis.json",
+          "--event-s",
+          "100",
+          "--window",
+          "competition:80:200",
+          "--window",
+          "first-false-renew:90.194745440:91.958450720"
+        ]
+      ],
+      "end_time_unix": 1791627719.7770212,
+      "original_manifest": {
+        "bytes": 7958,
+        "path": "/tmp/cs30401-vegas-v2/v2-fixed-comp-renew/case.json",
+        "sha256": "369cb937f4ba53136102c7906745ab60a8b511b7d0b2d5db9382ae5b0dd797af"
+      },
+      "out": "/tmp/vegas-v2-analysis-micro/v2-fixed-comp-renew",
+      "output_artifacts": [
+        {
+          "bytes": 923159,
+          "path": "/tmp/vegas-v2-analysis-micro/v2-fixed-comp-renew/study-analysis.json",
+          "sha256": "c5a2b8f647be3f59c5237da82c310e0a4681c24d522ef75801f3f58200ff328a"
+        },
+        {
+          "bytes": 57125,
+          "path": "/tmp/vegas-v2-analysis-micro/v2-fixed-comp-renew/vegas/summary.json",
+          "sha256": "c5528635c3779139da4a7f3ff5350bb84047a9bf6c28af4bbef7231acbcc6935"
+        },
+        {
+          "bytes": 2257,
+          "path": "/tmp/vegas-v2-analysis-micro/v2-fixed-comp-renew/vegas/windows.csv",
+          "sha256": "35d4fbc4446f6a1c5267c10ccab99316a77f9e70f957f1c1d6c37bc8a45fd814"
+        }
+      ],
+      "phases": [
+        {
+          "analysis_source": {
+            "bytes": 36868,
+            "path": "/work/code/kim-study/analyze_study.py",
+            "sha256": "5333d7f6d86c04f79bbaad82e5e2577ec3bdf2f281e115c854ad904c404aa696"
+          },
+          "analysis_source_after": {
+            "bytes": 36868,
+            "path": "/work/code/kim-study/analyze_study.py",
+            "sha256": "5333d7f6d86c04f79bbaad82e5e2577ec3bdf2f281e115c854ad904c404aa696"
+          },
+          "command": [
+            "/home/ubuntu/lab/.venv/bin/python3",
+            "/work/code/kim-study/analyze_study.py",
+            "/tmp/cs30401-vegas-v2/v2-fixed-comp-renew",
+            "--include-bins",
+            "--output",
+            "/tmp/vegas-v2-analysis-micro/v2-fixed-comp-renew/study-analysis.json",
+            "--events",
+            "100",
+            "--root-qdisc-absence-audited"
+          ],
+          "console": {
+            "bytes": 69,
+            "path": "/tmp/vegas-v2-analysis-micro/v2-fixed-comp-renew/phase-1.console.log",
+            "sha256": "432daad5693fc3cc3922bc7fd88f6bb6eabb7902bdc2be20b8be7147f7f32199"
+          },
+          "end_time_unix": 1791627640.2776089,
+          "exit_code": 0,
+          "phase": 1,
+          "start_time_unix": 1791627610.6384602,
+          "wall_time_s": 29.641172
+        },
+        {
+          "analysis_source": {
+            "bytes": 39550,
+            "path": "/work/code/vegas-study/v2/analyze_vegas.py",
+            "sha256": "8d041c2c3d2caf2e9d1e9f28d1ad408c1c33ad242b43e10b5ad944707245f14f"
+          },
+          "analysis_source_after": {
+            "bytes": 39550,
+            "path": "/work/code/vegas-study/v2/analyze_vegas.py",
+            "sha256": "8d041c2c3d2caf2e9d1e9f28d1ad408c1c33ad242b43e10b5ad944707245f14f"
+          },
+          "command": [
+            "/home/ubuntu/lab/.venv/bin/python3",
+            "/work/code/vegas-study/v2/analyze_vegas.py",
+            "/tmp/cs30401-vegas-v2/v2-fixed-comp-renew",
+            "--out",
+            "/tmp/vegas-v2-analysis-micro/v2-fixed-comp-renew/vegas",
+            "--study-analysis",
+            "/tmp/vegas-v2-analysis-micro/v2-fixed-comp-renew/study-analysis.json",
+            "--event-s",
+            "100",
+            "--window",
+            "competition:80:200",
+            "--window",
+            "first-false-renew:90.194745440:91.958450720"
+          ],
+          "console": {
+            "bytes": 250,
+            "path": "/tmp/vegas-v2-analysis-micro/v2-fixed-comp-renew/phase-2.console.log",
+            "sha256": "06917cdac382391c2ff9067de24f2e5ad16d3fa33c8ceb1fa53b59c25f0c748e"
+          },
+          "end_time_unix": 1791627719.758662,
+          "exit_code": 0,
+          "phase": 2,
+          "start_time_unix": 1791627640.2910438,
+          "wall_time_s": 79.470642
+        }
+      ],
+      "policy": {
+        "alpha": 2,
+        "beta": 4,
+        "gamma": 1,
+        "input": "existing socket SRTT; loss/startup unchanged",
+        "min_rise_ns": 1000000,
+        "preserve_beta": true,
+        "recent_min_renewal": true,
+        "rounds": 20
+      },
+      "run": "/tmp/cs30401-vegas-v2/v2-fixed-comp-renew",
+      "simulation_launch_commit": "ac133157c5faa3dac56534ab105cd2ed804fd12c",
+      "start_time_unix": 1791627610.6267302,
+      "status": "complete",
+      "wall_time_s": 109.155336
+    },
+    {
+      "case": "v2-fixed-renew",
+      "commands": [
+        [
+          "/home/ubuntu/lab/.venv/bin/python3",
+          "/work/code/kim-study/analyze_study.py",
+          "/tmp/cs30401-vegas-v2/v2-fixed-renew",
+          "--include-bins",
+          "--output",
+          "/tmp/vegas-v2-analysis-micro/v2-fixed-renew/study-analysis.json",
+          "--events",
+          "100",
+          "--root-qdisc-absence-audited"
+        ],
+        [
+          "/home/ubuntu/lab/.venv/bin/python3",
+          "/work/code/vegas-study/v2/analyze_vegas.py",
+          "/tmp/cs30401-vegas-v2/v2-fixed-renew",
+          "--out",
+          "/tmp/vegas-v2-analysis-micro/v2-fixed-renew/vegas",
+          "--study-analysis",
+          "/tmp/vegas-v2-analysis-micro/v2-fixed-renew/study-analysis.json",
+          "--event-s",
+          "100"
+        ]
+      ],
+      "end_time_unix": 1791627497.1053255,
+      "original_manifest": {
+        "bytes": 7934,
+        "path": "/tmp/cs30401-vegas-v2/v2-fixed-renew/case.json",
+        "sha256": "152e8636b1d580990681710503915d6265ab845683b082b4bf4a3a110be9d98a"
+      },
+      "out": "/tmp/vegas-v2-analysis-micro/v2-fixed-renew",
+      "output_artifacts": [
+        {
+          "bytes": 314943,
+          "path": "/tmp/vegas-v2-analysis-micro/v2-fixed-renew/study-analysis.json",
+          "sha256": "401e8e6f3fe75005856a2ed3a3d1a9aa42e7299944f5624f0cb64dca9c66ba76"
+        },
+        {
+          "bytes": 31254,
+          "path": "/tmp/vegas-v2-analysis-micro/v2-fixed-renew/vegas/summary.json",
+          "sha256": "6fe32405e146893a47e20cff3b28ca9d0a0586956dc950849997bca25786c8b5"
+        },
+        {
+          "bytes": 974,
+          "path": "/tmp/vegas-v2-analysis-micro/v2-fixed-renew/vegas/windows.csv",
+          "sha256": "127af6031a3067051ef6d65893c42225ae79e9bf4cc29c7b86115442cb2d5510"
+        }
+      ],
+      "phases": [
+        {
+          "analysis_source": {
+            "bytes": 36868,
+            "path": "/work/code/kim-study/analyze_study.py",
+            "sha256": "5333d7f6d86c04f79bbaad82e5e2577ec3bdf2f281e115c854ad904c404aa696"
+          },
+          "analysis_source_after": {
+            "bytes": 36868,
+            "path": "/work/code/kim-study/analyze_study.py",
+            "sha256": "5333d7f6d86c04f79bbaad82e5e2577ec3bdf2f281e115c854ad904c404aa696"
+          },
+          "command": [
+            "/home/ubuntu/lab/.venv/bin/python3",
+            "/work/code/kim-study/analyze_study.py",
+            "/tmp/cs30401-vegas-v2/v2-fixed-renew",
+            "--include-bins",
+            "--output",
+            "/tmp/vegas-v2-analysis-micro/v2-fixed-renew/study-analysis.json",
+            "--events",
+            "100",
+            "--root-qdisc-absence-audited"
+          ],
+          "console": {
+            "bytes": 64,
+            "path": "/tmp/vegas-v2-analysis-micro/v2-fixed-renew/phase-1.console.log",
+            "sha256": "000c3d1433ad01c5bc85ac5c31e19828e2e4e6d374c820b3cb2b4d052a5a6cb5"
+          },
+          "end_time_unix": 1791627401.2984233,
+          "exit_code": 0,
+          "phase": 1,
+          "start_time_unix": 1791627339.4654427,
+          "wall_time_s": 61.85234
+        },
+        {
+          "analysis_source": {
+            "bytes": 39550,
+            "path": "/work/code/vegas-study/v2/analyze_vegas.py",
+            "sha256": "8d041c2c3d2caf2e9d1e9f28d1ad408c1c33ad242b43e10b5ad944707245f14f"
+          },
+          "analysis_source_after": {
+            "bytes": 39550,
+            "path": "/work/code/vegas-study/v2/analyze_vegas.py",
+            "sha256": "8d041c2c3d2caf2e9d1e9f28d1ad408c1c33ad242b43e10b5ad944707245f14f"
+          },
+          "command": [
+            "/home/ubuntu/lab/.venv/bin/python3",
+            "/work/code/vegas-study/v2/analyze_vegas.py",
+            "/tmp/cs30401-vegas-v2/v2-fixed-renew",
+            "--out",
+            "/tmp/vegas-v2-analysis-micro/v2-fixed-renew/vegas",
+            "--study-analysis",
+            "/tmp/vegas-v2-analysis-micro/v2-fixed-renew/study-analysis.json",
+            "--event-s",
+            "100"
+          ],
+          "console": {
+            "bytes": 235,
+            "path": "/tmp/vegas-v2-analysis-micro/v2-fixed-renew/phase-2.console.log",
+            "sha256": "4b3a06c978a2efa4a74fe5af3e6b7d406a4fa095922c0f6c3f7a00a187f8c2ce"
+          },
+          "end_time_unix": 1791627497.0487561,
+          "exit_code": 0,
+          "phase": 2,
+          "start_time_unix": 1791627401.322064,
+          "wall_time_s": 95.742628
+        }
+      ],
+      "policy": {
+        "alpha": 2,
+        "beta": 4,
+        "gamma": 1,
+        "input": "existing socket SRTT; loss/startup unchanged",
+        "min_rise_ns": 1000000,
+        "preserve_beta": true,
+        "recent_min_renewal": true,
+        "rounds": 20
+      },
+      "run": "/tmp/cs30401-vegas-v2/v2-fixed-renew",
+      "simulation_launch_commit": "ac133157c5faa3dac56534ab105cd2ed804fd12c",
+      "start_time_unix": 1791627339.1802475,
+      "status": "complete",
+      "wall_time_s": 157.960376
+    },
+    {
+      "case": "v2-leo-base",
+      "commands": [
+        [
+          "/home/ubuntu/lab/.venv/bin/python3",
+          "/work/code/kim-study/analyze_study.py",
+          "/tmp/cs30401-vegas-v2/v2-leo-base",
+          "--include-bins",
+          "--output",
+          "/tmp/vegas-v2-analysis-leo/v2-leo-base/study-analysis.json",
+          "--path-truth",
+          "/work/code/kim-study/path_truth_200s.csv"
+        ],
+        [
+          "/home/ubuntu/lab/.venv/bin/python3",
+          "/work/code/vegas-study/v2/analyze_vegas.py",
+          "/tmp/cs30401-vegas-v2/v2-leo-base",
+          "--out",
+          "/tmp/vegas-v2-analysis-leo/v2-leo-base/vegas",
+          "--study-analysis",
+          "/tmp/vegas-v2-analysis-leo/v2-leo-base/study-analysis.json",
+          "--event-s",
+          "121.6",
+          "--event-s",
+          "187.4"
+        ]
+      ],
+      "end_time_unix": 1791627710.6655111,
+      "original_manifest": {
+        "bytes": 7124,
+        "path": "/tmp/cs30401-vegas-v2/v2-leo-base/case.json",
+        "sha256": "8c6f046b118a16b82c82f0b172665c561518dbe2d12ebdf6f17f2c32bfb8a012"
+      },
+      "out": "/tmp/vegas-v2-analysis-leo/v2-leo-base",
+      "output_artifacts": [
+        {
+          "bytes": 480925,
+          "path": "/tmp/vegas-v2-analysis-leo/v2-leo-base/study-analysis.json",
+          "sha256": "0827b6cf4d5f8508eae9173c070e33d835f286f25c09efd9a4424242920cf810"
+        },
+        {
+          "bytes": 18944,
+          "path": "/tmp/vegas-v2-analysis-leo/v2-leo-base/vegas/summary.json",
+          "sha256": "ec8af26d4b1fa26a4c468a6770df738c05f104bc927e0187f295438e86cca2ef"
+        },
+        {
+          "bytes": 1086,
+          "path": "/tmp/vegas-v2-analysis-leo/v2-leo-base/vegas/windows.csv",
+          "sha256": "a080c02274143c37983037c4123e4df352069610c18af38821e32bb10efc78d3"
+        }
+      ],
+      "phases": [
+        {
+          "analysis_source": {
+            "bytes": 36868,
+            "path": "/work/code/kim-study/analyze_study.py",
+            "sha256": "5333d7f6d86c04f79bbaad82e5e2577ec3bdf2f281e115c854ad904c404aa696"
+          },
+          "analysis_source_after": {
+            "bytes": 36868,
+            "path": "/work/code/kim-study/analyze_study.py",
+            "sha256": "5333d7f6d86c04f79bbaad82e5e2577ec3bdf2f281e115c854ad904c404aa696"
+          },
+          "command": [
+            "/home/ubuntu/lab/.venv/bin/python3",
+            "/work/code/kim-study/analyze_study.py",
+            "/tmp/cs30401-vegas-v2/v2-leo-base",
+            "--include-bins",
+            "--output",
+            "/tmp/vegas-v2-analysis-leo/v2-leo-base/study-analysis.json",
+            "--path-truth",
+            "/work/code/kim-study/path_truth_200s.csv"
+          ],
+          "console": {
+            "bytes": 59,
+            "path": "/tmp/vegas-v2-analysis-leo/v2-leo-base/phase-1.console.log",
+            "sha256": "d876bbcb805f4f3bf5ebc33ab9cce90e237489293eb63c250e55c58863821605"
+          },
+          "end_time_unix": 1791627696.287155,
+          "exit_code": 0,
+          "phase": 1,
+          "start_time_unix": 1791627674.3035989,
+          "wall_time_s": 21.984792
+        },
+        {
+          "analysis_source": {
+            "bytes": 39550,
+            "path": "/work/code/vegas-study/v2/analyze_vegas.py",
+            "sha256": "8d041c2c3d2caf2e9d1e9f28d1ad408c1c33ad242b43e10b5ad944707245f14f"
+          },
+          "analysis_source_after": {
+            "bytes": 39550,
+            "path": "/work/code/vegas-study/v2/analyze_vegas.py",
+            "sha256": "8d041c2c3d2caf2e9d1e9f28d1ad408c1c33ad242b43e10b5ad944707245f14f"
+          },
+          "command": [
+            "/home/ubuntu/lab/.venv/bin/python3",
+            "/work/code/vegas-study/v2/analyze_vegas.py",
+            "/tmp/cs30401-vegas-v2/v2-leo-base",
+            "--out",
+            "/tmp/vegas-v2-analysis-leo/v2-leo-base/vegas",
+            "--study-analysis",
+            "/tmp/vegas-v2-analysis-leo/v2-leo-base/study-analysis.json",
+            "--event-s",
+            "121.6",
+            "--event-s",
+            "187.4"
+          ],
+          "console": {
+            "bytes": 220,
+            "path": "/tmp/vegas-v2-analysis-leo/v2-leo-base/phase-2.console.log",
+            "sha256": "21db0a4a1fd15b345831a66a9908452f811a7c069592c0564006a65465d967be"
+          },
+          "end_time_unix": 1791627710.6446187,
+          "exit_code": 0,
+          "phase": 2,
+          "start_time_unix": 1791627696.3115256,
+          "wall_time_s": 14.333095
+        }
+      ],
+      "policy": {
+        "alpha": 2,
+        "beta": 4,
+        "gamma": 1,
+        "input": "existing socket SRTT; loss/startup unchanged",
+        "min_rise_ns": 1000000,
+        "preserve_beta": false,
+        "recent_min_renewal": false,
+        "rounds": 20
+      },
+      "run": "/tmp/cs30401-vegas-v2/v2-leo-base",
+      "simulation_launch_commit": "ac133157c5faa3dac56534ab105cd2ed804fd12c",
+      "start_time_unix": 1791627674.298687,
+      "status": "complete",
+      "wall_time_s": 36.36806
+    },
+    {
+      "case": "v2-leo-renew",
+      "commands": [
+        [
+          "/home/ubuntu/lab/.venv/bin/python3",
+          "/work/code/kim-study/analyze_study.py",
+          "/tmp/cs30401-vegas-v2/v2-leo-renew",
+          "--include-bins",
+          "--output",
+          "/tmp/vegas-v2-analysis-leo/v2-leo-renew/study-analysis.json",
+          "--path-truth",
+          "/work/code/kim-study/path_truth_200s.csv"
+        ],
+        [
+          "/home/ubuntu/lab/.venv/bin/python3",
+          "/work/code/vegas-study/v2/analyze_vegas.py",
+          "/tmp/cs30401-vegas-v2/v2-leo-renew",
+          "--out",
+          "/tmp/vegas-v2-analysis-leo/v2-leo-renew/vegas",
+          "--study-analysis",
+          "/tmp/vegas-v2-analysis-leo/v2-leo-renew/study-analysis.json",
+          "--event-s",
+          "121.6",
+          "--event-s",
+          "187.4"
+        ]
+      ],
+      "end_time_unix": 1791627721.086872,
+      "original_manifest": {
+        "bytes": 7123,
+        "path": "/tmp/cs30401-vegas-v2/v2-leo-renew/case.json",
+        "sha256": "6624ec9be756e4597720a0378a9f40ab558e48d8acfb4eed427108ba778852aa"
+      },
+      "out": "/tmp/vegas-v2-analysis-leo/v2-leo-renew",
+      "output_artifacts": [
+        {
+          "bytes": 495606,
+          "path": "/tmp/vegas-v2-analysis-leo/v2-leo-renew/study-analysis.json",
+          "sha256": "4bb7ac53cba36652e3441a2baf194f7b19660c110190685f3b893318aacb63bd"
+        },
+        {
+          "bytes": 20676,
+          "path": "/tmp/vegas-v2-analysis-leo/v2-leo-renew/vegas/summary.json",
+          "sha256": "aa26f0d83c1c4647aed7dae28f98b81146c7063a0bdad52df9b0c7b734052868"
+        },
+        {
+          "bytes": 1131,
+          "path": "/tmp/vegas-v2-analysis-leo/v2-leo-renew/vegas/windows.csv",
+          "sha256": "d4d1f6d25ee471f01232b8cd3b4b302fba3e42ce520edc7a99ead26d4f4b61fa"
+        }
+      ],
+      "phases": [
+        {
+          "analysis_source": {
+            "bytes": 36868,
+            "path": "/work/code/kim-study/analyze_study.py",
+            "sha256": "5333d7f6d86c04f79bbaad82e5e2577ec3bdf2f281e115c854ad904c404aa696"
+          },
+          "analysis_source_after": {
+            "bytes": 36868,
+            "path": "/work/code/kim-study/analyze_study.py",
+            "sha256": "5333d7f6d86c04f79bbaad82e5e2577ec3bdf2f281e115c854ad904c404aa696"
+          },
+          "command": [
+            "/home/ubuntu/lab/.venv/bin/python3",
+            "/work/code/kim-study/analyze_study.py",
+            "/tmp/cs30401-vegas-v2/v2-leo-renew",
+            "--include-bins",
+            "--output",
+            "/tmp/vegas-v2-analysis-leo/v2-leo-renew/study-analysis.json",
+            "--path-truth",
+            "/work/code/kim-study/path_truth_200s.csv"
+          ],
+          "console": {
+            "bytes": 60,
+            "path": "/tmp/vegas-v2-analysis-leo/v2-leo-renew/phase-1.console.log",
+            "sha256": "0ee597e1a40a20ded3b6ad1eb844d99291037fe0323152dca5414fd47c8d0dba"
+          },
+          "end_time_unix": 1791627704.8177462,
+          "exit_code": 0,
+          "phase": 1,
+          "start_time_unix": 1791627674.305019,
+          "wall_time_s": 30.513964
+        },
+        {
+          "analysis_source": {
+            "bytes": 39550,
+            "path": "/work/code/vegas-study/v2/analyze_vegas.py",
+            "sha256": "8d041c2c3d2caf2e9d1e9f28d1ad408c1c33ad242b43e10b5ad944707245f14f"
+          },
+          "analysis_source_after": {
+            "bytes": 39550,
+            "path": "/work/code/vegas-study/v2/analyze_vegas.py",
+            "sha256": "8d041c2c3d2caf2e9d1e9f28d1ad408c1c33ad242b43e10b5ad944707245f14f"
+          },
+          "command": [
+            "/home/ubuntu/lab/.venv/bin/python3",
+            "/work/code/vegas-study/v2/analyze_vegas.py",
+            "/tmp/cs30401-vegas-v2/v2-leo-renew",
+            "--out",
+            "/tmp/vegas-v2-analysis-leo/v2-leo-renew/vegas",
+            "--study-analysis",
+            "/tmp/vegas-v2-analysis-leo/v2-leo-renew/study-analysis.json",
+            "--event-s",
+            "121.6",
+            "--event-s",
+            "187.4"
+          ],
+          "console": {
+            "bytes": 230,
+            "path": "/tmp/vegas-v2-analysis-leo/v2-leo-renew/phase-2.console.log",
+            "sha256": "6f277d239a4acdc453d343fd5855dc1cd3af0abab352c60bc9090cf31d94289e"
+          },
+          "end_time_unix": 1791627721.0722356,
+          "exit_code": 0,
+          "phase": 2,
+          "start_time_unix": 1791627704.8391864,
+          "wall_time_s": 16.23305
+        }
+      ],
+      "policy": {
+        "alpha": 2,
+        "beta": 4,
+        "gamma": 1,
+        "input": "existing socket SRTT; loss/startup unchanged",
+        "min_rise_ns": 1000000,
+        "preserve_beta": true,
+        "recent_min_renewal": true,
+        "rounds": 20
+      },
+      "run": "/tmp/cs30401-vegas-v2/v2-leo-renew",
+      "simulation_launch_commit": "ac133157c5faa3dac56534ab105cd2ed804fd12c",
+      "start_time_unix": 1791627674.2991974,
+      "status": "complete",
+      "wall_time_s": 46.78891
+    },
+    {
+      "case": "v2-step-base",
+      "commands": [
+        [
+          "/home/ubuntu/lab/.venv/bin/python3",
+          "/work/code/kim-study/analyze_study.py",
+          "/tmp/cs30401-vegas-v2/v2-step-base",
+          "--include-bins",
+          "--output",
+          "/tmp/vegas-v2-analysis-micro/v2-step-base/study-analysis.json",
+          "--events",
+          "100",
+          "--root-qdisc-absence-audited"
+        ],
+        [
+          "/home/ubuntu/lab/.venv/bin/python3",
+          "/work/code/vegas-study/v2/analyze_vegas.py",
+          "/tmp/cs30401-vegas-v2/v2-step-base",
+          "--out",
+          "/tmp/vegas-v2-analysis-micro/v2-step-base/vegas",
+          "--study-analysis",
+          "/tmp/vegas-v2-analysis-micro/v2-step-base/study-analysis.json",
+          "--event-s",
+          "100"
+        ]
+      ],
+      "end_time_unix": 1791627584.7649233,
+      "original_manifest": {
+        "bytes": 7927,
+        "path": "/tmp/cs30401-vegas-v2/v2-step-base/case.json",
+        "sha256": "4ff772098d8c67a5f6584d6b791e731d2234fb36543eb8fefe6436aa043448e2"
+      },
+      "out": "/tmp/vegas-v2-analysis-micro/v2-step-base",
+      "output_artifacts": [
+        {
+          "bytes": 314502,
+          "path": "/tmp/vegas-v2-analysis-micro/v2-step-base/study-analysis.json",
+          "sha256": "0d5502e48500471aacf76ea70a96171c3e8233b4f316261657788a5253e39932"
+        },
+        {
+          "bytes": 31170,
+          "path": "/tmp/vegas-v2-analysis-micro/v2-step-base/vegas/summary.json",
+          "sha256": "23a3038654fc235716a19eb63f5ae81391e3269b2222492454b4460b627365f9"
+        },
+        {
+          "bytes": 951,
+          "path": "/tmp/vegas-v2-analysis-micro/v2-step-base/vegas/windows.csv",
+          "sha256": "0b6f3afcaa6b48ba7fdf1289bb2d63e0e4dde5c6e0a35d74d7603dda68a29794"
+        }
+      ],
+      "phases": [
+        {
+          "analysis_source": {
+            "bytes": 36868,
+            "path": "/work/code/kim-study/analyze_study.py",
+            "sha256": "5333d7f6d86c04f79bbaad82e5e2577ec3bdf2f281e115c854ad904c404aa696"
+          },
+          "analysis_source_after": {
+            "bytes": 36868,
+            "path": "/work/code/kim-study/analyze_study.py",
+            "sha256": "5333d7f6d86c04f79bbaad82e5e2577ec3bdf2f281e115c854ad904c404aa696"
+          },
+          "command": [
+            "/home/ubuntu/lab/.venv/bin/python3",
+            "/work/code/kim-study/analyze_study.py",
+            "/tmp/cs30401-vegas-v2/v2-step-base",
+            "--include-bins",
+            "--output",
+            "/tmp/vegas-v2-analysis-micro/v2-step-base/study-analysis.json",
+            "--events",
+            "100",
+            "--root-qdisc-absence-audited"
+          ],
+          "console": {
+            "bytes": 62,
+            "path": "/tmp/vegas-v2-analysis-micro/v2-step-base/phase-1.console.log",
+            "sha256": "48c6cefd782109d042c4ab01834d4159b649e8a445b733701fb3c271a89be38a"
+          },
+          "end_time_unix": 1791627538.4286397,
+          "exit_code": 0,
+          "phase": 1,
+          "start_time_unix": 1791627495.2759101,
+          "wall_time_s": 43.156469
+        },
+        {
+          "analysis_source": {
+            "bytes": 39550,
+            "path": "/work/code/vegas-study/v2/analyze_vegas.py",
+            "sha256": "8d041c2c3d2caf2e9d1e9f28d1ad408c1c33ad242b43e10b5ad944707245f14f"
+          },
+          "analysis_source_after": {
+            "bytes": 39550,
+            "path": "/work/code/vegas-study/v2/analyze_vegas.py",
+            "sha256": "8d041c2c3d2caf2e9d1e9f28d1ad408c1c33ad242b43e10b5ad944707245f14f"
+          },
+          "command": [
+            "/home/ubuntu/lab/.venv/bin/python3",
+            "/work/code/vegas-study/v2/analyze_vegas.py",
+            "/tmp/cs30401-vegas-v2/v2-step-base",
+            "--out",
+            "/tmp/vegas-v2-analysis-micro/v2-step-base/vegas",
+            "--study-analysis",
+            "/tmp/vegas-v2-analysis-micro/v2-step-base/study-analysis.json",
+            "--event-s",
+            "100"
+          ],
+          "console": {
+            "bytes": 231,
+            "path": "/tmp/vegas-v2-analysis-micro/v2-step-base/phase-2.console.log",
+            "sha256": "09307735154f998ec73a2654a5acef29ac922ef60a8bd04f7d7f354eb74d1e5c"
+          },
+          "end_time_unix": 1791627584.74601,
+          "exit_code": 0,
+          "phase": 2,
+          "start_time_unix": 1791627538.4928517,
+          "wall_time_s": 46.259814
+        }
+      ],
+      "policy": {
+        "alpha": 2,
+        "beta": 4,
+        "gamma": 1,
+        "input": "existing socket SRTT; loss/startup unchanged",
+        "min_rise_ns": 1000000,
+        "preserve_beta": false,
+        "recent_min_renewal": false,
+        "rounds": 20
+      },
+      "run": "/tmp/cs30401-vegas-v2/v2-step-base",
+      "simulation_launch_commit": "ac133157c5faa3dac56534ab105cd2ed804fd12c",
+      "start_time_unix": 1791627495.2538474,
+      "status": "complete",
+      "wall_time_s": 89.521462
+    },
+    {
+      "case": "v2-step-comp-base",
+      "commands": [
+        [
+          "/home/ubuntu/lab/.venv/bin/python3",
+          "/work/code/kim-study/analyze_study.py",
+          "/tmp/cs30401-vegas-v2/v2-step-comp-base",
+          "--include-bins",
+          "--output",
+          "/tmp/vegas-v2-analysis-micro/v2-step-comp-base/study-analysis.json",
+          "--events",
+          "100",
+          "--root-qdisc-absence-audited"
+        ],
+        [
+          "/home/ubuntu/lab/.venv/bin/python3",
+          "/work/code/vegas-study/v2/analyze_vegas.py",
+          "/tmp/cs30401-vegas-v2/v2-step-comp-base",
+          "--out",
+          "/tmp/vegas-v2-analysis-micro/v2-step-comp-base/vegas",
+          "--study-analysis",
+          "/tmp/vegas-v2-analysis-micro/v2-step-comp-base/study-analysis.json",
+          "--event-s",
+          "100",
+          "--window",
+          "competition:80:200"
+        ]
+      ],
+      "end_time_unix": 1791627793.9338171,
+      "original_manifest": {
+        "bytes": 7951,
+        "path": "/tmp/cs30401-vegas-v2/v2-step-comp-base/case.json",
+        "sha256": "d75df751d539aa39ef244849e35c2202541b0311c8fbcf27d4bc56dcada8b843"
+      },
+      "out": "/tmp/vegas-v2-analysis-micro/v2-step-comp-base",
+      "output_artifacts": [
+        {
+          "bytes": 934452,
+          "path": "/tmp/vegas-v2-analysis-micro/v2-step-comp-base/study-analysis.json",
+          "sha256": "ab95fd547f874a15523a5e4e6d976728e906c44879863b3ba05e40468566ef87"
+        },
+        {
+          "bytes": 44088,
+          "path": "/tmp/vegas-v2-analysis-micro/v2-step-comp-base/vegas/summary.json",
+          "sha256": "117f538e3adf07eef681af3e0324dc94d53937af25676e38903114b38313c94e"
+        },
+        {
+          "bytes": 1890,
+          "path": "/tmp/vegas-v2-analysis-micro/v2-step-comp-base/vegas/windows.csv",
+          "sha256": "98b86b89096335f187edaf8a4822f9b28327d0a5e7ba85b5218e7ea3b450ce12"
+        }
+      ],
+      "phases": [
+        {
+          "analysis_source": {
+            "bytes": 36868,
+            "path": "/work/code/kim-study/analyze_study.py",
+            "sha256": "5333d7f6d86c04f79bbaad82e5e2577ec3bdf2f281e115c854ad904c404aa696"
+          },
+          "analysis_source_after": {
+            "bytes": 36868,
+            "path": "/work/code/kim-study/analyze_study.py",
+            "sha256": "5333d7f6d86c04f79bbaad82e5e2577ec3bdf2f281e115c854ad904c404aa696"
+          },
+          "command": [
+            "/home/ubuntu/lab/.venv/bin/python3",
+            "/work/code/kim-study/analyze_study.py",
+            "/tmp/cs30401-vegas-v2/v2-step-comp-base",
+            "--include-bins",
+            "--output",
+            "/tmp/vegas-v2-analysis-micro/v2-step-comp-base/study-analysis.json",
+            "--events",
+            "100",
+            "--root-qdisc-absence-audited"
+          ],
+          "console": {
+            "bytes": 67,
+            "path": "/tmp/vegas-v2-analysis-micro/v2-step-comp-base/phase-1.console.log",
+            "sha256": "dc726c82d199ebdb379117955c2119d0b179acc00f98f700fc60e5688ced4748"
+          },
+          "end_time_unix": 1791627729.515179,
+          "exit_code": 0,
+          "phase": 1,
+          "start_time_unix": 1791627694.9306796,
+          "wall_time_s": 34.586326
+        },
+        {
+          "analysis_source": {
+            "bytes": 39550,
+            "path": "/work/code/vegas-study/v2/analyze_vegas.py",
+            "sha256": "8d041c2c3d2caf2e9d1e9f28d1ad408c1c33ad242b43e10b5ad944707245f14f"
+          },
+          "analysis_source_after": {
+            "bytes": 39550,
+            "path": "/work/code/vegas-study/v2/analyze_vegas.py",
+            "sha256": "8d041c2c3d2caf2e9d1e9f28d1ad408c1c33ad242b43e10b5ad944707245f14f"
+          },
+          "command": [
+            "/home/ubuntu/lab/.venv/bin/python3",
+            "/work/code/vegas-study/v2/analyze_vegas.py",
+            "/tmp/cs30401-vegas-v2/v2-step-comp-base",
+            "--out",
+            "/tmp/vegas-v2-analysis-micro/v2-step-comp-base/vegas",
+            "--study-analysis",
+            "/tmp/vegas-v2-analysis-micro/v2-step-comp-base/study-analysis.json",
+            "--event-s",
+            "100",
+            "--window",
+            "competition:80:200"
+          ],
+          "console": {
+            "bytes": 238,
+            "path": "/tmp/vegas-v2-analysis-micro/v2-step-comp-base/phase-2.console.log",
+            "sha256": "2779f73bf41dab0dc5645c1bcfefb6cc26c0d7a8ddecabcbf18784899cfc06ab"
+          },
+          "end_time_unix": 1791627793.9116726,
+          "exit_code": 0,
+          "phase": 2,
+          "start_time_unix": 1791627729.5444834,
+          "wall_time_s": 64.369615
+        }
+      ],
+      "policy": {
+        "alpha": 2,
+        "beta": 4,
+        "gamma": 1,
+        "input": "existing socket SRTT; loss/startup unchanged",
+        "min_rise_ns": 1000000,
+        "preserve_beta": false,
+        "recent_min_renewal": false,
+        "rounds": 20
+      },
+      "run": "/tmp/cs30401-vegas-v2/v2-step-comp-base",
+      "simulation_launch_commit": "ac133157c5faa3dac56534ab105cd2ed804fd12c",
+      "start_time_unix": 1791627694.9181755,
+      "status": "complete",
+      "wall_time_s": 99.019908
+    },
+    {
+      "case": "v2-step-comp-renew",
+      "commands": [
+        [
+          "/home/ubuntu/lab/.venv/bin/python3",
+          "/work/code/kim-study/analyze_study.py",
+          "/tmp/cs30401-vegas-v2/v2-step-comp-renew",
+          "--include-bins",
+          "--output",
+          "/tmp/vegas-v2-analysis-micro/v2-step-comp-renew/study-analysis.json",
+          "--events",
+          "100",
+          "--root-qdisc-absence-audited"
+        ],
+        [
+          "/home/ubuntu/lab/.venv/bin/python3",
+          "/work/code/vegas-study/v2/analyze_vegas.py",
+          "/tmp/cs30401-vegas-v2/v2-step-comp-renew",
+          "--out",
+          "/tmp/vegas-v2-analysis-micro/v2-step-comp-renew/vegas",
+          "--study-analysis",
+          "/tmp/vegas-v2-analysis-micro/v2-step-comp-renew/study-analysis.json",
+          "--event-s",
+          "100",
+          "--window",
+          "competition:80:200"
+        ]
+      ],
+      "end_time_unix": 1791627811.6204424,
+      "original_manifest": {
+        "bytes": 7948,
+        "path": "/tmp/cs30401-vegas-v2/v2-step-comp-renew/case.json",
+        "sha256": "cdb5db01e90fd2b0436ef454ffc56de8965289203a4e9419e58da2b48cba5641"
+      },
+      "out": "/tmp/vegas-v2-analysis-micro/v2-step-comp-renew",
+      "output_artifacts": [
+        {
+          "bytes": 944554,
+          "path": "/tmp/vegas-v2-analysis-micro/v2-step-comp-renew/study-analysis.json",
+          "sha256": "3f02e62bfc342a150a768dcbde45a06387ea493446e5762051cd8ff30b330a27"
+        },
+        {
+          "bytes": 54968,
+          "path": "/tmp/vegas-v2-analysis-micro/v2-step-comp-renew/vegas/summary.json",
+          "sha256": "3abb01979191761cf62da38db24f6459841130076f8bceb8ade48fc3f0de2d7a"
+        },
+        {
+          "bytes": 1893,
+          "path": "/tmp/vegas-v2-analysis-micro/v2-step-comp-renew/vegas/windows.csv",
+          "sha256": "50b99a1a5beb225c352cdf314e9ac6a9855c319e29c7cdd0bb959dbf0ebf4a65"
+        }
+      ],
+      "phases": [
+        {
+          "analysis_source": {
+            "bytes": 36868,
+            "path": "/work/code/kim-study/analyze_study.py",
+            "sha256": "5333d7f6d86c04f79bbaad82e5e2577ec3bdf2f281e115c854ad904c404aa696"
+          },
+          "analysis_source_after": {
+            "bytes": 36868,
+            "path": "/work/code/kim-study/analyze_study.py",
+            "sha256": "5333d7f6d86c04f79bbaad82e5e2577ec3bdf2f281e115c854ad904c404aa696"
+          },
+          "command": [
+            "/home/ubuntu/lab/.venv/bin/python3",
+            "/work/code/kim-study/analyze_study.py",
+            "/tmp/cs30401-vegas-v2/v2-step-comp-renew",
+            "--include-bins",
+            "--output",
+            "/tmp/vegas-v2-analysis-micro/v2-step-comp-renew/study-analysis.json",
+            "--events",
+            "100",
+            "--root-qdisc-absence-audited"
+          ],
+          "console": {
+            "bytes": 68,
+            "path": "/tmp/vegas-v2-analysis-micro/v2-step-comp-renew/phase-1.console.log",
+            "sha256": "97822499470e57a4a722c1f5916099e14a8bd8722414b57e1d6c3fb08292c082"
+          },
+          "end_time_unix": 1791627748.2651386,
+          "exit_code": 0,
+          "phase": 1,
+          "start_time_unix": 1791627719.7856665,
+          "wall_time_s": 28.481298
+        },
+        {
+          "analysis_source": {
+            "bytes": 39550,
+            "path": "/work/code/vegas-study/v2/analyze_vegas.py",
+            "sha256": "8d041c2c3d2caf2e9d1e9f28d1ad408c1c33ad242b43e10b5ad944707245f14f"
+          },
+          "analysis_source_after": {
+            "bytes": 39550,
+            "path": "/work/code/vegas-study/v2/analyze_vegas.py",
+            "sha256": "8d041c2c3d2caf2e9d1e9f28d1ad408c1c33ad242b43e10b5ad944707245f14f"
+          },
+          "command": [
+            "/home/ubuntu/lab/.venv/bin/python3",
+            "/work/code/vegas-study/v2/analyze_vegas.py",
+            "/tmp/cs30401-vegas-v2/v2-step-comp-renew",
+            "--out",
+            "/tmp/vegas-v2-analysis-micro/v2-step-comp-renew/vegas",
+            "--study-analysis",
+            "/tmp/vegas-v2-analysis-micro/v2-step-comp-renew/study-analysis.json",
+            "--event-s",
+            "100",
+            "--window",
+            "competition:80:200"
+          ],
+          "console": {
+            "bytes": 241,
+            "path": "/tmp/vegas-v2-analysis-micro/v2-step-comp-renew/phase-2.console.log",
+            "sha256": "137e7ab0286d41a69d38b3ec2834d416641fcc57b1bd062e03e4ea73b813e92b"
+          },
+          "end_time_unix": 1791627811.6028183,
+          "exit_code": 0,
+          "phase": 2,
+          "start_time_unix": 1791627748.2880037,
+          "wall_time_s": 63.31724
+        }
+      ],
+      "policy": {
+        "alpha": 2,
+        "beta": 4,
+        "gamma": 1,
+        "input": "existing socket SRTT; loss/startup unchanged",
+        "min_rise_ns": 1000000,
+        "preserve_beta": true,
+        "recent_min_renewal": true,
+        "rounds": 20
+      },
+      "run": "/tmp/cs30401-vegas-v2/v2-step-comp-renew",
+      "simulation_launch_commit": "ac133157c5faa3dac56534ab105cd2ed804fd12c",
+      "start_time_unix": 1791627719.7775772,
+      "status": "complete",
+      "wall_time_s": 91.847114
+    },
+    {
+      "case": "v2-step-renew",
+      "commands": [
+        [
+          "/home/ubuntu/lab/.venv/bin/python3",
+          "/work/code/kim-study/analyze_study.py",
+          "/tmp/cs30401-vegas-v2/v2-step-renew",
+          "--include-bins",
+          "--output",
+          "/tmp/vegas-v2-analysis-micro/v2-step-renew/study-analysis.json",
+          "--events",
+          "100",
+          "--root-qdisc-absence-audited"
+        ],
+        [
+          "/home/ubuntu/lab/.venv/bin/python3",
+          "/work/code/vegas-study/v2/analyze_vegas.py",
+          "/tmp/cs30401-vegas-v2/v2-step-renew",
+          "--out",
+          "/tmp/vegas-v2-analysis-micro/v2-step-renew/vegas",
+          "--study-analysis",
+          "/tmp/vegas-v2-analysis-micro/v2-step-renew/study-analysis.json",
+          "--event-s",
+          "100"
+        ]
+      ],
+      "end_time_unix": 1791627610.6261578,
+      "original_manifest": {
+        "bytes": 7925,
+        "path": "/tmp/cs30401-vegas-v2/v2-step-renew/case.json",
+        "sha256": "f4b99b705ac6f145ecd66daeb3ff00a2b86d4261f0157e38a21b454f753ae7c7"
+      },
+      "out": "/tmp/vegas-v2-analysis-micro/v2-step-renew",
+      "output_artifacts": [
+        {
+          "bytes": 315542,
+          "path": "/tmp/vegas-v2-analysis-micro/v2-step-renew/study-analysis.json",
+          "sha256": "b037a60b163eb0066ccb1a183c2a8a9b6e84945d4d221497613107594bce22b1"
+        },
+        {
+          "bytes": 33238,
+          "path": "/tmp/vegas-v2-analysis-micro/v2-step-renew/vegas/summary.json",
+          "sha256": "0e11ad6237ae33aa4a2829c261276779fdd6139738c64d0f6fedfbcfa252dd2b"
+        },
+        {
+          "bytes": 940,
+          "path": "/tmp/vegas-v2-analysis-micro/v2-step-renew/vegas/windows.csv",
+          "sha256": "457286f17e3426e46878cd7d13cfefb463b50c423ee983defeae398b6f5f409d"
+        }
+      ],
+      "phases": [
+        {
+          "analysis_source": {
+            "bytes": 36868,
+            "path": "/work/code/kim-study/analyze_study.py",
+            "sha256": "5333d7f6d86c04f79bbaad82e5e2577ec3bdf2f281e115c854ad904c404aa696"
+          },
+          "analysis_source_after": {
+            "bytes": 36868,
+            "path": "/work/code/kim-study/analyze_study.py",
+            "sha256": "5333d7f6d86c04f79bbaad82e5e2577ec3bdf2f281e115c854ad904c404aa696"
+          },
+          "command": [
+            "/home/ubuntu/lab/.venv/bin/python3",
+            "/work/code/kim-study/analyze_study.py",
+            "/tmp/cs30401-vegas-v2/v2-step-renew",
+            "--include-bins",
+            "--output",
+            "/tmp/vegas-v2-analysis-micro/v2-step-renew/study-analysis.json",
+            "--events",
+            "100",
+            "--root-qdisc-absence-audited"
+          ],
+          "console": {
+            "bytes": 63,
+            "path": "/tmp/vegas-v2-analysis-micro/v2-step-renew/phase-1.console.log",
+            "sha256": "6eb65d27b81390143765d8925221f71a2517287d01dbb12e08d3bcc7a95ea75a"
+          },
+          "end_time_unix": 1791627550.4391515,
+          "exit_code": 0,
+          "phase": 1,
+          "start_time_unix": 1791627497.1300082,
+          "wall_time_s": 53.316809
+        },
+        {
+          "analysis_source": {
+            "bytes": 39550,
+            "path": "/work/code/vegas-study/v2/analyze_vegas.py",
+            "sha256": "8d041c2c3d2caf2e9d1e9f28d1ad408c1c33ad242b43e10b5ad944707245f14f"
+          },
+          "analysis_source_after": {
+            "bytes": 39550,
+            "path": "/work/code/vegas-study/v2/analyze_vegas.py",
+            "sha256": "8d041c2c3d2caf2e9d1e9f28d1ad408c1c33ad242b43e10b5ad944707245f14f"
+          },
+          "command": [
+            "/home/ubuntu/lab/.venv/bin/python3",
+            "/work/code/vegas-study/v2/analyze_vegas.py",
+            "/tmp/cs30401-vegas-v2/v2-step-renew",
+            "--out",
+            "/tmp/vegas-v2-analysis-micro/v2-step-renew/vegas",
+            "--study-analysis",
+            "/tmp/vegas-v2-analysis-micro/v2-step-renew/study-analysis.json",
+            "--event-s",
+            "100"
+          ],
+          "console": {
+            "bytes": 224,
+            "path": "/tmp/vegas-v2-analysis-micro/v2-step-renew/phase-2.console.log",
+            "sha256": "f7ee813d85bb479dadebce23593bd00c70d5558e855459410827af9abd5d1c5a"
+          },
+          "end_time_unix": 1791627610.6118276,
+          "exit_code": 0,
+          "phase": 2,
+          "start_time_unix": 1791627550.4610212,
+          "wall_time_s": 60.155872
+        }
+      ],
+      "policy": {
+        "alpha": 2,
+        "beta": 4,
+        "gamma": 1,
+        "input": "existing socket SRTT; loss/startup unchanged",
+        "min_rise_ns": 1000000,
+        "preserve_beta": true,
+        "recent_min_renewal": true,
+        "rounds": 20
+      },
+      "run": "/tmp/cs30401-vegas-v2/v2-step-renew",
+      "simulation_launch_commit": "ac133157c5faa3dac56534ab105cd2ed804fd12c",
+      "start_time_unix": 1791627497.1088002,
+      "status": "complete",
+      "wall_time_s": 113.530088
+    }
+  ],
+  "combine_helper": {
+    "bytes": 2656,
+    "path": "/work/code/vegas-study/v2/combine_analysis.py",
+    "sha256": "74ffe420f1f9eb3a36e5d4c8c10f927df448f5a553aa22f49f350906001e20b1"
+  },
+  "execution_qualification": "Eight micro cases and two LEO cases were analyzed in separate overlapping matrices; their original runtimes and identities remain in the partial receipts and per-case phases. This is a merge of completed analysis receipts, not a new simulation or a measured combined analysis runtime.",
+  "extra_window": "Legacy label first-false-renew [90.194745440,91.958450720) is the V1 first false-renewal history used as a common reference window, NOT the actual V2 renewal history. Original output labels/partial receipts remain unchanged.",
+  "method": "No simulations. Phase1 original analyzer with bins; Phase2 independent app/queue/Vegas validation against phase1. Micro root-qdisc absence is established by reviewed driver/actual config. All outputs are new, failures retained.",
+  "out": "/tmp/vegas-v2-analysis",
+  "partial_matrix_git_identities": [
+    {
+      "git_head": "ac133157c5faa3dac56534ab105cd2ed804fd12c",
+      "qualification": "Post-hoc helper checkout at analysis time; launch commit is separately read and validated from each original run. Dirty/untracked helpers are identified by their SHA256, not assumed to belong to git_head.",
+      "worktree_status": ""
+    },
+    {
+      "git_head": "ac133157c5faa3dac56534ab105cd2ed804fd12c",
+      "qualification": "Post-hoc helper checkout at analysis time; launch commit is separately read and validated from each original run. Dirty/untracked helpers are identified by their SHA256, not assumed to belong to git_head.",
+      "worktree_status": ""
+    }
+  ],
+  "partial_matrix_receipts": [
+    {
+      "bytes": 43773,
+      "path": "/tmp/vegas-v2-analysis-micro/matrix.json",
+      "sha256": "9c6b7b6c83f0b49e0d187efd93bf3fa0172f326762bef9693335534e9132feaa"
+    },
+    {
+      "bytes": 12678,
+      "path": "/tmp/vegas-v2-analysis-leo/matrix.json",
+      "sha256": "45961f2dfbc126bd739d4ba9f0fb4bb49f6396e9c69a0ce2706e0f33132e05c3"
+    }
+  ],
+  "posthoc_helper_identity": {
+    "git_head": "ac133157c5faa3dac56534ab105cd2ed804fd12c",
+    "qualification": "Post-hoc helper checkout at analysis time; launch commit is separately read and validated from each original run. Dirty/untracked helpers are identified by their SHA256, not assumed to belong to git_head.",
+    "worktree_status": ""
+  },
+  "run_prefix": "v2",
+  "run_root": "/tmp/cs30401-vegas-v2",
+  "schema_version": 1,
+  "simulation_launch_commit": "ac133157c5faa3dac56534ab105cd2ed804fd12c",
+  "sources": [
+    {
+      "bytes": 10419,
+      "path": "/work/code/vegas-study/v2/analyze_matrix.py",
+      "sha256": "5ce07c2f1d393a57035045ae7f4f217f21a1ac14f7f136cf6f117180352e58d7"
+    },
+    {
+      "bytes": 36868,
+      "path": "/work/code/kim-study/analyze_study.py",
+      "sha256": "5333d7f6d86c04f79bbaad82e5e2577ec3bdf2f281e115c854ad904c404aa696"
+    },
+    {
+      "bytes": 39550,
+      "path": "/work/code/vegas-study/v2/analyze_vegas.py",
+      "sha256": "8d041c2c3d2caf2e9d1e9f28d1ad408c1c33ad242b43e10b5ad944707245f14f"
+    },
+    {
+      "bytes": 135964,
+      "path": "/work/code/kim-study/path_truth_200s.csv",
+      "sha256": "49bd5418f2b13bdbf6d703f719d61075f814cc86d44c745651bf797f4e5f656c"
+    }
+  ],
+  "sources_after": [
+    {
+      "bytes": 10419,
+      "path": "/work/code/vegas-study/v2/analyze_matrix.py",
+      "sha256": "5ce07c2f1d393a57035045ae7f4f217f21a1ac14f7f136cf6f117180352e58d7"
+    },
+    {
+      "bytes": 36868,
+      "path": "/work/code/kim-study/analyze_study.py",
+      "sha256": "5333d7f6d86c04f79bbaad82e5e2577ec3bdf2f281e115c854ad904c404aa696"
+    },
+    {
+      "bytes": 39550,
+      "path": "/work/code/vegas-study/v2/analyze_vegas.py",
+      "sha256": "8d041c2c3d2caf2e9d1e9f28d1ad408c1c33ad242b43e10b5ad944707245f14f"
+    },
+    {
+      "bytes": 135964,
+      "path": "/work/code/kim-study/path_truth_200s.csv",
+      "sha256": "49bd5418f2b13bdbf6d703f719d61075f814cc86d44c745651bf797f4e5f656c"
+    }
+  ],
+  "status": "complete"
+}

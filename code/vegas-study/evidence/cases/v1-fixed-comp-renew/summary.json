@@ -1,0 +1,1619 @@
+{
+  "all_original_regular_files": [
+    {
+      "bytes": 7740,
+      "path": "/tmp/cs30401-vegas/v1-fixed-comp-renew/case.json",
+      "relative_path": "case.json",
+      "sha256": "5dfce2d248686b61dfdacec8d5143d2b4fd4cd73d6a0b8ec63f77795620fecbe"
+    },
+    {
+      "bytes": 1170,
+      "path": "/tmp/cs30401-vegas/v1-fixed-comp-renew/config_driver.json",
+      "relative_path": "config_driver.json",
+      "sha256": "c3bc002f385a7c23dcab3e8c7c7693edafeff380b7be00b9826fd660d4da2772"
+    },
+    {
+      "bytes": 36,
+      "path": "/tmp/cs30401-vegas/v1-fixed-comp-renew/config_ns3.properties",
+      "relative_path": "config_ns3.properties",
+      "sha256": "3c4c19c08bb23933cce0c1895c539e062b0fd04207aa4832d69e2d135ab1ae3e"
+    },
+    {
+      "bytes": 0,
+      "path": "/tmp/cs30401-vegas/v1-fixed-comp-renew/console.log",
+      "relative_path": "console.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 162,
+      "path": "/tmp/cs30401-vegas/v1-fixed-comp-renew/logs_ns3/delay_events.csv",
+      "relative_path": "logs_ns3/delay_events.csv",
+      "sha256": "346e2e27550015f28425194bfe5a174f0c6ab87d89be7d9b81357111a4ea4f54"
+    },
+    {
+      "bytes": 373,
+      "path": "/tmp/cs30401-vegas/v1-fixed-comp-renew/logs_ns3/flow_summary.csv",
+      "relative_path": "logs_ns3/flow_summary.csv",
+      "sha256": "ca5514463f892310a9334a0ef51140327521e6165cb1a80262a5e9e11af67fd3"
+    },
+    {
+      "bytes": 316,
+      "path": "/tmp/cs30401-vegas/v1-fixed-comp-renew/logs_ns3/queue_coverage.csv",
+      "relative_path": "logs_ns3/queue_coverage.csv",
+      "sha256": "82e2f2dd7290ec35da6592dd3f306a241471861265a21e8f88853c0053b73499"
+    },
+    {
+      "bytes": 279136428,
+      "path": "/tmp/cs30401-vegas/v1-fixed-comp-renew/logs_ns3/queue_events.csv",
+      "relative_path": "logs_ns3/queue_events.csv",
+      "sha256": "c5ba5a7a9db133792e12281a981715858ea3897db4b92f5dbdc83b06158757ca"
+    },
+    {
+      "bytes": 137646691,
+      "path": "/tmp/cs30401-vegas/v1-fixed-comp-renew/logs_ns3/queue_occupancy.csv",
+      "relative_path": "logs_ns3/queue_occupancy.csv",
+      "sha256": "81797f95a50d35d69ae867ef8d2b424e947c556332be78fb7aea951fc235f702"
+    },
+    {
+      "bytes": 6343,
+      "path": "/tmp/cs30401-vegas/v1-fixed-comp-renew/logs_ns3/queue_pending.csv",
+      "relative_path": "logs_ns3/queue_pending.csv",
+      "sha256": "f151f3f08f1c398011922967d84ba314c0dc6a8498a0e80cd67ca027f98348c4"
+    },
+    {
+      "bytes": 145613180,
+      "path": "/tmp/cs30401-vegas/v1-fixed-comp-renew/logs_ns3/queue_sojourn.csv",
+      "relative_path": "logs_ns3/queue_sojourn.csv",
+      "sha256": "5aed816c22f0213d59b33d1da8b1871cba7112041cd2119d99352928a1c20b29"
+    },
+    {
+      "bytes": 187,
+      "path": "/tmp/cs30401-vegas/v1-fixed-comp-renew/logs_ns3/queue_summary.csv",
+      "relative_path": "logs_ns3/queue_summary.csv",
+      "sha256": "b202a09e384eeb78039435b9169253a8d20a4f28d45628a61689a502312d6ada"
+    },
+    {
+      "bytes": 179,
+      "path": "/tmp/cs30401-vegas/v1-fixed-comp-renew/logs_ns3/socket_types.csv",
+      "relative_path": "logs_ns3/socket_types.csv",
+      "sha256": "d725d52c86dd0cbcb0d1092469d90abc5458d5d9ff966e7226fcf83a89b38994"
+    },
+    {
+      "bytes": 59517322,
+      "path": "/tmp/cs30401-vegas/v1-fixed-comp-renew/logs_ns3/study_app_rx_node_1_port_1024.csv",
+      "relative_path": "logs_ns3/study_app_rx_node_1_port_1024.csv",
+      "sha256": "b2746ec2366c451d03dfccb04d1afda01b0555ca2afbb8c005ad0b075764eda3"
+    },
+    {
+      "bytes": 47798916,
+      "path": "/tmp/cs30401-vegas/v1-fixed-comp-renew/logs_ns3/study_app_rx_node_1_port_1025.csv",
+      "relative_path": "logs_ns3/study_app_rx_node_1_port_1025.csv",
+      "sha256": "07c10ba42fcf171c077b91dbb94b1c61e40bee17b8ec2385dd7ef3cb627f4d5c"
+    },
+    {
+      "bytes": 328,
+      "path": "/tmp/cs30401-vegas/v1-fixed-comp-renew/logs_ns3/study_drop_coverage.csv",
+      "relative_path": "logs_ns3/study_drop_coverage.csv",
+      "sha256": "f2bbce727ae1f61019ef8f727753e3a8f64abdeb41d660a20a3607802f4524f4"
+    },
+    {
+      "bytes": 19856,
+      "path": "/tmp/cs30401-vegas/v1-fixed-comp-renew/logs_ns3/study_drops.csv",
+      "relative_path": "logs_ns3/study_drops.csv",
+      "sha256": "690a86c49716a27b996d6750b8b6fc1ead49a430085cd359a7165842c9ecb623"
+    },
+    {
+      "bytes": 79285851,
+      "path": "/tmp/cs30401-vegas/v1-fixed-comp-renew/logs_ns3/study_rx_node_1_port_1024.csv",
+      "relative_path": "logs_ns3/study_rx_node_1_port_1024.csv",
+      "sha256": "35543d2058fb1ad02e7841272bf8abc6aee5189f664601384a59744ac2cdcd46"
+    },
+    {
+      "bytes": 64528610,
+      "path": "/tmp/cs30401-vegas/v1-fixed-comp-renew/logs_ns3/study_rx_node_1_port_1025.csv",
+      "relative_path": "logs_ns3/study_rx_node_1_port_1025.csv",
+      "sha256": "64f8790badd2d7f539a3df8f985fbd9714b3953444419d6be8b7dfcd93e0a424"
+    },
+    {
+      "bytes": 35149,
+      "path": "/tmp/cs30401-vegas/v1-fixed-comp-renew/logs_ns3/tcp_flow_0_cwnd.csv",
+      "relative_path": "logs_ns3/tcp_flow_0_cwnd.csv",
+      "sha256": "0156a36c68aed87f728d1b8dacb43c0966760ae3781d2a6883d51c52ea6f027a"
+    },
+    {
+      "bytes": 9099156,
+      "path": "/tmp/cs30401-vegas/v1-fixed-comp-renew/logs_ns3/tcp_flow_0_progress.csv",
+      "relative_path": "logs_ns3/tcp_flow_0_progress.csv",
+      "sha256": "4e11009d326dfb703db49c9ebdb722591065f28f444391212ebd4a9277d86f42"
+    },
+    {
+      "bytes": 8704532,
+      "path": "/tmp/cs30401-vegas/v1-fixed-comp-renew/logs_ns3/tcp_flow_0_rtt.csv",
+      "relative_path": "logs_ns3/tcp_flow_0_rtt.csv",
+      "sha256": "368664551be6051eb820bcdb42f96240d628a314d4d1467039a934c9f15a1d98"
+    },
+    {
+      "bytes": 32516,
+      "path": "/tmp/cs30401-vegas/v1-fixed-comp-renew/logs_ns3/tcp_flow_0_study_events.csv",
+      "relative_path": "logs_ns3/tcp_flow_0_study_events.csv",
+      "sha256": "cf8368bc393e596505484eecdbf62ce40971c62721d3cdf3ba0e0a5bfd158a92"
+    },
+    {
+      "bytes": 84986013,
+      "path": "/tmp/cs30401-vegas/v1-fixed-comp-renew/logs_ns3/tcp_flow_0_study_packets.csv",
+      "relative_path": "logs_ns3/tcp_flow_0_study_packets.csv",
+      "sha256": "97565768c96d2423afaa83edcff1fb8d591de796150faf88d35b540255d285ea"
+    },
+    {
+      "bytes": 96864,
+      "path": "/tmp/cs30401-vegas/v1-fixed-comp-renew/logs_ns3/tcp_flow_1_cwnd.csv",
+      "relative_path": "logs_ns3/tcp_flow_1_cwnd.csv",
+      "sha256": "96787009851e839c880261dd6fbc953edf8b80662130525c8b4734062b876883"
+    },
+    {
+      "bytes": 7347728,
+      "path": "/tmp/cs30401-vegas/v1-fixed-comp-renew/logs_ns3/tcp_flow_1_progress.csv",
+      "relative_path": "logs_ns3/tcp_flow_1_progress.csv",
+      "sha256": "6bce62a69851ef05c5a11ca9fa1f312f56ccf6e6c5451e5e1567ef561e5ec31c"
+    },
+    {
+      "bytes": 7077077,
+      "path": "/tmp/cs30401-vegas/v1-fixed-comp-renew/logs_ns3/tcp_flow_1_rtt.csv",
+      "relative_path": "logs_ns3/tcp_flow_1_rtt.csv",
+      "sha256": "6ece949d334b5fdef89cc77831a059c9b9095e85fe4be3430035354d562bcebe"
+    },
+    {
+      "bytes": 1760,
+      "path": "/tmp/cs30401-vegas/v1-fixed-comp-renew/logs_ns3/tcp_flow_1_study_events.csv",
+      "relative_path": "logs_ns3/tcp_flow_1_study_events.csv",
+      "sha256": "db70f1a7d52320a6cf10c53313d1fa45a607fdaaae194dac8615c70206c8634c"
+    },
+    {
+      "bytes": 69928661,
+      "path": "/tmp/cs30401-vegas/v1-fixed-comp-renew/logs_ns3/tcp_flow_1_study_packets.csv",
+      "relative_path": "logs_ns3/tcp_flow_1_study_packets.csv",
+      "sha256": "092ddac130eca9075f0a2df1660219520aa8a44b1b6f96a18effac53bfaec224"
+    },
+    {
+      "bytes": 249545,
+      "path": "/tmp/cs30401-vegas/v1-fixed-comp-renew/logs_ns3/vegas_state.csv",
+      "relative_path": "logs_ns3/vegas_state.csv",
+      "sha256": "a9820881b71a8351285427298070725a93782bde60296a6154cabd6bc788dabe"
+    }
+  ],
+  "analysis_sources": {
+    "helper": {
+      "bytes": 39038,
+      "path": "/work/code/vegas-study/analyze_vegas.py",
+      "sha256": "7b7deee1416d6458b71b406043b19f0d3fc7e63290ace6e9ec06a194bb2c5eab"
+    },
+    "original_analyzer_current": {
+      "bytes": 36868,
+      "path": "/work/code/kim-study/analyze_study.py",
+      "sha256": "5333d7f6d86c04f79bbaad82e5e2577ec3bdf2f281e115c854ad904c404aa696"
+    }
+  },
+  "application_and_terminal_validation": {
+    "app_trace_rows": 1341081,
+    "connections": [
+      {
+        "bytes": 1034813700,
+        "flow_id": 0,
+        "identity": [
+          "1",
+          "10.1.1.2",
+          "1024",
+          "0",
+          "10.1.1.1",
+          "49153"
+        ],
+        "rows": 747527
+      },
+      {
+        "bytes": 830743440,
+        "flow_id": 1,
+        "identity": [
+          "1",
+          "10.1.1.2",
+          "1025",
+          "0",
+          "10.1.1.1",
+          "49154"
+        ],
+        "rows": 593554
+      }
+    ],
+    "wire_application_terminal": {
+      "0": {
+        "application_bytes": 1034813700,
+        "wire_unique_minus_application_bytes": 0,
+        "wire_unique_payload_bytes": 1034813700
+      },
+      "1": {
+        "application_bytes": 830743440,
+        "wire_unique_minus_application_bytes": 0,
+        "wire_unique_payload_bytes": 830743440
+      }
+    }
+  },
+  "case": "v1-fixed-comp-renew",
+  "consumed_analysis_inputs": [
+    {
+      "bytes": 937053,
+      "path": "/tmp/cs30401-vegas-analysis-v1/v1-fixed-comp-renew/study-analysis.json",
+      "sha256": "195f8445e007f9157435d3b4fc614fe772897476bf49961f65f0689d451ea049"
+    },
+    {
+      "bytes": 7740,
+      "path": "/tmp/cs30401-vegas/v1-fixed-comp-renew/case.json",
+      "sha256": "5dfce2d248686b61dfdacec8d5143d2b4fd4cd73d6a0b8ec63f77795620fecbe"
+    },
+    {
+      "bytes": 1170,
+      "path": "/tmp/cs30401-vegas/v1-fixed-comp-renew/config_driver.json",
+      "sha256": "c3bc002f385a7c23dcab3e8c7c7693edafeff380b7be00b9826fd660d4da2772"
+    },
+    {
+      "bytes": 36,
+      "path": "/tmp/cs30401-vegas/v1-fixed-comp-renew/config_ns3.properties",
+      "sha256": "3c4c19c08bb23933cce0c1895c539e062b0fd04207aa4832d69e2d135ab1ae3e"
+    },
+    {
+      "bytes": 162,
+      "path": "/tmp/cs30401-vegas/v1-fixed-comp-renew/logs_ns3/delay_events.csv",
+      "sha256": "346e2e27550015f28425194bfe5a174f0c6ab87d89be7d9b81357111a4ea4f54"
+    },
+    {
+      "bytes": 373,
+      "path": "/tmp/cs30401-vegas/v1-fixed-comp-renew/logs_ns3/flow_summary.csv",
+      "sha256": "ca5514463f892310a9334a0ef51140327521e6165cb1a80262a5e9e11af67fd3"
+    },
+    {
+      "bytes": 316,
+      "path": "/tmp/cs30401-vegas/v1-fixed-comp-renew/logs_ns3/queue_coverage.csv",
+      "sha256": "82e2f2dd7290ec35da6592dd3f306a241471861265a21e8f88853c0053b73499"
+    },
+    {
+      "bytes": 279136428,
+      "path": "/tmp/cs30401-vegas/v1-fixed-comp-renew/logs_ns3/queue_events.csv",
+      "sha256": "c5ba5a7a9db133792e12281a981715858ea3897db4b92f5dbdc83b06158757ca"
+    },
+    {
+      "bytes": 137646691,
+      "path": "/tmp/cs30401-vegas/v1-fixed-comp-renew/logs_ns3/queue_occupancy.csv",
+      "sha256": "81797f95a50d35d69ae867ef8d2b424e947c556332be78fb7aea951fc235f702"
+    },
+    {
+      "bytes": 6343,
+      "path": "/tmp/cs30401-vegas/v1-fixed-comp-renew/logs_ns3/queue_pending.csv",
+      "sha256": "f151f3f08f1c398011922967d84ba314c0dc6a8498a0e80cd67ca027f98348c4"
+    },
+    {
+      "bytes": 145613180,
+      "path": "/tmp/cs30401-vegas/v1-fixed-comp-renew/logs_ns3/queue_sojourn.csv",
+      "sha256": "5aed816c22f0213d59b33d1da8b1871cba7112041cd2119d99352928a1c20b29"
+    },
+    {
+      "bytes": 187,
+      "path": "/tmp/cs30401-vegas/v1-fixed-comp-renew/logs_ns3/queue_summary.csv",
+      "sha256": "b202a09e384eeb78039435b9169253a8d20a4f28d45628a61689a502312d6ada"
+    },
+    {
+      "bytes": 179,
+      "path": "/tmp/cs30401-vegas/v1-fixed-comp-renew/logs_ns3/socket_types.csv",
+      "sha256": "d725d52c86dd0cbcb0d1092469d90abc5458d5d9ff966e7226fcf83a89b38994"
+    },
+    {
+      "bytes": 59517322,
+      "path": "/tmp/cs30401-vegas/v1-fixed-comp-renew/logs_ns3/study_app_rx_node_1_port_1024.csv",
+      "sha256": "b2746ec2366c451d03dfccb04d1afda01b0555ca2afbb8c005ad0b075764eda3"
+    },
+    {
+      "bytes": 47798916,
+      "path": "/tmp/cs30401-vegas/v1-fixed-comp-renew/logs_ns3/study_app_rx_node_1_port_1025.csv",
+      "sha256": "07c10ba42fcf171c077b91dbb94b1c61e40bee17b8ec2385dd7ef3cb627f4d5c"
+    },
+    {
+      "bytes": 328,
+      "path": "/tmp/cs30401-vegas/v1-fixed-comp-renew/logs_ns3/study_drop_coverage.csv",
+      "sha256": "f2bbce727ae1f61019ef8f727753e3a8f64abdeb41d660a20a3607802f4524f4"
+    },
+    {
+      "bytes": 19856,
+      "path": "/tmp/cs30401-vegas/v1-fixed-comp-renew/logs_ns3/study_drops.csv",
+      "sha256": "690a86c49716a27b996d6750b8b6fc1ead49a430085cd359a7165842c9ecb623"
+    },
+    {
+      "bytes": 79285851,
+      "path": "/tmp/cs30401-vegas/v1-fixed-comp-renew/logs_ns3/study_rx_node_1_port_1024.csv",
+      "sha256": "35543d2058fb1ad02e7841272bf8abc6aee5189f664601384a59744ac2cdcd46"
+    },
+    {
+      "bytes": 64528610,
+      "path": "/tmp/cs30401-vegas/v1-fixed-comp-renew/logs_ns3/study_rx_node_1_port_1025.csv",
+      "sha256": "64f8790badd2d7f539a3df8f985fbd9714b3953444419d6be8b7dfcd93e0a424"
+    },
+    {
+      "bytes": 32516,
+      "path": "/tmp/cs30401-vegas/v1-fixed-comp-renew/logs_ns3/tcp_flow_0_study_events.csv",
+      "sha256": "cf8368bc393e596505484eecdbf62ce40971c62721d3cdf3ba0e0a5bfd158a92"
+    },
+    {
+      "bytes": 84986013,
+      "path": "/tmp/cs30401-vegas/v1-fixed-comp-renew/logs_ns3/tcp_flow_0_study_packets.csv",
+      "sha256": "97565768c96d2423afaa83edcff1fb8d591de796150faf88d35b540255d285ea"
+    },
+    {
+      "bytes": 1760,
+      "path": "/tmp/cs30401-vegas/v1-fixed-comp-renew/logs_ns3/tcp_flow_1_study_events.csv",
+      "sha256": "db70f1a7d52320a6cf10c53313d1fa45a607fdaaae194dac8615c70206c8634c"
+    },
+    {
+      "bytes": 69928661,
+      "path": "/tmp/cs30401-vegas/v1-fixed-comp-renew/logs_ns3/tcp_flow_1_study_packets.csv",
+      "sha256": "092ddac130eca9075f0a2df1660219520aa8a44b1b6f96a18effac53bfaec224"
+    },
+    {
+      "bytes": 249545,
+      "path": "/tmp/cs30401-vegas/v1-fixed-comp-renew/logs_ns3/vegas_state.csv",
+      "sha256": "a9820881b71a8351285427298070725a93782bde60296a6154cabd6bc788dabe"
+    }
+  ],
+  "current_artifact_mismatches_from_launch": [],
+  "driver_validation": {
+    "actual_delay_events": [
+      {
+        "event": "INITIAL",
+        "new_one_way_delay_ns": "45000000",
+        "old_one_way_delay_ns": "45000000",
+        "propagation_rtt_ns": "90000000",
+        "time_ns": "0"
+      },
+      {
+        "event": "SET_DELAY",
+        "new_one_way_delay_ns": "45000000",
+        "old_one_way_delay_ns": "45000000",
+        "propagation_rtt_ns": "90000000",
+        "time_ns": "100000000000"
+      }
+    ],
+    "actual_driver_config": {
+      "after_one_way_delay_ns": 45000000,
+      "after_propagation_rtt_ns": 90000000,
+      "before_one_way_delay_ns": 45000000,
+      "before_propagation_rtt_ns": 90000000,
+      "both_flows_share_forward_device": true,
+      "cc": "ns3::TcpVegas",
+      "competitor": true,
+      "competitor_cc": "ns3::TcpCubic",
+      "competitor_port": 1025,
+      "competitor_start_ns": 80000000000,
+      "duration_ns": 200000000000,
+      "event_ns": 100000000000,
+      "flow0_parameters": "",
+      "flow0_port": 1024,
+      "flow0_start_ns": 0,
+      "initial_cwnd_pkts": 10,
+      "initial_ssthresh_pkts": 900,
+      "logs_dir": "/tmp/cs30401-vegas/v1-fixed-comp-renew/logs_ns3",
+      "max_bytes_each": 100000000000,
+      "mss_bytes": 1380,
+      "queue_bytes_at_packets_callback": "post-change ns3.48 Queue byte count",
+      "queue_measurement": "Enqueue-to-Dequeue wait; includes zero, excludes serialization and propagation; censored packets in queue_pending.csv",
+      "queue_pkts_per_direction": 100,
+      "rate_mbps": 100,
+      "receive_error_model": false,
+      "renewal": true,
+      "renewal_min_rise_ns": 1000000,
+      "renewal_rounds": 20,
+      "root_queue_disc": false,
+      "run": 1,
+      "seed": 123456789,
+      "topology": "two nodes, one full-duplex point-to-point link"
+    },
+    "actual_sender_socket_classes": [
+      {
+        "actual_cc": "ns3::TcpVegas",
+        "expected_cc": "ns3::TcpVegas",
+        "flow_id": "0",
+        "peer_port": "1024",
+        "time_ns": "1"
+      },
+      {
+        "actual_cc": "ns3::TcpCubic",
+        "expected_cc": "ns3::TcpCubic",
+        "flow_id": "1",
+        "peer_port": "1025",
+        "time_ns": "80000000001"
+      },
+      {
+        "actual_cc": "ns3::TcpVegas",
+        "expected_cc": "ns3::TcpVegas",
+        "flow_id": "0",
+        "peer_port": "1024",
+        "time_ns": "80000000001"
+      }
+    ],
+    "available": true,
+    "driver_app_totals_match_independent_csv": true,
+    "driver_flow_life_summary": [
+      {
+        "acked_bytes": "1034812320",
+        "application_goodput_mbps": "41.392547999999998",
+        "application_rx_bytes": "1034813700",
+        "cc": "ns3::TcpVegas",
+        "completed": "0",
+        "destination_port": "1024",
+        "flow_id": "0",
+        "last_application_rx_ns": "199926450560",
+        "observation_end_ns": "200000000000",
+        "receiver_node": "1",
+        "sender_node": "0",
+        "start_ns": "0"
+      },
+      {
+        "acked_bytes": "830199720",
+        "application_goodput_mbps": "55.382896000000002",
+        "application_rx_bytes": "830743440",
+        "cc": "ns3::TcpCubic",
+        "completed": "0",
+        "destination_port": "1025",
+        "flow_id": "1",
+        "last_application_rx_ns": "199999986080",
+        "observation_end_ns": "200000000000",
+        "receiver_node": "1",
+        "sender_node": "0",
+        "start_ns": "80000000000"
+      }
+    ],
+    "qualification": "Matched-window app rate uses full window width; active-interval rate separately excludes time before that flow starts. Whole-run rates and whole-life rates differ for the late competitor."
+  },
+  "drop_coverage": {
+    "available": true,
+    "failed_hooks": [],
+    "qualification": "Per-hook records are preserved. TcDrop and per-device root_queue_disc_absent are required in addition to queue/device/IP drops before asserting complete modeled network-drop coverage.",
+    "rows_by_layer": {
+      "DropAfterDequeue": 2,
+      "DropBeforeEnqueue": 2,
+      "MacTxDrop": 2,
+      "PhyRxDrop": 2,
+      "PhyTxDrop": 2,
+      "TcDrop": 2,
+      "ipv4": 2,
+      "root_queue_disc_absent": 2
+    }
+  },
+  "duration_ns": 200000000000,
+  "full_analysis_artifacts": [
+    {
+      "bytes": 93186,
+      "path": "/tmp/cs30401-vegas-analysis-v1/v1-fixed-comp-renew/vegas/summary.json",
+      "sha256": "908b7fcafb35c449893900bff9095423fca986ed9638255525786b0907133248"
+    },
+    {
+      "bytes": 937053,
+      "path": "/tmp/cs30401-vegas-analysis-v1/v1-fixed-comp-renew/study-analysis.json",
+      "sha256": "195f8445e007f9157435d3b4fc614fe772897476bf49961f65f0689d451ea049"
+    }
+  ],
+  "independent_layer_drop_audit": {
+    "artifact": {
+      "bytes": 19856,
+      "path": "/tmp/cs30401-vegas/v1-fixed-comp-renew/logs_ns3/study_drops.csv",
+      "sha256": "690a86c49716a27b996d6750b8b6fc1ead49a430085cd359a7165842c9ecb623"
+    },
+    "drop_trace_rows": 186,
+    "first_example_per_layer_and_flow": [
+      {
+        "flow_id": "0",
+        "layer": "TcDrop",
+        "row": {
+          "device": "4294967295",
+          "dst": "10.1.1.2",
+          "dst_port": "1024",
+          "flags": "16",
+          "flow_id": "0",
+          "layer": "TcDrop",
+          "node": "0",
+          "payload_bytes": "1380",
+          "reason": "-1",
+          "seq": "464603221",
+          "src": "10.1.1.1",
+          "src_port": "49153",
+          "time_ns": "80755787200",
+          "tx_id": "336672",
+          "tx_time_ns": "80755787200",
+          "uid": "626660"
+        }
+      },
+      {
+        "flow_id": "1",
+        "layer": "TcDrop",
+        "row": {
+          "device": "4294967295",
+          "dst": "10.1.1.2",
+          "dst_port": "1025",
+          "flags": "16",
+          "flow_id": "1",
+          "layer": "TcDrop",
+          "node": "0",
+          "payload_bytes": "1380",
+          "reason": "-1",
+          "seq": "659641",
+          "src": "10.1.1.1",
+          "src_port": "49154",
+          "time_ns": "80552031520",
+          "tx_id": "481",
+          "tx_time_ns": "80552031520",
+          "uid": "670363"
+        }
+      }
+    ],
+    "qualification": "Layer rows may duplicate one physical loss. Distinct tx_id is counted within flow and layer. Queue DropBeforeEnqueue=0 does not imply network loss=0: TrafficControl TcDrop can occur before a full device queue accepts the packet. Device4294967295 is the TcDrop hook's unknown-device sentinel, not a physical device index."
+  },
+  "method": {
+    "application": "Positive receiver HandleRead payload, per-connection cumulative sum checked. Connection key includes local port to distinguish two sinks each numbered connection0. Flow1 app goodput measures actual competitor delivery, not offered/sender-ACKed bytes.",
+    "loss_recovery": "Official RETX rows and bytes; CA_RECOVERY and CA_LOSS entries are separately counted. LOSS is not automatically an RTO. Drop layer rows may duplicate a physical loss, so distinct (flow,tx_id) counts are separate; untagged drops remain explicit.",
+    "scope": "Fixed propagation plus persistent queue is a falsification control for recent-min renewal. Increased foreground delivery alone does not establish total service improvement or fairness; examine competitor app, queue delay, drops, and terminal gap. A synthetic delay step is distinct from the multi-hop LEO model.",
+    "terminal": "Wire payload interval union minus actual app delivery at stop time; wire Rx is pre-TCP and does not prove acceptance or eventual delivery. Sequence unwrapping assumes adjacent references differ by less than2^31 bytes.",
+    "windows": "Exact half-open [start_ns,end_ns) on each observation's timestamp; event-time delivery belongs to post-event interval. Whole includes startup; late20/pre20/post(+10,+30) are matched between cases."
+  },
+  "original_manifest": "case.json",
+  "original_study_analysis_check": {
+    "artifact": {
+      "bytes": 937053,
+      "path": "/tmp/cs30401-vegas-analysis-v1/v1-fixed-comp-renew/study-analysis.json",
+      "sha256": "195f8445e007f9157435d3b4fc614fe772897476bf49961f65f0689d451ea049"
+    },
+    "available": true,
+    "qualification": "Independent raw app sums checked against supplied full analysis. Analysis source hash is separately recorded; full original JSON is not duplicated.",
+    "whole_app_totals_goodput_and_available_bins_match": true
+  },
+  "policy": {
+    "alpha": 2,
+    "beta": 4,
+    "gamma": 1,
+    "input": "existing socket SRTT; loss/startup unchanged",
+    "min_rise_ns": 1000000,
+    "recent_min_renewal": true,
+    "rounds": 20
+  },
+  "queue_instrumentation": {
+    "available": true,
+    "coverage": {
+      "available": true,
+      "failed_hooks": [],
+      "qualification": "Per-hook records are preserved. TcDrop and per-device root_queue_disc_absent are required in addition to queue/device/IP drops before asserting complete modeled network-drop coverage.",
+      "rows_by_layer": {
+        "Dequeue": 2,
+        "DropAfterDequeue": 2,
+        "DropBeforeEnqueue": 2,
+        "Enqueue": 2,
+        "PacketsInQueue": 2
+      }
+    },
+    "device_summaries": [
+      {
+        "dequeued": 1352252,
+        "device_id": "1",
+        "direction": "forward",
+        "drop_after_dequeue": 0,
+        "drop_before_enqueue": 0,
+        "enqueued": 1352327,
+        "node_id": "0",
+        "pending": 75,
+        "zero_sojourn": 200347
+      },
+      {
+        "dequeued": 681406,
+        "device_id": "1",
+        "direction": "reverse",
+        "drop_after_dequeue": 0,
+        "drop_before_enqueue": 0,
+        "enqueued": 681406,
+        "node_id": "1",
+        "pending": 0,
+        "zero_sojourn": 681406
+      }
+    ],
+    "enqueue_dequeue_pending_conservation": true,
+    "event_rows_by_kind": {
+      "Dequeue": 2033658,
+      "Enqueue": 2033733
+    },
+    "final_queue_states": [
+      {
+        "bytes": 107550,
+        "device_id": "1",
+        "direction": "forward",
+        "node_id": "0",
+        "packets": 75
+      },
+      {
+        "bytes": 0,
+        "device_id": "1",
+        "direction": "reverse",
+        "node_id": "1",
+        "packets": 0
+      }
+    ],
+    "pending_packet_records_count": 75,
+    "qualification": "Sojourn is exact Enqueue-to-Dequeue waiting time, including zero waits, grouped by dequeue timestamps; excludes link serialization/propagation. Remove/DropAfterDequeue rows are excluded. Quantiles use packet counts (nearest rank), not byte or time weighting. Untagged ACK/control traffic is not assigned to a TCP flow. Occupancy holds the post-change snapshot between trace rows."
+  },
+  "schema_version": 1,
+  "simulation_launch_commit": "82ad34a975d4b15f8a536527f8ea4f0cf6e41624",
+  "vegas_internal_state": {
+    "available": true,
+    "event_counts": {
+      "CYCLE_DECREASE": 481,
+      "CYCLE_HOLD": 803,
+      "CYCLE_INCREASE": 872,
+      "DISABLE": 12,
+      "ENABLE": 9,
+      "RENEW": 28
+    },
+    "instances": {
+      "1": {
+        "base_rtt_max_ns": 99452851,
+        "base_rtt_min_ns": 90000000,
+        "event_counts": {
+          "CYCLE_DECREASE": 481,
+          "CYCLE_HOLD": 803,
+          "CYCLE_INCREASE": 872,
+          "DISABLE": 12,
+          "ENABLE": 7,
+          "RENEW": 28
+        },
+        "first": {
+          "announced_state": 0,
+          "base_rtt_ns": null,
+          "cong_state": 0,
+          "cwnd_after_bytes": 13800,
+          "cwnd_before_bytes": 13800,
+          "cycle_min_rtt_ns": null,
+          "diff_pkts": null,
+          "event": "ENABLE",
+          "history_elapsed_ns": null,
+          "history_rounds": 0,
+          "old_base_rtt_ns": null,
+          "recent_min_ns": null,
+          "renewal_count": 0,
+          "renewal_enabled": 1,
+          "renewal_rounds": 20,
+          "rtt_samples": 0,
+          "ssthresh_before_bytes": 1242000,
+          "ssthresh_bytes": 1242000,
+          "time_ns": 90009280,
+          "valid_renewal_cycle": 0
+        },
+        "last": {
+          "announced_state": null,
+          "base_rtt_ns": 97643195,
+          "cong_state": 0,
+          "cwnd_after_bytes": 189060,
+          "cwnd_before_bytes": 189060,
+          "cycle_min_rtt_ns": 99001309,
+          "diff_pkts": 2,
+          "event": "CYCLE_HOLD",
+          "history_elapsed_ns": 0,
+          "history_rounds": 1,
+          "old_base_rtt_ns": null,
+          "recent_min_ns": null,
+          "renewal_count": 28,
+          "renewal_enabled": 1,
+          "renewal_rounds": 20,
+          "rtt_samples": 68,
+          "ssthresh_before_bytes": 187680,
+          "ssthresh_bytes": 187680,
+          "time_ns": 199971340160,
+          "valid_renewal_cycle": 1,
+          "vegas_instance": "1"
+        },
+        "previous_count": 28
+      },
+      "2": {
+        "base_rtt_max_ns": null,
+        "base_rtt_min_ns": null,
+        "event_counts": {
+          "ENABLE": 1
+        },
+        "first": {
+          "announced_state": 0,
+          "base_rtt_ns": null,
+          "cong_state": 0,
+          "cwnd_after_bytes": 13800,
+          "cwnd_before_bytes": 13800,
+          "cycle_min_rtt_ns": null,
+          "diff_pkts": null,
+          "event": "ENABLE",
+          "history_elapsed_ns": null,
+          "history_rounds": 0,
+          "old_base_rtt_ns": null,
+          "recent_min_ns": null,
+          "renewal_count": 0,
+          "renewal_enabled": 1,
+          "renewal_rounds": 20,
+          "rtt_samples": 0,
+          "ssthresh_before_bytes": 1242000,
+          "ssthresh_bytes": 1242000,
+          "time_ns": 135013600,
+          "valid_renewal_cycle": 0
+        },
+        "last": {
+          "announced_state": 0,
+          "base_rtt_ns": null,
+          "cong_state": 0,
+          "cwnd_after_bytes": 13800,
+          "cwnd_before_bytes": 13800,
+          "cycle_min_rtt_ns": null,
+          "diff_pkts": null,
+          "event": "ENABLE",
+          "history_elapsed_ns": null,
+          "history_rounds": 0,
+          "old_base_rtt_ns": null,
+          "recent_min_ns": null,
+          "renewal_count": 0,
+          "renewal_enabled": 1,
+          "renewal_rounds": 20,
+          "rtt_samples": 0,
+          "ssthresh_before_bytes": 1242000,
+          "ssthresh_bytes": 1242000,
+          "time_ns": 135013600,
+          "valid_renewal_cycle": 0,
+          "vegas_instance": "2"
+        },
+        "previous_count": 0
+      },
+      "3": {
+        "base_rtt_max_ns": null,
+        "base_rtt_min_ns": null,
+        "event_counts": {
+          "ENABLE": 1
+        },
+        "first": {
+          "announced_state": 0,
+          "base_rtt_ns": null,
+          "cong_state": 0,
+          "cwnd_after_bytes": 13800,
+          "cwnd_before_bytes": 13800,
+          "cycle_min_rtt_ns": null,
+          "diff_pkts": null,
+          "event": "ENABLE",
+          "history_elapsed_ns": null,
+          "history_rounds": 0,
+          "old_base_rtt_ns": null,
+          "recent_min_ns": null,
+          "renewal_count": 0,
+          "renewal_enabled": 1,
+          "renewal_rounds": 20,
+          "rtt_samples": 0,
+          "ssthresh_before_bytes": 1242000,
+          "ssthresh_bytes": 1242000,
+          "time_ns": 80135193760,
+          "valid_renewal_cycle": 0
+        },
+        "last": {
+          "announced_state": 0,
+          "base_rtt_ns": null,
+          "cong_state": 0,
+          "cwnd_after_bytes": 13800,
+          "cwnd_before_bytes": 13800,
+          "cycle_min_rtt_ns": null,
+          "diff_pkts": null,
+          "event": "ENABLE",
+          "history_elapsed_ns": null,
+          "history_rounds": 0,
+          "old_base_rtt_ns": null,
+          "recent_min_ns": null,
+          "renewal_count": 0,
+          "renewal_enabled": 1,
+          "renewal_rounds": 20,
+          "rtt_samples": 0,
+          "ssthresh_before_bytes": 1242000,
+          "ssthresh_bytes": 1242000,
+          "time_ns": 80135193760,
+          "valid_renewal_cycle": 0,
+          "vegas_instance": "3"
+        },
+        "previous_count": 0
+      }
+    },
+    "qualification": "Actual internal state trace. Instance IDs are retained; the driver must establish that flow0 alone uses Vegas. Histories are cycle based; history_elapsed_ns is recorded rather than assumed equal to a fixed number of RTTs.",
+    "renewal_count": 28,
+    "renewal_events_export": "../../renewals.csv (filter case)"
+  },
+  "whole_run_smoothed_rtt": {
+    "0": {
+      "covered_duration_s": 199.90999072,
+      "maximum_ms": 112.161389,
+      "minimum_ms": 90.0,
+      "p50_ms": 90.53619,
+      "p95_ms": 99.844931,
+      "p99_ms": 101.329763,
+      "qualification": "Smoothed sender RTT held between trace changes; excludes initial unknown/zero SRTT; not raw packet RTT or isolated queueing delay.",
+      "time_weighted_mean_ms": 93.13072007574623,
+      "trace_rows": 371179
+    },
+    "1": {
+      "covered_duration_s": 119.90992032,
+      "maximum_ms": 106.890696,
+      "minimum_ms": 90.0,
+      "p50_ms": 95.168928,
+      "p95_ms": 100.608161,
+      "p99_ms": 101.521818,
+      "qualification": "Smoothed sender RTT held between trace changes; excludes initial unknown/zero SRTT; not raw packet RTT or isolated queueing delay.",
+      "time_weighted_mean_ms": 94.98845729368242,
+      "trace_rows": 295035
+    }
+  },
+  "windows": [
+    {
+      "application_sum_bytes": 1865557140,
+      "application_sum_goodput_mbps": 74.6222856,
+      "common_active_jain": null,
+      "drop_rows_by_layer": {
+        "TcDrop": 186
+      },
+      "drop_rows_without_transmission_identity": 0,
+      "end_ns": 200000000000,
+      "end_s": 200.0,
+      "flows": {
+        "0": {
+          "LOSS_entries": 0,
+          "active_duration_ns": 200000000000,
+          "active_interval_application_goodput_mbps": 41.392548,
+          "application_bytes": 1034813700,
+          "application_goodput_mbps": 41.392548,
+          "distinct_tagged_transmissions_dropped": 6,
+          "drop_trace_rows": 6,
+          "official_retransmission_bytes": 8280,
+          "official_retransmission_rows": 6,
+          "recovery_entries": 6,
+          "sender_payload_tx_bytes": 1035009660,
+          "sender_payload_tx_rows": 750007
+        },
+        "1": {
+          "LOSS_entries": 0,
+          "active_duration_ns": 120000000000,
+          "active_interval_application_goodput_mbps": 55.382896,
+          "application_bytes": 830743440,
+          "application_goodput_mbps": 33.2297376,
+          "distinct_tagged_transmissions_dropped": 180,
+          "drop_trace_rows": 180,
+          "official_retransmission_bytes": 251160,
+          "official_retransmission_rows": 182,
+          "recovery_entries": 13,
+          "sender_payload_tx_bytes": 831452760,
+          "sender_payload_tx_rows": 602502
+        }
+      },
+      "layer_rows_by_flow": {
+        "0": {
+          "TcDrop": 6
+        },
+        "1": {
+          "TcDrop": 180
+        }
+      },
+      "queue_occupancy": [
+        {
+          "device_id": "1",
+          "direction": "forward",
+          "maximum_packets_held_for_positive_time": 100,
+          "node_id": "0",
+          "time_weighted_mean_bytes": 34740.600675367,
+          "time_weighted_mean_packets": 24.2263611695
+        },
+        {
+          "device_id": "1",
+          "direction": "reverse",
+          "maximum_packets_held_for_positive_time": 0,
+          "node_id": "1",
+          "time_weighted_mean_bytes": 0.0,
+          "time_weighted_mean_packets": 0.0
+        }
+      ],
+      "queue_removed_after_dequeue_excluded": 0,
+      "queue_sojourn": [
+        {
+          "direction": "forward",
+          "group": "all",
+          "max_ns": 11470080,
+          "mean_ns": 3582869.4907014375,
+          "minimum_ns": 0,
+          "p95_ns": 9916800,
+          "p99_ns": 11178720,
+          "packet_bytes": 1939123856,
+          "packet_count": 1352252
+        },
+        {
+          "direction": "forward",
+          "group": "flow0",
+          "max_ns": 11408160,
+          "mean_ns": 2050709.7248277673,
+          "minimum_ns": 0,
+          "p95_ns": 8999040,
+          "p99_ns": 10949280,
+          "packet_bytes": 1075501546,
+          "packet_count": 750003
+        },
+        {
+          "direction": "forward",
+          "group": "flow1",
+          "max_ns": 11470080,
+          "mean_ns": 5490924.831406943,
+          "minimum_ns": 0,
+          "p95_ns": 10375680,
+          "p99_ns": 11293440,
+          "packet_bytes": 863622310,
+          "packet_count": 602249
+        },
+        {
+          "direction": "reverse",
+          "group": "all",
+          "max_ns": 0,
+          "mean_ns": 0.0,
+          "minimum_ns": 0,
+          "p95_ns": 0,
+          "p99_ns": 0,
+          "packet_bytes": 36934420,
+          "packet_count": 681406
+        },
+        {
+          "direction": "reverse",
+          "group": "untagged_or_control",
+          "max_ns": 0,
+          "mean_ns": 0.0,
+          "minimum_ns": 0,
+          "p95_ns": 0,
+          "p99_ns": 0,
+          "packet_bytes": 36934420,
+          "packet_count": 681406
+        }
+      ],
+      "start_ns": 0,
+      "start_s": 0.0,
+      "unmapped_drop_layer_rows": {},
+      "window": "whole"
+    },
+    {
+      "application_sum_bytes": 237340680,
+      "application_sum_goodput_mbps": 94.936272,
+      "common_active_jain": 0.7361527559070072,
+      "drop_rows_by_layer": {
+        "TcDrop": 7
+      },
+      "drop_rows_without_transmission_identity": 0,
+      "end_ns": 200000000000,
+      "end_s": 200.0,
+      "flows": {
+        "0": {
+          "LOSS_entries": 0,
+          "active_duration_ns": 20000000000,
+          "active_interval_application_goodput_mbps": 19.050072,
+          "application_bytes": 47625180,
+          "application_goodput_mbps": 19.050072,
+          "distinct_tagged_transmissions_dropped": 1,
+          "drop_trace_rows": 1,
+          "official_retransmission_bytes": 1380,
+          "official_retransmission_rows": 1,
+          "recovery_entries": 1,
+          "sender_payload_tx_bytes": 47789400,
+          "sender_payload_tx_rows": 34630
+        },
+        "1": {
+          "LOSS_entries": 0,
+          "active_duration_ns": 20000000000,
+          "active_interval_application_goodput_mbps": 75.8862,
+          "application_bytes": 189715500,
+          "application_goodput_mbps": 75.8862,
+          "distinct_tagged_transmissions_dropped": 6,
+          "drop_trace_rows": 6,
+          "official_retransmission_bytes": 8280,
+          "official_retransmission_rows": 6,
+          "recovery_entries": 2,
+          "sender_payload_tx_bytes": 189548520,
+          "sender_payload_tx_rows": 137354
+        }
+      },
+      "layer_rows_by_flow": {
+        "0": {
+          "TcDrop": 1
+        },
+        "1": {
+          "TcDrop": 6
+        }
+      },
+      "queue_occupancy": [
+        {
+          "device_id": "1",
+          "direction": "forward",
+          "maximum_packets_held_for_positive_time": 100,
+          "node_id": "0",
+          "time_weighted_mean_bytes": 77935.017912384,
+          "time_weighted_mean_packets": 54.347990176
+        },
+        {
+          "device_id": "1",
+          "direction": "reverse",
+          "maximum_packets_held_for_positive_time": 0,
+          "node_id": "1",
+          "time_weighted_mean_bytes": 0.0,
+          "time_weighted_mean_packets": 0.0
+        }
+      ],
+      "queue_removed_after_dequeue_excluded": 0,
+      "queue_sojourn": [
+        {
+          "direction": "forward",
+          "group": "all",
+          "max_ns": 11408160,
+          "mean_ns": 6320492.607537823,
+          "minimum_ns": 0,
+          "p95_ns": 10834560,
+          "p99_ns": 11293440,
+          "packet_bytes": 246627924,
+          "packet_count": 171986
+        },
+        {
+          "direction": "forward",
+          "group": "flow0",
+          "max_ns": 11408160,
+          "mean_ns": 6053372.093909729,
+          "minimum_ns": 1280,
+          "p95_ns": 10834560,
+          "p99_ns": 11407520,
+          "packet_bytes": 49657986,
+          "packet_count": 34629
+        },
+        {
+          "direction": "forward",
+          "group": "flow1",
+          "max_ns": 11408160,
+          "mean_ns": 6387836.217739176,
+          "minimum_ns": 0,
+          "p95_ns": 10834560,
+          "p99_ns": 11293440,
+          "packet_bytes": 196969938,
+          "packet_count": 137357
+        },
+        {
+          "direction": "reverse",
+          "group": "all",
+          "max_ns": 0,
+          "mean_ns": 0.0,
+          "minimum_ns": 0,
+          "p95_ns": 0,
+          "p99_ns": 0,
+          "packet_bytes": 4742520,
+          "packet_count": 87288
+        },
+        {
+          "direction": "reverse",
+          "group": "untagged_or_control",
+          "max_ns": 0,
+          "mean_ns": 0.0,
+          "minimum_ns": 0,
+          "p95_ns": 0,
+          "p99_ns": 0,
+          "packet_bytes": 4742520,
+          "packet_count": 87288
+        }
+      ],
+      "start_ns": 180000000000,
+      "start_s": 180.0,
+      "unmapped_drop_layer_rows": {},
+      "window": "late20"
+    },
+    {
+      "application_sum_bytes": 218084160,
+      "application_sum_goodput_mbps": 87.233664,
+      "common_active_jain": 0.9560678082147837,
+      "drop_rows_by_layer": {
+        "TcDrop": 156
+      },
+      "drop_rows_without_transmission_identity": 0,
+      "end_ns": 100000000000,
+      "end_s": 100.0,
+      "flows": {
+        "0": {
+          "LOSS_entries": 0,
+          "active_duration_ns": 20000000000,
+          "active_interval_application_goodput_mbps": 52.966608,
+          "application_bytes": 132416520,
+          "application_goodput_mbps": 52.966608,
+          "distinct_tagged_transmissions_dropped": 2,
+          "drop_trace_rows": 2,
+          "official_retransmission_bytes": 2760,
+          "official_retransmission_rows": 2,
+          "recovery_entries": 2,
+          "sender_payload_tx_bytes": 132122580,
+          "sender_payload_tx_rows": 95741
+        },
+        "1": {
+          "LOSS_entries": 0,
+          "active_duration_ns": 20000000000,
+          "active_interval_application_goodput_mbps": 34.267056,
+          "application_bytes": 85667640,
+          "application_goodput_mbps": 34.267056,
+          "distinct_tagged_transmissions_dropped": 154,
+          "drop_trace_rows": 154,
+          "official_retransmission_bytes": 213900,
+          "official_retransmission_rows": 155,
+          "recovery_entries": 4,
+          "sender_payload_tx_bytes": 86251380,
+          "sender_payload_tx_rows": 62501
+        }
+      },
+      "layer_rows_by_flow": {
+        "0": {
+          "TcDrop": 2
+        },
+        "1": {
+          "TcDrop": 154
+        }
+      },
+      "queue_occupancy": [
+        {
+          "device_id": "1",
+          "direction": "forward",
+          "maximum_packets_held_for_positive_time": 100,
+          "node_id": "0",
+          "time_weighted_mean_bytes": 13400.288506579,
+          "time_weighted_mean_packets": 9.3447007835
+        },
+        {
+          "device_id": "1",
+          "direction": "reverse",
+          "maximum_packets_held_for_positive_time": 0,
+          "node_id": "1",
+          "time_weighted_mean_bytes": 0.0,
+          "time_weighted_mean_packets": 0.0
+        }
+      ],
+      "queue_removed_after_dequeue_excluded": 0,
+      "queue_sojourn": [
+        {
+          "direction": "forward",
+          "group": "all",
+          "max_ns": 11470080,
+          "mean_ns": 1182222.1414158028,
+          "minimum_ns": 0,
+          "p95_ns": 7966560,
+          "p99_ns": 11293440,
+          "packet_bytes": 226694002,
+          "packet_count": 158087
+        },
+        {
+          "direction": "forward",
+          "group": "flow0",
+          "max_ns": 11408160,
+          "mean_ns": 1063568.119659905,
+          "minimum_ns": 0,
+          "p95_ns": 7622400,
+          "p99_ns": 11293440,
+          "packet_bytes": 137288292,
+          "packet_count": 95738
+        },
+        {
+          "direction": "forward",
+          "group": "flow1",
+          "max_ns": 11470080,
+          "mean_ns": 1364417.5051724967,
+          "minimum_ns": 0,
+          "p95_ns": 8425440,
+          "p99_ns": 11293440,
+          "packet_bytes": 89405710,
+          "packet_count": 62349
+        },
+        {
+          "direction": "reverse",
+          "group": "all",
+          "max_ns": 0,
+          "mean_ns": 0.0,
+          "minimum_ns": 0,
+          "p95_ns": 0,
+          "p99_ns": 0,
+          "packet_bytes": 4383158,
+          "packet_count": 80395
+        },
+        {
+          "direction": "reverse",
+          "group": "untagged_or_control",
+          "max_ns": 0,
+          "mean_ns": 0.0,
+          "minimum_ns": 0,
+          "p95_ns": 0,
+          "p99_ns": 0,
+          "packet_bytes": 4383158,
+          "packet_count": 80395
+        }
+      ],
+      "start_ns": 80000000000,
+      "start_s": 80.0,
+      "unmapped_drop_layer_rows": {},
+      "window": "prestep_100"
+    },
+    {
+      "application_sum_bytes": 238450200,
+      "application_sum_goodput_mbps": 95.38007999999999,
+      "common_active_jain": 0.9848957412585372,
+      "drop_rows_by_layer": {
+        "TcDrop": 7
+      },
+      "drop_rows_without_transmission_identity": 0,
+      "end_ns": 130000000000,
+      "end_s": 130.0,
+      "flows": {
+        "0": {
+          "LOSS_entries": 0,
+          "active_duration_ns": 20000000000,
+          "active_interval_application_goodput_mbps": 53.595888,
+          "application_bytes": 133989720,
+          "application_goodput_mbps": 53.595888,
+          "distinct_tagged_transmissions_dropped": 2,
+          "drop_trace_rows": 2,
+          "official_retransmission_bytes": 2760,
+          "official_retransmission_rows": 2,
+          "recovery_entries": 2,
+          "sender_payload_tx_bytes": 134080800,
+          "sender_payload_tx_rows": 97160
+        },
+        "1": {
+          "LOSS_entries": 0,
+          "active_duration_ns": 20000000000,
+          "active_interval_application_goodput_mbps": 41.784192,
+          "application_bytes": 104460480,
+          "application_goodput_mbps": 41.784192,
+          "distinct_tagged_transmissions_dropped": 5,
+          "drop_trace_rows": 5,
+          "official_retransmission_bytes": 6900,
+          "official_retransmission_rows": 5,
+          "recovery_entries": 1,
+          "sender_payload_tx_bytes": 104461860,
+          "sender_payload_tx_rows": 75697
+        }
+      },
+      "layer_rows_by_flow": {
+        "0": {
+          "TcDrop": 2
+        },
+        "1": {
+          "TcDrop": 5
+        }
+      },
+      "queue_occupancy": [
+        {
+          "device_id": "1",
+          "direction": "forward",
+          "maximum_packets_held_for_positive_time": 100,
+          "node_id": "0",
+          "time_weighted_mean_bytes": 25311.221353584,
+          "time_weighted_mean_packets": 17.650781976
+        },
+        {
+          "device_id": "1",
+          "direction": "reverse",
+          "maximum_packets_held_for_positive_time": 0,
+          "node_id": "1",
+          "time_weighted_mean_bytes": 0.0,
+          "time_weighted_mean_packets": 0.0
+        }
+      ],
+      "queue_removed_after_dequeue_excluded": 0,
+      "queue_sojourn": [
+        {
+          "direction": "forward",
+          "group": "all",
+          "max_ns": 11408160,
+          "mean_ns": 2042302.5210628645,
+          "minimum_ns": 0,
+          "p95_ns": 6934080,
+          "p99_ns": 10719840,
+          "packet_bytes": 247818144,
+          "packet_count": 172816
+        },
+        {
+          "direction": "forward",
+          "group": "flow0",
+          "max_ns": 11408160,
+          "mean_ns": 1968278.268605082,
+          "minimum_ns": 0,
+          "p95_ns": 6819360,
+          "p99_ns": 10719840,
+          "packet_bytes": 139275816,
+          "packet_count": 97124
+        },
+        {
+          "direction": "forward",
+          "group": "flow1",
+          "max_ns": 11408160,
+          "mean_ns": 2137286.554985996,
+          "minimum_ns": 0,
+          "p95_ns": 7048800,
+          "p99_ns": 10834560,
+          "packet_bytes": 108542328,
+          "packet_count": 75692
+        },
+        {
+          "direction": "reverse",
+          "group": "all",
+          "max_ns": 0,
+          "mean_ns": 0.0,
+          "minimum_ns": 0,
+          "p95_ns": 0,
+          "p99_ns": 0,
+          "packet_bytes": 4721978,
+          "packet_count": 87123
+        },
+        {
+          "direction": "reverse",
+          "group": "untagged_or_control",
+          "max_ns": 0,
+          "mean_ns": 0.0,
+          "minimum_ns": 0,
+          "p95_ns": 0,
+          "p99_ns": 0,
+          "packet_bytes": 4721978,
+          "packet_count": 87123
+        }
+      ],
+      "start_ns": 110000000000,
+      "start_s": 110.0,
+      "unmapped_drop_layer_rows": {},
+      "window": "poststep_100"
+    },
+    {
+      "application_sum_bytes": 1407041100,
+      "application_sum_goodput_mbps": 93.80274,
+      "common_active_jain": 0.968333370793904,
+      "drop_rows_by_layer": {
+        "TcDrop": 186
+      },
+      "drop_rows_without_transmission_identity": 0,
+      "end_ns": 200000000000,
+      "end_s": 200.0,
+      "flows": {
+        "0": {
+          "LOSS_entries": 0,
+          "active_duration_ns": 120000000000,
+          "active_interval_application_goodput_mbps": 38.419844,
+          "application_bytes": 576297660,
+          "application_goodput_mbps": 38.419844,
+          "distinct_tagged_transmissions_dropped": 6,
+          "drop_trace_rows": 6,
+          "official_retransmission_bytes": 8280,
+          "official_retransmission_rows": 6,
+          "recovery_entries": 6,
+          "sender_payload_tx_bytes": 576104460,
+          "sender_payload_tx_rows": 417467
+        },
+        "1": {
+          "LOSS_entries": 0,
+          "active_duration_ns": 120000000000,
+          "active_interval_application_goodput_mbps": 55.382896,
+          "application_bytes": 830743440,
+          "application_goodput_mbps": 55.382896,
+          "distinct_tagged_transmissions_dropped": 180,
+          "drop_trace_rows": 180,
+          "official_retransmission_bytes": 251160,
+          "official_retransmission_rows": 182,
+          "recovery_entries": 13,
+          "sender_payload_tx_bytes": 831452760,
+          "sender_payload_tx_rows": 602502
+        }
+      },
+      "layer_rows_by_flow": {
+        "0": {
+          "TcDrop": 6
+        },
+        "1": {
+          "TcDrop": 180
+        }
+      },
+      "queue_occupancy": [
+        {
+          "device_id": "1",
+          "direction": "forward",
+          "maximum_packets_held_for_positive_time": 100,
+          "node_id": "0",
+          "time_weighted_mean_bytes": 57568.36309202717,
+          "time_weighted_mean_packets": 40.14530345991667
+        },
+        {
+          "device_id": "1",
+          "direction": "reverse",
+          "maximum_packets_held_for_positive_time": 0,
+          "node_id": "1",
+          "time_weighted_mean_bytes": 0.0,
+          "time_weighted_mean_packets": 0.0
+        }
+      ],
+      "queue_removed_after_dequeue_excluded": 0,
+      "queue_sojourn": [
+        {
+          "direction": "forward",
+          "group": "all",
+          "max_ns": 11470080,
+          "mean_ns": 4723996.642015867,
+          "minimum_ns": 0,
+          "p95_ns": 10260960,
+          "p99_ns": 11293440,
+          "packet_bytes": 1462261384,
+          "packet_count": 1019710
+        },
+        {
+          "direction": "forward",
+          "group": "flow0",
+          "max_ns": 11408160,
+          "mean_ns": 3617589.7318312367,
+          "minimum_ns": 0,
+          "p95_ns": 9916800,
+          "p99_ns": 11178720,
+          "packet_bytes": 598639074,
+          "packet_count": 417461
+        },
+        {
+          "direction": "forward",
+          "group": "flow1",
+          "max_ns": 11470080,
+          "mean_ns": 5490924.831406943,
+          "minimum_ns": 0,
+          "p95_ns": 10375680,
+          "p99_ns": 11293440,
+          "packet_bytes": 863622310,
+          "packet_count": 602249
+        },
+        {
+          "direction": "reverse",
+          "group": "all",
+          "max_ns": 0,
+          "mean_ns": 0.0,
+          "minimum_ns": 0,
+          "p95_ns": 0,
+          "p99_ns": 0,
+          "packet_bytes": 27963396,
+          "packet_count": 515276
+        },
+        {
+          "direction": "reverse",
+          "group": "untagged_or_control",
+          "max_ns": 0,
+          "mean_ns": 0.0,
+          "minimum_ns": 0,
+          "p95_ns": 0,
+          "p99_ns": 0,
+          "packet_bytes": 27963396,
+          "packet_count": 515276
+        }
+      ],
+      "start_ns": 80000000000,
+      "start_s": 80.0,
+      "unmapped_drop_layer_rows": {},
+      "window": "competition"
+    },
+    {
+      "application_sum_bytes": 21216120,
+      "application_sum_goodput_mbps": 96.23430962343096,
+      "common_active_jain": 0.9771306656224531,
+      "drop_rows_by_layer": {},
+      "drop_rows_without_transmission_identity": 0,
+      "end_ns": 91958450720,
+      "end_s": 91.95845072,
+      "flows": {
+        "0": {
+          "LOSS_entries": 0,
+          "active_duration_ns": 1763705280,
+          "active_interval_application_goodput_mbps": 55.478384687945145,
+          "application_bytes": 12230940,
+          "application_goodput_mbps": 55.478384687945145,
+          "distinct_tagged_transmissions_dropped": 0,
+          "drop_trace_rows": 0,
+          "official_retransmission_bytes": 0,
+          "official_retransmission_rows": 0,
+          "recovery_entries": 0,
+          "sender_payload_tx_bytes": 12206100,
+          "sender_payload_tx_rows": 8845
+        },
+        "1": {
+          "LOSS_entries": 0,
+          "active_duration_ns": 1763705280,
+          "active_interval_application_goodput_mbps": 40.755924935485815,
+          "application_bytes": 8985180,
+          "application_goodput_mbps": 40.755924935485815,
+          "distinct_tagged_transmissions_dropped": 0,
+          "drop_trace_rows": 0,
+          "official_retransmission_bytes": 0,
+          "official_retransmission_rows": 0,
+          "recovery_entries": 0,
+          "sender_payload_tx_bytes": 9061080,
+          "sender_payload_tx_rows": 6566
+        }
+      },
+      "layer_rows_by_flow": {
+        "0": {},
+        "1": {}
+      },
+      "queue_occupancy": [
+        {
+          "device_id": "1",
+          "direction": "forward",
+          "maximum_packets_held_for_positive_time": 49,
+          "node_id": "0",
+          "time_weighted_mean_bytes": 36721.144659815276,
+          "time_weighted_mean_packets": 25.607492789271458
+        },
+        {
+          "device_id": "1",
+          "direction": "reverse",
+          "maximum_packets_held_for_positive_time": 0,
+          "node_id": "1",
+          "time_weighted_mean_bytes": 0.0,
+          "time_weighted_mean_packets": 0.0
+        }
+      ],
+      "queue_removed_after_dequeue_excluded": 0,
+      "queue_sojourn": [
+        {
+          "direction": "forward",
+          "group": "all",
+          "max_ns": 5557440,
+          "mean_ns": 2929543.1247560815,
+          "minimum_ns": 968640,
+          "p95_ns": 5213280,
+          "p99_ns": 5442720,
+          "packet_bytes": 22046316,
+          "packet_count": 15374
+        },
+        {
+          "direction": "forward",
+          "group": "flow0",
+          "max_ns": 5557440,
+          "mean_ns": 2872148.0108991824,
+          "minimum_ns": 1083360,
+          "p95_ns": 5098560,
+          "p99_ns": 5557440,
+          "packet_bytes": 12630672,
+          "packet_count": 8808
+        },
+        {
+          "direction": "forward",
+          "group": "flow1",
+          "max_ns": 5442720,
+          "mean_ns": 3006536.143770941,
+          "minimum_ns": 968640,
+          "p95_ns": 5213280,
+          "p99_ns": 5442720,
+          "packet_bytes": 9415644,
+          "packet_count": 6566
+        },
+        {
+          "direction": "reverse",
+          "group": "all",
+          "max_ns": 0,
+          "mean_ns": 0.0,
+          "minimum_ns": 0,
+          "p95_ns": 0,
+          "p99_ns": 0,
+          "packet_bytes": 415152,
+          "packet_count": 7688
+        },
+        {
+          "direction": "reverse",
+          "group": "untagged_or_control",
+          "max_ns": 0,
+          "mean_ns": 0.0,
+          "minimum_ns": 0,
+          "p95_ns": 0,
+          "p99_ns": 0,
+          "packet_bytes": 415152,
+          "packet_count": 7688
+        }
+      ],
+      "start_ns": 90194745440,
+      "start_s": 90.19474544,
+      "unmapped_drop_layer_rows": {},
+      "window": "first-false-renew"
+    }
+  ]
+}

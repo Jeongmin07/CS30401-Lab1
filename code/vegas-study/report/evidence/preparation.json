@@ -1,0 +1,143 @@
+{
+  "kind": "posthoc_view_of_existing_v1_runs",
+  "no_new_simulations": true,
+  "script": {
+    "bytes": 9040,
+    "sha256": "eb28c6b3c9bc59b1aee604f1b5be765bd7df44929cf1c15aa4cedfd599297ba8"
+  },
+  "input_results": {
+    "bytes": 14383,
+    "sha256": "e90307ea0ad12a754d7ca1cda1ffc7004dfd4d4f9010a3f187792f880c3c3169"
+  },
+  "application_windows": "[bin_start_ns, bin_end_ns), 1 second, flow 0",
+  "trace_sampling": "last observed value at or before each sample_time_ns; no interpolation",
+  "route_cut_interpretation": "temporal accounting, not causal attribution to a route event",
+  "cases": {
+    "v1-step-base": {
+      "simulation_commit": "82ad34a975d4b15f8a536527f8ea4f0cf6e41624",
+      "simulation_manifest": {
+        "bytes": 7706,
+        "sha256": "2a0cd506b98421a400455acc9268205f67e4a880ff6d2ef60af6310f5f2efc07"
+      },
+      "patch_sha256": "25ac4286f68373ee4e33d43f5f00e8676a65fc9c8747d65f643cd0fc28202f59",
+      "duration_ns": 200000000000,
+      "receiver_application_rows": 612531,
+      "application_bytes": 845292780,
+      "inputs": {
+        "logs_ns3/study_app_rx_node_1_port_1024.csv": {
+          "bytes": 48447964,
+          "sha256": "5ecdca3e24f5af3ba8af9b87a72429a9408bc51f422722c811ae5bad0998ad60"
+        },
+        "logs_ns3/tcp_flow_0_cwnd.csv": {
+          "bytes": 20605,
+          "sha256": "83ddc1f4eeed9a12a10247e949c8f245b9c9e0c0daabdca75ee34875d903ee76"
+        },
+        "logs_ns3/tcp_flow_0_rtt.csv": {
+          "bytes": 7123688,
+          "sha256": "d8619a37cbfc9601d3e6822d58df8178fc029df54ba98a8ded4defea20be12fb"
+        },
+        "logs_ns3/vegas_state.csv": {
+          "bytes": 206206,
+          "sha256": "456267ab990bc6f256bcd8e3407d7a9e3a9274b50ce3d888912b2a8c22398db3"
+        }
+      }
+    },
+    "v1-step-renew": {
+      "simulation_commit": "82ad34a975d4b15f8a536527f8ea4f0cf6e41624",
+      "simulation_manifest": {
+        "bytes": 7708,
+        "sha256": "a2ae04764c1e1a9c1ef6461797bb91b846dc8cb6d2fc5829b6531f54f35d848b"
+      },
+      "patch_sha256": "25ac4286f68373ee4e33d43f5f00e8676a65fc9c8747d65f643cd0fc28202f59",
+      "duration_ns": 200000000000,
+      "receiver_application_rows": 1238851,
+      "application_bytes": 1709614380,
+      "inputs": {
+        "logs_ns3/study_app_rx_node_1_port_1024.csv": {
+          "bytes": 100208276,
+          "sha256": "2c3c57fec44881bcf3038c93bddd511c92854ab02efeafad091fc92dd6adc9c8"
+        },
+        "logs_ns3/tcp_flow_0_cwnd.csv": {
+          "bytes": 19462,
+          "sha256": "c94f78d378d90e35ea8322a525414926a7e201b0fff3d2c61e66e5dd6f1574d7"
+        },
+        "logs_ns3/tcp_flow_0_rtt.csv": {
+          "bytes": 14633963,
+          "sha256": "272103bfc8682285a29d61b5d1922ef3b0a34b6d23191b4c767cc10aa2b7583f"
+        },
+        "logs_ns3/vegas_state.csv": {
+          "bytes": 249073,
+          "sha256": "f0393fd6f20d178580b3d4d3015ccfe1448aae7e62d2a41855ab7aaec52b7ef5"
+        }
+      }
+    },
+    "v1-leo-base": {
+      "simulation_commit": "82ad34a975d4b15f8a536527f8ea4f0cf6e41624",
+      "simulation_manifest": {
+        "bytes": 6983,
+        "sha256": "8bd8d8e2850f4b0a3b804a28c5861f8887ba570d4ab146cd2fb055a155cd766e"
+      },
+      "patch_sha256": "25ac4286f68373ee4e33d43f5f00e8676a65fc9c8747d65f643cd0fc28202f59",
+      "duration_ns": 200000000000,
+      "receiver_application_rows": 751972,
+      "application_bytes": 1037783460,
+      "inputs": {
+        "logs_ns3/study_app_rx_node_1585_port_1024.csv": {
+          "bytes": 66643314,
+          "sha256": "ab7f762a746837533402ff69a84e0a9d83db059239204c7100a61a168fd9e06e"
+        },
+        "logs_ns3/tcp_flow_0_cwnd.csv": {
+          "bytes": 38123,
+          "sha256": "cb8c49e0edba087a76f28d6cfbd9d64f30dfb577846710888af82578d4ae446a"
+        },
+        "logs_ns3/tcp_flow_0_rtt.csv": {
+          "bytes": 8764361,
+          "sha256": "9b93139aebbdbde9cefd147368cd7afaed2f5edb1a36a0d93cbc32d658f26845"
+        },
+        "logs_ns3/vegas_state.csv": {
+          "bytes": 211571,
+          "sha256": "f7a1c6b93b91decd8adb5b12f6ae88b6593b6538ac493a78e5557e7a2eacbc2f"
+        }
+      }
+    },
+    "v1-leo-renew": {
+      "simulation_commit": "82ad34a975d4b15f8a536527f8ea4f0cf6e41624",
+      "simulation_manifest": {
+        "bytes": 6986,
+        "sha256": "5f16919ea46a356fab24ac585274bdaae6700a2bde34f2f312256799466c76cb"
+      },
+      "patch_sha256": "25ac4286f68373ee4e33d43f5f00e8676a65fc9c8747d65f643cd0fc28202f59",
+      "duration_ns": 200000000000,
+      "receiver_application_rows": 1256139,
+      "application_bytes": 1733580840,
+      "inputs": {
+        "logs_ns3/study_app_rx_node_1585_port_1024.csv": {
+          "bytes": 112936826,
+          "sha256": "c8f09e8236082ebe4134caaf311a4f6e01f3f99734668b7b8901ffebd26193fd"
+        },
+        "logs_ns3/tcp_flow_0_cwnd.csv": {
+          "bytes": 40008,
+          "sha256": "1df3f135ae5115c5579d1b8cc63917fca2ca681008f3ff57808f82e6809b4096"
+        },
+        "logs_ns3/tcp_flow_0_rtt.csv": {
+          "bytes": 14692017,
+          "sha256": "daf5b9664c906410c5353648c84de7f2922dbeb386d7ce4001d32fa53fb2320b"
+        },
+        "logs_ns3/vegas_state.csv": {
+          "bytes": 253196,
+          "sha256": "f11167f380667b66996588b7fc9d1a9241ef97d54b26b24d59997cf0037a4881"
+        }
+      }
+    }
+  },
+  "outputs": {
+    "timeseries.csv": {
+      "bytes": 81060,
+      "sha256": "37e9521eca57870aad2d3360f09259d41cae9b4e6df52ad5770914cd2c3e5cfb"
+    },
+    "segments.csv": {
+      "bytes": 645,
+      "sha256": "e0c402d5e5e2ad587ef94d0e131d3b22e310283695a4b9b2c91e0371f039f1f8"
+    }
+  }
+}

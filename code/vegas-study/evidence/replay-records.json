@@ -1,0 +1,53 @@
+{
+  "all_measurement_csv_match": true,
+  "total_measurement_csv_count": 48,
+  "source_repository_clean_after_replay": true,
+  "source_commit": "82ad34a975d4b15f8a536527f8ea4f0cf6e41624",
+  "files": [
+    {
+      "path": "/tmp/vegas-replay-audit/preparation.json",
+      "bytes": 5979,
+      "sha256": "b5a49e31e664da9d112291c06ef4d126d60d1d08fbbb344a46b242cfcf82c793"
+    },
+    {
+      "path": "/tmp/vegas-replay-audit/execution.json",
+      "bytes": 4471,
+      "sha256": "4bd3e0faa921777dca758240669cf7b435fff77774779c245e22dbf13fd5a6ae"
+    },
+    {
+      "path": "/tmp/vegas-replay-audit/primary-hashes.json",
+      "bytes": 37497,
+      "sha256": "21558d7dc7463f6062c353872db1b168deba6786dbbbb4eb5d0016856cf8c659"
+    },
+    {
+      "path": "/tmp/vegas-replay-audit/replay-hashes.json",
+      "bytes": 37512,
+      "sha256": "78da608e1a08cc41ab5fe4e9537d1b5df451fc5fe533173c0e14c551fbe8b882"
+    },
+    {
+      "path": "/tmp/vegas-replay-audit/comparison.json",
+      "bytes": 24312,
+      "sha256": "ced1198278c23b140841f7685251377ecd6f52226420c5c776f975770cab341d"
+    },
+    {
+      "path": "/tmp/vegas-replay-audit/build.log",
+      "bytes": 8297,
+      "sha256": "786cb13cc1734f3404b5f148574e1455778a9dd65f64d0e8e8b738e8b1c5a220"
+    },
+    {
+      "path": "/tmp/vegas-replay-audit/clone_immutable_repository.log",
+      "bytes": 322,
+      "sha256": "1b6261f6d9c47aa1377cb7967152a5685fa4f4aab2ef1e1d95333696fb90dd36"
+    },
+    {
+      "path": "/tmp/vegas-replay-audit/clone_immutable_repository_exact_safe_paths.log",
+      "bytes": 322,
+      "sha256": "1b6261f6d9c47aa1377cb7967152a5685fa4f4aab2ef1e1d95333696fb90dd36"
+    },
+    {
+      "path": "/tmp/vegas-replay-audit/clone_immutable_repository_inherited_exact_safe_paths.log",
+      "bytes": 30,
+      "sha256": "480e3c6b4553c495eeaf9e2d33b3e7a530212265f97e5b8091e3c71c63c1e9e8"
+    }
+  ]
+}

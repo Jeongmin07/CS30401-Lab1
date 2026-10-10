@@ -1,0 +1,57 @@
+{
+  "no_new_simulations": true,
+  "script": {
+    "bytes": 8734,
+    "sha256": "2a65e4434488ed04f005676cf4eee3abace569b9208f77fc5123ccc4171886e5"
+  },
+  "matplotlib_version": "3.10.8",
+  "numpy_version": "2.4.4",
+  "inputs": {
+    "prepared_timeseries.csv": {
+      "bytes": 81060,
+      "sha256": "37e9521eca57870aad2d3360f09259d41cae9b4e6df52ad5770914cd2c3e5cfb"
+    },
+    "v1_results.csv": {
+      "bytes": 14383,
+      "sha256": "e90307ea0ad12a754d7ca1cda1ffc7004dfd4d4f9010a3f187792f880c3c3169"
+    },
+    "v1_queue_sojourn.csv": {
+      "bytes": 19677,
+      "sha256": "97dfa795b0563cb7cd2989148637fdb5aceca96dd7c91b14e5cc7ee694fd1d02"
+    },
+    "v1_renewals.csv": {
+      "bytes": 8138,
+      "sha256": "538026f5e8d8cdf08196b78216d9479e92d02480c8185f65b9cd2214263b400f"
+    }
+  },
+  "outputs": {
+    "step-mechanism.png": {
+      "bytes": 182168,
+      "sha256": "7da6dd9f3cc5d4a7ebcd9388ee86c18f81dd506ae6013e73b4d87a7f5fc546bc"
+    },
+    "step-mechanism.pdf": {
+      "bytes": 22420,
+      "sha256": "f929257e5054def77c79ed456cb1d2fcd6cd65417bbf43a144dd65449033ffd5"
+    },
+    "leo-mechanism.png": {
+      "bytes": 211728,
+      "sha256": "2f40f8aaaae5a88f8a00adb1201211dd7303350f248b7025b19847ef49a5b445"
+    },
+    "leo-mechanism.pdf": {
+      "bytes": 26340,
+      "sha256": "0112788143de89e6e0d0a54198ab905ce29b9fa75730656b06758b98d8fb3a16"
+    },
+    "competition-costs.png": {
+      "bytes": 120535,
+      "sha256": "56c399d2a1c56a1743ab48b94a3ee8e1c0c5e0f270d5f184b5bbfe078e36336d"
+    },
+    "competition-costs.pdf": {
+      "bytes": 16328,
+      "sha256": "debd588a3f2a64c6567dc93c22e6a71e9ca83bdd7719d833b48ea012de45bbd2"
+    },
+    "competition-values.csv": {
+      "bytes": 322,
+      "sha256": "93d9072eb2d297c8c3090d5f5682c11625f21b8f9e49b6df73c280e089c4f713"
+    }
+  }
+}

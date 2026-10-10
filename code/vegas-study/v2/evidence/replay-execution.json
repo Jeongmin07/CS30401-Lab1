@@ -1,0 +1,66 @@
+{
+  "source_commit": "ac133157c5faa3dac56534ab105cd2ed804fd12c",
+  "declared_tasks_before_launch": [
+    [
+      "python3",
+      "/work/code/vegas-study/v2/run_case.py",
+      "replay-v2-fixed-comp-renew",
+      "--after-ms",
+      "45",
+      "--competitor",
+      "--renewal",
+      "--preserve-beta",
+      "--image-digest",
+      "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4"
+    ],
+    [
+      "python3",
+      "/work/code/vegas-study/v2/run_case.py",
+      "replay-v2-leo-renew",
+      "--kind",
+      "leo",
+      "--renewal",
+      "--preserve-beta",
+      "--image-digest",
+      "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4"
+    ]
+  ],
+  "results": [
+    {
+      "command": [
+        "python3",
+        "/work/code/vegas-study/v2/run_case.py",
+        "replay-v2-fixed-comp-renew",
+        "--after-ms",
+        "45",
+        "--competitor",
+        "--renewal",
+        "--preserve-beta",
+        "--image-digest",
+        "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4"
+      ],
+      "exit_code": 0,
+      "wall_time_s": 104.75975538499915,
+      "output": "{\"case\": \"replay-v2-fixed-comp-renew\", \"status\": \"complete\", \"exit_code\": 0, \"wall_time_s\": 104.27, \"source_commit\": \"ac133157c5faa3dac56534ab105cd2ed804fd12c\"}\n"
+    },
+    {
+      "command": [
+        "python3",
+        "/work/code/vegas-study/v2/run_case.py",
+        "replay-v2-leo-renew",
+        "--kind",
+        "leo",
+        "--renewal",
+        "--preserve-beta",
+        "--image-digest",
+        "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4"
+      ],
+      "exit_code": 0,
+      "wall_time_s": 216.81476155400014,
+      "output": "Run directory ready: /tmp/cs30401-vegas-v2/replay-v2-leo-renew  (1 flow(s), TcpVegas, 100 Mbit/s, queue 100 pkts, 200 s)\n{\"case\": \"replay-v2-leo-renew\", \"status\": \"complete\", \"exit_code\": 0, \"wall_time_s\": 216.309, \"source_commit\": \"ac133157c5faa3dac56534ab105cd2ed804fd12c\"}\n"
+    }
+  ],
+  "status": "complete",
+  "workers": 2,
+  "wall_time_s": 216.81709532499917
+}
