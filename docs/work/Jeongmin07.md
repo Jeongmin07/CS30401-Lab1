@@ -1,5 +1,40 @@
 # Jeongmin07 — current handoff
 
+## Latest follow-up, 2026-10-12
+
+Continued PR15 after checking the original handout pages 3-5: justified TCP and
+link-rate changes are allowed, with matched baselines and costs. Ten declared
+renewal timing/capacity cases completed at `fbc0b2b01055e51ccfdd0ea33606301e8c9ae4b0`.
+The simulator patch is unchanged; adaptive thresholds are OFF. Histories
+10/20/40 cycles, fixed 1 ms rise threshold, 100 Mbps LEO/fixed-CUBIC, and
+50 Mbps LEO with its own baseline. A credit interruption blocked a status
+check but did not stop the batch.
+
+My preferred balanced candidate is now **40 cycles** within PR14's renewal
+design: LEO 68.4538 vs r20 69.3432 Mbps; competition queue 3.2477 vs 4.7240 ms,
+Jain .999528 vs .968333; aggregate 92.9192 vs 93.8027 Mbps, TcDrop 203 vs 186.
+Neither new setting dominates r20. At 50 Mbps r40 gives 40.8433 vs original
+25.3262 Mbps. It still renews eight times on a fixed path: no general
+congestion/route distinction. This supersedes my earlier exact-r20 preference,
+not the team's PLAN or a merge decision.
+
+Audit: 21,840 state rows, 101 renewals, exact 37-file r20 compatibility with
+PR14. The Git-free source ZIP at `1deee988a37325c230a389ad4e6dafc518fc138f`
+was extracted and run in a new official volume. The representative r40
+competition replay matches all 26 measurement CSVs, metrics, simulator sources,
+binary, libraries and state audit. An altered source hash was rejected before
+simulation. Only one representative fresh package replay is claimed.
+
+See [full follow-up](../experiments/20261011-vegas-renewal-sensitivity.md),
+`code/vegas-adaptive/sensitivity-evidence/`, and the
+[raw/package release](https://github.com/Jeongmin07/CS30401-Lab1/releases/tag/vegas-sensitivity-20261011).
+Primary runs: `lab1-vegas-adaptive-20261011:/tmp/vegas-sensitivity`.
+Fresh package replay: container `lab1-vegas-portable-20261012`, volume
+`lab1-vegas-portable-ns3-20261012`. Preserve all prior containers/volumes.
+The host's ignored `runs/` holds the ZIP, extracted package and upload receipts.
+Next is the English IEEE report and final assembly with confirmed team scope
+and names; the tested research-code ZIP is not `Lab1_5.zip`. No merge performed.
+
 ## Current study, 2026-10-11
 
 Branch `experiment/vegas-adaptive-ca`, [PR15](https://github.com/Jeongmin07/CS30401-Lab1/pull/15),

@@ -1,0 +1,6 @@
+{
+  "exit_code": 1,
+  "output": "Package source hash mismatch: code/vegas-adaptive/run_case.py\n",
+  "case_directory_created": false,
+  "host_git_directory_present": false
+}

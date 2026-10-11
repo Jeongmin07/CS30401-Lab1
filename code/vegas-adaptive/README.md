@@ -1,5 +1,21 @@
 # Vegas-A-inspired follow-up (Jeongmin07)
 
+**Follow-up completed 2026-10-12:** the [renewal sensitivity study](../../docs/experiments/20261011-vegas-renewal-sensitivity.md)
+adds ten declared timing/capacity cases. Forty cycles sacrifices 1.28% of the
+20-cycle LEO goodput while reducing fixed-competition queue wait by 31.25% and
+improving sharing; aggregate throughput falls slightly and drops increase.
+This is now my preferred balanced candidate within the renewal design, not
+an across-the-board winner. All original adaptive evidence below is preserved.
+
+`run_sensitivity.py` launches the matrix; `verify_sensitivity.py` validates and
+exports it; `plot_sensitivity.py` draws the comparison. Results and receipts are
+in `sensitivity-evidence/`. `export_portable.py --out NEW_DIRECTORY` creates a
+small Git-free replay ZIP from a clean checkout, containing a source inventory
+and standalone README commands. One fresh-volume representative replay matched
+26 measurement CSVs exactly. The complete ten-case ZIP replay is not claimed.
+The [evidence release](https://github.com/Jeongmin07/CS30401-Lab1/releases/tag/vegas-sensitivity-20261011)
+provides the original raw runs and the tested source package.
+
 This is a new endpoint-only candidate study, not a team direction or a merge decision.
 Branch starts from main b60e8e019053c7d33b853510ec06c3d94ee78faf.
 It reuses selected tools and the full v1 patch from PR #14 at

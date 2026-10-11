@@ -1,0 +1,11 @@
+{
+  "archive": "/tmp/vegas-sensitivity-20261011-raw.tar.gz",
+  "archive_bytes": 783526960,
+  "archive_sha256": "061f489e810fed62491bd38d2bed590112e35e108b36bc90bd8c01b283e7476f",
+  "compresslevel": 6,
+  "inventory_sha256": "6f5db7c70fa34dcd16c944534a403d6b5724af7e6351129d669d716e31ecdf96",
+  "schema_version": 1,
+  "verification": "Every archived file independently streamed and matched to pre-archive size/SHA256; no raw logs were edited.",
+  "verified_file_count": 277,
+  "wall_time_s": 217.091
+}

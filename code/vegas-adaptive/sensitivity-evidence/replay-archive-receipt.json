@@ -1,0 +1,11 @@
+{
+  "archive": "/tmp/vegas-sensitivity-portable-replay.tar.gz",
+  "archive_bytes": 140864647,
+  "archive_sha256": "bef3ff84214a9394b838d403dcabf3d588b509cd5b09a50adc23edb37bf1698f",
+  "compresslevel": 6,
+  "inventory_sha256": "834dd2c466cf55f2cdac498d730d0f05591e502fd22d1ec7898d1af2fb384717",
+  "schema_version": 1,
+  "verification": "Every archived file independently streamed and matched to pre-archive size/SHA256; no raw logs were edited.",
+  "verified_file_count": 32,
+  "wall_time_s": 44.222
+}
