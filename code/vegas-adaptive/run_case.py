@@ -14,7 +14,7 @@ NS3 = Path("/home/ubuntu/ns-3.48")
 REPO = Path("/work")
 # The trusted Windows bind mount uses CRLF for ordinary documents; compare its
 # canonical Git text using the same normalization without changing host config.
-REPO_GIT = ["git", "-c", "safe.directory=/work", "-c", "core.autocrlf=true"]
+REPO_GIT = ["git", "--git-dir=/git-common/worktrees/vegas-adaptive-study", "--work-tree=/work", "-c", "safe.directory=/work", "-c", "core.autocrlf=true"]
 
 
 def sha(path):
@@ -40,6 +40,7 @@ def main():
     p.add_argument("name")
     p.add_argument("--kind", choices=("micro", "leo"), default="micro")
     p.add_argument("--renewal", action="store_true")
+    p.add_argument("--adaptive", action="store_true")
     p.add_argument("--rounds", type=int, default=20)
     p.add_argument("--min-rise-ms", type=float, default=1)
     p.add_argument("--duration", type=int, default=200)
@@ -71,10 +72,10 @@ def main():
     if dirty:
         raise SystemExit("Commit simulation code before launch; repository has local changes")
     commit = subprocess.check_output(REPO_GIT + ["rev-parse", "HEAD"], cwd=REPO, text=True).strip()
-    if sha(REPO / "code/vegas-study/vegas_micro.cc") != sha(NS3 / "scratch/vegas_micro/vegas_micro.cc"):
+    if sha(REPO / "code/vegas-adaptive/vegas_micro.cc") != sha(NS3 / "scratch/vegas_micro/vegas_micro.cc"):
         raise SystemExit("Live micro driver differs from committed driver; copy and rebuild first")
     actual_patch = subprocess.check_output(["git", "diff", "--cached", "--binary", "cs30401-base"], cwd=NS3)
-    if hashlib.sha256(actual_patch).hexdigest() != sha(REPO / "code/vegas-study/ns3.patch"):
+    if hashlib.sha256(actual_patch).hexdigest() != sha(REPO / "code/vegas-adaptive/ns3.patch"):
         raise SystemExit("Live staged ns-3 patch differs from declared patch; export and rebuild first")
     subprocess.run(["git", "diff", "--quiet"], cwd=NS3, check=True)
     run = a.root / a.name
@@ -97,6 +98,9 @@ def main():
                    f"--seed={a.seed}", f"--initial_ssthresh_pkts={a.initial_ssthresh_pkts}",
                    f"--renewal={int(a.renewal)}", f"--renewal_rounds={a.rounds}",
                    f"--renewal_min_rise_ms={a.min_rise_ms}"]
+    if a.renewal and a.adaptive:
+        p.error("Do not combine the study policies")
+    command += [f"--ns3::TcpVegas::AdaptiveThresholds={str(a.adaptive).lower()}"]
     command += [f"--ns3::TcpVegas::RenewalRounds={a.rounds}",
                 f"--ns3::TcpVegas::RenewalMinRise={round(a.min_rise_ms * 1e6)}ns"]
     if a.kind == "leo":
@@ -104,8 +108,8 @@ def main():
     env = dict(os.environ, CS30401_STUDY_TRACE=str(a.trace),
                CS30401_STUDY_TRACE_DIR=str(run / "logs_ns3"),
                CS30401_VEGAS_TRACE_DIR=str(run / "logs_ns3"))
-    files = [Path(__file__), REPO / "code/vegas-study/ns3.patch",
-             REPO / "code/vegas-study/vegas_micro.cc", REPO / "code/vegas-study/analyze_vegas.py",
+    files = [Path(__file__), REPO / "code/vegas-adaptive/ns3.patch",
+             REPO / "code/vegas-adaptive/vegas_micro.cc", REPO / "code/vegas-adaptive/analyze_vegas.py",
              REPO / "code/kim-study/analyze_study.py", REPO / "code/kim-study/path_truth_200s.csv",
              NS3 / "src/internet/model/tcp-vegas.cc", NS3 / "src/internet/model/tcp-vegas.h",
              NS3 / "src/internet/model/tcp-socket-base.cc", NS3 / "scratch/vegas_micro/vegas_micro.cc"]
@@ -123,9 +127,9 @@ def main():
                 "command": command, "trace_environment": {k: env[k] for k in
                     ("CS30401_STUDY_TRACE", "CS30401_STUDY_TRACE_DIR", "CS30401_VEGAS_TRACE_DIR")},
                 "sources": sources, "shared_libraries": libs, "binary": record(binary),
-                "patch_sha256": sha(REPO / "code/vegas-study/ns3.patch"),
+                "patch_sha256": sha(REPO / "code/vegas-adaptive/ns3.patch"),
                 "binary_sha256": sha(binary), "status": "running", "start_time_unix": time.time(),
-                "policy": {"recent_min_renewal": a.renewal, "rounds": a.rounds,
+                "policy": {"adaptive_thresholds": a.adaptive, "recent_min_renewal": a.renewal, "rounds": a.rounds,
                            "min_rise_ns": round(a.min_rise_ms * 1e6), "alpha": 2, "beta": 4, "gamma": 1,
                            "input": "existing socket SRTT; loss/startup unchanged"},
                 "state": a.state if a.kind == "leo" else None}
