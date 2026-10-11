@@ -50,6 +50,9 @@ wait falls 27.47%. Its foreground increase is mostly offset by the competitor's
 decrease. Neither "higher Vegas goodput proves better service" nor "adaptive
 always worsens queueing" is supported. LEO direct queue delay is unavailable;
 the micro queue result is not a per-hop LEO queue measurement.
+In fixed solo traffic, adaptive's extra utilization increases mean forward
+queue wait **0.065953→0.380602ms**, with no TcDrop/retransmission rows in
+either case. Its lower mixed-traffic queue wait is not a general queue claim.
 
 ![Comparison of delivered goodput, bandwidth sharing and queue cost](../../code/vegas-adaptive/evidence/figures/comparison.png)
 

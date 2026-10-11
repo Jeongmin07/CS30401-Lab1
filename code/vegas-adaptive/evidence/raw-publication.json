@@ -1,0 +1,19 @@
+{
+  "release": {
+    "id": 409654140,
+    "html_url": "https://github.com/Jeongmin07/CS30401-Lab1/releases/tag/vegas-adaptive-20261011",
+    "tag_name": "vegas-adaptive-20261011",
+    "target_commitish": "7ac0751235dc1ecb14b3042622ac50990429f17c"
+  },
+  "asset": {
+    "id": 630697625,
+    "name": "vegas-adaptive-20261011-raw.tar.gz",
+    "size": 1214998496,
+    "state": "uploaded",
+    "digest": "sha256:8e455bdb7a13b761a509781bcfd9b905b01f472dc28cb5b3cb3762e3cbd891d3",
+    "browser_download_url": "https://github.com/Jeongmin07/CS30401-Lab1/releases/download/vegas-adaptive-20261011/vegas-adaptive-20261011-raw.tar.gz"
+  },
+  "simulation_launch_commit": "7ac0751235dc1ecb14b3042622ac50990429f17c",
+  "archive_local_and_github_sha256_match": true,
+  "publication_type": "Exploratory private-repository prerelease; no merge"
+}
