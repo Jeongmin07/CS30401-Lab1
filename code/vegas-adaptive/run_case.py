@@ -57,6 +57,7 @@ def main():
     p.add_argument("--trace", type=int, choices=(0, 1), default=1)
     p.add_argument("--image-digest", required=True, help="Digest freshly checked by host operator")
     p.add_argument("--root", type=Path, default=Path("/tmp/cs30401-vegas"))
+    p.add_argument("--source-manifest", type=Path, help="Git-free exported package identity; all packaged code hashes must match")
     a = p.parse_args()
     if not re.fullmatch(r"[A-Za-z0-9_-]+", a.name):
         p.error("Use an alphanumeric run ID with hyphens/underscores")
@@ -68,10 +69,27 @@ def main():
         p.error("This LEO runner supports supplied state, one flow, seed123456789, duration<=200")
     if a.kind == "micro" and a.trace != 1:
         p.error("The micro queue diagnostic always records passive observations")
-    dirty = subprocess.check_output(REPO_GIT + ["status", "--porcelain"], cwd=REPO, text=True)
-    if dirty:
-        raise SystemExit("Commit simulation code before launch; repository has local changes")
-    commit = subprocess.check_output(REPO_GIT + ["rev-parse", "HEAD"], cwd=REPO, text=True).strip()
+    package_identity = None
+    if a.source_manifest:
+        snapshot = json.loads(a.source_manifest.read_text())
+        commit = snapshot["source_commit"]
+        if not re.fullmatch(r"[0-9a-f]{40}", commit):
+            raise SystemExit("Invalid package source commit")
+        declared = snapshot["files"]
+        actual = {p.relative_to(REPO).as_posix() for p in (REPO / "code").rglob("*")
+                  if p.is_file() and "__pycache__" not in p.parts and p.suffix != ".pyc"}
+        if set(declared) != actual or "code/vegas-adaptive/run_case.py" not in declared:
+            raise SystemExit("Package code inventory differs")
+        for relative, expected in declared.items():
+            path = (REPO / relative).resolve()
+            if not path.is_relative_to(REPO.resolve()) or sha(path) != expected:
+                raise SystemExit("Package source hash mismatch: " + relative)
+        package_identity = record(a.source_manifest)
+    else:
+        dirty = subprocess.check_output(REPO_GIT + ["status", "--porcelain"], cwd=REPO, text=True)
+        if dirty:
+            raise SystemExit("Commit simulation code before launch; repository has local changes")
+        commit = subprocess.check_output(REPO_GIT + ["rev-parse", "HEAD"], cwd=REPO, text=True).strip()
     if sha(REPO / "code/vegas-adaptive/vegas_micro.cc") != sha(NS3 / "scratch/vegas_micro/vegas_micro.cc"):
         raise SystemExit("Live micro driver differs from committed driver; copy and rebuild first")
     actual_patch = subprocess.check_output(["git", "diff", "--cached", "--binary", "cs30401-base"], cwd=NS3)
@@ -122,6 +140,8 @@ def main():
             parameters.pop(key)
     manifest = {"schema_version": 1, "case": a.name, "parameters": parameters,
                 "source_commit": commit, "source_worktree_dirty": False,
+                "source_verification": "exported_hash_inventory" if package_identity else "clean_git_worktree",
+                "source_package_manifest": package_identity,
                 "official_image_digest": a.image_digest,
                 "image_verification": "Host operator inspected Docker identity before launch; supplied to runner",
                 "command": command, "trace_environment": {k: env[k] for k in

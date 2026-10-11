@@ -11,6 +11,7 @@ p = argparse.ArgumentParser(description=__doc__)
 p.add_argument('--image-digest', required=True)
 p.add_argument('--root', type=Path, default=Path('/tmp/vegas-sensitivity'))
 p.add_argument('--out', type=Path, required=True)
+p.add_argument('--source-manifest', type=Path)
 a = p.parse_args()
 assert not a.out.exists(), 'Refuse existing matrix record'
 here = Path(__file__).resolve().parent
@@ -22,6 +23,8 @@ for family in ('leo', 'fixed-comp', 'rate50'):
                '--image-digest', a.image_digest, '--root', str(a.root)]
         cmd += (['--after-ms', '45', '--competitor'] if family == 'fixed-comp'
                 else ['--kind', 'leo'])
+        if a.source_manifest:
+            cmd += ['--source-manifest', str(a.source_manifest)]
         if family == 'rate50':
             cmd += ['--rate', '50']
         if rounds:

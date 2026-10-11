@@ -31,6 +31,7 @@ def main():
     p.add_argument("--extra", nargs="*", default=[])
     p.add_argument("--attach-tree", action="append", default=[], metavar="LABEL=PATH",
                    help="Include a separate post-hoc output tree under LABEL in the same archive")
+    p.add_argument("--compresslevel", type=int, choices=range(1,10), default=1)
     a = p.parse_args()
     root, out = a.root.resolve(), a.out.resolve()
     inventory_path = out.with_suffix(out.suffix + ".inventory.json")
@@ -92,7 +93,7 @@ def main():
     out.parent.mkdir(parents=True, exist_ok=True)
     inventory_path.write_bytes(raw_inventory)
     with out.open("xb") as stream:
-        with gzip.GzipFile(fileobj=stream, mode="wb", compresslevel=1, mtime=0, filename="") as compressed:
+        with gzip.GzipFile(fileobj=stream, mode="wb", compresslevel=a.compresslevel, mtime=0, filename="") as compressed:
             with tarfile.open(fileobj=compressed, mode="w|", format=tarfile.PAX_FORMAT) as archive:
                 info = tarfile.TarInfo("RAW_INVENTORY.json")
                 info.size, info.mtime = len(raw_inventory), 0
@@ -125,7 +126,7 @@ def main():
     with out.open("rb") as stream:
         archive_sha = digest(stream)
     receipt = {"schema_version": 1, "archive": str(out), "archive_bytes": out.stat().st_size,
-               "archive_sha256": archive_sha, "verified_file_count": len(observed),
+               "archive_sha256": archive_sha, "compresslevel": a.compresslevel, "verified_file_count": len(observed),
                "inventory_sha256": hashlib.sha256(raw_inventory).hexdigest(),
                "verification": "Every archived file independently streamed and matched to pre-archive size/SHA256; no raw logs were edited.",
                "wall_time_s": round(time.monotonic() - started, 3)}
