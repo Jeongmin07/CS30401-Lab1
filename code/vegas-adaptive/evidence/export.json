@@ -1,0 +1,39 @@
+{
+  "source_commit": "7ac0751235dc1ecb14b3042622ac50990429f17c",
+  "full_analysis_sources": [
+    {
+      "case": "a1-leo-base",
+      "full_analysis_sha256": "1f0ee3f0ad9dee039f27b2497097c7aa5e6492a29fc40a704e5e368c8becbbba"
+    },
+    {
+      "case": "a1-leo-adaptive",
+      "full_analysis_sha256": "a47d9550fe25bc6a75eea935bc748651732761eef751bb2e7a4af30ce1bc896f"
+    },
+    {
+      "case": "a1-fixed-comp-base",
+      "full_analysis_sha256": "6a64dd3f3baf7df0a293877a847ea2117d1942ce93352a87e061a3e0d8187981"
+    },
+    {
+      "case": "a1-fixed-comp-adaptive",
+      "full_analysis_sha256": "7ac3a11d31f86d9667a886411a5025086be6a1353244bc5750acf6d6c160fe14"
+    },
+    {
+      "case": "a1-fixed-base",
+      "full_analysis_sha256": "e53d35a6d6a31a3e3c9895580d54187d6ac161f4bd0e39c9ecd1e2a6a26a4d90"
+    },
+    {
+      "case": "a1-fixed-adaptive",
+      "full_analysis_sha256": "184ef9f43b26feaf1022aec3255e57975a7a347dfdc257a219a88b9812a7d01c"
+    },
+    {
+      "case": "a1-step-base",
+      "full_analysis_sha256": "0d0c55a6ea13ad384ac8c5daa520f5f49ab0403acbe44e380c5ed5bd754f58a9"
+    },
+    {
+      "case": "a1-step-adaptive",
+      "full_analysis_sha256": "4c50f81098a7127f0ee27b7af4bbb1d095aa5a7f24dc3a693e744da3a61c5269"
+    }
+  ],
+  "results_rows": 52,
+  "scope": "Unabridged small analysis JSON, original launch manifests, all analyzed window/flow rows. Raw traces remain in the release archive."
+}

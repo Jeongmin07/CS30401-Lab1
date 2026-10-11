@@ -33,3 +33,87 @@ sweep or selective tuning. Compare app delivery, common-window sharing,
 direct micro queue delay/occupancy, drops, retransmissions and state traces.
 Replay a representative case in a new volume, archive raw inputs with hashes,
 and publish compact evidence plus the full final patch. No merge authorized.
+
+## Completed result
+
+Eight primary cases and a fresh fixed-competition replay completed. See the
+[experiment record](../../docs/experiments/20261011-vegas-adaptive.md),
+[all window/flow results](evidence/results.csv), and [figure](evidence/figures/comparison.png).
+LEO goodput is 41.5113→50.2036 Mbps, less than renewal's 69.3432. Fixed
+competition gives higher aggregate service and lower mean queue wait but worse
+Jain sharing: .9618→.8275. Fixed solo also improves, so this is broader CA
+adaptation rather than a route-specific reference correction. The candidate
+remains separate; PR14 v1 is my preferred primary LEO study, not a team choice.
+
+## Fresh-volume reproduction (PowerShell)
+
+Use a **new ordinary clone**, container and volume. The current branch adds
+post-hoc analysis/documentation; pin the actual simulation launch commit for
+source-identical replay. Apply only the complete final `ns3.patch`, not both
+patch files. `pr14-base.patch` plus `implement.py` are development provenance.
+
+```powershell
+git clone --branch experiment/vegas-adaptive-ca https://github.com/Jeongmin07/CS30401-Lab1.git vegas-adaptive-replay
+Set-Location vegas-adaptive-replay
+git checkout --detach 7ac0751235dc1ecb14b3042622ac50990429f17c
+$studyRoot = (Resolve-Path .).Path
+$studyGit = (git rev-parse --absolute-git-dir).Trim()
+$studyImage = 'ghcr.io/yeonjong21/cs30401-lab1@sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4'
+$studyContainer = 'vegas-adaptive-replay'
+docker run -d --name $studyContainer --mount "type=bind,source=$studyRoot,target=/work,readonly" --mount "type=bind,source=$studyGit,target=/git-common/worktrees/vegas-adaptive-study,readonly" --mount 'type=volume,source=vegas-adaptive-replay-ns3,target=/home/ubuntu/ns-3.48' $studyImage sleep infinity
+docker exec -w /home/ubuntu/ns-3.48 $studyContainer bash -lc 'git apply --check /work/code/vegas-adaptive/ns3.patch && git apply /work/code/vegas-adaptive/ns3.patch && git add -A && ./ns3 build -j 4'
+docker exec $studyContainer python3 /work/code/vegas-adaptive/run_matrix.py --families leo fixed-comp fixed step --image-digest sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4 --out /tmp/cs30401-vegas/matrix-replay.json
+```
+
+The separate Git mount lets the launch runner read a Windows clone safely.
+Our development checkout was a Git worktree: `/git-common` instead mounted
+the parent repository's common `.git`, whose existing `worktrees/vegas-adaptive-study`
+admin directory supplies the runner's same Git path. Both actual Docker volumes
+applied the full committed patch and produced identical competition outputs.
+The ordinary-clone mount variant above was checked separately before delivery.
+Runners refuse existing case/output directories and record their launch commit;
+do not change source midway through a matrix.
+
+Analyze the newly reproduced original-source cases:
+
+```powershell
+foreach ($studyFamily in @('leo','fixed-comp','fixed','step')) {
+  foreach ($studyMode in @('base','adaptive')) {
+    $studyCase = "a1-$studyFamily-$studyMode"
+    $studyArgs = @('/work/code/vegas-adaptive/analyze_vegas.py', "/tmp/cs30401-vegas/$studyCase", '--out', "/tmp/vegas-adaptive-analysis/$studyCase")
+    if ($studyFamily -eq 'leo') { $studyArgs += @('--event-s','121.6','--event-s','187.4') }
+    if ($studyFamily -eq 'fixed-comp') { $studyArgs += @('--window','common:80:200') }
+    if ($studyFamily -eq 'step') { $studyArgs += @('--window','pre100:0:100','--window','post100:100:200') }
+    docker exec $studyContainer python3 @studyArgs
+    if ($LASTEXITCODE -ne 0) { throw "Analysis failed: $studyCase" }
+  }
+}
+```
+
+Use post-hoc `audit_adaptive.py`, `check_baselines.py`, `export_results.py` and
+the reference receipts from this PR's completed branch, copying them into
+`/tmp` with `docker cp` if using the pinned source checkout. Audit `--runs`
+accepts completed run directories; `--compare OLD NEW` checks measurement CSVs
+and source/binary/library/policy/network identities, ignoring wall-clock timing.
+For comparing the same named case from two containers, first copy one completed
+run tree into a new directory visible to the other container. Do not copy an
+in-progress run or change raw files.
+
+`check_baselines.py --reference-root RECEIPTS --root RUN_ROOT --out NEW_JSON`
+reads the four compact PR14 receipts in `evidence/pr14-baselines`, validates
+network parameters, and checks all 75 original baseline measurement files.
+`export_results.py --runs RUN_ROOT --analysis ANALYSIS_ROOT --out NEW_FOLDER`
+requires the original launch commit for source-identical primary publication.
+The analyzer and exporter use exact half-open windows and ordered app payload;
+queue wait includes zero-wait served dequeues, while pending packets are censored.
+Whole-run sharing is not computed when a competitor starts late.
+
+To regenerate the figure from the published compact tables, use this completed
+branch in a writable container: `uv sync --frozen` in `code/kim-study`, then
+`uv run --frozen python /work/code/vegas-adaptive/plot_results.py` there. This
+reuses the repository's existing locked plotting dependencies; no production
+dependency was added. PNG/PDF source hashes are in `evidence/figures/sources.json`.
+The archive helper can attach full analyses/replay/audits, inventories every
+selected original file, and independently streams every compressed member.
+The [raw release](https://github.com/Jeongmin07/CS30401-Lab1/releases/tag/vegas-adaptive-20261011)
+and `evidence/raw-archive-receipt.json` identify the original data.

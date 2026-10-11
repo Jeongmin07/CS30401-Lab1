@@ -1,0 +1,10 @@
+{
+  "archive": "/tmp/vegas-adaptive-20261011-raw.tar.gz",
+  "archive_bytes": 1214998496,
+  "archive_sha256": "8e455bdb7a13b761a509781bcfd9b905b01f472dc28cb5b3cb3762e3cbd891d3",
+  "inventory_sha256": "514b123b76579966777ec82cb71e67d8d0711c7d9b109cc220998e5cc291d961",
+  "schema_version": 1,
+  "verification": "Every archived file independently streamed and matched to pre-archive size/SHA256; no raw logs were edited.",
+  "verified_file_count": 285,
+  "wall_time_s": 140.102
+}

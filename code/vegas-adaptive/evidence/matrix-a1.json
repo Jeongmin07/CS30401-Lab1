@@ -1,0 +1,158 @@
+{
+  "declared_tasks_before_launch": [
+    {
+      "case": "a1-leo-base",
+      "family": "leo",
+      "adaptive": false,
+      "command": [
+        "/home/ubuntu/lab/.venv/bin/python3",
+        "/work/code/vegas-adaptive/run_case.py",
+        "a1-leo-base",
+        "--image-digest",
+        "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+        "--root",
+        "/tmp/cs30401-vegas",
+        "--kind",
+        "leo"
+      ]
+    },
+    {
+      "case": "a1-leo-adaptive",
+      "family": "leo",
+      "adaptive": true,
+      "command": [
+        "/home/ubuntu/lab/.venv/bin/python3",
+        "/work/code/vegas-adaptive/run_case.py",
+        "a1-leo-adaptive",
+        "--image-digest",
+        "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+        "--root",
+        "/tmp/cs30401-vegas",
+        "--kind",
+        "leo",
+        "--adaptive"
+      ]
+    },
+    {
+      "case": "a1-fixed-comp-base",
+      "family": "fixed-comp",
+      "adaptive": false,
+      "command": [
+        "/home/ubuntu/lab/.venv/bin/python3",
+        "/work/code/vegas-adaptive/run_case.py",
+        "a1-fixed-comp-base",
+        "--image-digest",
+        "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+        "--root",
+        "/tmp/cs30401-vegas",
+        "--after-ms",
+        "45",
+        "--competitor"
+      ]
+    },
+    {
+      "case": "a1-fixed-comp-adaptive",
+      "family": "fixed-comp",
+      "adaptive": true,
+      "command": [
+        "/home/ubuntu/lab/.venv/bin/python3",
+        "/work/code/vegas-adaptive/run_case.py",
+        "a1-fixed-comp-adaptive",
+        "--image-digest",
+        "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+        "--root",
+        "/tmp/cs30401-vegas",
+        "--after-ms",
+        "45",
+        "--competitor",
+        "--adaptive"
+      ]
+    }
+  ],
+  "results": [
+    {
+      "case": "a1-leo-base",
+      "family": "leo",
+      "adaptive": false,
+      "command": [
+        "/home/ubuntu/lab/.venv/bin/python3",
+        "/work/code/vegas-adaptive/run_case.py",
+        "a1-leo-base",
+        "--image-digest",
+        "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+        "--root",
+        "/tmp/cs30401-vegas",
+        "--kind",
+        "leo"
+      ],
+      "exit_code": 1,
+      "wall_s": 6.871402316000058,
+      "output": "Traceback (most recent call last):\n  File \"/work/code/vegas-adaptive/run_case.py\", line 168, in <module>\n    main()\n  File \"/work/code/vegas-adaptive/run_case.py\", line 80, in main\n    subprocess.run([\"git\", \"diff\", \"--quiet\"], cwd=NS3, check=True)\n  File \"/usr/lib/python3.12/subprocess.py\", line 571, in run\n    raise CalledProcessError(retcode, process.args,\nsubprocess.CalledProcessError: Command '['git', 'diff', '--quiet']' returned non-zero exit status 1.\n"
+    },
+    {
+      "case": "a1-leo-adaptive",
+      "family": "leo",
+      "adaptive": true,
+      "command": [
+        "/home/ubuntu/lab/.venv/bin/python3",
+        "/work/code/vegas-adaptive/run_case.py",
+        "a1-leo-adaptive",
+        "--image-digest",
+        "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+        "--root",
+        "/tmp/cs30401-vegas",
+        "--kind",
+        "leo",
+        "--adaptive"
+      ],
+      "exit_code": 1,
+      "wall_s": 7.050926994999941,
+      "output": "Traceback (most recent call last):\n  File \"/work/code/vegas-adaptive/run_case.py\", line 168, in <module>\n    main()\n  File \"/work/code/vegas-adaptive/run_case.py\", line 80, in main\n    subprocess.run([\"git\", \"diff\", \"--quiet\"], cwd=NS3, check=True)\n  File \"/usr/lib/python3.12/subprocess.py\", line 571, in run\n    raise CalledProcessError(retcode, process.args,\nsubprocess.CalledProcessError: Command '['git', 'diff', '--quiet']' returned non-zero exit status 1.\n"
+    },
+    {
+      "case": "a1-fixed-comp-adaptive",
+      "family": "fixed-comp",
+      "adaptive": true,
+      "command": [
+        "/home/ubuntu/lab/.venv/bin/python3",
+        "/work/code/vegas-adaptive/run_case.py",
+        "a1-fixed-comp-adaptive",
+        "--image-digest",
+        "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+        "--root",
+        "/tmp/cs30401-vegas",
+        "--after-ms",
+        "45",
+        "--competitor",
+        "--adaptive"
+      ],
+      "exit_code": 1,
+      "wall_s": 9.55644792299995,
+      "output": "Traceback (most recent call last):\n  File \"/work/code/vegas-adaptive/run_case.py\", line 168, in <module>\n    main()\n  File \"/work/code/vegas-adaptive/run_case.py\", line 80, in main\n    subprocess.run([\"git\", \"diff\", \"--quiet\"], cwd=NS3, check=True)\n  File \"/usr/lib/python3.12/subprocess.py\", line 571, in run\n    raise CalledProcessError(retcode, process.args,\nsubprocess.CalledProcessError: Command '['git', 'diff', '--quiet']' returned non-zero exit status 1.\n"
+    },
+    {
+      "case": "a1-fixed-comp-base",
+      "family": "fixed-comp",
+      "adaptive": false,
+      "command": [
+        "/home/ubuntu/lab/.venv/bin/python3",
+        "/work/code/vegas-adaptive/run_case.py",
+        "a1-fixed-comp-base",
+        "--image-digest",
+        "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+        "--root",
+        "/tmp/cs30401-vegas",
+        "--after-ms",
+        "45",
+        "--competitor"
+      ],
+      "exit_code": 1,
+      "wall_s": 9.738248880000015,
+      "output": "Traceback (most recent call last):\n  File \"/work/code/vegas-adaptive/run_case.py\", line 168, in <module>\n    main()\n  File \"/work/code/vegas-adaptive/run_case.py\", line 80, in main\n    subprocess.run([\"git\", \"diff\", \"--quiet\"], cwd=NS3, check=True)\n  File \"/usr/lib/python3.12/subprocess.py\", line 571, in run\n    raise CalledProcessError(retcode, process.args,\nsubprocess.CalledProcessError: Command '['git', 'diff', '--quiet']' returned non-zero exit status 1.\n"
+    }
+  ],
+  "start_unix": 1791720226.3007758,
+  "status": "failed",
+  "workers": 2,
+  "end_unix": 1791720242.9166775
+}

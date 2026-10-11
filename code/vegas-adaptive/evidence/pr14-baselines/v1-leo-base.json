@@ -1,0 +1,270 @@
+{
+  "reference_case": "v1-leo-base",
+  "reference_pr": 14,
+  "reference_branch_commit": "4a91c32cf90ea4aa6f81cc81accb2136e6e1f193",
+  "original_summary_sha256": "4d7d1ef47616e13da7576af8f9c9ce925ddb6f1e9c5e1b1e290892a79518450a",
+  "all_original_regular_files": [
+    {
+      "bytes": 66643314,
+      "path": "/tmp/cs30401-vegas/v1-leo-base/logs_ns3/study_app_rx_node_1585_port_1024.csv",
+      "relative_path": "logs_ns3/study_app_rx_node_1585_port_1024.csv",
+      "sha256": "ab7f762a746837533402ff69a84e0a9d83db059239204c7100a61a168fd9e06e"
+    },
+    {
+      "bytes": 1140184,
+      "path": "/tmp/cs30401-vegas/v1-leo-base/logs_ns3/study_drop_coverage.csv",
+      "relative_path": "logs_ns3/study_drop_coverage.csv",
+      "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+    },
+    {
+      "bytes": 112,
+      "path": "/tmp/cs30401-vegas/v1-leo-base/logs_ns3/study_drops.csv",
+      "relative_path": "logs_ns3/study_drops.csv",
+      "sha256": "ec37c4087cf6eb0bf412760b74ba37e2279e44d6bfff2d89f87c8135ec82b959"
+    },
+    {
+      "bytes": 86344549,
+      "path": "/tmp/cs30401-vegas/v1-leo-base/logs_ns3/study_rx_node_1585_port_1024.csv",
+      "relative_path": "logs_ns3/study_rx_node_1585_port_1024.csv",
+      "sha256": "f05c05c59b60671342647718d1c8ad6fade665a0166015f56de0ad8bd6502b8c"
+    },
+    {
+      "bytes": 38123,
+      "path": "/tmp/cs30401-vegas/v1-leo-base/logs_ns3/tcp_flow_0_cwnd.csv",
+      "relative_path": "logs_ns3/tcp_flow_0_cwnd.csv",
+      "sha256": "cb8c49e0edba087a76f28d6cfbd9d64f30dfb577846710888af82578d4ae446a"
+    },
+    {
+      "bytes": 9185071,
+      "path": "/tmp/cs30401-vegas/v1-leo-base/logs_ns3/tcp_flow_0_progress.csv",
+      "relative_path": "logs_ns3/tcp_flow_0_progress.csv",
+      "sha256": "f9de62c20acdc52767e36590fce1692f002d55b2d7a8b96fcc334e0f1ba01ca2"
+    },
+    {
+      "bytes": 8764361,
+      "path": "/tmp/cs30401-vegas/v1-leo-base/logs_ns3/tcp_flow_0_rtt.csv",
+      "relative_path": "logs_ns3/tcp_flow_0_rtt.csv",
+      "sha256": "9b93139aebbdbde9cefd147368cd7afaed2f5edb1a36a0d93cbc32d658f26845"
+    },
+    {
+      "bytes": 54153,
+      "path": "/tmp/cs30401-vegas/v1-leo-base/logs_ns3/tcp_flow_0_study_events.csv",
+      "relative_path": "logs_ns3/tcp_flow_0_study_events.csv",
+      "sha256": "1a22945cb295da37d0f72fccacee3094eabbce6b58fbfa1a7b11db6d2ac8f7c1"
+    },
+    {
+      "bytes": 85168107,
+      "path": "/tmp/cs30401-vegas/v1-leo-base/logs_ns3/tcp_flow_0_study_packets.csv",
+      "relative_path": "logs_ns3/tcp_flow_0_study_packets.csv",
+      "sha256": "6cc1a247399f17c152cfb1b35b656f661fb3b144347317217187c95b5e58f015"
+    },
+    {
+      "bytes": 76,
+      "path": "/tmp/cs30401-vegas/v1-leo-base/logs_ns3/tcp_flows.csv",
+      "relative_path": "logs_ns3/tcp_flows.csv",
+      "sha256": "8ef213989a82efb7b1e74e4b6ba8affe9ec0deec5cc9bbb79f6bf1e363076a8f"
+    },
+    {
+      "bytes": 560,
+      "path": "/tmp/cs30401-vegas/v1-leo-base/logs_ns3/timing_results.csv",
+      "relative_path": "logs_ns3/timing_results.csv",
+      "sha256": "966f19e6abcb2172a2aef334ad44f8eb968af7e02c3f89be7089d5fdbf00dbdf"
+    },
+    {
+      "bytes": 211571,
+      "path": "/tmp/cs30401-vegas/v1-leo-base/logs_ns3/vegas_state.csv",
+      "relative_path": "logs_ns3/vegas_state.csv",
+      "sha256": "f7a1c6b93b91decd8adb5b12f6ae88b6593b6538ac493a78e5557e7a2eacbc2f"
+    }
+  ],
+  "original_manifest": {
+    "binary": {
+      "bytes": 181104,
+      "path": "/home/ubuntu/ns-3.48/build/scratch/main_satnet/ns3.48-main_satnet",
+      "sha256": "041d6d86761db040412ae95dad748033fc714a4480d7cc16843dba03fe40ce4f"
+    },
+    "binary_sha256": "041d6d86761db040412ae95dad748033fc714a4480d7cc16843dba03fe40ce4f",
+    "case": "v1-leo-base",
+    "command": [
+      "/home/ubuntu/ns-3.48/build/scratch/main_satnet/ns3.48-main_satnet",
+      "--run_dir=/tmp/cs30401-vegas/v1-leo-base",
+      "--ns3::TcpVegas::RenewalRounds=20",
+      "--ns3::TcpVegas::RenewalMinRise=1000000ns",
+      "--ns3::TcpVegas::RecentMinRenewal=false"
+    ],
+    "config_ns3.properties_sha256": "16f9f0801cd196ac9fbf0063344cf07a60f11f5330b7a71c019d815ef76e5ec4",
+    "end_time_unix": 1791624321.5844321,
+    "exit_code": 0,
+    "image_verification": "Host operator inspected Docker identity before launch; supplied to runner",
+    "official_image_digest": "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+    "parameters": {
+      "cc": "TcpVegas",
+      "competitor": false,
+      "duration": 200,
+      "image_digest": "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+      "kind": "leo",
+      "min_rise_ms": 1,
+      "name": "v1-leo-base",
+      "queue": 100,
+      "rate": 100,
+      "renewal": false,
+      "root": "/tmp/cs30401-vegas",
+      "rounds": 20,
+      "seed": 123456789,
+      "state": "/home/ubuntu/lab/data/seoul_london/state",
+      "trace": 1
+    },
+    "patch_sha256": "25ac4286f68373ee4e33d43f5f00e8676a65fc9c8747d65f643cd0fc28202f59",
+    "policy": {
+      "alpha": 2,
+      "beta": 4,
+      "gamma": 1,
+      "input": "existing socket SRTT; loss/startup unchanged",
+      "min_rise_ns": 1000000,
+      "recent_min_renewal": false,
+      "rounds": 20
+    },
+    "schedule.csv_sha256": "e6cde3aa7716856e46d24c3833354df90407313ece13a5ffbd1b789fa4fea23c",
+    "schema_version": 1,
+    "shared_libraries": [
+      {
+        "bytes": 275168,
+        "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-antenna.so",
+        "sha256": "edf56f782f446d54291425c4b357fb2a609f64da3a3a88a2d48e18dbcf4200b8"
+      },
+      {
+        "bytes": 2450392,
+        "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-applications.so",
+        "sha256": "029ee91a59a88fd8cff0c865053f31dfc36f6cc6f10484ebb3843864025750ca"
+      },
+      {
+        "bytes": 1626000,
+        "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-basic-sim.so",
+        "sha256": "e0ad0039c02b39ad3a302a077e72c6935d8db476df0bc48e105b4952a7d25ac9"
+      },
+      {
+        "bytes": 165088,
+        "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-bridge.so",
+        "sha256": "5c0e5f9092dc8a215a2d77aaa75ba0e3db181578566db25b9463cc220a94a1a0"
+      },
+      {
+        "bytes": 2246560,
+        "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-core.so",
+        "sha256": "5f6e271f0e98438059ac55c8dc5c94ee411050cb7cd7f23956963310674982a1"
+      },
+      {
+        "bytes": 490280,
+        "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-flow-monitor.so",
+        "sha256": "5fbe40f2a843bf01f38b943a28377f7e9628b748506498298cfd6096c621b1ad"
+      },
+      {
+        "bytes": 1379408,
+        "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-internet-apps.so",
+        "sha256": "c31699838a1a449773562164af013663951dbd78c7b0e1bcddc4b451f2eaa6bc"
+      },
+      {
+        "bytes": 7239168,
+        "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-internet.so",
+        "sha256": "7ab9d2bc8c6eb418498cc4da1d61c4a1915496fc6eb6eb11032e05fc705bd354"
+      },
+      {
+        "bytes": 1146440,
+        "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-mobility.so",
+        "sha256": "45dc648f0ff11a8c83574fdea0dd189a35ccc606d625d3e3612afa3a6f806351"
+      },
+      {
+        "bytes": 2378368,
+        "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-network.so",
+        "sha256": "7930b3ed5f927eb731b7a010e5664ebd7927d1b25ecd2ef1f950857b434621b7"
+      },
+      {
+        "bytes": 517296,
+        "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-point-to-point.so",
+        "sha256": "af4a8a6c3378e80fc6347fd77ad9c0bad5783eb34c2ea90e416f797b985e3f89"
+      },
+      {
+        "bytes": 761504,
+        "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-satellite-network.so",
+        "sha256": "6c54072c67b2a2470abe2aca9f561d57093df69fa832ae2035753e2e52ebf907"
+      },
+      {
+        "bytes": 568888,
+        "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-satellite.so",
+        "sha256": "68e7ce4d29d13efe374989d3279a8587bedb7a8104757938ab2c14605e3d4002"
+      },
+      {
+        "bytes": 974776,
+        "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-stats.so",
+        "sha256": "ab02ae3cfe9c8453b6b251528884a678fe470cb1aac2e6500064a6fd44caf447"
+      },
+      {
+        "bytes": 1364680,
+        "path": "/home/ubuntu/ns-3.48/build/lib/libns3.48-traffic-control.so",
+        "sha256": "354fd4e2ef550af211e9abf272fd64b45818636c845b4876b606a0ffa6520d53"
+      }
+    ],
+    "source_commit": "82ad34a975d4b15f8a536527f8ea4f0cf6e41624",
+    "source_worktree_dirty": false,
+    "sources": [
+      {
+        "bytes": 9579,
+        "path": "/work/code/vegas-study/run_case.py",
+        "sha256": "1ba03a69fc80fc4354e0a90ddfb76e539aed7365f3b9943ccefabe76b86847b2"
+      },
+      {
+        "bytes": 81322,
+        "path": "/work/code/vegas-study/ns3.patch",
+        "sha256": "25ac4286f68373ee4e33d43f5f00e8676a65fc9c8747d65f643cd0fc28202f59"
+      },
+      {
+        "bytes": 25479,
+        "path": "/work/code/vegas-study/vegas_micro.cc",
+        "sha256": "32e8d2809040acd1c781020ccccc6d4320693ab3d3a51c58e05238c52e6aabeb"
+      },
+      {
+        "bytes": 39038,
+        "path": "/work/code/vegas-study/analyze_vegas.py",
+        "sha256": "7b7deee1416d6458b71b406043b19f0d3fc7e63290ace6e9ec06a194bb2c5eab"
+      },
+      {
+        "bytes": 36868,
+        "path": "/work/code/kim-study/analyze_study.py",
+        "sha256": "5333d7f6d86c04f79bbaad82e5e2577ec3bdf2f281e115c854ad904c404aa696"
+      },
+      {
+        "bytes": 135964,
+        "path": "/work/code/kim-study/path_truth_200s.csv",
+        "sha256": "49bd5418f2b13bdbf6d703f719d61075f814cc86d44c745651bf797f4e5f656c"
+      },
+      {
+        "bytes": 15094,
+        "path": "/home/ubuntu/ns-3.48/src/internet/model/tcp-vegas.cc",
+        "sha256": "53eeb749d5b3c77d35f69a25dcb2c0fad3c3cc2dca3cedb2aaa460f1c8c9eb3e"
+      },
+      {
+        "bytes": 5745,
+        "path": "/home/ubuntu/ns-3.48/src/internet/model/tcp-vegas.h",
+        "sha256": "67e112927ef0777dbe8f4fa5a27d51627ffb66dc5d15247885b7d785959a7af8"
+      },
+      {
+        "bytes": 179724,
+        "path": "/home/ubuntu/ns-3.48/src/internet/model/tcp-socket-base.cc",
+        "sha256": "b6ee80a1d33538f36f0f9f2170a6ca2512beed6850133a47fd00db96f3d70afe"
+      },
+      {
+        "bytes": 25479,
+        "path": "/home/ubuntu/ns-3.48/scratch/vegas_micro/vegas_micro.cc",
+        "sha256": "32e8d2809040acd1c781020ccccc6d4320693ab3d3a51c58e05238c52e6aabeb"
+      }
+    ],
+    "start_time_unix": 1791624225.9973829,
+    "state": "/home/ubuntu/lab/data/seoul_london/state",
+    "status": "complete",
+    "trace_environment": {
+      "CS30401_STUDY_TRACE": "1",
+      "CS30401_STUDY_TRACE_DIR": "/tmp/cs30401-vegas/v1-leo-base/logs_ns3",
+      "CS30401_VEGAS_TRACE_DIR": "/tmp/cs30401-vegas/v1-leo-base/logs_ns3"
+    },
+    "wall_time_s": 95.595
+  }
+}

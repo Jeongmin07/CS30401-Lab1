@@ -1,3 +1,5 @@
 *.patch -text
+*.csv -text
+*.json -text
 *.cc text eol=lf
 *.py text eol=lf

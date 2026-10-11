@@ -1,0 +1,2283 @@
+{
+  "analysis_sources": {
+    "helper": {
+      "bytes": 39038,
+      "path": "/work/code/vegas-adaptive/analyze_vegas.py",
+      "sha256": "7b7deee1416d6458b71b406043b19f0d3fc7e63290ace6e9ec06a194bb2c5eab"
+    },
+    "original_analyzer_current": {
+      "bytes": 36868,
+      "path": "/work/code/kim-study/analyze_study.py",
+      "sha256": "5333d7f6d86c04f79bbaad82e5e2577ec3bdf2f281e115c854ad904c404aa696"
+    }
+  },
+  "application_and_terminal_validation": {
+    "app_trace_rows": 1431262,
+    "connections": [
+      {
+        "bytes": 1596346740,
+        "flow_id": 0,
+        "identity": [
+          "1",
+          "10.1.1.2",
+          "1024",
+          "0",
+          "10.1.1.1",
+          "49153"
+        ],
+        "rows": 1155727
+      },
+      {
+        "bytes": 387977340,
+        "flow_id": 1,
+        "identity": [
+          "1",
+          "10.1.1.2",
+          "1025",
+          "0",
+          "10.1.1.1",
+          "49154"
+        ],
+        "rows": 275535
+      }
+    ],
+    "wire_application_terminal": {
+      "0": {
+        "application_bytes": 1596346740,
+        "wire_unique_minus_application_bytes": 0,
+        "wire_unique_payload_bytes": 1596346740
+      },
+      "1": {
+        "application_bytes": 387977340,
+        "wire_unique_minus_application_bytes": 0,
+        "wire_unique_payload_bytes": 387977340
+      }
+    }
+  },
+  "case": "a1-fixed-comp-adaptive",
+  "driver_validation": {
+    "actual_delay_events": [
+      {
+        "event": "INITIAL",
+        "new_one_way_delay_ns": "45000000",
+        "old_one_way_delay_ns": "45000000",
+        "propagation_rtt_ns": "90000000",
+        "time_ns": "0"
+      },
+      {
+        "event": "SET_DELAY",
+        "new_one_way_delay_ns": "45000000",
+        "old_one_way_delay_ns": "45000000",
+        "propagation_rtt_ns": "90000000",
+        "time_ns": "100000000000"
+      }
+    ],
+    "actual_driver_config": {
+      "after_one_way_delay_ns": 45000000,
+      "after_propagation_rtt_ns": 90000000,
+      "before_one_way_delay_ns": 45000000,
+      "before_propagation_rtt_ns": 90000000,
+      "both_flows_share_forward_device": true,
+      "cc": "ns3::TcpVegas",
+      "competitor": true,
+      "competitor_cc": "ns3::TcpCubic",
+      "competitor_port": 1025,
+      "competitor_start_ns": 80000000000,
+      "duration_ns": 200000000000,
+      "event_ns": 100000000000,
+      "flow0_parameters": "",
+      "flow0_port": 1024,
+      "flow0_start_ns": 0,
+      "initial_cwnd_pkts": 10,
+      "initial_ssthresh_pkts": 900,
+      "logs_dir": "/tmp/cs30401-vegas/a1-fixed-comp-adaptive/logs_ns3",
+      "max_bytes_each": 100000000000,
+      "mss_bytes": 1380,
+      "queue_bytes_at_packets_callback": "post-change ns3.48 Queue byte count",
+      "queue_measurement": "Enqueue-to-Dequeue wait; includes zero, excludes serialization and propagation; censored packets in queue_pending.csv",
+      "queue_pkts_per_direction": 100,
+      "rate_mbps": 100,
+      "receive_error_model": false,
+      "renewal": false,
+      "renewal_min_rise_ns": 1000000,
+      "renewal_rounds": 20,
+      "root_queue_disc": false,
+      "run": 1,
+      "seed": 123456789,
+      "topology": "two nodes, one full-duplex point-to-point link"
+    },
+    "actual_sender_socket_classes": [
+      {
+        "actual_cc": "ns3::TcpVegas",
+        "expected_cc": "ns3::TcpVegas",
+        "flow_id": "0",
+        "peer_port": "1024",
+        "time_ns": "1"
+      },
+      {
+        "actual_cc": "ns3::TcpCubic",
+        "expected_cc": "ns3::TcpCubic",
+        "flow_id": "1",
+        "peer_port": "1025",
+        "time_ns": "80000000001"
+      },
+      {
+        "actual_cc": "ns3::TcpVegas",
+        "expected_cc": "ns3::TcpVegas",
+        "flow_id": "0",
+        "peer_port": "1024",
+        "time_ns": "80000000001"
+      }
+    ],
+    "available": true,
+    "driver_app_totals_match_independent_csv": true,
+    "driver_flow_life_summary": [
+      {
+        "acked_bytes": "1595880300",
+        "application_goodput_mbps": "63.853869600000003",
+        "application_rx_bytes": "1596346740",
+        "cc": "ns3::TcpVegas",
+        "completed": "0",
+        "destination_port": "1024",
+        "flow_id": "0",
+        "last_application_rx_ns": "199999945440",
+        "observation_end_ns": "200000000000",
+        "receiver_node": "1",
+        "sender_node": "0",
+        "start_ns": "0"
+      },
+      {
+        "acked_bytes": "387901440",
+        "application_goodput_mbps": "25.865155999999999",
+        "application_rx_bytes": "387977340",
+        "cc": "ns3::TcpCubic",
+        "completed": "0",
+        "destination_port": "1025",
+        "flow_id": "1",
+        "last_application_rx_ns": "199961284800",
+        "observation_end_ns": "200000000000",
+        "receiver_node": "1",
+        "sender_node": "0",
+        "start_ns": "80000000000"
+      }
+    ],
+    "qualification": "Matched-window app rate uses full window width; active-interval rate separately excludes time before that flow starts. Whole-run rates and whole-life rates differ for the late competitor."
+  },
+  "drop_coverage": {
+    "available": true,
+    "failed_hooks": [],
+    "qualification": "Per-hook records are preserved. TcDrop and per-device root_queue_disc_absent are required in addition to queue/device/IP drops before asserting complete modeled network-drop coverage.",
+    "rows_by_layer": {
+      "DropAfterDequeue": 2,
+      "DropBeforeEnqueue": 2,
+      "MacTxDrop": 2,
+      "PhyRxDrop": 2,
+      "PhyTxDrop": 2,
+      "TcDrop": 2,
+      "ipv4": 2,
+      "root_queue_disc_absent": 2
+    }
+  },
+  "duration_ns": 200000000000,
+  "event_times_ns": [
+    100000000000
+  ],
+  "input_artifacts": [
+    {
+      "bytes": 7872,
+      "path": "/tmp/cs30401-vegas/a1-fixed-comp-adaptive/case.json",
+      "sha256": "a2f6e407dc33a6caa2d00522d28369a7c53636cd027c057b12ebfcd4b9d1f4f5"
+    },
+    {
+      "bytes": 1174,
+      "path": "/tmp/cs30401-vegas/a1-fixed-comp-adaptive/config_driver.json",
+      "sha256": "37737c9220604fcbd387a84d091240b773a7e8f0e043d02dddcaf936902b026f"
+    },
+    {
+      "bytes": 36,
+      "path": "/tmp/cs30401-vegas/a1-fixed-comp-adaptive/config_ns3.properties",
+      "sha256": "3c4c19c08bb23933cce0c1895c539e062b0fd04207aa4832d69e2d135ab1ae3e"
+    },
+    {
+      "bytes": 162,
+      "path": "/tmp/cs30401-vegas/a1-fixed-comp-adaptive/logs_ns3/delay_events.csv",
+      "sha256": "346e2e27550015f28425194bfe5a174f0c6ab87d89be7d9b81357111a4ea4f54"
+    },
+    {
+      "bytes": 373,
+      "path": "/tmp/cs30401-vegas/a1-fixed-comp-adaptive/logs_ns3/flow_summary.csv",
+      "sha256": "e9225743d257fdee51764be591f873d96b573e65f3d6441095e80fc69efa03ba"
+    },
+    {
+      "bytes": 316,
+      "path": "/tmp/cs30401-vegas/a1-fixed-comp-adaptive/logs_ns3/queue_coverage.csv",
+      "sha256": "82e2f2dd7290ec35da6592dd3f306a241471861265a21e8f88853c0053b73499"
+    },
+    {
+      "bytes": 296049422,
+      "path": "/tmp/cs30401-vegas/a1-fixed-comp-adaptive/logs_ns3/queue_events.csv",
+      "sha256": "a3e44260d30e6b2816514cb0b5c75ef1cd52fe0216ad169b6e452a31d828f8c4"
+    },
+    {
+      "bytes": 144993635,
+      "path": "/tmp/cs30401-vegas/a1-fixed-comp-adaptive/logs_ns3/queue_occupancy.csv",
+      "sha256": "bb070b6dd8e7a7c36da2d5fdd47e818d50c3cb746a4a4def50768870b91ecae0"
+    },
+    {
+      "bytes": 6505,
+      "path": "/tmp/cs30401-vegas/a1-fixed-comp-adaptive/logs_ns3/queue_pending.csv",
+      "sha256": "a40e1f733c57e2438a0472cf9b802606018174e71be25665f0c6b601ef808e9d"
+    },
+    {
+      "bytes": 154931354,
+      "path": "/tmp/cs30401-vegas/a1-fixed-comp-adaptive/logs_ns3/queue_sojourn.csv",
+      "sha256": "c0f2357784510dcb588b19e3c8316a514341514d13c7ce9a0107d78cfd6f73fa"
+    },
+    {
+      "bytes": 187,
+      "path": "/tmp/cs30401-vegas/a1-fixed-comp-adaptive/logs_ns3/queue_summary.csv",
+      "sha256": "20c3297f8fc6684fe15b0af45f1c3475c03023b03e9ef6ae284f82accc5cb016"
+    },
+    {
+      "bytes": 179,
+      "path": "/tmp/cs30401-vegas/a1-fixed-comp-adaptive/logs_ns3/socket_types.csv",
+      "sha256": "d725d52c86dd0cbcb0d1092469d90abc5458d5d9ff966e7226fcf83a89b38994"
+    },
+    {
+      "bytes": 93219636,
+      "path": "/tmp/cs30401-vegas/a1-fixed-comp-adaptive/logs_ns3/study_app_rx_node_1_port_1024.csv",
+      "sha256": "2dcb00f51716401e707f1f072d262d672f4fe0c11b0d21709e0658847c1a9e0a"
+    },
+    {
+      "bytes": 22123112,
+      "path": "/tmp/cs30401-vegas/a1-fixed-comp-adaptive/logs_ns3/study_app_rx_node_1_port_1025.csv",
+      "sha256": "7628953962deaa9c0331e904f0ed5f48cdbc5e42e9ff14d5ec743d23d0961ffa"
+    },
+    {
+      "bytes": 328,
+      "path": "/tmp/cs30401-vegas/a1-fixed-comp-adaptive/logs_ns3/study_drop_coverage.csv",
+      "sha256": "f2bbce727ae1f61019ef8f727753e3a8f64abdeb41d660a20a3607802f4524f4"
+    },
+    {
+      "bytes": 20988,
+      "path": "/tmp/cs30401-vegas/a1-fixed-comp-adaptive/logs_ns3/study_drops.csv",
+      "sha256": "2cd86aa459d647372020ea38a8e9a577cf2b89efc9b020e071609814c10b4923"
+    },
+    {
+      "bytes": 123914035,
+      "path": "/tmp/cs30401-vegas/a1-fixed-comp-adaptive/logs_ns3/study_rx_node_1_port_1024.csv",
+      "sha256": "e3b357bc39211e52284024e74ad651ab623859d7f0eb8b6a5857da589a52f419"
+    },
+    {
+      "bytes": 29991567,
+      "path": "/tmp/cs30401-vegas/a1-fixed-comp-adaptive/logs_ns3/study_rx_node_1_port_1025.csv",
+      "sha256": "7789528aaceccc75c6d367a3a03f6c833544cec2479ecb75704a50f45cbd34f4"
+    },
+    {
+      "bytes": 34643,
+      "path": "/tmp/cs30401-vegas/a1-fixed-comp-adaptive/logs_ns3/tcp_flow_0_study_events.csv",
+      "sha256": "10151f82b30058908feae1ae84ff22588c4215453da837941c03753e0b5c6a86"
+    },
+    {
+      "bytes": 132507509,
+      "path": "/tmp/cs30401-vegas/a1-fixed-comp-adaptive/logs_ns3/tcp_flow_0_study_packets.csv",
+      "sha256": "872a8d77cc7ea812389bd7c602e50109366c2537e265e5c6f0d04cdcb1ede3fc"
+    },
+    {
+      "bytes": 2466,
+      "path": "/tmp/cs30401-vegas/a1-fixed-comp-adaptive/logs_ns3/tcp_flow_1_study_events.csv",
+      "sha256": "d37f719df2a0b62ed65acbeccb94030f55d42bac37daa893a7af046fe2166541"
+    },
+    {
+      "bytes": 32756362,
+      "path": "/tmp/cs30401-vegas/a1-fixed-comp-adaptive/logs_ns3/tcp_flow_1_study_packets.csv",
+      "sha256": "70f508eb6cdc60c196cd608ef06536264d6983d7c2b9c65c33ec188985b7143b"
+    },
+    {
+      "bytes": 215563,
+      "path": "/tmp/cs30401-vegas/a1-fixed-comp-adaptive/logs_ns3/vegas_state.csv",
+      "sha256": "8cd3cd8c39a87abdf3fc88248b18db91fc320a0f5bd4e87d5934c466e4636568"
+    }
+  ],
+  "method": {
+    "application": "Positive receiver HandleRead payload, per-connection cumulative sum checked. Connection key includes local port to distinguish two sinks each numbered connection0. Flow1 app goodput measures actual competitor delivery, not offered/sender-ACKed bytes.",
+    "loss_recovery": "Official RETX rows and bytes; CA_RECOVERY and CA_LOSS entries are separately counted. LOSS is not automatically an RTO. Drop layer rows may duplicate a physical loss, so distinct (flow,tx_id) counts are separate; untagged drops remain explicit.",
+    "scope": "Fixed propagation plus persistent queue is a falsification control for recent-min renewal. Increased foreground delivery alone does not establish total service improvement or fairness; examine competitor app, queue delay, drops, and terminal gap. A synthetic delay step is distinct from the multi-hop LEO model.",
+    "terminal": "Wire payload interval union minus actual app delivery at stop time; wire Rx is pre-TCP and does not prove acceptance or eventual delivery. Sequence unwrapping assumes adjacent references differ by less than2^31 bytes.",
+    "windows": "Exact half-open [start_ns,end_ns) on each observation's timestamp; event-time delivery belongs to post-event interval. Whole includes startup; late20/pre20/post(+10,+30) are matched between cases."
+  },
+  "original_study_analysis_check": {
+    "available": false,
+    "qualification": "No original analyzer JSON supplied; app/counters were independently read from raw CSV."
+  },
+  "queue_instrumentation": {
+    "available": true,
+    "coverage": {
+      "available": true,
+      "failed_hooks": [],
+      "qualification": "Per-hook records are preserved. TcDrop and per-device root_queue_disc_absent are required in addition to queue/device/IP drops before asserting complete modeled network-drop coverage.",
+      "rows_by_layer": {
+        "Dequeue": 2,
+        "DropAfterDequeue": 2,
+        "DropBeforeEnqueue": 2,
+        "Enqueue": 2,
+        "PacketsInQueue": 2
+      }
+    },
+    "device_summaries": [
+      {
+        "dequeued": 1438321,
+        "device_id": "1",
+        "direction": "forward",
+        "drop_after_dequeue": 0,
+        "drop_before_enqueue": 0,
+        "enqueued": 1438398,
+        "node_id": "0",
+        "pending": 77,
+        "zero_sojourn": 144895
+      },
+      {
+        "dequeued": 722333,
+        "device_id": "1",
+        "direction": "reverse",
+        "drop_after_dequeue": 0,
+        "drop_before_enqueue": 0,
+        "enqueued": 722333,
+        "node_id": "1",
+        "pending": 0,
+        "zero_sojourn": 722333
+      }
+    ],
+    "enqueue_dequeue_pending_conservation": true,
+    "event_rows_by_kind": {
+      "Dequeue": 2160654,
+      "Enqueue": 2160731
+    },
+    "final_queue_states": [
+      {
+        "bytes": 110418,
+        "device_id": "1",
+        "direction": "forward",
+        "node_id": "0",
+        "packets": 77
+      },
+      {
+        "bytes": 0,
+        "device_id": "1",
+        "direction": "reverse",
+        "node_id": "1",
+        "packets": 0
+      }
+    ],
+    "pending_packets_at_stop": [
+      {
+        "age_ns": 8509760,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199991490240,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281547,
+        "tx_time_ns": 199991490240
+      },
+      {
+        "age_ns": 8509760,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199991490240,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281548,
+        "tx_time_ns": 199991490240
+      },
+      {
+        "age_ns": 8280320,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199991719680,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281549,
+        "tx_time_ns": 199991719680
+      },
+      {
+        "age_ns": 8280320,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199991719680,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281550,
+        "tx_time_ns": 199991719680
+      },
+      {
+        "age_ns": 8050880,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199991949120,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281551,
+        "tx_time_ns": 199991949120
+      },
+      {
+        "age_ns": 8050880,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199991949120,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281552,
+        "tx_time_ns": 199991949120
+      },
+      {
+        "age_ns": 7821440,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199992178560,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281553,
+        "tx_time_ns": 199992178560
+      },
+      {
+        "age_ns": 7821440,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199992178560,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281554,
+        "tx_time_ns": 199992178560
+      },
+      {
+        "age_ns": 7592000,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199992408000,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281555,
+        "tx_time_ns": 199992408000
+      },
+      {
+        "age_ns": 7592000,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199992408000,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281556,
+        "tx_time_ns": 199992408000
+      },
+      {
+        "age_ns": 7362560,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199992637440,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281557,
+        "tx_time_ns": 199992637440
+      },
+      {
+        "age_ns": 7362560,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199992637440,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281558,
+        "tx_time_ns": 199992637440
+      },
+      {
+        "age_ns": 7133120,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199992866880,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281559,
+        "tx_time_ns": 199992866880
+      },
+      {
+        "age_ns": 7133120,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199992866880,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281560,
+        "tx_time_ns": 199992866880
+      },
+      {
+        "age_ns": 6903680,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199993096320,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281561,
+        "tx_time_ns": 199993096320
+      },
+      {
+        "age_ns": 6903680,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199993096320,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281562,
+        "tx_time_ns": 199993096320
+      },
+      {
+        "age_ns": 6674240,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199993325760,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281563,
+        "tx_time_ns": 199993325760
+      },
+      {
+        "age_ns": 6674240,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199993325760,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281564,
+        "tx_time_ns": 199993325760
+      },
+      {
+        "age_ns": 6444800,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199993555200,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281565,
+        "tx_time_ns": 199993555200
+      },
+      {
+        "age_ns": 6444800,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199993555200,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281566,
+        "tx_time_ns": 199993555200
+      },
+      {
+        "age_ns": 6215360,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199993784640,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281567,
+        "tx_time_ns": 199993784640
+      },
+      {
+        "age_ns": 6215360,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199993784640,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281568,
+        "tx_time_ns": 199993784640
+      },
+      {
+        "age_ns": 5985920,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199994014080,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281569,
+        "tx_time_ns": 199994014080
+      },
+      {
+        "age_ns": 5985920,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199994014080,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281570,
+        "tx_time_ns": 199994014080
+      },
+      {
+        "age_ns": 5756480,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199994243520,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281571,
+        "tx_time_ns": 199994243520
+      },
+      {
+        "age_ns": 5756480,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199994243520,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281572,
+        "tx_time_ns": 199994243520
+      },
+      {
+        "age_ns": 5527040,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199994472960,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281573,
+        "tx_time_ns": 199994472960
+      },
+      {
+        "age_ns": 5527040,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199994472960,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281574,
+        "tx_time_ns": 199994472960
+      },
+      {
+        "age_ns": 5297600,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199994702400,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281575,
+        "tx_time_ns": 199994702400
+      },
+      {
+        "age_ns": 5297600,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199994702400,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281576,
+        "tx_time_ns": 199994702400
+      },
+      {
+        "age_ns": 5068160,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199994931840,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281577,
+        "tx_time_ns": 199994931840
+      },
+      {
+        "age_ns": 5068160,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199994931840,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281578,
+        "tx_time_ns": 199994931840
+      },
+      {
+        "age_ns": 4838720,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199995161280,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281579,
+        "tx_time_ns": 199995161280
+      },
+      {
+        "age_ns": 4838720,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199995161280,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281580,
+        "tx_time_ns": 199995161280
+      },
+      {
+        "age_ns": 4838720,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199995161280,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281581,
+        "tx_time_ns": 199995161280
+      },
+      {
+        "age_ns": 4609280,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199995390720,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281582,
+        "tx_time_ns": 199995390720
+      },
+      {
+        "age_ns": 4609280,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199995390720,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281583,
+        "tx_time_ns": 199995390720
+      },
+      {
+        "age_ns": 4379840,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199995620160,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281584,
+        "tx_time_ns": 199995620160
+      },
+      {
+        "age_ns": 4379840,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199995620160,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281585,
+        "tx_time_ns": 199995620160
+      },
+      {
+        "age_ns": 4150400,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199995849600,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281586,
+        "tx_time_ns": 199995849600
+      },
+      {
+        "age_ns": 4150400,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199995849600,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281587,
+        "tx_time_ns": 199995849600
+      },
+      {
+        "age_ns": 3920960,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199996079040,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281588,
+        "tx_time_ns": 199996079040
+      },
+      {
+        "age_ns": 3920960,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199996079040,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281589,
+        "tx_time_ns": 199996079040
+      },
+      {
+        "age_ns": 3691520,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199996308480,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281590,
+        "tx_time_ns": 199996308480
+      },
+      {
+        "age_ns": 3691520,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199996308480,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281591,
+        "tx_time_ns": 199996308480
+      },
+      {
+        "age_ns": 3462080,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199996537920,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281592,
+        "tx_time_ns": 199996537920
+      },
+      {
+        "age_ns": 3462080,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199996537920,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281593,
+        "tx_time_ns": 199996537920
+      },
+      {
+        "age_ns": 3232640,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199996767360,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281594,
+        "tx_time_ns": 199996767360
+      },
+      {
+        "age_ns": 3232640,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199996767360,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281595,
+        "tx_time_ns": 199996767360
+      },
+      {
+        "age_ns": 3003200,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199996996800,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281596,
+        "tx_time_ns": 199996996800
+      },
+      {
+        "age_ns": 3003200,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199996996800,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281597,
+        "tx_time_ns": 199996996800
+      },
+      {
+        "age_ns": 2773760,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199997226240,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281598,
+        "tx_time_ns": 199997226240
+      },
+      {
+        "age_ns": 2773760,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199997226240,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281599,
+        "tx_time_ns": 199997226240
+      },
+      {
+        "age_ns": 2544320,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199997455680,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281600,
+        "tx_time_ns": 199997455680
+      },
+      {
+        "age_ns": 2544320,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199997455680,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281601,
+        "tx_time_ns": 199997455680
+      },
+      {
+        "age_ns": 2314880,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199997685120,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281602,
+        "tx_time_ns": 199997685120
+      },
+      {
+        "age_ns": 2314880,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199997685120,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281603,
+        "tx_time_ns": 199997685120
+      },
+      {
+        "age_ns": 2085440,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199997914560,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281604,
+        "tx_time_ns": 199997914560
+      },
+      {
+        "age_ns": 2085440,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199997914560,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281605,
+        "tx_time_ns": 199997914560
+      },
+      {
+        "age_ns": 1856000,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199998144000,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281606,
+        "tx_time_ns": 199998144000
+      },
+      {
+        "age_ns": 1856000,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199998144000,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281607,
+        "tx_time_ns": 199998144000
+      },
+      {
+        "age_ns": 1626560,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199998373440,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281608,
+        "tx_time_ns": 199998373440
+      },
+      {
+        "age_ns": 1626560,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199998373440,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281609,
+        "tx_time_ns": 199998373440
+      },
+      {
+        "age_ns": 1397120,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199998602880,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281610,
+        "tx_time_ns": 199998602880
+      },
+      {
+        "age_ns": 1397120,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199998602880,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281611,
+        "tx_time_ns": 199998602880
+      },
+      {
+        "age_ns": 1167680,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199998832320,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281612,
+        "tx_time_ns": 199998832320
+      },
+      {
+        "age_ns": 1167680,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199998832320,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281613,
+        "tx_time_ns": 199998832320
+      },
+      {
+        "age_ns": 938240,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199999061760,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281614,
+        "tx_time_ns": 199999061760
+      },
+      {
+        "age_ns": 938240,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199999061760,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281615,
+        "tx_time_ns": 199999061760
+      },
+      {
+        "age_ns": 708800,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199999291200,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281616,
+        "tx_time_ns": 199999291200
+      },
+      {
+        "age_ns": 708800,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199999291200,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281617,
+        "tx_time_ns": 199999291200
+      },
+      {
+        "age_ns": 479360,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199999520640,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281618,
+        "tx_time_ns": 199999520640
+      },
+      {
+        "age_ns": 479360,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199999520640,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281619,
+        "tx_time_ns": 199999520640
+      },
+      {
+        "age_ns": 249920,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199999750080,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281620,
+        "tx_time_ns": 199999750080
+      },
+      {
+        "age_ns": 249920,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199999750080,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281621,
+        "tx_time_ns": 199999750080
+      },
+      {
+        "age_ns": 20480,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199999979520,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281622,
+        "tx_time_ns": 199999979520
+      },
+      {
+        "age_ns": 20480,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199999979520,
+        "flow_id": 1,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2718598,
+        "tagged": 1,
+        "tx_id": 281623,
+        "tx_time_ns": 199999979520
+      }
+    ],
+    "qualification": "Sojourn is exact Enqueue-to-Dequeue waiting time, including zero waits, grouped by dequeue timestamps; excludes link serialization/propagation. Remove/DropAfterDequeue rows are excluded. Quantiles use packet counts (nearest rank), not byte or time weighting. Untagged ACK/control traffic is not assigned to a TCP flow. Occupancy holds the post-change snapshot between trace rows."
+  },
+  "run": "/tmp/cs30401-vegas/a1-fixed-comp-adaptive",
+  "schema_version": 1,
+  "validation": {
+    "checked_original_config_schedule": [
+      "config_ns3.properties",
+      "config_driver.json"
+    ],
+    "completed_exit_zero": true,
+    "currently_present_declared_artifacts": [
+      {
+        "bytes": 323256,
+        "manifest_key": "binary",
+        "matches_launch_declaration": true,
+        "path": "/home/ubuntu/ns-3.48/build/scratch/vegas_micro/ns3.48-vegas_micro",
+        "sha256": "c4d829e943bd38d29bed936aad30d3882c23630766ca82bcb24f87017c6e32e9"
+      }
+    ],
+    "declared_artifact_hashes": {
+      "binary.sha256": "c4d829e943bd38d29bed936aad30d3882c23630766ca82bcb24f87017c6e32e9",
+      "binary_sha256": "c4d829e943bd38d29bed936aad30d3882c23630766ca82bcb24f87017c6e32e9",
+      "config_driver.json_sha256": "37737c9220604fcbd387a84d091240b773a7e8f0e043d02dddcaf936902b026f",
+      "config_ns3.properties_sha256": "3c4c19c08bb23933cce0c1895c539e062b0fd04207aa4832d69e2d135ab1ae3e",
+      "patch_sha256": "849ae664d01a0e084dfaaae764aff81c76333ae31c07c97eae0300cd56a0a0db",
+      "shared_libraries[0].sha256": "edf56f782f446d54291425c4b357fb2a609f64da3a3a88a2d48e18dbcf4200b8",
+      "shared_libraries[10].sha256": "af4a8a6c3378e80fc6347fd77ad9c0bad5783eb34c2ea90e416f797b985e3f89",
+      "shared_libraries[11].sha256": "6c54072c67b2a2470abe2aca9f561d57093df69fa832ae2035753e2e52ebf907",
+      "shared_libraries[12].sha256": "68e7ce4d29d13efe374989d3279a8587bedb7a8104757938ab2c14605e3d4002",
+      "shared_libraries[13].sha256": "ab02ae3cfe9c8453b6b251528884a678fe470cb1aac2e6500064a6fd44caf447",
+      "shared_libraries[14].sha256": "354fd4e2ef550af211e9abf272fd64b45818636c845b4876b606a0ffa6520d53",
+      "shared_libraries[1].sha256": "029ee91a59a88fd8cff0c865053f31dfc36f6cc6f10484ebb3843864025750ca",
+      "shared_libraries[2].sha256": "e0ad0039c02b39ad3a302a077e72c6935d8db476df0bc48e105b4952a7d25ac9",
+      "shared_libraries[3].sha256": "5c0e5f9092dc8a215a2d77aaa75ba0e3db181578566db25b9463cc220a94a1a0",
+      "shared_libraries[4].sha256": "5f6e271f0e98438059ac55c8dc5c94ee411050cb7cd7f23956963310674982a1",
+      "shared_libraries[5].sha256": "5fbe40f2a843bf01f38b943a28377f7e9628b748506498298cfd6096c621b1ad",
+      "shared_libraries[6].sha256": "c31699838a1a449773562164af013663951dbd78c7b0e1bcddc4b451f2eaa6bc",
+      "shared_libraries[7].sha256": "f22225358dcb23fe652b49e8b3e526445bdf078d0fe1ae35c401c5e82c276b0d",
+      "shared_libraries[8].sha256": "45dc648f0ff11a8c83574fdea0dd189a35ccc606d625d3e3612afa3a6f806351",
+      "shared_libraries[9].sha256": "7930b3ed5f927eb731b7a010e5664ebd7927d1b25ecd2ef1f950857b434621b7",
+      "sources[0].sha256": "cd0260dfb412c364afa81efb76e15b790f6fb00f9bdde5caa85288be2505091d",
+      "sources[1].sha256": "849ae664d01a0e084dfaaae764aff81c76333ae31c07c97eae0300cd56a0a0db",
+      "sources[2].sha256": "32e8d2809040acd1c781020ccccc6d4320693ab3d3a51c58e05238c52e6aabeb",
+      "sources[3].sha256": "7b7deee1416d6458b71b406043b19f0d3fc7e63290ace6e9ec06a194bb2c5eab",
+      "sources[4].sha256": "5333d7f6d86c04f79bbaad82e5e2577ec3bdf2f281e115c854ad904c404aa696",
+      "sources[5].sha256": "49bd5418f2b13bdbf6d703f719d61075f814cc86d44c745651bf797f4e5f656c",
+      "sources[6].sha256": "bff4a98f2b05c396045975248aaffc132793f465c09d3a1e4d508aecbc76bf5d",
+      "sources[7].sha256": "03b6f3cdada869dbac620f9b1dda9ab9caddf7ca14545858250e823e8beeed1a",
+      "sources[8].sha256": "b6ee80a1d33538f36f0f9f2170a6ca2512beed6850133a47fd00db96f3d70afe",
+      "sources[9].sha256": "32e8d2809040acd1c781020ccccc6d4320693ab3d3a51c58e05238c52e6aabeb"
+    },
+    "launch_commit_fields": {
+      "source_commit": "7ac0751235dc1ecb14b3042622ac50990429f17c"
+    },
+    "qualification": "Source/binary declarations describe launch provenance. Current-file hashes are separate; later rebuilding/editing does not rewrite the original run. Missing old launch commit is explicit in legacy mode."
+  },
+  "vegas_internal_state": {
+    "available": true,
+    "event_counts": {
+      "CYCLE_DECREASE": 703,
+      "CYCLE_HOLD": 262,
+      "CYCLE_INCREASE": 1217,
+      "DISABLE": 4,
+      "ENABLE": 5
+    },
+    "instances": {
+      "1": {
+        "base_rtt_max_ns": 90000000,
+        "base_rtt_min_ns": 90000000,
+        "event_counts": {
+          "CYCLE_DECREASE": 703,
+          "CYCLE_HOLD": 262,
+          "CYCLE_INCREASE": 1217,
+          "DISABLE": 4,
+          "ENABLE": 3
+        },
+        "first": {
+          "announced_state": 0,
+          "base_rtt_ns": null,
+          "cong_state": 0,
+          "cwnd_after_bytes": 13800,
+          "cwnd_before_bytes": 13800,
+          "cycle_min_rtt_ns": null,
+          "diff_pkts": null,
+          "event": "ENABLE",
+          "history_elapsed_ns": null,
+          "history_rounds": 0,
+          "old_base_rtt_ns": null,
+          "recent_min_ns": null,
+          "renewal_count": 0,
+          "renewal_enabled": 0,
+          "renewal_rounds": 20,
+          "rtt_samples": 0,
+          "ssthresh_before_bytes": 1242000,
+          "ssthresh_bytes": 1242000,
+          "time_ns": 90009280,
+          "valid_renewal_cycle": 0
+        },
+        "last": {
+          "announced_state": null,
+          "base_rtt_ns": 90000000,
+          "cong_state": 0,
+          "cwnd_after_bytes": 734160,
+          "cwnd_before_bytes": 735540,
+          "cycle_min_rtt_ns": 97596703,
+          "diff_pkts": 42,
+          "event": "CYCLE_DECREASE",
+          "history_elapsed_ns": null,
+          "history_rounds": 0,
+          "old_base_rtt_ns": null,
+          "recent_min_ns": null,
+          "renewal_count": 0,
+          "renewal_enabled": 0,
+          "renewal_rounds": 20,
+          "rtt_samples": 266,
+          "ssthresh_before_bytes": 710700,
+          "ssthresh_bytes": 710700,
+          "time_ns": 199940439840,
+          "valid_renewal_cycle": 1,
+          "vegas_instance": "1"
+        },
+        "previous_count": 0
+      },
+      "2": {
+        "base_rtt_max_ns": null,
+        "base_rtt_min_ns": null,
+        "event_counts": {
+          "ENABLE": 1
+        },
+        "first": {
+          "announced_state": 0,
+          "base_rtt_ns": null,
+          "cong_state": 0,
+          "cwnd_after_bytes": 13800,
+          "cwnd_before_bytes": 13800,
+          "cycle_min_rtt_ns": null,
+          "diff_pkts": null,
+          "event": "ENABLE",
+          "history_elapsed_ns": null,
+          "history_rounds": 0,
+          "old_base_rtt_ns": null,
+          "recent_min_ns": null,
+          "renewal_count": 0,
+          "renewal_enabled": 0,
+          "renewal_rounds": 20,
+          "rtt_samples": 0,
+          "ssthresh_before_bytes": 1242000,
+          "ssthresh_bytes": 1242000,
+          "time_ns": 135013600,
+          "valid_renewal_cycle": 0
+        },
+        "last": {
+          "announced_state": 0,
+          "base_rtt_ns": null,
+          "cong_state": 0,
+          "cwnd_after_bytes": 13800,
+          "cwnd_before_bytes": 13800,
+          "cycle_min_rtt_ns": null,
+          "diff_pkts": null,
+          "event": "ENABLE",
+          "history_elapsed_ns": null,
+          "history_rounds": 0,
+          "old_base_rtt_ns": null,
+          "recent_min_ns": null,
+          "renewal_count": 0,
+          "renewal_enabled": 0,
+          "renewal_rounds": 20,
+          "rtt_samples": 0,
+          "ssthresh_before_bytes": 1242000,
+          "ssthresh_bytes": 1242000,
+          "time_ns": 135013600,
+          "valid_renewal_cycle": 0,
+          "vegas_instance": "2"
+        },
+        "previous_count": 0
+      },
+      "3": {
+        "base_rtt_max_ns": null,
+        "base_rtt_min_ns": null,
+        "event_counts": {
+          "ENABLE": 1
+        },
+        "first": {
+          "announced_state": 0,
+          "base_rtt_ns": null,
+          "cong_state": 0,
+          "cwnd_after_bytes": 13800,
+          "cwnd_before_bytes": 13800,
+          "cycle_min_rtt_ns": null,
+          "diff_pkts": null,
+          "event": "ENABLE",
+          "history_elapsed_ns": null,
+          "history_rounds": 0,
+          "old_base_rtt_ns": null,
+          "recent_min_ns": null,
+          "renewal_count": 0,
+          "renewal_enabled": 0,
+          "renewal_rounds": 20,
+          "rtt_samples": 0,
+          "ssthresh_before_bytes": 1242000,
+          "ssthresh_bytes": 1242000,
+          "time_ns": 80136064800,
+          "valid_renewal_cycle": 0
+        },
+        "last": {
+          "announced_state": 0,
+          "base_rtt_ns": null,
+          "cong_state": 0,
+          "cwnd_after_bytes": 13800,
+          "cwnd_before_bytes": 13800,
+          "cycle_min_rtt_ns": null,
+          "diff_pkts": null,
+          "event": "ENABLE",
+          "history_elapsed_ns": null,
+          "history_rounds": 0,
+          "old_base_rtt_ns": null,
+          "recent_min_ns": null,
+          "renewal_count": 0,
+          "renewal_enabled": 0,
+          "renewal_rounds": 20,
+          "rtt_samples": 0,
+          "ssthresh_before_bytes": 1242000,
+          "ssthresh_bytes": 1242000,
+          "time_ns": 80136064800,
+          "valid_renewal_cycle": 0,
+          "vegas_instance": "3"
+        },
+        "previous_count": 0
+      }
+    },
+    "qualification": "Actual internal state trace. Instance IDs are retained; the driver must establish that flow0 alone uses Vegas. Histories are cycle based; history_elapsed_ns is recorded rather than assumed equal to a fixed number of RTTs.",
+    "renewal_count": 0,
+    "renewal_events": []
+  },
+  "windows": [
+    {
+      "application_sum_bytes": 1984324080,
+      "application_sum_goodput_mbps": 79.3729632,
+      "drop_rows_by_layer": {
+        "TcDrop": 196
+      },
+      "drop_rows_without_transmission_identity": 0,
+      "end_ns": 200000000000,
+      "end_s": 200.0,
+      "flows": {
+        "0": {
+          "LOSS_entries": 0,
+          "active_duration_ns": 200000000000,
+          "active_interval_application_goodput_mbps": 63.8538696,
+          "application_bytes": 1596346740,
+          "application_goodput_mbps": 63.8538696,
+          "distinct_tagged_transmissions_dropped": 2,
+          "drop_trace_rows": 2,
+          "official_retransmission_bytes": 2760,
+          "official_retransmission_rows": 2,
+          "recovery_entries": 2,
+          "sender_payload_tx_bytes": 1596617220,
+          "sender_payload_tx_rows": 1156969
+        },
+        "1": {
+          "LOSS_entries": 1,
+          "active_duration_ns": 120000000000,
+          "active_interval_application_goodput_mbps": 25.865156,
+          "application_bytes": 387977340,
+          "application_goodput_mbps": 15.5190936,
+          "distinct_tagged_transmissions_dropped": 194,
+          "drop_trace_rows": 194,
+          "official_retransmission_bytes": 278760,
+          "official_retransmission_rows": 202,
+          "recovery_entries": 18,
+          "sender_payload_tx_bytes": 388636980,
+          "sender_payload_tx_rows": 281621
+        }
+      },
+      "queue_occupancy": [
+        {
+          "device_id": "1",
+          "direction": "forward",
+          "maximum_packets_held_for_positive_time": 100,
+          "node_id": "0",
+          "time_weighted_mean_bytes": 22277.7397344838,
+          "time_weighted_mean_packets": 15.5353884095
+        },
+        {
+          "device_id": "1",
+          "direction": "reverse",
+          "maximum_packets_held_for_positive_time": 0,
+          "node_id": "1",
+          "time_weighted_mean_bytes": 0.0,
+          "time_weighted_mean_packets": 0.0
+        }
+      ],
+      "queue_removed_after_dequeue_excluded": 0,
+      "queue_sojourn": [
+        {
+          "direction": "forward",
+          "group": "all",
+          "max_ns": 11408160,
+          "mean_ns": 2159982.850879602,
+          "minimum_ns": 0,
+          "p95_ns": 9113760,
+          "p99_ns": 11064000,
+          "packet_bytes": 2062546802,
+          "packet_count": 1438321
+        },
+        {
+          "direction": "forward",
+          "group": "flow0",
+          "max_ns": 11408160,
+          "mean_ns": 1966006.7458246504,
+          "minimum_ns": 0,
+          "p95_ns": 8884320,
+          "p99_ns": 10834560,
+          "packet_bytes": 1659090790,
+          "packet_count": 1156969
+        },
+        {
+          "direction": "forward",
+          "group": "flow1",
+          "max_ns": 11408160,
+          "mean_ns": 2957646.774680827,
+          "minimum_ns": 0,
+          "p95_ns": 9916800,
+          "p99_ns": 11293440,
+          "packet_bytes": 403456012,
+          "packet_count": 281352
+        },
+        {
+          "direction": "reverse",
+          "group": "all",
+          "max_ns": 0,
+          "mean_ns": 0.0,
+          "minimum_ns": 0,
+          "p95_ns": 0,
+          "p99_ns": 0,
+          "packet_bytes": 39123750,
+          "packet_count": 722333
+        },
+        {
+          "direction": "reverse",
+          "group": "untagged_or_control",
+          "max_ns": 0,
+          "mean_ns": 0.0,
+          "minimum_ns": 0,
+          "p95_ns": 0,
+          "p99_ns": 0,
+          "packet_bytes": 39123750,
+          "packet_count": 722333
+        }
+      ],
+      "start_ns": 0,
+      "start_s": 0.0,
+      "window": "whole"
+    },
+    {
+      "application_sum_bytes": 238091400,
+      "application_sum_goodput_mbps": 95.23656,
+      "drop_rows_by_layer": {
+        "TcDrop": 6
+      },
+      "drop_rows_without_transmission_identity": 0,
+      "end_ns": 200000000000,
+      "end_s": 200.0,
+      "flows": {
+        "0": {
+          "LOSS_entries": 0,
+          "active_duration_ns": 20000000000,
+          "active_interval_application_goodput_mbps": 66.412776,
+          "application_bytes": 166031940,
+          "application_goodput_mbps": 66.412776,
+          "distinct_tagged_transmissions_dropped": 0,
+          "drop_trace_rows": 0,
+          "official_retransmission_bytes": 0,
+          "official_retransmission_rows": 0,
+          "recovery_entries": 0,
+          "sender_payload_tx_bytes": 165755940,
+          "sender_payload_tx_rows": 120113
+        },
+        "1": {
+          "LOSS_entries": 0,
+          "active_duration_ns": 20000000000,
+          "active_interval_application_goodput_mbps": 28.823784,
+          "application_bytes": 72059460,
+          "application_goodput_mbps": 28.823784,
+          "distinct_tagged_transmissions_dropped": 6,
+          "drop_trace_rows": 6,
+          "official_retransmission_bytes": 9660,
+          "official_retransmission_rows": 7,
+          "recovery_entries": 2,
+          "sender_payload_tx_bytes": 72450000,
+          "sender_payload_tx_rows": 52500
+        }
+      },
+      "queue_occupancy": [
+        {
+          "device_id": "1",
+          "direction": "forward",
+          "maximum_packets_held_for_positive_time": 100,
+          "node_id": "0",
+          "time_weighted_mean_bytes": 24483.50333784,
+          "time_weighted_mean_packets": 17.07357276
+        },
+        {
+          "device_id": "1",
+          "direction": "reverse",
+          "maximum_packets_held_for_positive_time": 0,
+          "node_id": "1",
+          "time_weighted_mean_bytes": 0.0,
+          "time_weighted_mean_packets": 0.0
+        }
+      ],
+      "queue_removed_after_dequeue_excluded": 0,
+      "queue_sojourn": [
+        {
+          "direction": "forward",
+          "group": "all",
+          "max_ns": 11408160,
+          "mean_ns": 1977283.0213700726,
+          "minimum_ns": 0,
+          "p95_ns": 7737120,
+          "p99_ns": 10834560,
+          "packet_bytes": 247409454,
+          "packet_count": 172531
+        },
+        {
+          "direction": "forward",
+          "group": "flow0",
+          "max_ns": 11408160,
+          "mean_ns": 1841092.269011106,
+          "minimum_ns": 0,
+          "p95_ns": 7392960,
+          "p99_ns": 10490400,
+          "packet_bytes": 172243476,
+          "packet_count": 120114
+        },
+        {
+          "direction": "forward",
+          "group": "flow1",
+          "max_ns": 11408160,
+          "mean_ns": 2289365.2853082013,
+          "minimum_ns": 0,
+          "p95_ns": 8310720,
+          "p99_ns": 11178720,
+          "packet_bytes": 75165978,
+          "packet_count": 52417
+        },
+        {
+          "direction": "reverse",
+          "group": "all",
+          "max_ns": 0,
+          "mean_ns": 0.0,
+          "minimum_ns": 0,
+          "p95_ns": 0,
+          "p99_ns": 0,
+          "packet_bytes": 4687518,
+          "packet_count": 86585
+        },
+        {
+          "direction": "reverse",
+          "group": "untagged_or_control",
+          "max_ns": 0,
+          "mean_ns": 0.0,
+          "minimum_ns": 0,
+          "p95_ns": 0,
+          "p99_ns": 0,
+          "packet_bytes": 4687518,
+          "packet_count": 86585
+        }
+      ],
+      "start_ns": 180000000000,
+      "start_s": 180.0,
+      "window": "late20"
+    },
+    {
+      "application_sum_bytes": 240542280,
+      "application_sum_goodput_mbps": 96.216912,
+      "drop_rows_by_layer": {
+        "TcDrop": 141
+      },
+      "drop_rows_without_transmission_identity": 0,
+      "end_ns": 100000000000,
+      "end_s": 100.0,
+      "flows": {
+        "0": {
+          "LOSS_entries": 0,
+          "active_duration_ns": 20000000000,
+          "active_interval_application_goodput_mbps": 79.56804,
+          "application_bytes": 198920100,
+          "application_goodput_mbps": 79.56804,
+          "distinct_tagged_transmissions_dropped": 0,
+          "drop_trace_rows": 0,
+          "official_retransmission_bytes": 0,
+          "official_retransmission_rows": 0,
+          "recovery_entries": 0,
+          "sender_payload_tx_bytes": 198953220,
+          "sender_payload_tx_rows": 144169
+        },
+        "1": {
+          "LOSS_entries": 1,
+          "active_duration_ns": 20000000000,
+          "active_interval_application_goodput_mbps": 16.648872,
+          "application_bytes": 41622180,
+          "application_goodput_mbps": 16.648872,
+          "distinct_tagged_transmissions_dropped": 141,
+          "drop_trace_rows": 141,
+          "official_retransmission_bytes": 194580,
+          "official_retransmission_rows": 141,
+          "recovery_entries": 2,
+          "sender_payload_tx_bytes": 41816760,
+          "sender_payload_tx_rows": 30302
+        }
+      },
+      "queue_occupancy": [
+        {
+          "device_id": "1",
+          "direction": "forward",
+          "maximum_packets_held_for_positive_time": 100,
+          "node_id": "0",
+          "time_weighted_mean_bytes": 85014.796629811,
+          "time_weighted_mean_packets": 59.2851248795
+        },
+        {
+          "device_id": "1",
+          "direction": "reverse",
+          "maximum_packets_held_for_positive_time": 0,
+          "node_id": "1",
+          "time_weighted_mean_bytes": 0.0,
+          "time_weighted_mean_packets": 0.0
+        }
+      ],
+      "queue_removed_after_dequeue_excluded": 0,
+      "queue_sojourn": [
+        {
+          "direction": "forward",
+          "group": "all",
+          "max_ns": 11408160,
+          "mean_ns": 6802089.1304472545,
+          "minimum_ns": 0,
+          "p95_ns": 10375680,
+          "p99_ns": 11293440,
+          "packet_bytes": 249954916,
+          "packet_count": 174308
+        },
+        {
+          "direction": "forward",
+          "group": "flow0",
+          "max_ns": 11408160,
+          "mean_ns": 6779479.8326684935,
+          "minimum_ns": 0,
+          "p95_ns": 10375680,
+          "p99_ns": 11293440,
+          "packet_bytes": 206703930,
+          "packet_count": 144145
+        },
+        {
+          "direction": "forward",
+          "group": "flow1",
+          "max_ns": 11408160,
+          "mean_ns": 6910135.983489706,
+          "minimum_ns": 0,
+          "p95_ns": 10375680,
+          "p99_ns": 11293440,
+          "packet_bytes": 43250986,
+          "packet_count": 30163
+        },
+        {
+          "direction": "reverse",
+          "group": "all",
+          "max_ns": 0,
+          "mean_ns": 0.0,
+          "minimum_ns": 0,
+          "p95_ns": 0,
+          "p99_ns": 0,
+          "packet_bytes": 4745276,
+          "packet_count": 87556
+        },
+        {
+          "direction": "reverse",
+          "group": "untagged_or_control",
+          "max_ns": 0,
+          "mean_ns": 0.0,
+          "minimum_ns": 0,
+          "p95_ns": 0,
+          "p99_ns": 0,
+          "packet_bytes": 4745276,
+          "packet_count": 87556
+        }
+      ],
+      "start_ns": 80000000000,
+      "start_s": 80.0,
+      "window": "prestep_100"
+    },
+    {
+      "application_sum_bytes": 237709140,
+      "application_sum_goodput_mbps": 95.08365599999999,
+      "drop_rows_by_layer": {
+        "TcDrop": 13
+      },
+      "drop_rows_without_transmission_identity": 0,
+      "end_ns": 130000000000,
+      "end_s": 130.0,
+      "flows": {
+        "0": {
+          "LOSS_entries": 0,
+          "active_duration_ns": 20000000000,
+          "active_interval_application_goodput_mbps": 68.1168,
+          "application_bytes": 170292000,
+          "application_goodput_mbps": 68.1168,
+          "distinct_tagged_transmissions_dropped": 0,
+          "drop_trace_rows": 0,
+          "official_retransmission_bytes": 0,
+          "official_retransmission_rows": 0,
+          "recovery_entries": 0,
+          "sender_payload_tx_bytes": 170076720,
+          "sender_payload_tx_rows": 123244
+        },
+        "1": {
+          "LOSS_entries": 0,
+          "active_duration_ns": 20000000000,
+          "active_interval_application_goodput_mbps": 26.966856,
+          "application_bytes": 67417140,
+          "application_goodput_mbps": 26.966856,
+          "distinct_tagged_transmissions_dropped": 13,
+          "drop_trace_rows": 13,
+          "official_retransmission_bytes": 20700,
+          "official_retransmission_rows": 15,
+          "recovery_entries": 4,
+          "sender_payload_tx_bytes": 67640700,
+          "sender_payload_tx_rows": 49015
+        }
+      },
+      "queue_occupancy": [
+        {
+          "device_id": "1",
+          "direction": "forward",
+          "maximum_packets_held_for_positive_time": 100,
+          "node_id": "0",
+          "time_weighted_mean_bytes": 33597.393459648,
+          "time_weighted_mean_packets": 23.429144672
+        },
+        {
+          "device_id": "1",
+          "direction": "reverse",
+          "maximum_packets_held_for_positive_time": 0,
+          "node_id": "1",
+          "time_weighted_mean_bytes": 0.0,
+          "time_weighted_mean_packets": 0.0
+        }
+      ],
+      "queue_removed_after_dequeue_excluded": 0,
+      "queue_sojourn": [
+        {
+          "direction": "forward",
+          "group": "all",
+          "max_ns": 11408160,
+          "mean_ns": 2720331.570752663,
+          "minimum_ns": 0,
+          "p95_ns": 9343200,
+          "p99_ns": 11178720,
+          "packet_bytes": 247013670,
+          "packet_count": 172255
+        },
+        {
+          "direction": "forward",
+          "group": "flow0",
+          "max_ns": 11408160,
+          "mean_ns": 2578134.244196896,
+          "minimum_ns": 0,
+          "p95_ns": 8884320,
+          "p99_ns": 11064000,
+          "packet_bytes": 176744802,
+          "packet_count": 123253
+        },
+        {
+          "direction": "forward",
+          "group": "flow1",
+          "max_ns": 11408160,
+          "mean_ns": 3077995.484265948,
+          "minimum_ns": 0,
+          "p95_ns": 10031520,
+          "p99_ns": 11293440,
+          "packet_bytes": 70268868,
+          "packet_count": 49002
+        },
+        {
+          "direction": "reverse",
+          "group": "all",
+          "max_ns": 0,
+          "mean_ns": 0.0,
+          "minimum_ns": 0,
+          "p95_ns": 0,
+          "p99_ns": 0,
+          "packet_bytes": 4704502,
+          "packet_count": 86717
+        },
+        {
+          "direction": "reverse",
+          "group": "untagged_or_control",
+          "max_ns": 0,
+          "mean_ns": 0.0,
+          "minimum_ns": 0,
+          "p95_ns": 0,
+          "p99_ns": 0,
+          "packet_bytes": 4704502,
+          "packet_count": 86717
+        }
+      ],
+      "start_ns": 110000000000,
+      "start_s": 110.0,
+      "window": "poststep_100"
+    },
+    {
+      "application_sum_bytes": 1428008820,
+      "application_sum_goodput_mbps": 95.200588,
+      "drop_rows_by_layer": {
+        "TcDrop": 196
+      },
+      "drop_rows_without_transmission_identity": 0,
+      "end_ns": 200000000000,
+      "end_s": 200.0,
+      "flows": {
+        "0": {
+          "LOSS_entries": 0,
+          "active_duration_ns": 120000000000,
+          "active_interval_application_goodput_mbps": 69.335432,
+          "application_bytes": 1040031480,
+          "application_goodput_mbps": 69.335432,
+          "distinct_tagged_transmissions_dropped": 2,
+          "drop_trace_rows": 2,
+          "official_retransmission_bytes": 2760,
+          "official_retransmission_rows": 2,
+          "recovery_entries": 2,
+          "sender_payload_tx_bytes": 1039755480,
+          "sender_payload_tx_rows": 753446
+        },
+        "1": {
+          "LOSS_entries": 1,
+          "active_duration_ns": 120000000000,
+          "active_interval_application_goodput_mbps": 25.865156,
+          "application_bytes": 387977340,
+          "application_goodput_mbps": 25.865156,
+          "distinct_tagged_transmissions_dropped": 194,
+          "drop_trace_rows": 194,
+          "official_retransmission_bytes": 278760,
+          "official_retransmission_rows": 202,
+          "recovery_entries": 18,
+          "sender_payload_tx_bytes": 388636980,
+          "sender_payload_tx_rows": 281621
+        }
+      },
+      "queue_occupancy": [
+        {
+          "device_id": "1",
+          "direction": "forward",
+          "maximum_packets_held_for_positive_time": 100,
+          "node_id": "0",
+          "time_weighted_mean_bytes": 36191.741162811166,
+          "time_weighted_mean_packets": 25.238321643916667
+        },
+        {
+          "device_id": "1",
+          "direction": "reverse",
+          "maximum_packets_held_for_positive_time": 0,
+          "node_id": "1",
+          "time_weighted_mean_bytes": 0.0,
+          "time_weighted_mean_packets": 0.0
+        }
+      ],
+      "queue_removed_after_dequeue_excluded": 0,
+      "queue_sojourn": [
+        {
+          "direction": "forward",
+          "group": "all",
+          "max_ns": 11408160,
+          "mean_ns": 2926433.4727710406,
+          "minimum_ns": 0,
+          "p95_ns": 9802080,
+          "p99_ns": 11293440,
+          "packet_bytes": 1483899010,
+          "packet_count": 1034799
+        },
+        {
+          "direction": "forward",
+          "group": "flow0",
+          "max_ns": 11408160,
+          "mean_ns": 2914777.80897661,
+          "minimum_ns": 0,
+          "p95_ns": 9802080,
+          "p99_ns": 11178720,
+          "packet_bytes": 1080442998,
+          "packet_count": 753447
+        },
+        {
+          "direction": "forward",
+          "group": "flow1",
+          "max_ns": 11408160,
+          "mean_ns": 2957646.774680827,
+          "minimum_ns": 0,
+          "p95_ns": 9916800,
+          "p99_ns": 11293440,
+          "packet_bytes": 403456012,
+          "packet_count": 281352
+        },
+        {
+          "direction": "reverse",
+          "group": "all",
+          "max_ns": 0,
+          "mean_ns": 0.0,
+          "minimum_ns": 0,
+          "p95_ns": 0,
+          "p99_ns": 0,
+          "packet_bytes": 28239236,
+          "packet_count": 520768
+        },
+        {
+          "direction": "reverse",
+          "group": "untagged_or_control",
+          "max_ns": 0,
+          "mean_ns": 0.0,
+          "minimum_ns": 0,
+          "p95_ns": 0,
+          "p99_ns": 0,
+          "packet_bytes": 28239236,
+          "packet_count": 520768
+        }
+      ],
+      "start_ns": 80000000000,
+      "start_s": 80.0,
+      "window": "common"
+    }
+  ]
+}

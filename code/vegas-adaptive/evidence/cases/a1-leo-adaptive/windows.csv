@@ -1,0 +1,7 @@
+case,window,start_ns,end_ns,flow_id,application_bytes,application_goodput_mbps,sender_payload_tx_rows,sender_payload_tx_bytes,official_retransmission_rows,official_retransmission_bytes,recovery_entries,LOSS_entries,drop_trace_rows,distinct_tagged_transmissions_dropped,application_sum_bytes,application_sum_goodput_mbps,active_duration_ns,active_interval_application_goodput_mbps
+a1-leo-adaptive,whole,0,200000000000,0,1255089300,50.203572,909556,1255187280,71,97980,4,0,0,0,1255089300,50.203572,,
+a1-leo-adaptive,late20,180000000000,200000000000,0,68356920,27.342768,49536,68359680,2,2760,1,0,0,0,68356920,27.342768,,
+a1-leo-adaptive,prestep_121.6,101600000000,121600000000,0,240582300,96.23292,174336,240583680,0,0,0,0,0,0,240582300,96.23292,,
+a1-leo-adaptive,poststep_121.6,131600000000,151600000000,0,110560080,44.224032,80139,110591820,0,0,0,0,0,0,110560080,44.224032,,
+a1-leo-adaptive,prestep_187.4,167400000000,187400000000,0,70871280,28.348512,51573,71170740,0,0,0,0,0,0,70871280,28.348512,,
+a1-leo-adaptive,poststep_187.4,197400000000,200000000000,0,5238480,16.1184,3796,5238480,0,0,0,0,0,0,5238480,16.1184,,

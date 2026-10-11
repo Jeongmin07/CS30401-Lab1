@@ -1,0 +1,913 @@
+{
+  "analysis_sources": {
+    "helper": {
+      "bytes": 39038,
+      "path": "/work/code/vegas-adaptive/analyze_vegas.py",
+      "sha256": "7b7deee1416d6458b71b406043b19f0d3fc7e63290ace6e9ec06a194bb2c5eab"
+    },
+    "original_analyzer_current": {
+      "bytes": 36868,
+      "path": "/work/code/kim-study/analyze_study.py",
+      "sha256": "5333d7f6d86c04f79bbaad82e5e2577ec3bdf2f281e115c854ad904c404aa696"
+    }
+  },
+  "application_and_terminal_validation": {
+    "app_trace_rows": 1449152,
+    "connections": [
+      {
+        "bytes": 1999829760,
+        "flow_id": 0,
+        "identity": [
+          "1",
+          "10.1.1.2",
+          "1024",
+          "0",
+          "10.1.1.1",
+          "49153"
+        ],
+        "rows": 1449152
+      }
+    ],
+    "wire_application_terminal": {
+      "0": {
+        "application_bytes": 1999829760,
+        "wire_unique_minus_application_bytes": 0,
+        "wire_unique_payload_bytes": 1999829760
+      }
+    }
+  },
+  "case": "a1-fixed-adaptive",
+  "driver_validation": {
+    "actual_delay_events": [
+      {
+        "event": "INITIAL",
+        "new_one_way_delay_ns": "45000000",
+        "old_one_way_delay_ns": "45000000",
+        "propagation_rtt_ns": "90000000",
+        "time_ns": "0"
+      },
+      {
+        "event": "SET_DELAY",
+        "new_one_way_delay_ns": "45000000",
+        "old_one_way_delay_ns": "45000000",
+        "propagation_rtt_ns": "90000000",
+        "time_ns": "100000000000"
+      }
+    ],
+    "actual_driver_config": {
+      "after_one_way_delay_ns": 45000000,
+      "after_propagation_rtt_ns": 90000000,
+      "before_one_way_delay_ns": 45000000,
+      "before_propagation_rtt_ns": 90000000,
+      "both_flows_share_forward_device": true,
+      "cc": "ns3::TcpVegas",
+      "competitor": false,
+      "competitor_cc": "ns3::TcpCubic",
+      "competitor_port": 1025,
+      "competitor_start_ns": 80000000000,
+      "duration_ns": 200000000000,
+      "event_ns": 100000000000,
+      "flow0_parameters": "",
+      "flow0_port": 1024,
+      "flow0_start_ns": 0,
+      "initial_cwnd_pkts": 10,
+      "initial_ssthresh_pkts": 900,
+      "logs_dir": "/tmp/cs30401-vegas/a1-fixed-adaptive/logs_ns3",
+      "max_bytes_each": 100000000000,
+      "mss_bytes": 1380,
+      "queue_bytes_at_packets_callback": "post-change ns3.48 Queue byte count",
+      "queue_measurement": "Enqueue-to-Dequeue wait; includes zero, excludes serialization and propagation; censored packets in queue_pending.csv",
+      "queue_pkts_per_direction": 100,
+      "rate_mbps": 100,
+      "receive_error_model": false,
+      "renewal": false,
+      "renewal_min_rise_ns": 1000000,
+      "renewal_rounds": 20,
+      "root_queue_disc": false,
+      "run": 1,
+      "seed": 123456789,
+      "topology": "two nodes, one full-duplex point-to-point link"
+    },
+    "actual_sender_socket_classes": [
+      {
+        "actual_cc": "ns3::TcpVegas",
+        "expected_cc": "ns3::TcpVegas",
+        "flow_id": "0",
+        "peer_port": "1024",
+        "time_ns": "1"
+      }
+    ],
+    "available": true,
+    "driver_app_totals_match_independent_csv": true,
+    "driver_flow_life_summary": [
+      {
+        "acked_bytes": "1999287420",
+        "application_goodput_mbps": "79.993190400000003",
+        "application_rx_bytes": "1999829760",
+        "cc": "ns3::TcpVegas",
+        "completed": "0",
+        "destination_port": "1024",
+        "flow_id": "0",
+        "last_application_rx_ns": "199999985920",
+        "observation_end_ns": "200000000000",
+        "receiver_node": "1",
+        "sender_node": "0",
+        "start_ns": "0"
+      }
+    ],
+    "qualification": "Matched-window app rate uses full window width; active-interval rate separately excludes time before that flow starts. Whole-run rates and whole-life rates differ for the late competitor."
+  },
+  "drop_coverage": {
+    "available": true,
+    "failed_hooks": [],
+    "qualification": "Per-hook records are preserved. TcDrop and per-device root_queue_disc_absent are required in addition to queue/device/IP drops before asserting complete modeled network-drop coverage.",
+    "rows_by_layer": {
+      "DropAfterDequeue": 2,
+      "DropBeforeEnqueue": 2,
+      "MacTxDrop": 2,
+      "PhyRxDrop": 2,
+      "PhyTxDrop": 2,
+      "TcDrop": 2,
+      "ipv4": 2,
+      "root_queue_disc_absent": 2
+    }
+  },
+  "duration_ns": 200000000000,
+  "event_times_ns": [
+    100000000000
+  ],
+  "input_artifacts": [
+    {
+      "bytes": 7850,
+      "path": "/tmp/cs30401-vegas/a1-fixed-adaptive/case.json",
+      "sha256": "68e8c29e3e14a63c8a86a3c0d64039ec9412e42d3791ef7f4c7d5e8ad89d46f8"
+    },
+    {
+      "bytes": 1170,
+      "path": "/tmp/cs30401-vegas/a1-fixed-adaptive/config_driver.json",
+      "sha256": "634ec1324b8865213d61c6d2eec7cc3b3cc94a31c16559d55708618b9c465ae4"
+    },
+    {
+      "bytes": 36,
+      "path": "/tmp/cs30401-vegas/a1-fixed-adaptive/config_ns3.properties",
+      "sha256": "3c4c19c08bb23933cce0c1895c539e062b0fd04207aa4832d69e2d135ab1ae3e"
+    },
+    {
+      "bytes": 162,
+      "path": "/tmp/cs30401-vegas/a1-fixed-adaptive/logs_ns3/delay_events.csv",
+      "sha256": "346e2e27550015f28425194bfe5a174f0c6ab87d89be7d9b81357111a4ea4f54"
+    },
+    {
+      "bytes": 269,
+      "path": "/tmp/cs30401-vegas/a1-fixed-adaptive/logs_ns3/flow_summary.csv",
+      "sha256": "175b581560c9709d976abe281036af4a6305bf66d35f4f700dd10ae397d7ff16"
+    },
+    {
+      "bytes": 316,
+      "path": "/tmp/cs30401-vegas/a1-fixed-adaptive/logs_ns3/queue_coverage.csv",
+      "sha256": "82e2f2dd7290ec35da6592dd3f306a241471861265a21e8f88853c0053b73499"
+    },
+    {
+      "bytes": 296386875,
+      "path": "/tmp/cs30401-vegas/a1-fixed-adaptive/logs_ns3/queue_events.csv",
+      "sha256": "9cc2d383e7baf74148908d43463027b69c5ba59224cb057a37a265bac4445de3"
+    },
+    {
+      "bytes": 142230969,
+      "path": "/tmp/cs30401-vegas/a1-fixed-adaptive/logs_ns3/queue_occupancy.csv",
+      "sha256": "1f63172ac03e17384590ff5c96ec159ae82ac8e4b6ea000ea8999a33318554d6"
+    },
+    {
+      "bytes": 456,
+      "path": "/tmp/cs30401-vegas/a1-fixed-adaptive/logs_ns3/queue_pending.csv",
+      "sha256": "fef7572b0b4ebf9ba326d46593c7222c814c41a97789736cf2b4a5e9b134a69f"
+    },
+    {
+      "bytes": 156111310,
+      "path": "/tmp/cs30401-vegas/a1-fixed-adaptive/logs_ns3/queue_sojourn.csv",
+      "sha256": "a468756523311688e2ed658e858cf0d85d00d39a49b0e5995c5df46116d7ea15"
+    },
+    {
+      "bytes": 185,
+      "path": "/tmp/cs30401-vegas/a1-fixed-adaptive/logs_ns3/queue_summary.csv",
+      "sha256": "b28c5858bc1cf32802d4866b691866aa9101330002963d1f80afafb430eab184"
+    },
+    {
+      "bytes": 85,
+      "path": "/tmp/cs30401-vegas/a1-fixed-adaptive/logs_ns3/socket_types.csv",
+      "sha256": "774582dc9797ebcf7c6e1ed9acd617adaaaff25e4be95499e5ad62ee1dda73ca"
+    },
+    {
+      "bytes": 117532598,
+      "path": "/tmp/cs30401-vegas/a1-fixed-adaptive/logs_ns3/study_app_rx_node_1_port_1024.csv",
+      "sha256": "e2df547b214a741c8be864a7f431fa4f5c4379d3480fe8446e23779e5a26a76b"
+    },
+    {
+      "bytes": 328,
+      "path": "/tmp/cs30401-vegas/a1-fixed-adaptive/logs_ns3/study_drop_coverage.csv",
+      "sha256": "f2bbce727ae1f61019ef8f727753e3a8f64abdeb41d660a20a3607802f4524f4"
+    },
+    {
+      "bytes": 112,
+      "path": "/tmp/cs30401-vegas/a1-fixed-adaptive/logs_ns3/study_drops.csv",
+      "sha256": "ec37c4087cf6eb0bf412760b74ba37e2279e44d6bfff2d89f87c8135ec82b959"
+    },
+    {
+      "bytes": 156292742,
+      "path": "/tmp/cs30401-vegas/a1-fixed-adaptive/logs_ns3/study_rx_node_1_port_1024.csv",
+      "sha256": "fbae1a23c53fd279fdc134413d2355265671d3b48ceb4149752f5d97d261f841"
+    },
+    {
+      "bytes": 31241,
+      "path": "/tmp/cs30401-vegas/a1-fixed-adaptive/logs_ns3/tcp_flow_0_study_events.csv",
+      "sha256": "d7e475af4cd772846a5cfa852abb7ef5add57df4d52236d68a5103806d771f63"
+    },
+    {
+      "bytes": 167015298,
+      "path": "/tmp/cs30401-vegas/a1-fixed-adaptive/logs_ns3/tcp_flow_0_study_packets.csv",
+      "sha256": "206849ed2fbfcfeb63aec714e555aa704ee78b283a6055293b87cdd7a4d4f145"
+    },
+    {
+      "bytes": 215582,
+      "path": "/tmp/cs30401-vegas/a1-fixed-adaptive/logs_ns3/vegas_state.csv",
+      "sha256": "b56601567147e927d80486d6ac17ff057610124d78bc0a67a8eff800a5a64a11"
+    }
+  ],
+  "method": {
+    "application": "Positive receiver HandleRead payload, per-connection cumulative sum checked. Connection key includes local port to distinguish two sinks each numbered connection0. Flow1 app goodput measures actual competitor delivery, not offered/sender-ACKed bytes.",
+    "loss_recovery": "Official RETX rows and bytes; CA_RECOVERY and CA_LOSS entries are separately counted. LOSS is not automatically an RTO. Drop layer rows may duplicate a physical loss, so distinct (flow,tx_id) counts are separate; untagged drops remain explicit.",
+    "scope": "Fixed propagation plus persistent queue is a falsification control for recent-min renewal. Increased foreground delivery alone does not establish total service improvement or fairness; examine competitor app, queue delay, drops, and terminal gap. A synthetic delay step is distinct from the multi-hop LEO model.",
+    "terminal": "Wire payload interval union minus actual app delivery at stop time; wire Rx is pre-TCP and does not prove acceptance or eventual delivery. Sequence unwrapping assumes adjacent references differ by less than2^31 bytes.",
+    "windows": "Exact half-open [start_ns,end_ns) on each observation's timestamp; event-time delivery belongs to post-event interval. Whole includes startup; late20/pre20/post(+10,+30) are matched between cases."
+  },
+  "original_study_analysis_check": {
+    "available": false,
+    "qualification": "No original analyzer JSON supplied; app/counters were independently read from raw CSV."
+  },
+  "queue_instrumentation": {
+    "available": true,
+    "coverage": {
+      "available": true,
+      "failed_hooks": [],
+      "qualification": "Per-hook records are preserved. TcDrop and per-device root_queue_disc_absent are required in addition to queue/device/IP drops before asserting complete modeled network-drop coverage.",
+      "rows_by_layer": {
+        "Dequeue": 2,
+        "DropAfterDequeue": 2,
+        "DropBeforeEnqueue": 2,
+        "Enqueue": 2,
+        "PacketsInQueue": 2
+      }
+    },
+    "device_summaries": [
+      {
+        "dequeued": 1449547,
+        "device_id": "1",
+        "direction": "forward",
+        "drop_after_dequeue": 0,
+        "drop_before_enqueue": 0,
+        "enqueued": 1449551,
+        "node_id": "0",
+        "pending": 4,
+        "zero_sojourn": 75270
+      },
+      {
+        "dequeued": 724577,
+        "device_id": "1",
+        "direction": "reverse",
+        "drop_after_dequeue": 0,
+        "drop_before_enqueue": 0,
+        "enqueued": 724577,
+        "node_id": "1",
+        "pending": 0,
+        "zero_sojourn": 724577
+      }
+    ],
+    "enqueue_dequeue_pending_conservation": true,
+    "event_rows_by_kind": {
+      "Dequeue": 2174124,
+      "Enqueue": 2174128
+    },
+    "final_queue_states": [
+      {
+        "bytes": 5736,
+        "device_id": "1",
+        "direction": "forward",
+        "node_id": "0",
+        "packets": 4
+      },
+      {
+        "bytes": 0,
+        "device_id": "1",
+        "direction": "reverse",
+        "node_id": "1",
+        "packets": 0
+      }
+    ],
+    "pending_packets_at_stop": [
+      {
+        "age_ns": 324160,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199999675840,
+        "flow_id": 0,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2862052,
+        "tagged": 1,
+        "tx_id": 1449548,
+        "tx_time_ns": 199999675840
+      },
+      {
+        "age_ns": 324160,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199999675840,
+        "flow_id": 0,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2862052,
+        "tagged": 1,
+        "tx_id": 1449549,
+        "tx_time_ns": 199999675840
+      },
+      {
+        "age_ns": 94720,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199999905280,
+        "flow_id": 0,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2862052,
+        "tagged": 1,
+        "tx_id": 1449550,
+        "tx_time_ns": 199999905280
+      },
+      {
+        "age_ns": 94720,
+        "device_id": 1,
+        "direction": "forward",
+        "enqueue_time_ns": 199999905280,
+        "flow_id": 0,
+        "node_id": 0,
+        "observation_end_ns": 200000000000,
+        "packet_bytes": 1434,
+        "packet_uid": 2862052,
+        "tagged": 1,
+        "tx_id": 1449551,
+        "tx_time_ns": 199999905280
+      }
+    ],
+    "qualification": "Sojourn is exact Enqueue-to-Dequeue waiting time, including zero waits, grouped by dequeue timestamps; excludes link serialization/propagation. Remove/DropAfterDequeue rows are excluded. Quantiles use packet counts (nearest rank), not byte or time weighting. Untagged ACK/control traffic is not assigned to a TCP flow. Occupancy holds the post-change snapshot between trace rows."
+  },
+  "run": "/tmp/cs30401-vegas/a1-fixed-adaptive",
+  "schema_version": 1,
+  "validation": {
+    "checked_original_config_schedule": [
+      "config_ns3.properties",
+      "config_driver.json"
+    ],
+    "completed_exit_zero": true,
+    "currently_present_declared_artifacts": [
+      {
+        "bytes": 323256,
+        "manifest_key": "binary",
+        "matches_launch_declaration": true,
+        "path": "/home/ubuntu/ns-3.48/build/scratch/vegas_micro/ns3.48-vegas_micro",
+        "sha256": "c4d829e943bd38d29bed936aad30d3882c23630766ca82bcb24f87017c6e32e9"
+      }
+    ],
+    "declared_artifact_hashes": {
+      "binary.sha256": "c4d829e943bd38d29bed936aad30d3882c23630766ca82bcb24f87017c6e32e9",
+      "binary_sha256": "c4d829e943bd38d29bed936aad30d3882c23630766ca82bcb24f87017c6e32e9",
+      "config_driver.json_sha256": "634ec1324b8865213d61c6d2eec7cc3b3cc94a31c16559d55708618b9c465ae4",
+      "config_ns3.properties_sha256": "3c4c19c08bb23933cce0c1895c539e062b0fd04207aa4832d69e2d135ab1ae3e",
+      "patch_sha256": "849ae664d01a0e084dfaaae764aff81c76333ae31c07c97eae0300cd56a0a0db",
+      "shared_libraries[0].sha256": "edf56f782f446d54291425c4b357fb2a609f64da3a3a88a2d48e18dbcf4200b8",
+      "shared_libraries[10].sha256": "af4a8a6c3378e80fc6347fd77ad9c0bad5783eb34c2ea90e416f797b985e3f89",
+      "shared_libraries[11].sha256": "6c54072c67b2a2470abe2aca9f561d57093df69fa832ae2035753e2e52ebf907",
+      "shared_libraries[12].sha256": "68e7ce4d29d13efe374989d3279a8587bedb7a8104757938ab2c14605e3d4002",
+      "shared_libraries[13].sha256": "ab02ae3cfe9c8453b6b251528884a678fe470cb1aac2e6500064a6fd44caf447",
+      "shared_libraries[14].sha256": "354fd4e2ef550af211e9abf272fd64b45818636c845b4876b606a0ffa6520d53",
+      "shared_libraries[1].sha256": "029ee91a59a88fd8cff0c865053f31dfc36f6cc6f10484ebb3843864025750ca",
+      "shared_libraries[2].sha256": "e0ad0039c02b39ad3a302a077e72c6935d8db476df0bc48e105b4952a7d25ac9",
+      "shared_libraries[3].sha256": "5c0e5f9092dc8a215a2d77aaa75ba0e3db181578566db25b9463cc220a94a1a0",
+      "shared_libraries[4].sha256": "5f6e271f0e98438059ac55c8dc5c94ee411050cb7cd7f23956963310674982a1",
+      "shared_libraries[5].sha256": "5fbe40f2a843bf01f38b943a28377f7e9628b748506498298cfd6096c621b1ad",
+      "shared_libraries[6].sha256": "c31699838a1a449773562164af013663951dbd78c7b0e1bcddc4b451f2eaa6bc",
+      "shared_libraries[7].sha256": "f22225358dcb23fe652b49e8b3e526445bdf078d0fe1ae35c401c5e82c276b0d",
+      "shared_libraries[8].sha256": "45dc648f0ff11a8c83574fdea0dd189a35ccc606d625d3e3612afa3a6f806351",
+      "shared_libraries[9].sha256": "7930b3ed5f927eb731b7a010e5664ebd7927d1b25ecd2ef1f950857b434621b7",
+      "sources[0].sha256": "cd0260dfb412c364afa81efb76e15b790f6fb00f9bdde5caa85288be2505091d",
+      "sources[1].sha256": "849ae664d01a0e084dfaaae764aff81c76333ae31c07c97eae0300cd56a0a0db",
+      "sources[2].sha256": "32e8d2809040acd1c781020ccccc6d4320693ab3d3a51c58e05238c52e6aabeb",
+      "sources[3].sha256": "7b7deee1416d6458b71b406043b19f0d3fc7e63290ace6e9ec06a194bb2c5eab",
+      "sources[4].sha256": "5333d7f6d86c04f79bbaad82e5e2577ec3bdf2f281e115c854ad904c404aa696",
+      "sources[5].sha256": "49bd5418f2b13bdbf6d703f719d61075f814cc86d44c745651bf797f4e5f656c",
+      "sources[6].sha256": "bff4a98f2b05c396045975248aaffc132793f465c09d3a1e4d508aecbc76bf5d",
+      "sources[7].sha256": "03b6f3cdada869dbac620f9b1dda9ab9caddf7ca14545858250e823e8beeed1a",
+      "sources[8].sha256": "b6ee80a1d33538f36f0f9f2170a6ca2512beed6850133a47fd00db96f3d70afe",
+      "sources[9].sha256": "32e8d2809040acd1c781020ccccc6d4320693ab3d3a51c58e05238c52e6aabeb"
+    },
+    "launch_commit_fields": {
+      "source_commit": "7ac0751235dc1ecb14b3042622ac50990429f17c"
+    },
+    "qualification": "Source/binary declarations describe launch provenance. Current-file hashes are separate; later rebuilding/editing does not rewrite the original run. Missing old launch commit is explicit in legacy mode."
+  },
+  "vegas_internal_state": {
+    "available": true,
+    "event_counts": {
+      "CYCLE_DECREASE": 1,
+      "CYCLE_HOLD": 1446,
+      "CYCLE_INCREASE": 771,
+      "ENABLE": 2
+    },
+    "instances": {
+      "1": {
+        "base_rtt_max_ns": 90000000,
+        "base_rtt_min_ns": 90000000,
+        "event_counts": {
+          "CYCLE_DECREASE": 1,
+          "CYCLE_HOLD": 1446,
+          "CYCLE_INCREASE": 771,
+          "ENABLE": 1
+        },
+        "first": {
+          "announced_state": 0,
+          "base_rtt_ns": null,
+          "cong_state": 0,
+          "cwnd_after_bytes": 13800,
+          "cwnd_before_bytes": 13800,
+          "cycle_min_rtt_ns": null,
+          "diff_pkts": null,
+          "event": "ENABLE",
+          "history_elapsed_ns": null,
+          "history_rounds": 0,
+          "old_base_rtt_ns": null,
+          "recent_min_ns": null,
+          "renewal_count": 0,
+          "renewal_enabled": 0,
+          "renewal_rounds": 20,
+          "rtt_samples": 0,
+          "ssthresh_before_bytes": 1242000,
+          "ssthresh_bytes": 1242000,
+          "time_ns": 90009280,
+          "valid_renewal_cycle": 0
+        },
+        "last": {
+          "announced_state": null,
+          "base_rtt_ns": 90000000,
+          "cong_state": 0,
+          "cwnd_after_bytes": 1090200,
+          "cwnd_before_bytes": 1090200,
+          "cycle_min_rtt_ns": 90503123,
+          "diff_pkts": 5,
+          "event": "CYCLE_HOLD",
+          "history_elapsed_ns": null,
+          "history_rounds": 0,
+          "old_base_rtt_ns": null,
+          "recent_min_ns": null,
+          "renewal_count": 0,
+          "renewal_enabled": 0,
+          "renewal_rounds": 20,
+          "rtt_samples": 394,
+          "ssthresh_before_bytes": 817650,
+          "ssthresh_bytes": 817650,
+          "time_ns": 199939103680,
+          "valid_renewal_cycle": 1,
+          "vegas_instance": "1"
+        },
+        "previous_count": 0
+      },
+      "2": {
+        "base_rtt_max_ns": null,
+        "base_rtt_min_ns": null,
+        "event_counts": {
+          "ENABLE": 1
+        },
+        "first": {
+          "announced_state": 0,
+          "base_rtt_ns": null,
+          "cong_state": 0,
+          "cwnd_after_bytes": 13800,
+          "cwnd_before_bytes": 13800,
+          "cycle_min_rtt_ns": null,
+          "diff_pkts": null,
+          "event": "ENABLE",
+          "history_elapsed_ns": null,
+          "history_rounds": 0,
+          "old_base_rtt_ns": null,
+          "recent_min_ns": null,
+          "renewal_count": 0,
+          "renewal_enabled": 0,
+          "renewal_rounds": 20,
+          "rtt_samples": 0,
+          "ssthresh_before_bytes": 1242000,
+          "ssthresh_bytes": 1242000,
+          "time_ns": 135013600,
+          "valid_renewal_cycle": 0
+        },
+        "last": {
+          "announced_state": 0,
+          "base_rtt_ns": null,
+          "cong_state": 0,
+          "cwnd_after_bytes": 13800,
+          "cwnd_before_bytes": 13800,
+          "cycle_min_rtt_ns": null,
+          "diff_pkts": null,
+          "event": "ENABLE",
+          "history_elapsed_ns": null,
+          "history_rounds": 0,
+          "old_base_rtt_ns": null,
+          "recent_min_ns": null,
+          "renewal_count": 0,
+          "renewal_enabled": 0,
+          "renewal_rounds": 20,
+          "rtt_samples": 0,
+          "ssthresh_before_bytes": 1242000,
+          "ssthresh_bytes": 1242000,
+          "time_ns": 135013600,
+          "valid_renewal_cycle": 0,
+          "vegas_instance": "2"
+        },
+        "previous_count": 0
+      }
+    },
+    "qualification": "Actual internal state trace. Instance IDs are retained; the driver must establish that flow0 alone uses Vegas. Histories are cycle based; history_elapsed_ns is recorded rather than assumed equal to a fixed number of RTTs.",
+    "renewal_count": 0,
+    "renewal_events": []
+  },
+  "windows": [
+    {
+      "application_sum_bytes": 1999829760,
+      "application_sum_goodput_mbps": 79.9931904,
+      "drop_rows_by_layer": {},
+      "drop_rows_without_transmission_identity": 0,
+      "end_ns": 200000000000,
+      "end_s": 200.0,
+      "flows": {
+        "0": {
+          "LOSS_entries": 0,
+          "active_duration_ns": 200000000000,
+          "active_interval_application_goodput_mbps": 79.9931904,
+          "application_bytes": 1999829760,
+          "application_goodput_mbps": 79.9931904,
+          "distinct_tagged_transmissions_dropped": 0,
+          "drop_trace_rows": 0,
+          "official_retransmission_bytes": 0,
+          "official_retransmission_rows": 0,
+          "recovery_entries": 0,
+          "sender_payload_tx_bytes": 2000377620,
+          "sender_payload_tx_rows": 1449549
+        }
+      },
+      "queue_occupancy": [
+        {
+          "device_id": "1",
+          "direction": "forward",
+          "maximum_packets_held_for_positive_time": 10,
+          "node_id": "0",
+          "time_weighted_mean_bytes": 3955.6952234883,
+          "time_weighted_mean_packets": 2.75850433995
+        },
+        {
+          "device_id": "1",
+          "direction": "reverse",
+          "maximum_packets_held_for_positive_time": 0,
+          "node_id": "1",
+          "time_weighted_mean_bytes": 0.0,
+          "time_weighted_mean_packets": 0.0
+        }
+      ],
+      "queue_removed_after_dequeue_excluded": 0,
+      "queue_sojourn": [
+        {
+          "direction": "forward",
+          "group": "all",
+          "max_ns": 1036799,
+          "mean_ns": 380601.6846849395,
+          "minimum_ns": 0,
+          "p95_ns": 509760,
+          "p99_ns": 509760,
+          "packet_bytes": 2078647642,
+          "packet_count": 1449547
+        },
+        {
+          "direction": "forward",
+          "group": "flow0",
+          "max_ns": 1036799,
+          "mean_ns": 380601.6846849395,
+          "minimum_ns": 0,
+          "p95_ns": 509760,
+          "p99_ns": 509760,
+          "packet_bytes": 2078647642,
+          "packet_count": 1449547
+        },
+        {
+          "direction": "reverse",
+          "group": "all",
+          "max_ns": 0,
+          "mean_ns": 0.0,
+          "minimum_ns": 0,
+          "p95_ns": 0,
+          "p99_ns": 0,
+          "packet_bytes": 39127162,
+          "packet_count": 724577
+        },
+        {
+          "direction": "reverse",
+          "group": "untagged_or_control",
+          "max_ns": 0,
+          "mean_ns": 0.0,
+          "minimum_ns": 0,
+          "p95_ns": 0,
+          "p99_ns": 0,
+          "packet_bytes": 39127162,
+          "packet_count": 724577
+        }
+      ],
+      "start_ns": 0,
+      "start_s": 0.0,
+      "window": "whole"
+    },
+    {
+      "application_sum_bytes": 240586440,
+      "application_sum_goodput_mbps": 96.234576,
+      "drop_rows_by_layer": {},
+      "drop_rows_without_transmission_identity": 0,
+      "end_ns": 200000000000,
+      "end_s": 200.0,
+      "flows": {
+        "0": {
+          "LOSS_entries": 0,
+          "active_duration_ns": 20000000000,
+          "active_interval_application_goodput_mbps": 96.234576,
+          "application_bytes": 240586440,
+          "application_goodput_mbps": 96.234576,
+          "distinct_tagged_transmissions_dropped": 0,
+          "drop_trace_rows": 0,
+          "official_retransmission_bytes": 0,
+          "official_retransmission_rows": 0,
+          "recovery_entries": 0,
+          "sender_payload_tx_bytes": 240586440,
+          "sender_payload_tx_rows": 174338
+        }
+      },
+      "queue_occupancy": [
+        {
+          "device_id": "1",
+          "direction": "forward",
+          "maximum_packets_held_for_positive_time": 5,
+          "node_id": "0",
+          "time_weighted_mean_bytes": 5654.999775792,
+          "time_weighted_mean_packets": 3.943514488
+        },
+        {
+          "device_id": "1",
+          "direction": "reverse",
+          "maximum_packets_held_for_positive_time": 0,
+          "node_id": "1",
+          "time_weighted_mean_bytes": 0.0,
+          "time_weighted_mean_packets": 0.0
+        }
+      ],
+      "queue_removed_after_dequeue_excluded": 0,
+      "queue_sojourn": [
+        {
+          "direction": "forward",
+          "group": "all",
+          "max_ns": 509760,
+          "mean_ns": 452400.0,
+          "minimum_ns": 395040,
+          "p95_ns": 509760,
+          "p99_ns": 509760,
+          "packet_bytes": 250000692,
+          "packet_count": 174338
+        },
+        {
+          "direction": "forward",
+          "group": "flow0",
+          "max_ns": 509760,
+          "mean_ns": 452400.0,
+          "minimum_ns": 395040,
+          "p95_ns": 509760,
+          "p99_ns": 509760,
+          "packet_bytes": 250000692,
+          "packet_count": 174338
+        },
+        {
+          "direction": "reverse",
+          "group": "all",
+          "max_ns": 0,
+          "mean_ns": 0.0,
+          "minimum_ns": 0,
+          "p95_ns": 0,
+          "p99_ns": 0,
+          "packet_bytes": 4707126,
+          "packet_count": 87169
+        },
+        {
+          "direction": "reverse",
+          "group": "untagged_or_control",
+          "max_ns": 0,
+          "mean_ns": 0.0,
+          "minimum_ns": 0,
+          "p95_ns": 0,
+          "p99_ns": 0,
+          "packet_bytes": 4707126,
+          "packet_count": 87169
+        }
+      ],
+      "start_ns": 180000000000,
+      "start_s": 180.0,
+      "window": "late20"
+    },
+    {
+      "application_sum_bytes": 240585060,
+      "application_sum_goodput_mbps": 96.234024,
+      "drop_rows_by_layer": {},
+      "drop_rows_without_transmission_identity": 0,
+      "end_ns": 100000000000,
+      "end_s": 100.0,
+      "flows": {
+        "0": {
+          "LOSS_entries": 0,
+          "active_duration_ns": 20000000000,
+          "active_interval_application_goodput_mbps": 96.234024,
+          "application_bytes": 240585060,
+          "application_goodput_mbps": 96.234024,
+          "distinct_tagged_transmissions_dropped": 0,
+          "drop_trace_rows": 0,
+          "official_retransmission_bytes": 0,
+          "official_retransmission_rows": 0,
+          "recovery_entries": 0,
+          "sender_payload_tx_bytes": 240586440,
+          "sender_payload_tx_rows": 174338
+        }
+      },
+      "queue_occupancy": [
+        {
+          "device_id": "1",
+          "direction": "forward",
+          "maximum_packets_held_for_positive_time": 5,
+          "node_id": "0",
+          "time_weighted_mean_bytes": 5655.00205872,
+          "time_weighted_mean_packets": 3.94351608
+        },
+        {
+          "device_id": "1",
+          "direction": "reverse",
+          "maximum_packets_held_for_positive_time": 0,
+          "node_id": "1",
+          "time_weighted_mean_bytes": 0.0,
+          "time_weighted_mean_packets": 0.0
+        }
+      ],
+      "queue_removed_after_dequeue_excluded": 0,
+      "queue_sojourn": [
+        {
+          "direction": "forward",
+          "group": "all",
+          "max_ns": 509760,
+          "mean_ns": 452400.32901793654,
+          "minimum_ns": 395040,
+          "p95_ns": 509760,
+          "p99_ns": 509760,
+          "packet_bytes": 249999258,
+          "packet_count": 174337
+        },
+        {
+          "direction": "forward",
+          "group": "flow0",
+          "max_ns": 509760,
+          "mean_ns": 452400.32901793654,
+          "minimum_ns": 395040,
+          "p95_ns": 509760,
+          "p99_ns": 509760,
+          "packet_bytes": 249999258,
+          "packet_count": 174337
+        },
+        {
+          "direction": "reverse",
+          "group": "all",
+          "max_ns": 0,
+          "mean_ns": 0.0,
+          "minimum_ns": 0,
+          "p95_ns": 0,
+          "p99_ns": 0,
+          "packet_bytes": 4707072,
+          "packet_count": 87168
+        },
+        {
+          "direction": "reverse",
+          "group": "untagged_or_control",
+          "max_ns": 0,
+          "mean_ns": 0.0,
+          "minimum_ns": 0,
+          "p95_ns": 0,
+          "p99_ns": 0,
+          "packet_bytes": 4707072,
+          "packet_count": 87168
+        }
+      ],
+      "start_ns": 80000000000,
+      "start_s": 80.0,
+      "window": "prestep_100"
+    },
+    {
+      "application_sum_bytes": 240585060,
+      "application_sum_goodput_mbps": 96.234024,
+      "drop_rows_by_layer": {},
+      "drop_rows_without_transmission_identity": 0,
+      "end_ns": 130000000000,
+      "end_s": 130.0,
+      "flows": {
+        "0": {
+          "LOSS_entries": 0,
+          "active_duration_ns": 20000000000,
+          "active_interval_application_goodput_mbps": 96.234024,
+          "application_bytes": 240585060,
+          "application_goodput_mbps": 96.234024,
+          "distinct_tagged_transmissions_dropped": 0,
+          "drop_trace_rows": 0,
+          "official_retransmission_bytes": 0,
+          "official_retransmission_rows": 0,
+          "recovery_entries": 0,
+          "sender_payload_tx_bytes": 240586440,
+          "sender_payload_tx_rows": 174338
+        }
+      },
+      "queue_occupancy": [
+        {
+          "device_id": "1",
+          "direction": "forward",
+          "maximum_packets_held_for_positive_time": 5,
+          "node_id": "0",
+          "time_weighted_mean_bytes": 5655.003745104,
+          "time_weighted_mean_packets": 3.943517256
+        },
+        {
+          "device_id": "1",
+          "direction": "reverse",
+          "maximum_packets_held_for_positive_time": 0,
+          "node_id": "1",
+          "time_weighted_mean_bytes": 0.0,
+          "time_weighted_mean_packets": 0.0
+        }
+      ],
+      "queue_removed_after_dequeue_excluded": 0,
+      "queue_sojourn": [
+        {
+          "direction": "forward",
+          "group": "all",
+          "max_ns": 509760,
+          "mean_ns": 452400.0,
+          "minimum_ns": 395040,
+          "p95_ns": 509760,
+          "p99_ns": 509760,
+          "packet_bytes": 250000692,
+          "packet_count": 174338
+        },
+        {
+          "direction": "forward",
+          "group": "flow0",
+          "max_ns": 509760,
+          "mean_ns": 452400.0,
+          "minimum_ns": 395040,
+          "p95_ns": 509760,
+          "p99_ns": 509760,
+          "packet_bytes": 250000692,
+          "packet_count": 174338
+        },
+        {
+          "direction": "reverse",
+          "group": "all",
+          "max_ns": 0,
+          "mean_ns": 0.0,
+          "minimum_ns": 0,
+          "p95_ns": 0,
+          "p99_ns": 0,
+          "packet_bytes": 4707072,
+          "packet_count": 87168
+        },
+        {
+          "direction": "reverse",
+          "group": "untagged_or_control",
+          "max_ns": 0,
+          "mean_ns": 0.0,
+          "minimum_ns": 0,
+          "p95_ns": 0,
+          "p99_ns": 0,
+          "packet_bytes": 4707072,
+          "packet_count": 87168
+        }
+      ],
+      "start_ns": 110000000000,
+      "start_s": 110.0,
+      "window": "poststep_100"
+    }
+  ]
+}
