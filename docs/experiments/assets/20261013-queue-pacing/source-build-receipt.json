@@ -1,0 +1,79 @@
+{
+  "simulations_launched": 0,
+  "container": "lab1-queue-pacing-20261013",
+  "volume": "cs30401-queue-pacing-ns3-20261013",
+  "cpu_cap": 2,
+  "memory_cap_bytes": 4294967296,
+  "patch_sha256": "ace08b170b04774c2eac849c1875e647a97e786611616cbb32867496cb2cb808",
+  "readiness_sha256": "fcd8188369a389d119c752216ff928dc75462bf6ff3b38369bc8bd4430c949aa",
+  "queue_area_dependency_sha256": "048f884e11e1c7ed1bfa17f3f4643c01f071d4ab3b166a3d959e371b249fabb1",
+  "files": {
+    "code/queue-pacing/.gitattributes": {
+      "bytes": 65,
+      "sha256": "d3c921ebc6cce594ae072aef627ea9a8d82140f9eb3f5f1f252e8937130e8e64"
+    },
+    "code/queue-pacing/README.md": {
+      "bytes": 767,
+      "sha256": "18525af87d41ada0b34a50561dbfefb53179a93963b86649633fcbfa99e9be9e"
+    },
+    "code/queue-pacing/analyze.py": {
+      "bytes": 11169,
+      "sha256": "5dc28fb0fad89c82ea6435e4c4a0202f3ceff16fe416b692d328312dfff4bb9e"
+    },
+    "code/queue-pacing/archive.py": {
+      "bytes": 4092,
+      "sha256": "4efc72627bc159bffd6b2076b6ca1e5c2c418216105136701ef08949ffb9a077"
+    },
+    "code/queue-pacing/build-ready.json": {
+      "bytes": 2364,
+      "sha256": "fcd8188369a389d119c752216ff928dc75462bf6ff3b38369bc8bd4430c949aa"
+    },
+    "code/queue-pacing/build.py": {
+      "bytes": 1576,
+      "sha256": "40c7d39d540d768d1c6753ff78a5cfb2ca8201700a2a650e22805c513adc29d1"
+    },
+    "code/queue-pacing/compare.py": {
+      "bytes": 10673,
+      "sha256": "1cf4939d128d159d8290f9faa079626aa64fe96a208e83199f0e7545a94adca3"
+    },
+    "code/queue-pacing/copied-sources.json": {
+      "bytes": 524,
+      "sha256": "6d3564664fda9d65e8a0569869b84fd6f87f5e6ed3f5f152c166bbc4f507a07c"
+    },
+    "code/queue-pacing/first_sequence_drop.h": {
+      "bytes": 3525,
+      "sha256": "d32ec86ad979c6b7f9b2d800202f0d9da5bbed6b2d7291ab4b0678d6fc3b754e"
+    },
+    "code/queue-pacing/flow_observer.h": {
+      "bytes": 5895,
+      "sha256": "818140e975d3332133cfa49a6f893811f1662176e3ceb4f0751878accbff774f"
+    },
+    "code/queue-pacing/install.py": {
+      "bytes": 8313,
+      "sha256": "1b65887f298b31bcef3570f66ff0ffbcd79351ffd02afc5a2e2134857702c6ac"
+    },
+    "code/queue-pacing/ns3.patch": {
+      "bytes": 116964,
+      "sha256": "ace08b170b04774c2eac849c1875e647a97e786611616cbb32867496cb2cb808"
+    },
+    "code/queue-pacing/queue_area.h": {
+      "bytes": 2891,
+      "sha256": "048f884e11e1c7ed1bfa17f3f4643c01f071d4ab3b166a3d959e371b249fabb1"
+    },
+    "code/queue-pacing/queue_observer.h": {
+      "bytes": 15397,
+      "sha256": "8d69a24bdbd33176d4f9531219d72e543c2fc19397af539346cb67c3a25cf04b"
+    },
+    "code/queue-pacing/run.py": {
+      "bytes": 10724,
+      "sha256": "50a9d84257863fa606b1e93f39c94f7340311375ba83feefe33862c7d1e25dbe"
+    },
+    "code/queue-pacing/service_observer.h": {
+      "bytes": 3937,
+      "sha256": "f9885311b606d3c44e894c356f3936bff4e33dd5d952e6f89676b21ce889fd29"
+    }
+  },
+  "declaration": "Three fixed natural 200s cases; conditional five safety cases only after prospective winner and parent authorization.",
+  "actual_image_id": "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+  "preserved_development": "One simulation-free initial build, followed by optional evaluation error-model overwrite guard and final rebuild; no TCP policy change."
+}
