@@ -197,7 +197,7 @@ NETWORK_HEADER = r'''#ifndef CS30401_BBR_ROUTE_OBSERVER_H
 #include <cstdint>
 
 namespace ns3 { namespace bbrroute {
-static std::unique_ptr<std::ofstream> drops, coverage, queues;
+static std::unique_ptr<std::ofstream> drops, coverage, queues, pendingCsv;
 struct Counters { uint64_t enq{0}, deq{0}, before{0}, after{0}, samples{0}, sum{0}, max{0}; };
 struct Pending { int64_t time; uint64_t flow; };
 struct QueueRecord {
@@ -205,7 +205,9 @@ struct QueueRecord {
     Ptr<Queue<Packet>> queue;
     int64_t bucket{-1};
     std::map<uint64_t, Counters> counters;
-    std::map<uint64_t, Pending> pending;
+    // Queue::DoEnqueue stores this same Ptr; DoDequeue traces the stored Ptr.
+    // Fragments can share a UID, so UID is not a unique queue-entry identity.
+    std::map<const Packet*, Pending> pending;
 };
 static std::vector<std::unique_ptr<QueueRecord>> records;
 static uint64_t Flow(Ptr<const Packet> p) {
@@ -221,6 +223,7 @@ static void FlushQueue(QueueRecord& r) {
         if (entry.first != UINT64_MAX) *queues << entry.first;
         *queues << ',' << c.enq << ',' << c.deq << ',' << c.before << ',' << c.after
                 << ',' << c.samples << ',' << c.sum << ',' << c.max
+                << ',' << Simulator::Now().GetNanoSeconds()
                 << ',' << r.queue->GetNPackets() << ',' << r.queue->GetNBytes() << '\n';
     }
     r.counters.clear();
@@ -232,13 +235,15 @@ static Counters& At(QueueRecord* r, Ptr<const Packet> p) {
 }
 static void Enqueue(QueueRecord* r, Ptr<const Packet> p) {
     ++At(r,p).enq;
-    NS_ABORT_MSG_IF(r->pending.count(p->GetUid()), "Duplicate pending queue UID");
-    r->pending[p->GetUid()] = {Simulator::Now().GetNanoSeconds(), Flow(p)};
+    const Packet* key = PeekPointer(p);
+    NS_ABORT_MSG_IF(r->pending.count(key), "Same Packet object queued twice in one device queue");
+    r->pending[key] = {Simulator::Now().GetNanoSeconds(), Flow(p)};
 }
 static void Dequeue(QueueRecord* r, Ptr<const Packet> p) {
     auto& c = At(r,p); ++c.deq;
-    auto it = r->pending.find(p->GetUid());
+    auto it = r->pending.find(PeekPointer(p));
     NS_ABORT_MSG_IF(it == r->pending.end(), "Dequeue without observed enqueue");
+    NS_ABORT_MSG_IF(Flow(p) != it->second.flow, "Flow metadata changed inside device queue");
     const uint64_t wait = Simulator::Now().GetNanoSeconds() - it->second.time;
     ++c.samples; c.sum += wait; c.max = std::max(c.max, wait);
     r->pending.erase(it);
@@ -285,8 +290,25 @@ static void IpDrop(uint32_t node,const Ipv4Header& ip,Ptr<const Packet> p,
     Drop(node,interface,"ipv4",p,&ip,static_cast<int>(reason));
 }
 static void Finish() {
-    for (auto& r : records) FlushQueue(*r);
-    queues->flush(); drops->flush(); coverage->flush();
+    const int64_t cutoff = Simulator::Now().GetNanoSeconds();
+    for (auto& r : records) {
+        FlushQueue(*r);
+        NS_ABORT_MSG_IF(r->pending.size() != r->queue->GetNPackets(),
+                        "Observed pending count differs from actual device queue");
+        std::map<uint64_t, Counters> byFlow;
+        for (const auto& item : r->pending) {
+            auto& row = byFlow[item.second.flow];
+            const uint64_t age = cutoff - item.second.time;
+            ++row.samples; row.sum += age; row.max = std::max(row.max,age);
+        }
+        for (const auto& item : byFlow) {
+            *pendingCsv << cutoff << ',' << r->node << ',' << r->device << ',';
+            if (item.first != UINT64_MAX) *pendingCsv << item.first;
+            *pendingCsv << ',' << item.second.samples << ',' << item.second.sum
+                        << ',' << item.second.max << '\n';
+        }
+    }
+    queues->flush(); drops->flush(); coverage->flush(); pendingCsv->flush();
 }
 static void Install(NodeContainer nodes) {
     const char* enabled = std::getenv("CS30401_BBR_OBSERVE");
@@ -296,10 +318,12 @@ static void Install(NodeContainer nodes) {
     drops = std::make_unique<std::ofstream>(std::string(directory)+"/bbr_drops.csv");
     coverage = std::make_unique<std::ofstream>(std::string(directory)+"/bbr_coverage.csv");
     queues = std::make_unique<std::ofstream>(std::string(directory)+"/bbr_queue_bins.csv");
-    NS_ABORT_MSG_IF(!drops->good() || !coverage->good() || !queues->good(), "Cannot open network observers");
+    pendingCsv = std::make_unique<std::ofstream>(std::string(directory)+"/bbr_queue_pending.csv");
+    NS_ABORT_MSG_IF(!drops->good() || !coverage->good() || !queues->good() || !pendingCsv->good(), "Cannot open network observers");
     *drops << "time_ns,node_id,device_id,layer,reason,packet_uid,flow_id,src,dst,src_port,dst_port,seq,payload_bytes\n";
     *coverage << "node_id,device_id,layer,connected\n";
-    *queues << "bin_start_ns,bin_end_ns,node_id,device_id,flow_id,enqueued,dequeued,drop_before,drop_after,sojourn_samples,sojourn_sum_ns,sojourn_max_ns,queue_packets_at_flush,queue_bytes_at_flush\n";
+    *queues << "bin_start_ns,bin_end_ns,node_id,device_id,flow_id,enqueued,dequeued,drop_before,drop_after,sojourn_samples,sojourn_sum_ns,sojourn_max_ns,flush_time_ns,queue_packets_at_flush,queue_bytes_at_flush\n";
+    *pendingCsv << "cutoff_ns,node_id,device_id,flow_id,pending_packets,pending_age_sum_ns,max_pending_age_ns\n";
     for (auto it=nodes.Begin();it!=nodes.End();++it) {
         auto node=*it;
         auto ip=node->GetObject<Ipv4L3Protocol>();
@@ -447,27 +471,102 @@ def install(args):
                       'after_sources': {rel: sha(root / rel) for rel in outputs}}, indent=2))
 
 
+def checked_manifest(run, state_root):
+    """Validate completion and all preserved outputs before comparing measurements."""
+    record = json.loads((run / 'manifest.json').read_text())
+    if record.get('status') != 'success' or type(record.get('returncode')) is not int or record['returncode'] != 0:
+        raise ValueError(f'Run did not complete successfully: {run}')
+    definition, environment = record.get('definition'), record.get('environment')
+    if not isinstance(definition, dict) or not isinstance(environment, dict):
+        raise ValueError(f'Missing definition/environment: {run}')
+    observe = environment.get('CS30401_BBR_OBSERVE')
+    if observe not in ('0', '1') or type(definition.get('observe')) is not bool or definition['observe'] != (observe == '1'):
+        raise ValueError(f'Observation flag disagrees with definition: {run}')
+    for name, key in [('config_ns3.properties', 'config_sha256'), ('schedule.csv', 'schedule_sha256')]:
+        if sha(run / name) != record.get(key):
+            raise ValueError(f'Actual input differs from launch receipt: {run / name}')
+    state = record.get('state_static_sha256')
+    if not isinstance(state, dict) or not state:
+        raise ValueError(f'Missing static-state receipt: {run}')
+    for name, digest in state.items():
+        if not isinstance(name, str) or Path(name).name != name:
+            raise ValueError(f'Invalid static-state member: {name!r}')
+        if sha(state_root / name) != digest:
+            raise ValueError(f'Actual static state differs from receipt: {name}')
+    outputs = record.get('outputs')
+    if not isinstance(outputs, dict) or not outputs:
+        raise ValueError(f'Missing output receipt: {run}')
+    actual_set = {p.relative_to(run).as_posix() for p in (run / 'logs_ns3').iterdir() if p.is_file()}
+    if set(outputs) != actual_set:
+        raise ValueError(f'Output file set differs from manifest: {run}')
+    for relative, item in outputs.items():
+        path = run / relative
+        if path.is_symlink() or not path.resolve().is_relative_to(run):
+            raise ValueError(f'Output escapes run or uses symlink: {relative}')
+        if not isinstance(item, dict) or type(item.get('bytes')) is not int or path.stat().st_size != item['bytes'] or sha(path) != item.get('sha256'):
+            raise ValueError(f'Actual output differs from manifest: {path}')
+    return record
+
+
 def compare(args):
     if args.out.exists():
         raise ValueError('Refusing to overwrite an equivalence result')
-    original = args.reference / 'logs_ns3'
-    observed = args.observed / 'logs_ns3'
-    paths = sorted(p.name for p in original.glob('*.csv') if p.name != 'timing_results.csv'
-                   and not p.name.startswith('bbr_'))
-    if not paths:
-        raise ValueError('No original measurement CSVs')
+    reference, observed = args.reference.resolve(), args.observed.resolve()
+    if reference == observed:
+        raise ValueError('Reference and observed directories must be distinct')
+    state_root = args.state_root.resolve()
+    left_record = checked_manifest(reference, state_root)
+    right_record = checked_manifest(observed, state_root)
+    expected_fields = ['config_sha256', 'schedule_sha256', 'state_static_sha256',
+                       'sim_seconds', 'rate_mbps', 'queue_packets', 'seed']
+    for key in expected_fields:
+        if key not in left_record or key not in right_record or left_record[key] != right_record[key]:
+            raise ValueError(f'Matched-condition input differs: {key}')
+    left_definition = {k: v for k, v in left_record['definition'].items() if k not in ('reference', 'observe')}
+    right_definition = {k: v for k, v in right_record['definition'].items() if k not in ('reference', 'observe')}
+    if left_definition != right_definition:
+        raise ValueError('Flow/traffic definitions differ')
+    for record, expected, label in [(left_record, args.reference_observe, 'reference'),
+                                    (right_record, args.observed_observe, 'observed')]:
+        if expected is not None and record['environment']['CS30401_BBR_OBSERVE'] != expected:
+            raise ValueError(f'{label} observation flag differs from requested flag')
+    if left_record.get('image_digest') and right_record.get('image_digest') and left_record['image_digest'] != right_record['image_digest']:
+        raise ValueError('Declared image digests differ')
+    def measurement_names(run):
+        return {p.name for p in (run / 'logs_ns3').glob('*.csv')
+                if p.name != 'timing_results.csv' and not p.name.startswith('bbr_')}
+    paths = measurement_names(reference)
+    if not paths or paths != measurement_names(observed):
+        raise ValueError('Existing measurement CSV sets are empty or differ')
     checks = []
-    for name in paths:
-        left, right = original / name, observed / name
+    for name in sorted(paths):
+        left, right = reference / 'logs_ns3' / name, observed / 'logs_ns3' / name
         checks.append({'file': name, 'reference_sha256': sha(left),
                        'observed_sha256': sha(right), 'equal': left.stat().st_size == right.stat().st_size
                        and sha(left) == sha(right)})
+    supplemental = None
+    if args.state_receipt is not None:
+        receipt = args.state_receipt.resolve()
+        if not isinstance(json.loads(receipt.read_text()), dict):
+            raise ValueError('Supplemental state receipt must contain a JSON object')
+        supplemental = {'path': str(receipt), 'bytes': receipt.stat().st_size, 'sha256': sha(receipt)}
     record = {'status': 'PASS' if all(c['equal'] for c in checks) else 'FAIL',
-              'reference': str(args.reference), 'observed': str(args.observed), 'checks': checks,
+              'reference': str(reference), 'observed': str(observed), 'checks': checks,
+              'matched_fields': expected_fields, 'flow_definitions_equal': True,
+              'all_manifest_output_hashes_match_actual': True,
+              'reference_observe': left_record['environment']['CS30401_BBR_OBSERVE'],
+              'observed_observe': right_record['environment']['CS30401_BBR_OBSERVE'],
+              'manifest_sha256': {'reference': sha(reference / 'manifest.json'), 'observed': sha(observed / 'manifest.json')},
+              'provenance': {label: {key: source.get(key) for key in ['repo_commit', 'runner_sha256',
+                    'effective_build_diff_sha256', 'observer_patch_sha256', 'image_digest', 'runtime_files']}
+                    for label, source in [('reference', left_record), ('observed', right_record)]},
+              'state_static_verified_against_actual': True, 'state_root': str(state_root),
+              'supplemental_state_receipt': supplemental,
               'measurement_csv_count': len(checks), 'helper_sha256': sha(Path(__file__)),
               'limits': ['One matched condition only; not proof of global behavior equivalence.',
-                         'Timing CSV, console output and new observer files are excluded.',
-                         'Use identical config/schedule, seed and TCP settings; binary hashes differ.']}
+                         'Timing CSV, console output and new observer files are excluded from equality; manifest output hashes are checked for every output.',
+                         'Static state receipt does not by itself validate every dynamic forwarding file; supplemental receipt identity is linked, not re-audited.',
+                         'Source/binary/library provenance can differ after instrumentation; each launch identity is retained.']}
     args.out.parent.mkdir(parents=True, exist_ok=True)
     args.out.write_text(json.dumps(record, indent=2) + '\n', newline='\n')
     print(json.dumps(record, indent=2))
@@ -485,6 +584,10 @@ def main():
     diff.add_argument('--reference', type=Path, required=True)
     diff.add_argument('--observed', type=Path, required=True)
     diff.add_argument('--out', type=Path, required=True)
+    diff.add_argument('--state-root', type=Path, default=Path('/home/ubuntu/lab/data/seoul_london/state'))
+    diff.add_argument('--state-receipt', type=Path, help='Link an independently verified full-state JSON receipt by SHA; does not re-audit it')
+    diff.add_argument('--reference-observe', choices=['0', '1'], help='Require the recorded reference observer flag')
+    diff.add_argument('--observed-observe', choices=['0', '1'], help='Require the recorded observed observer flag')
     args = parser.parse_args()
     (install if args.command == 'install' else compare)(args)
 
