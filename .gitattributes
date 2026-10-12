@@ -36,6 +36,7 @@ code/orbit-loss/*.patch whitespace=-blank-at-eol,cr-at-eol
 docs/experiments/assets/20261013-orbit-tail/**/*.txt -whitespace
 docs/experiments/assets/20261013-orbit-queue/**/*.txt -whitespace
 code/queue-pacing/** -text whitespace=cr-at-eol
+code/queue-metrics/** -text whitespace=cr-at-eol
 code/queue-backpressure/** -text whitespace=cr-at-eol
 docs/experiments/assets/20261013-queue-pacing/** -text whitespace=cr-at-eol
 docs/experiments/assets/20261013-queue-backpressure/** -text whitespace=cr-at-eol
