@@ -1,0 +1,18 @@
+{
+  "construction_receipt_sha256": "a9186766b2b4022e9256c91f4b854c89f8da709b1cef71914ca89b0f5ebf8eaf",
+  "files": {
+    "fstate_75000000000.txt": {
+      "source_path": "/tmp/orbit-queue-inputs/delay75-to78/state/dynamic_state_100ms_for_200s/fstate_75000000000.txt",
+      "asset": "docs/experiments/assets/20261013-orbit-queue/routing-delta/fstate_75000000000.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "fstate_78000000000.txt": {
+      "source_path": "/tmp/orbit-queue-inputs/delay75-to78/state/dynamic_state_100ms_for_200s/fstate_78000000000.txt",
+      "asset": "docs/experiments/assets/20261013-orbit-queue/routing-delta/fstate_78000000000.txt",
+      "bytes": 514,
+      "sha256": "8e8011ee73e5e0711d55e614d96c086a9cc6a52e10fb8fb7b461f11524dd3c41"
+    }
+  },
+  "scope": "Only actual two sparse-file replacements; reconstruct full input from pinned supplied state, no topology generation"
+}

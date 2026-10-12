@@ -84,6 +84,7 @@ def occupancy_stats(trace, start, end):
     assert all(a[0] <= b[0] for a, b in zip(trace, trace[1:])), 'Occupancy order'
     area_packets = area_bytes = full_ns = 0
     peak_packets = peak_bytes = 0
+    full_intervals = []
     for left, right in zip(trace, trace[1:]):
         t, n, by, maximum = left
         a, b = max(t, start), min(right[0], end)
@@ -93,14 +94,18 @@ def occupancy_stats(trace, start, end):
         area_bytes += by * (b-a)
         peak_packets = max(peak_packets, n)
         peak_bytes = max(peak_bytes, by)
-        if maximum.endswith('p') and n == int(maximum[:-1]):
+        is_full = ((maximum.endswith('p') and n == int(maximum[:-1])) or
+                   (maximum.endswith('B') and by == int(maximum[:-1])))
+        if is_full:
             full_ns += b-a
-        elif maximum.endswith('B') and by == int(maximum[:-1]):
-            full_ns += b-a
+            if full_intervals and full_intervals[-1][1] == a:
+                full_intervals[-1][1] = b
+            else:
+                full_intervals.append([a, b])
     return dict(time_weighted_packets=area_packets/(end-start),
                 time_weighted_bytes=area_bytes/(end-start), peak_packets=peak_packets,
                 peak_bytes=peak_bytes, literally_full_ns=full_ns,
-                start_ns=start, end_ns=end)
+                full_intervals_ns=full_intervals, start_ns=start, end_ns=end)
 
 
 def analyze(run, reference):
@@ -164,7 +169,7 @@ def analyze(run, reference):
         assert int(r['device_stop']) | int(r['bql_stop']) == 1
         attributed[key(r)].append(r)
     tagged_drops = list(rows(logs / 'study_drops.csv'))
-    old_tc = Counter((r['time_ns'], r['node_id'], r['packet_uid'], r['flow_id'])
+    old_tc = Counter((r['time_ns'], r['node'], r['uid'], r['flow_id'])
                      for r in tagged_drops if r['layer'] == 'TcDrop')
     new_tc = Counter((r['time_ns'], r['node_id'], r['packet_uid'], r['flow_id']) for r in tc_drops)
     assert old_tc == new_tc, 'Exact stopped-device hook does not match original TcDrop'
@@ -189,7 +194,8 @@ def analyze(run, reference):
                 wake_count=sum(r['reason'] == 'DEVICE_WAKE' for r in states),
                 bql_stop_count=sum(r['reason'] == 'BQL_STOP' for r in states),
                 bql_wake_count=sum(r['reason'] == 'BQL_WAKE' for r in states),
-                flow_state_rows=states)
+                state_event_count=len(states), first_flow_state=states[0] if states else None,
+                last_flow_state=states[-1] if states else None)
         devices.append(d)
     metrics = {n: Counter() for n in ['whole', *WINDOWS]}
     for r in rows(logs / 'study_app_rx_node_1585_port_1024.csv'):
@@ -242,6 +248,7 @@ def analyze(run, reference):
                 source=dict(manifest_sha256=sha(run/'manifest.json'),
                             patch_sha256=manifest['patch_sha256'],
                             launch_commit=manifest['launch_commit'],
+                            launch_analyzer_sha256=manifest['source_files']['code/orbit-queue/analyze.py'],
                             source_checkpoint=manifest['declared_source_checkpoint'],
                             input_files=manifest['input_files'],
                             runtime_mapping_sha256=mapping_sha(manifest['runtime_files'])),

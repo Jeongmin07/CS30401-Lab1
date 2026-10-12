@@ -1,6 +1,6 @@
 # Paired device-queue audit around the 75-second route transition
 
-Status: declared before simulation, 13 October 2026. This is an independent diagnostic; it does not select the team's final topic. Existing study directories, source volumes and policies remain frozen.
+Status: natural pair completed and verified; conditional routing input prepared for independent review, 13 October 2026. This is an independent diagnostic; it does not select the team's final topic. Existing study directories, source volumes and policies remain frozen.
 
 ## Question and fixed scope
 
@@ -34,4 +34,29 @@ The initial maximum is three successful simulations: the two natural observers p
 
 ## Results and preservation
 
-Pending. Commands, source/build/input/output SHA256, status/runtime, old-measurement equivalence, raw inventories and limitations will be added after execution. Publication and common PR/Release records belong to the parent chat.
+The initial pair ran from shared checkpoint `66b2409f722bc68e3a4973254ceb599c3d6b5892`, using the same immutable combined patch `f0e85cab5a351e67d95a80d098cf65cf509300f73077e27b2d35dd6cbaf3e301` and executable `647a0359399d97cec58447afab03ca11b50290904275723fe323520c59b026ba`. The single-job build took 438.974510 seconds. Both simulations completed with exit 0: baseline 64.071784 seconds, selective 69.966455 seconds. The baseline's 10 and selective's 11 original measurement CSVs match the final V2 originals byte for byte; timing and newly added observer CSVs are excluded. Config, schedule and accumulated input-state identities also match. Every observed per-device/per-flow enqueue/dequeue/pending conservation check passed, and exact stopped-device drop records match the original TcDrop multiset.
+
+[Natural-pair evidence](assets/20261013-orbit-queue/natural-pair.json) identifies the source queue as node 1584, device/interface 1, transmit queue 0, `GSLNetDevice`, `DropTailQueue<Packet>`, maximum `100p`, no root queue discipline and no QueueLimits/BQL object. Both source serializations remain 100% busy in all declared focus subwindows.
+
+| Source-device measure | Baseline | Selective |
+|---|---:|---:|
+| Mean queued packets, `[74.5,75)` | 43.350086 | 71.178560 |
+| Peak queued packets, `[74.5,75)` | 48 | 79 |
+| Mean queued packets, `[75,75.5)` | 53.270929 | 87.232381 |
+| Peak queued packets, `[75,75.5)` | 59 | 97 |
+| Mean served visit wait, `[75,75.5)` | 59.623105 ms | 96.199543 ms |
+| First literal-full/DEVICE_STOP in focus | 77.040772827 s | 75.564051455 s |
+| First exact source-device TcDrop in focus | 77.066011375 s | 75.591584423 s |
+| TcDrop, `[74.5,77)` | 0 | 11 |
+| TcDrop, `[74.5,77.5)` | 12 | 11 |
+| Literal-full time, `[74.5,77.5)` | 55.590982 ms | 22.661582 ms |
+
+There are no literal-full intervals or drops before T75 in the prewindow. Every focus rejection is attributable to the same source-device queue, with exactly 100 queued packets/143,400 bytes, device-stop true, BQL-stop false and the one-MTU overflow test true. These are TrafficControl rejections before device enqueue; zero Queue::DropBeforeEnqueue callbacks do not imply no network loss.
+
+The larger selective queue is already present before the route switch. After selective recovery, the complete `[74.5,77.5)` mean occupancy is **lower** (48.717926 versus 67.179912 packets). This establishes a different congestion phase and a local full-device-stop discard mechanism; it does not establish a continuously higher queue or route shortening as the sole cause. Whole-run app goodput remains 9.544356 versus 9.5465088 Mbit/s.
+
+The posthoc analyzer initially used the new observer's `node_id/packet_uid` names for the unchanged legacy `study_drops.csv`, whose fields are `node/uid`. Only this analysis alias was corrected after both simulations; no source/runtime or simulation was rerun. The evidence preserves the launch analyzer hash separately from the final helper hash.
+
+The paired result warrants the single predeclared routing counterfactual. `delay_route.py` copied the supplied state and changed exactly two files: empty the original T75 delta and place its unchanged 30 rows at T78. Construction/validation took 13.103793 seconds. The [actual replacement files](assets/20261013-orbit-queue/routing-replacements.json) total 514 bytes. All 75.1–78.0 frames are empty in the original input, all earlier/static/capacity/other dynamic bytes are unchanged, and original future overrides remain intact. [Construction receipt](assets/20261013-orbit-queue/route-delay-input.json) validates the accumulated state, actual interface types and ISL counterpart identities, and all source-to-endpoint routes in both states at each of 32 affected frames. Both forward and reverse routes/link choices remain old until T78. The original T75 forecast/policy schedule stays unchanged; this is a fixed-policy routing intervention, not a deployed controller reforecast for T78. Native ideal shared-channel GSL validity does not prove physical visibility. Independent review and the parent chat's checkpoint are required before this third simulation; its execution is still pending.
+
+Raw inventories, final conditional results and publication links will be added after execution. Publication and common PR/Release records belong to the parent chat.

@@ -37,7 +37,7 @@ def runtime():
              NS3/'build/scratch/study_micro/ns3.48-study_micro',*sorted((NS3/'build/lib').glob('*.so'))]}
 
 
-def execute(name,root,timeout,readiness,checkpoint):
+def execute(name,root,timeout,readiness,checkpoint,input_state=None,routing_counterfactual=None):
     for process in ['cc1plus','ninja','cmake','make']:
         if subprocess.run(['pgrep','-x',process],stdout=subprocess.DEVNULL).returncode==0:
             raise ValueError('Build still active: '+process)
@@ -46,11 +46,20 @@ def execute(name,root,timeout,readiness,checkpoint):
     before=runtime()
     if before!=ready['runtime_files']:raise ValueError('Runtime differs from completed build')
     case=CASES[name];run=root/name;run.mkdir(parents=True,exist_ok=False)
+    state=STATE if input_state is None else input_state
     additional,hints=v2.parameters(case)
-    subprocess.run(['bash','/home/ubuntu/lab/scripts/make_run.sh',str(run),str(STATE),'TcpCubic','10','100','200','1584','1585'],check=True,capture_output=True)
+    subprocess.run(['bash','/home/ubuntu/lab/scripts/make_run.sh',str(run),str(state),'TcpCubic','10','100','200','1584','1585'],check=True,capture_output=True)
     (run/'schedule.csv').write_text(f'0,1584,1585,100000000000,0,{additional},\n',newline='\n')
     config=dict(line.split('=',1) for line in (run/'config_ns3.properties').read_text().splitlines() if '=' in line)
     if config['tcp_socket_type']!='TcpCubic' or config['tcp_enable_pacing']!='false':raise ValueError('Wrong original TCP settings')
+    if routing_counterfactual:
+        original_run=Path(routing_counterfactual['original_selective_run'])
+        if sha(run/'schedule.csv')!=sha(original_run/'schedule.csv'):raise ValueError('Policy/hint schedule changed')
+        original_config=dict(line.split('=',1) for line in (original_run/'config_ns3.properties').read_text().splitlines() if '=' in line)
+        config_changes=[k for k in set(config)|set(original_config) if config.get(k)!=original_config.get(k)]
+        if set(config_changes)!={'satellite_network_dir','satellite_network_routes_dir'}:raise ValueError('Non-locator configuration changed')
+        routing_counterfactual['exact_config_changes']=config_changes
+        routing_counterfactual['schedule_byte_exact']=True
     argv=[str(NS3/'build/scratch/main_satnet/ns3.48-main_satnet'),f'--run_dir={run}']
     env=dict(os.environ,LD_LIBRARY_PATH=str(NS3/'build/lib'),CS30401_STUDY_TRACE='1',
              CS30401_STUDY_TRACE_DIR=str(run/'logs_ns3'),CS30401_ORBIT_ACTUAL_DROP='0',
@@ -65,11 +74,12 @@ def execute(name,root,timeout,readiness,checkpoint):
         runtime_files=before,build_ready_sha256=sha(readiness),image_ref=IMAGE,timeout_s=timeout,
         hints=hints,additional_parameters=additional,environment={k:env[k] for k in ['LD_LIBRARY_PATH','CS30401_STUDY_TRACE','CS30401_STUDY_TRACE_DIR','CS30401_ORBIT_ACTUAL_DROP','CS30401_ORBIT_QUEUE_TRACE','CS30401_ORBIT_QUEUE_TRACE_DIR','CS30401_ORBIT_SERVICE_TRACE','CS30401_QUEUE_FLOW_TRACE']},
         input_files={p.name:dict(bytes=p.stat().st_size,sha256=sha(p)) for p in [run/'config_ns3.properties',run/'schedule.csv']},
-        state_static_sha256={p.name:sha(p) for p in sorted(STATE.iterdir()) if p.is_file()},
-        dynamic_input_sha256={p.name:sha(p) for p in sorted((STATE/'dynamic_state_100ms_for_200s').iterdir()) if p.is_file()},
+        state_static_sha256={p.name:sha(p) for p in sorted(state.iterdir()) if p.is_file()},
+        dynamic_input_sha256={p.name:sha(p) for p in sorted((state/'dynamic_state_100ms_for_200s').iterdir()) if p.is_file()},
         windows_ns={'pre':[74500000000,75000000000],'post':[75000000000,75500000000],
                     'legacy':[74500000000,77000000000],'focus':[74500000000,77500000000]},
-        policy_changed=False,observer_only=True)
+        policy_changed=False,observer_only=routing_counterfactual is None,
+        routing_input_changed=routing_counterfactual is not None,routing_counterfactual=routing_counterfactual)
     manifest=run/'manifest.json';manifest.write_text(json.dumps(record,indent=2)+'\n',newline='\n')
     start=time.monotonic()
     with (run/'console.txt').open('w') as log:
