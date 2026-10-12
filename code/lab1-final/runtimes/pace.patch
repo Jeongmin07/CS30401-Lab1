@@ -1,0 +1,2414 @@
+diff --git a/contrib/basic-sim/model/apps/tcp-flow-send-application.cc b/contrib/basic-sim/model/apps/tcp-flow-send-application.cc
+index bb9ab06..82b5d44 100644
+--- a/contrib/basic-sim/model/apps/tcp-flow-send-application.cc
++++ b/contrib/basic-sim/model/apps/tcp-flow-send-application.cc
+@@ -39,6 +39,10 @@
+ #include "ns3/exp-util.h"
+ #include "tcp-flow-send-application.h"
+ #include <fstream>
++#include <cstdlib>
++#include <limits>
++#include <sstream>
++#include "ns3/tcp-option-sack.h"
+ 
+ namespace ns3 {
+ // [ns-3.48 port] Keep per-flow log files open instead of re-opening them on every event
+@@ -56,6 +60,35 @@ static std::ofstream& CachedLogStream(const std::string& path) {
+ NS_LOG_COMPONENT_DEFINE ("TcpFlowSendApplication");
+ 
+ NS_OBJECT_ENSURE_REGISTERED (TcpFlowSendApplication);
++NS_OBJECT_ENSURE_REGISTERED (TcpStudyTxTag);
++
++TcpStudyTxTag::TcpStudyTxTag() : m_flowId(0), m_txId(0), m_txTimeNs(0) {}
++TcpStudyTxTag::TcpStudyTxTag(uint64_t flowId, uint64_t txId, int64_t txTimeNs)
++    : m_flowId(flowId), m_txId(txId), m_txTimeNs(txTimeNs) {}
++TypeId TcpStudyTxTag::GetTypeId() {
++    static TypeId tid = TypeId("ns3::TcpStudyTxTag")
++        .SetParent<Tag>().SetGroupName("Applications").AddConstructor<TcpStudyTxTag>();
++    return tid;
++}
++TypeId TcpStudyTxTag::GetInstanceTypeId() const { return GetTypeId(); }
++uint32_t TcpStudyTxTag::GetSerializedSize() const { return 24; }
++void TcpStudyTxTag::Serialize(TagBuffer buffer) const {
++    buffer.WriteU64(m_flowId);
++    buffer.WriteU64(m_txId);
++    buffer.WriteU64(static_cast<uint64_t>(m_txTimeNs));
++}
++void TcpStudyTxTag::Deserialize(TagBuffer buffer) {
++    m_flowId = buffer.ReadU64();
++    m_txId = buffer.ReadU64();
++    m_txTimeNs = static_cast<int64_t>(buffer.ReadU64());
++}
++void TcpStudyTxTag::Print(std::ostream& os) const {
++    os << m_flowId << ":" << m_txId << ":" << m_txTimeNs;
++}
++uint64_t TcpStudyTxTag::GetFlowId() const { return m_flowId; }
++uint64_t TcpStudyTxTag::GetTxId() const { return m_txId; }
++int64_t TcpStudyTxTag::GetTxTimeNs() const { return m_txTimeNs; }
++
+ 
+ TypeId
+ TcpFlowSendApplication::GetTypeId(void) {
+@@ -99,8 +132,8 @@ TcpFlowSendApplication::GetTypeId(void) {
+                            MakeStringAccessor (&TcpFlowSendApplication::m_baseLogsDir),
+                            MakeStringChecker ())
+             .AddAttribute ("AdditionalParameters",
+-                           "Additional parameter string; this might be parsed in another version of this application to "
+-                           "do slightly different behavior (e.g., set priority on TCP socket etc.)",
++                           "Optional controls: study_threshold=K;study_windows=start_ns:end_ns|...;"
++                           "study_restore_limit_ns=N;study_bounded_restore=0|1. Empty parameters retain baseline threshold 3.",
+                            StringValue (""),
+                            MakeStringAccessor (&TcpFlowSendApplication::m_additionalParameters),
+                            MakeStringChecker ())
+@@ -132,6 +165,7 @@ void
+ TcpFlowSendApplication::DoDispose(void) {
+     NS_LOG_FUNCTION(this);
+ 
++    CancelStudyEvents();
+     m_socket = 0;
+     // chain up
+     Application::DoDispose();
+@@ -163,10 +197,20 @@ void TcpFlowSendApplication::StartApplication(void) { // Called at time specifie
+             }
+         }
+ 
++        // Install control and trace hooks before the SYN and any incoming ACK.
++        InitializeStudy();
++
+         // Connect, no receiver
+         m_socket->Connect(m_peer);
+         m_socket->ShutdownRecv();
+ 
++        const char* pacingTrace=std::getenv("CS30401_QUEUE_PACING_RATE_TRACE");
++        if(pacingTrace && std::string(pacingTrace)=="1") {
++            std::ofstream out(m_baseLogsDir+"/tcp_flow_"+std::to_string(m_tcpFlowId)+"_pacing.csv");
++            out << "flow_id,time_ns,old_bps,new_bps\n";
++            NS_ABORT_MSG_IF(!m_socket->TraceConnectWithoutContext("PacingRate",
++                MakeCallback(&TcpFlowSendApplication::StudyPacingRate,this)),"Missing native pacing-rate trace");
++        }
+         // Callbacks
+         m_socket->SetConnectCallback(
+                 MakeCallback(&TcpFlowSendApplication::ConnectionSucceeded, this),
+@@ -205,6 +249,7 @@ void TcpFlowSendApplication::StartApplication(void) { // Called at time specifie
+ 
+ void TcpFlowSendApplication::StopApplication(void) { // Called at time specified by Stop
+     NS_LOG_FUNCTION(this);
++    CancelStudyEvents();
+     if (m_socket != nullptr) {
+         m_socket->Close();
+         m_connected = false;
+@@ -263,6 +308,7 @@ void TcpFlowSendApplication::ConnectionFailed(Ptr <Socket> socket) {
+     m_closedNormally = false;
+     m_ackedBytes = 0;
+     m_isCompleted = false;
++    CancelStudyEvents();
+     m_socket = 0;
+ }
+ 
+@@ -292,6 +338,7 @@ void TcpFlowSendApplication::SocketClosedNormal(Ptr <Socket> socket) {
+     }
+     m_ackedBytes = m_totBytes - m_socket->GetObject<TcpSocketBase>()->GetTxBuffer()->Size();
+     m_isCompleted = m_ackedBytes == m_maxBytes;
++    CancelStudyEvents();
+     m_socket = 0;
+ }
+ 
+@@ -302,6 +349,7 @@ void TcpFlowSendApplication::SocketClosedError(Ptr <Socket> socket) {
+     m_closedNormally = false;
+     m_ackedBytes = m_totBytes - m_socket->GetObject<TcpSocketBase>()->GetTxBuffer()->Size();
+     m_isCompleted = false;
++    CancelStudyEvents();
+     m_socket = 0;
+ }
+ 
+@@ -379,8 +427,382 @@ TcpFlowSendApplication::FinalizeDetailedLogs() {
+         InsertCwndLog(timestamp, m_current_cwnd_byte);
+         InsertRttLog(timestamp, m_current_rtt_ns);
+         InsertProgressLog(timestamp, GetAckedBytes());
++        if (m_studyLogging) {
++            CachedLogStream(m_baseLogsDir + "/" + format_string("tcp_flow_%" PRIu64 "_study_events.csv", m_tcpFlowId)).flush();
++            CachedLogStream(m_baseLogsDir + "/" + format_string("tcp_flow_%" PRIu64 "_study_packets.csv", m_tcpFlowId)).flush();
++        }
++    }
++}
++
++void TcpFlowSendApplication::InitializeStudy() {
++    // Semicolon-separated controls avoid commas in the scheduler CSV column.
++    if (!m_additionalParameters.empty()) {
++        for (const std::string& token : split_string(m_additionalParameters, ";")) {
++            if (token.empty()) {
++                continue;
++            }
++            auto eq = token.find('=');
++            std::string key = trim(token.substr(0, eq));
++            if (key != "study_threshold" && key != "study_windows" &&
++                key != "study_restore_limit_ns" && key != "study_short_flow_cutoff_pkts" &&
++                key != "study_bounded_restore" && key != "study_selective_epochs") {
++                NS_ABORT_MSG_IF(key.compare(0, 6, "study_") == 0,
++                                "Unknown study parameter: " << key);
++                continue; // Other metadata remains compatible with existing schedules.
++            }
++            NS_ABORT_MSG_IF(eq == std::string::npos, "Missing value for " << key);
++            std::string value = trim(token.substr(eq + 1));
++            if (key == "study_threshold") {
++                int64_t parsed = parse_positive_int64(value);
++                NS_ABORT_MSG_IF(parsed < 3 ||
++                                static_cast<uint64_t>(parsed) > std::numeric_limits<uint32_t>::max(),
++                                "study_threshold must be between 3 and UINT32_MAX");
++                m_studyThreshold = static_cast<uint32_t>(parsed);
++            } else if (key == "study_short_flow_cutoff_pkts") {
++                int64_t parsed = parse_positive_int64(value);
++                NS_ABORT_MSG_IF(parsed <= 0 ||
++                                static_cast<uint64_t>(parsed) > std::numeric_limits<uint32_t>::max(),
++                                "study_short_flow_cutoff_pkts must be between 1 and UINT32_MAX");
++                m_studyShortFlowCutoffPackets = static_cast<uint32_t>(parsed);
++            } else if (key == "study_bounded_restore") {
++                NS_ABORT_MSG_IF(value != "0" && value != "1",
++                                "study_bounded_restore must be 0 or 1");
++                m_studyBoundedRestore = value == "1";
++            } else if (key == "study_selective_epochs") {
++                for (const auto& epoch : split_string(value, "|")) {
++                    const auto fields = split_string(epoch, ":");
++                    NS_ABORT_MSG_IF(fields.size() != 4, "Expected start:end:wait:budget");
++                    std::array<int64_t, 4> e;
++                    for (uint32_t i=0; i<4; ++i) e[i]=parse_positive_int64(fields[i]);
++                    NS_ABORT_MSG_IF(e[0]>=e[1] || e[2]<1000000 || e[2]>20000000 || e[3]<3 ||
++                         e[3]>std::numeric_limits<uint32_t>::max(), "Invalid selective epoch");
++                    NS_ABORT_MSG_IF(!m_orbitEpochs.empty() && e[0]<m_orbitEpochs.back()[1],
++                                     "Selective epochs overlap");
++                    m_orbitEpochs.push_back(e);
++                }
++            } else if (key == "study_restore_limit_ns") {
++                m_studyRestoreLimitNs = parse_positive_int64(value);
++                NS_ABORT_MSG_IF(m_studyRestoreLimitNs <= 0,
++                                "study_restore_limit_ns must be positive");
++            } else {
++                NS_ABORT_MSG_IF(value.empty(), "study_windows cannot be empty");
++                for (const std::string& interval : split_string(value, "|")) {
++                    auto bounds = split_string(interval, ":", 2);
++                    int64_t start = parse_positive_int64(trim(bounds[0]));
++                    int64_t end = parse_positive_int64(trim(bounds[1]));
++                    NS_ABORT_MSG_IF(start >= end, "Study window must have start < end");
++                    NS_ABORT_MSG_IF(!m_studyWindows.empty() &&
++                                    start < m_studyWindows.back().second,
++                                    "Study windows must be sorted and non-overlapping");
++                    m_studyWindows.emplace_back(start, end);
++                }
++            }
++        }
++    }
++    NS_ABORT_MSG_IF(m_studyBoundedRestore && m_studyWindows.empty(),
++                    "Bounded restoration requires timed study windows");
++    const char* enabled = std::getenv("CS30401_STUDY_TRACE");
++    m_studyLogging = m_enableDetailedLogging && enabled && std::string(enabled) == "1";
++    if (m_studyLogging) {
++        std::ofstream events(m_baseLogsDir + "/" +
++                             format_string("tcp_flow_%" PRIu64 "_study_events.csv", m_tcpFlowId));
++        events << "flow_id,time_ns,event,old_value,new_value,threshold,cong_state\n";
++        std::ofstream packets(m_baseLogsDir + "/" +
++                              format_string("tcp_flow_%" PRIu64 "_study_packets.csv", m_tcpFlowId));
++        packets << "flow_id,time_ns,event,packet_uid,tx_id,tx_time_ns,seq,ack,payload_bytes,flags,"
++                   "sack_blocks,threshold,cong_state,local_port,peer_port\n";
++    }
++    bool ok;
++    if (m_studyLogging || !m_studyWindows.empty()) {
++        ok = m_socket->TraceConnectWithoutContext(
++            "CongState", MakeCallback(&TcpFlowSendApplication::StudyCongState, this));
++        NS_ABORT_MSG_IF(!ok, "Missing TCP CongState trace");
++    }
++    if (m_studyLogging) {
++        ok = m_socket->TraceConnectWithoutContext(
++            "SlowStartThreshold", MakeCallback(&TcpFlowSendApplication::StudySsThresh, this));
++        NS_ABORT_MSG_IF(!ok, "Missing TCP SlowStartThreshold trace");
++        ok = m_socket->TraceConnectWithoutContext(
++            "Tx", MakeCallback(&TcpFlowSendApplication::StudyTx, this));
++        NS_ABORT_MSG_IF(!ok, "Missing TCP Tx trace");
++        ok = m_socket->TraceConnectWithoutContext(
++            "Retransmission", MakeCallback(&TcpFlowSendApplication::StudyRetransmission, this));
++        NS_ABORT_MSG_IF(!ok, "Missing TCP Retransmission trace");
++    }
++    if (m_studyLogging || !m_studyWindows.empty()) {
++        ok = m_socket->TraceConnectWithoutContext(
++            "Rx", MakeCallback(&TcpFlowSendApplication::StudyRx, this));
++        NS_ABORT_MSG_IF(!ok, "Missing TCP Rx trace");
++    }
++    m_studyEffectiveThreshold = m_studyThreshold;
++    if (m_studyShortFlowCutoffPackets != 0 && m_maxBytes != 0) {
++        UintegerValue segmentSizeValue;
++        m_socket->GetAttribute("SegmentSize", segmentSizeValue);
++        uint64_t segmentSize = segmentSizeValue.Get();
++        NS_ABORT_MSG_IF(segmentSize == 0, "Short-flow cutoff requires a nonzero SegmentSize");
++        // This is a nominal MSS-equivalent size, not a measured packet count.
++        // Classify once, before Connect: no threshold lowering with live dupacks
++        // and no assumption that changing K reevaluates an existing SACK scoreboard.
++        uint64_t nominalPackets = m_maxBytes / segmentSize +
++                                  (m_maxBytes % segmentSize != 0);
++        InsertStudyEvent("SHORT_FLOW_SIZE_BYTES", m_maxBytes, segmentSize);
++        InsertStudyEvent("SHORT_FLOW_NOMINAL_MSS", nominalPackets, m_studyShortFlowCutoffPackets);
++        if (nominalPackets <= m_studyShortFlowCutoffPackets && m_studyThreshold > 3) {
++            m_studyEffectiveThreshold = 3;
++            InsertStudyEvent("SHORT_FLOW_GUARD_BYPASS", m_studyThreshold, 3);
++        }
++    }
++    // Set explicitly to distinguish study baseline from unrecorded global defaults.
++    SetStudyThreshold(m_studyWindows.empty() ? m_studyEffectiveThreshold : 3, "THRESHOLD_INIT");
++    NS_ABORT_MSG_IF(!m_orbitEpochs.empty() &&
++                    (!m_studyWindows.empty() || m_studyEffectiveThreshold != 3),
++                    "Selective epochs require baseline K3 without scalar windows");
++    int64_t now = Simulator::Now().GetNanoSeconds();
++    if (!m_orbitEpochs.empty()) {
++        m_socket->GetObject<TcpSocketBase>()->ConfigureOrbitLoss(m_baseLogsDir + "/" +
++            format_string("tcp_flow_%" PRIu64 "_orbit_loss.csv", m_tcpFlowId), m_tcpFlowId);
++        for (uint32_t i=0; i<m_orbitEpochs.size(); ++i) {
++            const auto& e=m_orbitEpochs[i];
++            NS_ABORT_MSG_IF(e[0]<now, "Selective epoch precedes application start");
++            m_studyWindowEvents.push_back(Simulator::Schedule(NanoSeconds(e[0]-now),
++                &TcpFlowSendApplication::BeginOrbitLossEpoch, this, i));
++        }
++    }
++    for (const auto& interval : m_studyWindows) {
++        if (interval.second <= now) {
++            continue;
++        }
++        if (interval.first <= now) {
++            BeginStudyWindow();
++        } else {
++            m_studyWindowEvents.push_back(Simulator::Schedule(
++                NanoSeconds(interval.first - now),
++                &TcpFlowSendApplication::BeginStudyWindow, this));
++        }
++        m_studyWindowEvents.push_back(Simulator::Schedule(
++            NanoSeconds(interval.second - now),
++            &TcpFlowSendApplication::EndStudyWindow, this));
++    }
++}
++
++void TcpFlowSendApplication::SetStudyThreshold(uint32_t threshold, const std::string& event) {
++    if (!m_socket) {
++        return;
++    }
++    uint32_t old = m_studyCurrentThreshold;
++    m_socket->GetObject<TcpSocketBase>()->SetRetxThresh(threshold);
++    m_studyCurrentThreshold = threshold;
++    InsertStudyEvent(event, old, threshold);
++}
++
++void TcpFlowSendApplication::BeginOrbitLossEpoch(uint32_t index) {
++    if (!m_socket) return;
++    const auto& e=m_orbitEpochs.at(index);
++    auto socket=m_socket->GetObject<TcpSocketBase>();
++    socket->RegisterOrbitLossEpoch(NanoSeconds(e[1]), NanoSeconds(e[2]), uint32_t(e[3]));
++    m_studyWindowEvents.push_back(Simulator::Schedule(
++        NanoSeconds(e[1]-Simulator::Now().GetNanoSeconds()),
++        &TcpSocketBase::EndOrbitLossEpoch, socket));
++}
++
++void TcpFlowSendApplication::BeginStudyWindow() {
++    if (!m_socket) {
++        return;
++    }
++    if (m_studyBoundedRestore &&
++        (m_studyEffectiveThreshold <= 3 ||
++         !m_socket->GetObject<TcpSocketBase>()->CanForecastGuardStart())) {
++        InsertStudyEvent("FORECAST_GUARD_SKIP", m_studyCurrentThreshold,
++                         m_studyEffectiveThreshold);
++        return;
++    }
++    ++m_studyActiveWindows;
++    m_studyRestorePending = false;
++    m_studyRestoreDeadlineEvent.Cancel();
++    SetStudyThreshold(m_studyEffectiveThreshold, "THRESHOLD_SET");
++}
++
++void TcpFlowSendApplication::EndStudyWindow() {
++    if (!m_socket || m_studyActiveWindows == 0) {
++        return;
+     }
++    --m_studyActiveWindows;
++    if (m_studyActiveWindows != 0) {
++        return;
++    }
++    if (m_studyBoundedRestore) {
++        m_studyRestorePending = false;
++        m_studyRestoreDeadlineEvent.Cancel();
++        if (m_studyCurrentThreshold <= 3) return;
++        SetStudyThreshold(3, "THRESHOLD_RESTORE");
++        const bool entered = m_socket->GetObject<TcpSocketBase>()
++            ->ReevaluateLossAfterThresholdRestore();
++        InsertStudyEvent("BOUNDED_EXPIRY_REEVALUATE", 0, entered ? 1 : 0);
++        return;
++    }
++    m_studyRestorePending = true;
++    if (m_studyCongState != TcpSocketState::CA_OPEN &&
++        m_studyCongState != TcpSocketState::CA_LOSS) {
++        InsertStudyEvent("THRESHOLD_RESTORE_DEFERRED",
++                         m_studyCurrentThreshold, m_studyCurrentThreshold);
++    }
++    m_studyRestoreDeadlineEvent = Simulator::Schedule(
++        NanoSeconds(m_studyRestoreLimitNs),
++        &TcpFlowSendApplication::StudyRestoreDeadline, this);
++    // Run after any current ACK/RTO handler has finished resetting its counters.
++    Simulator::ScheduleNow(&TcpFlowSendApplication::TryRestoreStudyThreshold, this);
++}
++
++void TcpFlowSendApplication::ReleaseBoundedGuardAfterRto() {
++    if (!m_socket || !m_studyBoundedRestore || m_studyActiveWindows == 0 ||
++        m_studyCurrentThreshold <= 3) return;
++    // This runs after the original RTO handler; it does not enter recovery.
++    SetStudyThreshold(3, "THRESHOLD_RTO_RELEASE");
++    m_studyRestorePending = false;
++}
++
++void TcpFlowSendApplication::TryRestoreStudyThreshold() {
++    if (!m_socket || !m_studyRestorePending || m_studyActiveWindows != 0) {
++        return;
++    }
++    // CA_OPEN reached after cumulative ACK processing resets duplicate ACK count.
++    // CA_LOSS ignores dupacks and the RTO handler resets the count before its state trace.
++    // Never lower the threshold blindly while CA_DISORDER/CA_RECOVERY is active.
++    if (m_studyCongState == TcpSocketState::CA_OPEN ||
++        m_studyCongState == TcpSocketState::CA_LOSS) {
++        SetStudyThreshold(3, "THRESHOLD_RESTORE");
++        m_studyRestorePending = false;
++        m_studyRestoreDeadlineEvent.Cancel();
++    }
++}
++
++void TcpFlowSendApplication::StudyRestoreDeadline() {
++    if (m_studyRestorePending && m_socket) {
++        InsertStudyEvent("RESTORE_DEADLINE_MISSED",
++                         m_studyCurrentThreshold, m_studyCurrentThreshold);
++        // The deadline is an observable cost limit, not an unsafe force-reset.
++        // Continue restoring at the next safe state and report the overrun.
++    }
++}
++
++void TcpFlowSendApplication::CancelStudyEvents() {
++    for (auto& event : m_studyWindowEvents) {
++        event.Cancel();
++    }
++    m_studyWindowEvents.clear();
++    m_studyRestoreDeadlineEvent.Cancel();
++}
++
++void TcpFlowSendApplication::InsertStudyEvent(const std::string& event,
++                                             uint64_t oldValue, uint64_t newValue) {
++    if (!m_studyLogging) {
++        return;
++    }
++    std::ofstream& out = CachedLogStream(m_baseLogsDir + "/" +
++        format_string("tcp_flow_%" PRIu64 "_study_events.csv", m_tcpFlowId));
++    out << m_tcpFlowId << ',' << Simulator::Now().GetNanoSeconds() << ',' << event << ','
++        << oldValue << ',' << newValue << ',' << m_studyCurrentThreshold << ','
++        << static_cast<unsigned>(m_studyCongState) << '\n';
++}
++
++void TcpFlowSendApplication::StudyCongState(TcpSocketState::TcpCongState_t oldState,
++                                           TcpSocketState::TcpCongState_t newState) {
++    m_studyCongState = newState;
++    InsertStudyEvent("CONG", static_cast<unsigned>(oldState), static_cast<unsigned>(newState));
++    if (m_studyBoundedRestore && newState == TcpSocketState::CA_LOSS &&
++        m_studyActiveWindows != 0 && m_studyCurrentThreshold > 3) {
++        m_studyRestoreDeadlineEvent.Cancel();
++        m_studyRestoreDeadlineEvent = Simulator::ScheduleNow(
++            &TcpFlowSendApplication::ReleaseBoundedGuardAfterRto, this);
++    }
++    if (m_studyRestorePending) {
++        Simulator::ScheduleNow(&TcpFlowSendApplication::TryRestoreStudyThreshold, this);
++    }
++}
++
++void TcpFlowSendApplication::StudySsThresh(uint32_t oldValue, uint32_t newValue) {
++    InsertStudyEvent("SSTHRESH", oldValue, newValue);
++}
++
++void TcpFlowSendApplication::StudyTx(Ptr<const Packet> packet, const TcpHeader& header,
++                                    Ptr<const TcpSocketBase> socket) {
++    // Replace metadata on this outgoing copy so TCP retransmissions get new IDs.
++    TcpStudyTxTag previous;
++    Ptr<Packet> mutablePacket = ConstCast<Packet>(packet);
++    mutablePacket->RemovePacketTag(previous);
++    mutablePacket->AddPacketTag(
++        TcpStudyTxTag(m_tcpFlowId, ++m_studyTxId, Simulator::Now().GetNanoSeconds()));
++    const auto seq=header.GetSequenceNumber();
++    const auto end=seq+packet->GetSize();
++    const bool original=packet->GetSize()>0 && seq>=m_orbitNewTxHigh;
++    if (original) m_orbitNewTxHigh=end;
++    OrbitOriginalTag oldOriginal;
++    mutablePacket->RemovePacketTag(oldOriginal);
++    mutablePacket->AddPacketTag(OrbitOriginalTag(original));
++    InsertStudyPacket("TX", packet, header);
++}
++
++void TcpFlowSendApplication::StudyRx(Ptr<const Packet> packet, const TcpHeader& header,
++                                    Ptr<const TcpSocketBase> socket) {
++    if (header.GetFlags() & TcpHeader::ACK) {
++        InsertStudyPacket("RX_ACK", packet, header);
++    }
++    if (m_studyRestorePending) {
++        // Rx trace occurs before ProcessAck; restore only after its state update.
++        Simulator::ScheduleNow(&TcpFlowSendApplication::TryRestoreStudyThreshold, this);
++    }
++}
++
++void TcpFlowSendApplication::StudyRetransmission(Ptr<const Packet> packet,
++                                                const TcpHeader& header,
++                                                const Address& localAddr,
++                                                const Address& peerAddr,
++                                                Ptr<const TcpSocketBase> socket) {
++    // TcpSocketBase fires this immediately after Tx for the very same packet.
++    InsertStudyPacket("RETX", packet, header);
++}
++
++void TcpFlowSendApplication::InsertStudyPacket(const std::string& event,
++                                               Ptr<const Packet> packet,
++                                               const TcpHeader& header) {
++    if (!m_studyLogging) {
++        return;
++    }
++    TcpStudyTxTag tag;
++    bool tagged = packet->PeekPacketTag(tag);
++    std::ostringstream sack;
++    if (header.HasOption(TcpOption::SACK)) {
++        Ptr<const TcpOptionSack> option =
++            DynamicCast<const TcpOptionSack>(header.GetOption(TcpOption::SACK));
++        bool first = true;
++        for (const auto& block : option->GetSackList()) {
++            if (!first) {
++                sack << '|';
++            }
++            first = false;
++            sack << block.first.GetValue() << ':' << block.second.GetValue();
++        }
++    }
++    bool receive = event == "RX_ACK";
++    std::ofstream& out = CachedLogStream(m_baseLogsDir + "/" +
++        format_string("tcp_flow_%" PRIu64 "_study_packets.csv", m_tcpFlowId));
++    out << m_tcpFlowId << ',' << Simulator::Now().GetNanoSeconds() << ',' << event << ','
++        << packet->GetUid() << ',' << (tagged ? tag.GetTxId() : 0) << ','
++        << (tagged ? tag.GetTxTimeNs() : -1) << ',' << header.GetSequenceNumber().GetValue()
++        << ',' << header.GetAckNumber().GetValue() << ',' << packet->GetSize() << ','
++        << static_cast<unsigned>(header.GetFlags()) << ',' << sack.str() << ','
++        << m_studyCurrentThreshold << ',' << static_cast<unsigned>(m_studyCongState) << ','
++        << (receive ? header.GetDestinationPort() : header.GetSourcePort()) << ','
++        << (receive ? header.GetSourcePort() : header.GetDestinationPort()) << '\n';
+ }
+ 
+ } // Namespace ns3
+ 
++
++namespace ns3 {
++void TcpFlowSendApplication::StudyPacingRate(DataRate oldRate, DataRate newRate) {
++    std::ofstream out(m_baseLogsDir+"/tcp_flow_"+std::to_string(m_tcpFlowId)+"_pacing.csv",std::ios::app);
++    out << m_tcpFlowId << ',' << Simulator::Now().GetNanoSeconds() << ',' << oldRate.GetBitRate()
++        << ',' << newRate.GetBitRate() << '\n';
++}
++}
+diff --git a/contrib/basic-sim/model/apps/tcp-flow-send-application.h b/contrib/basic-sim/model/apps/tcp-flow-send-application.h
+index 1dd61ed..fdb8082 100644
+--- a/contrib/basic-sim/model/apps/tcp-flow-send-application.h
++++ b/contrib/basic-sim/model/apps/tcp-flow-send-application.h
+@@ -1,3 +1,4 @@
++#include <array>
+ /* -*- Mode:C++; c-file-style:"gnu"; indent-tabs-mode:nil; -*- */
+ /*
+  * Copyright (c) 2010 Georgia Institute of Technology
+@@ -29,11 +30,57 @@
+ #include "ns3/ptr.h"
+ #include "ns3/string.h"
+ #include "ns3/traced-callback.h"
++#include "ns3/tag.h"
++#include "ns3/tcp-header.h"
++#include "ns3/tcp-socket-state.h"
++#include <vector>
++#include <utility>
+ 
+ namespace ns3 {
+ 
+ class Address;
+ class Socket;
++class TcpSocketBase;
++
++// Instrumentation metadata only: packet tags do not add on-wire bytes.
++// A fresh tag identifies each TCP transmission, including retransmissions.
++class TcpStudyTxTag : public Tag
++{
++public:
++  TcpStudyTxTag();
++  TcpStudyTxTag(uint64_t flowId, uint64_t txId, int64_t txTimeNs);
++  static TypeId GetTypeId();
++  TypeId GetInstanceTypeId() const override;
++  uint32_t GetSerializedSize() const override;
++  void Serialize(TagBuffer buffer) const override;
++  void Deserialize(TagBuffer buffer) override;
++  void Print(std::ostream& os) const override;
++  uint64_t GetFlowId() const;
++  uint64_t GetTxId() const;
++  int64_t GetTxTimeNs() const;
++private:
++  uint64_t m_flowId;
++  uint64_t m_txId;
++  int64_t m_txTimeNs;
++};
++
++// Observer-only original/retransmission metadata, zero on-wire bytes.
++class OrbitOriginalTag : public Tag {
++public:
++  OrbitOriginalTag(bool original=false) : m_original(original) {}
++  static TypeId GetTypeId() {
++    static TypeId t=TypeId("ns3::OrbitOriginalTag").SetParent<Tag>()
++       .SetGroupName("Applications").AddConstructor<OrbitOriginalTag>();
++    return t;
++  }
++  TypeId GetInstanceTypeId() const override { return GetTypeId(); }
++  uint32_t GetSerializedSize() const override { return 1; }
++  void Serialize(TagBuffer b) const override { b.WriteU8(m_original); }
++  void Deserialize(TagBuffer b) override { m_original=b.ReadU8(); }
++  void Print(std::ostream& out) const override { out << m_original; }
++  bool IsOriginal() const { return m_original; }
++private: bool m_original;
++};
+ 
+ class TcpFlowSendApplication : public Application
+ {
+@@ -77,7 +124,7 @@ private:
+   bool            m_closedByError;    //!< Whether the connection closed by error
+   uint64_t        m_ackedBytes;       //!< Amount of acknowledged bytes cached after close of the socket
+   bool            m_isCompleted;      //!< True iff the flow is completed fully AND closed normally
+-  std::string     m_additionalParameters; //!< Not used in this version of the application
++  std::string     m_additionalParameters; //!< Optional study controls; see InitializeStudy
+   uint32_t        m_current_cwnd_byte;     //!< Current congestion window (detailed logging)
+   int64_t         m_current_rtt_ns;        //!< Current last RTT sample (detailed logging)
+ 
+@@ -88,6 +135,55 @@ private:
+   TracedCallback<Ptr<const Packet> > m_txTrace;
+ 
+ private:
++  // Study controls in AdditionalParameters:
++  // study_threshold=K;study_windows=start_ns:end_ns|start_ns:end_ns;
++  // study_restore_limit_ns=N;study_short_flow_cutoff_pkts=P.
++  // Windows use absolute simulation nanoseconds. No windows means static K.
++  // Optional P classifies a known finite MaxBytes flow once, before Connect:
++  // ceil(MaxBytes / SegmentSize) <= P uses baseline K=3 for the whole flow.
++  // P counts nominal MSS equivalents; it is not an adaptive flight-size rule.
++  // Omitting P and empty parameters preserve the legacy controls and baseline.
++  void InitializeStudy();
++  void BeginStudyWindow();
++  void BeginOrbitLossEpoch(uint32_t index);
++  void EndStudyWindow();
++  void TryRestoreStudyThreshold();
++  void StudyRestoreDeadline();
++  void ReleaseBoundedGuardAfterRto();
++  void CancelStudyEvents();
++  void SetStudyThreshold(uint32_t threshold, const std::string& event);
++  void InsertStudyEvent(const std::string& event, uint64_t oldValue, uint64_t newValue);
++  void StudyCongState(TcpSocketState::TcpCongState_t oldState,
++                     TcpSocketState::TcpCongState_t newState);
++  void StudySsThresh(uint32_t oldValue, uint32_t newValue);
++  void StudyTx(Ptr<const Packet> packet, const TcpHeader& header,
++               Ptr<const TcpSocketBase> socket);
++  void StudyRx(Ptr<const Packet> packet, const TcpHeader& header,
++               Ptr<const TcpSocketBase> socket);
++  void StudyRetransmission(Ptr<const Packet> packet, const TcpHeader& header,
++                           const Address& localAddr, const Address& peerAddr,
++                           Ptr<const TcpSocketBase> socket);
++  void InsertStudyPacket(const std::string& event, Ptr<const Packet> packet,
++                          const TcpHeader& header);
++
++  bool m_studyLogging = false;
++  uint32_t m_studyThreshold = 3;
++  uint32_t m_studyEffectiveThreshold = 3;
++  uint32_t m_studyShortFlowCutoffPackets = 0;
++  uint32_t m_studyCurrentThreshold = 3;
++  uint32_t m_studyActiveWindows = 0;
++  bool m_studyRestorePending = false;
++  bool m_studyBoundedRestore = false;
++  int64_t m_studyRestoreLimitNs = 1000000000;
++  uint64_t m_studyTxId = 0;
++  TcpSocketState::TcpCongState_t m_studyCongState = TcpSocketState::CA_OPEN;
++  std::vector<std::pair<int64_t, int64_t>> m_studyWindows;
++  std::vector<std::array<int64_t, 4>> m_orbitEpochs;
++  SequenceNumber32 m_orbitNewTxHigh{0};
++  std::vector<EventId> m_studyWindowEvents;
++  EventId m_studyRestoreDeadlineEvent;
++
++  void StudyPacingRate(DataRate oldRate, DataRate newRate);
+   void ConnectionSucceeded (Ptr<Socket> socket);
+   void ConnectionFailed (Ptr<Socket> socket);
+   void DataSend (Ptr<Socket>, uint32_t);
+diff --git a/contrib/basic-sim/model/apps/tcp-flow-sink.cc b/contrib/basic-sim/model/apps/tcp-flow-sink.cc
+index 572ee57..a4656b1 100644
+--- a/contrib/basic-sim/model/apps/tcp-flow-sink.cc
++++ b/contrib/basic-sim/model/apps/tcp-flow-sink.cc
+@@ -33,6 +33,14 @@
+ #include "ns3/trace-source-accessor.h"
+ #include "ns3/tcp-socket-factory.h"
+ #include "tcp-flow-sink.h"
++#include "tcp-flow-send-application.h"
++#include "ns3/tcp-header.h"
++#include "ns3/tcp-rx-buffer.h"
++#include "ns3/tcp-socket-base.h"
++
++#include <cstdlib>
++#include <cstring>
++#include <sstream>
+ 
+ namespace ns3 {
+ 
+@@ -73,6 +81,10 @@ void TcpFlowSink::DoDispose(void) {
+     NS_LOG_FUNCTION(this);
+     m_socket = 0;
+     m_socketList.clear();
++    m_studyTraceEnabled = false;
++    m_studyConnections.clear();
++    m_studyRxCsv.close();
++    m_studyAppCsv.close();
+ 
+     // chain up
+     Application::DoDispose();
+@@ -82,6 +94,11 @@ void TcpFlowSink::DoDispose(void) {
+ void TcpFlowSink::StartApplication() { // Called at time specified by Start
+     NS_LOG_FUNCTION(this);
+ 
++    const char* studyTrace = std::getenv("CS30401_STUDY_TRACE");
++    m_studyTraceEnabled = studyTrace != nullptr && std::strcmp(studyTrace, "1") == 0;
++    const char* studyDir = std::getenv("CS30401_STUDY_TRACE_DIR");
++    m_studyTraceDir = studyDir != nullptr && *studyDir != '\0' ? studyDir : "/tmp";
++
+     // Create a socket which is always in LISTEN state
+     // As soon as it processes a SYN in ProcessListen(),
+     // it forks itself into a new socket, which
+@@ -117,6 +134,8 @@ void TcpFlowSink::StopApplication() {  // Called at time specified by Stop
+     if (m_socket) {
+         m_socket->Close();
+     }
++    m_studyRxCsv.flush();
++    m_studyAppCsv.flush();
+ }
+ 
+ void TcpFlowSink::HandleAccept(Ptr<Socket> socket, const Address &from) {
+@@ -127,6 +146,91 @@ void TcpFlowSink::HandleAccept(Ptr<Socket> socket, const Address &from) {
+             MakeCallback(&TcpFlowSink::HandlePeerError, this)
+     );
+     m_socketList.push_back(socket);
++    if (m_studyTraceEnabled) {
++        StartStudyConnection(socket);
++    }
++}
++
++
++void TcpFlowSink::StartStudyConnection(Ptr<Socket> socket) {
++    StudyConnection connection;
++    connection.id = m_studyNextConnectionId++;
++    Address localAddress;
++    Address peerAddress;
++    socket->GetSockName(localAddress);
++    socket->GetPeerName(peerAddress);
++    auto describe = [](const Address& address, std::string& ip, uint16_t& port) {
++        std::ostringstream text;
++        if (InetSocketAddress::IsMatchingType(address)) {
++            InetSocketAddress inet = InetSocketAddress::ConvertFrom(address);
++            text << inet.GetIpv4();
++            port = inet.GetPort();
++        } else if (Inet6SocketAddress::IsMatchingType(address)) {
++            Inet6SocketAddress inet = Inet6SocketAddress::ConvertFrom(address);
++            text << inet.GetIpv6();
++            port = inet.GetPort();
++        } else {
++            text << "unknown";
++        }
++        ip = text.str();
++    };
++    describe(localAddress, connection.localIp, connection.localPort);
++    describe(peerAddress, connection.peerIp, connection.peerPort);
++
++    if (!m_studyRxCsv.is_open()) {
++        std::string suffix = "_node_" + std::to_string(GetNode()->GetId())
++                           + "_port_" + std::to_string(connection.localPort) + ".csv";
++        m_studyRxCsv.open(m_studyTraceDir + "/study_rx" + suffix);
++        m_studyAppCsv.open(m_studyTraceDir + "/study_app_rx" + suffix);
++        if (!m_studyRxCsv || !m_studyAppCsv) {
++            NS_LOG_WARN("Could not open study receiver logs in " << m_studyTraceDir);
++            m_studyTraceEnabled = false;
++            m_studyRxCsv.close();
++            m_studyAppCsv.close();
++            return;
++        }
++        m_studyRxCsv << "time_ns,node_id,connection_id,local_ip,local_port,peer_ip,peer_port,"
++                       "packet_uid,seq,ack,payload_bytes,flags,expected_seq,tagged,flow_id,tx_id,tx_time_ns\n";
++        m_studyAppCsv << "time_ns,node_id,connection_id,local_ip,local_port,peer_ip,peer_port,"
++                        "flow_id,packet_uid,payload_bytes,connection_total_rx_bytes,sink_total_rx_bytes\n";
++    }
++    m_studyConnections[PeekPointer(socket)] = connection;
++    if (!socket->TraceConnectWithoutContext("Rx", MakeCallback(&TcpFlowSink::LogStudyRx, this))) {
++        NS_LOG_WARN("Could not connect study receiver socket Rx trace");
++    }
++}
++
++void TcpFlowSink::LogStudyRx(Ptr<const Packet> packet, const TcpHeader& header,
++                             Ptr<const TcpSocketBase> socket) {
++    if (!m_studyTraceEnabled) {
++        return;
++    }
++    auto it = m_studyConnections.find(PeekPointer(socket));
++    if (it == m_studyConnections.end()) {
++        return;
++    }
++    StudyConnection& connection = it->second;
++    TcpStudyTxTag tag;
++    bool tagged = packet->PeekPacketTag(tag);
++    if (tagged) {
++        connection.flowId = std::to_string(tag.GetFlowId());
++    }
++    // TcpSocketBase emits Rx after removing the TCP header, before processing
++    // the packet. Thus packet size is payload bytes and expected_seq is the
++    // receiver's next missing sequence before this arrival changes its buffer.
++    m_studyRxCsv << Simulator::Now().GetNanoSeconds() << ',' << GetNode()->GetId() << ','
++                 << connection.id << ',' << connection.localIp << ',' << connection.localPort << ','
++                 << connection.peerIp << ',' << connection.peerPort << ','
++                 << packet->GetUid() << ',' << header.GetSequenceNumber().GetValue() << ','
++                 << header.GetAckNumber().GetValue() << ',' << packet->GetSize() << ','
++                 << static_cast<uint32_t>(header.GetFlags()) << ','
++                 << socket->GetRxBuffer()->NextRxSequence().GetValue() << ',' << (tagged ? 1 : 0) << ',';
++    if (tagged) {
++        m_studyRxCsv << tag.GetFlowId() << ',' << tag.GetTxId() << ',' << tag.GetTxTimeNs();
++    } else {
++        m_studyRxCsv << ",,";
++    }
++    m_studyRxCsv << '\n';
+ }
+ 
+ void TcpFlowSink::HandleRead(Ptr<Socket> socket) {
+@@ -141,6 +245,23 @@ void TcpFlowSink::HandleRead(Ptr<Socket> socket) {
+         }
+         m_totalRx += packet->GetSize ();
+ 
++        // RecvFrom returns unique, in-order application data. Its packet UID
++        // can represent coalesced buffer data and is not a wire-packet key.
++        if (m_studyTraceEnabled) {
++            auto it = m_studyConnections.find(PeekPointer(socket));
++            if (it != m_studyConnections.end()) {
++                StudyConnection& connection = it->second;
++                connection.appRxBytes += packet->GetSize();
++                m_studyAppCsv << Simulator::Now().GetNanoSeconds() << ','
++                              << GetNode()->GetId() << ',' << connection.id << ','
++                              << connection.localIp << ',' << connection.localPort << ','
++                              << connection.peerIp << ',' << connection.peerPort << ','
++                              << connection.flowId << ',' << packet->GetUid() << ','
++                              << packet->GetSize() << ',' << connection.appRxBytes << ','
++                              << m_totalRx << '\n';
++            }
++        }
++
+         // Other fields that could be useful here if actually did something:
+         // Size: packet->GetSize()
+         // Source IP: InetSocketAddress::ConvertFrom(from).GetIpv4 ()
+diff --git a/contrib/basic-sim/model/apps/tcp-flow-sink.h b/contrib/basic-sim/model/apps/tcp-flow-sink.h
+index ff61bfd..0fc2383 100644
+--- a/contrib/basic-sim/model/apps/tcp-flow-sink.h
++++ b/contrib/basic-sim/model/apps/tcp-flow-sink.h
+@@ -29,11 +29,19 @@
+ #include "ns3/traced-callback.h"
+ #include "ns3/address.h"
+ 
++#include <cstdint>
++#include <fstream>
++#include <list>
++#include <map>
++#include <string>
++
+ namespace ns3 {
+ 
+ class Address;
+ class Socket;
+ class Packet;
++class TcpHeader;
++class TcpSocketBase;
+ 
+ class TcpFlowSink : public Application
+ {
+@@ -56,6 +64,30 @@ private:
+   void HandlePeerError (Ptr<Socket> socket);
+   void CleanUp (Ptr<Socket> socket);
+ 
++  // Observation only: enabled by CS30401_STUDY_TRACE=1, with outputs in
++  // CS30401_STUDY_TRACE_DIR (default /tmp). These callbacks never change TCP.
++  void StartStudyConnection (Ptr<Socket> socket);
++  void LogStudyRx (Ptr<const Packet> packet, const TcpHeader& header,
++                   Ptr<const TcpSocketBase> socket);
++
++  struct StudyConnection
++  {
++    uint64_t id{0};
++    uint64_t appRxBytes{0};
++    uint16_t localPort{0};
++    uint16_t peerPort{0};
++    std::string localIp;
++    std::string peerIp;
++    std::string flowId;
++  };
++
++  bool m_studyTraceEnabled{false};
++  uint64_t m_studyNextConnectionId{0};
++  std::string m_studyTraceDir;
++  std::map<const Socket*, StudyConnection> m_studyConnections;
++  std::ofstream m_studyRxCsv;
++  std::ofstream m_studyAppCsv;
++
+   Ptr<Socket> m_socket;                 //!< Listening socket
+   std::list<Ptr<Socket> > m_socketList; //!< the accepted sockets
+ 
+diff --git a/scratch/main_satnet/first_sequence_drop.h b/scratch/main_satnet/first_sequence_drop.h
+new file mode 100644
+index 0000000..ec12ace
+--- /dev/null
++++ b/scratch/main_satnet/first_sequence_drop.h
+@@ -0,0 +1,70 @@
++#ifndef CS30401_QUEUE_PACING_FIRST_SEQUENCE_DROP_H
++#define CS30401_QUEUE_PACING_FIRST_SEQUENCE_DROP_H
++#include "ns3/error-model.h"
++#include "ns3/gsl-net-device.h"
++#include "ns3/point-to-point-net-device.h"
++#include "ns3/ppp-header.h"
++#include "ns3/ipv4-header.h"
++#include "ns3/tcp-header.h"
++#include "ns3/tcp-flow-send-application.h"
++#include "ns3/pointer.h"
++#include <cstdlib>
++#include <fstream>
++
++namespace ns3 { namespace queuepacing {
++// Evaluation truth only, never an input to pacing or presumed-loss waiting.
++class FirstOriginalLoss : public ErrorModel {
++  public:
++    explicit FirstOriginalLoss(std::string path):m_path(path) {}
++  private:
++    bool DoCorrupt(Ptr<Packet> p) override {
++        if(m_used) return false;
++        TcpStudyTxTag tag; OrbitOriginalTag original;
++        if(!p->PeekPacketTag(tag) || !p->PeekPacketTag(original) || !original.IsOriginal() ||
++           tag.GetFlowId()!=0 || p->GetSize()<42) return false;
++        auto copy=p->Copy(); PppHeader ppp; Ipv4Header ip; TcpHeader tcp;
++        copy->RemoveHeader(ppp);if(ppp.GetProtocol()!=0x21) return false;
++        copy->RemoveHeader(ip);if(ip.GetProtocol()!=6 || ip.GetFragmentOffset()!=0) return false;
++        copy->RemoveHeader(tcp);
++        if(tcp.GetDestinationPort()!=1024 || tcp.GetSequenceNumber().GetValue()!=1 ||
++           copy->GetSize()!=1380) return false;
++        m_used=true;
++        std::ofstream out(m_path);
++        out << "time_ns,flow_id,tx_id,tx_time_ns,seq,payload_bytes,receiver_node\n"
++            << Simulator::Now().GetNanoSeconds() << ',' << tag.GetFlowId() << ',' << tag.GetTxId()
++            << ',' << tag.GetTxTimeNs() << ',' << tcp.GetSequenceNumber().GetValue()
++            << ',' << copy->GetSize() << ",1585\n";
++        return true; // Existing GSL receive path emits the physical drop.
++    }
++    void DoReset() override {}
++    std::string m_path; bool m_used{false};
++};
++inline void InstallFirstOriginalLoss(NodeContainer nodes) {
++    const char* enabled=std::getenv("CS30401_QUEUE_PACING_FIRST_LOSS");
++    if(!enabled || std::string(enabled)!="1") return;
++    const char* old=std::getenv("CS30401_ORBIT_ACTUAL_DROP");
++    NS_ABORT_MSG_IF(old && std::string(old)=="1","Two evaluation loss models requested");
++    const char* directory=std::getenv("CS30401_STUDY_TRACE_DIR");
++    NS_ABORT_MSG_IF(!directory || nodes.GetN()<=1585,"Invalid first-sequence loss setup");
++    auto error=CreateObject<FirstOriginalLoss>(std::string(directory)+"/pacing_first_loss.csv");
++    uint32_t count=0;
++    std::ofstream out(std::string(directory)+"/pacing_first_loss_install.csv");
++    out << "node_id,device_id,device_type,flow_id,seq,payload_bytes\n";
++    auto node=nodes.Get(1585);
++    for(uint32_t i=0;i<node->GetNDevices();++i) {
++        auto raw=node->GetDevice(i);
++        if(!DynamicCast<GSLNetDevice>(raw) && !DynamicCast<PointToPointNetDevice>(raw)) continue;
++        PointerValue existing;
++        raw->GetAttribute("ReceiveErrorModel",existing);
++        NS_ABORT_MSG_IF(existing.Get<ErrorModel>(),"Refusing to overwrite an existing physical receive error model");
++        if(auto gsl=DynamicCast<GSLNetDevice>(raw)) gsl->SetReceiveErrorModel(error);
++        else if(auto p2p=DynamicCast<PointToPointNetDevice>(raw))
++            p2p->SetAttribute("ReceiveErrorModel",PointerValue(error));
++        else continue;
++        out << "1585," << i << ',' << raw->GetInstanceTypeId().GetName() << ",0,1,1380\n";
++        ++count;
++    }
++    NS_ABORT_MSG_IF(count==0,"No physical destination device for first loss");
++}
++}}
++#endif
+diff --git a/scratch/main_satnet/flow_observer.h b/scratch/main_satnet/flow_observer.h
+new file mode 100644
+index 0000000..2be80dc
+--- /dev/null
++++ b/scratch/main_satnet/flow_observer.h
+@@ -0,0 +1,89 @@
++#ifndef ORBIT_QUEUE_FLOW_OBSERVER_H
++#define ORBIT_QUEUE_FLOW_OBSERVER_H
++#include "queue_observer.h"
++#include "ns3/net-device-queue-interface.h"
++#include "ns3/queue-limits.h"
++#include "ns3/queue-disc.h"
++namespace ns3 { namespace orbitqueueflow {
++static std::unique_ptr<std::ofstream> states, mappedDrops, devices;
++static std::map<std::pair<uint32_t,uint32_t>,orbitqueue::QueueRecord*> mapping;
++static std::string LimitsType(NetDeviceQueue* q) {
++    auto limits=q->GetQueueLimits();
++    return limits ? limits->GetInstanceTypeId().GetName() : "none";
++}
++static void State(orbitqueue::QueueRecord* r,NetDevice* device,uint32_t txq,
++                  NetDeviceQueue* q,std::string reason,bool oldDevice,bool oldLimits,
++                  bool newDevice,bool newLimits,bool wakeWillRun) {
++    *states << Simulator::Now().GetNanoSeconds() << ',' << r->node << ',' << r->device
++        << ',' << txq << ',' << reason << ',' << oldDevice << ',' << oldLimits
++        << ',' << newDevice << ',' << newLimits << ',' << (newDevice||newLimits)
++        << ',' << wakeWillRun << ',' << r->queue->GetNPackets() << ',' << r->queue->GetNBytes()
++        << ',' << r->queue->GetMaxSize() << ',' << r->queue->WouldOverflow(1,device->GetMtu())
++        << ',' << LimitsType(q) << '\n';
++}
++static void TcDrop(uint32_t node,Ptr<NetDevice> device,uint32_t txq,Ptr<const Packet> p,
++                   bool deviceStop,bool limitsStop) {
++    auto record=mapping.find({node,device->GetIfIndex()});
++    auto ndqi=device->GetObject<NetDeviceQueueInterface>();
++    TcpStudyTxTag tag;const bool tagged=p->PeekPacketTag(tag);
++    auto copy=p->Copy();Ipv4Header ip;TcpHeader tcp;
++    bool parsed=copy->GetSize()>=20 && copy->RemoveHeader(ip)>0 && ip.GetProtocol()==6 &&
++                ip.GetFragmentOffset()==0 && copy->GetSize()>=20 && copy->RemoveHeader(tcp)>0;
++    *mappedDrops << Simulator::Now().GetNanoSeconds() << ',' << node << ','
++        << device->GetIfIndex() << ',' << txq << ',' << device->GetInstanceTypeId().GetName()
++        << ',' << p->GetUid() << ',';
++    if(tagged) *mappedDrops << tag.GetFlowId();
++    *mappedDrops << ',';if(tagged) *mappedDrops << tag.GetTxId();
++    *mappedDrops << ',';if(tagged) *mappedDrops << tag.GetTxTimeNs();
++    *mappedDrops << ',';if(parsed) *mappedDrops << tcp.GetSequenceNumber().GetValue();
++    *mappedDrops << ',';if(parsed) *mappedDrops << copy->GetSize();
++    *mappedDrops << ',' << deviceStop << ',' << limitsStop << ',' << (deviceStop||limitsStop)
++        << ',' << (record!=mapping.end());
++    if(record!=mapping.end()) {
++        auto queue=record->second->queue;
++        *mappedDrops << ',' << queue->GetNPackets() << ',' << queue->GetNBytes()
++            << ',' << queue->GetMaxSize() << ',' << queue->WouldOverflow(1,device->GetMtu());
++    } else *mappedDrops << ",,,,";
++    *mappedDrops << ',' << (ndqi ? LimitsType(PeekPointer(ndqi->GetTxQueue(txq))) : "no-interface") << '\n';
++}
++static void Finish() {states->flush();mappedDrops->flush();devices->flush();}
++static void Install(NodeContainer nodes) {
++    const char* enabled=std::getenv("CS30401_QUEUE_FLOW_TRACE");
++    if(!enabled || std::string(enabled)!="1") return;
++    const char* directory=std::getenv("CS30401_STUDY_TRACE_DIR");
++    NS_ABORT_MSG_IF(!directory,"Missing flow-control observation directory");
++    states=std::make_unique<std::ofstream>(std::string(directory)+"/queue_flow_state.csv");
++    mappedDrops=std::make_unique<std::ofstream>(std::string(directory)+"/queue_tc_drop.csv");
++    devices=std::make_unique<std::ofstream>(std::string(directory)+"/queue_devices.csv");
++    NS_ABORT_MSG_IF(!states->good() || !mappedDrops->good() || !devices->good(),"Cannot open flow-control observers");
++    *states << "time_ns,node_id,device_id,txq,reason,old_device_stop,old_bql_stop,new_device_stop,new_bql_stop,is_stopped,wake_callback_will_run,queue_packets,queue_bytes,max_size,would_overflow_one_mtu,queue_limits_type\n";
++    *mappedDrops << "time_ns,node_id,device_id,txq,device_type,packet_uid,flow_id,tx_id,tx_time_ns,seq,payload_bytes,device_stop,bql_stop,is_stopped,queue_mapped,queue_packets,queue_bytes,max_size,would_overflow_one_mtu,queue_limits_type\n";
++    *devices << "node_id,device_id,if_index,device_type,queue_type,max_size,txq,queue_limits_type,root_qdisc_type\n";
++    for(auto& item:orbitqueue::records) {
++        auto r=item.get();auto node=nodes.Get(r->node);auto device=node->GetDevice(r->device);
++        NS_ABORT_MSG_IF(device->GetIfIndex()!=r->device,"Node device index differs from interface identity");
++        mapping[{r->node,r->device}]=r;
++        auto tc=node->GetObject<TrafficControlLayer>();
++        auto root=tc->GetRootQueueDiscOnDevice(device);
++        auto ndqi=device->GetObject<NetDeviceQueueInterface>();
++        NS_ABORT_MSG_IF(!ndqi,"Missing device queue interface");
++        for(uint32_t txq=0;txq<ndqi->GetNTxQueues();++txq) {
++            auto q=ndqi->GetTxQueue(txq);
++            // Raw self/device pointers avoid an observer reference cycle. The
++            // callback runs inside this queue's live state-changing method.
++            q->SetOrbitObserver(MakeBoundCallback(&State,r,PeekPointer(device),txq,PeekPointer(q)));
++            *devices << r->node << ',' << r->device << ',' << device->GetIfIndex()
++                << ',' << device->GetInstanceTypeId().GetName() << ',' << r->queue->GetInstanceTypeId().GetName()
++                << ',' << r->queue->GetMaxSize() << ',' << txq << ',' << LimitsType(PeekPointer(q))
++                << ',' << (root ? root->GetInstanceTypeId().GetName() : "none") << '\n';
++        }
++    }
++    for(auto it=nodes.Begin();it!=nodes.End();++it) {
++        auto node=*it;auto tc=node->GetObject<TrafficControlLayer>();
++        NS_ABORT_MSG_IF(!tc,"Missing TrafficControlLayer");
++        tc->SetOrbitDropObserver(MakeBoundCallback(&TcDrop,node->GetId()));
++    }
++    devices->flush();Simulator::ScheduleDestroy(&Finish);
++}
++}}
++#endif
+diff --git a/scratch/main_satnet/main_satnet.cc b/scratch/main_satnet/main_satnet.cc
+index 774f5c1..584d316 100644
+--- a/scratch/main_satnet/main_satnet.cc
++++ b/scratch/main_satnet/main_satnet.cc
+@@ -39,6 +39,12 @@
+ #include "ns3/arbiter-single-forward-helper.h"
+ #include "ns3/ipv4-arbiter-routing-helper.h"
+ #include "ns3/gsl-if-bandwidth-helper.h"
++#include "study_drop_trace.h"
++#include "old_flight_drop.h"
++#include "queue_observer.h"
++#include "service_observer.h"
++#include "flow_observer.h"
++#include "first_sequence_drop.h"
+ 
+ using namespace ns3;
+ 
+@@ -79,6 +85,13 @@ int main(int argc, char *argv[]) {
+     ArbiterSingleForwardHelper arbiterHelper(basicSimulation, topology->GetNodes());
+     GslIfBandwidthHelper gslIfBandwidthHelper(basicSimulation, topology->GetNodes());
+ 
++    cs30401study::Install(topology->GetNodes());
++    InstallOrbitOldFlightDrop(topology->GetNodes());
++    orbitqueue::Install(topology->GetNodes());
++    orbitqueueservice::Install(topology->GetNodes());
++    orbitqueueflow::Install(topology->GetNodes());
++    queuepacing::InstallFirstOriginalLoss(topology->GetNodes());
++
+     // Schedule flows
+     TcpFlowScheduler tcpFlowScheduler(basicSimulation, topology); // Requires enable_tcp_flow_scheduler=true
+ 
+diff --git a/scratch/main_satnet/old_flight_drop.h b/scratch/main_satnet/old_flight_drop.h
+new file mode 100644
+index 0000000..c63fe59
+--- /dev/null
++++ b/scratch/main_satnet/old_flight_drop.h
+@@ -0,0 +1,76 @@
++#ifndef ORBIT_OLD_FLIGHT_DROP_H
++#define ORBIT_OLD_FLIGHT_DROP_H
++#include "ns3/error-model.h"
++#include "ns3/point-to-point-net-device.h"
++#include "ns3/gsl-net-device.h"
++#include "ns3/ppp-header.h"
++#include "ns3/ipv4-header.h"
++#include "ns3/tcp-header.h"
++#include "ns3/tcp-flow-send-application.h"
++#include "ns3/pointer.h"
++#include <cstdlib>
++#include <fstream>
++
++// Adverse evaluation control only; this tag/rule is never a policy input.
++class OrbitOldFlightDrop : public ns3::ErrorModel {
++public:
++    OrbitOldFlightDrop(int64_t event, int64_t oldForward, const std::string& path)
++        : m_event(event), m_earliest(event-oldForward), m_path(path) {}
++private:
++    bool DoCorrupt(ns3::Ptr<ns3::Packet> p) override {
++        using namespace ns3;
++        const int64_t now=Simulator::Now().GetNanoSeconds();
++        if (m_used || now<m_event) return false;
++        TcpStudyTxTag tag;
++        OrbitOriginalTag original;
++        if (!p->PeekPacketTag(tag) || !p->PeekPacketTag(original) || !original.IsOriginal() ||
++            tag.GetFlowId()!=0 || tag.GetTxTimeNs()<m_earliest || tag.GetTxTimeNs()>=m_event)
++            return false;
++        auto copy=p->Copy();
++        PppHeader ppp; Ipv4Header ip; TcpHeader tcp;
++        if (copy->GetSize()<42) return false;
++        copy->RemoveHeader(ppp);
++        if (ppp.GetProtocol()!=0x21) return false;
++        copy->RemoveHeader(ip);
++        if (ip.GetProtocol()!=6) return false;
++        copy->RemoveHeader(tcp);
++        if (copy->GetSize()==0 || tcp.GetDestinationPort()!=1024) return false;
++        m_used=true;
++        std::ofstream out(m_path);
++        out << "time_ns,flow_id,tx_id,tx_time_ns,seq,payload_bytes,event_ns,earliest_tx_ns\n"
++            << now << ',' << tag.GetFlowId() << ',' << tag.GetTxId() << ',' << tag.GetTxTimeNs()
++            << ',' << tcp.GetSequenceNumber().GetValue() << ',' << copy->GetSize() << ','
++            << m_event << ',' << m_earliest << '\n';
++        return true; // PointToPointNetDevice emits the ordinary PhyRxDrop trace.
++    }
++    void DoReset() override {} // One drop for the whole run, shared across destination devices.
++    int64_t m_event, m_earliest;
++    std::string m_path;
++    bool m_used{false};
++};
++
++inline void InstallOrbitOldFlightDrop(const ns3::NodeContainer& nodes) {
++    using namespace ns3;
++    const char* enabled=std::getenv("CS30401_ORBIT_ACTUAL_DROP");
++    if (!enabled || std::string(enabled)!="1") return;
++    const char* directory=std::getenv("CS30401_STUDY_TRACE_DIR");
++    NS_ABORT_MSG_IF(!directory || nodes.GetN()<=1585, "Invalid old-flight drop setup");
++    auto error=CreateObject<OrbitOldFlightDrop>(26200000000LL, 48847704LL,
++                  std::string(directory)+"/orbit_actual_drop.csv");
++    uint32_t installed=0;
++    std::ofstream installation(std::string(directory)+"/orbit_drop_install.csv");
++    installation << "node_id,device_id,device_type,event_ns,old_forward_ns\n";
++    for (uint32_t i=0; i<nodes.Get(1585)->GetNDevices(); ++i) {
++        auto raw=nodes.Get(1585)->GetDevice(i);
++        auto gsl=DynamicCast<GSLNetDevice>(raw);
++        auto p2p=DynamicCast<PointToPointNetDevice>(raw);
++        if (gsl) gsl->SetReceiveErrorModel(error);
++        else if (p2p) p2p->SetAttribute("ReceiveErrorModel", PointerValue(error));
++        else continue;
++        installation << "1585," << i << ',' << raw->GetInstanceTypeId().GetName()
++                     << ",26200000000,48847704\n";
++        ++installed;
++    }
++    NS_ABORT_MSG_IF(installed==0, "No destination GSL device for actual-drop control");
++}
++#endif
+diff --git a/scratch/main_satnet/queue_area.h b/scratch/main_satnet/queue_area.h
+new file mode 100644
+index 0000000..b259e3e
+--- /dev/null
++++ b/scratch/main_satnet/queue_area.h
+@@ -0,0 +1,67 @@
++#ifndef CS30401_QUEUE_MITIGATION_AREA_H
++#define CS30401_QUEUE_MITIGATION_AREA_H
++#include "ns3/abort.h"
++#include <algorithm>
++#include <cstdint>
++#include <map>
++
++namespace ns3 { namespace queuemitigation {
++struct AreaBin {
++    uint64_t packetNs{0}, byteNs{0}, fullNs{0};
++    uint32_t peakPackets{0}, peakBytes{0};
++};
++
++// Read-only metrics for a queue initially empty at simulation time zero.
++// Two callbacks at the same time may change packet and byte state in either
++// order: integrating the PREVIOUS state before each change adds zero area
++// between them. No timer or new simulator event is introduced.
++class QueueArea {
++  public:
++    explicit QueueArea(uint32_t maximumPackets = 0, int64_t stepNs = 100000000)
++        : m_maximum(maximumPackets), m_step(stepNs) {
++        NS_ABORT_MSG_IF(stepNs <= 0, "Queue area requires a positive bin width");
++    }
++    void Packets(uint32_t oldValue, uint32_t newValue, int64_t now) {
++        NS_ABORT_MSG_IF(oldValue != m_packets, "Queue packet trace lost a transition");
++        Advance(now); m_packets = newValue; Peak(now);
++    }
++    void Bytes(uint32_t oldValue, uint32_t newValue, int64_t now) {
++        NS_ABORT_MSG_IF(oldValue != m_bytes, "Queue byte trace lost a transition");
++        Advance(now); m_bytes = newValue; Peak(now);
++    }
++    void Advance(int64_t now) {
++        NS_ABORT_MSG_IF(now < m_last || now < 0, "Queue area time decreased");
++        // An omitted idle interval is exactly zero, not an unknown snapshot.
++        if (!m_packets && !m_bytes) { m_last = now; return; }
++        while (m_last < now) {
++            const int64_t bucket = m_last / m_step;
++            const int64_t end = std::min(now, (bucket + 1) * m_step);
++            const uint64_t duration = static_cast<uint64_t>(end - m_last);
++            auto& bin = m_bins[bucket];
++            bin.packetNs += uint64_t(m_packets) * duration;
++            bin.byteNs += uint64_t(m_bytes) * duration;
++            if (m_maximum && m_packets == m_maximum) bin.fullNs += duration;
++            bin.peakPackets = std::max(bin.peakPackets, m_packets);
++            bin.peakBytes = std::max(bin.peakBytes, m_bytes);
++            m_last = end;
++        }
++    }
++    const std::map<int64_t, AreaBin>& Bins() const { return m_bins; }
++    int64_t ObservedUntilNs() const { return m_last; }
++    int64_t StepNs() const { return m_step; }
++    uint32_t PacketState() const { return m_packets; }
++    uint32_t ByteState() const { return m_bytes; }
++    uint32_t MaximumPackets() const { return m_maximum; }
++  private:
++    void Peak(int64_t now) {
++        if (!m_packets && !m_bytes) return;
++        auto& bin = m_bins[now / m_step];
++        bin.peakPackets = std::max(bin.peakPackets, m_packets);
++        bin.peakBytes = std::max(bin.peakBytes, m_bytes);
++    }
++    uint32_t m_maximum, m_packets{0}, m_bytes{0};
++    int64_t m_step, m_last{0};
++    std::map<int64_t, AreaBin> m_bins;
++};
++}}
++#endif
+diff --git a/scratch/main_satnet/queue_observer.h b/scratch/main_satnet/queue_observer.h
+new file mode 100644
+index 0000000..5406290
+--- /dev/null
++++ b/scratch/main_satnet/queue_observer.h
+@@ -0,0 +1,266 @@
++#ifndef CS30401_ORBIT_QUEUE_AUDIT_H
++#define CS30401_ORBIT_QUEUE_AUDIT_H
++#include "ns3/ipv4-l3-protocol.h"
++#include "ns3/ipv4-header.h"
++#include "ns3/tcp-header.h"
++#include "ns3/ppp-header.h"
++#include "ns3/point-to-point-laser-net-device.h"
++#include "ns3/gsl-net-device.h"
++#include "ns3/point-to-point-net-device.h"
++#include "ns3/tcp-flow-send-application.h"
++#include "queue_area.h"
++#include "ns3/traffic-control-layer.h"
++#include <cstdlib>
++#include <fstream>
++#include <map>
++#include <memory>
++#include <vector>
++#include <algorithm>
++#include <cstdint>
++
++namespace ns3 { namespace orbitqueue {
++static std::unique_ptr<std::ofstream> drops, coverage, queues, pendingCsv, focusCsv, occupancyCsv, areaCsv;
++struct Counters { uint64_t enq{0}, deq{0}, before{0}, after{0}, samples{0}, sum{0}, max{0}; };
++struct Pending { int64_t time; uint64_t flow; uint64_t entry; };
++struct QueueRecord {
++    uint32_t node, device;
++    Ptr<Queue<Packet>> queue;
++    int64_t bucket{-1};
++    uint64_t nextEntry{0};
++    bool startWritten{false}, endWritten{false};
++    uint32_t previousPackets{0}, previousBytes{0};
++    std::unique_ptr<queuemitigation::QueueArea> area;
++    std::map<uint64_t, Counters> counters;
++    // Queue::DoEnqueue stores this same Ptr; DoDequeue traces the stored Ptr.
++    // Fragments can share a UID, so UID is not a unique queue-entry identity.
++    std::map<const Packet*, Pending> pending;
++};
++static std::vector<std::unique_ptr<QueueRecord>> records;
++static uint64_t Flow(Ptr<const Packet> p) {
++    TcpStudyTxTag tag;
++    return p->PeekPacketTag(tag) ? tag.GetFlowId() : UINT64_MAX;
++}
++static void FlushQueue(QueueRecord& r) {
++    if (r.bucket < 0) return;
++    for (const auto& entry : r.counters) {
++        const auto& c = entry.second;
++        *queues << r.bucket * 100000000 << ',' << (r.bucket + 1) * 100000000
++                << ',' << r.node << ',' << r.device << ',';
++        if (entry.first != UINT64_MAX) *queues << entry.first;
++        *queues << ',' << c.enq << ',' << c.deq << ',' << c.before << ',' << c.after
++                << ',' << c.samples << ',' << c.sum << ',' << c.max
++                << ',' << Simulator::Now().GetNanoSeconds()
++                << ',' << r.queue->GetNPackets() << ',' << r.queue->GetNBytes() << '\n';
++    }
++    r.counters.clear();
++}
++static Counters& At(QueueRecord* r, Ptr<const Packet> p) {
++    const int64_t bucket = Simulator::Now().GetNanoSeconds() / 100000000;
++    if (r->bucket != bucket) { FlushQueue(*r); r->bucket = bucket; }
++    return r->counters[Flow(p)];
++}
++
++static void Focus(QueueRecord* r,const char* event,Ptr<const Packet> p,uint64_t entry,int64_t wait) {
++    const int64_t now=Simulator::Now().GetNanoSeconds();
++    if(now<74500000000LL || now>=77500000000LL) return;
++    TcpStudyTxTag tag;const bool tagged=p->PeekPacketTag(tag);
++    *focusCsv << now << ',' << r->node << ',' << r->device << ',' << event << ',' << entry
++        << ',' << p->GetUid() << ',';
++    if(tagged) *focusCsv << tag.GetFlowId();
++    *focusCsv << ',';if(tagged) *focusCsv << tag.GetTxId();
++    *focusCsv << ',';if(tagged) *focusCsv << tag.GetTxTimeNs();
++    *focusCsv << ',' << p->GetSize() << ',' << r->queue->GetNPackets()
++        << ',' << r->queue->GetNBytes() << ',' << r->queue->GetMaxSize() << ',' << wait << '\n';
++}
++static void OccupancyRow(QueueRecord* r,int64_t time,const char* event,uint32_t oldN,uint32_t newN,uint32_t bytes) {
++    *occupancyCsv << time << ',' << r->node << ',' << r->device << ',' << event << ','
++        << oldN << ',' << newN << ',' << bytes << ',' << r->queue->GetMaxSize() << '\n';
++}
++static void AreaBytes(QueueRecord* r,uint32_t oldBytes,uint32_t newBytes) {
++    r->area->Bytes(oldBytes,newBytes,Simulator::Now().GetNanoSeconds());
++}
++static void Occupancy(QueueRecord* r,uint32_t oldN,uint32_t newN) {
++    r->area->Packets(oldN,newN,Simulator::Now().GetNanoSeconds());
++    const int64_t now=Simulator::Now().GetNanoSeconds();
++    if(now>=74500000000LL && !r->startWritten) {
++        OccupancyRow(r,74500000000LL,"FOCUS_START_HELD",r->previousPackets,r->previousPackets,r->previousBytes);
++        r->startWritten=true;
++    }
++    if(now>=77500000000LL && !r->endWritten) {
++        OccupancyRow(r,77500000000LL,"FOCUS_END_HELD",r->previousPackets,r->previousPackets,r->previousBytes);
++        r->endWritten=true;
++    }
++    if(now>=74500000000LL && now<77500000000LL)
++        OccupancyRow(r,now,"CHANGE",oldN,newN,r->queue->GetNBytes());
++    r->previousPackets=newN;r->previousBytes=r->queue->GetNBytes();
++}
++
++static void Enqueue(QueueRecord* r, Ptr<const Packet> p) {
++    ++At(r,p).enq;
++    const Packet* key = PeekPointer(p);
++    NS_ABORT_MSG_IF(r->pending.count(key), "Same Packet object queued twice in one device queue");
++    r->pending[key] = {Simulator::Now().GetNanoSeconds(), Flow(p), ++r->nextEntry};
++    Focus(r,"ENQUEUE",p,r->nextEntry,-1);
++}
++static void Dequeue(QueueRecord* r, Ptr<const Packet> p) {
++    auto& c = At(r,p); ++c.deq;
++    auto it = r->pending.find(PeekPointer(p));
++    NS_ABORT_MSG_IF(it == r->pending.end(), "Dequeue without observed enqueue");
++    NS_ABORT_MSG_IF(Flow(p) != it->second.flow, "Flow metadata changed inside device queue");
++    const uint64_t wait = Simulator::Now().GetNanoSeconds() - it->second.time;
++    ++c.samples; c.sum += wait; c.max = std::max(c.max, wait);
++    Focus(r,"DEQUEUE",p,it->second.entry,wait);
++    r->pending.erase(it);
++}
++static void QueueBefore(QueueRecord* r, Ptr<const Packet> p) { ++At(r,p).before; Focus(r,"DROP_BEFORE",p,0,-1); }
++static void QueueAfter(QueueRecord* r, Ptr<const Packet> p) {
++    ++At(r,p).after;
++    // Dequeue precedes DropAfterDequeue, so served-sojourn interpretation fails.
++    NS_ABORT_MSG_IF(true,"DropAfterDequeue is outside served-sojourn observer semantics");
++}
++static void Drop(uint32_t node, uint32_t device, std::string layer,
++                 Ptr<const Packet> p, const Ipv4Header* supplied=nullptr, int reason=-1) {
++    auto copy = p->Copy();
++    Ipv4Header ip;
++    bool parsed = false;
++    if (supplied) { ip = *supplied; parsed = true; }
++    else if (copy->GetSize() >= 20) {
++        uint8_t bytes[2]; copy->CopyData(bytes,2);
++        if ((bytes[0] >> 4) != 4 && bytes[0] == 0 && bytes[1] == 0x21) {
++            PppHeader ppp; copy->RemoveHeader(ppp);
++        }
++        copy->CopyData(bytes,1);
++        if ((bytes[0] >> 4) == 4) parsed = copy->RemoveHeader(ip) > 0;
++    }
++    *drops << Simulator::Now().GetNanoSeconds() << ',' << node << ',' << device << ','
++           << layer << ',' << reason << ',' << p->GetUid() << ',';
++    const uint64_t flow = Flow(p);
++    if (flow != UINT64_MAX) *drops << flow;
++    *drops << ',';
++    if (parsed) *drops << ip.GetSource() << ',' << ip.GetDestination(); else *drops << ',';
++    *drops << ',';
++    if (parsed && ip.GetProtocol() == 6 && ip.GetFragmentOffset() == 0 && copy->GetSize() >= 20) {
++        TcpHeader tcp; copy->RemoveHeader(tcp);
++        *drops << tcp.GetSourcePort() << ',' << tcp.GetDestinationPort() << ','
++               << tcp.GetSequenceNumber().GetValue() << ',' << copy->GetSize();
++    } else *drops << ",,,";
++    *drops << '\n';
++}
++static void DeviceDrop(uint32_t node,uint32_t device,std::string layer,Ptr<const Packet> p) {
++    Drop(node,device,layer,p);
++}
++static void IpDrop(uint32_t node,const Ipv4Header& ip,Ptr<const Packet> p,
++                   Ipv4L3Protocol::DropReason reason,Ptr<Ipv4>,uint32_t interface) {
++    Drop(node,interface,"ipv4",p,&ip,static_cast<int>(reason));
++}
++static void Finish() {
++    const int64_t cutoff = Simulator::Now().GetNanoSeconds();
++    for (auto& r : records) {
++        FlushQueue(*r);
++        r->area->Advance(cutoff);
++        NS_ABORT_MSG_IF(r->area->PacketState()!=r->queue->GetNPackets() ||
++                        r->area->ByteState()!=r->queue->GetNBytes(),"Exact area state differs from queue");
++        for(const auto& item:r->area->Bins()) {
++            const int64_t begin=item.first*r->area->StepNs();
++            if(begin>=cutoff) continue;
++            const int64_t end=std::min(begin+r->area->StepNs(),cutoff);
++            const auto& b=item.second;
++            *areaCsv << begin << ',' << end << ',' << r->node << ',' << r->device
++                << ',' << b.packetNs << ',' << b.byteNs << ',' << b.peakPackets
++                << ',' << b.peakBytes << ',' << b.fullNs << ',' << r->area->MaximumPackets()
++                << ',' << cutoff << '\n';
++        }
++        if(!r->startWritten) OccupancyRow(r.get(),74500000000LL,"FOCUS_START_HELD",r->previousPackets,r->previousPackets,r->previousBytes);
++        if(!r->endWritten) OccupancyRow(r.get(),77500000000LL,"FOCUS_END_HELD",r->previousPackets,r->previousPackets,r->previousBytes);
++        NS_ABORT_MSG_IF(r->pending.size() != r->queue->GetNPackets(),
++                        "Observed pending count differs from actual device queue");
++        std::map<uint64_t, Counters> byFlow;
++        for (const auto& item : r->pending) {
++            auto& row = byFlow[item.second.flow];
++            const uint64_t age = cutoff - item.second.time;
++            ++row.samples; row.sum += age; row.max = std::max(row.max,age);
++        }
++        for (const auto& item : byFlow) {
++            *pendingCsv << cutoff << ',' << r->node << ',' << r->device << ',';
++            if (item.first != UINT64_MAX) *pendingCsv << item.first;
++            *pendingCsv << ',' << item.second.samples << ',' << item.second.sum
++                        << ',' << item.second.max << '\n';
++        }
++    }
++    queues->flush(); drops->flush(); coverage->flush(); pendingCsv->flush(); focusCsv->flush(); occupancyCsv->flush(); areaCsv->flush();
++}
++static void Install(NodeContainer nodes) {
++    const char* enabled = std::getenv("CS30401_ORBIT_QUEUE_TRACE");
++    if (!enabled || std::string(enabled) != "1") return;
++    const char* directory = std::getenv("CS30401_ORBIT_QUEUE_TRACE_DIR");
++    NS_ABORT_MSG_IF(!directory, "Observation directory is required");
++    areaCsv=std::make_unique<std::ofstream>(std::string(directory)+"/queue_area_bins.csv");
++    *areaCsv << "bin_start_ns,bin_end_ns,node_id,device_id,q_packet_ns,q_byte_ns,peak_packets,peak_bytes,full_ns,max_packets,cutoff_ns\n";
++    NS_ABORT_MSG_IF(!areaCsv->good(),"Cannot open exact area CSV");
++    focusCsv=std::make_unique<std::ofstream>(std::string(directory)+"/queue_focus.csv");
++    occupancyCsv=std::make_unique<std::ofstream>(std::string(directory)+"/queue_occupancy.csv");
++    *focusCsv << "time_ns,node_id,device_id,event,queue_entry_id,packet_uid,flow_id,tx_id,tx_time_ns,packet_bytes,queue_packets,queue_bytes,max_size,sojourn_ns\n";
++    *occupancyCsv << "time_ns,node_id,device_id,event,old_packets,new_packets,queue_bytes,max_size\n";
++    NS_ABORT_MSG_IF(!focusCsv->good() || !occupancyCsv->good(),"Cannot open focus observers");
++    drops = std::make_unique<std::ofstream>(std::string(directory)+"/orbit_drops.csv");
++    coverage = std::make_unique<std::ofstream>(std::string(directory)+"/orbit_coverage.csv");
++    queues = std::make_unique<std::ofstream>(std::string(directory)+"/orbit_queue_bins.csv");
++    pendingCsv = std::make_unique<std::ofstream>(std::string(directory)+"/orbit_queue_pending.csv");
++    NS_ABORT_MSG_IF(!drops->good() || !coverage->good() || !queues->good() || !pendingCsv->good(), "Cannot open network observers");
++    *drops << "time_ns,node_id,device_id,layer,reason,packet_uid,flow_id,src,dst,src_port,dst_port,seq,payload_bytes\n";
++    *coverage << "node_id,device_id,layer,connected\n";
++    *queues << "bin_start_ns,bin_end_ns,node_id,device_id,flow_id,enqueued,dequeued,drop_before,drop_after,sojourn_samples,sojourn_sum_ns,sojourn_max_ns,flush_time_ns,queue_packets_at_flush,queue_bytes_at_flush\n";
++    *pendingCsv << "cutoff_ns,node_id,device_id,flow_id,pending_packets,pending_age_sum_ns,max_pending_age_ns\n";
++    for (auto it=nodes.Begin();it!=nodes.End();++it) {
++        auto node=*it;
++        auto ip=node->GetObject<Ipv4L3Protocol>();
++        bool ok=ip && ip->TraceConnectWithoutContext("Drop",MakeBoundCallback(&IpDrop,node->GetId()));
++        *coverage << node->GetId() << ",-1,ipv4," << ok << '\n';
++        NS_ABORT_MSG_IF(!ok,"Missing IPv4 drop observer");
++        auto tc=node->GetObject<TrafficControlLayer>();
++        ok=tc && tc->TraceConnectWithoutContext("TcDrop",MakeBoundCallback(&DeviceDrop,node->GetId(),UINT32_MAX,std::string("TcDrop")));
++        *coverage << node->GetId() << ",-1,TcDrop," << ok << '\n';
++        NS_ABORT_MSG_IF(!ok,"Missing TcDrop observer");
++        for (uint32_t i=0;i<node->GetNDevices();++i) {
++            auto device=node->GetDevice(i);
++            Ptr<Queue<Packet>> queue;
++            if (auto isl=DynamicCast<PointToPointLaserNetDevice>(device)) queue=isl->GetQueue();
++            else if (auto gsl=DynamicCast<GSLNetDevice>(device)) queue=gsl->GetQueue();
++            else if (auto p2p=DynamicCast<PointToPointNetDevice>(device)) queue=p2p->GetQueue();
++            else continue;
++            NS_ABORT_MSG_IF(!queue,"Missing device queue");
++            ok=!tc->GetRootQueueDiscOnDevice(device);
++            *coverage << node->GetId() << ',' << i << ",root_queue_disc_absent," << ok << '\n';
++            // Record root-qdisc presence; do not infer absence or losslessness from queue hooks.
++            auto r=std::make_unique<QueueRecord>(); r->node=node->GetId(); r->device=i; r->queue=queue;
++            NS_ABORT_MSG_IF(queue->GetNPackets()!=0 || queue->GetNBytes()!=0 ||
++                            queue->GetMaxSize().GetUnit()!=QueueSizeUnit::PACKETS,
++                            "Exact area requires initial empty packet-limit queue");
++            r->area=std::make_unique<queuemitigation::QueueArea>(queue->GetMaxSize().GetValue());
++            for (const std::string layer : {"MacTxDrop","PhyTxDrop","PhyRxDrop"}) {
++                ok=device->TraceConnectWithoutContext(layer,MakeBoundCallback(&DeviceDrop,node->GetId(),i,layer));
++                *coverage << node->GetId() << ',' << i << ',' << layer << ',' << ok << '\n';
++                NS_ABORT_MSG_IF(!ok,"Missing device drop observer");
++            }
++            for (const auto& hook : std::vector<std::pair<std::string,Callback<void,Ptr<const Packet>>>>{
++                {"Enqueue",MakeBoundCallback(&Enqueue,r.get())},
++                {"Dequeue",MakeBoundCallback(&Dequeue,r.get())},
++                {"DropBeforeEnqueue",MakeBoundCallback(&QueueBefore,r.get())},
++                {"DropAfterDequeue",MakeBoundCallback(&QueueAfter,r.get())}}) {
++                ok=queue->TraceConnectWithoutContext(hook.first,hook.second);
++                *coverage << node->GetId() << ',' << i << ',' << hook.first << ',' << ok << '\n';
++                NS_ABORT_MSG_IF(!ok,"Missing queue observer");
++            }
++            NS_ABORT_MSG_IF(!queue->TraceConnectWithoutContext("PacketsInQueue",MakeBoundCallback(&Occupancy,r.get())),"Missing occupancy trace");
++            NS_ABORT_MSG_IF(!queue->TraceConnectWithoutContext("BytesInQueue",MakeBoundCallback(&AreaBytes,r.get())),"Missing exact byte-state trace");
++            // Also preserve sparse, attributable drop records at the device queue layer.
++            for (const std::string layer : {"DropBeforeEnqueue","DropAfterDequeue"})
++                NS_ABORT_MSG_IF(!queue->TraceConnectWithoutContext(layer,MakeBoundCallback(&DeviceDrop,node->GetId(),i,layer)),"Missing queue drop observer");
++            records.push_back(std::move(r));
++        }
++    }
++    coverage->flush();
++    Simulator::ScheduleDestroy(&Finish);
++}
++}} // ns3::orbitqueue
++#endif
+diff --git a/scratch/main_satnet/service_observer.h b/scratch/main_satnet/service_observer.h
+new file mode 100644
+index 0000000..861b10f
+--- /dev/null
++++ b/scratch/main_satnet/service_observer.h
+@@ -0,0 +1,76 @@
++#ifndef CS30401_ORBIT_QUEUE_SERVICE_H
++#define CS30401_ORBIT_QUEUE_SERVICE_H
++#include "queue_observer.h"
++namespace ns3 { namespace orbitqueueservice {
++struct Count {uint64_t busy{0}, packets{0}, bytes{0};};
++struct Record {
++    uint32_t node,device;
++    Ptr<const Packet> active;
++    int64_t start{-1};
++    uint64_t flow{UINT64_MAX};
++    std::map<std::pair<int64_t,uint64_t>,Count> bins;
++};
++static std::vector<std::unique_ptr<Record>> records;
++static std::unique_ptr<std::ofstream> output,coverage;
++static uint64_t Flow(Ptr<const Packet> p) {TcpStudyTxTag t;return p->PeekPacketTag(t)?t.GetFlowId():UINT64_MAX;}
++static void AddBusy(Record& r,int64_t end) {
++    NS_ABORT_MSG_IF(end<r.start,"Service time decreases");
++    for (int64_t t=r.start;t<end;) {
++        const int64_t bucket=t/100000000;
++        const int64_t next=std::min(end,(bucket+1)*100000000);
++        r.bins[{bucket,r.flow}].busy+=next-t;t=next;
++    }
++}
++static void Begin(Record* r,Ptr<const Packet> p) {
++    NS_ABORT_MSG_IF(r->active,"Overlapping transmission on one device");
++    r->active=p;r->start=Simulator::Now().GetNanoSeconds();r->flow=Flow(p);
++    auto& c=r->bins[{r->start/100000000,r->flow}];++c.packets;c.bytes+=p->GetSize();
++}
++static void End(Record* r,Ptr<const Packet> p) {
++    NS_ABORT_MSG_IF(!r->active || PeekPointer(r->active)!=PeekPointer(p),"Service end packet differs from begin");
++    NS_ABORT_MSG_IF(Flow(p)!=r->flow,"Flow changed during serialization");
++    AddBusy(*r,Simulator::Now().GetNanoSeconds());r->active=nullptr;r->start=-1;
++}
++static void Finish() {
++    const int64_t cutoff=Simulator::Now().GetNanoSeconds();
++    for (auto& r:records) {
++        if (r->active) AddBusy(*r,cutoff);
++        for (const auto& e:r->bins) {
++            const auto& c=e.second;
++            *output << e.first.first*100000000 << ',' << (e.first.first+1)*100000000
++                    << ',' << r->node << ',' << r->device << ',';
++            if (e.first.second!=UINT64_MAX) *output << e.first.second;
++            *output << ',' << c.busy << ',' << c.packets << ',' << c.bytes
++                    << ',' << cutoff << ',' << bool(r->active) << '\n';
++        }
++    }
++    output->flush();coverage->flush();
++}
++static void Install(NodeContainer nodes) {
++    const char* enabled=std::getenv("CS30401_ORBIT_SERVICE_TRACE");
++    if (!enabled || std::string(enabled)!="1") return;
++    const char* directory=std::getenv("CS30401_STUDY_TRACE_DIR");
++    NS_ABORT_MSG_IF(!directory,"Missing service directory");
++    output=std::make_unique<std::ofstream>(std::string(directory)+"/orbit_service_bins.csv");
++    coverage=std::make_unique<std::ofstream>(std::string(directory)+"/orbit_service_coverage.csv");
++    NS_ABORT_MSG_IF(!output->good() || !coverage->good(),"Cannot create service trace");
++    *output << "bin_start_ns,bin_end_ns,node_id,device_id,flow_id,busy_ns,tx_packets,serialized_bytes_started,cutoff_ns,device_tx_active_at_cutoff\n";
++    *coverage << "node_id,device_id,hook,connected\n";
++    for (auto it=nodes.Begin();it!=nodes.End();++it) {
++        auto node=*it;
++        for (uint32_t i=0;i<node->GetNDevices();++i) {
++            auto dev=node->GetDevice(i);
++            if (!DynamicCast<GSLNetDevice>(dev) && !DynamicCast<PointToPointLaserNetDevice>(dev) && !DynamicCast<PointToPointNetDevice>(dev)) continue;
++            auto r=std::make_unique<Record>();r->node=node->GetId();r->device=i;
++            bool ok=dev->TraceConnectWithoutContext("PhyTxBegin",MakeBoundCallback(&Begin,r.get()));
++            *coverage << node->GetId() << ',' << i << ",PhyTxBegin," << ok << '\n';
++            NS_ABORT_MSG_IF(!ok,"Missing PhyTxBegin");
++            ok=dev->TraceConnectWithoutContext("PhyTxEnd",MakeBoundCallback(&End,r.get()));
++            *coverage << node->GetId() << ',' << i << ",PhyTxEnd," << ok << '\n';
++            NS_ABORT_MSG_IF(!ok,"Missing PhyTxEnd");records.push_back(std::move(r));
++        }
++    }
++    Simulator::ScheduleDestroy(&Finish);
++}
++}}
++#endif
+diff --git a/scratch/main_satnet/study_drop_trace.h b/scratch/main_satnet/study_drop_trace.h
+new file mode 100755
+index 0000000..c9c2c0f
+--- /dev/null
++++ b/scratch/main_satnet/study_drop_trace.h
+@@ -0,0 +1,115 @@
++#ifndef CS30401_STUDY_DROP_TRACE_H
++#define CS30401_STUDY_DROP_TRACE_H
++
++#include "ns3/ipv4-l3-protocol.h"
++#include "ns3/ipv4-header.h"
++#include "ns3/tcp-header.h"
++#include "ns3/ppp-header.h"
++#include "ns3/point-to-point-laser-net-device.h"
++#include "ns3/gsl-net-device.h"
++#include "ns3/point-to-point-net-device.h"
++#include "ns3/tcp-flow-send-application.h"
++#include "ns3/traffic-control-layer.h"
++#include <cstdlib>
++#include <fstream>
++#include <memory>
++
++namespace ns3 {
++namespace cs30401study {
++static std::unique_ptr<std::ofstream> drops;
++static std::unique_ptr<std::ofstream> coverage;
++
++static void WriteDrop(uint32_t node, uint32_t device, const std::string& layer,
++                      int reason, Ptr<const Packet> packet, const Ipv4Header* ip = nullptr) {
++    Ptr<Packet> copy = packet->Copy();
++    Ipv4Header header;
++    bool parsed = false;
++    if (ip) {
++        header = *ip;
++        parsed = true;
++    } else if (copy->GetSize() >= 20) {
++        uint8_t first[2];
++        copy->CopyData(first, 2);
++        if ((first[0] >> 4) != 4 && first[0] == 0 && first[1] == 0x21) {
++            PppHeader ppp;
++            copy->RemoveHeader(ppp);
++        }
++        copy->CopyData(first, 1);
++        if ((first[0] >> 4) == 4) parsed = copy->RemoveHeader(header) > 0;
++    }
++    *drops << Simulator::Now().GetNanoSeconds() << ',' << layer << ',' << node << ','
++           << device << ',' << reason << ',' << packet->GetUid() << ',';
++    if (parsed) *drops << header.GetSource() << ',' << header.GetDestination();
++    else *drops << ',';
++    *drops << ',';
++    if (parsed && header.GetProtocol() == 6 && header.GetFragmentOffset() == 0 && copy->GetSize() >= 20) {
++        TcpHeader tcp;
++        copy->RemoveHeader(tcp);
++        *drops << tcp.GetSourcePort() << ',' << tcp.GetDestinationPort() << ','
++               << tcp.GetSequenceNumber().GetValue() << ',' << copy->GetSize() << ',' << unsigned(tcp.GetFlags());
++    } else *drops << ",,,,";
++    TcpStudyTxTag tag;
++    if (packet->PeekPacketTag(tag)) {
++        *drops << ',' << tag.GetFlowId() << ',' << tag.GetTxId() << ',' << tag.GetTxTimeNs();
++    } else *drops << ",,,";
++    *drops << '\n';
++}
++
++static void DeviceDrop(uint32_t node, uint32_t device, std::string layer, Ptr<const Packet> packet) {
++    WriteDrop(node, device, layer, -1, packet);
++}
++static void IpDrop(uint32_t node, const Ipv4Header& header, Ptr<const Packet> packet,
++                   Ipv4L3Protocol::DropReason reason, Ptr<Ipv4> ipv4, uint32_t interface) {
++    WriteDrop(node, interface, "ipv4", int(reason), packet, &header);
++}
++
++static void Install(NodeContainer nodes) {
++    const char* enabled = std::getenv("CS30401_STUDY_TRACE");
++    if (!enabled || std::string(enabled) != "1") return;
++    const char* folder = std::getenv("CS30401_STUDY_TRACE_DIR");
++    if (!folder) throw std::runtime_error("CS30401_STUDY_TRACE_DIR is required for study traces");
++    drops = std::make_unique<std::ofstream>(std::string(folder) + "/study_drops.csv");
++    coverage = std::make_unique<std::ofstream>(std::string(folder) + "/study_drop_coverage.csv");
++    if (!*drops || !*coverage) throw std::runtime_error("Cannot open study drop traces");
++    *drops << "time_ns,layer,node,device,reason,uid,src,dst,src_port,dst_port,seq,payload_bytes,flags,flow_id,tx_id,tx_time_ns\n";
++    *coverage << "node,device,layer,connected\n";
++    for (auto it = nodes.Begin(); it != nodes.End(); ++it) {
++        Ptr<Node> node = *it;
++        Ptr<Ipv4L3Protocol> ip = node->GetObject<Ipv4L3Protocol>();
++        bool ok = ip && ip->TraceConnectWithoutContext("Drop", MakeBoundCallback(&IpDrop, node->GetId()));
++        *coverage << node->GetId() << ",-1,ipv4," << ok << '\n';
++        if (!ok) throw std::runtime_error("Missing IPv4 drop trace");
++        Ptr<TrafficControlLayer> tc = node->GetObject<TrafficControlLayer>();
++        ok = tc && tc->TraceConnectWithoutContext("TcDrop",
++             MakeBoundCallback(&DeviceDrop, node->GetId(), uint32_t(-1), std::string("TcDrop")));
++        *coverage << node->GetId() << ",-1,TcDrop," << ok << '\n';
++        if (!ok) throw std::runtime_error("Missing traffic-control drop trace");
++        for (uint32_t index = 0; index < node->GetNDevices(); ++index) {
++            Ptr<NetDevice> device = node->GetDevice(index);
++            Ptr<Queue<Packet>> queue;
++            if (auto isl = DynamicCast<PointToPointLaserNetDevice>(device)) queue = isl->GetQueue();
++            else if (auto gsl = DynamicCast<GSLNetDevice>(device)) queue = gsl->GetQueue();
++            else if (auto p2p = DynamicCast<PointToPointNetDevice>(device)) queue = p2p->GetQueue();
++            else continue; // Loopback is not an ISL/GSL forwarding link.
++            ok = !tc->GetRootQueueDiscOnDevice(device);
++            *coverage << node->GetId() << ',' << index << ",root_queue_disc_absent," << ok << '\n';
++            if (!ok) throw std::runtime_error("Root queue disc requires a QueueDisc::Drop hook or explicit removal");
++            // MacRxDrop is unimplemented (#if 0) in these device classes.
++            for (const std::string layer : {"MacTxDrop", "PhyTxDrop", "PhyRxDrop"}) {
++                ok = device->TraceConnectWithoutContext(layer, MakeBoundCallback(&DeviceDrop, node->GetId(), index, layer));
++                *coverage << node->GetId() << ',' << index << ',' << layer << ',' << ok << '\n';
++                if (!ok) throw std::runtime_error("Missing device drop trace: " + layer);
++            }
++            if (!queue) throw std::runtime_error("Missing ISL/GSL queue");
++            for (const std::string layer : {"DropBeforeEnqueue", "DropAfterDequeue"}) {
++                ok = queue->TraceConnectWithoutContext(layer, MakeBoundCallback(&DeviceDrop, node->GetId(), index, layer));
++                *coverage << node->GetId() << ',' << index << ',' << layer << ',' << ok << '\n';
++                if (!ok) throw std::runtime_error("Missing queue drop trace: " + layer);
++            }
++        }
++    }
++    coverage->flush();
++}
++} // namespace cs30401study
++} // namespace ns3
++#endif
+diff --git a/scratch/study_micro/study_micro.cc b/scratch/study_micro/study_micro.cc
+new file mode 100755
+index 0000000..859aedf
+--- /dev/null
++++ b/scratch/study_micro/study_micro.cc
+@@ -0,0 +1,105 @@
++// Controlled delay-step diagnostic. It is not a replacement for the LEO model.
++#include "ns3/core-module.h"
++#include "ns3/network-module.h"
++#include "ns3/internet-module.h"
++#include "ns3/point-to-point-module.h"
++#include "ns3/traffic-control-module.h"
++#include "ns3/tcp-flow-send-helper.h"
++#include "ns3/tcp-flow-sink-helper.h"
++#include "ns3/tcp-flow-send-application.h"
++#include "../main_satnet/study_drop_trace.h"
++#include <filesystem>
++using namespace ns3;
++
++class StudyDropOnce : public ErrorModel {
++public:
++    StudyDropOnce(double time, uint32_t sequence) : m_time(time), m_sequence(sequence) {}
++private:
++    bool DoCorrupt(Ptr<Packet> packet) override {
++        if (m_used || (m_time < 0 && m_sequence == 0) ||
++            (m_time >= 0 && Simulator::Now().GetSeconds() < m_time)) return false;
++        auto copy = packet->Copy();
++        PppHeader ppp; Ipv4Header ip; TcpHeader tcp;
++        if (copy->GetSize() < 42) return false;
++        copy->RemoveHeader(ppp);
++        if (ppp.GetProtocol() != 0x21) return false;
++        copy->RemoveHeader(ip);
++        if (ip.GetProtocol() != 6) return false;
++        copy->RemoveHeader(tcp);
++        if (!copy->GetSize()) return false;
++        if (m_sequence != 0 && tcp.GetSequenceNumber().GetValue() != m_sequence) return false;
++        m_used = true;
++        return true;
++    }
++    void DoReset() override { m_used = false; }
++    double m_time;
++    uint32_t m_sequence;
++    bool m_used = false;
++};
++
++int main(int argc, char** argv) {
++    std::string run_dir, parameters, cc = "TcpCubic";
++    double duration = 20, rate = 100, before_ms = 50, after_ms = 45, event_s = 10, loss_s = -1, flow_start_s = 0;
++    uint32_t queue_pkts = 2000, initial_ssthresh_pkts = 900, loss_seq = 0;
++    uint64_t max_bytes = 100000000000ULL;
++    bool enable_pacing = false;
++    CommandLine cmd;
++    cmd.AddValue("run_dir", "Output directory", run_dir);
++    cmd.AddValue("parameters", "TCP study additional parameters", parameters);
++    cmd.AddValue("cc", "TCP class name", cc);
++    cmd.AddValue("enable_pacing", "Enable the native TCP pacing implementation", enable_pacing);
++    cmd.AddValue("duration", "Simulation seconds", duration);
++    cmd.AddValue("rate", "Link Mbit/s", rate);
++    cmd.AddValue("before_ms", "Initial one-way propagation ms", before_ms);
++    cmd.AddValue("after_ms", "One-way propagation after step ms", after_ms);
++    cmd.AddValue("event_s", "Delay-step time", event_s);
++    cmd.AddValue("loss_s", "Drop one data packet at or after this time (-1 disables)", loss_s);
++    cmd.AddValue("loss_seq", "Only drop this starting TCP data sequence once (0 uses time only)", loss_seq);
++    cmd.AddValue("queue_pkts", "Drop-tail queue packets", queue_pkts);
++    cmd.AddValue("initial_ssthresh_pkts", "Controlled initial slow-start threshold packets", initial_ssthresh_pkts);
++    cmd.AddValue("max_bytes", "Finite transfer bytes (default effectively infinite)", max_bytes);
++    cmd.AddValue("flow_start_s", "Application start time in simulation seconds", flow_start_s);
++    cmd.Parse(argc, argv);
++    if (run_dir.empty()) throw std::runtime_error("run_dir required");
++    std::filesystem::create_directories(run_dir + "/logs_ns3");
++    Config::SetDefault("ns3::TcpL4Protocol::SocketType", StringValue("ns3::" + cc));
++    Config::SetDefault("ns3::TcpSocket::SegmentSize", UintegerValue(1380));
++    Config::SetDefault("ns3::TcpSocket::SndBufSize", UintegerValue(32*1024*1024));
++    Config::SetDefault("ns3::TcpSocket::RcvBufSize", UintegerValue(32*1024*1024));
++    Config::SetDefault("ns3::TcpSocket::InitialSlowStartThreshold", UintegerValue(initial_ssthresh_pkts*1380));
++    Config::SetDefault("ns3::TcpSocketState::EnablePacing", BooleanValue(enable_pacing || cc == "TcpBbr"));
++    NodeContainer nodes; nodes.Create(2);
++    InternetStackHelper stack; stack.Install(nodes);
++    PointToPointHelper link;
++    link.SetDeviceAttribute("DataRate", StringValue(std::to_string(rate) + "Mbps"));
++    link.SetChannelAttribute("Delay", TimeValue(MilliSeconds(before_ms)));
++    link.SetQueue("ns3::DropTailQueue<Packet>", "MaxSize", QueueSizeValue(QueueSize(std::to_string(queue_pkts)+"p")));
++    auto devices = link.Install(nodes);
++    Ipv4AddressHelper addresses; addresses.SetBase("10.1.1.0", "255.255.255.0");
++    auto interfaces = addresses.Assign(devices);
++    // Match the course's device-only drop-tail queues; address assignment can
++    // otherwise install a default AQM root qdisc and confound the delay-step test.
++    TrafficControlHelper traffic;
++    traffic.Uninstall(devices);
++    if (loss_s >= 0 || loss_seq != 0) {
++        auto em = CreateObject<StudyDropOnce>(loss_s, loss_seq);
++        devices.Get(1)->SetAttribute("ReceiveErrorModel", PointerValue(em));
++    }
++    cs30401study::Install(nodes);
++    TcpFlowSinkHelper sink("ns3::TcpSocketFactory", InetSocketAddress(Ipv4Address::GetAny(), 1024));
++    auto sinks = sink.Install(nodes.Get(1)); sinks.Start(Seconds(0));
++    TcpFlowSendHelper source("ns3::TcpSocketFactory", InetSocketAddress(interfaces.GetAddress(1),1024),
++                             max_bytes, 0, true, run_dir+"/logs_ns3", parameters);
++    auto apps = source.Install(nodes.Get(0)); apps.Start(Seconds(flow_start_s));
++    auto channel = DynamicCast<PointToPointChannel>(devices.Get(0)->GetChannel());
++    Simulator::Schedule(Seconds(event_s), [channel, after_ms]() {
++        channel->SetAttribute("Delay", TimeValue(MilliSeconds(after_ms)));
++    });
++    Simulator::Stop(Seconds(duration));
++    Simulator::Run();
++    apps.Get(0)->GetObject<TcpFlowSendApplication>()->FinalizeDetailedLogs();
++    std::ofstream config(run_dir+"/config_ns3.properties");
++    config << "simulation_end_time_ns=" << int64_t(duration*1e9) << '\n';
++    Simulator::Destroy();
++    return 0;
++}
+diff --git a/src/internet/model/tcp-socket-base.cc b/src/internet/model/tcp-socket-base.cc
+index 37f7317..0e90633 100644
+--- a/src/internet/model/tcp-socket-base.cc
++++ b/src/internet/model/tcp-socket-base.cc
+@@ -52,6 +52,7 @@
+ #include "ns3/uinteger.h"
+ 
+ #include <algorithm>
++#include <fstream>
+ #include <cmath>
+ 
+ namespace
+@@ -184,6 +185,10 @@ TcpSocketBase::GetTypeId()
+                 UintegerValue(3),
+                 MakeUintegerAccessor(&TcpSocketBase::SetRetxThresh, &TcpSocketBase::GetRetxThresh),
+                 MakeUintegerChecker<uint32_t>())
++            .AddAttribute("OrbitTailAdmission", "One extra final original segment in a selective wait",
++                          BooleanValue(false),
++                          MakeBooleanAccessor(&TcpSocketBase::m_orbitTailEnabled),
++                          MakeBooleanChecker())
+             .AddAttribute("LimitedTransmit",
+                           "Enable limited transmit",
+                           BooleanValue(true),
+@@ -408,6 +413,7 @@ TcpSocketBase::TcpSocketBase(const TcpSocketBase& sock)
+       m_errno(sock.m_errno),
+       m_closeNotified(sock.m_closeNotified),
+       m_closeOnEmpty(sock.m_closeOnEmpty),
++      m_orbitTailEnabled(sock.m_orbitTailEnabled),
+       m_shutdownSend(sock.m_shutdownSend),
+       m_shutdownRecv(sock.m_shutdownRecv),
+       m_connected(sock.m_connected),
+@@ -1685,6 +1691,7 @@ TcpSocketBase::ReadOptions(const TcpHeader& tcpHeader, uint32_t* bytesSacked)
+ void
+ TcpSocketBase::EnterCwr(uint32_t currentDelivered)
+ {
++    CancelOrbitLoss("STOCK_ECN");
+     NS_LOG_FUNCTION(this << currentDelivered);
+     m_tcb->m_ssThresh = m_congestionControl->GetSsThresh(m_tcb, BytesInFlight());
+     NS_LOG_DEBUG("Reduce ssThresh to " << m_tcb->m_ssThresh);
+@@ -1715,6 +1722,8 @@ TcpSocketBase::EnterRecovery(uint32_t currentDelivered)
+ {
+     NS_LOG_FUNCTION(this);
+     NS_ASSERT(m_tcb->m_congState != TcpSocketState::CA_RECOVERY);
++    CancelOrbitLoss("STOCK_RECOVERY");
++    m_orbitHadDefer = false;
+ 
+     NS_LOG_DEBUG(TcpSocketState::TcpCongStateName[m_tcb->m_congState] << " -> CA_RECOVERY");
+ 
+@@ -1828,8 +1837,9 @@ TcpSocketBase::DupAck(uint32_t currentDelivered)
+         // after receiving new ACK smaller than m_recover. After that, m_dupackCount
+         // can be equal and larger than m_retxThresh and we should avoid entering
+         // CA_RECOVERY and reducing sending rate again.
+-        NS_ASSERT((m_dupAckCount <= m_retxThresh) || m_recoverActive);
++        NS_ASSERT((m_dupAckCount <= m_retxThresh) || m_recoverActive || m_orbitHadDefer);
+ 
++        if (m_orbitHadDefer && !m_orbitActive) m_txBuffer->ReevaluateLoss();
+         uint32_t fackDiff = 0;
+         if (m_fackEnabled)
+         {
+@@ -1855,7 +1865,10 @@ TcpSocketBase::DupAck(uint32_t currentDelivered)
+         // Check FACK recovery condition
+ 
+         if ((m_fackEnabled && fackDiff > m_tcb->m_segmentSize * 3) ||
+-            ((m_dupAckCount == m_retxThresh) &&
++            ((!OrbitHeadWaiting() && (m_dupAckCount == m_retxThresh ||
++               (m_orbitHadDefer && m_highRxAckMark >= m_orbitCohortLo &&
++                m_highRxAckMark < m_orbitCohortHi &&
++                m_dupAckCount >= m_retxThresh))) &&
+              (m_highRxAckMark >= m_recover || (!m_recoverActive))))
+         {
+             EnterRecovery(currentDelivered);
+@@ -1865,7 +1878,7 @@ TcpSocketBase::DupAck(uint32_t currentDelivered)
+         // (indicating at least three segments have arrived above the current
+         // cumulative acknowledgment point, which is taken to indicate loss)
+         // go to step (4).  Note that m_highRxAckMark is (HighACK + 1)
+-        else if (m_txBuffer->IsLost(m_highRxAckMark))
++        else if (!OrbitHeadWaiting() && m_txBuffer->IsLost(m_highRxAckMark))
+         {
+             EnterRecovery(currentDelivered);
+             NS_ASSERT(m_tcb->m_congState == TcpSocketState::CA_RECOVERY);
+@@ -2011,7 +2024,8 @@ TcpSocketBase::ReceivedAck(Ptr<Packet> packet, const TcpHeader& tcpHeader)
+ 
+     // RFC 6675, Section 5, point (C), try to send more data. NB: (C) is implemented
+     // inside SendPendingData
+-    SendPendingData(m_connected);
++    const uint32_t normalPackets = SendPendingData(m_connected);
++    TryOrbitTail(bytesSacked, normalPackets);
+ }
+ 
+ void
+@@ -2026,6 +2040,10 @@ TcpSocketBase::ProcessAck(const SequenceNumber32& ackNumber,
+     // If the incoming ACK is a cumulative acknowledgment, the TCP MUST
+     // reset DupAcks to zero.
+     bool exitedFastRecovery = false;
++    if (m_orbitPending && ackNumber >= m_orbitCohortHi)
++    {
++        CancelOrbitLoss("ACK_MOVED_OUTSIDE_COHORT");
++    }
+     uint32_t oldDupAckCount = m_dupAckCount; // remember the old value
+     m_tcb->m_lastAckedSeq = ackNumber;       // Update lastAckedSeq
+     uint32_t bytesAcked = 0;
+@@ -2128,6 +2146,7 @@ TcpSocketBase::ProcessAck(const SequenceNumber32& ackNumber,
+         if (!isDupack)
+         {
+             m_dupAckCount = 0;
++            m_orbitHadDefer = false;
+         }
+ 
+         // RFC 6675, Section 5, part (B)
+@@ -3955,6 +3974,8 @@ TcpSocketBase::NewAck(const SequenceNumber32& ack, bool resetRTO)
+ void
+ TcpSocketBase::ReTxTimeout()
+ {
++    CancelOrbitLoss("STOCK_RTO");
++    m_orbitHadDefer = false;
+     NS_LOG_FUNCTION(this);
+     NS_LOG_LOGIC(this << " ReTxTimeout Expired at time " << Simulator::Now().GetSeconds());
+     // If erroneous timeout in closed/timed-wait state, just return
+@@ -4216,6 +4237,9 @@ TcpSocketBase::DoRetransmit()
+ void
+ TcpSocketBase::CancelAllTimers()
+ {
++    m_orbitLossTimer.Cancel();
++    m_orbitActive = false;
++    m_orbitPending = false;
+     m_retxEvent.Cancel();
+     m_persistEvent.Cancel();
+     m_delAckEvent.Cancel();
+@@ -4704,6 +4728,237 @@ TcpSocketBase::GetRxBuffer() const
+     return m_tcb->m_rxBuffer;
+ }
+ 
++bool
++TcpSocketBase::CanForecastGuardStart() const
++{
++    return m_sackEnabled && !m_fackEnabled &&
++           m_tcb->m_congState == TcpSocketState::CA_OPEN &&
++           m_dupAckCount == 0 && m_txBuffer->GetLost() == 0;
++}
++
++bool
++TcpSocketBase::ReevaluateLossAfterThresholdRestore()
++{
++    NS_ABORT_MSG_IF(m_retxThresh != 3 || !m_sackEnabled || m_fackEnabled,
++                    "Bounded restoration requires baseline K3, SACK and no FACK");
++    // Do not duplicate ECN/RTO/ongoing recovery or manufacture an ACK.
++    if (m_tcb->m_congState != TcpSocketState::CA_DISORDER) return false;
++    m_txBuffer->ReevaluateLoss();
++    const bool dupackLoss = m_dupAckCount >= m_retxThresh &&
++        (m_highRxAckMark >= m_recover || !m_recoverActive);
++    if (!dupackLoss && !m_txBuffer->IsLost(m_highRxAckMark)) return false;
++    // A timer delivers no new bytes: currentDelivered is zero, not a total.
++    EnterRecovery(0);
++    SendPendingData(m_connected);
++    return true;
++}
++
++
++void
++TcpSocketBase::ConfigureOrbitLoss(const std::string& path, uint64_t flow)
++{
++    m_orbitLossPath = path;
++    m_orbitLossFlow = flow;
++    std::ofstream out(path);
++    out << "flow_id,time_ns,event,epoch_ns,epoch_end_ns,seq,cohort_lo,cohort_hi,last_sent_ns,"
++           "sacked_pkts,budget_pkts,deadline_ns,dupacks,lost_bytes,pipe_bytes,cong_state,threshold\n";
++    m_orbitTailPath = path.substr(0, path.size()-4) + "_tail.csv";
++    std::ofstream tail(m_orbitTailPath);
++    tail << "flow_id,time_ns,event,epoch_ns,deadline_ns,seq,admitted_bytes,new_sack_bytes,"
++            "unsent_bytes,pipe_before,pipe_after,cwnd_bytes,receiver_right_edge,used_before,used_after,"
++            "cong_state,close_on_empty,shutdown_send,normal_packets_sent,ordinary_window_bytes\n";
++    m_txBuffer->SetOrbitLossCallback(MakeCallback(&TcpSocketBase::DeferOrbitLoss, this));
++}
++
++void
++TcpSocketBase::TraceOrbitLoss(const char* event, SequenceNumber32 seq, uint32_t sacked, Time last)
++{
++    if (m_orbitLossPath.empty()) return;
++    std::ofstream out(m_orbitLossPath, std::ios::app);
++    out << m_orbitLossFlow << ',' << Simulator::Now().GetNanoSeconds() << ',' << event << ','
++        << m_orbitEpoch.GetNanoSeconds() << ',' << m_orbitEpochEnd.GetNanoSeconds() << ','
++        << seq.GetValue() << ',' << m_orbitCohortLo.GetValue() << ',' << m_orbitCohortHi.GetValue()
++        << ',' << last.GetNanoSeconds() << ',' << sacked << ',' << m_orbitBudget << ','
++        << m_orbitDeadline.GetNanoSeconds() << ',' << m_dupAckCount << ',' << m_txBuffer->GetLost()
++        << ',' << m_txBuffer->BytesInFlight() << ',' << unsigned(m_tcb->m_congState)
++        << ',' << m_retxThresh << '\n';
++}
++
++void
++TcpSocketBase::RegisterOrbitLossEpoch(Time end, Time wait, uint32_t budget)
++{
++    NS_ABORT_MSG_IF(end <= Simulator::Now() || wait <= Time(0) || budget < 3,
++                    "Invalid selective loss epoch");
++    m_orbitEpoch = Simulator::Now();
++    m_orbitEpochEnd = end;
++    m_orbitWait = wait;
++    m_orbitBudget = budget;
++    if (m_orbitPending || m_retxThresh != 3 || !CanForecastGuardStart())
++    {
++        TraceOrbitLoss("EPOCH_SKIP", m_txBuffer->HeadSequence());
++        return;
++    }
++    m_orbitCohortLo = m_txBuffer->HeadSequence();
++    m_orbitCohortHi = m_tcb->m_highTxMark;
++    m_orbitEpisodeStarted = false;
++    m_orbitTailUsed = false;
++    m_orbitHadDefer = false;
++    m_orbitActive = m_orbitCohortHi > m_orbitCohortLo;
++    TraceOrbitLoss(m_orbitActive ? "EPOCH_REGISTER" : "EPOCH_EMPTY", m_orbitCohortLo);
++}
++
++bool
++TcpSocketBase::OrbitHeadWaiting() const
++{
++    return m_orbitActive && m_orbitPending && Simulator::Now() < m_orbitDeadline &&
++        Simulator::Now() < m_orbitEpochEnd &&
++        m_txBuffer->OrbitEligibleHead(m_orbitEpoch, m_orbitCohortLo, m_orbitCohortHi);
++}
++
++bool
++TcpSocketBase::DeferOrbitLoss(SequenceNumber32 seq, uint32_t size, uint32_t sacked,
++                            Time last, bool retrans)
++{
++    const Time now = Simulator::Now();
++    if (!m_orbitActive || now >= m_orbitEpochEnd || m_retxThresh != 3 ||
++        (m_tcb->m_congState != TcpSocketState::CA_OPEN &&
++         m_tcb->m_congState != TcpSocketState::CA_DISORDER)) return false;
++    if (seq < m_orbitCohortLo || seq + size > m_orbitCohortHi || last > m_orbitEpoch ||
++        retrans) return false;
++    if (sacked > m_orbitBudget || m_txBuffer->GetLost() != 0)
++    {
++        CancelOrbitLoss(sacked > m_orbitBudget ? "BUDGET_EXCEEDED" : "OTHER_LOSS");
++        return false;
++    }
++    if (!m_txBuffer->OrbitEligibleHead(m_orbitEpoch, m_orbitCohortLo, m_orbitCohortHi))
++        return false;
++    const bool first = !m_orbitEpisodeStarted;
++    if (first)
++    {
++        m_orbitEpisodeStarted = true;
++        m_orbitDeadline = std::min(now + m_orbitWait, m_orbitEpochEnd);
++        m_orbitWaitingHead = m_txBuffer->HeadSequence();
++    }
++    // All eligible holes and any advancing head share the first episode deadline.
++    if (now >= m_orbitDeadline) return false;
++    m_orbitPending = true;
++    m_orbitHadDefer = true;
++    if (first)
++    {
++        m_orbitLossTimer.Cancel();
++        m_orbitLossTimer = Simulator::Schedule(m_orbitDeadline-now,
++                            &TcpSocketBase::ExpireOrbitLoss, this);
++        TraceOrbitLoss("COHORT_WAIT_BEGIN", seq, sacked, last);
++    }
++    else TraceOrbitLoss("COHORT_WAIT_CONTINUE", seq, sacked, last);
++    return true;
++}
++
++void
++TcpSocketBase::CancelOrbitLoss(const char* reason)
++{
++    if (m_orbitActive || m_orbitPending) TraceOrbitLoss(reason, m_txBuffer->HeadSequence());
++    m_orbitActive = false;
++    m_orbitPending = false;
++    m_orbitLossTimer.Cancel();
++}
++
++void
++TcpSocketBase::ExpireOrbitLoss()
++{
++    m_orbitPending = false;
++    TraceOrbitLoss("COHORT_DEADLINE", m_orbitWaitingHead);
++    FinishOrbitLossReevaluation();
++}
++
++void
++TcpSocketBase::FinishOrbitLossReevaluation()
++{
++    // The saved deadline makes the callback decline the expired head here.
++    if (m_tcb->m_congState != TcpSocketState::CA_OPEN &&
++        m_tcb->m_congState != TcpSocketState::CA_DISORDER) return;
++    m_txBuffer->ReevaluateLoss();
++    const bool knownLoss = m_txBuffer->IsLost(m_highRxAckMark);
++    const bool dupLoss = m_dupAckCount >= m_retxThresh &&
++        m_highRxAckMark >= m_orbitCohortLo && m_highRxAckMark < m_orbitCohortHi &&
++        (m_highRxAckMark >= m_recover || !m_recoverActive);
++    if (OrbitHeadWaiting()) return;
++    if (m_tcb->m_congState == TcpSocketState::CA_OPEN)
++    {
++        // A timer cannot manufacture three duplicate ACKs. Only a real stored
++        // SACK presumed-loss flag permits this state transition from OPEN.
++        if (!knownLoss) return;
++        m_congestionControl->CongestionStateSet(m_tcb, TcpSocketState::CA_DISORDER);
++        m_tcb->m_congState = TcpSocketState::CA_DISORDER;
++        TraceOrbitLoss("OPEN_LOSS_REEVALUATED", m_highRxAckMark);
++    }
++    if (knownLoss || dupLoss)
++    {
++        TraceOrbitLoss("DEADLINE_RECOVERY", m_highRxAckMark);
++        EnterRecovery(0); // A timer acknowledges no newly delivered bytes.
++        SendPendingData(m_connected);
++    }
++}
++
++void
++TcpSocketBase::EndOrbitLossEpoch()
++{
++    const bool pending = m_orbitPending;
++    CancelOrbitLoss("EPOCH_END");
++    if (pending) FinishOrbitLossReevaluation();
++}
++
++
++void
++TcpSocketBase::TryOrbitTail(uint32_t newSackBytes, uint32_t normalPackets)
++{
++    if (!m_orbitTailEnabled || newSackBytes == 0 || !OrbitHeadWaiting() ||
++        m_tcb->m_congState != TcpSocketState::CA_DISORDER) return;
++    const SequenceNumber32 seq = m_tcb->m_highTxMark;
++    const uint32_t unsent = m_txBuffer->SizeFromSequence(seq);
++    const uint32_t pipe = BytesInFlight();
++    const uint32_t cwnd = m_tcb->m_cWnd.Get();
++    const SequenceNumber32 right = m_highRxAckMark + SequenceNumber32(m_rWnd.Get());
++    const uint32_t window = AvailableWindow();
++    const bool usedBefore = m_orbitTailUsed;
++    const char* reason = nullptr;
++    if (m_orbitTailUsed) reason = "ALREADY_USED";
++    else if (!m_closeOnEmpty && !m_shutdownSend) reason = "APPLICATION_OPEN";
++    else if (unsent == 0) reason = "NO_UNSENT";
++    else if (unsent > m_tcb->m_segmentSize) reason = "MORE_THAN_ONE_MSS";
++    else if (window >= unsent) reason = "ORDINARY_ALLOWANCE_AVAILABLE";
++    else if (m_tcb->m_nextTxSequence != seq) reason = "NEXT_TX_NOT_NEW";
++    else if (right < seq + SequenceNumber32(unsent)) reason = "RECEIVER_WINDOW";
++    else if (uint64_t(pipe) + unsent > uint64_t(cwnd) + m_tcb->m_segmentSize)
++        reason = "PIPE_BOUND";
++    else if (IsPacingEnabled() && m_pacingTimer.IsRunning()) reason = "PACING_TIMER";
++    uint32_t sent = 0;
++    if (!reason)
++    {
++        // This allowance is not a delivered-ACK credit and never changes cwnd.
++        m_orbitTailUsed = true; // Reserve before callbacks: one original per episode.
++        sent = SendDataPacket(seq, unsent, m_connected);
++        NS_ABORT_MSG_IF(sent != unsent, "Orbit tail did not send the declared original bytes");
++        m_tcb->m_nextTxSequence = seq + SequenceNumber32(sent);
++        NS_ABORT_MSG_IF(m_tcb->m_cWnd.Get() != cwnd, "Orbit tail changed cwnd");
++        reason = "TAIL_ADMIT";
++    }
++    const uint32_t after = BytesInFlight();
++    NS_ABORT_MSG_IF(sent && uint64_t(after) > uint64_t(cwnd) + m_tcb->m_segmentSize,
++                    "Orbit tail exceeded the one-MSS flight allowance");
++    if (!m_orbitTailPath.empty())
++    {
++        std::ofstream out(m_orbitTailPath, std::ios::app);
++        out << m_orbitLossFlow << ',' << Simulator::Now().GetNanoSeconds() << ',' << reason
++            << ',' << m_orbitEpoch.GetNanoSeconds() << ',' << m_orbitDeadline.GetNanoSeconds()
++            << ',' << seq.GetValue() << ',' << sent << ',' << newSackBytes << ',' << unsent
++            << ',' << pipe << ',' << after << ',' << cwnd << ',' << right.GetValue()
++            << ',' << usedBefore << ',' << m_orbitTailUsed << ',' << unsigned(m_tcb->m_congState)
++            << ',' << m_closeOnEmpty << ',' << m_shutdownSend << ',' << normalPackets
++            << ',' << window << '\n';
++    }
++}
++
+ void
+ TcpSocketBase::SetRetxThresh(uint32_t retxThresh)
+ {
+diff --git a/src/internet/model/tcp-socket-base.h b/src/internet/model/tcp-socket-base.h
+index d914214..98df9af 100644
+--- a/src/internet/model/tcp-socket-base.h
++++ b/src/internet/model/tcp-socket-base.h
+@@ -21,6 +21,8 @@
+ #include "ns3/traced-value.h"
+ 
+ #include <queue>
++#include <map>
++#include <string>
+ #include <stdint.h>
+ 
+ namespace ns3
+@@ -314,6 +316,12 @@ class TcpSocketBase : public TcpSocket
+      * @param retxThresh the threshold
+      */
+     void SetRetxThresh(uint32_t retxThresh);
++    // Narrow helpers for the opt-in forecast-window study.
++    bool CanForecastGuardStart() const;
++    bool ReevaluateLossAfterThresholdRestore();
++    void ConfigureOrbitLoss(const std::string& path, uint64_t flow);
++    void RegisterOrbitLossEpoch(Time end, Time wait, uint32_t budget);
++    void EndOrbitLossEpoch();
+ 
+     /**
+      * @brief Get the retransmission threshold (dup ack threshold for a fast retransmit)
+@@ -1471,6 +1479,25 @@ class TcpSocketBase : public TcpSocket
+     bool m_recoverActive{false}; //!< Whether "m_recover" has been set/activated
+                                  //!< It is used to avoid comparing with the old m_recover value
+                                  //!< which was set for handling previous congestion event.
++    bool DeferOrbitLoss(SequenceNumber32 seq, uint32_t size, uint32_t sacked,
++                        Time last, bool retrans);
++    bool OrbitHeadWaiting() const;
++    void ExpireOrbitLoss();
++    void FinishOrbitLossReevaluation();
++    void CancelOrbitLoss(const char* reason);
++    void TraceOrbitLoss(const char* event, SequenceNumber32 seq,
++                        uint32_t sacked=0, Time last=Time(0));
++    std::string m_orbitLossPath;
++    uint64_t m_orbitLossFlow{0};
++    bool m_orbitActive{false}, m_orbitPending{false}, m_orbitHadDefer{false};
++    void TryOrbitTail(uint32_t newSackBytes, uint32_t normalPackets);
++    bool m_orbitTailEnabled{false}, m_orbitTailUsed{false};
++    std::string m_orbitTailPath;
++    Time m_orbitEpoch{0}, m_orbitEpochEnd{0}, m_orbitWait{0}, m_orbitDeadline{0};
++    uint32_t m_orbitBudget{3};
++    SequenceNumber32 m_orbitCohortLo{0}, m_orbitCohortHi{0}, m_orbitWaitingHead{0};
++    bool m_orbitEpisodeStarted{false};
++    EventId m_orbitLossTimer;
+     uint32_t m_retxThresh{3};    //!< Fast Retransmit threshold
+     bool m_limitedTx{true};      //!< perform limited transmit
+ 
+diff --git a/src/internet/model/tcp-tx-buffer.cc b/src/internet/model/tcp-tx-buffer.cc
+index ee8d27d..6dfa32f 100644
+--- a/src/internet/model/tcp-tx-buffer.cc
++++ b/src/internet/model/tcp-tx-buffer.cc
+@@ -862,6 +862,25 @@ TcpTxBuffer::Update(const TcpOptionSack::SackList& list, const Callback<void, Tc
+     return bytesSacked;
+ }
+ 
++void
++TcpTxBuffer::ReevaluateLoss()
++{
++    // Preserve every existing loss/SACK flag and all retransmission state.
++    if (!m_sentList.empty() && m_highestSack.first != m_sentList.end())
++    {
++        UpdateLostCount();
++    }
++}
++
++bool
++TcpTxBuffer::OrbitEligibleHead(Time epoch, SequenceNumber32 low, SequenceNumber32 high) const
++{
++    if (m_sentList.empty()) return false;
++    const auto* item=m_sentList.front();
++    return !item->m_lost && !item->m_sacked && !item->m_retrans && item->m_lastSent<=epoch &&
++        item->m_startSeq>=low && item->m_startSeq+item->m_packet->GetSize()<=high;
++}
++
+ void
+ TcpTxBuffer::UpdateLostCount()
+ {
+@@ -889,7 +908,10 @@ TcpTxBuffer::UpdateLostCount()
+ 
+         if (sacked >= m_dupAckThresh)
+         {
+-            if (!item->m_sacked && !item->m_lost)
++            if (!item->m_sacked && !item->m_lost &&
++                (m_orbitLossCallback.IsNull() ||
++                 !m_orbitLossCallback(item->m_startSeq, item->m_packet->GetSize(),
++                                      sacked, item->m_lastSent, item->m_retrans)))
+             {
+                 item->m_lost = true;
+                 m_lostOut += item->m_packet->GetSize();
+@@ -901,7 +923,9 @@ TcpTxBuffer::UpdateLostCount()
+     if (sacked >= m_dupAckThresh)
+     {
+         TcpTxItem* item = *m_sentList.begin();
+-        if (!item->m_lost)
++        if (!item->m_lost && (m_orbitLossCallback.IsNull() ||
++            !m_orbitLossCallback(item->m_startSeq, item->m_packet->GetSize(),
++                                 sacked, item->m_lastSent, item->m_retrans)))
+         {
+             item->m_lost = true;
+             m_lostOut += item->m_packet->GetSize();
+diff --git a/src/internet/model/tcp-tx-buffer.h b/src/internet/model/tcp-tx-buffer.h
+index f63e169..ccf7f6d 100644
+--- a/src/internet/model/tcp-tx-buffer.h
++++ b/src/internet/model/tcp-tx-buffer.h
+@@ -181,6 +181,11 @@ class TcpTxBuffer : public Object
+      * @param dupAckThresh the threshold
+      */
+     void SetDupAckThresh(uint32_t dupAckThresh);
++    // Reuse existing SACK evidence after the study threshold is restored.
++    void ReevaluateLoss();
++    void SetOrbitLossCallback(Callback<bool, SequenceNumber32, uint32_t, uint32_t, Time, bool> cb)
++    { m_orbitLossCallback = cb; }
++    bool OrbitEligibleHead(Time epoch, SequenceNumber32 low, SequenceNumber32 high) const;
+ 
+     /**
+      * @brief Set the segment size
+@@ -603,6 +608,7 @@ class TcpTxBuffer : public Object
+         m_firstByteSeq; //!< Sequence number of the first byte in data (SND.UNA)
+     std::pair<PacketList::const_iterator, SequenceNumber32> m_highestSack; //!< Highest SACK byte
+ 
++    Callback<bool, SequenceNumber32, uint32_t, uint32_t, Time, bool> m_orbitLossCallback;
+     uint32_t m_lostOut{0};   //!< Number of lost bytes
+     uint32_t m_sackedOut{0}; //!< Number of sacked bytes
+     uint32_t m_retrans{0};   //!< Number of retransmitted bytes
+diff --git a/src/network/utils/net-device-queue-interface.cc b/src/network/utils/net-device-queue-interface.cc
+index 4d55b17..5cd76bf 100644
+--- a/src/network/utils/net-device-queue-interface.cc
++++ b/src/network/utils/net-device-queue-interface.cc
+@@ -57,14 +57,18 @@ void
+ NetDeviceQueue::Start()
+ {
+     NS_LOG_FUNCTION(this);
++    const bool oldDevice=m_stoppedByDevice;
+     m_stoppedByDevice = false;
++    ObserveOrbit("DEVICE_START",oldDevice,m_stoppedByQueueLimits,false);
+ }
+ 
+ void
+ NetDeviceQueue::Stop()
+ {
+     NS_LOG_FUNCTION(this);
++    const bool oldDevice=m_stoppedByDevice;
+     m_stoppedByDevice = true;
++    ObserveOrbit("DEVICE_STOP",oldDevice,m_stoppedByQueueLimits,false);
+ }
+ 
+ void
+@@ -74,6 +78,8 @@ NetDeviceQueue::Wake()
+ 
+     bool wasStoppedByDevice = m_stoppedByDevice;
+     m_stoppedByDevice = false;
++    ObserveOrbit("DEVICE_WAKE",wasStoppedByDevice,m_stoppedByQueueLimits,
++                 wasStoppedByDevice && !m_wakeCallback.IsNull());
+ 
+     // Request the queue disc to dequeue a packet
+     if (wasStoppedByDevice && !m_wakeCallback.IsNull())
+@@ -110,7 +116,9 @@ NetDeviceQueue::NotifyQueuedBytes(uint32_t bytes)
+     {
+         return;
+     }
++    const bool oldLimits=m_stoppedByQueueLimits;
+     m_stoppedByQueueLimits = true;
++    ObserveOrbit("BQL_STOP",m_stoppedByDevice,oldLimits,false);
+ }
+ 
+ void
+@@ -128,6 +136,8 @@ NetDeviceQueue::NotifyTransmittedBytes(uint32_t bytes)
+     }
+     bool wasStoppedByQueueLimits = m_stoppedByQueueLimits;
+     m_stoppedByQueueLimits = false;
++    ObserveOrbit("BQL_WAKE",m_stoppedByDevice,wasStoppedByQueueLimits,
++                 wasStoppedByQueueLimits && !m_wakeCallback.IsNull());
+     // Request the queue disc to dequeue a packet
+     if (wasStoppedByQueueLimits && !m_wakeCallback.IsNull())
+     {
+diff --git a/src/network/utils/net-device-queue-interface.h b/src/network/utils/net-device-queue-interface.h
+index f7ba1da..99082dd 100644
+--- a/src/network/utils/net-device-queue-interface.h
++++ b/src/network/utils/net-device-queue-interface.h
+@@ -82,6 +82,15 @@ class NetDeviceQueue : public Object
+      * This is the analogous to the netif_xmit_stopped function of the Linux kernel.
+      */
+     virtual bool IsStopped() const;
++    // Opt-in read-only instrumentation. The original state decisions remain unchanged.
++    void SetOrbitObserver(Callback<void,std::string,bool,bool,bool,bool,bool> cb) { m_orbitObserver=cb; }
++    bool IsOrbitStoppedByDevice() const { return m_stoppedByDevice; }
++    bool IsOrbitStoppedByLimits() const { return m_stoppedByQueueLimits; }
++    void ObserveOrbit(const char* reason,bool oldDevice,bool oldLimits,bool wake) {
++        if(!m_orbitObserver.IsNull() &&
++           (oldDevice!=m_stoppedByDevice || oldLimits!=m_stoppedByQueueLimits))
++            m_orbitObserver(std::string(reason),oldDevice,oldLimits,m_stoppedByDevice,m_stoppedByQueueLimits,wake);
++    }
+ 
+     /**
+      * @brief Notify this NetDeviceQueue that the NetDeviceQueueInterface was
+@@ -194,6 +203,7 @@ class NetDeviceQueue : public Object
+     void ConnectQueueTraces(Ptr<QueueType> queue);
+ 
+   private:
++    Callback<void,std::string,bool,bool,bool,bool,bool> m_orbitObserver;
+     bool m_stoppedByDevice;         //!< True if the queue has been stopped by the device
+     bool m_stoppedByQueueLimits;    //!< True if the queue has been stopped by a queue limits object
+     Ptr<QueueLimits> m_queueLimits; //!< Queue limits object
+diff --git a/src/traffic-control/model/traffic-control-layer.cc b/src/traffic-control/model/traffic-control-layer.cc
+index 9b5cae7..9d0683a 100644
+--- a/src/traffic-control/model/traffic-control-layer.cc
++++ b/src/traffic-control/model/traffic-control-layer.cc
+@@ -387,6 +387,11 @@ TrafficControlLayer::Send(Ptr<NetDevice> device, Ptr<QueueDiscItem> item)
+         }
+         else
+         {
++            if(!m_orbitDropObserver.IsNull()) {
++                auto q=devQueueIface->GetTxQueue(txq);
++                m_orbitDropObserver(device,uint32_t(txq),item->GetPacket(),
++                                    q->IsOrbitStoppedByDevice(),q->IsOrbitStoppedByLimits());
++            }
+             m_dropped(item->GetPacket());
+         }
+     }
+diff --git a/src/traffic-control/model/traffic-control-layer.h b/src/traffic-control/model/traffic-control-layer.h
+index d05b877..015d970 100644
+--- a/src/traffic-control/model/traffic-control-layer.h
++++ b/src/traffic-control/model/traffic-control-layer.h
+@@ -92,6 +92,8 @@ class TrafficControlLayer : public Object
+      * @return the object TypeId
+      */
+     static TypeId GetTypeId();
++    void SetOrbitDropObserver(Callback<void,Ptr<NetDevice>,uint32_t,Ptr<const Packet>,bool,bool> cb)
++    { m_orbitDropObserver=cb; }
+ 
+     /**
+      * @brief Constructor
+@@ -248,6 +250,7 @@ class TrafficControlLayer : public Object
+      * no queue disc is installed on the device, the device supports flow control and
+      * the device queue is stopped
+      */
++    Callback<void,Ptr<NetDevice>,uint32_t,Ptr<const Packet>,bool,bool> m_orbitDropObserver;
+     TracedCallback<Ptr<const Packet>> m_dropped;
+ };
+ 

@@ -1,0 +1,72 @@
+{
+  "schema": 1,
+  "original_container": "lab1-orbit-tail-20261013",
+  "original_path": "/tmp/orbit-tail/leo10-tail",
+  "original_manifest_sha256": "b9fe384486a6abaef2104b68dd0ea20f6b58292b006a557a8adde2c3277ff703",
+  "original_commit": "66b2409f722bc68e3a4973254ceb599c3d6b5892",
+  "patch_sha256": "5b847bbafe8d950072b5bc34e0420da8f7f1c860bc7fcc94c3c3ab8b37bb4d29",
+  "all_manifest_output_hashes_verified": true,
+  "measurement_csvs": {
+    "logs_ns3/study_app_rx_node_1585_port_1024.csv": {
+      "bytes": 14465567,
+      "sha256": "bd7722c1cbb78f51335b6b181d55f2a2c10e427b2a4326a02c74b873712cb23d"
+    },
+    "logs_ns3/study_drop_coverage.csv": {
+      "bytes": 1140184,
+      "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+    },
+    "logs_ns3/study_drops.csv": {
+      "bytes": 53873,
+      "sha256": "9aca2d266ffc1b98cd56f7803d04bdc7d807e11e44d25952b6c1ede94b8ef02e"
+    },
+    "logs_ns3/study_rx_node_1585_port_1024.csv": {
+      "bytes": 19452445,
+      "sha256": "4fb3a7e70c6e79f54007de46368fd1e303359ef2882e0a314587c9e02292b71c"
+    },
+    "logs_ns3/tcp_flow_0_cwnd.csv": {
+      "bytes": 100679,
+      "sha256": "acf9286c1705fa2aa31eb56805f016c3793051f3d566bc91c87c151af2c5cace"
+    },
+    "logs_ns3/tcp_flow_0_orbit_loss.csv": {
+      "bytes": 1386,
+      "sha256": "dd65e13e2e79fefa5b63612950bd59f5e3fa772ee1b9fd8a07f9208234695374"
+    },
+    "logs_ns3/tcp_flow_0_orbit_loss_tail.csv": {
+      "bytes": 621,
+      "sha256": "8447baa1e3aa446ab7ca47c36eea5e2b8c8db4c38c3f04a3b805cbcd0f4af8ec"
+    },
+    "logs_ns3/tcp_flow_0_progress.csv": {
+      "bytes": 1994229,
+      "sha256": "4ce98bb78f4f26fbc697971d23cfc085d8a3e89ad6b378222900a20469794ca4"
+    },
+    "logs_ns3/tcp_flow_0_rtt.csv": {
+      "bytes": 2030657,
+      "sha256": "5f7ed6085a55daca60bb23bb3df73b6098d879aa2005d8810d887b023080edc7"
+    },
+    "logs_ns3/tcp_flow_0_study_events.csv": {
+      "bytes": 5574,
+      "sha256": "56db00c9ed99c760c4d3b9a2d132f22eac6bf89570a8a5ff9d476c0be620d23a"
+    },
+    "logs_ns3/tcp_flow_0_study_packets.csv": {
+      "bytes": 19843355,
+      "sha256": "8129d3685fc3cc339409867b057b9126a6591aad06950e02052c97a52c02567c"
+    },
+    "logs_ns3/tcp_flows.csv": {
+      "bytes": 75,
+      "sha256": "2fa7e654ea06e0f91745acd609b08a9daa37dffdcf01b8035c2ded8567a85017"
+    }
+  },
+  "input_files": {
+    "config_ns3.properties": {
+      "bytes": 613,
+      "sha256": "8c46772c95c46ca99935dd68cf6957631972a2bb519acabe0880640408b0f4d4"
+    },
+    "schedule.csv": {
+      "bytes": 119,
+      "sha256": "c441ec9f73e726dcc20348d6c2fb2562401925fd26385a8c7ec8c45c9cf6c809"
+    }
+  },
+  "state_static_mapping_sha256": "afc13d0f402e082dd83a65ee52222e91b41f2bb775a0694a34ac33dfe216becf",
+  "dynamic_mapping_sha256": "afbe0eb800dd2c8bf608b6241c5f94349677e6036dd883045c7c42fb80cddd8a",
+  "scope": "Completed selective+tail no-qdisc100 prior run; only new observer files and timing are excluded from legacy equality."
+}

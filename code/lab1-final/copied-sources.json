@@ -1,0 +1,110 @@
+{
+  "code/kim-study/analyze_study.py": {
+    "upstream_path": "code/kim-study/analyze_study.py",
+    "bytes": 36868,
+    "sha256": "5333d7f6d86c04f79bbaad82e5e2577ec3bdf2f281e115c854ad904c404aa696",
+    "unchanged_copy": true
+  },
+  "code/kim-study/path_truth_200s.csv": {
+    "upstream_path": "code/kim-study/path_truth_200s.csv",
+    "bytes": 135964,
+    "sha256": "49bd5418f2b13bdbf6d703f719d61075f814cc86d44c745651bf797f4e5f656c",
+    "unchanged_copy": true
+  },
+  "code/predict-loss/run.py": {
+    "upstream_path": "code/predict-loss/run.py",
+    "bytes": 8501,
+    "sha256": "ecea49bff332186d340ca5b865c6486cfaf91099847967c4f017c173e8661c97",
+    "unchanged_copy": true
+  },
+  "code/predict-loss/summarize.py": {
+    "upstream_path": "code/predict-loss/summarize.py",
+    "bytes": 13520,
+    "sha256": "cbd1b65bf760212d55d8c396b4aa70bcbc4b7b49742d1cd044ff6afc1fda571c",
+    "unchanged_copy": true
+  },
+  "code/orbit-loss/analyze.py": {
+    "upstream_path": "code/orbit-loss/analyze.py",
+    "bytes": 7564,
+    "sha256": "9641453064980aeaeaf7270dc1ff17d8417ffe7cf1347011ed03afe634c94ab1",
+    "unchanged_copy": true
+  },
+  "code/orbit-tail/run.py": {
+    "upstream_path": "code/orbit-tail/run.py",
+    "bytes": 8410,
+    "sha256": "8f8455578f5c0fb5b0cacc05a64342b1bb7885e4034b0e66557fd11da4b78594",
+    "unchanged_copy": true
+  },
+  "code/orbit-tail/analyze.py": {
+    "upstream_path": "code/orbit-tail/analyze.py",
+    "bytes": 5515,
+    "sha256": "90e115b20c109462d70ef5a4f846e9f9695ca1f47ad0cdf993b0758adc0d0e55",
+    "unchanged_copy": true
+  },
+  "code/orbit-queue/analyze.py": {
+    "upstream_path": "code/orbit-queue/analyze.py",
+    "bytes": 14672,
+    "sha256": "efa69ba813f3c1d5984f7cfdac0b4af54b36572844a35b6f31dd3c7066038b2a",
+    "unchanged_copy": true
+  },
+  "code/orbit-queue/analyze_cf.py": {
+    "upstream_path": "code/orbit-queue/analyze_cf.py",
+    "bytes": 10196,
+    "sha256": "0d364a82229959e166cd40dd548bbf588a45ad823e8187c378c4dc14be34ff05",
+    "unchanged_copy": true
+  },
+  "code/orbit-queue/delay_route.py": {
+    "upstream_path": "code/orbit-queue/delay_route.py",
+    "bytes": 10047,
+    "sha256": "17e7f1729af148491e73df2d573d830a8b4281b8977d73696c33dfdf9ecd1742",
+    "unchanged_copy": true
+  },
+  "code/orbit-geometry/forward-hints.csv": {
+    "upstream_path": "code/orbit-geometry/forward-hints.csv",
+    "bytes": 1912,
+    "sha256": "0df8a3bc63e3ddcfb41caf904f7d811253f45b78d6a5ec9db73038072b136499",
+    "unchanged_copy": true
+  },
+  "code/queue-pacing/run.py": {
+    "upstream_path": "code/queue-pacing/run.py",
+    "bytes": 10724,
+    "sha256": "50a9d84257863fa606b1e93f39c94f7340311375ba83feefe33862c7d1e25dbe",
+    "unchanged_copy": true
+  },
+  "code/queue-pacing/analyze.py": {
+    "upstream_path": "code/queue-pacing/analyze.py",
+    "bytes": 11169,
+    "sha256": "5dc28fb0fad89c82ea6435e4c4a0202f3ceff16fe416b692d328312dfff4bb9e",
+    "unchanged_copy": true
+  },
+  "code/queue-pacing/posthoc.py": {
+    "upstream_path": "code/queue-pacing/posthoc.py",
+    "bytes": 5958,
+    "sha256": "86886c37deaa0c87d016a13442a72a7e55d6ef4e6af0db32c7518bced2f94fdd",
+    "unchanged_copy": true
+  },
+  "code/queue-backpressure/analyze.py": {
+    "upstream_path": "code/queue-backpressure/analyze.py",
+    "bytes": 16684,
+    "sha256": "1b04dcf7bd2ca3439caebdfcecf28fb1c377a0eea15dcdee5767786c3c5901b5",
+    "unchanged_copy": true
+  },
+  "code/queue-backpressure/reference-receipt.json": {
+    "upstream_path": "code/queue-backpressure/reference-receipt.json",
+    "bytes": 2938,
+    "sha256": "ee9e5ef6dd8e862599a5e4a853baad596658c5d912f98b296a5738806c5eb52a",
+    "unchanged_copy": true
+  },
+  "runtimes/pace.patch": {
+    "upstream_path": "code/queue-pacing/ns3.patch",
+    "bytes": 116964,
+    "sha256": "ace08b170b04774c2eac849c1875e647a97e786611616cbb32867496cb2cb808",
+    "unchanged_copy": true
+  },
+  "runtimes/bp.patch": {
+    "upstream_path": "code/queue-backpressure/ns3.patch",
+    "bytes": 128930,
+    "sha256": "90f9114c9a31df219587aea1e9406dccaeb3c4891243699c5d825827369ac72f",
+    "unchanged_copy": true
+  }
+}
