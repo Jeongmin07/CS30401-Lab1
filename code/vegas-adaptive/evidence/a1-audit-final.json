@@ -1,0 +1,213 @@
+{
+  "audit": [
+    {
+      "case": "a1-leo-base",
+      "adaptive": false,
+      "vegas_rows": 2189,
+      "upward_base_changes": 0,
+      "inputs": [
+        {
+          "path": "/tmp/cs30401-vegas/a1-leo-base/case.json",
+          "bytes": 7102,
+          "sha256": "39bb5a6b7d2ab2e7077772c9876d8fd5a30357382e8acc4ba1d05b901447c082"
+        },
+        {
+          "path": "/tmp/cs30401-vegas/a1-leo-base/logs_ns3/vegas_state.csv",
+          "bytes": 211571,
+          "sha256": "f7a1c6b93b91decd8adb5b12f6ae88b6593b6538ac493a78e5557e7a2eacbc2f"
+        }
+      ]
+    },
+    {
+      "case": "a1-leo-adaptive",
+      "adaptive": true,
+      "checked_decisions": 2158,
+      "vegas_rows": 2191,
+      "inputs": [
+        {
+          "path": "/tmp/cs30401-vegas/a1-leo-adaptive/case.json",
+          "bytes": 7119,
+          "sha256": "46c34e4b8c6a85b90d072e7207cce1e56e81fda5a4f06e1a0bf2dc6e9fc2f010"
+        },
+        {
+          "path": "/tmp/cs30401-vegas/a1-leo-adaptive/logs_ns3/vegas_state.csv",
+          "bytes": 215020,
+          "sha256": "7124bfd1a70039caf2f4d393f4428ee292da4ddd61edba87bab06f8ae2a76aaa"
+        },
+        {
+          "path": "/tmp/cs30401-vegas/a1-leo-adaptive/logs_ns3/adaptive_state.csv",
+          "bytes": 264697,
+          "sha256": "17ede7984e61c6c37cfa886800042af5b5378e5cc43f8987703144073ccac06b"
+        }
+      ],
+      "rules": {
+        "seed-ordinary": 5,
+        "below-alpha-grow": 1233,
+        "band-rate-rose": 39,
+        "below-alpha-rate-fell": 23,
+        "band-hold": 260,
+        "above-beta": 598
+      },
+      "maximum_alpha": 14,
+      "upward_base_changes": 0,
+      "invalid_or_missing_decisions": 0
+    },
+    {
+      "case": "a1-fixed-comp-base",
+      "adaptive": false,
+      "vegas_rows": 2186,
+      "upward_base_changes": 0,
+      "inputs": [
+        {
+          "path": "/tmp/cs30401-vegas/a1-fixed-comp-base/case.json",
+          "bytes": 7855,
+          "sha256": "6719a7899b281b0846d1960202f5604a60b40ec0afd6e0b52c21af938b0c8230"
+        },
+        {
+          "path": "/tmp/cs30401-vegas/a1-fixed-comp-base/logs_ns3/vegas_state.csv",
+          "bytes": 211537,
+          "sha256": "0f13a3ed56b997a1e83693be68d0da9ab1fb381d9139752bd9501ff965b6c567"
+        }
+      ]
+    },
+    {
+      "case": "a1-fixed-comp-adaptive",
+      "adaptive": true,
+      "checked_decisions": 2179,
+      "vegas_rows": 2191,
+      "inputs": [
+        {
+          "path": "/tmp/cs30401-vegas/a1-fixed-comp-adaptive/case.json",
+          "bytes": 7872,
+          "sha256": "a2f6e407dc33a6caa2d00522d28369a7c53636cd027c057b12ebfcd4b9d1f4f5"
+        },
+        {
+          "path": "/tmp/cs30401-vegas/a1-fixed-comp-adaptive/logs_ns3/vegas_state.csv",
+          "bytes": 215563,
+          "sha256": "8cd3cd8c39a87abdf3fc88248b18db91fc320a0f5bd4e87d5934c466e4636568"
+        },
+        {
+          "path": "/tmp/cs30401-vegas/a1-fixed-comp-adaptive/logs_ns3/adaptive_state.csv",
+          "bytes": 266116,
+          "sha256": "59289fa210f0f866a7f89da6b4f2d4d5464d863715e0dfaefdf6bbf01609edc7"
+        }
+      ],
+      "rules": {
+        "seed-ordinary": 3,
+        "below-alpha-grow": 1145,
+        "band-rate-rose": 70,
+        "band-hold": 260,
+        "above-beta": 696,
+        "below-alpha-rate-fell": 5
+      },
+      "maximum_alpha": 16,
+      "upward_base_changes": 0,
+      "invalid_or_missing_decisions": 0
+    },
+    {
+      "case": "a1-fixed-base",
+      "adaptive": false,
+      "vegas_rows": 2224,
+      "upward_base_changes": 0,
+      "inputs": [
+        {
+          "path": "/tmp/cs30401-vegas/a1-fixed-base/case.json",
+          "bytes": 7831,
+          "sha256": "d503d49f76dfd3b445c43f2c1b8db4c1b65375bae586e71b1eb26c585c56560c"
+        },
+        {
+          "path": "/tmp/cs30401-vegas/a1-fixed-base/logs_ns3/vegas_state.csv",
+          "bytes": 211848,
+          "sha256": "682432bb5b36685c624b91c117cc0eaf54fab5c299cca915285273a618b4322b"
+        }
+      ]
+    },
+    {
+      "case": "a1-fixed-adaptive",
+      "adaptive": true,
+      "checked_decisions": 2215,
+      "vegas_rows": 2220,
+      "inputs": [
+        {
+          "path": "/tmp/cs30401-vegas/a1-fixed-adaptive/case.json",
+          "bytes": 7850,
+          "sha256": "68e8c29e3e14a63c8a86a3c0d64039ec9412e42d3791ef7f4c7d5e8ad89d46f8"
+        },
+        {
+          "path": "/tmp/cs30401-vegas/a1-fixed-adaptive/logs_ns3/vegas_state.csv",
+          "bytes": 215582,
+          "sha256": "b56601567147e927d80486d6ac17ff057610124d78bc0a67a8eff800a5a64a11"
+        },
+        {
+          "path": "/tmp/cs30401-vegas/a1-fixed-adaptive/logs_ns3/adaptive_state.csv",
+          "bytes": 268511,
+          "sha256": "0c8c563929145ff60129e8b04bb4f77ba7102a54710d81eeaf5c31f38bac5065"
+        }
+      ],
+      "rules": {
+        "seed-ordinary": 1,
+        "below-alpha-grow": 767,
+        "band-rate-rose": 2,
+        "band-hold": 1445
+      },
+      "maximum_alpha": 4,
+      "upward_base_changes": 0,
+      "invalid_or_missing_decisions": 0
+    },
+    {
+      "case": "a1-step-base",
+      "adaptive": false,
+      "vegas_rows": 2175,
+      "upward_base_changes": 0,
+      "inputs": [
+        {
+          "path": "/tmp/cs30401-vegas/a1-step-base/case.json",
+          "bytes": 7821,
+          "sha256": "9a98cb7e067974f87c722ac0a103534ab72f25899ba9cb432903f94ef4046cee"
+        },
+        {
+          "path": "/tmp/cs30401-vegas/a1-step-base/logs_ns3/vegas_state.csv",
+          "bytes": 206206,
+          "sha256": "456267ab990bc6f256bcd8e3407d7a9e3a9274b50ce3d888912b2a8c22398db3"
+        }
+      ]
+    },
+    {
+      "case": "a1-step-adaptive",
+      "adaptive": true,
+      "checked_decisions": 2152,
+      "vegas_rows": 2157,
+      "inputs": [
+        {
+          "path": "/tmp/cs30401-vegas/a1-step-adaptive/case.json",
+          "bytes": 7841,
+          "sha256": "c6e6c9d0674aa51db04170acc9f79f4fa28b88bb51570950a826e97b255023f5"
+        },
+        {
+          "path": "/tmp/cs30401-vegas/a1-step-adaptive/logs_ns3/vegas_state.csv",
+          "bytes": 212083,
+          "sha256": "5dc09a1feb9cfa8ac15ae46a022d03fad0d93c84c914e75e04508d9c36645948"
+        },
+        {
+          "path": "/tmp/cs30401-vegas/a1-step-adaptive/logs_ns3/adaptive_state.csv",
+          "bytes": 263452,
+          "sha256": "961e45d112f45479f091442b454e04b0e01c4a3571da021e5231f3d9b1a1f27f"
+        }
+      ],
+      "rules": {
+        "seed-ordinary": 1,
+        "below-alpha-grow": 1051,
+        "band-rate-rose": 25,
+        "band-hold": 343,
+        "above-beta": 732
+      },
+      "maximum_alpha": 25,
+      "upward_base_changes": 0,
+      "invalid_or_missing_decisions": 0
+    }
+  ],
+  "comparison": null,
+  "replay_source_binary_libraries_parameters_match": null,
+  "audit_source_sha256": "df393e3a2da4e3ddb3f81a11c7f0a7a0d1c7f06c99a247cdc5d756b8fa98ebd6",
+  "status": "pass"
+}

@@ -1,0 +1,7 @@
+case,window,start_ns,end_ns,flow_id,application_bytes,application_goodput_mbps,sender_payload_tx_rows,sender_payload_tx_bytes,official_retransmission_rows,official_retransmission_bytes,recovery_entries,LOSS_entries,drop_trace_rows,distinct_tagged_transmissions_dropped,application_sum_bytes,application_sum_goodput_mbps,active_duration_ns,active_interval_application_goodput_mbps
+portable-leo-base,whole,0,200000000000,0,1037783460,41.5113384,752058,1037840040,41,56580,2,0,0,0,1037783460,41.5113384,,
+portable-leo-base,late20,180000000000,200000000000,0,21908880,8.763552,15876,21908880,0,0,0,0,0,0,21908880,8.763552,,
+portable-leo-base,prestep_121.6,101600000000,121600000000,0,234885660,93.954264,170282,234989160,0,0,0,0,0,0,234885660,93.954264,,
+portable-leo-base,poststep_121.6,131600000000,151600000000,0,109359480,43.743792,79261,109380180,0,0,0,0,0,0,109359480,43.743792,,
+portable-leo-base,prestep_187.4,167400000000,187400000000,0,33092400,13.23696,23980,33092400,0,0,0,0,0,0,33092400,13.23696,,
+portable-leo-base,poststep_187.4,197400000000,200000000000,0,1076400,3.312,780,1076400,0,0,0,0,0,0,1076400,3.312,,

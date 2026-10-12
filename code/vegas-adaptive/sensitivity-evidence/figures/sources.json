@@ -1,0 +1,5 @@
+{
+  "results_sha256": "234bb69b7a6ae7c989c5e3b52a2fdfccbe5ce468d1d32efc578411e7852d2a5b",
+  "original_100mbps_baseline": 41.5113384,
+  "original_100mbps_source": "../evidence/results.csv a1-leo-base whole; verified against PR14"
+}

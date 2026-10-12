@@ -1,0 +1,143 @@
+{
+  "audit": [],
+  "comparison": [
+    {
+      "file": "adaptive_state.csv",
+      "sha256": "59289fa210f0f866a7f89da6b4f2d4d5464d863715e0dfaefdf6bbf01609edc7",
+      "equal": true
+    },
+    {
+      "file": "delay_events.csv",
+      "sha256": "346e2e27550015f28425194bfe5a174f0c6ab87d89be7d9b81357111a4ea4f54",
+      "equal": true
+    },
+    {
+      "file": "flow_summary.csv",
+      "sha256": "e9225743d257fdee51764be591f873d96b573e65f3d6441095e80fc69efa03ba",
+      "equal": true
+    },
+    {
+      "file": "queue_coverage.csv",
+      "sha256": "82e2f2dd7290ec35da6592dd3f306a241471861265a21e8f88853c0053b73499",
+      "equal": true
+    },
+    {
+      "file": "queue_events.csv",
+      "sha256": "a3e44260d30e6b2816514cb0b5c75ef1cd52fe0216ad169b6e452a31d828f8c4",
+      "equal": true
+    },
+    {
+      "file": "queue_occupancy.csv",
+      "sha256": "bb070b6dd8e7a7c36da2d5fdd47e818d50c3cb746a4a4def50768870b91ecae0",
+      "equal": true
+    },
+    {
+      "file": "queue_pending.csv",
+      "sha256": "a40e1f733c57e2438a0472cf9b802606018174e71be25665f0c6b601ef808e9d",
+      "equal": true
+    },
+    {
+      "file": "queue_sojourn.csv",
+      "sha256": "c0f2357784510dcb588b19e3c8316a514341514d13c7ce9a0107d78cfd6f73fa",
+      "equal": true
+    },
+    {
+      "file": "queue_summary.csv",
+      "sha256": "20c3297f8fc6684fe15b0af45f1c3475c03023b03e9ef6ae284f82accc5cb016",
+      "equal": true
+    },
+    {
+      "file": "socket_types.csv",
+      "sha256": "d725d52c86dd0cbcb0d1092469d90abc5458d5d9ff966e7226fcf83a89b38994",
+      "equal": true
+    },
+    {
+      "file": "study_app_rx_node_1_port_1024.csv",
+      "sha256": "2dcb00f51716401e707f1f072d262d672f4fe0c11b0d21709e0658847c1a9e0a",
+      "equal": true
+    },
+    {
+      "file": "study_app_rx_node_1_port_1025.csv",
+      "sha256": "7628953962deaa9c0331e904f0ed5f48cdbc5e42e9ff14d5ec743d23d0961ffa",
+      "equal": true
+    },
+    {
+      "file": "study_drop_coverage.csv",
+      "sha256": "f2bbce727ae1f61019ef8f727753e3a8f64abdeb41d660a20a3607802f4524f4",
+      "equal": true
+    },
+    {
+      "file": "study_drops.csv",
+      "sha256": "2cd86aa459d647372020ea38a8e9a577cf2b89efc9b020e071609814c10b4923",
+      "equal": true
+    },
+    {
+      "file": "study_rx_node_1_port_1024.csv",
+      "sha256": "e3b357bc39211e52284024e74ad651ab623859d7f0eb8b6a5857da589a52f419",
+      "equal": true
+    },
+    {
+      "file": "study_rx_node_1_port_1025.csv",
+      "sha256": "7789528aaceccc75c6d367a3a03f6c833544cec2479ecb75704a50f45cbd34f4",
+      "equal": true
+    },
+    {
+      "file": "tcp_flow_0_cwnd.csv",
+      "sha256": "c92ccc6fda63cfd340ff75a9a06e485de72d80225dbe6aa4ee7e2fc213fa36b9",
+      "equal": true
+    },
+    {
+      "file": "tcp_flow_0_progress.csv",
+      "sha256": "7df0f6f4768fa15e00b3ff4deaf4df28254589064bcaab8b372e932ee8f25761",
+      "equal": true
+    },
+    {
+      "file": "tcp_flow_0_rtt.csv",
+      "sha256": "b0d74d2e832f9e5f2258260c5d28fb629665a3b3eb541ac98ba2c0f27c67bd82",
+      "equal": true
+    },
+    {
+      "file": "tcp_flow_0_study_events.csv",
+      "sha256": "10151f82b30058908feae1ae84ff22588c4215453da837941c03753e0b5c6a86",
+      "equal": true
+    },
+    {
+      "file": "tcp_flow_0_study_packets.csv",
+      "sha256": "872a8d77cc7ea812389bd7c602e50109366c2537e265e5c6f0d04cdcb1ede3fc",
+      "equal": true
+    },
+    {
+      "file": "tcp_flow_1_cwnd.csv",
+      "sha256": "8bc3f6bd2d685108d3895aa8e38ab51527be1f41320f1664f87334633d1747c1",
+      "equal": true
+    },
+    {
+      "file": "tcp_flow_1_progress.csv",
+      "sha256": "6711ac9713f21aa0ba5cc3e6fbf631ba356cee82f5f6fad08376d5d90376446f",
+      "equal": true
+    },
+    {
+      "file": "tcp_flow_1_rtt.csv",
+      "sha256": "9dbb049d14af5130700222731ef10c5fc4449a09eb97f47fc2faf2d1de7f3b3c",
+      "equal": true
+    },
+    {
+      "file": "tcp_flow_1_study_events.csv",
+      "sha256": "d37f719df2a0b62ed65acbeccb94030f55d42bac37daa893a7af046fe2166541",
+      "equal": true
+    },
+    {
+      "file": "tcp_flow_1_study_packets.csv",
+      "sha256": "70f508eb6cdc60c196cd608ef06536264d6983d7c2b9c65c33ec188985b7143b",
+      "equal": true
+    },
+    {
+      "file": "vegas_state.csv",
+      "sha256": "8cd3cd8c39a87abdf3fc88248b18db91fc320a0f5bd4e87d5934c466e4636568",
+      "equal": true
+    }
+  ],
+  "replay_source_binary_libraries_parameters_match": true,
+  "audit_source_sha256": "df393e3a2da4e3ddb3f81a11c7f0a7a0d1c7f06c99a247cdc5d756b8fa98ebd6",
+  "status": "pass"
+}

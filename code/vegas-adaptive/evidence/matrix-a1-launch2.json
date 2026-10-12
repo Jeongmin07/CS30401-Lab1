@@ -1,0 +1,158 @@
+{
+  "declared_tasks_before_launch": [
+    {
+      "case": "a1-leo-base",
+      "family": "leo",
+      "adaptive": false,
+      "command": [
+        "/home/ubuntu/lab/.venv/bin/python3",
+        "/work/code/vegas-adaptive/run_case.py",
+        "a1-leo-base",
+        "--image-digest",
+        "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+        "--root",
+        "/tmp/cs30401-vegas",
+        "--kind",
+        "leo"
+      ]
+    },
+    {
+      "case": "a1-leo-adaptive",
+      "family": "leo",
+      "adaptive": true,
+      "command": [
+        "/home/ubuntu/lab/.venv/bin/python3",
+        "/work/code/vegas-adaptive/run_case.py",
+        "a1-leo-adaptive",
+        "--image-digest",
+        "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+        "--root",
+        "/tmp/cs30401-vegas",
+        "--kind",
+        "leo",
+        "--adaptive"
+      ]
+    },
+    {
+      "case": "a1-fixed-comp-base",
+      "family": "fixed-comp",
+      "adaptive": false,
+      "command": [
+        "/home/ubuntu/lab/.venv/bin/python3",
+        "/work/code/vegas-adaptive/run_case.py",
+        "a1-fixed-comp-base",
+        "--image-digest",
+        "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+        "--root",
+        "/tmp/cs30401-vegas",
+        "--after-ms",
+        "45",
+        "--competitor"
+      ]
+    },
+    {
+      "case": "a1-fixed-comp-adaptive",
+      "family": "fixed-comp",
+      "adaptive": true,
+      "command": [
+        "/home/ubuntu/lab/.venv/bin/python3",
+        "/work/code/vegas-adaptive/run_case.py",
+        "a1-fixed-comp-adaptive",
+        "--image-digest",
+        "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+        "--root",
+        "/tmp/cs30401-vegas",
+        "--after-ms",
+        "45",
+        "--competitor",
+        "--adaptive"
+      ]
+    }
+  ],
+  "results": [
+    {
+      "case": "a1-leo-base",
+      "family": "leo",
+      "adaptive": false,
+      "command": [
+        "/home/ubuntu/lab/.venv/bin/python3",
+        "/work/code/vegas-adaptive/run_case.py",
+        "a1-leo-base",
+        "--image-digest",
+        "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+        "--root",
+        "/tmp/cs30401-vegas",
+        "--kind",
+        "leo"
+      ],
+      "exit_code": 0,
+      "wall_s": 116.76015426699996,
+      "output": "Run directory ready: /tmp/cs30401-vegas/a1-leo-base  (1 flow(s), TcpVegas, 100 Mbit/s, queue 100 pkts, 200 s)\n{\"case\": \"a1-leo-base\", \"status\": \"complete\", \"exit_code\": 0, \"wall_time_s\": 108.865, \"source_commit\": \"7ac0751235dc1ecb14b3042622ac50990429f17c\"}\n"
+    },
+    {
+      "case": "a1-leo-adaptive",
+      "family": "leo",
+      "adaptive": true,
+      "command": [
+        "/home/ubuntu/lab/.venv/bin/python3",
+        "/work/code/vegas-adaptive/run_case.py",
+        "a1-leo-adaptive",
+        "--image-digest",
+        "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+        "--root",
+        "/tmp/cs30401-vegas",
+        "--kind",
+        "leo",
+        "--adaptive"
+      ],
+      "exit_code": 0,
+      "wall_s": 142.35697055000003,
+      "output": "Run directory ready: /tmp/cs30401-vegas/a1-leo-adaptive  (1 flow(s), TcpVegas, 100 Mbit/s, queue 100 pkts, 200 s)\n{\"case\": \"a1-leo-adaptive\", \"status\": \"complete\", \"exit_code\": 0, \"wall_time_s\": 134.462, \"source_commit\": \"7ac0751235dc1ecb14b3042622ac50990429f17c\"}\n"
+    },
+    {
+      "case": "a1-fixed-comp-base",
+      "family": "fixed-comp",
+      "adaptive": false,
+      "command": [
+        "/home/ubuntu/lab/.venv/bin/python3",
+        "/work/code/vegas-adaptive/run_case.py",
+        "a1-fixed-comp-base",
+        "--image-digest",
+        "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+        "--root",
+        "/tmp/cs30401-vegas",
+        "--after-ms",
+        "45",
+        "--competitor"
+      ],
+      "exit_code": 0,
+      "wall_s": 95.98048508,
+      "output": "{\"case\": \"a1-fixed-comp-base\", \"status\": \"complete\", \"exit_code\": 0, \"wall_time_s\": 83.502, \"source_commit\": \"7ac0751235dc1ecb14b3042622ac50990429f17c\"}\n"
+    },
+    {
+      "case": "a1-fixed-comp-adaptive",
+      "family": "fixed-comp",
+      "adaptive": true,
+      "command": [
+        "/home/ubuntu/lab/.venv/bin/python3",
+        "/work/code/vegas-adaptive/run_case.py",
+        "a1-fixed-comp-adaptive",
+        "--image-digest",
+        "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+        "--root",
+        "/tmp/cs30401-vegas",
+        "--after-ms",
+        "45",
+        "--competitor",
+        "--adaptive"
+      ],
+      "exit_code": 0,
+      "wall_s": 101.89957564800011,
+      "output": "{\"case\": \"a1-fixed-comp-adaptive\", \"status\": \"complete\", \"exit_code\": 0, \"wall_time_s\": 79.862, \"source_commit\": \"7ac0751235dc1ecb14b3042622ac50990429f17c\"}\n"
+    }
+  ],
+  "start_unix": 1791720259.8300903,
+  "status": "complete",
+  "workers": 2,
+  "end_unix": 1791720504.072126
+}

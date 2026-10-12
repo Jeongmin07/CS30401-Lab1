@@ -1,0 +1,863 @@
+{
+  "status": "PASS",
+  "case_count": 10,
+  "measurement_csv_count": 155,
+  "baseline_measurement_csv_count": 11,
+  "baseline_windows_exact": true,
+  "state_rows": 21840,
+  "renewals": 101,
+  "historical_compatibility_csv_count": 37,
+  "all_windows_exact": true,
+  "results_csv_exact": true,
+  "figure_png_exact": true,
+  "simulator_identity_exact": true,
+  "package_source_commit": "1deee988a37325c230a389ad4e6dafc518fc138f",
+  "matrix_wall_s": 1044.6515061855316,
+  "checks": [
+    {
+      "bytes": 162,
+      "path": "s1-fixed-comp-r10/logs_ns3/delay_events.csv",
+      "sha256": "346e2e27550015f28425194bfe5a174f0c6ab87d89be7d9b81357111a4ea4f54"
+    },
+    {
+      "bytes": 373,
+      "path": "s1-fixed-comp-r10/logs_ns3/flow_summary.csv",
+      "sha256": "e9505b12b4ec94e5b835b3b22b3a3a8b5902a947412ae02326e74714b066293d"
+    },
+    {
+      "bytes": 316,
+      "path": "s1-fixed-comp-r10/logs_ns3/queue_coverage.csv",
+      "sha256": "82e2f2dd7290ec35da6592dd3f306a241471861265a21e8f88853c0053b73499"
+    },
+    {
+      "bytes": 279590917,
+      "path": "s1-fixed-comp-r10/logs_ns3/queue_events.csv",
+      "sha256": "a27fb493b52d463fc88e527a1d9cf102f14cdea40a2fe6aa19ad47f6a50ed546"
+    },
+    {
+      "bytes": 137990445,
+      "path": "s1-fixed-comp-r10/logs_ns3/queue_occupancy.csv",
+      "sha256": "1be1da017aa1249fff20b94d8eeb8f36e744f6fdca8ce590528c74c32b22a79d"
+    },
+    {
+      "bytes": 7922,
+      "path": "s1-fixed-comp-r10/logs_ns3/queue_pending.csv",
+      "sha256": "b0e51b295e6371945c69ee1b6c92c0c608ec9fb8ea89ca5638a5efa8b408ee97"
+    },
+    {
+      "bytes": 145801228,
+      "path": "s1-fixed-comp-r10/logs_ns3/queue_sojourn.csv",
+      "sha256": "a33032898cc499c7c7fe4440ed3df73fe2fcc805eb6e8c6543007cc60107e197"
+    },
+    {
+      "bytes": 187,
+      "path": "s1-fixed-comp-r10/logs_ns3/queue_summary.csv",
+      "sha256": "35954a70a9dcafabde4739451100d2990fdd01108b18d253de2c340ec585615a"
+    },
+    {
+      "bytes": 179,
+      "path": "s1-fixed-comp-r10/logs_ns3/socket_types.csv",
+      "sha256": "d725d52c86dd0cbcb0d1092469d90abc5458d5d9ff966e7226fcf83a89b38994"
+    },
+    {
+      "bytes": 61917716,
+      "path": "s1-fixed-comp-r10/logs_ns3/study_app_rx_node_1_port_1024.csv",
+      "sha256": "bf06f82d79545b2fecbc041289679a45c785d1220fa5d643b810b2dc22546242"
+    },
+    {
+      "bytes": 45620249,
+      "path": "s1-fixed-comp-r10/logs_ns3/study_app_rx_node_1_port_1025.csv",
+      "sha256": "8d9ce038efcb45368d025bee500392b7581b5877577258f721a5af88bebc7b3f"
+    },
+    {
+      "bytes": 328,
+      "path": "s1-fixed-comp-r10/logs_ns3/study_drop_coverage.csv",
+      "sha256": "f2bbce727ae1f61019ef8f727753e3a8f64abdeb41d660a20a3607802f4524f4"
+    },
+    {
+      "bytes": 19744,
+      "path": "s1-fixed-comp-r10/logs_ns3/study_drops.csv",
+      "sha256": "07269867b0b530d0098a182d1bea8620877e0b48134cfbf65741be3ccc1d0954"
+    },
+    {
+      "bytes": 82574081,
+      "path": "s1-fixed-comp-r10/logs_ns3/study_rx_node_1_port_1024.csv",
+      "sha256": "d9c1e19c82234eb2695150c0588d9a18d1f0ce22f44939e040ce7cb0a6a8c682"
+    },
+    {
+      "bytes": 61449746,
+      "path": "s1-fixed-comp-r10/logs_ns3/study_rx_node_1_port_1025.csv",
+      "sha256": "33ba81884e521c0227fe03220c919c73d085a22870c73374a899081af76db7d1"
+    },
+    {
+      "bytes": 34181,
+      "path": "s1-fixed-comp-r10/logs_ns3/tcp_flow_0_cwnd.csv",
+      "sha256": "d88233de351d6a6a68c946d76feecd8b8a276457cab5c35b1cf067eac96b5901"
+    },
+    {
+      "bytes": 9474011,
+      "path": "s1-fixed-comp-r10/logs_ns3/tcp_flow_0_progress.csv",
+      "sha256": "dc4f2803fa1116915b6444dd31844b5797d4dfd7b4630d9f756323bb551428b9"
+    },
+    {
+      "bytes": 9054567,
+      "path": "s1-fixed-comp-r10/logs_ns3/tcp_flow_0_rtt.csv",
+      "sha256": "0222cb7a382df134fc47da5d0ed0818339c3a60af48d4f2476a6a4fd1dff70dc"
+    },
+    {
+      "bytes": 29534,
+      "path": "s1-fixed-comp-r10/logs_ns3/tcp_flow_0_study_events.csv",
+      "sha256": "b167b35efba734a043a98b46015c05bac60fcf2be759ab118e1685e907a76ce3"
+    },
+    {
+      "bytes": 88552165,
+      "path": "s1-fixed-comp-r10/logs_ns3/tcp_flow_0_study_packets.csv",
+      "sha256": "fc1b0af7d89987e30e1a203efc3b925bef18adcec29ccf27dd3136c6cc0058e8"
+    },
+    {
+      "bytes": 91547,
+      "path": "s1-fixed-comp-r10/logs_ns3/tcp_flow_1_cwnd.csv",
+      "sha256": "7f99e197e312c5d9cad6942512b10a15f6a8e3b622b7cca97f58be01b4f6b513"
+    },
+    {
+      "bytes": 7012778,
+      "path": "s1-fixed-comp-r10/logs_ns3/tcp_flow_1_progress.csv",
+      "sha256": "0a5810ded586dd6ae28618590def40a6c622f3c9ccf6095043f480aaac892242"
+    },
+    {
+      "bytes": 6769429,
+      "path": "s1-fixed-comp-r10/logs_ns3/tcp_flow_1_rtt.csv",
+      "sha256": "6c9fc154c74c2bdd3be705ffc82c553e078b9b0baa2ffe48de958a275d0ea299"
+    },
+    {
+      "bytes": 1760,
+      "path": "s1-fixed-comp-r10/logs_ns3/tcp_flow_1_study_events.csv",
+      "sha256": "b2780b1f6af12abab9d9f3ad17313e2893be5710db541246ac07f24f1854c3b3"
+    },
+    {
+      "bytes": 66517511,
+      "path": "s1-fixed-comp-r10/logs_ns3/tcp_flow_1_study_packets.csv",
+      "sha256": "66d968bbf1219744448a1437100dfcd8ea0aae0ddc4ed7be56410f8ff052b860"
+    },
+    {
+      "bytes": 250366,
+      "path": "s1-fixed-comp-r10/logs_ns3/vegas_state.csv",
+      "sha256": "46bf8e0077ffbadf3944c973f3ef27168861fce090e8b54e7549443f3f7e215e"
+    },
+    {
+      "bytes": 162,
+      "path": "s1-fixed-comp-r20/logs_ns3/delay_events.csv",
+      "sha256": "346e2e27550015f28425194bfe5a174f0c6ab87d89be7d9b81357111a4ea4f54"
+    },
+    {
+      "bytes": 373,
+      "path": "s1-fixed-comp-r20/logs_ns3/flow_summary.csv",
+      "sha256": "ca5514463f892310a9334a0ef51140327521e6165cb1a80262a5e9e11af67fd3"
+    },
+    {
+      "bytes": 316,
+      "path": "s1-fixed-comp-r20/logs_ns3/queue_coverage.csv",
+      "sha256": "82e2f2dd7290ec35da6592dd3f306a241471861265a21e8f88853c0053b73499"
+    },
+    {
+      "bytes": 279136428,
+      "path": "s1-fixed-comp-r20/logs_ns3/queue_events.csv",
+      "sha256": "c5ba5a7a9db133792e12281a981715858ea3897db4b92f5dbdc83b06158757ca"
+    },
+    {
+      "bytes": 137646691,
+      "path": "s1-fixed-comp-r20/logs_ns3/queue_occupancy.csv",
+      "sha256": "81797f95a50d35d69ae867ef8d2b424e947c556332be78fb7aea951fc235f702"
+    },
+    {
+      "bytes": 6343,
+      "path": "s1-fixed-comp-r20/logs_ns3/queue_pending.csv",
+      "sha256": "f151f3f08f1c398011922967d84ba314c0dc6a8498a0e80cd67ca027f98348c4"
+    },
+    {
+      "bytes": 145613180,
+      "path": "s1-fixed-comp-r20/logs_ns3/queue_sojourn.csv",
+      "sha256": "5aed816c22f0213d59b33d1da8b1871cba7112041cd2119d99352928a1c20b29"
+    },
+    {
+      "bytes": 187,
+      "path": "s1-fixed-comp-r20/logs_ns3/queue_summary.csv",
+      "sha256": "b202a09e384eeb78039435b9169253a8d20a4f28d45628a61689a502312d6ada"
+    },
+    {
+      "bytes": 179,
+      "path": "s1-fixed-comp-r20/logs_ns3/socket_types.csv",
+      "sha256": "d725d52c86dd0cbcb0d1092469d90abc5458d5d9ff966e7226fcf83a89b38994"
+    },
+    {
+      "bytes": 59517322,
+      "path": "s1-fixed-comp-r20/logs_ns3/study_app_rx_node_1_port_1024.csv",
+      "sha256": "b2746ec2366c451d03dfccb04d1afda01b0555ca2afbb8c005ad0b075764eda3"
+    },
+    {
+      "bytes": 47798916,
+      "path": "s1-fixed-comp-r20/logs_ns3/study_app_rx_node_1_port_1025.csv",
+      "sha256": "07c10ba42fcf171c077b91dbb94b1c61e40bee17b8ec2385dd7ef3cb627f4d5c"
+    },
+    {
+      "bytes": 328,
+      "path": "s1-fixed-comp-r20/logs_ns3/study_drop_coverage.csv",
+      "sha256": "f2bbce727ae1f61019ef8f727753e3a8f64abdeb41d660a20a3607802f4524f4"
+    },
+    {
+      "bytes": 19856,
+      "path": "s1-fixed-comp-r20/logs_ns3/study_drops.csv",
+      "sha256": "690a86c49716a27b996d6750b8b6fc1ead49a430085cd359a7165842c9ecb623"
+    },
+    {
+      "bytes": 79285851,
+      "path": "s1-fixed-comp-r20/logs_ns3/study_rx_node_1_port_1024.csv",
+      "sha256": "35543d2058fb1ad02e7841272bf8abc6aee5189f664601384a59744ac2cdcd46"
+    },
+    {
+      "bytes": 64528610,
+      "path": "s1-fixed-comp-r20/logs_ns3/study_rx_node_1_port_1025.csv",
+      "sha256": "64f8790badd2d7f539a3df8f985fbd9714b3953444419d6be8b7dfcd93e0a424"
+    },
+    {
+      "bytes": 35149,
+      "path": "s1-fixed-comp-r20/logs_ns3/tcp_flow_0_cwnd.csv",
+      "sha256": "0156a36c68aed87f728d1b8dacb43c0966760ae3781d2a6883d51c52ea6f027a"
+    },
+    {
+      "bytes": 9099156,
+      "path": "s1-fixed-comp-r20/logs_ns3/tcp_flow_0_progress.csv",
+      "sha256": "4e11009d326dfb703db49c9ebdb722591065f28f444391212ebd4a9277d86f42"
+    },
+    {
+      "bytes": 8704532,
+      "path": "s1-fixed-comp-r20/logs_ns3/tcp_flow_0_rtt.csv",
+      "sha256": "368664551be6051eb820bcdb42f96240d628a314d4d1467039a934c9f15a1d98"
+    },
+    {
+      "bytes": 32516,
+      "path": "s1-fixed-comp-r20/logs_ns3/tcp_flow_0_study_events.csv",
+      "sha256": "cf8368bc393e596505484eecdbf62ce40971c62721d3cdf3ba0e0a5bfd158a92"
+    },
+    {
+      "bytes": 84986013,
+      "path": "s1-fixed-comp-r20/logs_ns3/tcp_flow_0_study_packets.csv",
+      "sha256": "97565768c96d2423afaa83edcff1fb8d591de796150faf88d35b540255d285ea"
+    },
+    {
+      "bytes": 96864,
+      "path": "s1-fixed-comp-r20/logs_ns3/tcp_flow_1_cwnd.csv",
+      "sha256": "96787009851e839c880261dd6fbc953edf8b80662130525c8b4734062b876883"
+    },
+    {
+      "bytes": 7347728,
+      "path": "s1-fixed-comp-r20/logs_ns3/tcp_flow_1_progress.csv",
+      "sha256": "6bce62a69851ef05c5a11ca9fa1f312f56ccf6e6c5451e5e1567ef561e5ec31c"
+    },
+    {
+      "bytes": 7077077,
+      "path": "s1-fixed-comp-r20/logs_ns3/tcp_flow_1_rtt.csv",
+      "sha256": "6ece949d334b5fdef89cc77831a059c9b9095e85fe4be3430035354d562bcebe"
+    },
+    {
+      "bytes": 1760,
+      "path": "s1-fixed-comp-r20/logs_ns3/tcp_flow_1_study_events.csv",
+      "sha256": "db70f1a7d52320a6cf10c53313d1fa45a607fdaaae194dac8615c70206c8634c"
+    },
+    {
+      "bytes": 69928661,
+      "path": "s1-fixed-comp-r20/logs_ns3/tcp_flow_1_study_packets.csv",
+      "sha256": "092ddac130eca9075f0a2df1660219520aa8a44b1b6f96a18effac53bfaec224"
+    },
+    {
+      "bytes": 249545,
+      "path": "s1-fixed-comp-r20/logs_ns3/vegas_state.csv",
+      "sha256": "a9820881b71a8351285427298070725a93782bde60296a6154cabd6bc788dabe"
+    },
+    {
+      "bytes": 162,
+      "path": "s1-fixed-comp-r40/logs_ns3/delay_events.csv",
+      "sha256": "346e2e27550015f28425194bfe5a174f0c6ab87d89be7d9b81357111a4ea4f54"
+    },
+    {
+      "bytes": 364,
+      "path": "s1-fixed-comp-r40/logs_ns3/flow_summary.csv",
+      "sha256": "cde3684b1d4565aec183161c77edeac2abfeb7c40ddf964bf9450a2e63b60a12"
+    },
+    {
+      "bytes": 316,
+      "path": "s1-fixed-comp-r40/logs_ns3/queue_coverage.csv",
+      "sha256": "82e2f2dd7290ec35da6592dd3f306a241471861265a21e8f88853c0053b73499"
+    },
+    {
+      "bytes": 275997399,
+      "path": "s1-fixed-comp-r40/logs_ns3/queue_events.csv",
+      "sha256": "92fdd83e89c96aa1fadd858fd03042f706658e7fb79c5bdbd29a248d20ada0d8"
+    },
+    {
+      "bytes": 135246146,
+      "path": "s1-fixed-comp-r40/logs_ns3/queue_occupancy.csv",
+      "sha256": "36b9001dd095fd41fe66ba99603769fbef403f54f302fc389badcc1e57fb4032"
+    },
+    {
+      "bytes": 698,
+      "path": "s1-fixed-comp-r40/logs_ns3/queue_pending.csv",
+      "sha256": "8a22e6291e127efc28085bfca70a1a9514447432d04a8ca9eaf0881a76f4d23b"
+    },
+    {
+      "bytes": 144175490,
+      "path": "s1-fixed-comp-r40/logs_ns3/queue_sojourn.csv",
+      "sha256": "0bc136b5b28f98c53272eeac1ca371d8fde02860534f2e7d5bfc8e0eb7eae644"
+    },
+    {
+      "bytes": 186,
+      "path": "s1-fixed-comp-r40/logs_ns3/queue_summary.csv",
+      "sha256": "f9edf8299432d9146fb66afbfab2cfe0cc589dda424bd8de93a80a9790b51945"
+    },
+    {
+      "bytes": 179,
+      "path": "s1-fixed-comp-r40/logs_ns3/socket_types.csv",
+      "sha256": "d725d52c86dd0cbcb0d1092469d90abc5458d5d9ff966e7226fcf83a89b38994"
+    },
+    {
+      "bytes": 65906765,
+      "path": "s1-fixed-comp-r40/logs_ns3/study_app_rx_node_1_port_1024.csv",
+      "sha256": "a5dd1a697a426fec2677f3456daa06eddc5108fa48edd683b9aba01edb4732b5"
+    },
+    {
+      "bytes": 40870475,
+      "path": "s1-fixed-comp-r40/logs_ns3/study_app_rx_node_1_port_1025.csv",
+      "sha256": "8b8c9256f8ebcf099117e17f65bec0169d343701dec78ed1f3bc053184281c94"
+    },
+    {
+      "bytes": 328,
+      "path": "s1-fixed-comp-r40/logs_ns3/study_drop_coverage.csv",
+      "sha256": "f2bbce727ae1f61019ef8f727753e3a8f64abdeb41d660a20a3607802f4524f4"
+    },
+    {
+      "bytes": 21773,
+      "path": "s1-fixed-comp-r40/logs_ns3/study_drops.csv",
+      "sha256": "018e9c63a994b5c4cdf5a9ae91cc40d1e42c43d1f03c5c95e8aa78598585e467"
+    },
+    {
+      "bytes": 87692476,
+      "path": "s1-fixed-comp-r40/logs_ns3/study_rx_node_1_port_1024.csv",
+      "sha256": "bac41b29a953f06d0959619a474d51419f3f87c588deb5afbea101a28498cf37"
+    },
+    {
+      "bytes": 55238017,
+      "path": "s1-fixed-comp-r40/logs_ns3/study_rx_node_1_port_1025.csv",
+      "sha256": "0674db00d52dec2d5aefbd61cc448216cb5b2f0b434a73c1d67db4979d595bc6"
+    },
+    {
+      "bytes": 38676,
+      "path": "s1-fixed-comp-r40/logs_ns3/tcp_flow_0_cwnd.csv",
+      "sha256": "effafa3f55860839c76671c476f8bf3daed7d9091d3b0e93ae7dc4ae8da374c4"
+    },
+    {
+      "bytes": 10099144,
+      "path": "s1-fixed-comp-r40/logs_ns3/tcp_flow_0_progress.csv",
+      "sha256": "0074ec7459c079f209ad4bfc3f3a17fa5bf1f59ef9cf890841105ce0c79ef878"
+    },
+    {
+      "bytes": 9668044,
+      "path": "s1-fixed-comp-r40/logs_ns3/tcp_flow_0_rtt.csv",
+      "sha256": "fc522924649602585f86cfa41083b62e9319e00811115c98da2078c1b619edef"
+    },
+    {
+      "bytes": 32222,
+      "path": "s1-fixed-comp-r40/logs_ns3/tcp_flow_0_study_events.csv",
+      "sha256": "f5573a844f7eb87264c0f55e2bbb94721c3e05fe56b196798017cb083d5f1291"
+    },
+    {
+      "bytes": 93936191,
+      "path": "s1-fixed-comp-r40/logs_ns3/tcp_flow_0_study_packets.csv",
+      "sha256": "19ca85d88d846d686c835e22f684072a37fd5377723ecced0b3086cbbfa4448b"
+    },
+    {
+      "bytes": 97883,
+      "path": "s1-fixed-comp-r40/logs_ns3/tcp_flow_1_cwnd.csv",
+      "sha256": "a998da92f100baba8c5519dbcb0c632e61d890216b2fb932680784f02d26a7fa"
+    },
+    {
+      "bytes": 6280403,
+      "path": "s1-fixed-comp-r40/logs_ns3/tcp_flow_1_progress.csv",
+      "sha256": "8e7d7264c181d914fd4cd7e3c7447cdc8f5ff19cba613653b8fc71ad65c2e70f"
+    },
+    {
+      "bytes": 6000741,
+      "path": "s1-fixed-comp-r40/logs_ns3/tcp_flow_1_rtt.csv",
+      "sha256": "1b532715086a1fc8487cf131360ebc4695bccbae376ac8f215f03080afc98aa4"
+    },
+    {
+      "bytes": 2012,
+      "path": "s1-fixed-comp-r40/logs_ns3/tcp_flow_1_study_events.csv",
+      "sha256": "c5c5ef8940f277f415a51173147dc600f28712245e939ec2ca84767706cbce5e"
+    },
+    {
+      "bytes": 60003451,
+      "path": "s1-fixed-comp-r40/logs_ns3/tcp_flow_1_study_packets.csv",
+      "sha256": "63f0f44fa881a28b1b211760ef968e17d5efcf9a6c896ed86f8fbfca74185137"
+    },
+    {
+      "bytes": 251189,
+      "path": "s1-fixed-comp-r40/logs_ns3/vegas_state.csv",
+      "sha256": "02a1238db2bb3390a79a8172f5d9d3fe9e5708575b6e75fd811f6c0feb2e1ab3"
+    },
+    {
+      "bytes": 113882876,
+      "path": "s1-leo-r10/logs_ns3/study_app_rx_node_1585_port_1024.csv",
+      "sha256": "94efa69d46ab5993f78eccc2d0940dd1ead2627a2121369c3b89eb5a2175f790"
+    },
+    {
+      "bytes": 1140184,
+      "path": "s1-leo-r10/logs_ns3/study_drop_coverage.csv",
+      "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+    },
+    {
+      "bytes": 112,
+      "path": "s1-leo-r10/logs_ns3/study_drops.csv",
+      "sha256": "ec37c4087cf6eb0bf412760b74ba37e2279e44d6bfff2d89f87c8135ec82b959"
+    },
+    {
+      "bytes": 147651507,
+      "path": "s1-leo-r10/logs_ns3/study_rx_node_1585_port_1024.csv",
+      "sha256": "605e6ebf2874056372ead34893d76315ed373e52407bfc7d156ec60ed5b2dffe"
+    },
+    {
+      "bytes": 39819,
+      "path": "s1-leo-r10/logs_ns3/tcp_flow_0_cwnd.csv",
+      "sha256": "6216b5fc815159b496b24fa38915c2fa36524d1e3d38b877259d09baa6d411ed"
+    },
+    {
+      "bytes": 15824071,
+      "path": "s1-leo-r10/logs_ns3/tcp_flow_0_progress.csv",
+      "sha256": "09c80eaa35427e8e852f3069f56cccceb7859b9ce0fe1ecedc11e19a63f128bc"
+    },
+    {
+      "bytes": 14793528,
+      "path": "s1-leo-r10/logs_ns3/tcp_flow_0_rtt.csv",
+      "sha256": "c01128d06f93ed9d649701d02dfc29deb3c75fb1d24e8471213d24bcf9a279aa"
+    },
+    {
+      "bytes": 33903,
+      "path": "s1-leo-r10/logs_ns3/tcp_flow_0_study_events.csv",
+      "sha256": "db425c691191c5dd0886b40f4caa646f2f8a599ef36f259f233fdb0bd137fa1c"
+    },
+    {
+      "bytes": 145690516,
+      "path": "s1-leo-r10/logs_ns3/tcp_flow_0_study_packets.csv",
+      "sha256": "9c66c91cc7111413cbb5a7ccddf04e14ee2dd186381dbb98af755207413478a7"
+    },
+    {
+      "bytes": 76,
+      "path": "s1-leo-r10/logs_ns3/tcp_flows.csv",
+      "sha256": "d4fb67ccbdc2f15b4b6868dbcb74ac35613e3f116f15669fe957917d92655a42"
+    },
+    {
+      "bytes": 251862,
+      "path": "s1-leo-r10/logs_ns3/vegas_state.csv",
+      "sha256": "28ff33e669e3d1d0d447930ac7df73c63031af8ec1913571d47fe29326b961c4"
+    },
+    {
+      "bytes": 112936826,
+      "path": "s1-leo-r20/logs_ns3/study_app_rx_node_1585_port_1024.csv",
+      "sha256": "c8f09e8236082ebe4134caaf311a4f6e01f3f99734668b7b8901ffebd26193fd"
+    },
+    {
+      "bytes": 1140184,
+      "path": "s1-leo-r20/logs_ns3/study_drop_coverage.csv",
+      "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+    },
+    {
+      "bytes": 112,
+      "path": "s1-leo-r20/logs_ns3/study_drops.csv",
+      "sha256": "ec37c4087cf6eb0bf412760b74ba37e2279e44d6bfff2d89f87c8135ec82b959"
+    },
+    {
+      "bytes": 146420533,
+      "path": "s1-leo-r20/logs_ns3/study_rx_node_1585_port_1024.csv",
+      "sha256": "34760b9c27859f1af4232e0d0b1395b176f776867cade866f7bbc54459af9128"
+    },
+    {
+      "bytes": 40008,
+      "path": "s1-leo-r20/logs_ns3/tcp_flow_0_cwnd.csv",
+      "sha256": "1df3f135ae5115c5579d1b8cc63917fca2ca681008f3ff57808f82e6809b4096"
+    },
+    {
+      "bytes": 15691990,
+      "path": "s1-leo-r20/logs_ns3/tcp_flow_0_progress.csv",
+      "sha256": "12af92ccac14200814b875c98c5fd310e72b663adb8d85e40eaaa7ae1052b459"
+    },
+    {
+      "bytes": 14692017,
+      "path": "s1-leo-r20/logs_ns3/tcp_flow_0_rtt.csv",
+      "sha256": "daf5b9664c906410c5353648c84de7f2922dbeb386d7ce4001d32fa53fb2320b"
+    },
+    {
+      "bytes": 35334,
+      "path": "s1-leo-r20/logs_ns3/tcp_flow_0_study_events.csv",
+      "sha256": "cda9e7018fd0a30a8c442e21cfbba29006fdbb73b8656df7154fbef2c45c414c"
+    },
+    {
+      "bytes": 144476145,
+      "path": "s1-leo-r20/logs_ns3/tcp_flow_0_study_packets.csv",
+      "sha256": "5d42b8e9c2c3426e6eaf395e3a7f3d2378a4f2937448f0af4e0d31318a6703f4"
+    },
+    {
+      "bytes": 76,
+      "path": "s1-leo-r20/logs_ns3/tcp_flows.csv",
+      "sha256": "5195b24237172a778466b67c95f84f4a9094329a1548d9063d57795a81cc8f7d"
+    },
+    {
+      "bytes": 253196,
+      "path": "s1-leo-r20/logs_ns3/vegas_state.csv",
+      "sha256": "f11167f380667b66996588b7fc9d1a9241ef97d54b26b24d59997cf0037a4881"
+    },
+    {
+      "bytes": 111458830,
+      "path": "s1-leo-r40/logs_ns3/study_app_rx_node_1585_port_1024.csv",
+      "sha256": "61b72b050935d38d2d2e7f200e71dcc5e7efb94dee161b6e8c11548d401547b4"
+    },
+    {
+      "bytes": 1140184,
+      "path": "s1-leo-r40/logs_ns3/study_drop_coverage.csv",
+      "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+    },
+    {
+      "bytes": 112,
+      "path": "s1-leo-r40/logs_ns3/study_drops.csv",
+      "sha256": "ec37c4087cf6eb0bf412760b74ba37e2279e44d6bfff2d89f87c8135ec82b959"
+    },
+    {
+      "bytes": 144495783,
+      "path": "s1-leo-r40/logs_ns3/study_rx_node_1585_port_1024.csv",
+      "sha256": "b6419d405d52cfb45e0f44915e4d659a21637bd1a8f3d90262aef06489132191"
+    },
+    {
+      "bytes": 41280,
+      "path": "s1-leo-r40/logs_ns3/tcp_flow_0_cwnd.csv",
+      "sha256": "92b0830f48efd195f421afd4888044561939c5d8301672c57cdedd071904c727"
+    },
+    {
+      "bytes": 15485096,
+      "path": "s1-leo-r40/logs_ns3/tcp_flow_0_progress.csv",
+      "sha256": "f01a780001c6227e7c3dffc6a32dc3698b712e54592e1176ff71470ce9f2dbcd"
+    },
+    {
+      "bytes": 14551493,
+      "path": "s1-leo-r40/logs_ns3/tcp_flow_0_rtt.csv",
+      "sha256": "471de3140cc27ef218ca1209e9bbecd41f4ff749a552011f534f47eec501b8df"
+    },
+    {
+      "bytes": 38081,
+      "path": "s1-leo-r40/logs_ns3/tcp_flow_0_study_events.csv",
+      "sha256": "08fe448d06721a606d643bd0abf82836d9c9dc19a7778706fcd63bfc762e92ff"
+    },
+    {
+      "bytes": 142579283,
+      "path": "s1-leo-r40/logs_ns3/tcp_flow_0_study_packets.csv",
+      "sha256": "57c5cfd811f0a514756cd7aa4fa4b6028597d5bb4c55fcefc26cf44ddf0cda01"
+    },
+    {
+      "bytes": 76,
+      "path": "s1-leo-r40/logs_ns3/tcp_flows.csv",
+      "sha256": "1dfebee6e0f5016434ae30d46ad85f398d83fac8348205e8f26c0ed56239da76"
+    },
+    {
+      "bytes": 252124,
+      "path": "s1-leo-r40/logs_ns3/vegas_state.csv",
+      "sha256": "e86c01b7ff6085e7fcf8d01a1c6c18f8bde009793dbd0944b3db4db74b1f83a5"
+    },
+    {
+      "bytes": 40359632,
+      "path": "s1-rate50-base/logs_ns3/study_app_rx_node_1585_port_1024.csv",
+      "sha256": "6c8f5ecdbfc1427db0cfa02b8d7ad6c865239cbb70c0711a4da9bdd9cc9e76a3"
+    },
+    {
+      "bytes": 1140184,
+      "path": "s1-rate50-base/logs_ns3/study_drop_coverage.csv",
+      "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+    },
+    {
+      "bytes": 112,
+      "path": "s1-rate50-base/logs_ns3/study_drops.csv",
+      "sha256": "ec37c4087cf6eb0bf412760b74ba37e2279e44d6bfff2d89f87c8135ec82b959"
+    },
+    {
+      "bytes": 52291090,
+      "path": "s1-rate50-base/logs_ns3/study_rx_node_1585_port_1024.csv",
+      "sha256": "dea3489a452b9ab1a7e47cd434664d1abfcef0debb728f11f555099fb5432495"
+    },
+    {
+      "bytes": 20221,
+      "path": "s1-rate50-base/logs_ns3/tcp_flow_0_cwnd.csv",
+      "sha256": "86d503ae35a56c1a969d62a35b8bec34a59808b2269ce54042f46bfce243be55"
+    },
+    {
+      "bytes": 5566450,
+      "path": "s1-rate50-base/logs_ns3/tcp_flow_0_progress.csv",
+      "sha256": "6cfbcf1d07ee95907418eafcfb42792a726c5c8127a22ad62a902a00e2dbc09b"
+    },
+    {
+      "bytes": 5356468,
+      "path": "s1-rate50-base/logs_ns3/tcp_flow_0_rtt.csv",
+      "sha256": "a7b5b7f59a02c22a00725e6d94b777d20ddbe5cb8930199befed115eb1edd6e6"
+    },
+    {
+      "bytes": 27784,
+      "path": "s1-rate50-base/logs_ns3/tcp_flow_0_study_events.csv",
+      "sha256": "54a630a5de07882a4d0a3ec4e6cea12824e860ac5dc66172ca680ce6f4ce5a66"
+    },
+    {
+      "bytes": 51494898,
+      "path": "s1-rate50-base/logs_ns3/tcp_flow_0_study_packets.csv",
+      "sha256": "da1285e3b3f255feaba60967a0f63cd140c7afa4b38222fe2b419971cb9a49d4"
+    },
+    {
+      "bytes": 75,
+      "path": "s1-rate50-base/logs_ns3/tcp_flows.csv",
+      "sha256": "8e6e28e3b089bba766fb4afd2572efe0d3fd273493bb7e82480ab9ed54470e2e"
+    },
+    {
+      "bytes": 204657,
+      "path": "s1-rate50-base/logs_ns3/vegas_state.csv",
+      "sha256": "89e475c49372a570ce900bc5581c378d196e5ff547dd508f366fc71376440e02"
+    },
+    {
+      "bytes": 67606762,
+      "path": "s1-rate50-r10/logs_ns3/study_app_rx_node_1585_port_1024.csv",
+      "sha256": "53c28ddfc7fac62ae80479a47f58a29d4e1031a167bb56f413f8b7cd8e133b62"
+    },
+    {
+      "bytes": 1140184,
+      "path": "s1-rate50-r10/logs_ns3/study_drop_coverage.csv",
+      "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+    },
+    {
+      "bytes": 112,
+      "path": "s1-rate50-r10/logs_ns3/study_drops.csv",
+      "sha256": "ec37c4087cf6eb0bf412760b74ba37e2279e44d6bfff2d89f87c8135ec82b959"
+    },
+    {
+      "bytes": 87615706,
+      "path": "s1-rate50-r10/logs_ns3/study_rx_node_1585_port_1024.csv",
+      "sha256": "0e217468bd1071f59f8f80bdbcb566ed83cb6d361d96d546917a308d18e9f040"
+    },
+    {
+      "bytes": 20596,
+      "path": "s1-rate50-r10/logs_ns3/tcp_flow_0_cwnd.csv",
+      "sha256": "d955f88c507dda72d0c7a71bdd693e2dfffade43eea7e4edacd15a3746ebba3e"
+    },
+    {
+      "bytes": 9331409,
+      "path": "s1-rate50-r10/logs_ns3/tcp_flow_0_progress.csv",
+      "sha256": "6ff4bcae9b2509a1fd7615f14ef07d43cf79dc1b5165d7769c0fad4ec55dd08e"
+    },
+    {
+      "bytes": 9006560,
+      "path": "s1-rate50-r10/logs_ns3/tcp_flow_0_rtt.csv",
+      "sha256": "2ac77af7d3d034d0050e3f1347ca397203a9caafe567563b3f2a726cbac69198"
+    },
+    {
+      "bytes": 18623,
+      "path": "s1-rate50-r10/logs_ns3/tcp_flow_0_study_events.csv",
+      "sha256": "b8a544d820348fb34dee46fe19de58e36a6b5d9319a5221e0dbb79d0c6a3e058"
+    },
+    {
+      "bytes": 86452125,
+      "path": "s1-rate50-r10/logs_ns3/tcp_flow_0_study_packets.csv",
+      "sha256": "0850443038e28cbba521ed8268ee195e0a04bc9d42988ae85e299d3778e2ec67"
+    },
+    {
+      "bytes": 76,
+      "path": "s1-rate50-r10/logs_ns3/tcp_flows.csv",
+      "sha256": "cda9ef34c3584d0a456ec04baf7863658d20404e17d1ac43a36ec0561c401720"
+    },
+    {
+      "bytes": 244643,
+      "path": "s1-rate50-r10/logs_ns3/vegas_state.csv",
+      "sha256": "6cd88d4bc4a4329139f3b89b0bb76b002b98f27963ffa797c0c9d161e233676a"
+    },
+    {
+      "bytes": 67054050,
+      "path": "s1-rate50-r20/logs_ns3/study_app_rx_node_1585_port_1024.csv",
+      "sha256": "838cd5d975aeabf4f460950a08634b1221f6951cb9bfd4e51f953def925bf2b5"
+    },
+    {
+      "bytes": 1140184,
+      "path": "s1-rate50-r20/logs_ns3/study_drop_coverage.csv",
+      "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+    },
+    {
+      "bytes": 112,
+      "path": "s1-rate50-r20/logs_ns3/study_drops.csv",
+      "sha256": "ec37c4087cf6eb0bf412760b74ba37e2279e44d6bfff2d89f87c8135ec82b959"
+    },
+    {
+      "bytes": 86903008,
+      "path": "s1-rate50-r20/logs_ns3/study_rx_node_1585_port_1024.csv",
+      "sha256": "655f7a6a194b4ba63831aeb6f25c200a723d04155e08551ffda4f0c9cc7fc02d"
+    },
+    {
+      "bytes": 21245,
+      "path": "s1-rate50-r20/logs_ns3/tcp_flow_0_cwnd.csv",
+      "sha256": "d4512904ec6af08b61dc415806f2c1a33db56eb1fef5fc5a68ea4840757d5322"
+    },
+    {
+      "bytes": 9254410,
+      "path": "s1-rate50-r20/logs_ns3/tcp_flow_0_progress.csv",
+      "sha256": "95e4e63149cd5e75d7f43ad435caa60a7a4b2a31e607d3c59a097aff6772db5f"
+    },
+    {
+      "bytes": 8934836,
+      "path": "s1-rate50-r20/logs_ns3/tcp_flow_0_rtt.csv",
+      "sha256": "5107d5fd65b7812b0f3eab4db8389c80d483a1c118c3e60d2191b2e4b6870ad8"
+    },
+    {
+      "bytes": 19302,
+      "path": "s1-rate50-r20/logs_ns3/tcp_flow_0_study_events.csv",
+      "sha256": "e69a01b1ac35f8c35797a7c0d8edbedf9986ddf5e798d3442cc8de6625cfa89f"
+    },
+    {
+      "bytes": 85749565,
+      "path": "s1-rate50-r20/logs_ns3/tcp_flow_0_study_packets.csv",
+      "sha256": "42fc7147f074f13058ad34ebe14c3e7f5e0b214798f1415cf783f1f7bf171647"
+    },
+    {
+      "bytes": 76,
+      "path": "s1-rate50-r20/logs_ns3/tcp_flows.csv",
+      "sha256": "e682b1c4136ecb77b0da171cb8be3a8e9e9e83347b125642e5d4398c52bb793b"
+    },
+    {
+      "bytes": 246090,
+      "path": "s1-rate50-r20/logs_ns3/vegas_state.csv",
+      "sha256": "b2c21dc2486cb0951b9c398497a3e585d01261513a45f452621220c84035bf4d"
+    },
+    {
+      "bytes": 65578669,
+      "path": "s1-rate50-r40/logs_ns3/study_app_rx_node_1585_port_1024.csv",
+      "sha256": "cfa56fcf7c40a190bc12ce0cbb3b70cfd8a428b109df33ce2fb67cdc67823b5e"
+    },
+    {
+      "bytes": 1140184,
+      "path": "s1-rate50-r40/logs_ns3/study_drop_coverage.csv",
+      "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+    },
+    {
+      "bytes": 112,
+      "path": "s1-rate50-r40/logs_ns3/study_drops.csv",
+      "sha256": "ec37c4087cf6eb0bf412760b74ba37e2279e44d6bfff2d89f87c8135ec82b959"
+    },
+    {
+      "bytes": 85001083,
+      "path": "s1-rate50-r40/logs_ns3/study_rx_node_1585_port_1024.csv",
+      "sha256": "5e1b85c9af7399be5b57c3bfe8f815b503d74c90761be013e01973758bca21c9"
+    },
+    {
+      "bytes": 22218,
+      "path": "s1-rate50-r40/logs_ns3/tcp_flow_0_cwnd.csv",
+      "sha256": "63d40d268fdd6ca35b0913d6851baf9d5de054eb0af4bbb00ed112825bebd8be"
+    },
+    {
+      "bytes": 9049254,
+      "path": "s1-rate50-r40/logs_ns3/tcp_flow_0_progress.csv",
+      "sha256": "a28147504a97f44a81402b461fad0027cb94016ad24525bc5bf866ec5ff51adc"
+    },
+    {
+      "bytes": 8735186,
+      "path": "s1-rate50-r40/logs_ns3/tcp_flow_0_rtt.csv",
+      "sha256": "03864c774b1395469131e04a98bf95da9caaf57f89a7d71ca9c894b8ba543a6e"
+    },
+    {
+      "bytes": 20162,
+      "path": "s1-rate50-r40/logs_ns3/tcp_flow_0_study_events.csv",
+      "sha256": "4269c75be9bb5a0a7c062db73d1dd62bc4cb2d5f3c9a9669a44c7f3870edc90f"
+    },
+    {
+      "bytes": 83874096,
+      "path": "s1-rate50-r40/logs_ns3/tcp_flow_0_study_packets.csv",
+      "sha256": "9c979867d44add8dfb7e754d5b88d160ae884b384733f44c37dd2ac6e76d8d3a"
+    },
+    {
+      "bytes": 76,
+      "path": "s1-rate50-r40/logs_ns3/tcp_flows.csv",
+      "sha256": "f04e08a5ddc52e4cc7feb91323148fe7220f024f539eb0062e761d8fb73b1c6d"
+    },
+    {
+      "bytes": 244909,
+      "path": "s1-rate50-r40/logs_ns3/vegas_state.csv",
+      "sha256": "5ff7270a32e9224a90dd406ce0ef7644c7609475b9b2a2c6670745945cddf901"
+    }
+  ],
+  "baseline_checks": [
+    {
+      "bytes": 66643314,
+      "path": "a1-leo-base/logs_ns3/study_app_rx_node_1585_port_1024.csv",
+      "sha256": "ab7f762a746837533402ff69a84e0a9d83db059239204c7100a61a168fd9e06e"
+    },
+    {
+      "bytes": 1140184,
+      "path": "a1-leo-base/logs_ns3/study_drop_coverage.csv",
+      "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+    },
+    {
+      "bytes": 112,
+      "path": "a1-leo-base/logs_ns3/study_drops.csv",
+      "sha256": "ec37c4087cf6eb0bf412760b74ba37e2279e44d6bfff2d89f87c8135ec82b959"
+    },
+    {
+      "bytes": 86344549,
+      "path": "a1-leo-base/logs_ns3/study_rx_node_1585_port_1024.csv",
+      "sha256": "f05c05c59b60671342647718d1c8ad6fade665a0166015f56de0ad8bd6502b8c"
+    },
+    {
+      "bytes": 38123,
+      "path": "a1-leo-base/logs_ns3/tcp_flow_0_cwnd.csv",
+      "sha256": "cb8c49e0edba087a76f28d6cfbd9d64f30dfb577846710888af82578d4ae446a"
+    },
+    {
+      "bytes": 9185071,
+      "path": "a1-leo-base/logs_ns3/tcp_flow_0_progress.csv",
+      "sha256": "f9de62c20acdc52767e36590fce1692f002d55b2d7a8b96fcc334e0f1ba01ca2"
+    },
+    {
+      "bytes": 8764361,
+      "path": "a1-leo-base/logs_ns3/tcp_flow_0_rtt.csv",
+      "sha256": "9b93139aebbdbde9cefd147368cd7afaed2f5edb1a36a0d93cbc32d658f26845"
+    },
+    {
+      "bytes": 54153,
+      "path": "a1-leo-base/logs_ns3/tcp_flow_0_study_events.csv",
+      "sha256": "1a22945cb295da37d0f72fccacee3094eabbce6b58fbfa1a7b11db6d2ac8f7c1"
+    },
+    {
+      "bytes": 85168107,
+      "path": "a1-leo-base/logs_ns3/tcp_flow_0_study_packets.csv",
+      "sha256": "6cc1a247399f17c152cfb1b35b656f661fb3b144347317217187c95b5e58f015"
+    },
+    {
+      "bytes": 76,
+      "path": "a1-leo-base/logs_ns3/tcp_flows.csv",
+      "sha256": "8ef213989a82efb7b1e74e4b6ba8affe9ec0deec5cc9bbb79f6bf1e363076a8f"
+    },
+    {
+      "bytes": 211571,
+      "path": "a1-leo-base/logs_ns3/vegas_state.csv",
+      "sha256": "f7a1c6b93b91decd8adb5b12f6ae88b6593b6538ac493a78e5557e7a2eacbc2f"
+    }
+  ],
+  "inputs": {
+    "sensitivity-evidence/raw-inventory.json": "6f5db7c70fa34dcd16c944534a403d6b5724af7e6351129d669d716e31ecdf96",
+    "sensitivity-evidence/results.csv": "234bb69b7a6ae7c989c5e3b52a2fdfccbe5ce468d1d32efc578411e7852d2a5b",
+    "sensitivity-evidence/figures/sensitivity.png": "e6b0f961467784b241a1bf25f78be09d791bd9f93bed24d2df7a50fcd30687ef",
+    "evidence/raw-inventory.json": "514b123b76579966777ec82cb71e67d8d0711c7d9b109cc220998e5cc291d961",
+    "baseline-summary.json": "1f0ee3f0ad9dee039f27b2497097c7aa5e6492a29fc40a704e5e368c8becbbba"
+  },
+  "regenerated_audit_sha256": "db66ce076e1aa540ef68f592629c2b71ab65ccf6b79d34e35477f3c43c132e10",
+  "script_sha256": "5a6e5f7918ba6da6d3a7ad11290798277f98b38e5b750e27f63366c76bec74d5",
+  "limits": [
+    "Deterministic reproduction, not independent statistical replication.",
+    "Research source ZIP, not a final report/submission package."
+  ]
+}

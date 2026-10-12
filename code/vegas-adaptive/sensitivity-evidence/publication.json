@@ -1,0 +1,36 @@
+{
+  "release": {
+    "id": 409746092,
+    "html_url": "https://github.com/Jeongmin07/CS30401-Lab1/releases/tag/vegas-sensitivity-20261011",
+    "draft": false,
+    "prerelease": true,
+    "tag_name": "vegas-sensitivity-20261011",
+    "target_commitish": "fbc0b2b01055e51ccfdd0ea33606301e8c9ae4b0"
+  },
+  "assets": [
+    {
+      "id": 631066934,
+      "name": "vegas-portable-20261012.zip",
+      "state": "uploaded",
+      "size": 126733,
+      "digest": "sha256:4203611ba5f6f72d411e7c86ccdae1d28bb3ca07ead5f8b985ae10c7b09a0a64",
+      "browser_download_url": "https://github.com/Jeongmin07/CS30401-Lab1/releases/download/vegas-sensitivity-20261011/vegas-portable-20261012.zip"
+    },
+    {
+      "id": 632692769,
+      "name": "vegas-sensitivity-20261011-raw.tar.gz",
+      "state": "uploaded",
+      "size": 783526960,
+      "digest": "sha256:061f489e810fed62491bd38d2bed590112e35e108b36bc90bd8c01b283e7476f",
+      "browser_download_url": "https://github.com/Jeongmin07/CS30401-Lab1/releases/download/vegas-sensitivity-20261011/vegas-sensitivity-20261011-raw.tar.gz"
+    },
+    {
+      "id": 631122760,
+      "name": "vegas-sensitivity-portable-replay.tar.gz",
+      "state": "uploaded",
+      "size": 140864647,
+      "digest": "sha256:bef3ff84214a9394b838d403dcabf3d588b509cd5b09a50adc23edb37bf1698f",
+      "browser_download_url": "https://github.com/Jeongmin07/CS30401-Lab1/releases/download/vegas-sensitivity-20261011/vegas-sensitivity-portable-replay.tar.gz"
+    }
+  ]
+}

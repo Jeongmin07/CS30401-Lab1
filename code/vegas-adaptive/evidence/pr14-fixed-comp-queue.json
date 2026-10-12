@@ -1,0 +1,12 @@
+{
+  "reference_pr": 14,
+  "reference_branch_commit": "4a91c32cf90ea4aa6f81cc81accb2136e6e1f193",
+  "source": "code/vegas-study/evidence/queue_sojourn.csv",
+  "case": "v1-fixed-comp-renew",
+  "window": "competition",
+  "start_ns": 80000000000,
+  "end_ns": 200000000000,
+  "direction": "forward",
+  "group": "all",
+  "forward_queue_mean_ms": 4.723996642015867
+}

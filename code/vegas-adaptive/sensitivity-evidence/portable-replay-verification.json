@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "measurement_csv_count": 26,
+  "measurements_and_windows_exact": true,
+  "independent_state_audit_exact": true,
+  "simulator_sources_binary_libraries_patch_image_policy_network_exact": true,
+  "original_source_commit": "fbc0b2b01055e51ccfdd0ea33606301e8c9ae4b0",
+  "package_source_commit": "1deee988a37325c230a389ad4e6dafc518fc138f",
+  "allowed_provenance_differences": [
+    "case name",
+    "output root",
+    "source manifest path",
+    "source commit",
+    "run_case.py adds source-inventory validation; simulation command policy unchanged"
+  ],
+  "package": {
+    "file": "vegas-portable-20261012.zip",
+    "bytes": 126733,
+    "sha256": "4203611ba5f6f72d411e7c86ccdae1d28bb3ca07ead5f8b985ae10c7b09a0a64"
+  },
+  "inputs": {
+    "replay-original.json": "1410632d5939c75177dce89b88af3dd01581fb5b6d7486925d535b939c312ac6",
+    "replay-portable.json": "bf35f97f9d80ff64816ce3cecdc8975babd909962755f4ee56554a8edc19be58",
+    "negative-package-check.json": "a138ecdcf28935cae4bb16fba66a5286b66138bfbdd8402ac8795345fef25cab"
+  },
+  "negative_source_hash_check_passed": true,
+  "scope": "One representative forty-cycle fixed-competition replay from unzipped code/README in a fresh official ns-3 volume; not a fresh rerun of all ten cases."
+}

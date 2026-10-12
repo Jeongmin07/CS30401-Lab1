@@ -1,0 +1,5 @@
+case,window,start_ns,end_ns,flow_id,application_bytes,application_goodput_mbps,sender_payload_tx_rows,sender_payload_tx_bytes,official_retransmission_rows,official_retransmission_bytes,recovery_entries,LOSS_entries,drop_trace_rows,distinct_tagged_transmissions_dropped,application_sum_bytes,application_sum_goodput_mbps,active_duration_ns,active_interval_application_goodput_mbps
+a1-fixed-base,whole,0,200000000000,0,1406760960,56.270438399999996,1019570,1407006600,0,0,0,0,0,0,1406760960,56.270438399999996,200000000000,56.270438399999996
+a1-fixed-base,late20,180000000000,200000000000,0,158004480,63.201792,114550,158079000,0,0,0,0,0,0,158004480,63.201792,20000000000,63.201792
+a1-fixed-base,prestep_100,80000000000,100000000000,0,158081760,63.232704,114496,158004480,0,0,0,0,0,0,158081760,63.232704,20000000000,63.232704
+a1-fixed-base,poststep_100,110000000000,130000000000,0,158081760,63.232704,114496,158004480,0,0,0,0,0,0,158081760,63.232704,20000000000,63.232704
