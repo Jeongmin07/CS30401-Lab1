@@ -1,6 +1,6 @@
 # 예측 경로 구간의 손실 판정과 제한된 복원
 
-2026-10-12, kim-seongchan, [PR16](https://github.com/Jeongmin07/CS30401-Lab1/pull/16). **실행 전 선언이며 결과는 후속 commit에 추가한다.** 송신 pause/pacing 후보를 우선 제외하고, 기존 K8/K20 정책을 재사용하면서 예측 구간 계산과 종료 시 손실 재평가를 검증한다. 큰 처리량 개선을 가정하지 않는다.
+2026-10-12, kim-seongchan, [PR16](https://github.com/Jeongmin07/CS30401-Lab1/pull/16). 초기 commit `4a1441a`에서 실행 집합을 먼저 선언했고, 추가 경계 대조도 `0942d22`에서 실행 전에 선언했다. **총13개 실행·분석이 성공했으며 결과와 한계를 아래에 기록한다.** 송신 pause/pacing 후보를 우선 제외하고, 기존 K8/K20 정책을 재사용하면서 예측 구간 계산과 종료 시 손실 재평가를 검증했다. 큰 처리량 개선을 가정하지 않았다.
 
 ## 질문과 구현 범위
 
@@ -36,3 +36,53 @@ canonical v6 관측/benchmark를 새 공식 volume에 적용하고 추가 patch�
 Guide의 cwnd/SRTT 그래프는 PDF9쪽이며 10쪽 globe에도 Figure3 번호가 중복된다. 5.4초 그래프 모양만으로 경로 단축·재정렬·허위 복구를 입증할 수 없다. 확인된 26.2초 패킷 증거를 출발점으로 쓰며 가설을 만족하도록 전환·큐를 크게 바꾸지 않는다.
 
 효과가 작으면 그 크기를 그대로 보고한다. epoch가 끝나도 high threshold가 남거나 실제 손실이 RTO까지 부당하게 지연되면 구현을 수정하고 검증 전 성과로 공유하지 않는다. 결과 원본·실행 commit·patch/runtime/input/output hash와 명령은 기록 후 PR에 공유한다.
+
+## 실제 완료 결과
+
+[13개 결과표](assets/20261012-forecast-loss/export/results.csv), [각 실행의 manifest·compact summary](assets/20261012-forecast-loss/export/cases/), [export receipt](assets/20261012-forecast-loss/export/export-receipt.json)를 확인한다. 원본 크기·SHA, 실제 앱 수신 합과 endpoint, 평가창 분모, setter의 실제 보호 기간을 검증했다. 전체 분석의 SHA와 생략한100ms bin/상세 사례 수는 각 summary에 있다. 같은 deterministic 설정의 비교이며 독립 seed 반복이나 통계적 신뢰구간은 없다.
+
+### LEO: 복구 감소와 실제 전달량을 함께 본다
+
+| 조건 | 전체 앱 goodput Mbit/s | 원본 대비 전체 변화 | `[25.7,28.2)` 앱 goodput | 첫 창 재전송/복구 |
+| --- | ---: | ---: | ---: | ---: |
+| 10Mbps/q100/200초 원본 | 9.5443560 | — | 9.485568 | 3 / 1 |
+| 같은 조건 forecast20 | 9.5465088 | +0.0226% | 9.622464 | 0 / 0 |
+| 같은 조건 late300ms | 9.5443560 | 0% | 9.485568 | 3 / 1 |
+| 100Mbps/q1000/40초 원본 | 94.501572 | — | 96.092160 | 32 / 1 |
+| 같은 조건 forecast20 | 94.506264 | +0.0050% | 96.167232 | 15 / 1 |
+| 같은 조건 forecast64 | 94.510404 | +0.0093% | 96.233472 | 0 / 0 |
+
+10Mbps 첫 평가창의 전달량은 +1.4432%였지만 전체200초 이득은 약0.023%로 작다. 후기75초 창에서는 원본9.626880 대비 forecast9.618048Mbit/s로 조금 낮고, forecast에는12재전송/2복구가 있었다. 첫 개입 이후 궤적이 달라졌으므로 이를75초 보호만의 독립 비용으로 단정하지 않는다. 큰 이득을 주장하기 위해 첫 창만 선택하지 않는다.
+
+100Mbps에서는 첫 창에34개의 out-of-order payload가 있어 문턱20으로 불필요한 복구가 남았다.64는 그 창의 복구를 제거했지만 전체40초 이득은 약0.009%다. 전체 drop/복구 궤적도 바뀌었다. 이것은 full200초·현대 Linux·임의의 트래픽에 대한 개선 주장이 아니다. 피드백의 "10–20이면100Mbps를 유지해 극적인 개선"은 이 결과로 뒷받침되지 않는다.
+
+실제 high-threshold 기간은10Mbps의 두 전환에서195.396ms와181.974ms, 합계377.370ms였다.100Mbps에서는 첫195.396ms만 적용했다. 모든 적용은 선언한 종료 시각에 K3로 복원됐다. late는 같은 기간을300ms 이동시켰고 원본과 동일한 전달량·재전송/복구 결과를 보였다.
+
+![전체와 첫 평가창의 전달량](assets/20261012-forecast-loss/figures/leo10-goodput.png)
+
+### 실제 손실: 기존 보호의 복원 지연을 줄이지만 원본보다 느리다
+
+| stable micro·실제 손실 | 원본 FCT 초 | 기존 K20 FCT 초 | 새 bounded K20 FCT 초 |
+| --- | ---: | ---: | ---: |
+| 20MSS 첫 segment | 0.251509920 | 1.150124001 | 0.400114720 |
+| 20MSS 중간 segment | 0.350711200 | 미실행 | 0.400114720 |
+| 3MSS 첫 segment·긴 false hint | 1.150124001 | 미실행 | 1.150124001 |
+
+20MSS 모든 조건은27,600B를 완전히 수신했고 정확히1개의 tagged actual drop과1개의 재전송을 기록했다. 첫 손실에서 기존 보호는 종료0.35초를 지나1.100009281초까지 K20을 유지했다. 새 보호는0.35초에 K3로 복원하고 **추가 ACK 없이 기존 손실 증거로 복구에 진입**했다. 실제 보호 기간은 기존950.009281ms 대비 새200ms다. 첫 FCT는 기존 대비 약65.2% 줄지만 원본보다148.6048ms 느리다. 중간 손실도 원본보다49.40352ms 느리다. 즉 실제 손실 비용을 줄였으나 제거하지 못했다.
+
+3MSS 대조에서는 두 조건 모두4,140B를 완전히 전달했다. bounded는 CA_LOSS trace 뒤1.100009281초에 K3로 해제됐고 원본과 같은 FCT였다. 기본 복구 타이머의 본문은 수정하지 않았다. 일반적인 CA_LOSS를 직접 타이머 계측 없이 모두 RTO로 부르는 결론은 피한다.
+
+![실제 손실의 유한 전송 완료 시간](assets/20261012-forecast-loss/figures/finite-loss-fct.png)
+
+### 소스·원본·검증 범위
+
+- combined patch SHA256: `666c376fe68687f053786d850af926402f59f925c9b7706c72faec6e50b42340`. canonical v6 위의 추가 구현을 포함한 한 장이며 설치 도구·core 소스 검토·4-job 빌드를 통과했다.
+- [실제 환경](assets/20261012-forecast-loss/environment.json)은 공식 이미지 digest·CPU4·6GiB·새 volume을 확인한 Docker inspect다. 각 실행의 manifest는 실행 당시 runner/commit·실제 설치 diff·binary/library·설정/명령·입력/출력 hash를 보존한다. source 파일 hash가 해당 commit의 Git blob과 일치함도 확인했다. `repo_dirty=true`를 숨기지 않으며 실행 필수 파일은 별도로 식별했다.
+- [기존 원본과의 비교](assets/20261012-forecast-loss/historical-equivalence.json): LEO10 baseline과 finite 첫/중간 baseline 세 조건의 원본8개씩, 총24개 CSV가 기존 v6 결과와 byte-identical이다. default off의 이 조건들에 대한 검증이며 전 조건의 무영향 증명이 아니다.
+- [그림 receipt](assets/20261012-forecast-loss/figures/plot-receipt.json)는 작은 summary8개·full-analysis hash·표시 값·PNG/PDF4개의 SHA를 연결한다. 실제 숫자와 시각적 잘림/겹침을 확인했다. Git의13-case export와 모든 그림 입력이 같은 바이트임도 검증했다.
+- simulation wall time 합계는271.3979초다. 빌드·분석·자료 공유 시간은 제외했고 연속 batch 전체 경과 시간이나 독립 반복 횟수로 쓰지 않는다. 모든13개가180초 개별 cap 안에 성공했다.
+- 원본 압축은85,141,440B, 텍스트205개, 미압축529,509,233B다. SHA256 `3d55c45297446dbdf601bdbfe9485a9e1ed7c6098d8306778dd9c6991fd7c3d1`. [inventory](assets/20261012-forecast-loss/raw-inventory.json)의 모든 member size/SHA를 실제 archive와 대조했다. build/state는 포함하지 않는다. 원본 공유 링크와 별도 clean replay 범위는 후속 공유 기록에 추가한다.
+
+## 이번 단계의 판단
+
+예측 구간의 손실 판정이 확인된 episode를 완화한다는 근거와, 그 보호가 진짜 손실을 늦춘다는 비용을 함께 확보했다. 새 bounded 복원은 기존 보호의 긴 기다림을 줄이는 실질적인 변경이지만, **큰 LEO 처리량 개선이나 원본보다 빠른 모든 손실 복구를 달성한 것은 아니다.** 마감 전에는 sweep을 확대하기보다 이 제한된 결론·필요 정보·대조와 재현 근거를 보고서와 팀 검토에 정확히 전달한다.

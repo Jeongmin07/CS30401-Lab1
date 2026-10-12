@@ -1,0 +1,256 @@
+{
+  "schema_version": 1,
+  "tool": {
+    "path": "/work/code/predict-loss/summarize.py",
+    "bytes": 13520,
+    "sha256": "cbd1b65bf760212d55d8c396b4aa70bcbc4b7b49742d1cd044ff6afc1fda571c"
+  },
+  "cases": [
+    "leo10-base",
+    "leo10-forecast",
+    "leo10-late",
+    "leo100-base40",
+    "leo100-forecast20-40",
+    "leo100-forecast64-40",
+    "loss-first-base",
+    "loss-first-bounded",
+    "loss-first-legacy",
+    "loss-middle-base",
+    "loss-middle-bounded",
+    "loss-rto3-base",
+    "loss-rto3-bounded"
+  ],
+  "outputs": [
+    {
+      "path": "/tmp/predict-loss-complete-export/cases/leo10-base/config_ns3.properties",
+      "bytes": 613,
+      "sha256": "8c46772c95c46ca99935dd68cf6957631972a2bb519acabe0880640408b0f4d4"
+    },
+    {
+      "path": "/tmp/predict-loss-complete-export/cases/leo10-base/manifest.json",
+      "bytes": 420144,
+      "sha256": "bfbfd42ada5775fc67f382d19069d4fa8ab73b35c9ce774ce6446f330b7a07ee"
+    },
+    {
+      "path": "/tmp/predict-loss-complete-export/cases/leo10-base/schedule.csv",
+      "bytes": 29,
+      "sha256": "e6cde3aa7716856e46d24c3833354df90407313ece13a5ffbd1b789fa4fea23c"
+    },
+    {
+      "path": "/tmp/predict-loss-complete-export/cases/leo10-base/summary.json",
+      "bytes": 19360,
+      "sha256": "67d520f98cd06f224942e094454ec045c6106f93d8b2b511fad6d4e089479534"
+    },
+    {
+      "path": "/tmp/predict-loss-complete-export/cases/leo10-forecast/config_ns3.properties",
+      "bytes": 613,
+      "sha256": "8c46772c95c46ca99935dd68cf6957631972a2bb519acabe0880640408b0f4d4"
+    },
+    {
+      "path": "/tmp/predict-loss-complete-export/cases/leo10-forecast/manifest.json",
+      "bytes": 420666,
+      "sha256": "0d6b6d3f198abfa6d84bf0ffd5ae4a49c94d3fc865558c74489a18db07168038"
+    },
+    {
+      "path": "/tmp/predict-loss-complete-export/cases/leo10-forecast/schedule.csv",
+      "bytes": 133,
+      "sha256": "888cbe8a34bc8b71b68497a7e150696ee493bfd01b206b8b928e176afb466109"
+    },
+    {
+      "path": "/tmp/predict-loss-complete-export/cases/leo10-forecast/summary.json",
+      "bytes": 21465,
+      "sha256": "efa0d8191938b51110e736ec16e56c973761475660bcc22a960d5d8a39964c65"
+    },
+    {
+      "path": "/tmp/predict-loss-complete-export/cases/leo10-late/config_ns3.properties",
+      "bytes": 613,
+      "sha256": "8c46772c95c46ca99935dd68cf6957631972a2bb519acabe0880640408b0f4d4"
+    },
+    {
+      "path": "/tmp/predict-loss-complete-export/cases/leo10-late/manifest.json",
+      "bytes": 420675,
+      "sha256": "a6f88cdde3a08bbaaa2735a777761675cdae2132ed1d007c34e24375da128915"
+    },
+    {
+      "path": "/tmp/predict-loss-complete-export/cases/leo10-late/schedule.csv",
+      "bytes": 133,
+      "sha256": "7c2cd3b957732cdb997a818375370d6447ff3a6fbcd660ee31a90b0d17fadc43"
+    },
+    {
+      "path": "/tmp/predict-loss-complete-export/cases/leo10-late/summary.json",
+      "bytes": 21241,
+      "sha256": "3ccca7f369c3a53812aac1777d8ed78f43c3507a77ebbb9881715ee689741348"
+    },
+    {
+      "path": "/tmp/predict-loss-complete-export/cases/leo100-base40/config_ns3.properties",
+      "bytes": 616,
+      "sha256": "53b8c3d65cce756d8d6308a707197881ab0bdf1d6c38a2afbd96e528344b19f1"
+    },
+    {
+      "path": "/tmp/predict-loss-complete-export/cases/leo100-base40/manifest.json",
+      "bytes": 420125,
+      "sha256": "f0c83a1de7745a53976f153dfc676961c67b370cf1dbf11f86a6bd216924bfcf"
+    },
+    {
+      "path": "/tmp/predict-loss-complete-export/cases/leo100-base40/schedule.csv",
+      "bytes": 29,
+      "sha256": "e6cde3aa7716856e46d24c3833354df90407313ece13a5ffbd1b789fa4fea23c"
+    },
+    {
+      "path": "/tmp/predict-loss-complete-export/cases/leo100-base40/summary.json",
+      "bytes": 15367,
+      "sha256": "c3cc647298df13f22db9f50eb4a6dbf81131c044a0f3659833a0b8106b253c9f"
+    },
+    {
+      "path": "/tmp/predict-loss-complete-export/cases/leo100-forecast20-40/config_ns3.properties",
+      "bytes": 616,
+      "sha256": "53b8c3d65cce756d8d6308a707197881ab0bdf1d6c38a2afbd96e528344b19f1"
+    },
+    {
+      "path": "/tmp/predict-loss-complete-export/cases/leo100-forecast20-40/manifest.json",
+      "bytes": 420432,
+      "sha256": "efe65cf6949610e11d5cafb059dc2c6970e16f6673a2d68f1f11bbbc97360561"
+    },
+    {
+      "path": "/tmp/predict-loss-complete-export/cases/leo100-forecast20-40/schedule.csv",
+      "bytes": 109,
+      "sha256": "35218db7311b59e81b44ce43c0f103449726feed37113bd9d614d436b90a7a0c"
+    },
+    {
+      "path": "/tmp/predict-loss-complete-export/cases/leo100-forecast20-40/summary.json",
+      "bytes": 16632,
+      "sha256": "a7fae28fb9501a901645b3ee9be8ec472f42a1d9b15131cb39308d7e39044112"
+    },
+    {
+      "path": "/tmp/predict-loss-complete-export/cases/leo100-forecast64-40/config_ns3.properties",
+      "bytes": 616,
+      "sha256": "53b8c3d65cce756d8d6308a707197881ab0bdf1d6c38a2afbd96e528344b19f1"
+    },
+    {
+      "path": "/tmp/predict-loss-complete-export/cases/leo100-forecast64-40/manifest.json",
+      "bytes": 420454,
+      "sha256": "d0e10e61a823b49072d1833935010b14adb0f5e367dd6f2f0654afb1f0c4b2ba"
+    },
+    {
+      "path": "/tmp/predict-loss-complete-export/cases/leo100-forecast64-40/schedule.csv",
+      "bytes": 109,
+      "sha256": "9b5611f61b06fc83db8568c3a15cebd24dfc78cd2d9d46abb9d2e61f067b9bc2"
+    },
+    {
+      "path": "/tmp/predict-loss-complete-export/cases/leo100-forecast64-40/summary.json",
+      "bytes": 16267,
+      "sha256": "8b87537f6ec5a26cd5bb3f60d43387d93fba637904bb6ee75a1e230e600f7f6e"
+    },
+    {
+      "path": "/tmp/predict-loss-complete-export/cases/loss-first-base/config_ns3.properties",
+      "bytes": 34,
+      "sha256": "f3f2e1b48fdfdd1d6ae0913db5fb1a817dd66b0fbca791dc678692fd6f1496f9"
+    },
+    {
+      "path": "/tmp/predict-loss-complete-export/cases/loss-first-base/manifest.json",
+      "bytes": 5664,
+      "sha256": "ec274e72c942386916ed18f49a9f696f8826d6e19e6e173f2bfcfaa421494ba5"
+    },
+    {
+      "path": "/tmp/predict-loss-complete-export/cases/loss-first-base/summary.json",
+      "bytes": 12054,
+      "sha256": "01de05d5c6692b6d921780a0f0461a4c624ee5310c3ee2efbe9acf5f26d0504b"
+    },
+    {
+      "path": "/tmp/predict-loss-complete-export/cases/loss-first-bounded/config_ns3.properties",
+      "bytes": 34,
+      "sha256": "f3f2e1b48fdfdd1d6ae0913db5fb1a817dd66b0fbca791dc678692fd6f1496f9"
+    },
+    {
+      "path": "/tmp/predict-loss-complete-export/cases/loss-first-bounded/manifest.json",
+      "bytes": 5989,
+      "sha256": "19b165cab4c5e07539b19c650c4a0f699f5da5490f5376b60fa4504db2f42c57"
+    },
+    {
+      "path": "/tmp/predict-loss-complete-export/cases/loss-first-bounded/summary.json",
+      "bytes": 13072,
+      "sha256": "0f52472e7a21e2f3ed10723a14bb2b102ba461cd607d0b3b3c551a91ef11518d"
+    },
+    {
+      "path": "/tmp/predict-loss-complete-export/cases/loss-first-legacy/config_ns3.properties",
+      "bytes": 34,
+      "sha256": "f3f2e1b48fdfdd1d6ae0913db5fb1a817dd66b0fbca791dc678692fd6f1496f9"
+    },
+    {
+      "path": "/tmp/predict-loss-complete-export/cases/loss-first-legacy/manifest.json",
+      "bytes": 5937,
+      "sha256": "190814ec185ce5f50999df8e62ac0c82b13a4bad264be0ff1c1ad3af998b37c2"
+    },
+    {
+      "path": "/tmp/predict-loss-complete-export/cases/loss-first-legacy/summary.json",
+      "bytes": 13066,
+      "sha256": "ade0335e0f79a866e64a184f068167b116a9ee56b71800dc52567c2e80aaa9b7"
+    },
+    {
+      "path": "/tmp/predict-loss-complete-export/cases/loss-middle-base/config_ns3.properties",
+      "bytes": 34,
+      "sha256": "f3f2e1b48fdfdd1d6ae0913db5fb1a817dd66b0fbca791dc678692fd6f1496f9"
+    },
+    {
+      "path": "/tmp/predict-loss-complete-export/cases/loss-middle-base/manifest.json",
+      "bytes": 5675,
+      "sha256": "8da641e62fa605481c0718e7a5b862235bea1a6a4d479a1436c4f1bbfdc397b4"
+    },
+    {
+      "path": "/tmp/predict-loss-complete-export/cases/loss-middle-base/summary.json",
+      "bytes": 12078,
+      "sha256": "6caac0efdbb5e368064c58de0ec9d378802f9c3e0770e3bb932ea39775fafb89"
+    },
+    {
+      "path": "/tmp/predict-loss-complete-export/cases/loss-middle-bounded/config_ns3.properties",
+      "bytes": 34,
+      "sha256": "f3f2e1b48fdfdd1d6ae0913db5fb1a817dd66b0fbca791dc678692fd6f1496f9"
+    },
+    {
+      "path": "/tmp/predict-loss-complete-export/cases/loss-middle-bounded/manifest.json",
+      "bytes": 6003,
+      "sha256": "e10567febda25b7bdca0b347b4eff18bf8fb1be2d14deae5b1de04840075f361"
+    },
+    {
+      "path": "/tmp/predict-loss-complete-export/cases/loss-middle-bounded/summary.json",
+      "bytes": 13137,
+      "sha256": "caed89876ec4e82bf9c99734893495dadb7f4b0ab2bc443d4413a4c2ffb0272d"
+    },
+    {
+      "path": "/tmp/predict-loss-complete-export/cases/loss-rto3-base/config_ns3.properties",
+      "bytes": 34,
+      "sha256": "f3f2e1b48fdfdd1d6ae0913db5fb1a817dd66b0fbca791dc678692fd6f1496f9"
+    },
+    {
+      "path": "/tmp/predict-loss-complete-export/cases/loss-rto3-base/manifest.json",
+      "bytes": 5685,
+      "sha256": "409607acd922595ceb29da4b3854288ad7d8c3d30bb1c39b37e3126edf7dcba5"
+    },
+    {
+      "path": "/tmp/predict-loss-complete-export/cases/loss-rto3-base/summary.json",
+      "bytes": 11974,
+      "sha256": "2b9ed0d5258697858a45228beb46ea243e21ad19fd5ed049c4322d45483a4f39"
+    },
+    {
+      "path": "/tmp/predict-loss-complete-export/cases/loss-rto3-bounded/config_ns3.properties",
+      "bytes": 34,
+      "sha256": "f3f2e1b48fdfdd1d6ae0913db5fb1a817dd66b0fbca791dc678692fd6f1496f9"
+    },
+    {
+      "path": "/tmp/predict-loss-complete-export/cases/loss-rto3-bounded/manifest.json",
+      "bytes": 6048,
+      "sha256": "f8056dfc7611e9b38a01a7119c3da63c06d52a9cbd11d6b59d70434b3478097d"
+    },
+    {
+      "path": "/tmp/predict-loss-complete-export/cases/loss-rto3-bounded/summary.json",
+      "bytes": 12813,
+      "sha256": "90cda35ff48a94261ec56ba49ef20f011208e1d00ce82217d8c328913a6d330d"
+    },
+    {
+      "path": "/tmp/predict-loss-complete-export/results.csv",
+      "bytes": 1445,
+      "sha256": "00d76a571af16c1d5d9fbf7d6b464847993c0cb0401cd3b84018931386af0d3a"
+    }
+  ],
+  "raw_archives": "Not created or claimed by this exporter; raw_inputs receipts identify files for a separate archive manifest."
+}

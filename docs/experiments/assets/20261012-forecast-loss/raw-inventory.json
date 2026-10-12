@@ -1,0 +1,1039 @@
+{
+  "archive": "forecast-loss-20261012.tar.gz",
+  "bytes": 85141440,
+  "sha256": "3d55c45297446dbdf601bdbfe9485a9e1ed7c6098d8306778dd9c6991fd7c3d1",
+  "uncompressed_input_bytes": 529509233,
+  "file_count": 205,
+  "files": [
+    {
+      "path": "predict-loss/leo10-base/analysis.json",
+      "bytes": 856884,
+      "sha256": "eab4d3b33930197831fe6f8cefe980bc07b774fef837f7b4473526ac4c5038b6"
+    },
+    {
+      "path": "predict-loss/leo10-base/config_ns3.properties",
+      "bytes": 613,
+      "sha256": "8c46772c95c46ca99935dd68cf6957631972a2bb519acabe0880640408b0f4d4"
+    },
+    {
+      "path": "predict-loss/leo10-base/console.txt",
+      "bytes": 5941,
+      "sha256": "43ac45f443d46e9ed72c25b7698388ee4c3ffdd90ebad74ce9b3867dacc29bd5"
+    },
+    {
+      "path": "predict-loss/leo10-base/logs_ns3/finished.txt",
+      "bytes": 4,
+      "sha256": "927580bf287560d4a26a5d6e129f91ffa9cb63031b1a8c772be6ec584e65e82b"
+    },
+    {
+      "path": "predict-loss/leo10-base/logs_ns3/study_app_rx_node_1585_port_1024.csv",
+      "bytes": 14466654,
+      "sha256": "63defbe5710bafaafec06b3021dfda3c8d2df2bad3bf78ce15b54c84d7bc451d"
+    },
+    {
+      "path": "predict-loss/leo10-base/logs_ns3/study_drop_coverage.csv",
+      "bytes": 1140184,
+      "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+    },
+    {
+      "path": "predict-loss/leo10-base/logs_ns3/study_drops.csv",
+      "bytes": 55405,
+      "sha256": "c915297632311402f8a2b1b4d6d24b83691f5971f40477934b2e2826887e6821"
+    },
+    {
+      "path": "predict-loss/leo10-base/logs_ns3/study_rx_node_1585_port_1024.csv",
+      "bytes": 19448001,
+      "sha256": "445161a24e3c943e61518cc5c67ce72aecbae5c1bb2caaf6bd4f4ce451b2f1cf"
+    },
+    {
+      "path": "predict-loss/leo10-base/logs_ns3/tcp_flow_0_cwnd.csv",
+      "bytes": 101682,
+      "sha256": "6651966bdd19d9cbcbcc99fb18ec854f152de7e81ed93e075e8baa5d09599860"
+    },
+    {
+      "path": "predict-loss/leo10-base/logs_ns3/tcp_flow_0_progress.csv",
+      "bytes": 1994572,
+      "sha256": "2a9181e6a8a5bf7e1c25b8a770096f43714ec03779e7d7ccd2673b9992339534"
+    },
+    {
+      "path": "predict-loss/leo10-base/logs_ns3/tcp_flow_0_rtt.csv",
+      "bytes": 2029939,
+      "sha256": "b959d51947cf5f8d37d672ef2a239c942b8b57e9f3d574ce2f7624de42ab1e38"
+    },
+    {
+      "path": "predict-loss/leo10-base/logs_ns3/tcp_flow_0_study_events.csv",
+      "bytes": 5534,
+      "sha256": "8809b380277e387dcc400a5d27a5679ccbdf446a08c7efb06fa7a021a42df78b"
+    },
+    {
+      "path": "predict-loss/leo10-base/logs_ns3/tcp_flow_0_study_packets.csv",
+      "bytes": 19842749,
+      "sha256": "78fc54184c4481b1421d2139870debcbe72259c18ccb011ba180ef77784e146f"
+    },
+    {
+      "path": "predict-loss/leo10-base/logs_ns3/tcp_flows.csv",
+      "bytes": 75,
+      "sha256": "709ed6139c27b6b511fb5d5f9f754342c493d3d5ab3ad0cfc2e9b97d1d1b9404"
+    },
+    {
+      "path": "predict-loss/leo10-base/logs_ns3/tcp_flows.txt",
+      "bytes": 336,
+      "sha256": "69fd39585ba9507d66f14951e4e5b81f21930b099c5608eef996519083cf2758"
+    },
+    {
+      "path": "predict-loss/leo10-base/logs_ns3/timing_results.csv",
+      "bytes": 563,
+      "sha256": "05f9f83634c0ac3fd259e48a441f92bab2e9241af86fd7b0f89aad8ed5663c4d"
+    },
+    {
+      "path": "predict-loss/leo10-base/logs_ns3/timing_results.txt",
+      "bytes": 909,
+      "sha256": "6878e5c784c55310fdf66f77160600144b9b760f8ac38fbfd9de08a04a3b8b75"
+    },
+    {
+      "path": "predict-loss/leo10-base/manifest.json",
+      "bytes": 420144,
+      "sha256": "bfbfd42ada5775fc67f382d19069d4fa8ab73b35c9ce774ce6446f330b7a07ee"
+    },
+    {
+      "path": "predict-loss/leo10-base/schedule.csv",
+      "bytes": 29,
+      "sha256": "e6cde3aa7716856e46d24c3833354df90407313ece13a5ffbd1b789fa4fea23c"
+    },
+    {
+      "path": "predict-loss/leo10-forecast/analysis.json",
+      "bytes": 893468,
+      "sha256": "46c725875f54b9ac1ff1ea50795fe648e1992225ec78cccdf6bb680063183155"
+    },
+    {
+      "path": "predict-loss/leo10-forecast/config_ns3.properties",
+      "bytes": 613,
+      "sha256": "8c46772c95c46ca99935dd68cf6957631972a2bb519acabe0880640408b0f4d4"
+    },
+    {
+      "path": "predict-loss/leo10-forecast/console.txt",
+      "bytes": 5965,
+      "sha256": "6f722d241b23ce83e33bd7c5b7ab3131e786fafabb3184ef3db765177b7f6dd6"
+    },
+    {
+      "path": "predict-loss/leo10-forecast/logs_ns3/finished.txt",
+      "bytes": 4,
+      "sha256": "927580bf287560d4a26a5d6e129f91ffa9cb63031b1a8c772be6ec584e65e82b"
+    },
+    {
+      "path": "predict-loss/leo10-forecast/logs_ns3/study_app_rx_node_1585_port_1024.csv",
+      "bytes": 14465567,
+      "sha256": "bd7722c1cbb78f51335b6b181d55f2a2c10e427b2a4326a02c74b873712cb23d"
+    },
+    {
+      "path": "predict-loss/leo10-forecast/logs_ns3/study_drop_coverage.csv",
+      "bytes": 1140184,
+      "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+    },
+    {
+      "path": "predict-loss/leo10-forecast/logs_ns3/study_drops.csv",
+      "bytes": 53873,
+      "sha256": "9aca2d266ffc1b98cd56f7803d04bdc7d807e11e44d25952b6c1ede94b8ef02e"
+    },
+    {
+      "path": "predict-loss/leo10-forecast/logs_ns3/study_rx_node_1585_port_1024.csv",
+      "bytes": 19452445,
+      "sha256": "4fb3a7e70c6e79f54007de46368fd1e303359ef2882e0a314587c9e02292b71c"
+    },
+    {
+      "path": "predict-loss/leo10-forecast/logs_ns3/tcp_flow_0_cwnd.csv",
+      "bytes": 100679,
+      "sha256": "acf9286c1705fa2aa31eb56805f016c3793051f3d566bc91c87c151af2c5cace"
+    },
+    {
+      "path": "predict-loss/leo10-forecast/logs_ns3/tcp_flow_0_progress.csv",
+      "bytes": 1994229,
+      "sha256": "4ce98bb78f4f26fbc697971d23cfc085d8a3e89ad6b378222900a20469794ca4"
+    },
+    {
+      "path": "predict-loss/leo10-forecast/logs_ns3/tcp_flow_0_rtt.csv",
+      "bytes": 2030657,
+      "sha256": "5f7ed6085a55daca60bb23bb3df73b6098d879aa2005d8810d887b023080edc7"
+    },
+    {
+      "path": "predict-loss/leo10-forecast/logs_ns3/tcp_flow_0_study_events.csv",
+      "bytes": 5838,
+      "sha256": "501afe86f9f5921e07c5bf304f939ec1792d47769e22ca5453e4a5b40eae9349"
+    },
+    {
+      "path": "predict-loss/leo10-forecast/logs_ns3/tcp_flow_0_study_packets.csv",
+      "bytes": 19843868,
+      "sha256": "c63e5d869761f9b664e89e52833cf28a9b5b4a3fa4f834baf65842755ba61f1e"
+    },
+    {
+      "path": "predict-loss/leo10-forecast/logs_ns3/tcp_flows.csv",
+      "bytes": 75,
+      "sha256": "2fa7e654ea06e0f91745acd609b08a9daa37dffdcf01b8035c2ded8567a85017"
+    },
+    {
+      "path": "predict-loss/leo10-forecast/logs_ns3/tcp_flows.txt",
+      "bytes": 336,
+      "sha256": "f971a8fa371d58169b3dcd209c3f33dd1fa2eac1a4ebb9a6d7ee751b00a56ed8"
+    },
+    {
+      "path": "predict-loss/leo10-forecast/logs_ns3/timing_results.csv",
+      "bytes": 561,
+      "sha256": "a17fd947d047fc44144c738b3bc2495a5232627463df4ba8b362fe9138801b3e"
+    },
+    {
+      "path": "predict-loss/leo10-forecast/logs_ns3/timing_results.txt",
+      "bytes": 909,
+      "sha256": "2643df834a4540f2f9def49a0b408099838198a9b9337aaebd8be2970018a2da"
+    },
+    {
+      "path": "predict-loss/leo10-forecast/manifest.json",
+      "bytes": 420666,
+      "sha256": "0d6b6d3f198abfa6d84bf0ffd5ae4a49c94d3fc865558c74489a18db07168038"
+    },
+    {
+      "path": "predict-loss/leo10-forecast/schedule.csv",
+      "bytes": 133,
+      "sha256": "888cbe8a34bc8b71b68497a7e150696ee493bfd01b206b8b928e176afb466109"
+    },
+    {
+      "path": "predict-loss/leo10-late/analysis.json",
+      "bytes": 857134,
+      "sha256": "40eaa7ca02ed73505226d5e969570f752f262c2e33583b387f4119627b3995ee"
+    },
+    {
+      "path": "predict-loss/leo10-late/config_ns3.properties",
+      "bytes": 613,
+      "sha256": "8c46772c95c46ca99935dd68cf6957631972a2bb519acabe0880640408b0f4d4"
+    },
+    {
+      "path": "predict-loss/leo10-late/console.txt",
+      "bytes": 5941,
+      "sha256": "1b7f845d9cdb21c45b36c468cde324e6eaf0c8ea55589e0fb67c8b0bb8ec01cd"
+    },
+    {
+      "path": "predict-loss/leo10-late/logs_ns3/finished.txt",
+      "bytes": 4,
+      "sha256": "927580bf287560d4a26a5d6e129f91ffa9cb63031b1a8c772be6ec584e65e82b"
+    },
+    {
+      "path": "predict-loss/leo10-late/logs_ns3/study_app_rx_node_1585_port_1024.csv",
+      "bytes": 14466654,
+      "sha256": "63defbe5710bafaafec06b3021dfda3c8d2df2bad3bf78ce15b54c84d7bc451d"
+    },
+    {
+      "path": "predict-loss/leo10-late/logs_ns3/study_drop_coverage.csv",
+      "bytes": 1140184,
+      "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+    },
+    {
+      "path": "predict-loss/leo10-late/logs_ns3/study_drops.csv",
+      "bytes": 55405,
+      "sha256": "c915297632311402f8a2b1b4d6d24b83691f5971f40477934b2e2826887e6821"
+    },
+    {
+      "path": "predict-loss/leo10-late/logs_ns3/study_rx_node_1585_port_1024.csv",
+      "bytes": 19448001,
+      "sha256": "445161a24e3c943e61518cc5c67ce72aecbae5c1bb2caaf6bd4f4ce451b2f1cf"
+    },
+    {
+      "path": "predict-loss/leo10-late/logs_ns3/tcp_flow_0_cwnd.csv",
+      "bytes": 101682,
+      "sha256": "6651966bdd19d9cbcbcc99fb18ec854f152de7e81ed93e075e8baa5d09599860"
+    },
+    {
+      "path": "predict-loss/leo10-late/logs_ns3/tcp_flow_0_progress.csv",
+      "bytes": 1994572,
+      "sha256": "2a9181e6a8a5bf7e1c25b8a770096f43714ec03779e7d7ccd2673b9992339534"
+    },
+    {
+      "path": "predict-loss/leo10-late/logs_ns3/tcp_flow_0_rtt.csv",
+      "bytes": 2029939,
+      "sha256": "b959d51947cf5f8d37d672ef2a239c942b8b57e9f3d574ce2f7624de42ab1e38"
+    },
+    {
+      "path": "predict-loss/leo10-late/logs_ns3/tcp_flow_0_study_events.csv",
+      "bytes": 5788,
+      "sha256": "dbe2ea5886d142de0409ce6a3cde868d39712b0de45c507ac2b91228695c9fec"
+    },
+    {
+      "path": "predict-loss/leo10-late/logs_ns3/tcp_flow_0_study_packets.csv",
+      "bytes": 19843229,
+      "sha256": "a116c3832fb328da5f6c2630dfcfb7146ab5f22be3828a38e5f8394141e85707"
+    },
+    {
+      "path": "predict-loss/leo10-late/logs_ns3/tcp_flows.csv",
+      "bytes": 75,
+      "sha256": "709ed6139c27b6b511fb5d5f9f754342c493d3d5ab3ad0cfc2e9b97d1d1b9404"
+    },
+    {
+      "path": "predict-loss/leo10-late/logs_ns3/tcp_flows.txt",
+      "bytes": 336,
+      "sha256": "69fd39585ba9507d66f14951e4e5b81f21930b099c5608eef996519083cf2758"
+    },
+    {
+      "path": "predict-loss/leo10-late/logs_ns3/timing_results.csv",
+      "bytes": 560,
+      "sha256": "946d15da0b37daff809038709420a97df201b48fbfea822b0414267f35b39d32"
+    },
+    {
+      "path": "predict-loss/leo10-late/logs_ns3/timing_results.txt",
+      "bytes": 909,
+      "sha256": "f7411c14646420f0aefca05b25ba3aa1b00f606cfd8ce204284ba612e4300a06"
+    },
+    {
+      "path": "predict-loss/leo10-late/manifest.json",
+      "bytes": 420675,
+      "sha256": "a6f88cdde3a08bbaaa2735a777761675cdae2132ed1d007c34e24375da128915"
+    },
+    {
+      "path": "predict-loss/leo10-late/schedule.csv",
+      "bytes": 133,
+      "sha256": "7c2cd3b957732cdb997a818375370d6447ff3a6fbcd660ee31a90b0d17fadc43"
+    },
+    {
+      "path": "predict-loss/leo100-base40/analysis.json",
+      "bytes": 563726,
+      "sha256": "da0906e26cda9c6968f95d0ed50d22f0353d6e43af734d1b7e5cad9906038596"
+    },
+    {
+      "path": "predict-loss/leo100-base40/config_ns3.properties",
+      "bytes": 616,
+      "sha256": "53b8c3d65cce756d8d6308a707197881ab0bdf1d6c38a2afbd96e528344b19f1"
+    },
+    {
+      "path": "predict-loss/leo100-base40/console.txt",
+      "bytes": 6404,
+      "sha256": "4f9d37b3992dec03d02c7f1a9c586b9852f1479aa72b88614d6dfbfcc3009182"
+    },
+    {
+      "path": "predict-loss/leo100-base40/logs_ns3/finished.txt",
+      "bytes": 4,
+      "sha256": "927580bf287560d4a26a5d6e129f91ffa9cb63031b1a8c772be6ec584e65e82b"
+    },
+    {
+      "path": "predict-loss/leo100-base40/logs_ns3/study_app_rx_node_1585_port_1024.csv",
+      "bytes": 29032577,
+      "sha256": "3fdd1fcc6cb9ef27684a7feda775ac81c6eca1093758af9b076a70f5da3cde8a"
+    },
+    {
+      "path": "predict-loss/leo100-base40/logs_ns3/study_drop_coverage.csv",
+      "bytes": 1140184,
+      "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+    },
+    {
+      "path": "predict-loss/leo100-base40/logs_ns3/study_drops.csv",
+      "bytes": 28932,
+      "sha256": "75ad39c5f5889821c24c7d06f235805e87af4367cd3da1942cd7fc0ff2efe619"
+    },
+    {
+      "path": "predict-loss/leo100-base40/logs_ns3/study_rx_node_1585_port_1024.csv",
+      "bytes": 38442372,
+      "sha256": "3a62f49b67ddd8567a0c67d904427b291065544b2f0b0f7b18cb76b0755cab85"
+    },
+    {
+      "path": "predict-loss/leo100-base40/logs_ns3/tcp_flow_0_cwnd.csv",
+      "bytes": 99347,
+      "sha256": "7f5535796f23f8d7a545a5063393d699c8c8fba761f97fe996d54afc801d80de"
+    },
+    {
+      "path": "predict-loss/leo100-base40/logs_ns3/tcp_flow_0_progress.csv",
+      "bytes": 3920332,
+      "sha256": "30c201d91f944431e539441293682888941bc9d155ce42ba352014a985a3d371"
+    },
+    {
+      "path": "predict-loss/leo100-base40/logs_ns3/tcp_flow_0_rtt.csv",
+      "bytes": 3790485,
+      "sha256": "259875a2b2b4dbd2c9c3b0f0899a1bb56b5349bcd2ba8492dc1243e21b0cb381"
+    },
+    {
+      "path": "predict-loss/leo100-base40/logs_ns3/tcp_flow_0_study_events.csv",
+      "bytes": 724,
+      "sha256": "2dc8f04575eab4f405078c8e6ee555abfe10e409ca094cac8bb0df4f630a9bec"
+    },
+    {
+      "path": "predict-loss/leo100-base40/logs_ns3/tcp_flow_0_study_packets.csv",
+      "bytes": 38631377,
+      "sha256": "d70589a545601d8b9cfa0857d0768df8e56c5a4dca91ed129920ddcd72968bab"
+    },
+    {
+      "path": "predict-loss/leo100-base40/logs_ns3/tcp_flows.csv",
+      "bytes": 73,
+      "sha256": "cc7b5a7106273f79cc2ad2e821e536ca90269931dc8ed3f3e1e0e22e726e1ef6"
+    },
+    {
+      "path": "predict-loss/leo100-base40/logs_ns3/tcp_flows.txt",
+      "bytes": 336,
+      "sha256": "777ebe28e61742fe13612ea5c7ac70003aa6dc037dad11b3cea7189b1021d622"
+    },
+    {
+      "path": "predict-loss/leo100-base40/logs_ns3/timing_results.csv",
+      "bytes": 560,
+      "sha256": "d87066007f91b93ada18d4de92dc51d0eb0d5e1019190774c552d09b0cf6a823"
+    },
+    {
+      "path": "predict-loss/leo100-base40/logs_ns3/timing_results.txt",
+      "bytes": 909,
+      "sha256": "84810381c543ad3b989036fc681d74a160e46bad8c2380df4a129bebddfaedf5"
+    },
+    {
+      "path": "predict-loss/leo100-base40/manifest.json",
+      "bytes": 420125,
+      "sha256": "f0c83a1de7745a53976f153dfc676961c67b370cf1dbf11f86a6bd216924bfcf"
+    },
+    {
+      "path": "predict-loss/leo100-base40/schedule.csv",
+      "bytes": 29,
+      "sha256": "e6cde3aa7716856e46d24c3833354df90407313ece13a5ffbd1b789fa4fea23c"
+    },
+    {
+      "path": "predict-loss/leo100-forecast20-40/analysis.json",
+      "bytes": 559214,
+      "sha256": "e62dc8b92ceef54384923a002ec33075f730bb53ea5b69b0e07f11aab8dc4a31"
+    },
+    {
+      "path": "predict-loss/leo100-forecast20-40/config_ns3.properties",
+      "bytes": 616,
+      "sha256": "53b8c3d65cce756d8d6308a707197881ab0bdf1d6c38a2afbd96e528344b19f1"
+    },
+    {
+      "path": "predict-loss/leo100-forecast20-40/console.txt",
+      "bytes": 6447,
+      "sha256": "a940970a125d5875306775e876c859926f517a746d00b8ce3e9e54de42729d7e"
+    },
+    {
+      "path": "predict-loss/leo100-forecast20-40/logs_ns3/finished.txt",
+      "bytes": 4,
+      "sha256": "927580bf287560d4a26a5d6e129f91ffa9cb63031b1a8c772be6ec584e65e82b"
+    },
+    {
+      "path": "predict-loss/leo100-forecast20-40/logs_ns3/study_app_rx_node_1585_port_1024.csv",
+      "bytes": 29034073,
+      "sha256": "0c96ac2445b7b148f31929a3968a4908c56f016c8038f38ffa8af5f83ccba4ca"
+    },
+    {
+      "path": "predict-loss/leo100-forecast20-40/logs_ns3/study_drop_coverage.csv",
+      "bytes": 1140184,
+      "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+    },
+    {
+      "path": "predict-loss/leo100-forecast20-40/logs_ns3/study_drops.csv",
+      "bytes": 28932,
+      "sha256": "75ad39c5f5889821c24c7d06f235805e87af4367cd3da1942cd7fc0ff2efe619"
+    },
+    {
+      "path": "predict-loss/leo100-forecast20-40/logs_ns3/study_rx_node_1585_port_1024.csv",
+      "bytes": 38444310,
+      "sha256": "925a12e53d83c6bef1d88509cb3c811e40e691f136994d20c22c03378b6154d1"
+    },
+    {
+      "path": "predict-loss/leo100-forecast20-40/logs_ns3/tcp_flow_0_cwnd.csv",
+      "bytes": 99699,
+      "sha256": "1ff3ed1a00efccab82c0657bc835400dcf4745b50e5c58a7361adb11a815bd39"
+    },
+    {
+      "path": "predict-loss/leo100-forecast20-40/logs_ns3/tcp_flow_0_progress.csv",
+      "bytes": 3920524,
+      "sha256": "f00f6055275ae5074c7bd16ac523ea050c9000cb8833b01c0f3b93510c1c5b8a"
+    },
+    {
+      "path": "predict-loss/leo100-forecast20-40/logs_ns3/tcp_flow_0_rtt.csv",
+      "bytes": 3791973,
+      "sha256": "dff1f1ae97d0088e051e02f75ab12713576bd6ba02848c7f9b5b006b806629a8"
+    },
+    {
+      "path": "predict-loss/leo100-forecast20-40/logs_ns3/tcp_flow_0_study_events.csv",
+      "bytes": 1810,
+      "sha256": "c6ee5cc48d91a352a89cac6ee2a63368f4ced705c03adb861d5725c60d1b4167"
+    },
+    {
+      "path": "predict-loss/leo100-forecast20-40/logs_ns3/tcp_flow_0_study_packets.csv",
+      "bytes": 38631846,
+      "sha256": "cb6d8978047d7b635667b5d4e349142b1ffdb62cdbdcfc1400376d65faf501c8"
+    },
+    {
+      "path": "predict-loss/leo100-forecast20-40/logs_ns3/tcp_flows.csv",
+      "bytes": 73,
+      "sha256": "e968bed892689a4d5d80e2240b4ab80bb1ee2ad6976cd464795f808fb3540253"
+    },
+    {
+      "path": "predict-loss/leo100-forecast20-40/logs_ns3/tcp_flows.txt",
+      "bytes": 336,
+      "sha256": "0d7caf786ca8d9ae158251d802fa264f789ef68c2042fc71f47258e9181137f2"
+    },
+    {
+      "path": "predict-loss/leo100-forecast20-40/logs_ns3/timing_results.csv",
+      "bytes": 560,
+      "sha256": "116643a9473d8b7ac4ff9c4ebd805a3ac593ae61427168810e000a56d6402a88"
+    },
+    {
+      "path": "predict-loss/leo100-forecast20-40/logs_ns3/timing_results.txt",
+      "bytes": 909,
+      "sha256": "99771336a079f64f91f3517f7fa37735260a12619b597d7dc03514e8fa7d9cbd"
+    },
+    {
+      "path": "predict-loss/leo100-forecast20-40/manifest.json",
+      "bytes": 420432,
+      "sha256": "efe65cf6949610e11d5cafb059dc2c6970e16f6673a2d68f1f11bbbc97360561"
+    },
+    {
+      "path": "predict-loss/leo100-forecast20-40/schedule.csv",
+      "bytes": 109,
+      "sha256": "35218db7311b59e81b44ce43c0f103449726feed37113bd9d614d436b90a7a0c"
+    },
+    {
+      "path": "predict-loss/leo100-forecast64-40/analysis.json",
+      "bytes": 555727,
+      "sha256": "fb6969b38ce2773feec564c256ee3aad634ca40cd3361a10105065ea5fb262b5"
+    },
+    {
+      "path": "predict-loss/leo100-forecast64-40/config_ns3.properties",
+      "bytes": 616,
+      "sha256": "53b8c3d65cce756d8d6308a707197881ab0bdf1d6c38a2afbd96e528344b19f1"
+    },
+    {
+      "path": "predict-loss/leo100-forecast64-40/console.txt",
+      "bytes": 6447,
+      "sha256": "d150ab146b86ac58f288802c404f153403afd607bfc4821a0cea8c6d0d9f5eb5"
+    },
+    {
+      "path": "predict-loss/leo100-forecast64-40/logs_ns3/finished.txt",
+      "bytes": 4,
+      "sha256": "927580bf287560d4a26a5d6e129f91ffa9cb63031b1a8c772be6ec584e65e82b"
+    },
+    {
+      "path": "predict-loss/leo100-forecast64-40/logs_ns3/study_app_rx_node_1585_port_1024.csv",
+      "bytes": 28760320,
+      "sha256": "86d82d5525e19b2ba74b077af877d4cdb523fa448742526b8642e35d10f5aaf7"
+    },
+    {
+      "path": "predict-loss/leo100-forecast64-40/logs_ns3/study_drop_coverage.csv",
+      "bytes": 1140184,
+      "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+    },
+    {
+      "path": "predict-loss/leo100-forecast64-40/logs_ns3/study_drops.csv",
+      "bytes": 29765,
+      "sha256": "21caa483c6bdc313563e466f17f3a102358d0f4c2a0c3505a740a5844851bc72"
+    },
+    {
+      "path": "predict-loss/leo100-forecast64-40/logs_ns3/study_rx_node_1585_port_1024.csv",
+      "bytes": 38446020,
+      "sha256": "17daf7d2b5d0363b84d4933d9ad504fb8f08912389f6b73ad96b3bb316939bdd"
+    },
+    {
+      "path": "predict-loss/leo100-forecast64-40/logs_ns3/tcp_flow_0_cwnd.csv",
+      "bytes": 106453,
+      "sha256": "4fc18d64fdd7b3f3e3b73a2fa86f26f5b1dfaeccf3309f245921b76956128df0"
+    },
+    {
+      "path": "predict-loss/leo100-forecast64-40/logs_ns3/tcp_flow_0_progress.csv",
+      "bytes": 3883276,
+      "sha256": "d2ae2801596a7ed1713fc90433082a4187c5ad4aecce2d042d2aa40d086945d7"
+    },
+    {
+      "path": "predict-loss/leo100-forecast64-40/logs_ns3/tcp_flow_0_rtt.csv",
+      "bytes": 3760461,
+      "sha256": "18573d7074270ca49695488a8677d21074cc2bc82cf6affe3981395a02b41dbf"
+    },
+    {
+      "path": "predict-loss/leo100-forecast64-40/logs_ns3/tcp_flow_0_study_events.csv",
+      "bytes": 2647,
+      "sha256": "e9a2d8736becba78d8c10356a46797a1df162dbbeabd64d531d94088d8880902"
+    },
+    {
+      "path": "predict-loss/leo100-forecast64-40/logs_ns3/tcp_flow_0_study_packets.csv",
+      "bytes": 38894594,
+      "sha256": "0a6529335e361e52c5a8c622c74f9f4a4dbef70e9eb4c3154108b73ac963eb9e"
+    },
+    {
+      "path": "predict-loss/leo100-forecast64-40/logs_ns3/tcp_flows.csv",
+      "bytes": 73,
+      "sha256": "ebc5bc0871c9cc01a9f8a5c06cbf50d5549cb178054455f279ad1c803351f9ef"
+    },
+    {
+      "path": "predict-loss/leo100-forecast64-40/logs_ns3/tcp_flows.txt",
+      "bytes": 336,
+      "sha256": "e336461939f76bca5125a9cf5175d4083254adacc04c423dac5df81c1970d453"
+    },
+    {
+      "path": "predict-loss/leo100-forecast64-40/logs_ns3/timing_results.csv",
+      "bytes": 561,
+      "sha256": "4ff21b814751a6764c82bcd458240b508de7f8edea486cc79b32fc6bef6fea25"
+    },
+    {
+      "path": "predict-loss/leo100-forecast64-40/logs_ns3/timing_results.txt",
+      "bytes": 909,
+      "sha256": "930c4deae9eae1d1249990ebe3bf9d54817a5c1f677111ad528d832bda6cc048"
+    },
+    {
+      "path": "predict-loss/leo100-forecast64-40/manifest.json",
+      "bytes": 420454,
+      "sha256": "d0e10e61a823b49072d1833935010b14adb0f5e367dd6f2f0654afb1f0c4b2ba"
+    },
+    {
+      "path": "predict-loss/leo100-forecast64-40/schedule.csv",
+      "bytes": 109,
+      "sha256": "9b5611f61b06fc83db8568c3a15cebd24dfc78cd2d9d46abb9d2e61f067b9bc2"
+    },
+    {
+      "path": "predict-loss/loss-first-base/analysis.json",
+      "bytes": 15977,
+      "sha256": "aeff313adf1f9699fe3725775249b10dcc61ed257d0728ce166c2cdb3c4c9119"
+    },
+    {
+      "path": "predict-loss/loss-first-base/config_ns3.properties",
+      "bytes": 34,
+      "sha256": "f3f2e1b48fdfdd1d6ae0913db5fb1a817dd66b0fbca791dc678692fd6f1496f9"
+    },
+    {
+      "path": "predict-loss/loss-first-base/console.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "predict-loss/loss-first-base/logs_ns3/study_app_rx_node_1_port_1024.csv",
+      "bytes": 733,
+      "sha256": "b35c9ac46bde2331da713fba1846eeb718c907027d0bb2f050acdf2fbca75b5e"
+    },
+    {
+      "path": "predict-loss/loss-first-base/logs_ns3/study_drop_coverage.csv",
+      "bytes": 328,
+      "sha256": "f2bbce727ae1f61019ef8f727753e3a8f64abdeb41d660a20a3607802f4524f4"
+    },
+    {
+      "path": "predict-loss/loss-first-base/logs_ns3/study_drops.csv",
+      "bytes": 194,
+      "sha256": "e875ed492bd803c301bd18a29514bca50a6edfe104a69a85ae1ec68003bac35c"
+    },
+    {
+      "path": "predict-loss/loss-first-base/logs_ns3/study_rx_node_1_port_1024.csv",
+      "bytes": 1849,
+      "sha256": "cb432b3cd841713975a574fc6919f5cf0812185846599bdd17182cccacd11e5a"
+    },
+    {
+      "path": "predict-loss/loss-first-base/logs_ns3/tcp_flow_0_cwnd.csv",
+      "bytes": 233,
+      "sha256": "ceb39256e8a1e4c940cb3f597b7e200596f2e9ff1f9ac9a0a5075021e8262630"
+    },
+    {
+      "path": "predict-loss/loss-first-base/logs_ns3/tcp_flow_0_progress.csv",
+      "bytes": 160,
+      "sha256": "b583a1b2888476107f8d65535c480fa872d89ef79c7b12c3cdb4380249a86e98"
+    },
+    {
+      "path": "predict-loss/loss-first-base/logs_ns3/tcp_flow_0_rtt.csv",
+      "bytes": 110,
+      "sha256": "f46faf24fbfea5e839643bcebcbd4b6f10073f725ed5a139f993b2c823b14278"
+    },
+    {
+      "path": "predict-loss/loss-first-base/logs_ns3/tcp_flow_0_study_events.csv",
+      "bytes": 238,
+      "sha256": "3038a5be2c89948a5724671c2c638a3c408f7828393d6a2513b0a6e6e636863e"
+    },
+    {
+      "path": "predict-loss/loss-first-base/logs_ns3/tcp_flow_0_study_packets.csv",
+      "bytes": 2680,
+      "sha256": "9774112da74ac364fbe1421ae7d2f532b3e0450cf2f32d874f6362b9043bd6e6"
+    },
+    {
+      "path": "predict-loss/loss-first-base/manifest.json",
+      "bytes": 5664,
+      "sha256": "ec274e72c942386916ed18f49a9f696f8826d6e19e6e173f2bfcfaa421494ba5"
+    },
+    {
+      "path": "predict-loss/loss-first-bounded/analysis.json",
+      "bytes": 16254,
+      "sha256": "67266192da2ec495b4651f5144e77909b83e5cdd84bb0ae345736c179729d002"
+    },
+    {
+      "path": "predict-loss/loss-first-bounded/config_ns3.properties",
+      "bytes": 34,
+      "sha256": "f3f2e1b48fdfdd1d6ae0913db5fb1a817dd66b0fbca791dc678692fd6f1496f9"
+    },
+    {
+      "path": "predict-loss/loss-first-bounded/console.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "predict-loss/loss-first-bounded/logs_ns3/study_app_rx_node_1_port_1024.csv",
+      "bytes": 213,
+      "sha256": "ef86b0cf7effe5aa6ef511dc4f96af230be669757805d6fa491a00ae38ce61a5"
+    },
+    {
+      "path": "predict-loss/loss-first-bounded/logs_ns3/study_drop_coverage.csv",
+      "bytes": 328,
+      "sha256": "f2bbce727ae1f61019ef8f727753e3a8f64abdeb41d660a20a3607802f4524f4"
+    },
+    {
+      "path": "predict-loss/loss-first-bounded/logs_ns3/study_drops.csv",
+      "bytes": 194,
+      "sha256": "e875ed492bd803c301bd18a29514bca50a6edfe104a69a85ae1ec68003bac35c"
+    },
+    {
+      "path": "predict-loss/loss-first-bounded/logs_ns3/study_rx_node_1_port_1024.csv",
+      "bytes": 1817,
+      "sha256": "fc41b37e0d1cfa5f25e9d52a3083ec9faa395c0338c81f8918e2e1c8ce1adb70"
+    },
+    {
+      "path": "predict-loss/loss-first-bounded/logs_ns3/tcp_flow_0_cwnd.csv",
+      "bytes": 88,
+      "sha256": "c17f52c8cd62edfd6f14cdb68864a7d8cfab3c44eb06722f694f8dc62986d448"
+    },
+    {
+      "path": "predict-loss/loss-first-bounded/logs_ns3/tcp_flow_0_progress.csv",
+      "bytes": 74,
+      "sha256": "1db434101b1a53132b7d6a8e8ff1a5fb8e390cdd205362f17a13031e4238634a"
+    },
+    {
+      "path": "predict-loss/loss-first-bounded/logs_ns3/tcp_flow_0_rtt.csv",
+      "bytes": 44,
+      "sha256": "cfdb79fc26272833c6cb4ec53de3ee5f1102c7fe9f6aa6aab229a8b61f136f64"
+    },
+    {
+      "path": "predict-loss/loss-first-bounded/logs_ns3/tcp_flow_0_study_events.csv",
+      "bytes": 360,
+      "sha256": "7b2adf2789a0da578329e15e102c8948faab42da6ccef563dc5bd7940bc6037d"
+    },
+    {
+      "path": "predict-loss/loss-first-bounded/logs_ns3/tcp_flow_0_study_packets.csv",
+      "bytes": 2924,
+      "sha256": "9247e5ba05ee087785bd83934fa98b3a900963fae50456a1e000fa5a75abe958"
+    },
+    {
+      "path": "predict-loss/loss-first-bounded/manifest.json",
+      "bytes": 5989,
+      "sha256": "19b165cab4c5e07539b19c650c4a0f699f5da5490f5376b60fa4504db2f42c57"
+    },
+    {
+      "path": "predict-loss/loss-first-legacy/analysis.json",
+      "bytes": 16259,
+      "sha256": "c409451b73ebaed36eeca58f8af6e2f7dc88c344674537d02090050433dba130"
+    },
+    {
+      "path": "predict-loss/loss-first-legacy/config_ns3.properties",
+      "bytes": 34,
+      "sha256": "f3f2e1b48fdfdd1d6ae0913db5fb1a817dd66b0fbca791dc678692fd6f1496f9"
+    },
+    {
+      "path": "predict-loss/loss-first-legacy/console.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "predict-loss/loss-first-legacy/logs_ns3/study_app_rx_node_1_port_1024.csv",
+      "bytes": 214,
+      "sha256": "9b3da2aaae669b06da4aeee40ffbc81474b54c49992b394708a4e1f3fe47af5b"
+    },
+    {
+      "path": "predict-loss/loss-first-legacy/logs_ns3/study_drop_coverage.csv",
+      "bytes": 328,
+      "sha256": "f2bbce727ae1f61019ef8f727753e3a8f64abdeb41d660a20a3607802f4524f4"
+    },
+    {
+      "path": "predict-loss/loss-first-legacy/logs_ns3/study_drops.csv",
+      "bytes": 194,
+      "sha256": "e875ed492bd803c301bd18a29514bca50a6edfe104a69a85ae1ec68003bac35c"
+    },
+    {
+      "path": "predict-loss/loss-first-legacy/logs_ns3/study_rx_node_1_port_1024.csv",
+      "bytes": 1821,
+      "sha256": "c5dead99ea1391cbfff2faf6e41707a9edefeeacde72d6879eddad1e9c730eab"
+    },
+    {
+      "path": "predict-loss/loss-first-legacy/logs_ns3/tcp_flow_0_cwnd.csv",
+      "bytes": 54,
+      "sha256": "45f8b50519694aca5071b72527587fb90bc4a5a4630153d4f93816752b3e71fa"
+    },
+    {
+      "path": "predict-loss/loss-first-legacy/logs_ns3/tcp_flow_0_progress.csv",
+      "bytes": 58,
+      "sha256": "b663ed9c6b48b0e41619e4205e48bbabdf77ff0680bf8e69fdc6daaa14a0cbaa"
+    },
+    {
+      "path": "predict-loss/loss-first-legacy/logs_ns3/tcp_flow_0_rtt.csv",
+      "bytes": 45,
+      "sha256": "11b3645834b95d36b6567f099698d25d6c3dd1d938348e6340abb4b58e22c328"
+    },
+    {
+      "path": "predict-loss/loss-first-legacy/logs_ns3/tcp_flow_0_study_events.csv",
+      "bytes": 370,
+      "sha256": "7549410bb247a3dfc744c2aaa7426ad2886dcd0479de9ebebc9a0dddb70670c5"
+    },
+    {
+      "path": "predict-loss/loss-first-legacy/logs_ns3/tcp_flow_0_study_packets.csv",
+      "bytes": 2934,
+      "sha256": "8068cd1645718b190dbe26ab31077089dcaaa7d5dc0d2fa1cad3e79e56ce28ea"
+    },
+    {
+      "path": "predict-loss/loss-first-legacy/manifest.json",
+      "bytes": 5937,
+      "sha256": "190814ec185ce5f50999df8e62ac0c82b13a4bad264be0ff1c1ad3af998b37c2"
+    },
+    {
+      "path": "predict-loss/loss-middle-base/analysis.json",
+      "bytes": 15733,
+      "sha256": "ac68b7749339a88b519c59ebfbf7971574fc94e96fceac5175d3c9370ff06176"
+    },
+    {
+      "path": "predict-loss/loss-middle-base/config_ns3.properties",
+      "bytes": 34,
+      "sha256": "f3f2e1b48fdfdd1d6ae0913db5fb1a817dd66b0fbca791dc678692fd6f1496f9"
+    },
+    {
+      "path": "predict-loss/loss-middle-base/console.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "predict-loss/loss-middle-base/logs_ns3/study_app_rx_node_1_port_1024.csv",
+      "bytes": 845,
+      "sha256": "b4e7d624dd777b53da7d8639b9ece62f08792d063c1c1bff0bb46cee52a9bfe6"
+    },
+    {
+      "path": "predict-loss/loss-middle-base/logs_ns3/study_drop_coverage.csv",
+      "bytes": 328,
+      "sha256": "f2bbce727ae1f61019ef8f727753e3a8f64abdeb41d660a20a3607802f4524f4"
+    },
+    {
+      "path": "predict-loss/loss-middle-base/logs_ns3/study_drops.csv",
+      "bytes": 199,
+      "sha256": "c7cf27a7fe7e91583ebbbe605e975047ee1c46018c4a7634928fb768ad118874"
+    },
+    {
+      "path": "predict-loss/loss-middle-base/logs_ns3/study_rx_node_1_port_1024.csv",
+      "bytes": 1885,
+      "sha256": "4d7c8542316191eedf1299f4bc4b8a9e0731678b3ee564e0cc3bfa7d317fae6f"
+    },
+    {
+      "path": "predict-loss/loss-middle-base/logs_ns3/tcp_flow_0_cwnd.csv",
+      "bytes": 198,
+      "sha256": "4a31ebde154b90c6beb94ca4159949c1ac55b1c65302b7b93d3a74b7397165c8"
+    },
+    {
+      "path": "predict-loss/loss-middle-base/logs_ns3/tcp_flow_0_progress.csv",
+      "bytes": 160,
+      "sha256": "55a5ae16d5364e688040b110feb4ddaad76709967cc6be6c2d4028d619b0758e"
+    },
+    {
+      "path": "predict-loss/loss-middle-base/logs_ns3/tcp_flow_0_rtt.csv",
+      "bytes": 110,
+      "sha256": "594d9aacced9252210cc4aa08aff7888bcf67d5b02b2d74c9e7f942e4297d8e7"
+    },
+    {
+      "path": "predict-loss/loss-middle-base/logs_ns3/tcp_flow_0_study_events.csv",
+      "bytes": 239,
+      "sha256": "edac5d236642ee31cc272485d6e70a5f4341d6608193c8fac44544f4748699af"
+    },
+    {
+      "path": "predict-loss/loss-middle-base/logs_ns3/tcp_flow_0_study_packets.csv",
+      "bytes": 2615,
+      "sha256": "edc002bf6874a44759ac284e829686bd79774b85bc3bfab40072cb41a13d124e"
+    },
+    {
+      "path": "predict-loss/loss-middle-base/manifest.json",
+      "bytes": 5675,
+      "sha256": "8da641e62fa605481c0718e7a5b862235bea1a6a4d479a1436c4f1bbfdc397b4"
+    },
+    {
+      "path": "predict-loss/loss-middle-bounded/analysis.json",
+      "bytes": 15871,
+      "sha256": "baf4433f622cd5f04f5e5fe07b63fad924f983693ee8a7f76219941d042d317b"
+    },
+    {
+      "path": "predict-loss/loss-middle-bounded/config_ns3.properties",
+      "bytes": 34,
+      "sha256": "f3f2e1b48fdfdd1d6ae0913db5fb1a817dd66b0fbca791dc678692fd6f1496f9"
+    },
+    {
+      "path": "predict-loss/loss-middle-bounded/console.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "predict-loss/loss-middle-bounded/logs_ns3/study_app_rx_node_1_port_1024.csv",
+      "bytes": 845,
+      "sha256": "4ea3e51c29b21448d4dc29b23d14444deadeb9b10c9cf2e51f1e759d02cf77ae"
+    },
+    {
+      "path": "predict-loss/loss-middle-bounded/logs_ns3/study_drop_coverage.csv",
+      "bytes": 328,
+      "sha256": "f2bbce727ae1f61019ef8f727753e3a8f64abdeb41d660a20a3607802f4524f4"
+    },
+    {
+      "path": "predict-loss/loss-middle-bounded/logs_ns3/study_drops.csv",
+      "bytes": 199,
+      "sha256": "c7cf27a7fe7e91583ebbbe605e975047ee1c46018c4a7634928fb768ad118874"
+    },
+    {
+      "path": "predict-loss/loss-middle-bounded/logs_ns3/study_rx_node_1_port_1024.csv",
+      "bytes": 1885,
+      "sha256": "f87c50b4d52a5f3930c386300c290172ac3a1b1bf92600e6b6695ccb4787ab1f"
+    },
+    {
+      "path": "predict-loss/loss-middle-bounded/logs_ns3/tcp_flow_0_cwnd.csv",
+      "bytes": 144,
+      "sha256": "4fd3e9d32bdeb696cda9cb8a59e34c773423da49305606e24a85bcd42261b62d"
+    },
+    {
+      "path": "predict-loss/loss-middle-bounded/logs_ns3/tcp_flow_0_progress.csv",
+      "bytes": 160,
+      "sha256": "a41fab1ccb29ea28780318ac21f23629c6202a613562a497dd710491c65661d8"
+    },
+    {
+      "path": "predict-loss/loss-middle-bounded/logs_ns3/tcp_flow_0_rtt.csv",
+      "bytes": 110,
+      "sha256": "6f3991c2d902f1d76628b37482c74706650651cf3df3147cd05215c61f906cab"
+    },
+    {
+      "path": "predict-loss/loss-middle-bounded/logs_ns3/tcp_flow_0_study_events.csv",
+      "bytes": 361,
+      "sha256": "74c774464fe01e5ee41639b71ed1d948d88140484022dbe91501fea1f81526bd"
+    },
+    {
+      "path": "predict-loss/loss-middle-bounded/logs_ns3/tcp_flow_0_study_packets.csv",
+      "bytes": 2639,
+      "sha256": "40efcd8bed68656e938f40e7dde35999279debe3aa552b5fab190531620d9066"
+    },
+    {
+      "path": "predict-loss/loss-middle-bounded/manifest.json",
+      "bytes": 6003,
+      "sha256": "e10567febda25b7bdca0b347b4eff18bf8fb1be2d14deae5b1de04840075f361"
+    },
+    {
+      "path": "predict-loss/loss-rto3-base/analysis.json",
+      "bytes": 14417,
+      "sha256": "eda93ef370ab52347049a809e9c8e9c9b2eef808e38d43f7b8ce122ec9073a6d"
+    },
+    {
+      "path": "predict-loss/loss-rto3-base/config_ns3.properties",
+      "bytes": 34,
+      "sha256": "f3f2e1b48fdfdd1d6ae0913db5fb1a817dd66b0fbca791dc678692fd6f1496f9"
+    },
+    {
+      "path": "predict-loss/loss-rto3-base/console.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "predict-loss/loss-rto3-base/logs_ns3/study_app_rx_node_1_port_1024.csv",
+      "bytes": 210,
+      "sha256": "c09dc608a0c2e476dd9f4d3746ef85f670606c1b1ed9b6c0e0c46fdefb1c031b"
+    },
+    {
+      "path": "predict-loss/loss-rto3-base/logs_ns3/study_drop_coverage.csv",
+      "bytes": 328,
+      "sha256": "f2bbce727ae1f61019ef8f727753e3a8f64abdeb41d660a20a3607802f4524f4"
+    },
+    {
+      "path": "predict-loss/loss-rto3-base/logs_ns3/study_drops.csv",
+      "bytes": 194,
+      "sha256": "e875ed492bd803c301bd18a29514bca50a6edfe104a69a85ae1ec68003bac35c"
+    },
+    {
+      "path": "predict-loss/loss-rto3-base/logs_ns3/study_rx_node_1_port_1024.csv",
+      "bytes": 465,
+      "sha256": "3d67554d5de4a3eb034c3a91753362ccdf1d93ec2fa83987b43cbd60a5f48a44"
+    },
+    {
+      "path": "predict-loss/loss-rto3-base/logs_ns3/tcp_flow_0_cwnd.csv",
+      "bytes": 54,
+      "sha256": "45f8b50519694aca5071b72527587fb90bc4a5a4630153d4f93816752b3e71fa"
+    },
+    {
+      "path": "predict-loss/loss-rto3-base/logs_ns3/tcp_flow_0_progress.csv",
+      "bytes": 98,
+      "sha256": "3d851476123a06a923e599f26f23ec93c40c447a7600f6509327bbbde5470509"
+    },
+    {
+      "path": "predict-loss/loss-rto3-base/logs_ns3/tcp_flow_0_rtt.csv",
+      "bytes": 45,
+      "sha256": "11b3645834b95d36b6567f099698d25d6c3dd1d938348e6340abb4b58e22c328"
+    },
+    {
+      "path": "predict-loss/loss-rto3-base/logs_ns3/tcp_flow_0_study_events.csv",
+      "bytes": 241,
+      "sha256": "29a14036588c49cced10be901f680d8b74122a03311cbdd298f41f5b93770181"
+    },
+    {
+      "path": "predict-loss/loss-rto3-base/logs_ns3/tcp_flow_0_study_packets.csv",
+      "bytes": 805,
+      "sha256": "7f6ab051c5620c457c6c1af098193bf490422bcb2fd9e592dadeafce19a1c711"
+    },
+    {
+      "path": "predict-loss/loss-rto3-base/manifest.json",
+      "bytes": 5685,
+      "sha256": "409607acd922595ceb29da4b3854288ad7d8c3d30bb1c39b37e3126edf7dcba5"
+    },
+    {
+      "path": "predict-loss/loss-rto3-bounded/analysis.json",
+      "bytes": 14440,
+      "sha256": "6d8e2b69414646ca585b7fba9fe102f94c62aa2b6060ae7abebbe86b0a4e0395"
+    },
+    {
+      "path": "predict-loss/loss-rto3-bounded/config_ns3.properties",
+      "bytes": 34,
+      "sha256": "f3f2e1b48fdfdd1d6ae0913db5fb1a817dd66b0fbca791dc678692fd6f1496f9"
+    },
+    {
+      "path": "predict-loss/loss-rto3-bounded/console.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "predict-loss/loss-rto3-bounded/logs_ns3/study_app_rx_node_1_port_1024.csv",
+      "bytes": 210,
+      "sha256": "c09dc608a0c2e476dd9f4d3746ef85f670606c1b1ed9b6c0e0c46fdefb1c031b"
+    },
+    {
+      "path": "predict-loss/loss-rto3-bounded/logs_ns3/study_drop_coverage.csv",
+      "bytes": 328,
+      "sha256": "f2bbce727ae1f61019ef8f727753e3a8f64abdeb41d660a20a3607802f4524f4"
+    },
+    {
+      "path": "predict-loss/loss-rto3-bounded/logs_ns3/study_drops.csv",
+      "bytes": 194,
+      "sha256": "e875ed492bd803c301bd18a29514bca50a6edfe104a69a85ae1ec68003bac35c"
+    },
+    {
+      "path": "predict-loss/loss-rto3-bounded/logs_ns3/study_rx_node_1_port_1024.csv",
+      "bytes": 465,
+      "sha256": "3d67554d5de4a3eb034c3a91753362ccdf1d93ec2fa83987b43cbd60a5f48a44"
+    },
+    {
+      "path": "predict-loss/loss-rto3-bounded/logs_ns3/tcp_flow_0_cwnd.csv",
+      "bytes": 54,
+      "sha256": "45f8b50519694aca5071b72527587fb90bc4a5a4630153d4f93816752b3e71fa"
+    },
+    {
+      "path": "predict-loss/loss-rto3-bounded/logs_ns3/tcp_flow_0_progress.csv",
+      "bytes": 98,
+      "sha256": "3d851476123a06a923e599f26f23ec93c40c447a7600f6509327bbbde5470509"
+    },
+    {
+      "path": "predict-loss/loss-rto3-bounded/logs_ns3/tcp_flow_0_rtt.csv",
+      "bytes": 45,
+      "sha256": "11b3645834b95d36b6567f099698d25d6c3dd1d938348e6340abb4b58e22c328"
+    },
+    {
+      "path": "predict-loss/loss-rto3-bounded/logs_ns3/tcp_flow_0_study_events.csv",
+      "bytes": 324,
+      "sha256": "78336e87c598f355287a5f48ed908a59858a01b3c11454f02c154102cf54b71c"
+    },
+    {
+      "path": "predict-loss/loss-rto3-bounded/logs_ns3/tcp_flow_0_study_packets.csv",
+      "bytes": 809,
+      "sha256": "67b836065c1b63da9313b252ed763dcf59f1e92937467de3f05ef85b47cd230e"
+    },
+    {
+      "path": "predict-loss/loss-rto3-bounded/manifest.json",
+      "bytes": 6048,
+      "sha256": "f8056dfc7611e9b38a01a7119c3da63c06d52a9cbd11d6b59d70434b3478097d"
+    }
+  ],
+  "limits": [
+    "Failed and timed-out attempts are retained and are not completed performance results.",
+    "No ns-3 tree, runtime builds, generated state or crash dumps are included.",
+    "Archive SHA identifies this stored artifact; gzip/tar byte determinism is not asserted."
+  ]
+}

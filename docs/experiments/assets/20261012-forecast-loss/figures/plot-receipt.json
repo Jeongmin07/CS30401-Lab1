@@ -1,0 +1,157 @@
+{
+  "tool": {
+    "path": "/work/code/predict-loss/plot.py",
+    "bytes": 6073,
+    "sha256": "68263185970b0578cdc2ac84a90ed7eba1648d5110bc013d7c46782df15af0aa"
+  },
+  "matplotlib_version": "3.10.8",
+  "inputs": [
+    {
+      "path": "/tmp/predict-loss-eight-export/cases/loss-first-base/summary.json",
+      "bytes": 12054,
+      "sha256": "01de05d5c6692b6d921780a0f0461a4c624ee5310c3ee2efbe9acf5f26d0504b",
+      "case": "loss-first-base",
+      "full_analysis": {
+        "bytes": 15977,
+        "path": "/tmp/predict-loss/loss-first-base/analysis.json",
+        "sha256": "aeff313adf1f9699fe3725775249b10dcc61ed257d0728ce166c2cdb3c4c9119"
+      }
+    },
+    {
+      "path": "/tmp/predict-loss-eight-export/cases/loss-first-legacy/summary.json",
+      "bytes": 13066,
+      "sha256": "ade0335e0f79a866e64a184f068167b116a9ee56b71800dc52567c2e80aaa9b7",
+      "case": "loss-first-legacy",
+      "full_analysis": {
+        "bytes": 16259,
+        "path": "/tmp/predict-loss/loss-first-legacy/analysis.json",
+        "sha256": "c409451b73ebaed36eeca58f8af6e2f7dc88c344674537d02090050433dba130"
+      }
+    },
+    {
+      "path": "/tmp/predict-loss-eight-export/cases/loss-first-bounded/summary.json",
+      "bytes": 13072,
+      "sha256": "0f52472e7a21e2f3ed10723a14bb2b102ba461cd607d0b3b3c551a91ef11518d",
+      "case": "loss-first-bounded",
+      "full_analysis": {
+        "bytes": 16254,
+        "path": "/tmp/predict-loss/loss-first-bounded/analysis.json",
+        "sha256": "67266192da2ec495b4651f5144e77909b83e5cdd84bb0ae345736c179729d002"
+      }
+    },
+    {
+      "path": "/tmp/predict-loss-eight-export/cases/loss-middle-base/summary.json",
+      "bytes": 12078,
+      "sha256": "6caac0efdbb5e368064c58de0ec9d378802f9c3e0770e3bb932ea39775fafb89",
+      "case": "loss-middle-base",
+      "full_analysis": {
+        "bytes": 15733,
+        "path": "/tmp/predict-loss/loss-middle-base/analysis.json",
+        "sha256": "ac68b7749339a88b519c59ebfbf7971574fc94e96fceac5175d3c9370ff06176"
+      }
+    },
+    {
+      "path": "/tmp/predict-loss-eight-export/cases/loss-middle-bounded/summary.json",
+      "bytes": 13137,
+      "sha256": "caed89876ec4e82bf9c99734893495dadb7f4b0ab2bc443d4413a4c2ffb0272d",
+      "case": "loss-middle-bounded",
+      "full_analysis": {
+        "bytes": 15871,
+        "path": "/tmp/predict-loss/loss-middle-bounded/analysis.json",
+        "sha256": "baf4433f622cd5f04f5e5fe07b63fad924f983693ee8a7f76219941d042d317b"
+      }
+    },
+    {
+      "path": "/tmp/predict-loss-eight-export/cases/leo10-base/summary.json",
+      "bytes": 19360,
+      "sha256": "67d520f98cd06f224942e094454ec045c6106f93d8b2b511fad6d4e089479534",
+      "case": "leo10-base",
+      "full_analysis": {
+        "bytes": 856884,
+        "path": "/tmp/predict-loss/leo10-base/analysis.json",
+        "sha256": "eab4d3b33930197831fe6f8cefe980bc07b774fef837f7b4473526ac4c5038b6"
+      }
+    },
+    {
+      "path": "/tmp/predict-loss-eight-export/cases/leo10-forecast/summary.json",
+      "bytes": 21465,
+      "sha256": "efa0d8191938b51110e736ec16e56c973761475660bcc22a960d5d8a39964c65",
+      "case": "leo10-forecast",
+      "full_analysis": {
+        "bytes": 893468,
+        "path": "/tmp/predict-loss/leo10-forecast/analysis.json",
+        "sha256": "46c725875f54b9ac1ff1ea50795fe648e1992225ec78cccdf6bb680063183155"
+      }
+    },
+    {
+      "path": "/tmp/predict-loss-eight-export/cases/leo10-late/summary.json",
+      "bytes": 21241,
+      "sha256": "3ccca7f369c3a53812aac1777d8ed78f43c3507a77ebbb9881715ee689741348",
+      "case": "leo10-late",
+      "full_analysis": {
+        "bytes": 857134,
+        "path": "/tmp/predict-loss/leo10-late/analysis.json",
+        "sha256": "40eaa7ca02ed73505226d5e969570f752f262c2e33583b387f4119627b3995ee"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "path": "/tmp/predict-loss-figures/finite-loss-fct.png",
+      "bytes": 91418,
+      "sha256": "67d348c53252b8378a209ddf81a2876c46962a77e17909269485945dc7b8be71"
+    },
+    {
+      "path": "/tmp/predict-loss-figures/finite-loss-fct.pdf",
+      "bytes": 14104,
+      "sha256": "0631c331ea7ecd6f2cf71cac3793b554d28cdb54e9ef0b3a736f16fbf256ac3e"
+    },
+    {
+      "path": "/tmp/predict-loss-figures/leo10-goodput.png",
+      "bytes": 125413,
+      "sha256": "b0078e9a809906255f7aad65015c393038c7145b9d7eef403803f8ab3749d217"
+    },
+    {
+      "path": "/tmp/predict-loss-figures/leo10-goodput.pdf",
+      "bytes": 15316,
+      "sha256": "40657aaeff7a72bf8dcf2cc33e036e6ecf4f5d0c7013039fa03db41e45f653a1"
+    }
+  ],
+  "plotted_values": {
+    "finite_cases": [
+      "loss-first-base",
+      "loss-first-legacy",
+      "loss-first-bounded",
+      "loss-middle-base",
+      "loss-middle-bounded"
+    ],
+    "fct_s": [
+      0.25150992,
+      1.150124001,
+      0.40011472,
+      0.3507112,
+      0.40011472
+    ],
+    "leo_cases": [
+      "leo10-base",
+      "leo10-forecast",
+      "leo10-late"
+    ],
+    "whole_goodput_mbps": [
+      9.544356,
+      9.5465088,
+      9.544356
+    ],
+    "event_goodput_mbps": [
+      9.485568,
+      9.622464,
+      9.485568
+    ],
+    "event_change_percent": [
+      0.0,
+      1.443202979515834,
+      0.0
+    ]
+  },
+  "scope": "Single deterministic matched runs, no statistical repetitions. FCT includes connection setup; CA_LOSS is not asserted to be an RTO. Absolute goodput bars start at zero; event percentages explicitly normalize to the baseline in the same 2.5-second window."
+}

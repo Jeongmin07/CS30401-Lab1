@@ -1,0 +1,14 @@
+case,duration_s,flow_start_s,expected_finite_bytes,receiver_bytes,receiver_goodput_mbps,transfer_complete,fct_s,retransmissions,recovery_entries,ca_loss_entries,distinct_tagged_drops,drop_trace_rows,actual_high_threshold_time_s,censored_high_threshold_intervals,guard_starts,guard_start_skips,bounded_expiry_reevaluations,expiry_entered_recovery
+leo10-base,200.0,0.0,,238608900,9.544356,,,523,41,1,499,499,0,0,0,0,0,0
+leo10-forecast,200.0,0.0,,238662720,9.5465088,,,507,40,1,486,486,0.37737,0,2,0,2,0
+leo10-late,200.0,0.0,,238608900,9.544356,,,523,41,1,499,499,0.37737,0,2,0,2,0
+leo100-base40,40.0,0.0,,472507860,94.501572,,,298,4,0,266,266,0,0,0,0,0,0
+leo100-forecast20-40,40.0,0.0,,472531320,94.506264,,,281,4,0,266,266,0.195396,0,1,0,1,0
+leo100-forecast64-40,40.0,0.0,,472552020,94.510404,,,273,4,0,273,273,0.195396,0,1,0,1,0
+loss-first-base,4.0,0.0,27600,27600,0.0552,True,0.25150992,1,1,0,1,1,0,0,0,0,0,0
+loss-first-bounded,4.0,0.0,27600,27600,0.0552,True,0.40011472,1,1,0,1,1,0.2,0,1,0,1,1
+loss-first-legacy,4.0,0.0,27600,27600,0.0552,True,1.150124001,1,0,1,1,1,0.950009281,0,1,0,0,0
+loss-middle-base,4.0,0.0,27600,27600,0.0552,True,0.3507112,1,1,0,1,1,0,0,0,0,0,0
+loss-middle-bounded,4.0,0.0,27600,27600,0.0552,True,0.40011472,1,1,0,1,1,0.2,0,1,0,1,1
+loss-rto3-base,4.0,0.0,4140,4140,0.00828,True,1.150124001,1,0,1,1,1,0,0,0,0,0,0
+loss-rto3-bounded,4.0,0.0,4140,4140,0.00828,True,1.150124001,1,0,1,1,1,0.950009281,0,1,0,0,0

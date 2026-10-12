@@ -1,0 +1,170 @@
+{
+  "scope": "Same-condition deterministic legacy byte comparison, not generic safety or modern Linux validation",
+  "cases": [
+    {
+      "case": "leo10-base",
+      "historical_case": "leo10-base",
+      "checks": [
+        {
+          "file": "tcp_flow_0_study_packets.csv",
+          "old_sha256": "78fc54184c4481b1421d2139870debcbe72259c18ccb011ba180ef77784e146f",
+          "new_sha256": "78fc54184c4481b1421d2139870debcbe72259c18ccb011ba180ef77784e146f",
+          "byte_identical": true
+        },
+        {
+          "file": "study_drops.csv",
+          "old_sha256": "c915297632311402f8a2b1b4d6d24b83691f5971f40477934b2e2826887e6821",
+          "new_sha256": "c915297632311402f8a2b1b4d6d24b83691f5971f40477934b2e2826887e6821",
+          "byte_identical": true
+        },
+        {
+          "file": "study_rx_node_1585_port_1024.csv",
+          "old_sha256": "445161a24e3c943e61518cc5c67ce72aecbae5c1bb2caaf6bd4f4ce451b2f1cf",
+          "new_sha256": "445161a24e3c943e61518cc5c67ce72aecbae5c1bb2caaf6bd4f4ce451b2f1cf",
+          "byte_identical": true
+        },
+        {
+          "file": "study_app_rx_node_1585_port_1024.csv",
+          "old_sha256": "63defbe5710bafaafec06b3021dfda3c8d2df2bad3bf78ce15b54c84d7bc451d",
+          "new_sha256": "63defbe5710bafaafec06b3021dfda3c8d2df2bad3bf78ce15b54c84d7bc451d",
+          "byte_identical": true
+        },
+        {
+          "file": "tcp_flow_0_study_events.csv",
+          "old_sha256": "8809b380277e387dcc400a5d27a5679ccbdf446a08c7efb06fa7a021a42df78b",
+          "new_sha256": "8809b380277e387dcc400a5d27a5679ccbdf446a08c7efb06fa7a021a42df78b",
+          "byte_identical": true
+        },
+        {
+          "file": "tcp_flow_0_cwnd.csv",
+          "old_sha256": "6651966bdd19d9cbcbcc99fb18ec854f152de7e81ed93e075e8baa5d09599860",
+          "new_sha256": "6651966bdd19d9cbcbcc99fb18ec854f152de7e81ed93e075e8baa5d09599860",
+          "byte_identical": true
+        },
+        {
+          "file": "tcp_flow_0_rtt.csv",
+          "old_sha256": "b959d51947cf5f8d37d672ef2a239c942b8b57e9f3d574ce2f7624de42ab1e38",
+          "new_sha256": "b959d51947cf5f8d37d672ef2a239c942b8b57e9f3d574ce2f7624de42ab1e38",
+          "byte_identical": true
+        },
+        {
+          "file": "tcp_flow_0_progress.csv",
+          "old_sha256": "2a9181e6a8a5bf7e1c25b8a770096f43714ec03779e7d7ccd2673b9992339534",
+          "new_sha256": "2a9181e6a8a5bf7e1c25b8a770096f43714ec03779e7d7ccd2673b9992339534",
+          "byte_identical": true
+        }
+      ],
+      "all_identical": true
+    },
+    {
+      "case": "loss-first-base",
+      "historical_case": "p2-f20-base-first",
+      "checks": [
+        {
+          "file": "tcp_flow_0_study_packets.csv",
+          "old_sha256": "9774112da74ac364fbe1421ae7d2f532b3e0450cf2f32d874f6362b9043bd6e6",
+          "new_sha256": "9774112da74ac364fbe1421ae7d2f532b3e0450cf2f32d874f6362b9043bd6e6",
+          "byte_identical": true
+        },
+        {
+          "file": "study_drops.csv",
+          "old_sha256": "e875ed492bd803c301bd18a29514bca50a6edfe104a69a85ae1ec68003bac35c",
+          "new_sha256": "e875ed492bd803c301bd18a29514bca50a6edfe104a69a85ae1ec68003bac35c",
+          "byte_identical": true
+        },
+        {
+          "file": "study_rx_node_1_port_1024.csv",
+          "old_sha256": "cb432b3cd841713975a574fc6919f5cf0812185846599bdd17182cccacd11e5a",
+          "new_sha256": "cb432b3cd841713975a574fc6919f5cf0812185846599bdd17182cccacd11e5a",
+          "byte_identical": true
+        },
+        {
+          "file": "study_app_rx_node_1_port_1024.csv",
+          "old_sha256": "b35c9ac46bde2331da713fba1846eeb718c907027d0bb2f050acdf2fbca75b5e",
+          "new_sha256": "b35c9ac46bde2331da713fba1846eeb718c907027d0bb2f050acdf2fbca75b5e",
+          "byte_identical": true
+        },
+        {
+          "file": "tcp_flow_0_study_events.csv",
+          "old_sha256": "3038a5be2c89948a5724671c2c638a3c408f7828393d6a2513b0a6e6e636863e",
+          "new_sha256": "3038a5be2c89948a5724671c2c638a3c408f7828393d6a2513b0a6e6e636863e",
+          "byte_identical": true
+        },
+        {
+          "file": "tcp_flow_0_cwnd.csv",
+          "old_sha256": "ceb39256e8a1e4c940cb3f597b7e200596f2e9ff1f9ac9a0a5075021e8262630",
+          "new_sha256": "ceb39256e8a1e4c940cb3f597b7e200596f2e9ff1f9ac9a0a5075021e8262630",
+          "byte_identical": true
+        },
+        {
+          "file": "tcp_flow_0_rtt.csv",
+          "old_sha256": "f46faf24fbfea5e839643bcebcbd4b6f10073f725ed5a139f993b2c823b14278",
+          "new_sha256": "f46faf24fbfea5e839643bcebcbd4b6f10073f725ed5a139f993b2c823b14278",
+          "byte_identical": true
+        },
+        {
+          "file": "tcp_flow_0_progress.csv",
+          "old_sha256": "b583a1b2888476107f8d65535c480fa872d89ef79c7b12c3cdb4380249a86e98",
+          "new_sha256": "b583a1b2888476107f8d65535c480fa872d89ef79c7b12c3cdb4380249a86e98",
+          "byte_identical": true
+        }
+      ],
+      "all_identical": true
+    },
+    {
+      "case": "loss-middle-base",
+      "historical_case": "p2-f20-base-middle",
+      "checks": [
+        {
+          "file": "tcp_flow_0_study_packets.csv",
+          "old_sha256": "edc002bf6874a44759ac284e829686bd79774b85bc3bfab40072cb41a13d124e",
+          "new_sha256": "edc002bf6874a44759ac284e829686bd79774b85bc3bfab40072cb41a13d124e",
+          "byte_identical": true
+        },
+        {
+          "file": "study_drops.csv",
+          "old_sha256": "c7cf27a7fe7e91583ebbbe605e975047ee1c46018c4a7634928fb768ad118874",
+          "new_sha256": "c7cf27a7fe7e91583ebbbe605e975047ee1c46018c4a7634928fb768ad118874",
+          "byte_identical": true
+        },
+        {
+          "file": "study_rx_node_1_port_1024.csv",
+          "old_sha256": "4d7c8542316191eedf1299f4bc4b8a9e0731678b3ee564e0cc3bfa7d317fae6f",
+          "new_sha256": "4d7c8542316191eedf1299f4bc4b8a9e0731678b3ee564e0cc3bfa7d317fae6f",
+          "byte_identical": true
+        },
+        {
+          "file": "study_app_rx_node_1_port_1024.csv",
+          "old_sha256": "b4e7d624dd777b53da7d8639b9ece62f08792d063c1c1bff0bb46cee52a9bfe6",
+          "new_sha256": "b4e7d624dd777b53da7d8639b9ece62f08792d063c1c1bff0bb46cee52a9bfe6",
+          "byte_identical": true
+        },
+        {
+          "file": "tcp_flow_0_study_events.csv",
+          "old_sha256": "edac5d236642ee31cc272485d6e70a5f4341d6608193c8fac44544f4748699af",
+          "new_sha256": "edac5d236642ee31cc272485d6e70a5f4341d6608193c8fac44544f4748699af",
+          "byte_identical": true
+        },
+        {
+          "file": "tcp_flow_0_cwnd.csv",
+          "old_sha256": "4a31ebde154b90c6beb94ca4159949c1ac55b1c65302b7b93d3a74b7397165c8",
+          "new_sha256": "4a31ebde154b90c6beb94ca4159949c1ac55b1c65302b7b93d3a74b7397165c8",
+          "byte_identical": true
+        },
+        {
+          "file": "tcp_flow_0_rtt.csv",
+          "old_sha256": "594d9aacced9252210cc4aa08aff7888bcf67d5b02b2d74c9e7f942e4297d8e7",
+          "new_sha256": "594d9aacced9252210cc4aa08aff7888bcf67d5b02b2d74c9e7f942e4297d8e7",
+          "byte_identical": true
+        },
+        {
+          "file": "tcp_flow_0_progress.csv",
+          "old_sha256": "55a5ae16d5364e688040b110feb4ddaad76709967cc6be6c2d4028d619b0758e",
+          "new_sha256": "55a5ae16d5364e688040b110feb4ddaad76709967cc6be6c2d4028d619b0758e",
+          "byte_identical": true
+        }
+      ],
+      "all_identical": true
+    }
+  ]
+}

@@ -18,6 +18,7 @@ docker exec -w /home/ubuntu/ns-3.48 forecast-replay bash -lc 'git apply --check 
 docker exec forecast-replay python3 -B /work/code/predict-loss/run.py loss-first-base loss-first-legacy loss-first-bounded loss-middle-base loss-middle-bounded
 docker exec forecast-replay python3 -B /work/code/predict-loss/run.py leo10-base leo10-forecast leo10-late
 docker exec forecast-replay python3 -B /work/code/predict-loss/run.py leo100-base40 leo100-forecast20-40 leo100-forecast64-40
+docker exec forecast-replay python3 -B /work/code/predict-loss/run.py loss-rto3-base loss-rto3-bounded
 ```
 
 Analyze each completed case using `code/kim-study/analyze_study.py`. For LEO pass `--path-truth /work/code/kim-study/path_truth_200s.csv --include-bins --output RUN/analysis.json`; for the stable micro controls pass `--events 2 --include-bins --output RUN/analysis.json`. Then `summarize.py --root /tmp/predict-loss --out NEW_EXPORT` checks actual delivery, raw receipts, controller transitions and expiry before exporting. The exact run commands/parameters are in every copied manifest. The original fresh volume was built and executed; this complete replay command block has not itself been rerun in another volume yet.
