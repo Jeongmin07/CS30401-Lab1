@@ -1,4 +1,6 @@
-# 예측 가능한 LEO 정보를 이용한 선제적 TCP 송신 조절
+# 예측 가능한 LEO 정보를 이용한 TCP 제어 후보 비교
+
+**후속 판단:** 송신 pause/pacing 후보는 우선 제외했다. 현재는 기존 notified-window 손실 판정 정책에 기하 기반 구간 계산과 제한된 복원/증거 재평가를 더해 [별도 실험](../experiments/20261012-forecast-loss.md)으로 검증한다. 아래의 송신 조절 후보는 비교 기록이며 현재 구현 방향이 아니다. 기존 K8/K20도 이미 일시적 보호 정책이었다.
 
 작성: kim-seongchan, 2026-10-12. `research/bbr-route-transition`에서 [PR16](https://github.com/Jeongmin07/CS30401-Lab1/pull/16)의 방향 검토를 보완한다. **후보와 검증 계획이며, 새 알고리즘 구현·성능 개선·최종 팀 주제 확정을 뜻하지 않는다.**
 

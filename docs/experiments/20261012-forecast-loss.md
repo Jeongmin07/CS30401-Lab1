@@ -25,6 +25,10 @@ canonical v6 관측/benchmark를 새 공식 volume에 적용하고 추가 patch�
 
 실행은 하나씩, 각180초 wall cap이다. timeout/오류이면 batch를 중단하고 부분 결과는 성능 표에서 제외한다. 새로운 토폴로지나 대규모 sweep을 생성하지 않는다. 새 container `lab1-predict-loss-20261012`, volume `cs30401-predict-loss-ns3-20261012`, CPU4/6GiB. 이미지 digest는 이전 진단과 같은 공식 `sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4`다.
 
+### 종료 타이머와 독립적인 복구의 추가 경계 확인
+
+앞선5개 micro·LEO10 세 개를 정상 완료한 뒤, core 소스를 바꾸지 않고 두 개의 짧은 경계 대조를 추가 선언한다. stable micro의3MSS(4,140B) 첫 segment 실제 손실은 후속 SACK가 기본 문턱3에도 부족해 기존 타임아웃 경로를 탄다. baseline과 bounded를 비교하며 bounded에는 일부러 긴 false hint0.15–1.5초를 준다. 실제 구간 종료 전 CA_LOSS가 발생하면 threshold가 해제되는지, 기본 전송 완료 시간을 바꾸지 않는지 확인한다. 이것은 기하H 규칙의 새로운 성능 조건이나 성공 탐색이 아니라 **CA_LOSS-release 구현 경로를 확인하는 경계 대조**다. 타이머의 직접 로그 없이 일반 CA_LOSS를 모두 RTO라고 부르지 않는다.
+
 ## 평가와 중단
 
 앱의 유일한 순서대로 전달된 바이트를 goodput으로 쓰고 sender ACK progress와 섞지 않는다. 재전송 감소 자체를 큰 처리량 개선으로 바꾸어 쓰지 않는다. finite flow는 전체27,600B 수신 후 FCT를 계산한다. 실제 손실 복구 지연·경계 종료·skip·RTO를 함께 확인한다.

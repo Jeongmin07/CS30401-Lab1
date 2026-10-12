@@ -15,12 +15,16 @@ NS3 = Path('/home/ubuntu/ns-3.48')
 STATE = Path('/home/ubuntu/lab/data/seoul_london/state')
 TRUTH = REPO / 'code/kim-study/path_truth_200s.csv'
 IMAGE = 'ghcr.io/yeonjong21/cs30401-lab1@sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4'
+RUNNER_SHA256 = hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
 CASES = {
     'loss-first-base': dict(kind='micro', mode='base', loss_seq=1),
     'loss-first-legacy': dict(kind='micro', mode='legacy', loss_seq=1),
     'loss-first-bounded': dict(kind='micro', mode='bounded', loss_seq=1),
     'loss-middle-base': dict(kind='micro', mode='base', loss_seq=13801),
     'loss-middle-bounded': dict(kind='micro', mode='bounded', loss_seq=13801),
+    'loss-rto3-base': dict(kind='micro', mode='base', loss_seq=1, max_bytes=4140),
+    'loss-rto3-bounded': dict(kind='micro', mode='bounded', loss_seq=1, max_bytes=4140,
+                              hint_end_ns=1500000000),
     'leo10-base': dict(kind='leo', mode='base', rate=10, queue=100, duration=200),
     'leo10-forecast': dict(kind='leo', mode='bounded', rate=10, queue=100, duration=200),
     'leo10-late': dict(kind='leo', mode='bounded', rate=10, queue=100, duration=200, shift_ms=300),
@@ -69,7 +73,7 @@ def parameters(case):
     mode = case['mode']
     if mode == 'base':
         return '', []
-    hints = ([dict(start_ns=150000000, end_ns=350000000,
+    hints = ([dict(start_ns=150000000, end_ns=case.get('hint_end_ns',350000000),
                    note='False forecast on stable path; adverse real-loss control')]
              if case['kind'] == 'micro' else
              forecasts(case['duration'], case.get('shift_ms', 0)))
@@ -97,7 +101,7 @@ def execute(name, root, timeout):
         binary = NS3/'build/scratch/study_micro/ns3.48-study_micro'
         argv = [str(binary), f'--run_dir={run}', '--cc=TcpCubic','--duration=4',
                 '--rate=100','--queue_pkts=2000','--before_ms=50','--after_ms=50',
-                '--event_s=2','--initial_ssthresh_pkts=900','--max_bytes=27600',
+                '--event_s=2','--initial_ssthresh_pkts=900',f"--max_bytes={case.get('max_bytes',27600)}",
                 f"--loss_seq={case['loss_seq']}"]
         if additional:
             argv.append('--parameters='+additional)
@@ -113,7 +117,7 @@ def execute(name, root, timeout):
     record = dict(case=name, definition=case, command=argv, status='running',
                   repo_commit=git('rev-parse','HEAD').decode(),
                   repo_dirty=bool(git('status','--porcelain')),
-                  runner_sha256=sha(__file__), patch_sha256=sha(patch),
+                  runner_sha256=RUNNER_SHA256, patch_sha256=sha(patch),
                   installed_diff_sha256=hashlib.sha256(source+b'\n').hexdigest(),
                   ns3_head=git('rev-parse','HEAD',cwd=NS3).decode(), declared_image_digest=IMAGE,
                   runtime_files={str(p.relative_to(NS3/'build')):sha(p)
@@ -127,7 +131,8 @@ def execute(name, root, timeout):
                   declared_event_windows_s=([w for w in [[25.7,28.2],[74.5,77.0]]
                                             if w[1] <= case['duration']]
                                            if case['kind']=='leo' else [[1.5,4.0]]),
-                  timeout_s=timeout, expected_finite_bytes=27600 if case['kind']=='micro' else None)
+                  timeout_s=timeout, expected_finite_bytes=case.get('max_bytes',27600)
+                  if case['kind']=='micro' else None)
     (run/'manifest.json').write_text(json.dumps(record,indent=2)+'\n')
     start = time.monotonic()
     with (run/'console.txt').open('w') as log:
