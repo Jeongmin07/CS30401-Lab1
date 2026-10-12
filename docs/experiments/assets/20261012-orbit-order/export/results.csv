@@ -1,0 +1,6 @@
+case,duration_s,flow_start_s,expected_finite_bytes,receiver_bytes,receiver_goodput_mbps,transfer_complete,fct_s,retransmissions,recovery_entries,ca_loss_entries,distinct_tagged_drops,drop_trace_rows,actual_high_threshold_time_s,censored_high_threshold_intervals,guard_starts,guard_start_skips,bounded_expiry_reevaluations,expiry_entered_recovery,hold_count,hold_time_s,forbidden_new_bytes_during_hold,retx_tx_during_hold
+leo10-base,200.0,0.0,,238608900,9.544356,,,523,41,1,499,499,0,0,0,0,0,0,0,0,0,0
+leo10-hold1,200.0,0.0,,238608900,9.544356,,,523,41,1,499,499,0,0,0,0,0,0,2,0.009977,0,0
+leo10-hold2,200.0,0.0,,238608900,9.544356,,,523,41,1,499,499,0,0,0,0,0,0,2,0.019954,0,0
+loss-first-base,4.0,0.0,27600,27600,0.0552,True,0.25150992,1,1,0,1,1,0,0,0,0,0,0,0,0,0,0
+loss-first-hold,4.0,0.0,27600,27600,0.0552,True,0.3620972,1,1,0,1,1,0,0,0,0,0,0,1,0.013268,0,1

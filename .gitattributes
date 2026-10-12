@@ -1,0 +1,14 @@
+# Preserve byte receipts when these experiments are checked out on another OS.
+code/orbit-bdp/** -text whitespace=cr-at-eol
+code/orbit-probe/** -text whitespace=cr-at-eol
+code/orbit-hystart/** -text whitespace=cr-at-eol
+docs/experiments/assets/20261012-orbit-bdp/** -text whitespace=cr-at-eol
+docs/experiments/assets/20261012-orbit-probe/** -text whitespace=cr-at-eol
+docs/experiments/assets/20261012-orbit-hystart/** -text whitespace=cr-at-eol
+docs/experiments/assets/20261012-orbit-order/** -text whitespace=cr-at-eol
+docs/experiments/20261012-orbit-bdp.md -text whitespace=cr-at-eol
+docs/experiments/20261012-orbit-probe.md -text whitespace=cr-at-eol
+docs/experiments/20261012-orbit-hystart.md -text whitespace=cr-at-eol
+code/orbit-bdp/*.patch whitespace=-blank-at-eol,cr-at-eol
+code/orbit-probe/*.patch whitespace=-blank-at-eol,cr-at-eol
+code/orbit-hystart/*.patch whitespace=-blank-at-eol,cr-at-eol

@@ -1,0 +1,17 @@
+{
+  "official_regenerated_truth_sha256": "49bd5418f2b13bdbf6d703f719d61075f814cc86d44c745651bf797f4e5f656c",
+  "geometry_sha256": "99770f4f652c81797d7e6bf00b858097365733027ae2974a9313d8f0835d3bd9",
+  "historical_truth_sha256": "49bd5418f2b13bdbf6d703f719d61075f814cc86d44c745651bf797f4e5f656c",
+  "all_2000_rows_equal": true,
+  "rows": 2000,
+  "kind": "two-direction propagation RTT, no queue/serialization",
+  "command": [
+    "python3",
+    "/home/ubuntu/lab/scripts/path_truth.py",
+    "/home/ubuntu/lab/data/seoul_london/state",
+    "dynamic_state_100ms_for_200s",
+    "1584",
+    "1585",
+    "/tmp/orbit-bdp-path-truth.csv"
+  ]
+}

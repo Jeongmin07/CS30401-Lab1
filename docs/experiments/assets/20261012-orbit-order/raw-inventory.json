@@ -1,0 +1,435 @@
+{
+  "archive": "orbit-order-20261012.tar.gz",
+  "bytes": 30227311,
+  "sha256": "1470111cdb6c062aee064e8d9d1d80002955e9419341058b29cbe0c9b15bffd2",
+  "uncompressed_input_bytes": 181168662,
+  "file_count": 83,
+  "files": [
+    {
+      "path": "orbit-order/leo10-base/analysis.json",
+      "bytes": 856879,
+      "sha256": "6f01bc9abe1aad6f4967bbf0f88392500e79043aa7cd0e013ee8b778c2fd3b27"
+    },
+    {
+      "path": "orbit-order/leo10-base/config_ns3.properties",
+      "bytes": 613,
+      "sha256": "8c46772c95c46ca99935dd68cf6957631972a2bb519acabe0880640408b0f4d4"
+    },
+    {
+      "path": "orbit-order/leo10-base/console.txt",
+      "bytes": 5935,
+      "sha256": "7e3738ef9662ef87db1428c11513992322151d33fe9c37524ab393e47df97991"
+    },
+    {
+      "path": "orbit-order/leo10-base/logs_ns3/finished.txt",
+      "bytes": 4,
+      "sha256": "927580bf287560d4a26a5d6e129f91ffa9cb63031b1a8c772be6ec584e65e82b"
+    },
+    {
+      "path": "orbit-order/leo10-base/logs_ns3/study_app_rx_node_1585_port_1024.csv",
+      "bytes": 14466654,
+      "sha256": "63defbe5710bafaafec06b3021dfda3c8d2df2bad3bf78ce15b54c84d7bc451d"
+    },
+    {
+      "path": "orbit-order/leo10-base/logs_ns3/study_drop_coverage.csv",
+      "bytes": 1140184,
+      "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+    },
+    {
+      "path": "orbit-order/leo10-base/logs_ns3/study_drops.csv",
+      "bytes": 55405,
+      "sha256": "c915297632311402f8a2b1b4d6d24b83691f5971f40477934b2e2826887e6821"
+    },
+    {
+      "path": "orbit-order/leo10-base/logs_ns3/study_rx_node_1585_port_1024.csv",
+      "bytes": 19448001,
+      "sha256": "445161a24e3c943e61518cc5c67ce72aecbae5c1bb2caaf6bd4f4ce451b2f1cf"
+    },
+    {
+      "path": "orbit-order/leo10-base/logs_ns3/tcp_flow_0_cwnd.csv",
+      "bytes": 101682,
+      "sha256": "6651966bdd19d9cbcbcc99fb18ec854f152de7e81ed93e075e8baa5d09599860"
+    },
+    {
+      "path": "orbit-order/leo10-base/logs_ns3/tcp_flow_0_progress.csv",
+      "bytes": 1994572,
+      "sha256": "2a9181e6a8a5bf7e1c25b8a770096f43714ec03779e7d7ccd2673b9992339534"
+    },
+    {
+      "path": "orbit-order/leo10-base/logs_ns3/tcp_flow_0_rtt.csv",
+      "bytes": 2029939,
+      "sha256": "b959d51947cf5f8d37d672ef2a239c942b8b57e9f3d574ce2f7624de42ab1e38"
+    },
+    {
+      "path": "orbit-order/leo10-base/logs_ns3/tcp_flow_0_study_events.csv",
+      "bytes": 5534,
+      "sha256": "8809b380277e387dcc400a5d27a5679ccbdf446a08c7efb06fa7a021a42df78b"
+    },
+    {
+      "path": "orbit-order/leo10-base/logs_ns3/tcp_flow_0_study_packets.csv",
+      "bytes": 19842749,
+      "sha256": "78fc54184c4481b1421d2139870debcbe72259c18ccb011ba180ef77784e146f"
+    },
+    {
+      "path": "orbit-order/leo10-base/logs_ns3/tcp_flows.csv",
+      "bytes": 75,
+      "sha256": "709ed6139c27b6b511fb5d5f9f754342c493d3d5ab3ad0cfc2e9b97d1d1b9404"
+    },
+    {
+      "path": "orbit-order/leo10-base/logs_ns3/tcp_flows.txt",
+      "bytes": 336,
+      "sha256": "69fd39585ba9507d66f14951e4e5b81f21930b099c5608eef996519083cf2758"
+    },
+    {
+      "path": "orbit-order/leo10-base/logs_ns3/timing_results.csv",
+      "bytes": 562,
+      "sha256": "dfc97f878bf68df502ed47ff2b531880ab813755d99b340e9a92bb354a3d2e63"
+    },
+    {
+      "path": "orbit-order/leo10-base/logs_ns3/timing_results.txt",
+      "bytes": 909,
+      "sha256": "f5132177986c62b6f1bd3bdcdbe12dcf3ead500b0d876e2eb308f47e88037a70"
+    },
+    {
+      "path": "orbit-order/leo10-base/manifest.json",
+      "bytes": 420176,
+      "sha256": "76462146bf2610bd8e7ca3a2eb54fec4343b774087f21399ed1661a4baf9e31a"
+    },
+    {
+      "path": "orbit-order/leo10-base/schedule.csv",
+      "bytes": 29,
+      "sha256": "e6cde3aa7716856e46d24c3833354df90407313ece13a5ffbd1b789fa4fea23c"
+    },
+    {
+      "path": "orbit-order/leo10-hold1/analysis.json",
+      "bytes": 857100,
+      "sha256": "bf592f35cf40a81f6763e5cd618e66c5986531871c851877dc8d3d3181275f50"
+    },
+    {
+      "path": "orbit-order/leo10-hold1/config_ns3.properties",
+      "bytes": 613,
+      "sha256": "8c46772c95c46ca99935dd68cf6957631972a2bb519acabe0880640408b0f4d4"
+    },
+    {
+      "path": "orbit-order/leo10-hold1/console.txt",
+      "bytes": 5941,
+      "sha256": "3d7fb855695ec19c49153d32c257ea2c4e4f6c7e4241cd587d10cdb4758d078e"
+    },
+    {
+      "path": "orbit-order/leo10-hold1/logs_ns3/finished.txt",
+      "bytes": 4,
+      "sha256": "927580bf287560d4a26a5d6e129f91ffa9cb63031b1a8c772be6ec584e65e82b"
+    },
+    {
+      "path": "orbit-order/leo10-hold1/logs_ns3/study_app_rx_node_1585_port_1024.csv",
+      "bytes": 14466653,
+      "sha256": "9a32df54a6dc51f764d24289475bc7b488011028d7c5fa4323825ecc639592e1"
+    },
+    {
+      "path": "orbit-order/leo10-hold1/logs_ns3/study_drop_coverage.csv",
+      "bytes": 1140184,
+      "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+    },
+    {
+      "path": "orbit-order/leo10-hold1/logs_ns3/study_drops.csv",
+      "bytes": 55405,
+      "sha256": "3a98ecf7818eeea8d328f58ccda8ede478533b566536acc0cb527bb1c1b3d029"
+    },
+    {
+      "path": "orbit-order/leo10-hold1/logs_ns3/study_rx_node_1585_port_1024.csv",
+      "bytes": 19448001,
+      "sha256": "ea2435fc3a11d71a0012907430d111c6b161bdafc70a17bc221aa541872ddf99"
+    },
+    {
+      "path": "orbit-order/leo10-hold1/logs_ns3/tcp_flow_0_cwnd.csv",
+      "bytes": 101619,
+      "sha256": "4166a52d117cf54a69d487f35febdcf295837d3291c0f1e627be939c3d86d807"
+    },
+    {
+      "path": "orbit-order/leo10-hold1/logs_ns3/tcp_flow_0_progress.csv",
+      "bytes": 1994572,
+      "sha256": "01e13cec66f91bafe00e3cc8a1c213dd8aba8128667d27caa10bedc272811518"
+    },
+    {
+      "path": "orbit-order/leo10-hold1/logs_ns3/tcp_flow_0_rtt.csv",
+      "bytes": 2029963,
+      "sha256": "3b0876209d9a38d5c2ad68590b7b352dbbc8bb83d14a066fa7b744556057339c"
+    },
+    {
+      "path": "orbit-order/leo10-hold1/logs_ns3/tcp_flow_0_study_events.csv",
+      "bytes": 5718,
+      "sha256": "3f3c337c702a89c1bfe2247d160cb7bf063d4af685fe3f20c071d6851fe7ecec"
+    },
+    {
+      "path": "orbit-order/leo10-hold1/logs_ns3/tcp_flow_0_study_packets.csv",
+      "bytes": 19842785,
+      "sha256": "026b6e3c6fb042d23d4f90ebd5d3154dc4bdd61d183f022835ad6d62b48036fc"
+    },
+    {
+      "path": "orbit-order/leo10-hold1/logs_ns3/tcp_flows.csv",
+      "bytes": 75,
+      "sha256": "709ed6139c27b6b511fb5d5f9f754342c493d3d5ab3ad0cfc2e9b97d1d1b9404"
+    },
+    {
+      "path": "orbit-order/leo10-hold1/logs_ns3/tcp_flows.txt",
+      "bytes": 336,
+      "sha256": "69fd39585ba9507d66f14951e4e5b81f21930b099c5608eef996519083cf2758"
+    },
+    {
+      "path": "orbit-order/leo10-hold1/logs_ns3/timing_results.csv",
+      "bytes": 560,
+      "sha256": "15fccd5bcd7768f89afb08104fceee1e0ba75f3b2716ad398f568fa8f0f498f8"
+    },
+    {
+      "path": "orbit-order/leo10-hold1/logs_ns3/timing_results.txt",
+      "bytes": 909,
+      "sha256": "0d2dbdfb425e02791261369b596ef84d2a5acfba98b30b92e20c903cd1cef60f"
+    },
+    {
+      "path": "orbit-order/leo10-hold1/manifest.json",
+      "bytes": 420590,
+      "sha256": "85cb32a7cf0b0d14305c0ef4fb87ad1788c5325e26268d005ac02dfb1e75a12c"
+    },
+    {
+      "path": "orbit-order/leo10-hold1/schedule.csv",
+      "bytes": 95,
+      "sha256": "8d868bee5dfdfc567dac2ebf650e648df5d0bea3770bad5075d7c4079a0d4bc9"
+    },
+    {
+      "path": "orbit-order/leo10-hold2/analysis.json",
+      "bytes": 856868,
+      "sha256": "359673b36a40cadb65f39f6b437458a22c715e945eff0f49851579f3cccd146e"
+    },
+    {
+      "path": "orbit-order/leo10-hold2/config_ns3.properties",
+      "bytes": 613,
+      "sha256": "8c46772c95c46ca99935dd68cf6957631972a2bb519acabe0880640408b0f4d4"
+    },
+    {
+      "path": "orbit-order/leo10-hold2/console.txt",
+      "bytes": 5941,
+      "sha256": "ab403006c09b2b7e096480a9a9b37da89ebaedba82e79875dd28f0dbbfefc381"
+    },
+    {
+      "path": "orbit-order/leo10-hold2/logs_ns3/finished.txt",
+      "bytes": 4,
+      "sha256": "927580bf287560d4a26a5d6e129f91ffa9cb63031b1a8c772be6ec584e65e82b"
+    },
+    {
+      "path": "orbit-order/leo10-hold2/logs_ns3/study_app_rx_node_1585_port_1024.csv",
+      "bytes": 14466654,
+      "sha256": "5aea0e29a17fea9001c0a23ccf1413954bbdadccf2b6fbaefbdf0eb069076e73"
+    },
+    {
+      "path": "orbit-order/leo10-hold2/logs_ns3/study_drop_coverage.csv",
+      "bytes": 1140184,
+      "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+    },
+    {
+      "path": "orbit-order/leo10-hold2/logs_ns3/study_drops.csv",
+      "bytes": 55405,
+      "sha256": "a5ea0dad73f0bcbd3aa7bfa51ec4761289512f2f152188a87b132fed3e317c3e"
+    },
+    {
+      "path": "orbit-order/leo10-hold2/logs_ns3/study_rx_node_1585_port_1024.csv",
+      "bytes": 19448001,
+      "sha256": "da75a3715aaf86567d7f20ed4ab29922a2db7ac4a54f61bbe3eedc50d01f41e5"
+    },
+    {
+      "path": "orbit-order/leo10-hold2/logs_ns3/tcp_flow_0_cwnd.csv",
+      "bytes": 101682,
+      "sha256": "e5ae2c451778dd3668db00ff40711795054f77a7a4458395ece36cd68cbab66b"
+    },
+    {
+      "path": "orbit-order/leo10-hold2/logs_ns3/tcp_flow_0_progress.csv",
+      "bytes": 1994572,
+      "sha256": "d4e2c6776b2161fee61f0382968ca12a8cb7b2cd8f24b99b1f9ab9d59bfdcdd5"
+    },
+    {
+      "path": "orbit-order/leo10-hold2/logs_ns3/tcp_flow_0_rtt.csv",
+      "bytes": 2029987,
+      "sha256": "f2ab37c9b0377e558b36338bbc0d1d36c3cfc75d8644f4824b3bbf14a69b51b0"
+    },
+    {
+      "path": "orbit-order/leo10-hold2/logs_ns3/tcp_flow_0_study_events.csv",
+      "bytes": 5718,
+      "sha256": "deb12296f35040686b42d561b119abeccc44a0c25e044d56cd707562a60fe947"
+    },
+    {
+      "path": "orbit-order/leo10-hold2/logs_ns3/tcp_flow_0_study_packets.csv",
+      "bytes": 19842709,
+      "sha256": "eb4e106caf531449e7452e90323ae26e5ec779f04729b0c5db7645e0484b7ce7"
+    },
+    {
+      "path": "orbit-order/leo10-hold2/logs_ns3/tcp_flows.csv",
+      "bytes": 75,
+      "sha256": "709ed6139c27b6b511fb5d5f9f754342c493d3d5ab3ad0cfc2e9b97d1d1b9404"
+    },
+    {
+      "path": "orbit-order/leo10-hold2/logs_ns3/tcp_flows.txt",
+      "bytes": 336,
+      "sha256": "69fd39585ba9507d66f14951e4e5b81f21930b099c5608eef996519083cf2758"
+    },
+    {
+      "path": "orbit-order/leo10-hold2/logs_ns3/timing_results.csv",
+      "bytes": 560,
+      "sha256": "a9ae158ede437c37d68151abc583d1719e2551f44a01c78d43833701a5813110"
+    },
+    {
+      "path": "orbit-order/leo10-hold2/logs_ns3/timing_results.txt",
+      "bytes": 909,
+      "sha256": "c122a3774209099dbb3ed87e9dbea62258fe9e9dc45a10ad98d9f31a44d0dc62"
+    },
+    {
+      "path": "orbit-order/leo10-hold2/manifest.json",
+      "bytes": 420589,
+      "sha256": "6dcca1e9a8a1732ae9bea6a4b201eb926ee0f9e91c7ccd24fe8758a7e2f56e82"
+    },
+    {
+      "path": "orbit-order/leo10-hold2/schedule.csv",
+      "bytes": 95,
+      "sha256": "776d1a5f7386a99ecf01661e3f44cd0ee4ae4e86ae80f330155f03f713bdb9fd"
+    },
+    {
+      "path": "orbit-order/loss-first-base/analysis.json",
+      "bytes": 15972,
+      "sha256": "7df4441ee97563e9ec21cdf232aac4232f9c0bb0aa04c367a3052f4c613128df"
+    },
+    {
+      "path": "orbit-order/loss-first-base/config_ns3.properties",
+      "bytes": 34,
+      "sha256": "f3f2e1b48fdfdd1d6ae0913db5fb1a817dd66b0fbca791dc678692fd6f1496f9"
+    },
+    {
+      "path": "orbit-order/loss-first-base/console.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "orbit-order/loss-first-base/logs_ns3/study_app_rx_node_1_port_1024.csv",
+      "bytes": 733,
+      "sha256": "b35c9ac46bde2331da713fba1846eeb718c907027d0bb2f050acdf2fbca75b5e"
+    },
+    {
+      "path": "orbit-order/loss-first-base/logs_ns3/study_drop_coverage.csv",
+      "bytes": 328,
+      "sha256": "f2bbce727ae1f61019ef8f727753e3a8f64abdeb41d660a20a3607802f4524f4"
+    },
+    {
+      "path": "orbit-order/loss-first-base/logs_ns3/study_drops.csv",
+      "bytes": 194,
+      "sha256": "e875ed492bd803c301bd18a29514bca50a6edfe104a69a85ae1ec68003bac35c"
+    },
+    {
+      "path": "orbit-order/loss-first-base/logs_ns3/study_rx_node_1_port_1024.csv",
+      "bytes": 1849,
+      "sha256": "cb432b3cd841713975a574fc6919f5cf0812185846599bdd17182cccacd11e5a"
+    },
+    {
+      "path": "orbit-order/loss-first-base/logs_ns3/tcp_flow_0_cwnd.csv",
+      "bytes": 233,
+      "sha256": "ceb39256e8a1e4c940cb3f597b7e200596f2e9ff1f9ac9a0a5075021e8262630"
+    },
+    {
+      "path": "orbit-order/loss-first-base/logs_ns3/tcp_flow_0_progress.csv",
+      "bytes": 160,
+      "sha256": "b583a1b2888476107f8d65535c480fa872d89ef79c7b12c3cdb4380249a86e98"
+    },
+    {
+      "path": "orbit-order/loss-first-base/logs_ns3/tcp_flow_0_rtt.csv",
+      "bytes": 110,
+      "sha256": "f46faf24fbfea5e839643bcebcbd4b6f10073f725ed5a139f993b2c823b14278"
+    },
+    {
+      "path": "orbit-order/loss-first-base/logs_ns3/tcp_flow_0_study_events.csv",
+      "bytes": 238,
+      "sha256": "3038a5be2c89948a5724671c2c638a3c408f7828393d6a2513b0a6e6e636863e"
+    },
+    {
+      "path": "orbit-order/loss-first-base/logs_ns3/tcp_flow_0_study_packets.csv",
+      "bytes": 2680,
+      "sha256": "9774112da74ac364fbe1421ae7d2f532b3e0450cf2f32d874f6362b9043bd6e6"
+    },
+    {
+      "path": "orbit-order/loss-first-base/manifest.json",
+      "bytes": 5696,
+      "sha256": "db4a93802dd342b7cc8aac4f317573594639b782e8b889e46856c6a9e2cf4a9c"
+    },
+    {
+      "path": "orbit-order/loss-first-hold/analysis.json",
+      "bytes": 15650,
+      "sha256": "5c21b282e4aa9658aae5315deba466b64e59b2190f25b710f5ac3ffaf18a9115"
+    },
+    {
+      "path": "orbit-order/loss-first-hold/config_ns3.properties",
+      "bytes": 34,
+      "sha256": "f3f2e1b48fdfdd1d6ae0913db5fb1a817dd66b0fbca791dc678692fd6f1496f9"
+    },
+    {
+      "path": "orbit-order/loss-first-hold/console.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "orbit-order/loss-first-hold/logs_ns3/study_app_rx_node_1_port_1024.csv",
+      "bytes": 863,
+      "sha256": "3ce7031e473ed087d3d6733c136db3a0170262085ca14f6d4db6a9147407bd94"
+    },
+    {
+      "path": "orbit-order/loss-first-hold/logs_ns3/study_drop_coverage.csv",
+      "bytes": 328,
+      "sha256": "f2bbce727ae1f61019ef8f727753e3a8f64abdeb41d660a20a3607802f4524f4"
+    },
+    {
+      "path": "orbit-order/loss-first-hold/logs_ns3/study_drops.csv",
+      "bytes": 194,
+      "sha256": "e875ed492bd803c301bd18a29514bca50a6edfe104a69a85ae1ec68003bac35c"
+    },
+    {
+      "path": "orbit-order/loss-first-hold/logs_ns3/study_rx_node_1_port_1024.csv",
+      "bytes": 1857,
+      "sha256": "91827ed04988d248dc7fb4f0644d537a14f6b9d3ffb93047e5af75652cf142bc"
+    },
+    {
+      "path": "orbit-order/loss-first-hold/logs_ns3/tcp_flow_0_cwnd.csv",
+      "bytes": 71,
+      "sha256": "28b4bee1fedcaababc12e38d476552b3f7e5b4ea3b5b2ac6e9b35f68a24a69fc"
+    },
+    {
+      "path": "orbit-order/loss-first-hold/logs_ns3/tcp_flow_0_progress.csv",
+      "bytes": 164,
+      "sha256": "18840aafc22e11217837c61b561b6db7386af676d6f66a77015336739595d13a"
+    },
+    {
+      "path": "orbit-order/loss-first-hold/logs_ns3/tcp_flow_0_rtt.csv",
+      "bytes": 132,
+      "sha256": "4d1b11c6c67f2ee81a98dda6ab55d099bdd02603092de6ef1d74ddc41bd2a5d0"
+    },
+    {
+      "path": "orbit-order/loss-first-hold/logs_ns3/tcp_flow_0_study_events.csv",
+      "bytes": 324,
+      "sha256": "a38ff09645e0b2d9682b64cdb11e413b8047dd003d9960ee529da2397ee43dfb"
+    },
+    {
+      "path": "orbit-order/loss-first-hold/logs_ns3/tcp_flow_0_study_packets.csv",
+      "bytes": 2612,
+      "sha256": "87617c155acec950f910db9237b056df409c9fbabb5d96019af7b560b7003b07"
+    },
+    {
+      "path": "orbit-order/loss-first-hold/manifest.json",
+      "bytes": 5943,
+      "sha256": "b904202c116fec55ab8b4c3f282b2dff30513887b0160aa4a2d33062660b0981"
+    }
+  ],
+  "limits": [
+    "Failed and timed-out attempts are retained and are not completed performance results.",
+    "No ns-3 tree, runtime builds, generated state or crash dumps are included.",
+    "Archive SHA identifies this stored artifact; gzip/tar byte determinism is not asserted."
+  ],
+  "verification": {
+    "member_size_sha256": "PASS",
+    "file_count": 83,
+    "uncompressed_bytes": 181168662,
+    "archive_sha256": "1470111cdb6c062aee064e8d9d1d80002955e9419341058b29cbe0c9b15bffd2"
+  }
+}
