@@ -1,0 +1,31 @@
+{
+  "case": "cubic10-observed200",
+  "status": "pass",
+  "queue_flow_groups": 74,
+  "whole_run_conservation_enqueued_minus_dequeued_equals_terminal_pending": true,
+  "all_dequeued_visits_have_sojourn_sample": true,
+  "drop_after_dequeue_count": 0,
+  "terminal_pending_packets": 26,
+  "runtime_unchanged_after_run": true,
+  "launch_commit": "58e51e3bd73076eb9a03efa7d9b829b8ef6fe79f",
+  "image_ref": "ghcr.io/yeonjong21/cs30401-lab1@sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+  "patch_sha256": "910aac06723fac851e46eb6522146d896a433a04b3a8464d46e5c4c72ff8fc78",
+  "sources": [
+    {
+      "path": "/tmp/orbit-cubic-up/cubic10-observed200/manifest.json",
+      "sha256": "3f20fa4ad6b2782c0e316eefc0002cad5d530a23dd47ff506c44a9ae0b0d1ccf",
+      "bytes": 422921
+    },
+    {
+      "path": "/tmp/orbit-cubic-up/cubic10-observed200/logs_ns3/orbit_queue_bins.csv",
+      "sha256": "5b5e0fc0b2aedcd887096afdbcb8dd1b9ff1316aab52923b924e3ecdc1e60876",
+      "bytes": 2917050
+    },
+    {
+      "path": "/tmp/orbit-cubic-up/cubic10-observed200/logs_ns3/orbit_queue_pending.csv",
+      "sha256": "baaf7b9d86e81abd7dd4f2d6923ace26485795da4b50fc802a3a89fb8f47c216",
+      "bytes": 134
+    }
+  ],
+  "limits": "Whole-run device/flow queue conservation supports measured served-sojourn semantics; per-window enqueue minus dequeue can represent changing backlog and need not be zero."
+}

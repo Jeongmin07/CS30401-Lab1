@@ -1,0 +1,649 @@
+{
+  "case": "cubic10-observed200",
+  "manifest_sha256": "3f20fa4ad6b2782c0e316eefc0002cad5d530a23dd47ff506c44a9ae0b0d1ccf",
+  "app_bytes_total": 238608900,
+  "flow_complete": false,
+  "fct_s": null,
+  "queue_conservation_verified": true,
+  "source_gsl_device": [
+    1584,
+    1
+  ],
+  "path_lengthening_steps": [
+    {
+      "time_ns": 121600000000,
+      "old_prop_rtt_ms": 87.507,
+      "new_prop_rtt_ms": 90.568,
+      "ratio": 1.034980058738158,
+      "last_observer_before_step": {
+        "time_ns": 121599751689,
+        "phase": "END",
+        "cwnd_bytes": 161460,
+        "ssthresh_bytes": 132480,
+        "pipe_bytes": 161460,
+        "rwnd_bytes": 33554432,
+        "available_window_bytes": 0,
+        "unsent_bytes": 33348500,
+        "cong_state": 0,
+        "cwnd_limited": 1,
+        "srtt_ns": 135283485
+      },
+      "header_only_new_prop_bdp_bytes": 108946.86192468619
+    },
+    {
+      "time_ns": 187400000000,
+      "old_prop_rtt_ms": 90.657,
+      "new_prop_rtt_ms": 97.888,
+      "ratio": 1.0797621805266004,
+      "last_observer_before_step": {
+        "time_ns": 187397939229,
+        "phase": "END",
+        "cwnd_bytes": 161460,
+        "ssthresh_bytes": 132480,
+        "pipe_bytes": 161460,
+        "rwnd_bytes": 33554432,
+        "available_window_bytes": 0,
+        "unsent_bytes": 33334480,
+        "cong_state": 0,
+        "cwnd_limited": 1,
+        "srtt_ns": 135345615
+      },
+      "header_only_new_prop_bdp_bytes": 117752.30125523014
+    }
+  ],
+  "windows": [
+    {
+      "name": "whole",
+      "start_ns": 0,
+      "end_ns": 200000000000,
+      "duration_ns": 200000000000,
+      "app_bytes": 238608900,
+      "app_goodput_mbps": 9.544356,
+      "retransmissions": 523,
+      "recovery_entries": 41,
+      "loss_entries": 1,
+      "drop_events_by_layer": {
+        "TcDrop": 499
+      },
+      "source_gsl_busy_ns": 198447223190,
+      "source_gsl_busy_fraction": 0.99223611595,
+      "source_gsl_idle_fraction": 0.007763884049999947,
+      "source_device_queue_visits": 172986,
+      "source_device_queue_wait_sum_ns": 7190072171062,
+      "source_device_mean_served_wait_ms": 41.56447441447285,
+      "source_device_max_served_wait_ms": 114.691985,
+      "window_state_sample_hold": {
+        "observed_covered_ns": 199900499796,
+        "open_data_cwnd_blocked_ns": 6729480251,
+        "non_open_ns": 12347991277,
+        "rwnd_smaller_than_cwnd_ns": 0,
+        "no_unsent_data_ns": 0
+      },
+      "window_state_ranges": {
+        "cwnd_bytes": [
+          1380,
+          495420
+        ],
+        "pipe_bytes": [
+          0,
+          489900
+        ],
+        "rwnd_bytes": [
+          65535,
+          33554432
+        ],
+        "available_window_bytes": [
+          0,
+          13800
+        ]
+      }
+    },
+    {
+      "name": "26.2:pre",
+      "start_ns": 25700000000,
+      "end_ns": 26200000000,
+      "duration_ns": 500000000,
+      "app_bytes": 600300,
+      "app_goodput_mbps": 9.6048,
+      "retransmissions": 0,
+      "recovery_entries": 0,
+      "loss_entries": 0,
+      "drop_events_by_layer": {},
+      "source_gsl_busy_ns": 500000000,
+      "source_gsl_busy_fraction": 1.0,
+      "source_gsl_idle_fraction": 0.0,
+      "source_device_queue_visits": 436,
+      "source_device_queue_wait_sum_ns": 8385541320,
+      "source_device_mean_served_wait_ms": 19.232892935779816,
+      "source_device_max_served_wait_ms": 21.830038,
+      "window_state_sample_hold": {
+        "observed_covered_ns": 500000000,
+        "open_data_cwnd_blocked_ns": 98458487,
+        "non_open_ns": 0,
+        "rwnd_smaller_than_cwnd_ns": 0,
+        "no_unsent_data_ns": 0
+      },
+      "window_state_ranges": {
+        "cwnd_bytes": [
+          154560,
+          161460
+        ],
+        "pipe_bytes": [
+          151800,
+          161460
+        ],
+        "rwnd_bytes": [
+          33554432,
+          33554432
+        ],
+        "available_window_bytes": [
+          0,
+          2760
+        ]
+      }
+    },
+    {
+      "name": "26.2:post",
+      "start_ns": 26200000000,
+      "end_ns": 26700000000,
+      "duration_ns": 500000000,
+      "app_bytes": 572700,
+      "app_goodput_mbps": 9.1632,
+      "retransmissions": 3,
+      "recovery_entries": 1,
+      "loss_entries": 0,
+      "drop_events_by_layer": {},
+      "source_gsl_busy_ns": 473034045,
+      "source_gsl_busy_fraction": 0.94606809,
+      "source_gsl_idle_fraction": 0.05393190999999997,
+      "source_device_queue_visits": 413,
+      "source_device_queue_wait_sum_ns": 4136374059,
+      "source_device_mean_served_wait_ms": 10.015433556900726,
+      "source_device_max_served_wait_ms": 26.380293,
+      "window_state_sample_hold": {
+        "observed_covered_ns": 500000000,
+        "open_data_cwnd_blocked_ns": 265019725,
+        "non_open_ns": 136451978,
+        "rwnd_smaller_than_cwnd_ns": 0,
+        "no_unsent_data_ns": 0
+      },
+      "window_state_ranges": {
+        "cwnd_bytes": [
+          113160,
+          162840
+        ],
+        "pipe_bytes": [
+          113160,
+          162840
+        ],
+        "rwnd_bytes": [
+          33554432,
+          33554432
+        ],
+        "available_window_bytes": [
+          0,
+          2760
+        ]
+      }
+    },
+    {
+      "name": "26.2:legacy",
+      "start_ns": 25700000000,
+      "end_ns": 28200000000,
+      "duration_ns": 2500000000,
+      "app_bytes": 2964240,
+      "app_goodput_mbps": 9.485568,
+      "retransmissions": 3,
+      "recovery_entries": 1,
+      "loss_entries": 0,
+      "drop_events_by_layer": {},
+      "source_gsl_busy_ns": 2462726754,
+      "source_gsl_busy_fraction": 0.9850907016,
+      "source_gsl_idle_fraction": 0.014909298399999993,
+      "source_device_queue_visits": 2147,
+      "source_device_queue_wait_sum_ns": 18435682420,
+      "source_device_mean_served_wait_ms": 8.586717475547275,
+      "source_device_max_served_wait_ms": 26.380293,
+      "window_state_sample_hold": {
+        "observed_covered_ns": 2500000000,
+        "open_data_cwnd_blocked_ns": 363478212,
+        "non_open_ns": 136451978,
+        "rwnd_smaller_than_cwnd_ns": 0,
+        "no_unsent_data_ns": 0
+      },
+      "window_state_ranges": {
+        "cwnd_bytes": [
+          113160,
+          162840
+        ],
+        "pipe_bytes": [
+          113160,
+          162840
+        ],
+        "rwnd_bytes": [
+          33554432,
+          33554432
+        ],
+        "available_window_bytes": [
+          0,
+          2760
+        ]
+      }
+    },
+    {
+      "name": "75.0:pre",
+      "start_ns": 74500000000,
+      "end_ns": 75000000000,
+      "duration_ns": 500000000,
+      "app_bytes": 601680,
+      "app_goodput_mbps": 9.62688,
+      "retransmissions": 0,
+      "recovery_entries": 0,
+      "loss_entries": 0,
+      "drop_events_by_layer": {},
+      "source_gsl_busy_ns": 500000000,
+      "source_gsl_busy_fraction": 1.0,
+      "source_gsl_idle_fraction": 0.0,
+      "source_device_queue_visits": 436,
+      "source_device_queue_wait_sum_ns": 21321104782,
+      "source_device_mean_served_wait_ms": 48.901616472477066,
+      "source_device_max_served_wait_ms": 53.891492,
+      "window_state_sample_hold": {
+        "observed_covered_ns": 500000000,
+        "open_data_cwnd_blocked_ns": 99390397,
+        "non_open_ns": 0,
+        "rwnd_smaller_than_cwnd_ns": 0,
+        "no_unsent_data_ns": 0
+      },
+      "window_state_ranges": {
+        "cwnd_bytes": [
+          178020,
+          190440
+        ],
+        "pipe_bytes": [
+          175260,
+          190440
+        ],
+        "rwnd_bytes": [
+          33554432,
+          33554432
+        ],
+        "available_window_bytes": [
+          0,
+          2760
+        ]
+      }
+    },
+    {
+      "name": "75.0:post",
+      "start_ns": 75000000000,
+      "end_ns": 75500000000,
+      "duration_ns": 500000000,
+      "app_bytes": 601680,
+      "app_goodput_mbps": 9.62688,
+      "retransmissions": 0,
+      "recovery_entries": 0,
+      "loss_entries": 0,
+      "drop_events_by_layer": {},
+      "source_gsl_busy_ns": 500000000,
+      "source_gsl_busy_fraction": 1.0,
+      "source_gsl_idle_fraction": 0.0,
+      "source_device_queue_visits": 436,
+      "source_device_queue_wait_sum_ns": 25995673579,
+      "source_device_mean_served_wait_ms": 59.62310453899082,
+      "source_device_max_served_wait_ms": 65.884991,
+      "window_state_sample_hold": {
+        "observed_covered_ns": 500000000,
+        "open_data_cwnd_blocked_ns": 399184506,
+        "non_open_ns": 1083205,
+        "rwnd_smaller_than_cwnd_ns": 0,
+        "no_unsent_data_ns": 0
+      },
+      "window_state_ranges": {
+        "cwnd_bytes": [
+          190440,
+          200100
+        ],
+        "pipe_bytes": [
+          190440,
+          200100
+        ],
+        "rwnd_bytes": [
+          33554432,
+          33554432
+        ],
+        "available_window_bytes": [
+          0,
+          2760
+        ]
+      }
+    },
+    {
+      "name": "75.0:legacy",
+      "start_ns": 74500000000,
+      "end_ns": 77000000000,
+      "duration_ns": 2500000000,
+      "app_bytes": 3008400,
+      "app_goodput_mbps": 9.62688,
+      "retransmissions": 0,
+      "recovery_entries": 0,
+      "loss_entries": 0,
+      "drop_events_by_layer": {},
+      "source_gsl_busy_ns": 2500000000,
+      "source_gsl_busy_fraction": 1.0,
+      "source_gsl_idle_fraction": 0.0,
+      "source_device_queue_visits": 2180,
+      "source_device_queue_wait_sum_ns": 157706353396,
+      "source_device_mean_served_wait_ms": 72.34236394311927,
+      "source_device_max_served_wait_ms": 107.176158,
+      "window_state_sample_hold": {
+        "observed_covered_ns": 2500000000,
+        "open_data_cwnd_blocked_ns": 498574903,
+        "non_open_ns": 1083205,
+        "rwnd_smaller_than_cwnd_ns": 0,
+        "no_unsent_data_ns": 0
+      },
+      "window_state_ranges": {
+        "cwnd_bytes": [
+          178020,
+          252540
+        ],
+        "pipe_bytes": [
+          175260,
+          249780
+        ],
+        "rwnd_bytes": [
+          33554432,
+          33554432
+        ],
+        "available_window_bytes": [
+          0,
+          2760
+        ]
+      }
+    },
+    {
+      "name": "121.6:pre",
+      "start_ns": 121100000000,
+      "end_ns": 121600000000,
+      "duration_ns": 500000000,
+      "app_bytes": 601680,
+      "app_goodput_mbps": 9.62688,
+      "retransmissions": 0,
+      "recovery_entries": 0,
+      "loss_entries": 0,
+      "drop_events_by_layer": {},
+      "source_gsl_busy_ns": 500000000,
+      "source_gsl_busy_fraction": 1.0,
+      "source_gsl_idle_fraction": 0.0,
+      "source_device_queue_visits": 436,
+      "source_device_queue_wait_sum_ns": 13714581148,
+      "source_device_mean_served_wait_ms": 31.455461348623853,
+      "source_device_max_served_wait_ms": 32.034006,
+      "window_state_sample_hold": {
+        "observed_covered_ns": 500000000,
+        "open_data_cwnd_blocked_ns": 498143018,
+        "non_open_ns": 0,
+        "rwnd_smaller_than_cwnd_ns": 0,
+        "no_unsent_data_ns": 0
+      },
+      "window_state_ranges": {
+        "cwnd_bytes": [
+          160080,
+          161460
+        ],
+        "pipe_bytes": [
+          157320,
+          161460
+        ],
+        "rwnd_bytes": [
+          33554432,
+          33554432
+        ],
+        "available_window_bytes": [
+          0,
+          2760
+        ]
+      }
+    },
+    {
+      "name": "121.6:post",
+      "start_ns": 121600000000,
+      "end_ns": 122100000000,
+      "duration_ns": 500000000,
+      "app_bytes": 576840,
+      "app_goodput_mbps": 9.22944,
+      "retransmissions": 2,
+      "recovery_entries": 1,
+      "loss_entries": 0,
+      "drop_events_by_layer": {},
+      "source_gsl_busy_ns": 479687945,
+      "source_gsl_busy_fraction": 0.95937589,
+      "source_gsl_idle_fraction": 0.04062410999999999,
+      "source_device_queue_visits": 418,
+      "source_device_queue_wait_sum_ns": 3546225036,
+      "source_device_mean_served_wait_ms": 8.48379195215311,
+      "source_device_max_served_wait_ms": 32.024066,
+      "window_state_sample_hold": {
+        "observed_covered_ns": 500000000,
+        "open_data_cwnd_blocked_ns": 365967947,
+        "non_open_ns": 134032053,
+        "rwnd_smaller_than_cwnd_ns": 0,
+        "no_unsent_data_ns": 0
+      },
+      "window_state_ranges": {
+        "cwnd_bytes": [
+          111780,
+          161460
+        ],
+        "pipe_bytes": [
+          111780,
+          161460
+        ],
+        "rwnd_bytes": [
+          33554432,
+          33554432
+        ],
+        "available_window_bytes": [
+          0,
+          1308
+        ]
+      }
+    },
+    {
+      "name": "121.6:legacy",
+      "start_ns": 121100000000,
+      "end_ns": 123600000000,
+      "duration_ns": 2500000000,
+      "app_bytes": 2982180,
+      "app_goodput_mbps": 9.542976,
+      "retransmissions": 2,
+      "recovery_entries": 1,
+      "loss_entries": 0,
+      "drop_events_by_layer": {},
+      "source_gsl_busy_ns": 2479687945,
+      "source_gsl_busy_fraction": 0.991875178,
+      "source_gsl_idle_fraction": 0.008124821999999976,
+      "source_device_queue_visits": 2161,
+      "source_device_queue_wait_sum_ns": 34439551929,
+      "source_device_mean_served_wait_ms": 15.93685882878297,
+      "source_device_max_served_wait_ms": 32.034006,
+      "window_state_sample_hold": {
+        "observed_covered_ns": 2500000000,
+        "open_data_cwnd_blocked_ns": 2364110965,
+        "non_open_ns": 134032053,
+        "rwnd_smaller_than_cwnd_ns": 0,
+        "no_unsent_data_ns": 0
+      },
+      "window_state_ranges": {
+        "cwnd_bytes": [
+          111780,
+          161460
+        ],
+        "pipe_bytes": [
+          111780,
+          161460
+        ],
+        "rwnd_bytes": [
+          33554432,
+          33554432
+        ],
+        "available_window_bytes": [
+          0,
+          2760
+        ]
+      }
+    },
+    {
+      "name": "187.4:pre",
+      "start_ns": 186900000000,
+      "end_ns": 187400000000,
+      "duration_ns": 500000000,
+      "app_bytes": 601680,
+      "app_goodput_mbps": 9.62688,
+      "retransmissions": 0,
+      "recovery_entries": 0,
+      "loss_entries": 0,
+      "drop_events_by_layer": {},
+      "source_gsl_busy_ns": 500000000,
+      "source_gsl_busy_fraction": 1.0,
+      "source_gsl_idle_fraction": 0.0,
+      "source_device_queue_visits": 436,
+      "source_device_queue_wait_sum_ns": 13336256274,
+      "source_device_mean_served_wait_ms": 30.58774374770642,
+      "source_device_max_served_wait_ms": 31.167539,
+      "window_state_sample_hold": {
+        "observed_covered_ns": 500000000,
+        "open_data_cwnd_blocked_ns": 499957984,
+        "non_open_ns": 0,
+        "rwnd_smaller_than_cwnd_ns": 0,
+        "no_unsent_data_ns": 0
+      },
+      "window_state_ranges": {
+        "cwnd_bytes": [
+          161460,
+          161460
+        ],
+        "pipe_bytes": [
+          158700,
+          161460
+        ],
+        "rwnd_bytes": [
+          33554432,
+          33554432
+        ],
+        "available_window_bytes": [
+          0,
+          2760
+        ]
+      }
+    },
+    {
+      "name": "187.4:post",
+      "start_ns": 187400000000,
+      "end_ns": 187900000000,
+      "duration_ns": 500000000,
+      "app_bytes": 594780,
+      "app_goodput_mbps": 9.51648,
+      "retransmissions": 0,
+      "recovery_entries": 0,
+      "loss_entries": 0,
+      "drop_events_by_layer": {},
+      "source_gsl_busy_ns": 500000000,
+      "source_gsl_busy_fraction": 1.0,
+      "source_gsl_idle_fraction": 0.0,
+      "source_device_queue_visits": 436,
+      "source_device_queue_wait_sum_ns": 9800873492,
+      "source_device_mean_served_wait_ms": 22.479067642201834,
+      "source_device_max_served_wait_ms": 31.15508,
+      "window_state_sample_hold": {
+        "observed_covered_ns": 500000000,
+        "open_data_cwnd_blocked_ns": 500000000,
+        "non_open_ns": 0,
+        "rwnd_smaller_than_cwnd_ns": 0,
+        "no_unsent_data_ns": 0
+      },
+      "window_state_ranges": {
+        "cwnd_bytes": [
+          161460,
+          161460
+        ],
+        "pipe_bytes": [
+          161460,
+          161460
+        ],
+        "rwnd_bytes": [
+          33554432,
+          33554432
+        ],
+        "available_window_bytes": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "name": "187.4:legacy",
+      "start_ns": 186900000000,
+      "end_ns": 189400000000,
+      "duration_ns": 2500000000,
+      "app_bytes": 3000120,
+      "app_goodput_mbps": 9.600384,
+      "retransmissions": 0,
+      "recovery_entries": 0,
+      "loss_entries": 0,
+      "drop_events_by_layer": {},
+      "source_gsl_busy_ns": 2500000000,
+      "source_gsl_busy_fraction": 1.0,
+      "source_gsl_idle_fraction": 0.0,
+      "source_device_queue_visits": 2180,
+      "source_device_queue_wait_sum_ns": 51028784104,
+      "source_device_mean_served_wait_ms": 23.40769913027523,
+      "source_device_max_served_wait_ms": 31.167539,
+      "window_state_sample_hold": {
+        "observed_covered_ns": 2500000000,
+        "open_data_cwnd_blocked_ns": 2499957984,
+        "non_open_ns": 0,
+        "rwnd_smaller_than_cwnd_ns": 0,
+        "no_unsent_data_ns": 0
+      },
+      "window_state_ranges": {
+        "cwnd_bytes": [
+          161460,
+          164220
+        ],
+        "pipe_bytes": [
+          158700,
+          164220
+        ],
+        "rwnd_bytes": [
+          33554432,
+          33554432
+        ],
+        "available_window_bytes": [
+          0,
+          2760
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "run_path": "/tmp/orbit-cubic-up/cubic10-observed200",
+    "manifest_path": "/tmp/orbit-cubic-up/cubic10-observed200/manifest.json",
+    "manifest_bytes": 422921,
+    "launch_repo_commit": "58e51e3bd73076eb9a03efa7d9b829b8ef6fe79f",
+    "launch_repo_dirty": true,
+    "runner_sha256": "33dfd3224a8de9029553a3cf9be99df99a1300da65dbfa3dff255cdea368736b",
+    "patch_sha256": "910aac06723fac851e46eb6522146d896a433a04b3a8464d46e5c4c72ff8fc78",
+    "runtime_unchanged_after_run": true,
+    "analyzer_sha256": "a0401183856a54b9d37d706134b1d184b52a42cebf762388ebe00cfc1634e059"
+  },
+  "limits": [
+    "Window-blocked sample-hold occupancy is not independently attributable link idle or a continuous socket trace outside focus windows.",
+    "Cwnd-limited flag is the existing cached flag; actual available/pipe comes from the original getter call.",
+    "Source GSL busy time is real physical serialization activity; route changes and later-hop queues may limit delivery separately.",
+    "Source device served queue visits include control packets and exclude unfinished queued visits.",
+    "Drop layer rows are not combined as unique physical losses.",
+    "No policy benefit, statistical replication, or exact capacity optimum is asserted by this diagnostic."
+  ]
+}

@@ -6,7 +6,7 @@
 
 확인된 26.2초 허위 복구를 줄이되, 기존 bounded K20보다 실제 손실의 추가 대기를 줄일 수 있는가? 경로 전환 T에 송신자가 아직 확인받지 못한 sequence 범위를 등록한다. 등록 당시 송신된 원본이고 lastSent≤T인 범위만 잠재적인 old-flight 대상으로 취급한다. 이는 실제 패킷의 남은 경로를 안다는 뜻이 아니다.
 
-첫 버전은 **현재 미확인 head만** 보호한다. 기본 SACK 정보·delivered accounting은 계속 갱신하고, 손실 표시 직전에 처음 의심된 head에만 짧은 deadline을 부여한다. 같은 head에 후속 SACK가 와도 deadline을 연장하지 않는다. 다른 패킷의 기본 K3 손실 표시나 ECN/기존 recovery/RTO가 발생하면 보호를 해제하고 기본 복구로 돌아간다. 이미 표시된 loss를 지우거나 PRR의 pipe 값을 가짜로 줄이지 않는다. 등록과 대기는 소켓별로 독립적이다.
+첫 소스 검토에서 head만 보호하려 했으나, 기존 26.2초 증거의 SACK가 head를 포함한 세 old-flight hole을 함께 손실로 표시함을 확인했다. 뒤에서 head로 순회하는 구현에서 나머지 두 hole을 먼저 표시하면 head 보호는 시작할 수 없다. **첫 시뮬레이션 전 이 구조를 수정해, 동일 old-flight cohort의 eligible holes를 하나의 episode deadline으로 보호한다.** 기본 SACK 정보·delivered accounting은 계속 갱신하고 손실 표시 직전에 처음 의심된 eligible hole부터 짧은 deadline을 부여한다. 다른 eligible head로 이동하거나 후속 SACK가 와도 deadline을 연장하지 않는다. cohort 밖 패킷의 기본 K3 손실 표시나 ECN/기존 recovery/RTO가 발생하면 보호를 해제하고 기본 복구로 돌아간다. 이미 표시된 loss를 지우거나 PRR의 pipe 값을 가짜로 줄이지 않는다. 등록과 대기는 소켓별로 독립적이다.
 
 등록 유효기간은 기존 비교와 동일한 T~T+2×max(old,new propagation RTT)다. 실제 대기는 첫 손실 의심 시각부터 `τ=clamp(2×forward propagation decrease,1ms,20ms)`이며 등록 종료를 넘기지 않는다. 대상 수신을 확인하는 ACK/SACK 또는 deadline에서 보호를 해제하고 기존 증거를 재평가한다. 추가 ACK 없이 stock recovery에 진입할 수 있도록 기존 bounded 복원의 원칙을 재사용한다.
 
@@ -24,7 +24,7 @@ SACK 규모 예산은 `3+ceil(Rbit/s×forward_drop_s/(8×MSSbytes))`다. R은 �
 2. 제공 LEO 10Mbps·q100·200초 단일100GB: baseline/기존 bounded K20/새 selective 세 조건. 전체와 `[25.7,28.2)`, `[74.5,77.0)`의 앱 고유 수신량·재전송/복구/실제 drop과 정책 이벤트를 비교한다.
 3. 같은 LEO 경로 단축 중 원본 old-flight의 실제 tagged drop을 정확히 하나 주는 baseline/selective 두 조건. 대상 선택은 T·원본 송신 시각·flow/sequence 조건으로 실행 전에 고정하며 미래 실행 결과로 좋은 패킷을 고르지 않는다. 주입 규칙과 실제 선택된 tag를 모두 기록한다.
 
-첫 버전의 head 제한 때문에 다른 hole의 기본 손실 표시가 보호를 해제할 수 있다. 그런 경우 작동하지 않은 범위와 실제 효과를 그대로 보고하며 결과에 맞춰 hole 범위·τ·예산을 확대하지 않는다. 실패/timeout/소스 불일치는 보존하고 성능 표에서 제외한다. 큰 처리량 이득이나 모든 실제 손실의 추가 대기0을 가정하지 않는다.
+cohort 밖 hole의 기본 손실 표시가 보호를 해제할 수 있다. 그런 경우 작동하지 않은 범위와 실제 효과를 그대로 보고하며 결과에 맞춰 hole 범위·τ·예산을 확대하지 않는다. 실패/timeout/소스 불일치는 보존하고 성능 표에서 제외한다. 큰 처리량 이득이나 모든 실제 손실의 추가 대기0을 가정하지 않는다.
 
 ## 실행·재현 계획
 

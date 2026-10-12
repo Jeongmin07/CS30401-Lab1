@@ -1,0 +1,433 @@
+{
+  "schema_version": 1,
+  "candidate": "forecast route-shortening CUBIC proactive cwnd drain/pacing",
+  "decision": "screened_out_before_policy_implementation",
+  "policy_implemented": false,
+  "policy_action_count": null,
+  "new_candidate_on_runs": 0,
+  "new_separate_container": false,
+  "new_finite_loss_micro_runs": 0,
+  "own_simulation_runs": 0,
+  "shared_simulation_scope": {
+    "successful_10M_observation": true,
+    "incomplete_100M_observation": true,
+    "successful_10M_wall_seconds": 29.24015921099999,
+    "incomplete_100M_wall_seconds": 240.101341081001,
+    "no_retry_or_sweep": true
+  },
+  "observed_event_summary": [
+    {
+      "case": "existing-10M-q100",
+      "event_s": 26.2,
+      "old_rtt_prop_ms": 97.698,
+      "new_rtt_prop_ms": 91.064,
+      "geometric_bdp_ratio": 0.9320968699461606,
+      "queue_measured": false,
+      "pre": {
+        "start_ns": 25700000000,
+        "end_ns": 26200000000,
+        "application_bytes": 600300,
+        "application_goodput_mbps": 9.604800000000001,
+        "actual_all_direction_drop_rows": 0,
+        "retx_rows": 0
+      },
+      "post": {
+        "start_ns": 26200000000,
+        "end_ns": 26700000000,
+        "application_bytes": 572700,
+        "application_goodput_mbps": 9.1632,
+        "actual_all_direction_drop_rows": 0,
+        "retx_rows": 3
+      },
+      "legacy": {
+        "start_ns": 25700000000,
+        "end_ns": 28200000000,
+        "application_bytes": 2964240,
+        "application_goodput_mbps": 9.485568,
+        "actual_all_direction_drop_rows": 0,
+        "retx_rows": 3
+      }
+    },
+    {
+      "case": "existing-10M-q100",
+      "event_s": 75.0,
+      "old_rtt_prop_ms": 90.987,
+      "new_rtt_prop_ms": 87.644,
+      "geometric_bdp_ratio": 0.9632584874762329,
+      "queue_measured": false,
+      "pre": {
+        "start_ns": 74500000000,
+        "end_ns": 75000000000,
+        "application_bytes": 601680,
+        "application_goodput_mbps": 9.626880000000002,
+        "actual_all_direction_drop_rows": 0,
+        "retx_rows": 0
+      },
+      "post": {
+        "start_ns": 75000000000,
+        "end_ns": 75500000000,
+        "application_bytes": 601680,
+        "application_goodput_mbps": 9.626880000000002,
+        "actual_all_direction_drop_rows": 0,
+        "retx_rows": 0
+      },
+      "legacy": {
+        "start_ns": 74500000000,
+        "end_ns": 77000000000,
+        "application_bytes": 3008400,
+        "application_goodput_mbps": 9.626880000000002,
+        "actual_all_direction_drop_rows": 0,
+        "retx_rows": 0
+      }
+    },
+    {
+      "case": "existing-100M-q1000-40s",
+      "event_s": 26.2,
+      "old_rtt_prop_ms": 97.698,
+      "new_rtt_prop_ms": 91.064,
+      "geometric_bdp_ratio": 0.9320968699461606,
+      "queue_measured": false,
+      "pre": {
+        "start_ns": 25700000000,
+        "end_ns": 26200000000,
+        "application_bytes": 6014040,
+        "application_goodput_mbps": 96.22464,
+        "actual_all_direction_drop_rows": 0,
+        "retx_rows": 0
+      },
+      "post": {
+        "start_ns": 26200000000,
+        "end_ns": 26700000000,
+        "application_bytes": 5971260,
+        "application_goodput_mbps": 95.54016,
+        "actual_all_direction_drop_rows": 0,
+        "retx_rows": 32
+      },
+      "legacy": {
+        "start_ns": 25700000000,
+        "end_ns": 28200000000,
+        "application_bytes": 30028800,
+        "application_goodput_mbps": 96.09215999999999,
+        "actual_all_direction_drop_rows": 0,
+        "retx_rows": 32
+      }
+    },
+    {
+      "case": "shared-10M-q100",
+      "event_s": 26.2,
+      "old_rtt_prop_ms": 97.698,
+      "new_rtt_prop_ms": 91.064,
+      "geometric_bdp_ratio": 0.9320968699461606,
+      "queue_measured": true,
+      "pre": {
+        "start_ns": 25700000000,
+        "end_ns": 26200000000,
+        "application_bytes": 600300,
+        "application_goodput_mbps": 9.604800000000001,
+        "actual_all_direction_drop_rows": 0,
+        "retx_rows": 0,
+        "source_queue": {
+          "node_id": 1584,
+          "device_id": 1,
+          "served_mean_ms": 19.232892935779816,
+          "served_max_ms": 21.830038,
+          "served_samples": 436,
+          "device_queue_drop_before": 0,
+          "max_observed_queue_packets_at_flush": 18
+        }
+      },
+      "post": {
+        "start_ns": 26200000000,
+        "end_ns": 26700000000,
+        "application_bytes": 572700,
+        "application_goodput_mbps": 9.1632,
+        "actual_all_direction_drop_rows": 0,
+        "retx_rows": 3,
+        "source_queue": {
+          "node_id": 1584,
+          "device_id": 1,
+          "served_mean_ms": 10.015433556900726,
+          "served_max_ms": 26.380293,
+          "served_samples": 413,
+          "device_queue_drop_before": 0,
+          "max_observed_queue_packets_at_flush": 21
+        }
+      },
+      "legacy": {
+        "start_ns": 25700000000,
+        "end_ns": 28200000000,
+        "application_bytes": 2964240,
+        "application_goodput_mbps": 9.485568,
+        "actual_all_direction_drop_rows": 0,
+        "retx_rows": 3,
+        "source_queue": {
+          "node_id": 1584,
+          "device_id": 1,
+          "served_mean_ms": 8.586717475547275,
+          "served_max_ms": 26.380293,
+          "served_samples": 2147,
+          "device_queue_drop_before": 0,
+          "max_observed_queue_packets_at_flush": 21
+        }
+      },
+      "post_other_device": {
+        "node_id": 313,
+        "device_id": 1,
+        "served_mean_ms": 2.253271314148681,
+        "served_max_ms": 6.017616,
+        "served_samples": 417
+      }
+    },
+    {
+      "case": "shared-10M-q100",
+      "event_s": 75.0,
+      "old_rtt_prop_ms": 90.987,
+      "new_rtt_prop_ms": 87.644,
+      "geometric_bdp_ratio": 0.9632584874762329,
+      "queue_measured": true,
+      "pre": {
+        "start_ns": 74500000000,
+        "end_ns": 75000000000,
+        "application_bytes": 601680,
+        "application_goodput_mbps": 9.626880000000002,
+        "actual_all_direction_drop_rows": 0,
+        "retx_rows": 0,
+        "source_queue": {
+          "node_id": 1584,
+          "device_id": 1,
+          "served_mean_ms": 48.901616472477066,
+          "served_max_ms": 53.891492,
+          "served_samples": 436,
+          "device_queue_drop_before": 0,
+          "max_observed_queue_packets_at_flush": 44
+        }
+      },
+      "post": {
+        "start_ns": 75000000000,
+        "end_ns": 75500000000,
+        "application_bytes": 601680,
+        "application_goodput_mbps": 9.626880000000002,
+        "actual_all_direction_drop_rows": 0,
+        "retx_rows": 0,
+        "source_queue": {
+          "node_id": 1584,
+          "device_id": 1,
+          "served_mean_ms": 59.62310453899082,
+          "served_max_ms": 65.884991,
+          "served_samples": 436,
+          "device_queue_drop_before": 0,
+          "max_observed_queue_packets_at_flush": 56
+        }
+      },
+      "legacy": {
+        "start_ns": 74500000000,
+        "end_ns": 77000000000,
+        "application_bytes": 3008400,
+        "application_goodput_mbps": 9.626880000000002,
+        "actual_all_direction_drop_rows": 0,
+        "retx_rows": 0,
+        "source_queue": {
+          "node_id": 1584,
+          "device_id": 1,
+          "served_mean_ms": 72.34236394311927,
+          "served_max_ms": 107.176158,
+          "served_samples": 2180,
+          "device_queue_drop_before": 0,
+          "max_observed_queue_packets_at_flush": 93
+        }
+      }
+    }
+  ],
+  "causal_assessment": {
+    "queue_can_grow": true,
+    "shortening_alone_implies_overflow": false,
+    "completed_event_windows_have_actual_overflow_drop": false,
+    "pure_propagation_shortening_causality_isolated": false,
+    "100M_q100_condition_validated": false,
+    "text": "Completed events show queue changes and reordering recovery without local observed drop. The faster small-queue attempt is incomplete. The premise needed to justify this proactive drain is not established within budget; do not infer absence of all future overflow."
+  },
+  "queue_qa": {
+    "case": "cubic10-observed200",
+    "status": "pass",
+    "queue_flow_groups": 74,
+    "whole_run_conservation_enqueued_minus_dequeued_equals_terminal_pending": true,
+    "all_dequeued_visits_have_sojourn_sample": true,
+    "drop_after_dequeue_count": 0,
+    "terminal_pending_packets": 26,
+    "runtime_unchanged_after_run": true,
+    "launch_commit": "58e51e3bd73076eb9a03efa7d9b829b8ef6fe79f",
+    "image_ref": "ghcr.io/yeonjong21/cs30401-lab1@sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+    "patch_sha256": "910aac06723fac851e46eb6522146d896a433a04b3a8464d46e5c4c72ff8fc78",
+    "sources": [
+      {
+        "path": "/tmp/orbit-cubic-up/cubic10-observed200/manifest.json",
+        "sha256": "3f20fa4ad6b2782c0e316eefc0002cad5d530a23dd47ff506c44a9ae0b0d1ccf",
+        "bytes": 422921
+      },
+      {
+        "path": "/tmp/orbit-cubic-up/cubic10-observed200/logs_ns3/orbit_queue_bins.csv",
+        "sha256": "5b5e0fc0b2aedcd887096afdbcb8dd1b9ff1316aab52923b924e3ecdc1e60876",
+        "bytes": 2917050
+      },
+      {
+        "path": "/tmp/orbit-cubic-up/cubic10-observed200/logs_ns3/orbit_queue_pending.csv",
+        "sha256": "baaf7b9d86e81abd7dd4f2d6923ace26485795da4b50fc802a3a89fb8f47c216",
+        "bytes": 134
+      }
+    ],
+    "limits": "Whole-run device/flow queue conservation supports measured served-sojourn semantics; per-window enqueue minus dequeue can represent changing backlog and need not be zero."
+  },
+  "passive_equivalence_receipt": {
+    "method": "Eight canonical measurement CSVs compared by byte size and SHA; no timing or observer columns normalized",
+    "all_equal": true,
+    "checks": [
+      {
+        "file": "study_app_rx_node_1585_port_1024.csv",
+        "reference_sha256": "63defbe5710bafaafec06b3021dfda3c8d2df2bad3bf78ce15b54c84d7bc451d",
+        "new_sha256": "63defbe5710bafaafec06b3021dfda3c8d2df2bad3bf78ce15b54c84d7bc451d",
+        "equal": true
+      },
+      {
+        "file": "study_drops.csv",
+        "reference_sha256": "c915297632311402f8a2b1b4d6d24b83691f5971f40477934b2e2826887e6821",
+        "new_sha256": "c915297632311402f8a2b1b4d6d24b83691f5971f40477934b2e2826887e6821",
+        "equal": true
+      },
+      {
+        "file": "study_rx_node_1585_port_1024.csv",
+        "reference_sha256": "445161a24e3c943e61518cc5c67ce72aecbae5c1bb2caaf6bd4f4ce451b2f1cf",
+        "new_sha256": "445161a24e3c943e61518cc5c67ce72aecbae5c1bb2caaf6bd4f4ce451b2f1cf",
+        "equal": true
+      },
+      {
+        "file": "tcp_flow_0_study_packets.csv",
+        "reference_sha256": "78fc54184c4481b1421d2139870debcbe72259c18ccb011ba180ef77784e146f",
+        "new_sha256": "78fc54184c4481b1421d2139870debcbe72259c18ccb011ba180ef77784e146f",
+        "equal": true
+      },
+      {
+        "file": "tcp_flow_0_study_events.csv",
+        "reference_sha256": "8809b380277e387dcc400a5d27a5679ccbdf446a08c7efb06fa7a021a42df78b",
+        "new_sha256": "8809b380277e387dcc400a5d27a5679ccbdf446a08c7efb06fa7a021a42df78b",
+        "equal": true
+      },
+      {
+        "file": "tcp_flow_0_cwnd.csv",
+        "reference_sha256": "6651966bdd19d9cbcbcc99fb18ec854f152de7e81ed93e075e8baa5d09599860",
+        "new_sha256": "6651966bdd19d9cbcbcc99fb18ec854f152de7e81ed93e075e8baa5d09599860",
+        "equal": true
+      },
+      {
+        "file": "tcp_flow_0_progress.csv",
+        "reference_sha256": "2a9181e6a8a5bf7e1c25b8a770096f43714ec03779e7d7ccd2673b9992339534",
+        "new_sha256": "2a9181e6a8a5bf7e1c25b8a770096f43714ec03779e7d7ccd2673b9992339534",
+        "equal": true
+      },
+      {
+        "file": "tcp_flow_0_rtt.csv",
+        "reference_sha256": "b959d51947cf5f8d37d672ef2a239c942b8b57e9f3d574ce2f7624de42ab1e38",
+        "new_sha256": "b959d51947cf5f8d37d672ef2a239c942b8b57e9f3d574ce2f7624de42ab1e38",
+        "equal": true
+      }
+    ]
+  },
+  "source_runtime_qa": {
+    "current_installed_diff_matches_shared_launch_patch": true,
+    "current_runtime_files_match_shared_launch": true,
+    "shared_run_recorded_runtime_unchanged": true,
+    "launch_commit_10M": "58e51e3bd73076eb9a03efa7d9b829b8ef6fe79f",
+    "launch_repo_dirty_10M": true,
+    "launch_commit_100M": "58e51e3bd73076eb9a03efa7d9b829b8ef6fe79f",
+    "launch_repo_dirty_100M": true,
+    "shared_patch_sha256": "910aac06723fac851e46eb6522146d896a433a04b3a8464d46e5c4c72ff8fc78",
+    "ns3_head": "99bc6f733274475b7a6e804128651e17ee2a2536",
+    "image_ref": "ghcr.io/yeonjong21/cs30401-lab1@sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+    "shared_input_config_sha256": "8c46772c95c46ca99935dd68cf6957631972a2bb519acabe0880640408b0f4d4",
+    "shared_input_schedule_sha256": "e6cde3aa7716856e46d24c3833354df90407313ece13a5ffbd1b789fa4fea23c",
+    "shared_path_truth_sha256": "49bd5418f2b13bdbf6d703f719d61075f814cc86d44c745651bf797f4e5f656c",
+    "posthoc_helper_sha256": "5714e9dfef6235f0c3e1cd49b3adec0920609a3b417849cd26eddd002a46159e"
+  },
+  "analysis_qa": {
+    "helper_ast_passed": true,
+    "used_helper_matches_current_preserved_source": true,
+    "incomplete_manifest_rejected_before_creating_normal_result": true,
+    "preserved_partial_output_hashes_verified": 20,
+    "csv_semantic_completeness_of_timeout_not_claimed": true,
+    "normal_failed_case_analysis_file_absent": true
+  },
+  "sources": [
+    {
+      "path": "docs/experiments/assets/20261012-orbit-cubic-down/existing-leo10-base.json",
+      "sha256": "63af8b66cc66c602e5e527690c7b8363d78f62b5c485be5d7b27a7ad7e871760",
+      "bytes": 23974
+    },
+    {
+      "path": "docs/experiments/assets/20261012-orbit-cubic-down/existing-leo100-base40.json",
+      "sha256": "9ac19071fd24114e341b035cb0df5bffdc167ec416ce2533fd5ae85650e4a780",
+      "bytes": 16496
+    },
+    {
+      "path": "docs/experiments/assets/20261012-orbit-cubic-down/existing-summary.json",
+      "sha256": "1b8bfd4d9b5ec7dd25887e675319bf7cb6670844a9cde128bc965d84a676dc49",
+      "bytes": 2601
+    },
+    {
+      "path": "docs/experiments/assets/20261012-orbit-cubic-down/shared-cubic10-gate.json",
+      "sha256": "56c65f3738dac3213c5b4813d1193ce25f5aa6c47e226ebcdce9a3473edb67b9",
+      "bytes": 207403
+    },
+    {
+      "path": "docs/experiments/assets/20261012-orbit-cubic-down/shared-cubic10-queue-conservation.json",
+      "sha256": "8245f97e0f54bb83b10abd22bf4973005234c265a96e3ccad6d54f6bf3cac3c1",
+      "bytes": 1401
+    },
+    {
+      "path": "docs/experiments/assets/20261012-orbit-cubic-down/shared-cubic100-incomplete.json",
+      "sha256": "c9baf7e520085884441ae1560bd4982e66cdcf7ce9b6bb70a45da857cea75d90",
+      "bytes": 10017
+    },
+    {
+      "path": "code/orbit-cubic-down/analyze_gate.py",
+      "sha256": "5714e9dfef6235f0c3e1cd49b3adec0920609a3b417849cd26eddd002a46159e",
+      "bytes": 11338
+    },
+    {
+      "path": "code/orbit-cubic-down/README.md",
+      "sha256": "8c70112d5b2d1928de148abad6831288db07f144e7f4f7dbffabb75355d0e675",
+      "bytes": 1552
+    },
+    {
+      "path": "docs/experiments/20261012-orbit-cubic-down.md",
+      "sha256": "dd3831ed94e6bec970e5c4ce5a638f2fbe68054e301d06949247e272f9451064",
+      "bytes": 11307
+    },
+    {
+      "path": "docs/experiments/assets/20261012-orbit-cubic-up/equivalence10.json",
+      "sha256": "3cbf18cecd453582a1168da11620c42606b64e6da58d9053fbc2309e4882bb07",
+      "bytes": 2224
+    },
+    {
+      "path": "code/orbit-cubic-up/ns3.patch",
+      "sha256": "910aac06723fac851e46eb6522146d896a433a04b3a8464d46e5c4c72ff8fc78",
+      "bytes": 65536
+    },
+    {
+      "path": "code/orbit-cubic-up/build-receipt.json",
+      "sha256": "ee3ec0d98bae0016235fda3acd4fa16853b0ee825a2f16c5b27d7fa1e9a67cb5",
+      "bytes": 2931
+    },
+    {
+      "path": "code/kim-study/path_truth_200s.csv",
+      "sha256": "49bd5418f2b13bdbf6d703f719d61075f814cc86d44c745651bf797f4e5f656c",
+      "bytes": 135964
+    }
+  ],
+  "limits": [
+    "No active policy or its gain/cost is measured. A policy action count is not applicable, not a configured zero-action control.",
+    "Drop-zero values apply only to declared event windows and observed connected hooks, not the entire run.",
+    "Queue mean/max describe served device visits, including zero waits; not end-to-end delay, pending-age distributions or percentiles.",
+    "The complete routing snapshot changes multiple factors; no per-packet pure-geometric counterfactual was tested.",
+    "One completed deterministic passive case is not a statistical replication or universal measurement-equivalence proof.",
+    "100M q100 timeout records preserve raw bytes/source identities only; they cannot serve as completed 200-second metrics."
+  ]
+}
