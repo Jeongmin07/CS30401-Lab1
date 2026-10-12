@@ -43,4 +43,6 @@ FIFO/CoDel은 송신 지상국의 장치1에만 설치한다. 나머지 큐와 �
 
 ## 결과 공유
 
+첫 실행용 구현은 두 별도 빌드와 읽기 검토를 통과했다. 페이싱은 `35f0306`의 source와 `3e456b7`의 원본 로그 속성 보존 checkpoint, 큐 제어는 `b6112ce` checkpoint를 사용한다. 최종 combined patch는 각각 `ace08b170b04774c2eac849c1875e647a97e786611616cbb32867496cb2cb808`, `90f9114c9a31df219587aea1e9406dccaeb3c4891243699c5d825827369ac72f`다. 초기 개발 빌드에는 시뮬레이션이 없으며, 최종 빌드 전에 실제 root qdisc 손실 관측과 선택적 평가용 손실 모델의 기존 설정 덮어쓰기 방지를 보수했다. 초기 3+3조건만 실행 승인했다. 조건별 실제 launch ref/dirty 상태는 각 원본 manifest를 따른다.
+
 완료 뒤 구현·actual launch commit/dirty·patch/runtime/input/output SHA·정확한 config/CLI·실제 앱 전달량·큐 및 손실 비교·비작동/비용을 기록한다. 큰 원본은 새 Release, 작은 결과와 inventory는 Git에 공유한다. 후보가 기준을 만족하지 않으면 trade-off를 그대로 보고하고 완전한 해결이라고 쓰지 않는다. PR16의 최종 본문과 root 인수인계를 최신 결과로 갱신한다.
