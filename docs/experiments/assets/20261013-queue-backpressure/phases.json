@@ -1,0 +1,149 @@
+{
+  "schema": 1,
+  "simulations": {
+    "successful": 3,
+    "failed": 0,
+    "timeout": 0,
+    "stage2": 0
+  },
+  "policy_base": "code/orbit-tail/ns3.patch",
+  "policy_base_sha256": "5b847bbafe8d950072b5bc34e0420da8f7f1c860bc7fcc94c3c3ab8b37bb4d29",
+  "source_only_development": {
+    "initial_patch_sha256": "87e99a4e5f0890a5ea630739b92ca9f870fa87d01ffb019a7c3891be9c0fc4e9",
+    "initial_build_wall_seconds": 540.0657307299989,
+    "simulations": 0,
+    "final_coverage_fix": "Configure before observer; actual root presence and IPv4-aware qdisc drops",
+    "preserved_path": "code/queue-backpressure/development-initial"
+  },
+  "original_launch": {
+    "checkpoint": "b6112ce8bd4e2be9c0508bb2cbded4aad1713dad",
+    "actual_heads": {
+      "control100": "b6112ce8bd4e2be9c0508bb2cbded4aad1713dad",
+      "fifo4-96": "d5d6d2932a9b27b7dafe76072df9c96cf3c956e4",
+      "codel4-96": "d5d6d2932a9b27b7dafe76072df9c96cf3c956e4"
+    },
+    "analyzer_sha256": {
+      "control100": "52763aabc17748db1528360819bd8241611a9ebc3757fc7aba87e9f50bb95b29",
+      "fifo4-96": "52763aabc17748db1528360819bd8241611a9ebc3757fc7aba87e9f50bb95b29",
+      "codel4-96": "52763aabc17748db1528360819bd8241611a9ebc3757fc7aba87e9f50bb95b29"
+    },
+    "patch_sha256": "90f9114c9a31df219587aea1e9406dccaeb3c4891243699c5d825827369ac72f",
+    "build_ready_sha256": "5995697fcb1a751ea3bcd8e83a374edcc59e525d7e3b8fd8d36f8db4b9d9f951",
+    "source_runtime_unchanged": true,
+    "matched_inputs": true
+  },
+  "posthoc": {
+    "analysis_helper_sha256": "1b04dcf7bd2ca3439caebdfcecf28fb1c377a0eea15dcdee5767786c3c5901b5",
+    "export_helper_sha256": "ccba7a4cdbf6b11a271cb46ec003a5cdb18ed86c8523428f3bc639bc0209583b",
+    "changes": "After all3 simulations: added first-event report and explicit matched-input/runtime receipts; no simulation/source/runtime changes.",
+    "original_raw_and_manifests_untouched": true
+  },
+  "raw": {
+    "archive": "queue-backpressure-20261013-raw.tar.gz",
+    "bytes": 53744979,
+    "sha256": "7b844773692b7aaaeb70522d036a49e6036d901e7578c7a6e7c3788c82a34533",
+    "file_count": 114,
+    "every_member_verified": true,
+    "archiver_path": "code/orbit-tail/archive.py",
+    "archiver_sha256": "669dc17d48182e5db705fa95188aaecd3cf5d34d289b20570a0a0b7457f61a78"
+  },
+  "independent_accounting_review": {
+    "scope": "Original raw source/network packet areas, full tagged data loss identities, CoDel drop-after excluded from served, pending conservation and matched inputs/runtime",
+    "passed": true
+  },
+  "final_files": {
+    "code/queue-backpressure/README.md": {
+      "bytes": 5746,
+      "sha256": "c33d6519105c5cfdcf8447fc4c7e8a233bb96750ab1c3eb017fe01e58033a3f7"
+    },
+    "code/queue-backpressure/analyze.py": {
+      "bytes": 16684,
+      "sha256": "1b04dcf7bd2ca3439caebdfcecf28fb1c377a0eea15dcdee5767786c3c5901b5"
+    },
+    "code/queue-backpressure/backpressure.h": {
+      "bytes": 17202,
+      "sha256": "5298eb4585f8082ba346ca5eec946959adc19327c4e6ad8ce52dec2649584819"
+    },
+    "code/queue-backpressure/build-ready.json": {
+      "bytes": 2370,
+      "sha256": "5995697fcb1a751ea3bcd8e83a374edcc59e525d7e3b8fd8d36f8db4b9d9f951"
+    },
+    "code/queue-backpressure/build.py": {
+      "bytes": 1577,
+      "sha256": "790554d15e86079f19924c230bd4de4ff28c7dbfa336f31165fe71eb36419665"
+    },
+    "code/queue-backpressure/export.py": {
+      "bytes": 4511,
+      "sha256": "ccba7a4cdbf6b11a271cb46ec003a5cdb18ed86c8523428f3bc639bc0209583b"
+    },
+    "code/queue-backpressure/flow_observer.h": {
+      "bytes": 5895,
+      "sha256": "818140e975d3332133cfa49a6f893811f1662176e3ceb4f0751878accbff774f"
+    },
+    "code/queue-backpressure/install.py": {
+      "bytes": 10686,
+      "sha256": "3376682206c068d1ea8893f59b038530c724149dd97b1420d4c8c12b4f596b8e"
+    },
+    "code/queue-backpressure/ns3.patch": {
+      "bytes": 128930,
+      "sha256": "90f9114c9a31df219587aea1e9406dccaeb3c4891243699c5d825827369ac72f"
+    },
+    "code/queue-backpressure/queue_observer.h": {
+      "bytes": 15694,
+      "sha256": "902dd42e4d90ea3bb8903fb47c69004e1480eaaca5ce2562db262f7ee54fc919"
+    },
+    "code/queue-backpressure/reference-receipt.json": {
+      "bytes": 2938,
+      "sha256": "ee9e5ef6dd8e862599a5e4a853baad596658c5d912f98b296a5738806c5eb52a"
+    },
+    "code/queue-backpressure/run.py": {
+      "bytes": 7254,
+      "sha256": "1f519bdf5490ca28cc7441ba2981f578320272e2c5e660720306a735c0d65d80"
+    },
+    "code/queue-backpressure/service_observer.h": {
+      "bytes": 3937,
+      "sha256": "f9885311b606d3c44e894c356f3936bff4e33dd5d952e6f89676b21ce889fd29"
+    },
+    "docs/experiments/20261013-queue-backpressure.md": {
+      "bytes": 12843,
+      "sha256": "c3b6127988d883b4da8b431fdf478ef19779d02d37410a82a2dc9185d478783a"
+    },
+    "docs/experiments/assets/20261013-queue-backpressure/analysis.json": {
+      "bytes": 28956,
+      "sha256": "63597aa8b5e175abaf7ff0826358b99df2eff282d3a53fa5fa9325f164869c48"
+    },
+    "docs/experiments/assets/20261013-queue-backpressure/cases/codel4-96.json": {
+      "bytes": 11939,
+      "sha256": "2251fb8088c89a3867caffa287bf1a02a3d2962cd8c949d09636eceb71f83d57"
+    },
+    "docs/experiments/assets/20261013-queue-backpressure/cases/control100.json": {
+      "bytes": 11923,
+      "sha256": "8b189487ddadc591d802ded7deb9c7bada3c801d30f7a0838a5ae7cdcc912426"
+    },
+    "docs/experiments/assets/20261013-queue-backpressure/cases/fifo4-96.json": {
+      "bytes": 11937,
+      "sha256": "27400b8efc22c86490761626786ec24944a293bc8e80b98e3890691c9afb8b6c"
+    },
+    "docs/experiments/assets/20261013-queue-backpressure/export.json": {
+      "bytes": 5611,
+      "sha256": "4557cae4951998328fd2f08cca8beaa4e08e1b381c33e190fbc3b3a479a818e2"
+    },
+    "docs/experiments/assets/20261013-queue-backpressure/final-build-log.txt": {
+      "bytes": 5773,
+      "sha256": "90c135f760bf0dd35d2170701f161608965a5be07cad6511bb3469a716a1ad5d"
+    },
+    "docs/experiments/assets/20261013-queue-backpressure/raw-inventory.json": {
+      "bytes": 20046,
+      "sha256": "5aa243f2b6bfce559385c319dacfad17a6f0d3c73770ffec9d962e82f5163963"
+    },
+    "docs/experiments/assets/20261013-queue-backpressure/results.csv": {
+      "bytes": 3122,
+      "sha256": "c7de3b138462fb94c76655ea10b0a0c1d589acae98e3e2c38a28d3e04c935c19"
+    }
+  },
+  "excluded": [
+    "This receipt excludes itself from final file hashes.",
+    "Git HEAD boundaries reflect concurrent unrelated repository work; executed hashes are independently equal.",
+    "Published release verification is recorded separately by the parent chat."
+  ]
+}

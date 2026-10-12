@@ -1,0 +1,812 @@
+{
+  "schema": 2,
+  "helper_sha256": "1b04dcf7bd2ca3439caebdfcecf28fb1c377a0eea15dcdee5767786c3c5901b5",
+  "reference_receipt_sha256": "ee9e5ef6dd8e862599a5e4a853baad596658c5d912f98b296a5738806c5eb52a",
+  "posthoc_analysis_phase": "After all3 simulations: added first-event report and explicit matched-input/runtime receipts; no simulation/source/runtime changes.",
+  "matched_inputs": {
+    "all_pass": true,
+    "checks": {
+      "control100": {
+        "definition": true,
+        "tail_admission": true,
+        "policy_changed": true,
+        "forwarding_input_changed": true,
+        "physical_drop_first_original_seq1": true,
+        "source_checkpoint": true,
+        "source_files": true,
+        "dependencies": true,
+        "tail_base_patch_sha256": true,
+        "patch_sha256": true,
+        "installed_diff_sha256": true,
+        "ns3_head": true,
+        "runtime_files": true,
+        "build_ready_sha256": true,
+        "image_ref": true,
+        "hints": true,
+        "additional_parameters": true,
+        "input_files": true,
+        "state_static_sha256": true,
+        "dynamic_input_sha256": true,
+        "timeout_s": true,
+        "prospective_gates": true,
+        "command_except_output_locator": true,
+        "environment_except_queue_mode_output_locators": true
+      },
+      "fifo4-96": {
+        "definition": true,
+        "tail_admission": true,
+        "policy_changed": true,
+        "forwarding_input_changed": true,
+        "physical_drop_first_original_seq1": true,
+        "source_checkpoint": true,
+        "source_files": true,
+        "dependencies": true,
+        "tail_base_patch_sha256": true,
+        "patch_sha256": true,
+        "installed_diff_sha256": true,
+        "ns3_head": true,
+        "runtime_files": true,
+        "build_ready_sha256": true,
+        "image_ref": true,
+        "hints": true,
+        "additional_parameters": true,
+        "input_files": true,
+        "state_static_sha256": true,
+        "dynamic_input_sha256": true,
+        "timeout_s": true,
+        "prospective_gates": true,
+        "command_except_output_locator": true,
+        "environment_except_queue_mode_output_locators": true
+      },
+      "codel4-96": {
+        "definition": true,
+        "tail_admission": true,
+        "policy_changed": true,
+        "forwarding_input_changed": true,
+        "physical_drop_first_original_seq1": true,
+        "source_checkpoint": true,
+        "source_files": true,
+        "dependencies": true,
+        "tail_base_patch_sha256": true,
+        "patch_sha256": true,
+        "installed_diff_sha256": true,
+        "ns3_head": true,
+        "runtime_files": true,
+        "build_ready_sha256": true,
+        "image_ref": true,
+        "hints": true,
+        "additional_parameters": true,
+        "input_files": true,
+        "state_static_sha256": true,
+        "dynamic_input_sha256": true,
+        "timeout_s": true,
+        "prospective_gates": true,
+        "command_except_output_locator": true,
+        "environment_except_queue_mode_output_locators": true
+      }
+    },
+    "actual_launch_commits": {
+      "control100": "b6112ce8bd4e2be9c0508bb2cbded4aad1713dad",
+      "fifo4-96": "d5d6d2932a9b27b7dafe76072df9c96cf3c956e4",
+      "codel4-96": "d5d6d2932a9b27b7dafe76072df9c96cf3c956e4"
+    },
+    "launch_analyzer_sha256": {
+      "control100": "52763aabc17748db1528360819bd8241611a9ebc3757fc7aba87e9f50bb95b29",
+      "fifo4-96": "52763aabc17748db1528360819bd8241611a9ebc3757fc7aba87e9f50bb95b29",
+      "codel4-96": "52763aabc17748db1528360819bd8241611a9ebc3757fc7aba87e9f50bb95b29"
+    },
+    "allowed_differences": [
+      "source queue mode/maxima and their native qdisc default metadata",
+      "run-output locator; corresponding trace-output directories"
+    ],
+    "launch_commit_boundary": "Actual Git HEAD is recorded per case; exact executed source/runtime identities are compared independently."
+  },
+  "cases": {
+    "control100": {
+      "case": "control100",
+      "definition": {
+        "kind": "leo",
+        "mode": "selective",
+        "rate": 10,
+        "queue": 100,
+        "duration": 200,
+        "tail": true
+      },
+      "queue_mode": "off",
+      "config": {
+        "mode": "off",
+        "node_id": "1584",
+        "device_id": "1",
+        "txq": "0",
+        "device_max": "100p",
+        "qdisc_type": "none",
+        "qdisc_max": "0p",
+        "wake_initialized": "0",
+        "physical_drop_enabled": "0"
+      },
+      "metrics": {
+        "whole": {
+          "app_bytes": 238662720,
+          "retx_packets": 507,
+          "recovery_entries": 40,
+          "loss_state_entries": 1,
+          "unique_all_layer_tx_losses": 486,
+          "start_ns": 0,
+          "end_ns": 200000000000,
+          "app_goodput_mbps": 9.5465088,
+          "combined_mean_queued_packets": 36.098390139635,
+          "qdisc_mean_packets": 0.0,
+          "source_device_mean_packets": 36.098390139635,
+          "requeue_mean_packets": 0.0,
+          "combined_mean_bytes": 51765.09146023659,
+          "peak_combined_queued_packets": 100,
+          "network_native_mean_queued_packets": 39.29360247417,
+          "network_plus_qdisc_requeue_mean_packets": 39.29360247417,
+          "serialization_busy_fraction": 0.99244186623,
+          "unmapped_drop_notifications": 0
+        },
+        "first": {
+          "app_bytes": 3007020,
+          "recovery_entries": 0,
+          "loss_state_entries": 0,
+          "retx_packets": 0,
+          "unique_all_layer_tx_losses": 0,
+          "start_ns": 25700000000,
+          "end_ns": 28200000000,
+          "app_goodput_mbps": 9.622464,
+          "combined_mean_queued_packets": 24.3293601612,
+          "qdisc_mean_packets": 0.0,
+          "source_device_mean_packets": 24.3293601612,
+          "requeue_mean_packets": 0.0,
+          "combined_mean_bytes": 34888.3024711608,
+          "peak_combined_queued_packets": 29,
+          "network_native_mean_queued_packets": 28.5043347184,
+          "network_plus_qdisc_requeue_mean_packets": 28.5043347184,
+          "serialization_busy_fraction": 1.0,
+          "unmapped_drop_notifications": 0
+        },
+        "post": {
+          "app_bytes": 601680,
+          "recovery_entries": 0,
+          "loss_state_entries": 0,
+          "retx_packets": 0,
+          "unique_all_layer_tx_losses": 0,
+          "start_ns": 75000000000,
+          "end_ns": 75500000000,
+          "app_goodput_mbps": 9.62688,
+          "combined_mean_queued_packets": 87.232380644,
+          "qdisc_mean_packets": 0.0,
+          "source_device_mean_packets": 87.232380644,
+          "requeue_mean_packets": 0.0,
+          "combined_mean_bytes": 125091.233843496,
+          "peak_combined_queued_packets": 97,
+          "network_native_mean_queued_packets": 93.93521424,
+          "network_plus_qdisc_requeue_mean_packets": 93.93521424,
+          "serialization_busy_fraction": 1.0,
+          "unmapped_drop_notifications": 0
+        },
+        "focus": {
+          "app_bytes": 3607320,
+          "retx_packets": 12,
+          "recovery_entries": 2,
+          "loss_state_entries": 0,
+          "unique_all_layer_tx_losses": 11,
+          "start_ns": 74500000000,
+          "end_ns": 77500000000,
+          "app_goodput_mbps": 9.61952,
+          "combined_mean_queued_packets": 48.717925536,
+          "qdisc_mean_packets": 0.0,
+          "source_device_mean_packets": 48.717925536,
+          "requeue_mean_packets": 0.0,
+          "combined_mean_bytes": 69861.505218624,
+          "peak_combined_queued_packets": 100,
+          "network_native_mean_queued_packets": 55.483399597,
+          "network_plus_qdisc_requeue_mean_packets": 55.483399597,
+          "serialization_busy_fraction": 1.0,
+          "unmapped_drop_notifications": 0
+        }
+      },
+      "served_source_residence": {
+        "whole": {
+          "samples": 173022,
+          "mean_ns": 41724668.256608985,
+          "p95_ns": 103267295,
+          "p99_ns": 113848471,
+          "max_ns": 114682779
+        },
+        "first": {
+          "samples": 2180,
+          "mean_ns": 27765263.18761468,
+          "p95_ns": 32125268,
+          "p99_ns": 32126315,
+          "max_ns": 32126572
+        },
+        "post": {
+          "samples": 435,
+          "mean_ns": 96199543.23678161,
+          "p95_ns": 104593892,
+          "p99_ns": 105741015,
+          "max_ns": 105741067
+        },
+        "focus": {
+          "samples": 2615,
+          "mean_ns": 56736413.24550669,
+          "p95_ns": 112623254,
+          "p99_ns": 113770128,
+          "max_ns": 113770454
+        }
+      },
+      "discarded_source_observed_residence": {
+        "whole": {
+          "samples": 486,
+          "mean_ns": 0.0,
+          "p95_ns": 0,
+          "p99_ns": 0,
+          "max_ns": 0
+        },
+        "first": {
+          "samples": 0,
+          "mean_ns": null,
+          "p95_ns": null,
+          "p99_ns": null,
+          "max_ns": null
+        },
+        "post": {
+          "samples": 0,
+          "mean_ns": null,
+          "p95_ns": null,
+          "p99_ns": null,
+          "max_ns": null
+        },
+        "focus": {
+          "samples": 11,
+          "mean_ns": 0.0,
+          "p95_ns": 0,
+          "p99_ns": 0,
+          "max_ns": 0
+        }
+      },
+      "pending_source_age": {
+        "samples": 26,
+        "mean_ns": 15095262.76923077,
+        "p95_ns": 28862167,
+        "p99_ns": 28862167,
+        "max_ns": 28862167
+      },
+      "native_summary": {
+        "cutoff_ns": 200000000000,
+        "ingress": 173534,
+        "served": 173022,
+        "unique_source_discarded": 486,
+        "pending": 26,
+        "pending_qdisc": 0,
+        "pending_device": 26,
+        "pending_transit": 0,
+        "requeue_events": 0,
+        "serializing_at_cutoff": 1,
+        "qdisc_received": 0,
+        "qdisc_enqueued": 0,
+        "qdisc_dequeued": 0,
+        "qdisc_drop_before": 0,
+        "qdisc_drop_after": 0,
+        "qdisc_sent": 0,
+        "physical_drop_enabled": 0,
+        "physical_drop_fired": 0
+      },
+      "loss_notifications_by_layer": {
+        "TcDrop": 486
+      },
+      "unique_loss_count": 486,
+      "queue_conservation_groups": 74,
+      "qa": {
+        "output_hashes": true,
+        "actual_root_coverage": true,
+        "source_ingress_conservation": true,
+        "native_queue_conservation": true,
+        "device_area_crosscheck": true,
+        "service_area_crosscheck": true,
+        "all_tagged_losses_match_sender_tx": true,
+        "source_losses_in_complete_coverage": true,
+        "original_12_measurement_csvs_equal": true
+      },
+      "source": {
+        "manifest_sha256": "d5499dd9af79f6361b89d5b36306b228a3b86fafd4402b8f6790bf0b8d5aded5",
+        "launch_commit": "b6112ce8bd4e2be9c0508bb2cbded4aad1713dad",
+        "source_checkpoint": "b6112ce8bd4e2be9c0508bb2cbded4aad1713dad",
+        "patch_sha256": "90f9114c9a31df219587aea1e9406dccaeb3c4891243699c5d825827369ac72f",
+        "runtime_mapping_sha256": "1425791511b2fa36d00da738cce8e9a362926200ef57fa1b9f2883ddd9cf74d8"
+      },
+      "caveats": [
+        "Nominal4+96 excludes requeued and serializing slots; both are observed separately.",
+        "Qdisc/native byte sizes include different layer headers; packet count and actual total residence are primary comparisons.",
+        "Source served residence is per packet TC ingress to serialization start; censored and dropped residence are separate.",
+        "All-layer loss counts are tagged payload-bearing data; ACK/control or untagged drop notifications are reported separately.",
+        "All-layer loss counts deduplicate full transmitted-segment identities, not repeated notifications or UID alone.",
+        "One fixed deterministic natural trace per condition; screening gates do not prove universal performance."
+      ]
+    },
+    "fifo4-96": {
+      "case": "fifo4-96",
+      "definition": {
+        "kind": "leo",
+        "mode": "selective",
+        "rate": 10,
+        "queue": 100,
+        "duration": 200,
+        "tail": true
+      },
+      "queue_mode": "fifo",
+      "config": {
+        "mode": "fifo",
+        "node_id": "1584",
+        "device_id": "1",
+        "txq": "0",
+        "device_max": "4p",
+        "qdisc_type": "ns3::FifoQueueDisc",
+        "qdisc_max": "96p",
+        "wake_initialized": "1",
+        "physical_drop_enabled": "0"
+      },
+      "metrics": {
+        "whole": {
+          "app_bytes": 238662720,
+          "retx_packets": 507,
+          "recovery_entries": 40,
+          "loss_state_entries": 1,
+          "unique_all_layer_tx_losses": 486,
+          "start_ns": 0,
+          "end_ns": 200000000000,
+          "app_goodput_mbps": 9.5465088,
+          "combined_mean_queued_packets": 36.098390139635,
+          "qdisc_mean_packets": 32.14517869511,
+          "source_device_mean_packets": 3.953211444525,
+          "requeue_mean_packets": 0.0,
+          "combined_mean_bytes": 51700.80110284637,
+          "peak_combined_queued_packets": 100,
+          "network_native_mean_queued_packets": 7.14842377906,
+          "network_plus_qdisc_requeue_mean_packets": 39.29360247417,
+          "serialization_busy_fraction": 0.99244186623,
+          "unmapped_drop_notifications": 0
+        },
+        "first": {
+          "app_bytes": 3007020,
+          "recovery_entries": 0,
+          "loss_state_entries": 0,
+          "retx_packets": 0,
+          "unique_all_layer_tx_losses": 0,
+          "start_ns": 25700000000,
+          "end_ns": 28200000000,
+          "app_goodput_mbps": 9.622464,
+          "combined_mean_queued_packets": 24.3293601612,
+          "qdisc_mean_packets": 20.3293601612,
+          "source_device_mean_packets": 4.0,
+          "requeue_mean_packets": 0.0,
+          "combined_mean_bytes": 34847.6437508384,
+          "peak_combined_queued_packets": 29,
+          "network_native_mean_queued_packets": 8.1749745572,
+          "network_plus_qdisc_requeue_mean_packets": 28.5043347184,
+          "serialization_busy_fraction": 1.0,
+          "unmapped_drop_notifications": 0
+        },
+        "post": {
+          "app_bytes": 601680,
+          "recovery_entries": 0,
+          "loss_state_entries": 0,
+          "retx_packets": 0,
+          "unique_all_layer_tx_losses": 0,
+          "start_ns": 75000000000,
+          "end_ns": 75500000000,
+          "app_goodput_mbps": 9.62688,
+          "combined_mean_queued_packets": 87.232380644,
+          "qdisc_mean_packets": 83.232380644,
+          "source_device_mean_packets": 4.0,
+          "requeue_mean_packets": 0.0,
+          "combined_mean_bytes": 124924.769082208,
+          "peak_combined_queued_packets": 97,
+          "network_native_mean_queued_packets": 10.702833596,
+          "network_plus_qdisc_requeue_mean_packets": 93.93521424,
+          "serialization_busy_fraction": 1.0,
+          "unmapped_drop_notifications": 0
+        },
+        "focus": {
+          "app_bytes": 3607320,
+          "retx_packets": 12,
+          "recovery_entries": 2,
+          "loss_state_entries": 0,
+          "unique_all_layer_tx_losses": 11,
+          "start_ns": 74500000000,
+          "end_ns": 77500000000,
+          "app_goodput_mbps": 9.61952,
+          "combined_mean_queued_packets": 48.717925536,
+          "qdisc_mean_packets": 44.719197341333334,
+          "source_device_mean_packets": 3.9987281946666666,
+          "requeue_mean_packets": 0.0,
+          "combined_mean_bytes": 69772.06682394134,
+          "peak_combined_queued_packets": 100,
+          "network_native_mean_queued_packets": 10.764202255666667,
+          "network_plus_qdisc_requeue_mean_packets": 55.483399597,
+          "serialization_busy_fraction": 1.0,
+          "unmapped_drop_notifications": 0
+        }
+      },
+      "served_source_residence": {
+        "whole": {
+          "samples": 173022,
+          "mean_ns": 41724668.256608985,
+          "p95_ns": 103267295,
+          "p99_ns": 113848471,
+          "max_ns": 114682779
+        },
+        "first": {
+          "samples": 2180,
+          "mean_ns": 27765263.18761468,
+          "p95_ns": 32125268,
+          "p99_ns": 32126315,
+          "max_ns": 32126572
+        },
+        "post": {
+          "samples": 435,
+          "mean_ns": 96199543.23678161,
+          "p95_ns": 104593892,
+          "p99_ns": 105741015,
+          "max_ns": 105741067
+        },
+        "focus": {
+          "samples": 2615,
+          "mean_ns": 56736413.24550669,
+          "p95_ns": 112623254,
+          "p99_ns": 113770128,
+          "max_ns": 113770454
+        }
+      },
+      "discarded_source_observed_residence": {
+        "whole": {
+          "samples": 486,
+          "mean_ns": 0.0,
+          "p95_ns": 0,
+          "p99_ns": 0,
+          "max_ns": 0
+        },
+        "first": {
+          "samples": 0,
+          "mean_ns": null,
+          "p95_ns": null,
+          "p99_ns": null,
+          "max_ns": null
+        },
+        "post": {
+          "samples": 0,
+          "mean_ns": null,
+          "p95_ns": null,
+          "p99_ns": null,
+          "max_ns": null
+        },
+        "focus": {
+          "samples": 11,
+          "mean_ns": 0.0,
+          "p95_ns": 0,
+          "p99_ns": 0,
+          "max_ns": 0
+        }
+      },
+      "pending_source_age": {
+        "samples": 26,
+        "mean_ns": 15095262.76923077,
+        "p95_ns": 28862167,
+        "p99_ns": 28862167,
+        "max_ns": 28862167
+      },
+      "native_summary": {
+        "cutoff_ns": 200000000000,
+        "ingress": 173534,
+        "served": 173022,
+        "unique_source_discarded": 486,
+        "pending": 26,
+        "pending_qdisc": 22,
+        "pending_device": 4,
+        "pending_transit": 0,
+        "requeue_events": 0,
+        "serializing_at_cutoff": 1,
+        "qdisc_received": 173534,
+        "qdisc_enqueued": 173048,
+        "qdisc_dequeued": 173026,
+        "qdisc_drop_before": 486,
+        "qdisc_drop_after": 0,
+        "qdisc_sent": 173026,
+        "physical_drop_enabled": 0,
+        "physical_drop_fired": 0
+      },
+      "loss_notifications_by_layer": {
+        "qdisc_DropBeforeEnqueue:Queue disc limit exceeded": 486
+      },
+      "unique_loss_count": 486,
+      "queue_conservation_groups": 74,
+      "qa": {
+        "output_hashes": true,
+        "actual_root_coverage": true,
+        "source_ingress_conservation": true,
+        "native_queue_conservation": true,
+        "device_area_crosscheck": true,
+        "service_area_crosscheck": true,
+        "all_tagged_losses_match_sender_tx": true,
+        "source_losses_in_complete_coverage": true,
+        "original_12_measurement_csvs_equal": false
+      },
+      "source": {
+        "manifest_sha256": "2b648bea15e02b8ee2958a236999011992c7113125a75f35124462d09168fef4",
+        "launch_commit": "d5d6d2932a9b27b7dafe76072df9c96cf3c956e4",
+        "source_checkpoint": "b6112ce8bd4e2be9c0508bb2cbded4aad1713dad",
+        "patch_sha256": "90f9114c9a31df219587aea1e9406dccaeb3c4891243699c5d825827369ac72f",
+        "runtime_mapping_sha256": "1425791511b2fa36d00da738cce8e9a362926200ef57fa1b9f2883ddd9cf74d8"
+      },
+      "caveats": [
+        "Nominal4+96 excludes requeued and serializing slots; both are observed separately.",
+        "Qdisc/native byte sizes include different layer headers; packet count and actual total residence are primary comparisons.",
+        "Source served residence is per packet TC ingress to serialization start; censored and dropped residence are separate.",
+        "All-layer loss counts are tagged payload-bearing data; ACK/control or untagged drop notifications are reported separately.",
+        "All-layer loss counts deduplicate full transmitted-segment identities, not repeated notifications or UID alone.",
+        "One fixed deterministic natural trace per condition; screening gates do not prove universal performance."
+      ]
+    },
+    "codel4-96": {
+      "case": "codel4-96",
+      "definition": {
+        "kind": "leo",
+        "mode": "selective",
+        "rate": 10,
+        "queue": 100,
+        "duration": 200,
+        "tail": true
+      },
+      "queue_mode": "codel",
+      "config": {
+        "mode": "codel",
+        "node_id": "1584",
+        "device_id": "1",
+        "txq": "0",
+        "device_max": "4p",
+        "qdisc_type": "ns3::CoDelQueueDisc",
+        "qdisc_max": "96p",
+        "wake_initialized": "1",
+        "physical_drop_enabled": "0"
+      },
+      "metrics": {
+        "whole": {
+          "app_bytes": 223508940,
+          "retx_packets": 174,
+          "recovery_entries": 46,
+          "loss_state_entries": 1,
+          "unique_all_layer_tx_losses": 171,
+          "start_ns": 0,
+          "end_ns": 200000000000,
+          "app_goodput_mbps": 8.9403576,
+          "combined_mean_queued_packets": 2.795113505945,
+          "qdisc_mean_packets": 1.090438905915,
+          "source_device_mean_packets": 1.70467460003,
+          "requeue_mean_packets": 0.0,
+          "combined_mean_bytes": 4006.0118897133,
+          "peak_combined_queued_packets": 100,
+          "network_native_mean_queued_packets": 1.72801445005,
+          "network_plus_qdisc_requeue_mean_packets": 2.818453355965,
+          "serialization_busy_fraction": 0.929351132195,
+          "unmapped_drop_notifications": 0
+        },
+        "first": {
+          "app_bytes": 2962860,
+          "recovery_entries": 0,
+          "loss_state_entries": 0,
+          "retx_packets": 0,
+          "unique_all_layer_tx_losses": 0,
+          "start_ns": 25700000000,
+          "end_ns": 28200000000,
+          "app_goodput_mbps": 9.481152,
+          "combined_mean_queued_packets": 2.6587149348,
+          "qdisc_mean_packets": 0.5863233792,
+          "source_device_mean_packets": 2.0723915556,
+          "requeue_mean_packets": 0.0,
+          "combined_mean_bytes": 3811.4245697448,
+          "peak_combined_queued_packets": 9,
+          "network_native_mean_queued_packets": 3.10986244,
+          "network_plus_qdisc_requeue_mean_packets": 3.6961858192,
+          "serialization_busy_fraction": 0.986178004,
+          "unmapped_drop_notifications": 0
+        },
+        "post": {
+          "app_bytes": 597540,
+          "recovery_entries": 0,
+          "loss_state_entries": 0,
+          "unique_all_layer_tx_losses": 1,
+          "retx_packets": 0,
+          "start_ns": 75000000000,
+          "end_ns": 75500000000,
+          "app_goodput_mbps": 9.56064,
+          "combined_mean_queued_packets": 8.189702588,
+          "qdisc_mean_packets": 4.189702588,
+          "source_device_mean_packets": 4.0,
+          "requeue_mean_packets": 0.0,
+          "combined_mean_bytes": 11735.654106016,
+          "peak_combined_queued_packets": 10,
+          "network_native_mean_queued_packets": 5.366286,
+          "network_plus_qdisc_requeue_mean_packets": 9.555988588,
+          "serialization_busy_fraction": 1.0,
+          "unmapped_drop_notifications": 0
+        },
+        "focus": {
+          "app_bytes": 3328560,
+          "retx_packets": 1,
+          "recovery_entries": 1,
+          "loss_state_entries": 0,
+          "unique_all_layer_tx_losses": 1,
+          "start_ns": 74500000000,
+          "end_ns": 77500000000,
+          "app_goodput_mbps": 8.87616,
+          "combined_mean_queued_packets": 2.63939332,
+          "qdisc_mean_packets": 0.8951964593333334,
+          "source_device_mean_packets": 1.7441968606666667,
+          "requeue_mean_packets": 0.0,
+          "combined_mean_bytes": 3783.099627961333,
+          "peak_combined_queued_packets": 15,
+          "network_native_mean_queued_packets": 2.0237248263333334,
+          "network_plus_qdisc_requeue_mean_packets": 2.918921285666667,
+          "serialization_busy_fraction": 0.922008828,
+          "unmapped_drop_notifications": 0
+        }
+      },
+      "served_source_residence": {
+        "whole": {
+          "samples": 162023,
+          "mean_ns": 3432026.1494849497,
+          "p95_ns": 10246725,
+          "p99_ns": 17157560,
+          "max_ns": 112115947
+        },
+        "first": {
+          "samples": 2149,
+          "mean_ns": 3075923.5825965567,
+          "p95_ns": 8040821,
+          "p99_ns": 9188314,
+          "max_ns": 9188572
+        },
+        "post": {
+          "samples": 436,
+          "mean_ns": 9336581.584862385,
+          "p95_ns": 11201643,
+          "p99_ns": 11201848,
+          "max_ns": 11201896
+        },
+        "focus": {
+          "samples": 2411,
+          "mean_ns": 3282959.8311903775,
+          "p95_ns": 10055042,
+          "p99_ns": 11201801,
+          "max_ns": 16872645
+        }
+      },
+      "discarded_source_observed_residence": {
+        "whole": {
+          "samples": 171,
+          "mean_ns": 17259909.514619883,
+          "p95_ns": 72893218,
+          "p99_ns": 101791312,
+          "max_ns": 107526122
+        },
+        "first": {
+          "samples": 0,
+          "mean_ns": null,
+          "p95_ns": null,
+          "p99_ns": null,
+          "max_ns": null
+        },
+        "post": {
+          "samples": 1,
+          "mean_ns": 5465361.0,
+          "p95_ns": 5465361,
+          "p99_ns": 5465361,
+          "max_ns": 5465361
+        },
+        "focus": {
+          "samples": 1,
+          "mean_ns": 5465361.0,
+          "p95_ns": 5465361,
+          "p99_ns": 5465361,
+          "max_ns": 5465361
+        }
+      },
+      "pending_source_age": {
+        "samples": 3,
+        "mean_ns": 1361281.3333333333,
+        "p95_ns": 2890930,
+        "p99_ns": 2890930,
+        "max_ns": 2890930
+      },
+      "native_summary": {
+        "cutoff_ns": 200000000000,
+        "ingress": 162197,
+        "served": 162023,
+        "unique_source_discarded": 171,
+        "pending": 3,
+        "pending_qdisc": 0,
+        "pending_device": 3,
+        "pending_transit": 0,
+        "requeue_events": 0,
+        "serializing_at_cutoff": 1,
+        "qdisc_received": 162197,
+        "qdisc_enqueued": 162143,
+        "qdisc_dequeued": 162143,
+        "qdisc_drop_before": 54,
+        "qdisc_drop_after": 117,
+        "qdisc_sent": 162026,
+        "physical_drop_enabled": 0,
+        "physical_drop_fired": 0
+      },
+      "loss_notifications_by_layer": {
+        "qdisc_DropAfterDequeue:Target exceeded drop": 117,
+        "qdisc_DropBeforeEnqueue:Overlimit drop": 54
+      },
+      "unique_loss_count": 171,
+      "queue_conservation_groups": 74,
+      "qa": {
+        "output_hashes": true,
+        "actual_root_coverage": true,
+        "source_ingress_conservation": true,
+        "native_queue_conservation": true,
+        "device_area_crosscheck": true,
+        "service_area_crosscheck": true,
+        "all_tagged_losses_match_sender_tx": true,
+        "source_losses_in_complete_coverage": true,
+        "original_12_measurement_csvs_equal": false
+      },
+      "source": {
+        "manifest_sha256": "1433e6aedcd09fa2b00466e7bc119a72b499a77aa968c5aa28962455c7e47867",
+        "launch_commit": "d5d6d2932a9b27b7dafe76072df9c96cf3c956e4",
+        "source_checkpoint": "b6112ce8bd4e2be9c0508bb2cbded4aad1713dad",
+        "patch_sha256": "90f9114c9a31df219587aea1e9406dccaeb3c4891243699c5d825827369ac72f",
+        "runtime_mapping_sha256": "1425791511b2fa36d00da738cce8e9a362926200ef57fa1b9f2883ddd9cf74d8"
+      },
+      "caveats": [
+        "Nominal4+96 excludes requeued and serializing slots; both are observed separately.",
+        "Qdisc/native byte sizes include different layer headers; packet count and actual total residence are primary comparisons.",
+        "Source served residence is per packet TC ingress to serialization start; censored and dropped residence are separate.",
+        "All-layer loss counts are tagged payload-bearing data; ACK/control or untagged drop notifications are reported separately.",
+        "All-layer loss counts deduplicate full transmitted-segment identities, not repeated notifications or UID alone.",
+        "One fixed deterministic natural trace per condition; screening gates do not prove universal performance."
+      ]
+    }
+  },
+  "prospective_gates": {
+    "fifo4-96": {
+      "goodput_ratio": 1.0,
+      "post_queue_ratio": 1.0,
+      "post_wait_ratio": 1.0,
+      "checks": {
+        "goodput_retained": true,
+        "post_mean_queue_halved": false,
+        "post_served_wait_halved": false,
+        "focus_unique_losses_at_most5": false,
+        "whole_combined_queue_not_worse": true,
+        "whole_served_wait_not_worse": true,
+        "whole_unique_losses_not_worse": true,
+        "whole_network_backlog_not_worse": true,
+        "no_unmapped_drop_notifications": true
+      },
+      "all_pass": false
+    },
+    "codel4-96": {
+      "goodput_ratio": 0.9365054584142845,
+      "post_queue_ratio": 0.09388374509028491,
+      "post_wait_ratio": 0.09705432344810314,
+      "checks": {
+        "goodput_retained": false,
+        "post_mean_queue_halved": true,
+        "post_served_wait_halved": true,
+        "focus_unique_losses_at_most5": true,
+        "whole_combined_queue_not_worse": true,
+        "whole_served_wait_not_worse": true,
+        "whole_unique_losses_not_worse": true,
+        "whole_network_backlog_not_worse": true,
+        "no_unmapped_drop_notifications": true
+      },
+      "all_pass": false
+    }
+  }
+}

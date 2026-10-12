@@ -8,7 +8,8 @@ import math
 from pathlib import Path
 
 HERE=Path(__file__).resolve().parent
-WINDOWS={'whole':(0,200000000000),'post':(75000000000,75500000000),'focus':(74500000000,77500000000)}
+WINDOWS={'whole':(0,200000000000),'first':(25700000000,28200000000),
+         'post':(75000000000,75500000000),'focus':(74500000000,77500000000)}
 
 
 def sha(path):
@@ -48,6 +49,32 @@ def verify(run):
         for name,record in ref['input_files'].items():assert sha(run/name)==record['sha256']
         assert mapping(m['state_static_sha256'])==ref['state_static_mapping_sha256'] and mapping(m['dynamic_input_sha256'])==ref['dynamic_mapping_sha256']
     return m
+
+
+def matched_inputs(root):
+    """Allow only the predeclared queue mode and run-output locator differences."""
+    manifests={name:verify(root/name) for name in ['control100','fifo4-96','codel4-96']}
+    base=manifests['control100']
+    fields=['definition','tail_admission','policy_changed','forwarding_input_changed',
+            'physical_drop_first_original_seq1','source_checkpoint','source_files','dependencies',
+            'tail_base_patch_sha256','patch_sha256','installed_diff_sha256','ns3_head',
+            'runtime_files','build_ready_sha256','image_ref','hints','additional_parameters',
+            'input_files','state_static_sha256','dynamic_input_sha256','timeout_s','prospective_gates']
+    checks={}
+    normalize_command=lambda m:[('--run_dir=<CASE>' if x.startswith('--run_dir=') else x) for x in m['command']]
+    normalize_env=lambda m:{k:v for k,v in m['environment'].items() if k not in
+        ['CS30401_BACKPRESSURE_MODE','CS30401_STUDY_TRACE_DIR','CS30401_ORBIT_QUEUE_TRACE_DIR']}
+    for name,m in manifests.items():
+        checks[name]={field:m[field]==base[field] for field in fields}
+        checks[name]['command_except_output_locator']=normalize_command(m)==normalize_command(base)
+        checks[name]['environment_except_queue_mode_output_locators']=normalize_env(m)==normalize_env(base)
+        assert all(checks[name].values()),('Unmatched inputs/runtime',name,checks[name])
+    return dict(all_pass=True,checks=checks,
+        actual_launch_commits={name:m['launch_commit'] for name,m in manifests.items()},
+        launch_analyzer_sha256={name:m['source_files']['code/queue-backpressure/analyze.py'] for name,m in manifests.items()},
+        allowed_differences=['source queue mode/maxima and their native qdisc default metadata',
+                             'run-output locator; corresponding trace-output directories'],
+        launch_commit_boundary='Actual Git HEAD is recorded per case; exact executed source/runtime identities are compared independently.')
 
 
 def analyze(run):
@@ -163,6 +190,7 @@ def analyze(run):
         caveats=['Nominal4+96 excludes requeued and serializing slots; both are observed separately.',
                  'Qdisc/native byte sizes include different layer headers; packet count and actual total residence are primary comparisons.',
                  'Source served residence is per packet TC ingress to serialization start; censored and dropped residence are separate.',
+                 'All-layer loss counts are tagged payload-bearing data; ACK/control or untagged drop notifications are reported separately.',
                  'All-layer loss counts deduplicate full transmitted-segment identities, not repeated notifications or UID alone.',
                  'One fixed deterministic natural trace per condition; screening gates do not prove universal performance.'])
 
@@ -170,6 +198,7 @@ def analyze(run):
 def main():
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--root',type=Path,default=Path('/tmp/queue-backpressure'));p.add_argument('--out',type=Path,required=True)
     args=p.parse_args();assert not args.out.exists(),'Refuse overwrite'
+    matched=matched_inputs(args.root)
     results={name:analyze(args.root/name) for name in ['control100','fifo4-96','codel4-96']};base=results['control100'];gates={}
     for name in ['fifo4-96','codel4-96']:
         c=results[name];whole=c['metrics']['whole'];bw=base['metrics']['whole'];post=c['metrics']['post'];bp=base['metrics']['post']
@@ -182,7 +211,9 @@ def main():
             whole_network_backlog_not_worse=whole['network_plus_qdisc_requeue_mean_packets']<=bw['network_plus_qdisc_requeue_mean_packets'],
             no_unmapped_drop_notifications=whole['unmapped_drop_notifications']==0)
         gates[name]=dict(goodput_ratio=gp,post_queue_ratio=qm,post_wait_ratio=wr,checks=checks,all_pass=all(checks.values()))
-    record=dict(schema=1,helper_sha256=sha(Path(__file__)),reference_receipt_sha256=sha(HERE/'reference-receipt.json'),cases=results,prospective_gates=gates)
+    record=dict(schema=2,helper_sha256=sha(Path(__file__)),reference_receipt_sha256=sha(HERE/'reference-receipt.json'),
+                posthoc_analysis_phase='After all3 simulations: added first-event report and explicit matched-input/runtime receipts; no simulation/source/runtime changes.',
+                matched_inputs=matched,cases=results,prospective_gates=gates)
     args.out.parent.mkdir(parents=True,exist_ok=True);args.out.write_text(json.dumps(record,indent=2)+'\n',newline='\n')
     print(json.dumps({'out':str(args.out),'sha256':sha(args.out),'gates':gates}))
 
