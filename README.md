@@ -4,6 +4,8 @@ This repository holds the team's shared lab work. Use the map below to find a re
 
 ## Current direction under review — 12 October 2026
 
+Read [the current results and research retrospective](docs/research/20261012-progress-retrospective.md) for the interpretation of the completed studies, throughput headroom in the representative setup, and the assumptions behind proactive CUBIC window changes and selective loss waiting. It distinguishes measured effects from unimplemented candidates and links the source audit. It proposes priorities for review without deciding the team's final topic.
+
 The latest work completed **21 valid simulations across four independent candidates in parallel**: orbit-derived BBR BDP targets, BBR ProbeRTT timing, CUBIC HyStart, and short new-data holds. Start with [the common comparison and handoff](docs/experiments/20261012-parallel-candidates.md), then read each linked experiment and replay README. Each track uses a separate source volume. One additional BBR attempt used an outdated runtime during a build and is retained separately, excluded from performance results. [Draft PR #16](https://github.com/Jeongmin07/CS30401-Lab1/pull/16) holds the unmerged evidence; these experiments do not decide the team's final topic.
 
 There is no clear large performance gain in these settings. BDP targets and holds did not improve LEO throughput; disabling HyStart was worse, and the fixed-window HyStart candidate deferred no actual exit. Early BBR remeasurement moved a service dip and produced a small net difference with added drop records. The common record shows each matched pair and its costs; these different scenarios are not an algorithm ranking.
