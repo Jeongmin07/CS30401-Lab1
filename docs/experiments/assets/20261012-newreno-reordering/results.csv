@@ -1,0 +1,8 @@
+case,family,kind,cc,rate_mbps,queue_pkts,duration_s,threshold,window,goodput_mbps,distinct_drops,candidate_unnecessary_recovery,accepted_original_also_retransmitted,retransmission_delay_ms,gap_repair_delay_ms
+nr-stable-base,stable,micro,TcpNewReno,100,2000,20,3,,91.081104,0,0,0,,
+nr-step-base,delay-step,micro,TcpNewReno,100,2000,4,3,,1.211640,0,1,1,,
+nr-step-guard64,delay-step,micro,TcpNewReno,100,2000,4,64,0.190-0.700,73.324920,0,0,1,,
+nr-loss-base,actual-loss,micro,TcpNewReno,100,2000,20,3,,69.628728,1,0,0,50.34912,106.57488
+nr-loss-guard64,actual-loss,micro,TcpNewReno,100,2000,20,64,9.990-10.300,69.662400,1,0,0,57.34704,113.57280
+nr-leo100-base,bulk-leo,leo,TcpNewReno,100,1000,85,3,,88.782121412,936,2,45,,
+nr-leo100-guard64,bulk-leo,leo,TcpNewReno,100,1000,85,64,26.1-26.5|74.9-75.3,95.026475294,936,0,0,,

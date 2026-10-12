@@ -233,3 +233,6 @@ __marimo__/
 **/logs_ns3/tcp_flow_*_cwnd.csv
 **/logs_ns3/tcp_flow_*_rtt.csv
 **/logs_ns3/tcp_flow_*_progress.csv
+run.sh
+*.log
+*.log
