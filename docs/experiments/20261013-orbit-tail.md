@@ -11,7 +11,7 @@
 - selective의 공유 wait가 현재 활성이고 deadline·등록 종료 전이며, congestion state가 DISORDER다.
 - 이번 ACK가 scoreboard의 unique new SACK bytes를 추가했고 episode에서 추가 송신한 적이 없다.
 - application Close-on-empty 또는 send shutdown으로 이후 payload가 없음을 확인하며, 실제 TX buffer의 아직 보내지 않은 payload가1..MSS이다. 특정 packet 번호나20MSS 크기를 하드코딩하지 않는다.
-- 현재 highTx/nextTx가 정상 새 데이터 경계를 가리킨다. receiver window는 `seq+payload <= highRxAck+rWnd`로 확인한다.
+- 정상 `AvailableWindow`가 남은 tail보다 작아 extra allowance가 실제로 필요한 경우에만 허용한다. 정상 여유가 있는데 Nagle/SWS/NextSeg 등의 이유로 송신하지 못한 경우는 우회하지 않는다. 현재 highTx/nextTx가 정상 새 데이터 경계를 가리킨다. receiver window는 `seq+payload <= highRxAck+rWnd`로 확인한다.
 - 실제 `pipe+payload <= cwnd+MSS`다. 현재 cwnd·PRR/delivered counter·SACK 정보는 변경하지 않는다. episode당 추가 original segment는 최대1개다.
 
 기존 `SendDataPacket`으로 original data를 보내 FIN·RTO·SentBytes·NotifyDataSent·송신 trace를 그대로 사용하고 nextTx를 정상 진행시킨다. pacing 중 timer가 남아 있으면 우회하지 않는다. loss deadline을 연장하거나 PRR를 지속적으로 우회하지 않는다. 추가 허용량은 직접 pipe/cwnd 한계를 확장하는 실험적인 결정이며 혼잡·실제 손실 비용이 없다고 가정하지 않는다. 100GB LEO bulk는 종료되지 않아 이 tail 조건이 작동하지 않을 가능성이 높고, 무작동이면 그대로 보고한다.
@@ -23,7 +23,7 @@
 3. 같은 LEO에서 기존과 동일한 original old-flight drop 규칙: baseline/selective+tail2조건. drop packet의 flow/tx_id/TXtime/seq/payload와 실제 receiver drop 시각이 같은지 검증한다.
 4. 위 micro와 같은 조건의21MSS(28,980B): selective/selective+tail2조건. ordinary credit로 송신한 뒤2MSS가 남았을 때 추가 송신하지 않는 경계 조건이다. sweep이나 성과를 본 뒤 고른 크기가 아니다.
 
-각 실행의 wall cap은600초다. 별도 공식 container/volume, CPU2·4GiB, build1job을 사용하며 새 topology/state 생성은 없다. 시작 전에 parent가 공유 source checkpoint를 commit한다. 이후 최종 source/runtime를 변경하지 않고 실행한다. 소스 오류나 실패는 원본으로 보존하고 새 코드의 결과로 바꾸지 않는다.
+각 실행의 wall cap은600초다. 별도 공식 container/volume, CPU2·4GiB, build1job을 사용하며 새 topology/state 생성은 없다. 시작 전에 parent가 공유 source checkpoint를 commit한다. 이후 최종 source/runtime를 변경하지 않고 실행한다. 소스 오류나 실패는 원본으로 보존하고 새 코드의 결과로 바꾸지 않는다. 첫 development build 완료 후 peer review의 ordinary-window guard를 추가해 다시 build하며, 그 전 patch/readiness/build log는 별도로 보존한다. development build에서 실행한 simulation은0이다.
 
 ## 검증과 해석 범위
 

@@ -1,0 +1,10 @@
+{
+  "base_patch_sha256": "531bf802984af821afd928fb3932912aca383fcdec5771f30f78d75a806d5591",
+  "final_patch_sha256": "1df17f8a89a9137467d10ff23ff22d474e6cc57bd9b3e38401e3cb06c2a5f388",
+  "installer_sha256": "da023a0aa630a4a25b7c93d70c387882621b70a8382bc227bdb68e62e0791611",
+  "ns3_head": "99bc6f733274475b7a6e804128651e17ee2a2536",
+  "tail_source_files": {
+    "src/internet/model/tcp-socket-base.cc": "be83e4dc385b4d5fca27729b5acc428ef2147d96df91c491c735233752db1359",
+    "src/internet/model/tcp-socket-base.h": "2303f2a83affaf95439a547d416bf8a4153cf442f4a7c7afed303723eb182e12"
+  }
+}
