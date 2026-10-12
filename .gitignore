@@ -238,4 +238,4 @@ __marimo__/
 code/lab1-final/report/*.aux
 code/lab1-final/report/*.out
 code/lab1-final/report/development/
-code/lab1-final/report/preflight-data.json
+code/lab1-final/report/preflight-*.json

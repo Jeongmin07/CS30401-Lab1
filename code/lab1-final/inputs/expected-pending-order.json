@@ -1,0 +1,283 @@
+{
+  "schema": 1,
+  "phase": "Read-only post-simulation contract; execution sources, raw outputs and the original strict parity contract remain unchanged.",
+  "purpose": "Validation metadata only. Never generate reported values or rows from this file. No historical raw logs are embedded or required by the portable package.",
+  "original_strict_contract": {
+    "path": "code\\lab1-final\\inputs\\expected-parity.json",
+    "bytes": 74336,
+    "sha256": "e9fcfdb92ea8737b7f5e2f027ee3e2bc83f35d84728b443bebdf430335ff8afb"
+  },
+  "patch": {
+    "path": "code\\lab1-final\\runtimes\\bp.patch",
+    "bytes": 128930,
+    "sha256": "90f9114c9a31df219587aea1e9406dccaeb3c4891243699c5d825827369ac72f"
+  },
+  "method": {
+    "header": "SHA256 of exact first raw line, including its line ending.",
+    "ordered_nonpending": "SHA256 of concatenated original raw lines with parsed layer != pending, preserving file order and exact bytes.",
+    "pending_bag": "SHA256 of lexicographically byte-sorted complete original raw lines with parsed layer == pending, concatenated with their original line endings. Sorting preserves duplicate multiplicities. No fields, numeric precision or timestamps are altered.",
+    "checks": "CSV parsing must yield exactly one row per remaining raw line; all pending rows form the file-end suffix, have reason censored and the declared cutoff, and contain unique visit IDs. Header/columns/counts and both hashes must match exactly.",
+    "permitted_difference": "Only the ordering of complete terminal pending rows. All non-pending bytes remain ordered and exact; every pending field and multiplicity remains exact.",
+    "publication": "If every other declared measurement file passes the original strict contract, report 342 byte-identical measurement CSVs plus 3 bp_outcomes.csv files with exact ordered non-pending bytes and exact complete pending-row bags. The original 345-byte-parity attempt failed and is retained separately."
+  },
+  "source_cause": {
+    "installed_header_sha256": "5298eb4585f8082ba346ca5eec946959adc19327c4e6ad8ce52dec2649584819",
+    "definition": {
+      "line": 22,
+      "text": "static std::map<const Packet*,Entry> entries;"
+    },
+    "finish": {
+      "start_line": 166,
+      "loop_line": 170,
+      "output_lines": [
+        173,
+        174
+      ],
+      "text": "Finish iterates entries directly and writes the pending records in pointer-key order. Pointer allocation order is not the transmission/visit order."
+    },
+    "old_and_fresh_installed_headers_byte_identical": true,
+    "scope": "This explains a final observer serialization order difference. It does not authorize any TCP, queue, route, source or runtime mutation."
+  },
+  "cases": {
+    "control100": {
+      "file": "logs_ns3/bp_outcomes.csv",
+      "expected": {
+        "columns": [
+          "time_ns",
+          "node_id",
+          "device_id",
+          "layer",
+          "reason",
+          "visit_id",
+          "packet_uid",
+          "tagged",
+          "flow_id",
+          "tx_id",
+          "tx_time_ns",
+          "seq",
+          "payload_bytes",
+          "ingress_ns",
+          "residence_ns"
+        ],
+        "header_byte_sha256": "4d54cc312e7d9d66dd71c2893568e93e0167267314cc51a4696a373a2097cf77",
+        "ordered_nonpending_byte_sha256": "c6ef73bdfb11c435b58b82512cb166079a4a9581bcbece1bf144183ecf2f8fef",
+        "sorted_pending_raw_line_sha256": "f21d4e19712bec461ccc42188ed95d5e0fda9940c83b216c99e8d19bc590b041",
+        "rows": 512,
+        "nonpending_rows": 486,
+        "pending_rows": 26,
+        "pending_duplicate_raw_lines": 0,
+        "pending_unique_visit_ids": true,
+        "pending_suffix_only": true,
+        "pending_cutoff_ns": [
+          200000000000
+        ],
+        "pending_reason_values": [
+          "censored"
+        ]
+      },
+      "reference": {
+        "container": "lab1-queue-backpressure-20261013",
+        "raw": {
+          "path": "/tmp/queue-backpressure/control100/logs_ns3/bp_outcomes.csv",
+          "bytes": 59875,
+          "sha256": "3d38fa0d7aeee2abe0d6e2d5b3893860cf1296d36ce10f2ce56db49598552a47"
+        },
+        "manifest": {
+          "path": "/tmp/queue-backpressure/control100/manifest.json",
+          "bytes": 426681,
+          "sha256": "d5499dd9af79f6361b89d5b36306b228a3b86fafd4402b8f6790bf0b8d5aded5"
+        },
+        "installed_source": {
+          "path": "/home/ubuntu/ns-3.48/scratch/main_satnet/backpressure.h",
+          "bytes": 17202,
+          "sha256": "5298eb4585f8082ba346ca5eec946959adc19327c4e6ad8ce52dec2649584819"
+        },
+        "patch_sha256": "90f9114c9a31df219587aea1e9406dccaeb3c4891243699c5d825827369ac72f",
+        "installed_diff_sha256": "90f9114c9a31df219587aea1e9406dccaeb3c4891243699c5d825827369ac72f",
+        "original_strict_csv_contract_matches": true
+      },
+      "fresh_independent_verification": {
+        "container": "lab1-final-bp-20261013",
+        "raw": {
+          "path": "/tmp/lab1-final-bp/control100/logs_ns3/bp_outcomes.csv",
+          "bytes": 59875,
+          "sha256": "4cf14ab51b66135802bad3201ceb62ba94cde4c31fb33b08d3c58dd34f50a9b6"
+        },
+        "manifest": {
+          "path": "/tmp/lab1-final-bp/control100/manifest.json",
+          "bytes": 432482,
+          "sha256": "1c80d76a6aab3f58b000e522668d98c0be0f0c0d3f50f439bc7e4dea523c440c"
+        },
+        "installed_source": {
+          "path": "/home/ubuntu/ns-3.48/scratch/main_satnet/backpressure.h",
+          "bytes": 17202,
+          "sha256": "5298eb4585f8082ba346ca5eec946959adc19327c4e6ad8ce52dec2649584819"
+        },
+        "patch_sha256": "90f9114c9a31df219587aea1e9406dccaeb3c4891243699c5d825827369ac72f",
+        "installed_diff_sha256": "90f9114c9a31df219587aea1e9406dccaeb3c4891243699c5d825827369ac72f",
+        "all_expected_fields_exact": true,
+        "byte_hash_equal": false
+      }
+    },
+    "fifo4-96": {
+      "file": "logs_ns3/bp_outcomes.csv",
+      "expected": {
+        "columns": [
+          "time_ns",
+          "node_id",
+          "device_id",
+          "layer",
+          "reason",
+          "visit_id",
+          "packet_uid",
+          "tagged",
+          "flow_id",
+          "tx_id",
+          "tx_time_ns",
+          "seq",
+          "payload_bytes",
+          "ingress_ns",
+          "residence_ns"
+        ],
+        "header_byte_sha256": "4d54cc312e7d9d66dd71c2893568e93e0167267314cc51a4696a373a2097cf77",
+        "ordered_nonpending_byte_sha256": "b5a7da7e0dbbdbd2df52085e4171d813a2baaeeac5911ec540b474c5d4ad17a8",
+        "sorted_pending_raw_line_sha256": "f21d4e19712bec461ccc42188ed95d5e0fda9940c83b216c99e8d19bc590b041",
+        "rows": 512,
+        "nonpending_rows": 486,
+        "pending_rows": 26,
+        "pending_duplicate_raw_lines": 0,
+        "pending_unique_visit_ids": true,
+        "pending_suffix_only": true,
+        "pending_cutoff_ns": [
+          200000000000
+        ],
+        "pending_reason_values": [
+          "censored"
+        ]
+      },
+      "reference": {
+        "container": "lab1-queue-backpressure-20261013",
+        "raw": {
+          "path": "/tmp/queue-backpressure/fifo4-96/logs_ns3/bp_outcomes.csv",
+          "bytes": 57931,
+          "sha256": "b394d231d9e7aa5bdc6ffa3f8ef9313940623b842841c893036c28c95bbf2dcf"
+        },
+        "manifest": {
+          "path": "/tmp/queue-backpressure/fifo4-96/manifest.json",
+          "bytes": 426671,
+          "sha256": "2b648bea15e02b8ee2958a236999011992c7113125a75f35124462d09168fef4"
+        },
+        "installed_source": {
+          "path": "/home/ubuntu/ns-3.48/scratch/main_satnet/backpressure.h",
+          "bytes": 17202,
+          "sha256": "5298eb4585f8082ba346ca5eec946959adc19327c4e6ad8ce52dec2649584819"
+        },
+        "patch_sha256": "90f9114c9a31df219587aea1e9406dccaeb3c4891243699c5d825827369ac72f",
+        "installed_diff_sha256": "90f9114c9a31df219587aea1e9406dccaeb3c4891243699c5d825827369ac72f",
+        "original_strict_csv_contract_matches": true
+      },
+      "fresh_independent_verification": {
+        "container": "lab1-final-bp-20261013",
+        "raw": {
+          "path": "/tmp/lab1-final-bp/fifo4-96/logs_ns3/bp_outcomes.csv",
+          "bytes": 57931,
+          "sha256": "fef7493f23b783591ee895dfde7286de3b514930add53713bafa86fef1ddb621"
+        },
+        "manifest": {
+          "path": "/tmp/lab1-final-bp/fifo4-96/manifest.json",
+          "bytes": 432472,
+          "sha256": "ff9de53a398389b496aa279449c88b59f35f0cfb75f95e79c6fa71b3ea5209c4"
+        },
+        "installed_source": {
+          "path": "/home/ubuntu/ns-3.48/scratch/main_satnet/backpressure.h",
+          "bytes": 17202,
+          "sha256": "5298eb4585f8082ba346ca5eec946959adc19327c4e6ad8ce52dec2649584819"
+        },
+        "patch_sha256": "90f9114c9a31df219587aea1e9406dccaeb3c4891243699c5d825827369ac72f",
+        "installed_diff_sha256": "90f9114c9a31df219587aea1e9406dccaeb3c4891243699c5d825827369ac72f",
+        "all_expected_fields_exact": true,
+        "byte_hash_equal": false
+      }
+    },
+    "codel4-96": {
+      "file": "logs_ns3/bp_outcomes.csv",
+      "expected": {
+        "columns": [
+          "time_ns",
+          "node_id",
+          "device_id",
+          "layer",
+          "reason",
+          "visit_id",
+          "packet_uid",
+          "tagged",
+          "flow_id",
+          "tx_id",
+          "tx_time_ns",
+          "seq",
+          "payload_bytes",
+          "ingress_ns",
+          "residence_ns"
+        ],
+        "header_byte_sha256": "4d54cc312e7d9d66dd71c2893568e93e0167267314cc51a4696a373a2097cf77",
+        "ordered_nonpending_byte_sha256": "fcc5fe46e969633da278d4ab17bdd7c61edb6ab451ca19a850f7b06b487681f5",
+        "sorted_pending_raw_line_sha256": "3667651992720748297dddb6676d26ed71a7d7a8b240034683994cc2d9c53c2b",
+        "rows": 174,
+        "nonpending_rows": 171,
+        "pending_rows": 3,
+        "pending_duplicate_raw_lines": 0,
+        "pending_unique_visit_ids": true,
+        "pending_suffix_only": true,
+        "pending_cutoff_ns": [
+          200000000000
+        ],
+        "pending_reason_values": [
+          "censored"
+        ]
+      },
+      "reference": {
+        "container": "lab1-queue-backpressure-20261013",
+        "raw": {
+          "path": "/tmp/queue-backpressure/codel4-96/logs_ns3/bp_outcomes.csv",
+          "bytes": 18940,
+          "sha256": "c19b05fcd90c62c8c5e08f0b9cb8e67348f21cebfe7991725ad2b4d99bbd5cb5"
+        },
+        "manifest": {
+          "path": "/tmp/queue-backpressure/codel4-96/manifest.json",
+          "bytes": 426797,
+          "sha256": "1433e6aedcd09fa2b00466e7bc119a72b499a77aa968c5aa28962455c7e47867"
+        },
+        "installed_source": {
+          "path": "/home/ubuntu/ns-3.48/scratch/main_satnet/backpressure.h",
+          "bytes": 17202,
+          "sha256": "5298eb4585f8082ba346ca5eec946959adc19327c4e6ad8ce52dec2649584819"
+        },
+        "patch_sha256": "90f9114c9a31df219587aea1e9406dccaeb3c4891243699c5d825827369ac72f",
+        "installed_diff_sha256": "90f9114c9a31df219587aea1e9406dccaeb3c4891243699c5d825827369ac72f",
+        "original_strict_csv_contract_matches": true
+      },
+      "fresh_independent_verification": {
+        "container": "lab1-final-bp-20261013",
+        "raw": {
+          "path": "/tmp/lab1-final-bp/codel4-96/logs_ns3/bp_outcomes.csv",
+          "bytes": 18940,
+          "sha256": "cd323eae378d78aa5bd2287bda531d89b15f4d45fec03fbc8a018f917fb4af17"
+        },
+        "manifest": {
+          "path": "/tmp/lab1-final-bp/codel4-96/manifest.json",
+          "bytes": 432476,
+          "sha256": "adf19e59756289147e3860a479cf846ce282c6b42b296d054c38ab4c58a54b5b"
+        },
+        "installed_source": {
+          "path": "/home/ubuntu/ns-3.48/scratch/main_satnet/backpressure.h",
+          "bytes": 17202,
+          "sha256": "5298eb4585f8082ba346ca5eec946959adc19327c4e6ad8ce52dec2649584819"
+        },
+        "patch_sha256": "90f9114c9a31df219587aea1e9406dccaeb3c4891243699c5d825827369ac72f",
+        "installed_diff_sha256": "90f9114c9a31df219587aea1e9406dccaeb3c4891243699c5d825827369ac72f",
+        "all_expected_fields_exact": true,
+        "byte_hash_equal": false
+      }
+    }
+  }
+}

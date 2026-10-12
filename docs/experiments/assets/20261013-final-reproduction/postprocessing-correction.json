@@ -1,0 +1,90 @@
+{
+  "schema": 1,
+  "qualification": "Postprocessing only; no controller, simulation dispatcher, build or frozen runtime change.",
+  "simulation_source_checkpoint": "9a5687bd4e46447e81f3dec13ab2f78442ede056",
+  "postprocessing_source_checkpoint": null,
+  "changes": {
+    "code/analyze.py": {
+      "old_sha256": "f9f0ec68fbc4ebacf81a8f8cdf391af500a07e36c4ac301e9547e1cee451bab4",
+      "new_sha256": "9707ba1e42f9233aa1d3ae6a9c16f0fbb62c48b6057502cf3accdf472ca3fe39"
+    },
+    "code/merge.py": {
+      "old_sha256": "021e953f68d742d86e2527f6fcb7b12cfb54eecae479ac88ee1c090f76bb3308",
+      "new_sha256": "6e763489d1409dc16ba3377454302141bdb1856ed6d6f37cd056896666f6b902"
+    }
+  },
+  "added_contract": {
+    "path": "code\\lab1-final\\inputs\\expected-pending-order.json",
+    "bytes": 12107,
+    "sha256": "a05ef8d0c828bc6524e8337dae8d602f7131db8c321bab0f6e66aa6a73f66be0"
+  },
+  "original_345_contract": {
+    "path": "code\\lab1-final\\inputs\\expected-parity.json",
+    "bytes": 74336,
+    "sha256": "e9fcfdb92ea8737b7f5e2f027ee3e2bc83f35d84728b443bebdf430335ff8afb"
+  },
+  "unchanged_execution_files": {
+    "count": 26,
+    "all_byte_exact_candidate": true,
+    "files": {
+      "build.py": "528deb37f1841e8083423fd5b02d9547aa04626271fa5087047b03cb5dd1d388",
+      "common.py": "d0097bd1b7acb37875ab13632b7090da5fb76974b552e0a37bcf2914f9ecf47b",
+      "copied-sources.json": "031ee87d761d293b1f206229bfa745fcdc381f58aef8c13470f062122eb8b5ca",
+      "pyproject.toml": "4706184ef0cce7c4ee9a8bb901eeb6d0e5a2a1e1b5c0084165196fa795e2587b",
+      "run.py": "63eb937271793050b3482d9d14e692eb599773d7ad6798bb25bcea53cb1a5e2d",
+      "run_all.sh": "dc6826da54bd58c9e8c99672b59c08c5fb72d288e9e4a05efbda6abb618c6352",
+      "uv.lock": "f8793f961f6c5a269dde60614aa882eef9795649cea259162c7f5c3b949049bf",
+      "inputs\\expected-parity.json": "e9fcfdb92ea8737b7f5e2f027ee3e2bc83f35d84728b443bebdf430335ff8afb",
+      "runtimes\\bp.patch": "90f9114c9a31df219587aea1e9406dccaeb3c4891243699c5d825827369ac72f",
+      "runtimes\\pace.patch": "ace08b170b04774c2eac849c1875e647a97e786611616cbb32867496cb2cb808",
+      "code\\kim-study\\analyze_study.py": "5333d7f6d86c04f79bbaad82e5e2577ec3bdf2f281e115c854ad904c404aa696",
+      "code\\kim-study\\path_truth_200s.csv": "49bd5418f2b13bdbf6d703f719d61075f814cc86d44c745651bf797f4e5f656c",
+      "code\\orbit-geometry\\forward-hints.csv": "0df8a3bc63e3ddcfb41caf904f7d811253f45b78d6a5ec9db73038072b136499",
+      "code\\orbit-loss\\analyze.py": "9641453064980aeaeaf7270dc1ff17d8417ffe7cf1347011ed03afe634c94ab1",
+      "code\\orbit-queue\\analyze.py": "efa69ba813f3c1d5984f7cfdac0b4af54b36572844a35b6f31dd3c7066038b2a",
+      "code\\orbit-queue\\analyze_cf.py": "0d364a82229959e166cd40dd548bbf588a45ad823e8187c378c4dc14be34ff05",
+      "code\\orbit-queue\\delay_route.py": "17e7f1729af148491e73df2d573d830a8b4281b8977d73696c33dfdf9ecd1742",
+      "code\\orbit-tail\\analyze.py": "90e115b20c109462d70ef5a4f846e9f9695ca1f47ad0cdf993b0758adc0d0e55",
+      "code\\orbit-tail\\run.py": "8f8455578f5c0fb5b0cacc05a64342b1bb7885e4034b0e66557fd11da4b78594",
+      "code\\predict-loss\\run.py": "ecea49bff332186d340ca5b865c6486cfaf91099847967c4f017c173e8661c97",
+      "code\\predict-loss\\summarize.py": "cbd1b65bf760212d55d8c396b4aa70bcbc4b7b49742d1cd044ff6afc1fda571c",
+      "code\\queue-backpressure\\analyze.py": "1b04dcf7bd2ca3439caebdfcecf28fb1c377a0eea15dcdee5767786c3c5901b5",
+      "code\\queue-backpressure\\reference-receipt.json": "ee9e5ef6dd8e862599a5e4a853baad596658c5d912f98b296a5738806c5eb52a",
+      "code\\queue-pacing\\analyze.py": "5dc28fb0fad89c82ea6435e4c4a0202f3ceff16fe416b692d328312dfff4bb9e",
+      "code\\queue-pacing\\posthoc.py": "86886c37deaa0c87d016a13442a72a7e55d6ef4e6af0db32c7518bced2f94fdd",
+      "code\\queue-pacing\\run.py": "50a9d84257863fa606b1e93f39c94f7340311375ba83feefe33862c7d1e25dbe"
+    }
+  },
+  "independent_review": "audit_research_handoff confirmed full pending bags, exact nonpending bytes, and source pointer-map output cause; adapter read review passed.",
+  "preserved_attempts": {
+    "original_bp_analysis": {
+      "status": "failed",
+      "simulation_status": "all three success; no exclusion",
+      "command": "python3 -B /work/code/analyze.py --profile bp --out /work/output/lab1-final-replay/bp",
+      "output_directory": "/work/output/lab1-final-replay/bp",
+      "observed_error": "AssertionError: Frozen measurement parity failed: control100 logs_ns3/bp_outcomes.csv",
+      "tool_sha256": "f9f0ec68fbc4ebacf81a8f8cdf391af500a07e36c4ac301e9547e1cee451bab4",
+      "log_qualification": "Observed tool error retained in this receipt; raw files/manifests and partial output directory are preserved."
+    },
+    "original_pace_analysis": {
+      "status": "success",
+      "physical_conditions": 16,
+      "all_original_csv_byte_parity": true,
+      "report_data": {
+        "path": "output\\lab1-final-candidate-extracted\\output\\lab1-final-replay\\pace\\report-data.json",
+        "bytes": 1914942,
+        "sha256": "6bc71e8797587e058c81ec879581aa3b8880cc3c48b2d3ed96326f371a01a8dc"
+      }
+    }
+  },
+  "planned_reexports": {
+    "pace": "/work/output/lab1-final-replay/pace-validated",
+    "bp": "/work/output/lab1-final-replay/bp-validated"
+  },
+  "final_measurement_contracts": {
+    "raw_byte_exact": 342,
+    "ordered_nonpending_and_full_pending_bag": 3,
+    "total": 345
+  },
+  "simulation_reruns_for_correction": 0
+}

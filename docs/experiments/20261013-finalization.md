@@ -33,4 +33,8 @@
 
 ## 현재 상태
 
-과제 PDF와 원본 수치 검토, source packaging, 영문 원고를 병렬 준비 중이다. 새 runtime build·시뮬레이션 전에 최종 source checkpoint를 남긴다. 보고서 시각 검사·실제 재현·제출 파일 검증 전에는 최종 완료를 주장하지 않는다. KLMS 업로드, 개인 Contribution Survey 제출, 팀 PR 병합은 이 준비 작업에 포함하지 않는다.
+독립 ZIP source checkpoint `9a5687b`를 공유한 뒤 새 공식 volume 두 개에서 build와 19개 고정 시뮬레이션을 모두 완료했다. 주 runtime의 원래 분석 16개는 원본 CSV 계약에 일치했다. 별도 BP의 세 시뮬레이션도 성공했지만 최초 엄격 분석은 `bp_outcomes.csv`에서 중단됐다. 원본 계약과 실패한 분석은 보존한다.
+
+독립 검토 결과 BP 세 파일의 차이는 200초 종료 시 pending 행 순서뿐이다. 설치된 원본과 새 `backpressure.h`는 같으며 `std::map<const Packet*,Entry>`의 포인터 순서가 종료 기록으로 출력된다. 헤더·순서 있는 non-pending 원시 바이트·pending 전체 15개 필드와 중복 개수는 정확히 같다. 따라서 **342개 CSV의 바이트 일치와 3개 종료 pending 기록의 전체 필드 일치**로 구분하며, 345개 모두 바이트 일치라고 보고하지 않는다. 새 검증 계약은 결과를 만들지 않으며 이 종료 순서 외 차이는 거부한다.
+
+`analyze.py`와 `merge.py`의 순수 분석 검증만 수정한다. 런타임 patch, controller, build·실험 dispatcher, 기존 원본 계약과 입력·설정은 그대로다. 이 수정은 실행을 다시 돌리는 원인이 아니며 별도 분석 source checkpoint와 새 분석 결과 폴더로 기록한다. 최종 표·그림·PDF·ZIP 검증과 공유는 계속 진행 중이다. KLMS 업로드, 개인 Contribution Survey 제출, 팀 PR 병합은 이 준비 작업에 포함하지 않는다.

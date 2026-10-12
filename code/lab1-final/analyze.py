@@ -1,7 +1,8 @@
-"""Regenerate report inputs from fresh raw runs, then enforce historical byte parity."""
+"""Regenerate fresh report inputs and validate the frozen measurement contracts."""
 import argparse
 from collections import Counter
 import csv
+import hashlib
 import json
 from pathlib import Path
 import common as c
@@ -55,28 +56,70 @@ def normalize_pace(run,summary):
         compatibility_note='guard_starts describes legacy threshold setters; selective_episodes is the actual K3 waiting evidence.')
 
 
-def parity(run,expected):
+def pending_order(path,expected):
+    """Only terminal observer serialization order may differ; every field stays exact."""
+    raw=path.read_bytes().splitlines(keepends=True);assert raw,'Empty outcomes file'
+    columns=next(csv.reader([raw[0].decode('utf-8')]))
+    assert columns==expected['columns'] and len(columns)==15
+    pending=[];nonpending=[];visits=[];cutoffs=set();reasons=set();suffix=True;seen=False
+    for line in raw[1:]:
+        parsed=list(csv.reader([line.decode('utf-8')],strict=True))
+        assert len(parsed)==1 and len(parsed[0])==len(columns),'Invalid single-line outcomes CSV'
+        row=dict(zip(columns,parsed[0]))
+        if row['layer']=='pending':
+            seen=True;pending.append(line);visits.append(row['visit_id'])
+            cutoffs.add(int(row['time_ns']));reasons.add(row['reason'])
+        else:
+            suffix=suffix and not seen;nonpending.append(line)
+    digest=lambda data:hashlib.sha256(data).hexdigest()
+    observed=dict(columns=columns,header_byte_sha256=digest(raw[0]),
+        ordered_nonpending_byte_sha256=digest(b''.join(nonpending)),
+        sorted_pending_raw_line_sha256=digest(b''.join(sorted(pending))),rows=len(raw)-1,
+        nonpending_rows=len(nonpending),pending_rows=len(pending),
+        pending_duplicate_raw_lines=len(pending)-len(set(pending)),
+        pending_unique_visit_ids=len(visits)==len(set(visits)),pending_suffix_only=suffix,
+        pending_cutoff_ns=sorted(cutoffs),pending_reason_values=sorted(reasons))
+    assert observed==expected,'Outcomes differ beyond terminal pending-row order: '+str(path)
+    return observed
+
+
+def parity(run,expected,canonical):
     m=json.loads((run/'manifest.json').read_text());checks=[]
+    special=canonical['cases'].get(m['case']) if m['profile']=='bp' else None
     for name,r in expected['measurement_csvs'].items():
         actual=m['output_files'].get(name)
-        assert actual==r,'Frozen measurement parity failed: '+m['case']+' '+name
-        checks.append(dict(file=name,**actual,equal=True))
-    return dict(all_exact=True,checks=checks,reference_sha256=expected['reference_sha256'],
-        reference_path=expected['reference_path'],qualification='Wall profiling excluded; fresh manifests/runtime identity are retained separately.')
+        assert actual is not None,'Missing measurement: '+name
+        if special and name==special['file']:
+            assert m['patch_sha256']==canonical['patch']['sha256']==c.PATCHES['bp']
+            receipt=c.receipt(run/name);assert {k:receipt[k] for k in ['bytes','sha256']}==actual
+            assert actual['bytes']==r['bytes'] and r=={k:special['reference']['raw'][k] for k in ['bytes','sha256']}
+            proof=pending_order(run/name,special['expected'])
+            checks.append(dict(file=name,**actual,equal=actual==r,all_fields_equal=True,
+                comparison='ordered_nonpending_and_full_pending_bag',reference=r,semantic_proof=proof))
+        else:
+            assert actual==r,'Frozen measurement parity failed: '+m['case']+' '+name
+            checks.append(dict(file=name,**actual,equal=True,all_fields_equal=True,comparison='raw_bytes'))
+    if special:assert sum(x['comparison']=='ordered_nonpending_and_full_pending_bag' for x in checks)==1
+    return dict(all_exact=all(x['equal'] for x in checks),all_measurements_equal=all(x['all_fields_equal'] for x in checks),
+        checks=checks,reference_sha256=expected['reference_sha256'],reference_path=expected['reference_path'],
+        qualification='Wall profiling excluded. Only the three declared BP terminal pending-row orders may differ; their full fields and ordered non-pending bytes are exact.')
 
 
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--profile',choices=c.PATCHES,required=True)
     p.add_argument('--root',type=Path);p.add_argument('--out',type=Path,required=True);a=p.parse_args()
     a.root=a.root or c.ROOTS[a.profile];assert not a.out.exists();a.out.mkdir(parents=True)
-    expected=json.loads((c.HERE/'inputs/expected-parity.json').read_text());cases={};proofs={}
+    expected_path=c.HERE/'inputs/expected-parity.json';canonical_path=c.HERE/'inputs/expected-pending-order.json'
+    expected=json.loads(expected_path.read_text());canonical=json.loads(canonical_path.read_text());cases={};proofs={}
+    assert canonical['schema']==1 and set(canonical['cases'])=={n for n,d in c.CASES.items() if d['profile']=='bp'}
+    assert {k:c.receipt(expected_path)[k] for k in ['bytes','sha256']}=={k:canonical['original_strict_contract'][k] for k in ['bytes','sha256']},'Original strict contract changed'
     for name,d in c.CASES.items():
         if d['profile']!=a.profile:continue
         run=a.root/name;m=json.loads((run/'manifest.json').read_text())
         assert m['status']=='success' and m['exit_code']==0 and not m.get('audit_exclude'),'Incomplete/excluded replay'
         assert m['definition']==d['definition'] and m['profile']==a.profile and m['patch_sha256']==c.PATCHES[a.profile]
         assert m['source_unchanged'] and m['runtime_unchanged'] and m['launch_source_files_unchanged']
-        proofs[name]=parity(run,expected['cases'][name])
+        proofs[name]=parity(run,expected['cases'][name],canonical)
         if a.profile=='pace':
             s=queue.export(run,a.out);cases[name]=normalize_pace(run,s)
             if 'metrics' in expected['cases'][name]:
@@ -101,6 +144,8 @@ if __name__=='__main__':
     else:extra['backpressure_matched_inputs']=bp.matched_inputs(a.root)
     record=dict(schema=1,phase='Fresh independent-volume replay; figures use observed raw series, never reference numbers.',
         profile=a.profile,report_roles=c.ROLES,cases=cases,physical_conditions=len(cases),aliases=c.ALIASES,
-        parity=proofs,qa=extra,tool=c.receipt(Path(__file__)),expected_contract=c.receipt(c.HERE/'inputs/expected-parity.json'))
+        parity=proofs,qa=extra,tool=c.receipt(Path(__file__)),expected_contract=c.receipt(expected_path),
+        pending_order_contract=c.receipt(canonical_path))
     c.write(a.out/'report-data.json',record)
-    print(json.dumps({'profile':a.profile,'conditions':len(cases),'all_frozen_csv_parity':True,'report_data':str(a.out/'report-data.json')}))
+    print(json.dumps({'profile':a.profile,'conditions':len(cases),'all_frozen_csv_byte_parity':all(x['all_exact'] for x in proofs.values()),
+        'all_measurements_equal':True,'report_data':str(a.out/'report-data.json')}))
