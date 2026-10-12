@@ -2,6 +2,12 @@
 
 This repository holds the team's shared lab work. Use the map below to find a result without reading every study file.
 
+## Current direction under review — 12 October 2026
+
+The new work prioritizes **BBR adaptation when changing LEO paths begin sharing a bottleneck**, with explicit stop criteria and CUBIC HyStart / BBR RTprop alternatives. Start with [`docs/PLAN.md`](docs/PLAN.md), the [research rationale](docs/research/20261012-modern-tcp-direction.md), and the [current work record](docs/work/20261012-bbr-route-kim-seongchan.md). Check the corresponding open Draft PR for unmerged code and measured results.
+
+This direction is authorized by the requesting teammate and awaiting team review. The course `TcpBbr` is a **BBRv1-family implementation**. Existing Vegas evidence is preserved but is no longer the central candidate for this work, because its relevance to the handout's state-of-the-art TCP requirement is weak. No BBR improvement or LEO-specific defect is established yet. The supplied state contains only Seoul and London; two flows on that same path are a shared-bottleneck diagnostic, not evidence of natural convergence between independent paths.
+
 ## What is here?
 
 | Location | What you will find | Start with |
