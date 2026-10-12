@@ -1,0 +1,4 @@
+case,window,start_s,end_s,aggregate_app_goodput_mbps,jain_equal_rate_index,served_queue_visit_samples,served_queue_visit_mean_wait_ms,served_queue_visit_max_wait_ms,app_goodput_mbps_flow_0,drop_events_by_layer_json
+observed-solo,whole,0,40,90.461484,1.0,5909095,0.08884911814973359,11.471998,90.461484,"{""TcDrop"": 7528}"
+observed-solo,common,10,40,93.346512,1.0,4478968,0.0873266861359581,11.471988,93.346512,"{""TcDrop"": 4543}"
+observed-solo,admission,10,15,87.06144,1.0,755761,0.08062986760629352,11.471949,87.06144,"{""TcDrop"": 695}"

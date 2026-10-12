@@ -40,4 +40,31 @@ docker exec lab1-bbr-route-20261012 python3 /work/code/bbr-route/run_pilot.py pa
 
 ## 결과 상태
 
-아직 실행 결과 없음. BBR의 경로 합류 가설·개선 효과·RTprop 제한·HyStart 조기 종료는 이 선언만으로 확인되지 않는다.
+### 완료 및 중단 상태
+
+| 실행 | 실제 wall time | 상태와 범위 |
+| --- | ---: | --- |
+| reference-solo | 67.0054초 | 성공, 원본 build+라이브러리 |
+| patched-off-solo | 75.1311초 | 성공, 초기 관측 patch를 끈 실행 |
+| observed-solo 첫 시도 | 13.4637초 | 0.0986 simulated s에 UID 중복 계측 오류로 실패; 성능 결과에서 제외 |
+| observed-solo 수정 후 | 79.5237초 | 성공, 실제 앱 수신·큐 집계 및 기존 trace 동등성 검증 |
+| observed-join10 | 180.0258초 | wall timeout; 완성된 결과/성능 표에 포함하지 않음 |
+| observed-together | — | 앞선 timeout 후 미실행; 이후 합류 주가설 중단으로 실행하지 않음 |
+
+첫 reference 준비는 Git bind mount의 ownership 확인에서 시뮬레이션 실행 전에 중단했다. runner에 이번 `/work` 조회만 허용하는 scoped Git 설정을 넣고 새 run root로 실행했다. 기존 실패 폴더를 덮어쓰지 않았다. 소스/계측 오류와 연구 가설의 중단을 구분한다.
+
+최종 관측 patch SHA256: `ddcad50d06a8e3fc34a79fabb4942e2225d4788488d3db96e2b72a379262c445`. Packet UID는 여러 TCP MSS 조각이 공유하므로 큐 pending 연결에 쓸 수 없다. 수정한 관측은 실제 queued packet 객체와 flow 정합성을 사용한다. 큐 flush 시각·종료 잔여 패킷과 실제 앱 전달량도 기록한다.
+
+- [원본 대 관측 off](assets/20261012-bbr-route/equivalence-original-off.json), [원본 대 수정 관측 on](assets/20261012-bbr-route/equivalence-original-on.json): 동일 조건의 기존 cwnd/RTT/progress/flow CSV 4개 모두 byte-identical. 이 한 조건의 동등성이며 전 조건의 무영향 증명은 아니다.
+- [잘못된 비교를 거부하는 검사](assets/20261012-bbr-route/observer-negative-checks.json): 같은 폴더, 실패 실행, 입력/출력 변조 등의 6개 조건을 거부했다. 이 검사는 새 TCP 시뮬레이션 결과가 아니다.
+- [수신량·큐 분석](assets/20261012-bbr-route/pilot-analysis/pilot-summary.json), [선언 창 요약](assets/20261012-bbr-route/pilot-analysis/pilot-windows.csv): 실제 수신 총계·flow/port 연결·큐 enqueue/dequeue/pending 보존·원본 해시를 확인했다.
+
+### 완성된 단독 조건의 실제 관측
+
+실제 수신 앱 바이트는 452,307,420B이며 `[0,40)` goodput은90.4615Mbit/s, `[10,40)`은93.3465Mbit/s다. 같은40초의 sender ACK progress 451,763,700B와 혼용하지 않는다. 전체 창에 TcDrop 7,528 **hook events**가 기록됐다. 이 수치와 BBR rate-sample loss-byte 누계를 고유 패킷 손실/재전송 수로 바꾸어 쓰지 않는다. served queue visit의 전체 평균은0.08885ms, 최댓값11.4720ms이며, ACK와 양방향 여러 장치 방문을 포함한 값이다. 종단 간 큐 지연이 아니다.
+
+이 결과는 제공 BBR의 관측 기반을 확보한 것이며 새로운 개선을 시험하지 않았다. 평균 처리량이 높다는 사실이나 이 drop count만으로 LEO 경로 변화가 원인이라고 결론 내리지 않는다.
+
+### 후속 판단
+
+가용 대역폭 감소만으로는 지상 경쟁 진입과 다른 TCP 문제를 입증하지 못해 **경로 합류 주가설을 중단**했다. 새 도시 state 생성이나 timeout run의 반복·확장은 진행하지 않는다. 기하 예측·재정렬 예방 후보는 [별도 방향 문서](../research/20261012-predictable-leo-tcp.md)를 읽는다.

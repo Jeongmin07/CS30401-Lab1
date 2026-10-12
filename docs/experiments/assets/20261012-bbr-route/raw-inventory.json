@@ -1,0 +1,364 @@
+{
+  "archive": "bbr-route-diagnostics-20261012.tar.gz",
+  "bytes": 10002124,
+  "sha256": "db389f9a6af331701ad8c15656661a41b83fc1c1092971b62a7f34a5d01ea5a8",
+  "uncompressed_input_bytes": 32842113,
+  "file_count": 70,
+  "files": [
+    {
+      "path": "bbr-route-pilot-v2/observed-solo/config_ns3.properties",
+      "bytes": 611,
+      "sha256": "9533e0efa6dd560ba18c941afeadf3ac45212969f16f303c5e9ccc37c3407472"
+    },
+    {
+      "path": "bbr-route-pilot-v2/observed-solo/logs_ns3/bbr_coverage.csv",
+      "bytes": 1398438,
+      "sha256": "7785a349bbcd58d321430e5454d4e7193dfc4ed7766e00af84b503fa6bafef9c"
+    },
+    {
+      "path": "bbr-route-pilot-v2/observed-solo/logs_ns3/bbr_drops.csv",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "bbr-route-pilot-v2/observed-solo/logs_ns3/bbr_queue_bins.csv",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "bbr-route-pilot-v2/observed-solo/logs_ns3/finished.txt",
+      "bytes": 3,
+      "sha256": "31375587f8bedb1f33f6eca3d8cee94ab70845a6dd1a7c7eeb929f4aa7dc10ab"
+    },
+    {
+      "path": "bbr-route-pilot-v2/observed-solo/logs_ns3/tcp_flow_0_cwnd.csv",
+      "bytes": 17,
+      "sha256": "f7f074b694d55baf487bc86bc01670d2f2f33890c31eb5222147b477704faf76"
+    },
+    {
+      "path": "bbr-route-pilot-v2/observed-solo/logs_ns3/tcp_flow_0_progress.csv",
+      "bytes": 19,
+      "sha256": "eb3f3c66f8dd9e8b41cead9e5da5f2a40569646eef87480002f46a3555519a70"
+    },
+    {
+      "path": "bbr-route-pilot-v2/observed-solo/logs_ns3/tcp_flow_0_rtt.csv",
+      "bytes": 20,
+      "sha256": "3922b438b30558ca59f8bfddd601ca335ef1eecdb8763a71fc88ab666486c751"
+    },
+    {
+      "path": "bbr-route-pilot-v2/observed-solo/manifest.json",
+      "bytes": 5060,
+      "sha256": "3a975cb7090ccb120a4c2088a1e2a1c14225fcbbd59cf2792996cfa1ed58a63e"
+    },
+    {
+      "path": "bbr-route-pilot-v2/observed-solo/out.txt",
+      "bytes": 8725,
+      "sha256": "3edff912622a37f5bbe1177e09404d00487496f3b853b871ee93f771ec388abc"
+    },
+    {
+      "path": "bbr-route-pilot-v2/observed-solo/schedule.csv",
+      "bytes": 29,
+      "sha256": "e6cde3aa7716856e46d24c3833354df90407313ece13a5ffbd1b789fa4fea23c"
+    },
+    {
+      "path": "bbr-route-pilot-v2/patched-off-solo/config_ns3.properties",
+      "bytes": 611,
+      "sha256": "9533e0efa6dd560ba18c941afeadf3ac45212969f16f303c5e9ccc37c3407472"
+    },
+    {
+      "path": "bbr-route-pilot-v2/patched-off-solo/logs_ns3/finished.txt",
+      "bytes": 4,
+      "sha256": "927580bf287560d4a26a5d6e129f91ffa9cb63031b1a8c772be6ec584e65e82b"
+    },
+    {
+      "path": "bbr-route-pilot-v2/patched-off-solo/logs_ns3/tcp_flow_0_cwnd.csv",
+      "bytes": 1695683,
+      "sha256": "5eaeeecf6bdf6cea63fa98179e103c62ec0623b5194ebb3b9d4e8f2b6a7bef0f"
+    },
+    {
+      "path": "bbr-route-pilot-v2/patched-off-solo/logs_ns3/tcp_flow_0_progress.csv",
+      "bytes": 3215465,
+      "sha256": "984d6275051c6ccf0f070cc8699f57cd13bd36d7f20c91f104daba81939e0cfb"
+    },
+    {
+      "path": "bbr-route-pilot-v2/patched-off-solo/logs_ns3/tcp_flow_0_rtt.csv",
+      "bytes": 3084029,
+      "sha256": "f39f17c79234f79b687845dbb7e202fe0618b63dc924de2afd8642f1bc2434cd"
+    },
+    {
+      "path": "bbr-route-pilot-v2/patched-off-solo/logs_ns3/tcp_flows.csv",
+      "bytes": 73,
+      "sha256": "69295bd1c582de8a7d5c55c5b9c54bce5d1eb477c0dfc80dbdf15c4055a5f8f1"
+    },
+    {
+      "path": "bbr-route-pilot-v2/patched-off-solo/logs_ns3/tcp_flows.txt",
+      "bytes": 336,
+      "sha256": "0ea7a667a0c89a887883b46ca72b2140a10c1e52db3e621b93bbc26393ad175e"
+    },
+    {
+      "path": "bbr-route-pilot-v2/patched-off-solo/logs_ns3/timing_results.csv",
+      "bytes": 561,
+      "sha256": "2a6335d6d29404c5923447e80c5e6205e3155fcf0e3b12973757c9f757402ae1"
+    },
+    {
+      "path": "bbr-route-pilot-v2/patched-off-solo/logs_ns3/timing_results.txt",
+      "bytes": 909,
+      "sha256": "4a83783127f25af1e0ca1e29dc87cdf87ae75a35837eb8c076bbb82f03bd73e7"
+    },
+    {
+      "path": "bbr-route-pilot-v2/patched-off-solo/manifest.json",
+      "bytes": 5227,
+      "sha256": "d326202f8100ee7af43dcd409657f0df4c26f28b104b37e4c80b6b2b98896a5e"
+    },
+    {
+      "path": "bbr-route-pilot-v2/patched-off-solo/out.txt",
+      "bytes": 6502,
+      "sha256": "bad8d8c71c971799fb71ccaf0b25c8c31001ce72d72167bf5c4f7f40523c3320"
+    },
+    {
+      "path": "bbr-route-pilot-v2/patched-off-solo/schedule.csv",
+      "bytes": 29,
+      "sha256": "e6cde3aa7716856e46d24c3833354df90407313ece13a5ffbd1b789fa4fea23c"
+    },
+    {
+      "path": "bbr-route-pilot-v2/reference-solo/config_ns3.properties",
+      "bytes": 611,
+      "sha256": "9533e0efa6dd560ba18c941afeadf3ac45212969f16f303c5e9ccc37c3407472"
+    },
+    {
+      "path": "bbr-route-pilot-v2/reference-solo/logs_ns3/finished.txt",
+      "bytes": 4,
+      "sha256": "927580bf287560d4a26a5d6e129f91ffa9cb63031b1a8c772be6ec584e65e82b"
+    },
+    {
+      "path": "bbr-route-pilot-v2/reference-solo/logs_ns3/tcp_flow_0_cwnd.csv",
+      "bytes": 1695683,
+      "sha256": "5eaeeecf6bdf6cea63fa98179e103c62ec0623b5194ebb3b9d4e8f2b6a7bef0f"
+    },
+    {
+      "path": "bbr-route-pilot-v2/reference-solo/logs_ns3/tcp_flow_0_progress.csv",
+      "bytes": 3215465,
+      "sha256": "984d6275051c6ccf0f070cc8699f57cd13bd36d7f20c91f104daba81939e0cfb"
+    },
+    {
+      "path": "bbr-route-pilot-v2/reference-solo/logs_ns3/tcp_flow_0_rtt.csv",
+      "bytes": 3084029,
+      "sha256": "f39f17c79234f79b687845dbb7e202fe0618b63dc924de2afd8642f1bc2434cd"
+    },
+    {
+      "path": "bbr-route-pilot-v2/reference-solo/logs_ns3/tcp_flows.csv",
+      "bytes": 73,
+      "sha256": "69295bd1c582de8a7d5c55c5b9c54bce5d1eb477c0dfc80dbdf15c4055a5f8f1"
+    },
+    {
+      "path": "bbr-route-pilot-v2/reference-solo/logs_ns3/tcp_flows.txt",
+      "bytes": 336,
+      "sha256": "0ea7a667a0c89a887883b46ca72b2140a10c1e52db3e621b93bbc26393ad175e"
+    },
+    {
+      "path": "bbr-route-pilot-v2/reference-solo/logs_ns3/timing_results.csv",
+      "bytes": 559,
+      "sha256": "07b9b0c4c7089a6cfd8ed6d2aafcf8de11f89b5fedeee23d9edad49b74c8dadb"
+    },
+    {
+      "path": "bbr-route-pilot-v2/reference-solo/logs_ns3/timing_results.txt",
+      "bytes": 909,
+      "sha256": "467839e280156256c629d33083160d26ab79d7d984043384deda71f610644c34"
+    },
+    {
+      "path": "bbr-route-pilot-v2/reference-solo/manifest.json",
+      "bytes": 5043,
+      "sha256": "1cc19091315ed79006ede4cc912ee53c541ffaef959ee9fbfe9361ad523cd50f"
+    },
+    {
+      "path": "bbr-route-pilot-v2/reference-solo/out.txt",
+      "bytes": 6479,
+      "sha256": "37fb321252fcb5023d036834ddc2d5d1f96f049bb60e4fcd76eeb191bd3a0d00"
+    },
+    {
+      "path": "bbr-route-pilot-v2/reference-solo/schedule.csv",
+      "bytes": 29,
+      "sha256": "e6cde3aa7716856e46d24c3833354df90407313ece13a5ffbd1b789fa4fea23c"
+    },
+    {
+      "path": "bbr-route-pilot-v3/observed-join10/config_ns3.properties",
+      "bytes": 613,
+      "sha256": "bf308ec410c843a70d96a88b454f5542344c96e6588f4aacd4c60df4be02633c"
+    },
+    {
+      "path": "bbr-route-pilot-v3/observed-join10/logs_ns3/bbr_app_rx_node_1585.csv",
+      "bytes": 8197,
+      "sha256": "d1d0b01ed632b1ac98772357961beb47311a52ffe865fd9a4762e434e8485c6d"
+    },
+    {
+      "path": "bbr-route-pilot-v3/observed-join10/logs_ns3/bbr_coverage.csv",
+      "bytes": 1398438,
+      "sha256": "7785a349bbcd58d321430e5454d4e7193dfc4ed7766e00af84b503fa6bafef9c"
+    },
+    {
+      "path": "bbr-route-pilot-v3/observed-join10/logs_ns3/bbr_drops.csv",
+      "bytes": 557154,
+      "sha256": "e2a89a152bd64be95062f58ca31a42bef040ee901243bb2baf452f83d4715f4a"
+    },
+    {
+      "path": "bbr-route-pilot-v3/observed-join10/logs_ns3/bbr_queue_bins.csv",
+      "bytes": 319566,
+      "sha256": "8fa803e45caf58ce446832735492f1b24888d5e3d49ba8ff6af7b04a08d64523"
+    },
+    {
+      "path": "bbr-route-pilot-v3/observed-join10/logs_ns3/bbr_queue_pending.csv",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "bbr-route-pilot-v3/observed-join10/logs_ns3/bbr_state.csv",
+      "bytes": 40982,
+      "sha256": "e8a78f1b35f4d6ac884b2173184cf4755620c2a8c6620c275794f08e046e782f"
+    },
+    {
+      "path": "bbr-route-pilot-v3/observed-join10/logs_ns3/finished.txt",
+      "bytes": 3,
+      "sha256": "31375587f8bedb1f33f6eca3d8cee94ab70845a6dd1a7c7eeb929f4aa7dc10ab"
+    },
+    {
+      "path": "bbr-route-pilot-v3/observed-join10/logs_ns3/tcp_flow_0_cwnd.csv",
+      "bytes": 741842,
+      "sha256": "e187705b94ea36e1db30715ca02bbc2f93a258341039b75978624d83ff35339d"
+    },
+    {
+      "path": "bbr-route-pilot-v3/observed-join10/logs_ns3/tcp_flow_0_progress.csv",
+      "bytes": 723209,
+      "sha256": "89d4e956c69dd790d0d24cbf5a0e069583bc859032fc67627103218efcfe8686"
+    },
+    {
+      "path": "bbr-route-pilot-v3/observed-join10/logs_ns3/tcp_flow_0_rtt.csv",
+      "bytes": 690201,
+      "sha256": "d2b2db3d20d0dd320fddd542684576a2fa765177370409cdb541ef283648dc6d"
+    },
+    {
+      "path": "bbr-route-pilot-v3/observed-join10/logs_ns3/tcp_flow_1_cwnd.csv",
+      "bytes": 46524,
+      "sha256": "6eb4891472522158e8a5b837d6b24ed95a3ac6c5d72602bf8e0d9c4d968a6ba1"
+    },
+    {
+      "path": "bbr-route-pilot-v3/observed-join10/logs_ns3/tcp_flow_1_progress.csv",
+      "bytes": 10140,
+      "sha256": "295287e3dee1e2661ea7cd1b42dfd738f21a2e74731cc86681b89600fca8e37f"
+    },
+    {
+      "path": "bbr-route-pilot-v3/observed-join10/logs_ns3/tcp_flow_1_rtt.csv",
+      "bytes": 6762,
+      "sha256": "2b3f6280a87b43ccbd19dc4cfd2b5cb865ce8550d4e37c80a80e817bc6f200da"
+    },
+    {
+      "path": "bbr-route-pilot-v3/observed-join10/manifest.json",
+      "bytes": 5977,
+      "sha256": "393bc0b91dcb244e4eedddddcd089dbbfc75c80b70f3b92a2300cad1e1cca275"
+    },
+    {
+      "path": "bbr-route-pilot-v3/observed-join10/out.txt",
+      "bytes": 4939,
+      "sha256": "7f011ee79c9291783dfb3e62c378bff6bcca3969a327a8bd88dc228532c81901"
+    },
+    {
+      "path": "bbr-route-pilot-v3/observed-join10/schedule.csv",
+      "bytes": 68,
+      "sha256": "770c23e23f2c0bd8058aca07dc86f4f1dc63ef99d660ede1e9b4f6602ed46814"
+    },
+    {
+      "path": "bbr-route-pilot-v3/observed-solo/config_ns3.properties",
+      "bytes": 611,
+      "sha256": "9533e0efa6dd560ba18c941afeadf3ac45212969f16f303c5e9ccc37c3407472"
+    },
+    {
+      "path": "bbr-route-pilot-v3/observed-solo/logs_ns3/bbr_app_rx_node_1585.csv",
+      "bytes": 32296,
+      "sha256": "e132c83e1fb52ad6feb6c093e391259deac1f1f0d0f80b1419beb11a0cc9708a"
+    },
+    {
+      "path": "bbr-route-pilot-v3/observed-solo/logs_ns3/bbr_coverage.csv",
+      "bytes": 1398438,
+      "sha256": "7785a349bbcd58d321430e5454d4e7193dfc4ed7766e00af84b503fa6bafef9c"
+    },
+    {
+      "path": "bbr-route-pilot-v3/observed-solo/logs_ns3/bbr_drops.csv",
+      "bytes": 710228,
+      "sha256": "eda0e277ac3c325716e4c9eea5c82ca3b4fd2eeb67fcc23ea1b06b9af713f3c7"
+    },
+    {
+      "path": "bbr-route-pilot-v3/observed-solo/logs_ns3/bbr_queue_bins.csv",
+      "bytes": 623600,
+      "sha256": "adb19748260b37fcb3bf7d8c111d60114504a040cf1a8db4c9aeb3f5269eeb8e"
+    },
+    {
+      "path": "bbr-route-pilot-v3/observed-solo/logs_ns3/bbr_queue_pending.csv",
+      "bytes": 90,
+      "sha256": "bd912a74a0dee1b032ecbeac1820c6c6d343cbec86b2fdcadf1b67eb243ce335"
+    },
+    {
+      "path": "bbr-route-pilot-v3/observed-solo/logs_ns3/bbr_state.csv",
+      "bytes": 80971,
+      "sha256": "e8f22b6acd98596386af5466926f78cea3f8136a0945f5834c9d81515988ab4b"
+    },
+    {
+      "path": "bbr-route-pilot-v3/observed-solo/logs_ns3/finished.txt",
+      "bytes": 4,
+      "sha256": "927580bf287560d4a26a5d6e129f91ffa9cb63031b1a8c772be6ec584e65e82b"
+    },
+    {
+      "path": "bbr-route-pilot-v3/observed-solo/logs_ns3/tcp_flow_0_cwnd.csv",
+      "bytes": 1695683,
+      "sha256": "5eaeeecf6bdf6cea63fa98179e103c62ec0623b5194ebb3b9d4e8f2b6a7bef0f"
+    },
+    {
+      "path": "bbr-route-pilot-v3/observed-solo/logs_ns3/tcp_flow_0_progress.csv",
+      "bytes": 3215465,
+      "sha256": "984d6275051c6ccf0f070cc8699f57cd13bd36d7f20c91f104daba81939e0cfb"
+    },
+    {
+      "path": "bbr-route-pilot-v3/observed-solo/logs_ns3/tcp_flow_0_rtt.csv",
+      "bytes": 3084029,
+      "sha256": "f39f17c79234f79b687845dbb7e202fe0618b63dc924de2afd8642f1bc2434cd"
+    },
+    {
+      "path": "bbr-route-pilot-v3/observed-solo/logs_ns3/tcp_flows.csv",
+      "bytes": 73,
+      "sha256": "69295bd1c582de8a7d5c55c5b9c54bce5d1eb477c0dfc80dbdf15c4055a5f8f1"
+    },
+    {
+      "path": "bbr-route-pilot-v3/observed-solo/logs_ns3/tcp_flows.txt",
+      "bytes": 336,
+      "sha256": "0ea7a667a0c89a887883b46ca72b2140a10c1e52db3e621b93bbc26393ad175e"
+    },
+    {
+      "path": "bbr-route-pilot-v3/observed-solo/logs_ns3/timing_results.csv",
+      "bytes": 564,
+      "sha256": "29d17b072d443a749af4a7689d0fedbb74aeb0be9a68e4d6b56b67a0b063f36e"
+    },
+    {
+      "path": "bbr-route-pilot-v3/observed-solo/logs_ns3/timing_results.txt",
+      "bytes": 909,
+      "sha256": "4e438047afcf3377a6bf1d2109155b424a625b01bebb3be6cb93c32a5c61b046"
+    },
+    {
+      "path": "bbr-route-pilot-v3/observed-solo/manifest.json",
+      "bytes": 6109,
+      "sha256": "8bd4fd1d498d04ea7e35e3a660e95710eea84cf140a983aa0443b13ee3dea43e"
+    },
+    {
+      "path": "bbr-route-pilot-v3/observed-solo/out.txt",
+      "bytes": 6492,
+      "sha256": "330a0c99f433ab148f0438fb10035214c80f65322f8c9338a2ac7cb4f50ebf80"
+    },
+    {
+      "path": "bbr-route-pilot-v3/observed-solo/schedule.csv",
+      "bytes": 29,
+      "sha256": "e6cde3aa7716856e46d24c3833354df90407313ece13a5ffbd1b789fa4fea23c"
+    }
+  ],
+  "limits": [
+    "Failed and timed-out attempts are retained and are not completed performance results.",
+    "No ns-3 tree, runtime builds, generated state or crash dumps are included.",
+    "Archive SHA identifies this stored artifact; gzip/tar byte determinism is not asserted."
+  ]
+}
