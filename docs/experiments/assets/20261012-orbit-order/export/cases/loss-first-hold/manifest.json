@@ -1,0 +1,130 @@
+{
+  "case": "loss-first-hold",
+  "definition": {
+    "kind": "micro",
+    "mode": "hold",
+    "loss_seq": 1
+  },
+  "command": [
+    "/home/ubuntu/ns-3.48/build/scratch/study_micro/ns3.48-study_micro",
+    "--run_dir=/tmp/orbit-order/loss-first-hold",
+    "--cc=TcpCubic",
+    "--duration=4",
+    "--rate=100",
+    "--queue_pkts=2000",
+    "--before_ms=50",
+    "--after_ms=50",
+    "--event_s=2",
+    "--initial_ssthresh_pkts=900",
+    "--max_bytes=27600",
+    "--loss_seq=1",
+    "--parameters=orbit_hold_windows=198366000:211634000"
+  ],
+  "status": "success",
+  "repo_commit": "8fd57045e616c29202cc3fd79d4a06fa4cabf777",
+  "repo_dirty": true,
+  "runner_sha256": "21e1554c20fa459bfbf49caa642564f7cc6765e388ad2afb472b32e8e06cfc3b",
+  "patch_sha256": "b34eb19f43b64ce2379ecff245f5632efaba78be5cc9bb2e72f420f070cdecd3",
+  "installed_diff_sha256": "b34eb19f43b64ce2379ecff245f5632efaba78be5cc9bb2e72f420f070cdecd3",
+  "ns3_head": "99bc6f733274475b7a6e804128651e17ee2a2536",
+  "declared_image_digest": "ghcr.io/yeonjong21/cs30401-lab1@sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+  "runtime_files": {
+    "scratch/study_micro/ns3.48-study_micro": "6cd406069c283831b051c1d728e03804954e6638267b85f600b1ac5851ce2448",
+    "lib/libns3.48-antenna.so": "edf56f782f446d54291425c4b357fb2a609f64da3a3a88a2d48e18dbcf4200b8",
+    "lib/libns3.48-applications.so": "029ee91a59a88fd8cff0c865053f31dfc36f6cc6f10484ebb3843864025750ca",
+    "lib/libns3.48-basic-sim.so": "15e5238001a341506357be96b74d4b67ee7f7970d521c06889ef600cac5ba721",
+    "lib/libns3.48-bridge.so": "5c0e5f9092dc8a215a2d77aaa75ba0e3db181578566db25b9463cc220a94a1a0",
+    "lib/libns3.48-core.so": "5f6e271f0e98438059ac55c8dc5c94ee411050cb7cd7f23956963310674982a1",
+    "lib/libns3.48-flow-monitor.so": "5fbe40f2a843bf01f38b943a28377f7e9628b748506498298cfd6096c621b1ad",
+    "lib/libns3.48-internet-apps.so": "c31699838a1a449773562164af013663951dbd78c7b0e1bcddc4b451f2eaa6bc",
+    "lib/libns3.48-internet.so": "b1289166b0b310806c13d2940dd2c0371c63e19218b8cab9a0f0d8da4e939763",
+    "lib/libns3.48-mobility.so": "45dc648f0ff11a8c83574fdea0dd189a35ccc606d625d3e3612afa3a6f806351",
+    "lib/libns3.48-network.so": "7930b3ed5f927eb731b7a010e5664ebd7927d1b25ecd2ef1f950857b434621b7",
+    "lib/libns3.48-point-to-point.so": "af4a8a6c3378e80fc6347fd77ad9c0bad5783eb34c2ea90e416f797b985e3f89",
+    "lib/libns3.48-satellite-network.so": "6c54072c67b2a2470abe2aca9f561d57093df69fa832ae2035753e2e52ebf907",
+    "lib/libns3.48-satellite.so": "68e7ce4d29d13efe374989d3279a8587bedb7a8104757938ab2c14605e3d4002",
+    "lib/libns3.48-stats.so": "ab02ae3cfe9c8453b6b251528884a678fe470cb1aac2e6500064a6fd44caf447",
+    "lib/libns3.48-traffic-control.so": "354fd4e2ef550af211e9abf272fd64b45818636c845b4876b606a0ffa6520d53"
+  },
+  "state_static_sha256": {
+    "description.txt": "e9e2297b872bb727a52e10e288f4f2a3243228ac5e95a4b49ffa8b532bccfb6e",
+    "ground_stations.basic.txt": "2cf51f414e52cb1557a202f91f1bfbcc30b5238476fc26bd29086b5046b7612a",
+    "ground_stations.txt": "9a6f895ced480a880c7c5aa229be1cc6b23c2e85bca0b6ce312af823cdf57262",
+    "gsl_interfaces_info.txt": "8d0817a32dd3e624ec673fcb7babae33907c46b8e2acb55602c347e45f3a1138",
+    "isls.txt": "8586b19155b7a9df2db5c563229790313c8280504aa15821f56000fd095c6d6c",
+    "node_ids.txt": "5315315c59a2975faeedc133d40e35b3418cf343b77a1e9775d93b9d7c7e98a2",
+    "tles.txt": "e8e944ac15ae28f2ba5fe8e0a845bdfe106694a1536711a52ec0e54f5ca29dd5"
+  },
+  "dynamic_input_sha256": null,
+  "forecast_source_sha256": "49bd5418f2b13bdbf6d703f719d61075f814cc86d44c745651bf797f4e5f656c",
+  "forecast_rule": "hold [T-factor*D,T+factor*D), D=propagation RTT decrease/2",
+  "hints": [
+    {
+      "start_ns": 198366000,
+      "end_ns": 211634000,
+      "note": "False hint overlapping real-loss feedback on stable micro path"
+    }
+  ],
+  "additional_parameters": "orbit_hold_windows=198366000:211634000",
+  "environment": {
+    "CS30401_STUDY_TRACE": "1",
+    "CS30401_STUDY_TRACE_DIR": "/tmp/orbit-order/loss-first-hold/logs_ns3",
+    "LD_LIBRARY_PATH": "/home/ubuntu/ns-3.48/build/lib"
+  },
+  "declared_event_windows_s": [
+    [
+      1.5,
+      4.0
+    ]
+  ],
+  "timeout_s": 240,
+  "expected_finite_bytes": 27600,
+  "exit_code": 0,
+  "wall_seconds": 0.032889476999116596,
+  "output_files": {
+    "config_ns3.properties": {
+      "bytes": 34,
+      "sha256": "f3f2e1b48fdfdd1d6ae0913db5fb1a817dd66b0fbca791dc678692fd6f1496f9"
+    },
+    "console.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "logs_ns3/study_app_rx_node_1_port_1024.csv": {
+      "bytes": 863,
+      "sha256": "3ce7031e473ed087d3d6733c136db3a0170262085ca14f6d4db6a9147407bd94"
+    },
+    "logs_ns3/study_drop_coverage.csv": {
+      "bytes": 328,
+      "sha256": "f2bbce727ae1f61019ef8f727753e3a8f64abdeb41d660a20a3607802f4524f4"
+    },
+    "logs_ns3/study_drops.csv": {
+      "bytes": 194,
+      "sha256": "e875ed492bd803c301bd18a29514bca50a6edfe104a69a85ae1ec68003bac35c"
+    },
+    "logs_ns3/study_rx_node_1_port_1024.csv": {
+      "bytes": 1857,
+      "sha256": "91827ed04988d248dc7fb4f0644d537a14f6b9d3ffb93047e5af75652cf142bc"
+    },
+    "logs_ns3/tcp_flow_0_cwnd.csv": {
+      "bytes": 71,
+      "sha256": "28b4bee1fedcaababc12e38d476552b3f7e5b4ea3b5b2ac6e9b35f68a24a69fc"
+    },
+    "logs_ns3/tcp_flow_0_progress.csv": {
+      "bytes": 164,
+      "sha256": "18840aafc22e11217837c61b561b6db7386af676d6f66a77015336739595d13a"
+    },
+    "logs_ns3/tcp_flow_0_rtt.csv": {
+      "bytes": 132,
+      "sha256": "4d1b11c6c67f2ee81a98dda6ab55d099bdd02603092de6ef1d74ddc41bd2a5d0"
+    },
+    "logs_ns3/tcp_flow_0_study_events.csv": {
+      "bytes": 324,
+      "sha256": "a38ff09645e0b2d9682b64cdb11e413b8047dd003d9960ee529da2397ee43dfb"
+    },
+    "logs_ns3/tcp_flow_0_study_packets.csv": {
+      "bytes": 2612,
+      "sha256": "87617c155acec950f910db9237b056df409c9fbabb5d96019af7b560b7003b07"
+    }
+  }
+}

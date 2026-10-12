@@ -1,0 +1,5 @@
+[0/2] Re-checking globbed directories...
+[1/2] Building CXX object src/internet/CMakeFiles/internet.dir/model/tcp-bbr.cc.o
+[2/2] Linking CXX shared library /home/ubuntu/ns-3.48/build/lib/libns3.48-internet.so
+Finished executing the following commands:
+/usr/bin/cmake --build /home/ubuntu/ns-3.48/cmake-cache -j 1

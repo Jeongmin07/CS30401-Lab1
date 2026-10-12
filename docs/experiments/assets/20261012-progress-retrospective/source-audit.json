@@ -1,0 +1,606 @@
+{
+  "schema_version": 1,
+  "audit_repository_commit": "28deb38c5d2a2eb31b560821fe853a91208a6819",
+  "audit_scope": "기존 완료 기록과 보관된 원본에 대한 읽기 검증. 신규 시뮬레이션/빌드/원본 변경 없음.",
+  "repository_sources": [
+    {
+      "repository_path": "code/kim-study/path_truth_200s.csv",
+      "bytes": 135964,
+      "sha256": "49bd5418f2b13bdbf6d703f719d61075f814cc86d44c745651bf797f4e5f656c",
+      "git_commit": "28deb38c5d2a2eb31b560821fe853a91208a6819"
+    },
+    {
+      "repository_path": "docs/experiments/assets/20261012-forecast-loss/export/cases/leo10-base/manifest.json",
+      "bytes": 420144,
+      "sha256": "bfbfd42ada5775fc67f382d19069d4fa8ab73b35c9ce774ce6446f330b7a07ee",
+      "git_commit": "28deb38c5d2a2eb31b560821fe853a91208a6819"
+    },
+    {
+      "repository_path": "docs/experiments/assets/20261012-forecast-loss/raw-inventory.json",
+      "bytes": 39657,
+      "sha256": "5cbe3ea49c42462d6b782e9e1146800e7458f24328289a8d57463ed202b40ead",
+      "git_commit": "28deb38c5d2a2eb31b560821fe853a91208a6819"
+    },
+    {
+      "repository_path": "code/predict-loss/ns3.patch",
+      "bytes": 51013,
+      "sha256": "666c376fe68687f053786d850af926402f59f925c9b7706c72faec6e50b42340",
+      "git_commit": "28deb38c5d2a2eb31b560821fe853a91208a6819"
+    },
+    {
+      "repository_path": "docs/experiments/assets/20261012-forecast-loss/export/results.csv",
+      "bytes": 1445,
+      "sha256": "00d76a571af16c1d5d9fbf7d6b464847993c0cb0401cd3b84018931386af0d3a",
+      "git_commit": "28deb38c5d2a2eb31b560821fe853a91208a6819"
+    }
+  ],
+  "payload_serialization_reference": {
+    "mss_bytes": 1380,
+    "base_tcp_header_bytes": 20,
+    "timestamp_option_bytes": 10,
+    "tcp_option_padding_bytes": 2,
+    "normal_data_tcp_header_bytes": 32,
+    "ipv4_header_bytes": 20,
+    "ppp_header_bytes": 2,
+    "normal_data_serialized_bytes": 1434,
+    "payload_fraction": 0.9623430962343096,
+    "reference_goodput_mbps_at_10_mbps": 9.623430962343097,
+    "reference_goodput_mbps_at_100_mbps": 96.23430962343096,
+    "formula": "configured_rate_mbps * 1380 / (1380 + 32 + 20 + 2)",
+    "qualification": "Timestamp-enabled, MSS-sized normal data packets; header-only optimistic reference, not an established achievable optimum. Startup/ACK feedback/loss/retransmission/path changes/finite cutoff and competition costs are omitted. Application rate in a subwindow may include data serialized earlier, so this is not a hard instantaneous receive-rate bound. ACK bytes are not naively subtracted from every full-duplex data direction."
+  },
+  "geometry": {
+    "input_source": {
+      "repository_path": "code/kim-study/path_truth_200s.csv",
+      "bytes": 135964,
+      "sha256": "49bd5418f2b13bdbf6d703f719d61075f814cc86d44c745651bf797f4e5f656c",
+      "git_commit": "28deb38c5d2a2eb31b560821fe853a91208a6819"
+    },
+    "input_rows": 2000,
+    "rtt_prop_min_ms": 87.454,
+    "rtt_prop_max_ms": 98.535,
+    "meaning": "forward plus reverse propagation RTT from supplied geometry; not measured TCP RTT or queue delay",
+    "forward_path_column_available": true,
+    "separate_reverse_path_column_available": false,
+    "path_change_steps": [
+      {
+        "event_time_ns": 2400000000,
+        "event_time_s": 2.4,
+        "previous_csv_file_line_1based": 25,
+        "new_csv_file_line_1based": 26,
+        "old_rtt_prop_ms": 98.534,
+        "new_rtt_prop_ms": 98.535,
+        "delta_ms": 0.001,
+        "new_over_old_ratio": 1.0000101487811315,
+        "change_percent": 0.001014878113138612,
+        "old_forward_path": "1584-338-337-336-335-313-291-269-247-225-224-1585",
+        "new_forward_path": "1584-381-380-379-357-335-313-291-269-247-225-224-1585",
+        "old_forward_hops": 11,
+        "new_forward_hops": 12,
+        "old_reverse_hops": 11,
+        "new_reverse_hops": 12
+      },
+      {
+        "event_time_ns": 26200000000,
+        "event_time_s": 26.2,
+        "previous_csv_file_line_1based": 263,
+        "new_csv_file_line_1based": 264,
+        "old_rtt_prop_ms": 97.698,
+        "new_rtt_prop_ms": 91.064,
+        "delta_ms": -6.634,
+        "new_over_old_ratio": 0.9320968699461606,
+        "change_percent": -6.790313005383938,
+        "old_forward_path": "1584-381-380-379-357-335-313-291-269-247-225-224-1585",
+        "new_forward_path": "1584-316-315-314-313-291-269-247-225-224-1585",
+        "old_forward_hops": 12,
+        "new_forward_hops": 10,
+        "old_reverse_hops": 12,
+        "new_reverse_hops": 10
+      },
+      {
+        "event_time_ns": 75000000000,
+        "event_time_s": 75.0,
+        "previous_csv_file_line_1based": 751,
+        "new_csv_file_line_1based": 752,
+        "old_rtt_prop_ms": 90.987,
+        "new_rtt_prop_ms": 87.644,
+        "delta_ms": -3.343,
+        "new_over_old_ratio": 0.9632584874762329,
+        "change_percent": -3.674151252376713,
+        "old_forward_path": "1584-316-315-314-313-291-269-247-225-224-1585",
+        "new_forward_path": "1584-337-336-335-313-291-269-247-225-224-1585",
+        "old_forward_hops": 10,
+        "new_forward_hops": 10,
+        "old_reverse_hops": 10,
+        "new_reverse_hops": 10
+      },
+      {
+        "event_time_ns": 121600000000,
+        "event_time_s": 121.6,
+        "previous_csv_file_line_1based": 1217,
+        "new_csv_file_line_1based": 1218,
+        "old_rtt_prop_ms": 87.507,
+        "new_rtt_prop_ms": 90.568,
+        "delta_ms": 3.061,
+        "new_over_old_ratio": 1.0349800587381581,
+        "change_percent": 3.498005873815809,
+        "old_forward_path": "1584-337-336-335-313-291-269-247-225-224-1585",
+        "new_forward_path": "1584-337-336-335-313-291-269-247-246-245-1585",
+        "old_forward_hops": 10,
+        "new_forward_hops": 10,
+        "old_reverse_hops": 10,
+        "new_reverse_hops": 10
+      },
+      {
+        "event_time_ns": 187400000000,
+        "event_time_s": 187.4,
+        "previous_csv_file_line_1based": 1875,
+        "new_csv_file_line_1based": 1876,
+        "old_rtt_prop_ms": 90.657,
+        "new_rtt_prop_ms": 97.888,
+        "delta_ms": 7.231,
+        "new_over_old_ratio": 1.0797621805266002,
+        "change_percent": 7.976218052660026,
+        "old_forward_path": "1584-337-336-335-313-291-269-247-246-245-1585",
+        "new_forward_path": "1584-337-336-335-313-291-269-247-225-203-181-180-1585",
+        "old_forward_hops": 10,
+        "new_forward_hops": 12,
+        "old_reverse_hops": 10,
+        "new_reverse_hops": 12
+      },
+      {
+        "event_time_ns": 193800000000,
+        "event_time_s": 193.8,
+        "previous_csv_file_line_1based": 1939,
+        "new_csv_file_line_1based": 1940,
+        "old_rtt_prop_ms": 98.112,
+        "new_rtt_prop_ms": 98.116,
+        "delta_ms": 0.004,
+        "new_over_old_ratio": 1.0000407697325506,
+        "change_percent": 0.004076973255055447,
+        "old_forward_path": "1584-337-336-335-313-291-269-247-225-203-181-180-1585",
+        "new_forward_path": "1584-337-336-335-313-291-269-247-225-203-202-180-1585",
+        "old_forward_hops": 12,
+        "new_forward_hops": 12,
+        "old_reverse_hops": 12,
+        "new_reverse_hops": 12
+      },
+      {
+        "event_time_ns": 194000000000,
+        "event_time_s": 194.0,
+        "previous_csv_file_line_1based": 1941,
+        "new_csv_file_line_1based": 1942,
+        "old_rtt_prop_ms": 98.12,
+        "new_rtt_prop_ms": 98.123,
+        "delta_ms": 0.003,
+        "new_over_old_ratio": 1.0000305748063596,
+        "change_percent": 0.0030574806359559724,
+        "old_forward_path": "1584-337-336-335-313-291-269-247-225-203-202-180-1585",
+        "new_forward_path": "1584-337-336-335-334-312-290-268-246-224-202-180-1585",
+        "old_forward_hops": 12,
+        "new_forward_hops": 12,
+        "old_reverse_hops": 12,
+        "new_reverse_hops": 12
+      }
+    ],
+    "no_natural_100_to_200_ms_step": true
+  },
+  "baseline_cubic10": {
+    "container": "lab1-predict-loss-20261012",
+    "baseline_manifest_sha256": "bfbfd42ada5775fc67f382d19069d4fa8ab73b35c9ce774ce6446f330b7a07ee",
+    "status": "success",
+    "exit_code": 0,
+    "case": "leo10-base",
+    "definition": {
+      "kind": "leo",
+      "mode": "base",
+      "rate": 10,
+      "queue": 100,
+      "duration": 200
+    },
+    "ns3_head": "99bc6f733274475b7a6e804128651e17ee2a2536",
+    "launch_repo_commit": "10a09ba35af2ce4fdaffdd77153408f24d614e38",
+    "launch_repo_dirty": true,
+    "patch_sha256": "666c376fe68687f053786d850af926402f59f925c9b7706c72faec6e50b42340",
+    "installed_diff_sha256": "666c376fe68687f053786d850af926402f59f925c9b7706c72faec6e50b42340",
+    "cwnd_trace": {
+      "path": "/tmp/predict-loss/leo10-base/logs_ns3/tcp_flow_0_cwnd.csv",
+      "bytes": 101682,
+      "sha256": "6651966bdd19d9cbcbcc99fb18ec854f152de7e81ed93e075e8baa5d09599860",
+      "schema": [
+        "flow_id",
+        "time_ns",
+        "cwnd_bytes"
+      ],
+      "headerless": true,
+      "rows": 4782,
+      "observations": [
+        {
+          "event_time_ns": 121600000000,
+          "source_csv_file_line_1based": 3106,
+          "raw_row": "0,121044495855,161460",
+          "last_cwnd_change_ns": 121044495855,
+          "cwnd_bytes": 161460,
+          "next_cwnd_change": {
+            "source_csv_file_line_1based": 3107,
+            "raw_row": "0,121668266902,159282",
+            "time_ns": 121668266902,
+            "cwnd_bytes": 159282
+          },
+          "no_intervening_cwnd_change_before_event": true
+        },
+        {
+          "event_time_ns": 187400000000,
+          "source_csv_file_line_1based": 4539,
+          "raw_row": "0,186227766243,161460",
+          "last_cwnd_change_ns": 186227766243,
+          "cwnd_bytes": 161460,
+          "next_cwnd_change": {
+            "source_csv_file_line_1based": 4540,
+            "raw_row": "0,188942558620,162840",
+            "time_ns": 188942558620,
+            "cwnd_bytes": 162840
+          },
+          "no_intervening_cwnd_change_before_event": true
+        }
+      ]
+    },
+    "header_source_checks": [
+      {
+        "container_path": "/home/ubuntu/ns-3.48/contrib/basic-sim/helper/core/tcp-optimizer.cc",
+        "relative_ns3_path": "contrib/basic-sim/helper/core/tcp-optimizer.cc",
+        "bytes": 6002,
+        "sha256": "275d3b01bc5223bdb5ab4a33c85b41253dcb7725a2ffb2a18db4a58c2e94a51d",
+        "base_HEAD_blob_sha256": "275d3b01bc5223bdb5ab4a33c85b41253dcb7725a2ffb2a18db4a58c2e94a51d",
+        "identical_to_ns3_HEAD_blob": true,
+        "snippets": [
+          {
+            "match": "int64_t segment_size_byte = 1380",
+            "start_line_1based": 27,
+            "lines": [
+              "    int64_t segment_size_byte = 1380;   // 536 byte is default, but we know the a point-to-point network device has an MTU of 1500.",
+              "    // IP header size: min. 20 byte, max. 60 byte",
+              "    // TCP header size: min. 20 byte, max. 60 byte",
+              "    // So, 1500 - 60 - 60 = 1380 would be the safest bet (given we don't do tunneling)",
+              "    // This could be increased higher, e.g. as discussed here:",
+              "    // https://blog.cloudflare.com/increasing-ipv6-mtu/ (retrieved April 7th, 2020)",
+              "    // In past ns-3 simulations, I've observed that the IP + TCP header is generally not larger than 80 bytes."
+            ]
+          },
+          {
+            "match": "bool opt_timestamp_enabled = true",
+            "start_line_1based": 39,
+            "lines": [
+              "    bool opt_timestamp_enabled = true;  // Default: true.",
+              "    // To get an RTT measurement with a resolution of less than 1ms, it needs",
+              "    // to be disabled because the fields in the TCP Option are in milliseconds.",
+              "    // When disabling it, there are two downsides:",
+              "    //  (1) Less protection against wrapped sequence numbers (PAWS)",
+              "    //  (2) Algorithm to see if it has entered loss recovery unnecessarily are not as possible (Eiffel)",
+              "    // See: https://tools.ietf.org/html/rfc7323#section-3"
+            ]
+          }
+        ]
+      },
+      {
+        "container_path": "/home/ubuntu/ns-3.48/src/internet/model/tcp-header.cc",
+        "relative_ns3_path": "src/internet/model/tcp-header.cc",
+        "bytes": 11370,
+        "sha256": "0f7450ed6b2c78a840dc07c6f9a1b3939f2b20a2793f56493220465c92d5eeed",
+        "base_HEAD_blob_sha256": "0f7450ed6b2c78a840dc07c6f9a1b3939f2b20a2793f56493220465c92d5eeed",
+        "identical_to_ns3_HEAD_blob": true,
+        "snippets": [
+          {
+            "match": "TcpHeader::GetSerializedSize() const",
+            "start_line_1based": 268,
+            "lines": [
+              "TcpHeader::GetSerializedSize() const",
+              "{",
+              "    return CalculateHeaderLength() * 4;",
+              "}",
+              "",
+              "void",
+              "TcpHeader::Serialize(Buffer::Iterator start) const"
+            ]
+          },
+          {
+            "match": "TcpHeader::CalculateHeaderLength() const",
+            "start_line_1based": 404,
+            "lines": [
+              "TcpHeader::CalculateHeaderLength() const",
+              "{",
+              "    uint32_t len = 20;",
+              "",
+              "    for (auto i = m_options.begin(); i != m_options.end(); ++i)",
+              "    {",
+              "        len += (*i)->GetSerializedSize();",
+              "    }",
+              "    // Option list may not include padding; need to pad up to word boundary",
+              "    if (len % 4)",
+              "    {",
+              "        len += 4 - (len % 4);",
+              "    }",
+              "    return len >> 2;",
+              "}",
+              ""
+            ]
+          }
+        ]
+      },
+      {
+        "container_path": "/home/ubuntu/ns-3.48/src/internet/model/tcp-option-ts.cc",
+        "relative_ns3_path": "src/internet/model/tcp-option-ts.cc",
+        "bytes": 2471,
+        "sha256": "e086ad1961ad37310996c5fba43079b510e299ceeb4fadb83d0f62ddbde32a13",
+        "base_HEAD_blob_sha256": "e086ad1961ad37310996c5fba43079b510e299ceeb4fadb83d0f62ddbde32a13",
+        "identical_to_ns3_HEAD_blob": true,
+        "snippets": [
+          {
+            "match": "TcpOptionTS::GetSerializedSize() const",
+            "start_line_1based": 48,
+            "lines": [
+              "TcpOptionTS::GetSerializedSize() const",
+              "{",
+              "    return 10;",
+              "}",
+              "",
+              "void",
+              "TcpOptionTS::Serialize(Buffer::Iterator start) const"
+            ]
+          }
+        ]
+      },
+      {
+        "container_path": "/home/ubuntu/ns-3.48/src/internet/model/ipv4-header.cc",
+        "relative_ns3_path": "src/internet/model/ipv4-header.cc",
+        "bytes": 9479,
+        "sha256": "9e5f07915eeaf701bf84792d06eaf05663582c5fd28efd1e9d4afc62461814d8",
+        "base_HEAD_blob_sha256": "9e5f07915eeaf701bf84792d06eaf05663582c5fd28efd1e9d4afc62461814d8",
+        "identical_to_ns3_HEAD_blob": true,
+        "snippets": [
+          {
+            "match": "m_headerSize(5 * 4)",
+            "start_line_1based": 34,
+            "lines": [
+              "      m_headerSize(5 * 4)",
+              "{",
+              "}",
+              "",
+              "void",
+              "Ipv4Header::EnableChecksum()",
+              "{"
+            ]
+          }
+        ]
+      },
+      {
+        "container_path": "/home/ubuntu/ns-3.48/src/point-to-point/model/ppp-header.cc",
+        "relative_ns3_path": "src/point-to-point/model/ppp-header.cc",
+        "bytes": 1577,
+        "sha256": "914a1e5ce34d96a69829782c525ca50f0df78a709aed2651d9b220f6d2742a14",
+        "base_HEAD_blob_sha256": "914a1e5ce34d96a69829782c525ca50f0df78a709aed2651d9b220f6d2742a14",
+        "identical_to_ns3_HEAD_blob": true,
+        "snippets": [
+          {
+            "match": "PppHeader::GetSerializedSize() const",
+            "start_line_1based": 67,
+            "lines": [
+              "PppHeader::GetSerializedSize() const",
+              "{",
+              "    return 2;",
+              "}",
+              "",
+              "void",
+              "PppHeader::Serialize(Buffer::Iterator start) const"
+            ]
+          }
+        ]
+      },
+      {
+        "container_path": "/home/ubuntu/ns-3.48/contrib/satellite-network/model/gsl-net-device.cc",
+        "relative_ns3_path": "contrib/satellite-network/model/gsl-net-device.cc",
+        "bytes": 18725,
+        "sha256": "7f6634b8108179e3e925f519f577593908ffd3128a45c1a105f2c1c4c1118c99",
+        "base_HEAD_blob_sha256": "7f6634b8108179e3e925f519f577593908ffd3128a45c1a105f2c1c4c1118c99",
+        "identical_to_ns3_HEAD_blob": true,
+        "snippets": [
+          {
+            "match": ".AddAttribute (\"InterframeGap\"",
+            "start_line_1based": 71,
+            "lines": [
+              "    .AddAttribute (\"InterframeGap\", ",
+              "                   \"The time to wait between packet (frame) transmissions\",",
+              "                   TimeValue (Seconds (0.0)),",
+              "                   MakeTimeAccessor (&GSLNetDevice::m_tInterframeGap),",
+              "                   MakeTimeChecker ())",
+              "",
+              "    //"
+            ]
+          },
+          {
+            "match": "GSLNetDevice::AddHeader",
+            "start_line_1based": 197,
+            "lines": [
+              "GSLNetDevice::AddHeader (Ptr<Packet> p, uint16_t protocolNumber)",
+              "{",
+              "  NS_LOG_FUNCTION (this << p << protocolNumber);",
+              "  PppHeader ppp;",
+              "  ppp.SetProtocol (EtherToPpp (protocolNumber));",
+              "  p->AddHeader (ppp);",
+              "}"
+            ]
+          },
+          {
+            "match": "Time txTime = m_bps.CalculateBytesTxTime",
+            "start_line_1based": 260,
+            "lines": [
+              "  Time txTime = m_bps.CalculateBytesTxTime (p->GetSize ());",
+              "  Time txCompleteTime = txTime + m_tInterframeGap;",
+              "",
+              "  NS_LOG_LOGIC (\"Schedule TransmitCompleteEvent in \" << txCompleteTime.GetSeconds () << \"sec\");",
+              "  Simulator::Schedule (txCompleteTime, &GSLNetDevice::TransmitComplete, this, dest);",
+              "",
+              "  bool result = m_channel->TransmitStart (p, this, dest, txTime);"
+            ]
+          }
+        ]
+      },
+      {
+        "container_path": "/home/ubuntu/ns-3.48/contrib/satellite-network/model/point-to-point-laser-net-device.cc",
+        "relative_ns3_path": "contrib/satellite-network/model/point-to-point-laser-net-device.cc",
+        "bytes": 22253,
+        "sha256": "b777572cea3c3a4b62383336f5342de68099ff5d3cc04141125f60e50e4a1781",
+        "base_HEAD_blob_sha256": "b777572cea3c3a4b62383336f5342de68099ff5d3cc04141125f60e50e4a1781",
+        "identical_to_ns3_HEAD_blob": true,
+        "snippets": [
+          {
+            "match": ".AddAttribute (\"InterframeGap\"",
+            "start_line_1based": 71,
+            "lines": [
+              "    .AddAttribute (\"InterframeGap\", ",
+              "                   \"The time to wait between packet (frame) transmissions\",",
+              "                   TimeValue (Seconds (0.0)),",
+              "                   MakeTimeAccessor (&PointToPointLaserNetDevice::m_tInterframeGap),",
+              "                   MakeTimeChecker ())",
+              "",
+              "    //"
+            ]
+          },
+          {
+            "match": "PointToPointLaserNetDevice::AddHeader",
+            "start_line_1based": 197,
+            "lines": [
+              "PointToPointLaserNetDevice::AddHeader (Ptr<Packet> p, uint16_t protocolNumber)",
+              "{",
+              "  NS_LOG_FUNCTION (this << p << protocolNumber);",
+              "  PppHeader ppp;",
+              "  ppp.SetProtocol (EtherToPpp (protocolNumber));",
+              "  p->AddHeader (ppp);",
+              "}"
+            ]
+          },
+          {
+            "match": "Time txTime = m_bps.CalculateBytesTxTime",
+            "start_line_1based": 258,
+            "lines": [
+              "  Time txTime = m_bps.CalculateBytesTxTime (p->GetSize ());",
+              "  Time txCompleteTime = txTime + m_tInterframeGap;",
+              "",
+              "  NS_LOG_LOGIC (\"Schedule TransmitCompleteEvent in \" << txCompleteTime.GetSeconds () << \"sec\");",
+              "  Simulator::Schedule (txCompleteTime, &PointToPointLaserNetDevice::TransmitComplete, this);",
+              "",
+              "  bool result = m_channel->TransmitStart (p, this, m_destination_node, txTime);"
+            ]
+          }
+        ]
+      },
+      {
+        "container_path": "/home/ubuntu/ns-3.48/src/internet/model/tcp-socket-base.cc",
+        "relative_ns3_path": "src/internet/model/tcp-socket-base.cc",
+        "bytes": 180691,
+        "sha256": "d8e90e920b334efa2d2cb8b664d6215f6f15e5ad25a33bb08169283ccb1763dd",
+        "base_HEAD_blob_sha256": "b6ee80a1d33538f36f0f9f2170a6ca2512beed6850133a47fd00db96f3d70afe",
+        "identical_to_ns3_HEAD_blob": false,
+        "snippets": [
+          {
+            "match": "TcpSocketBase::AddOptions(TcpHeader& header)",
+            "start_line_1based": 4430,
+            "lines": [
+              "TcpSocketBase::AddOptions(TcpHeader& header)",
+              "{",
+              "    NS_LOG_FUNCTION(this << header);",
+              "",
+              "    if (m_timestampEnabled)",
+              "    {",
+              "        AddOptionTimestamp(header);"
+            ]
+          }
+        ]
+      }
+    ],
+    "provided_interface_rate_check": {
+      "input_directory": "/home/ubuntu/lab/data/seoul_london/state/dynamic_state_100ms_for_200s",
+      "gsl_bandwidth_file_count": 2000,
+      "nonempty_fraction_records": 1586,
+      "fraction_min": 1.0,
+      "fraction_max": 1.0,
+      "ground_station_gsl_interface_rows": [
+        [
+          "1584",
+          "1",
+          "1.000000"
+        ],
+        [
+          "1585",
+          "1",
+          "1.000000"
+        ]
+      ],
+      "dynamic_input_map_provenance": "unchanged supplied files; every input identity recorded in the copied baseline execution manifest"
+    },
+    "raw_release": {
+      "release_url": "https://github.com/Jeongmin07/CS30401-Lab1/releases/tag/forecast-loss-20261012",
+      "download_url": "https://github.com/Jeongmin07/CS30401-Lab1/releases/download/forecast-loss-20261012/forecast-loss-20261012.tar.gz",
+      "tag": "forecast-loss-20261012",
+      "release_target_commitish": "a55bd865911ad61896b29248d2798ed3a0019638",
+      "archive_bytes": 85141440,
+      "archive_sha256": "3d55c45297446dbdf601bdbfe9485a9e1ed7c6098d8306778dd9c6991fd7c3d1",
+      "GitHub_asset_digest_verified": true,
+      "raw_archive_member": {
+        "path": "predict-loss/leo10-base/logs_ns3/tcp_flow_0_cwnd.csv",
+        "bytes": 101682,
+        "sha256": "6651966bdd19d9cbcbcc99fb18ec854f152de7e81ed93e075e8baa5d09599860"
+      },
+      "raw_member_matches_execution_manifest_and_current_retained_csv": true,
+      "archive_downloaded_again_for_this_audit": false
+    }
+  },
+  "finite_actual_loss_controls": {
+    "source": {
+      "repository_path": "docs/experiments/assets/20261012-forecast-loss/export/results.csv",
+      "bytes": 1445,
+      "sha256": "00d76a571af16c1d5d9fbf7d6b464847993c0cb0401cd3b84018931386af0d3a",
+      "git_commit": "28deb38c5d2a2eb31b560821fe853a91208a6819"
+    },
+    "rows": [
+      {
+        "case": "loss-first-base",
+        "source_csv_file_line_1based": 8,
+        "received_bytes": 27600,
+        "fct_ns": 251509920,
+        "fct_s": 0.25150992,
+        "transfer_complete": true,
+        "tagged_drops": 1,
+        "retransmissions": 1
+      },
+      {
+        "case": "loss-first-bounded",
+        "source_csv_file_line_1based": 9,
+        "received_bytes": 27600,
+        "fct_ns": 400114720,
+        "fct_s": 0.40011472,
+        "transfer_complete": true,
+        "tagged_drops": 1,
+        "retransmissions": 1
+      },
+      {
+        "case": "loss-first-legacy",
+        "source_csv_file_line_1based": 10,
+        "received_bytes": 27600,
+        "fct_ns": 1150124001,
+        "fct_s": 1.150124001,
+        "transfer_complete": true,
+        "tagged_drops": 1,
+        "retransmissions": 1
+      }
+    ],
+    "qualification": "27,600-byte completed transfers only. FCT is receiver complete delivery from flow start. The identical four-second average goodput is not an FCT comparison."
+  },
+  "limits": [
+    "cwnd values are last change-trace values held until the next observed change; actual inflight and cwnd-limited state are not inferred.",
+    "SRTT minus instantaneous geometry is not an exact isolated queue delay.",
+    "Scaling cwnd by propagation RTT ratio alone neither guarantees utilization nor removes already queued/in-flight data.",
+    "BBR orbit-BDP null results concern a different controller and policy insertion point; they do not automatically refute a CUBIC proposal.",
+    "Installed source byte identities and existing manifest/release identities are verified here; no independent rebuild or new simulation was performed."
+  ]
+}

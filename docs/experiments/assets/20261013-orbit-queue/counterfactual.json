@@ -1,0 +1,6157 @@
+{
+  "schema": 1,
+  "helper_sha256": "0d364a82229959e166cd40dd548bbf588a45ad823e8187c378c4dc14be34ff05",
+  "shared_helper_sha256": "efa69ba813f3c1d5984f7cfdac0b4af54b36572844a35b6f31dd3c7066038b2a",
+  "input_receipt_sha256": "a9186766b2b4022e9256c91f4b854c89f8da709b1cef71914ca89b0f5ebf8eaf",
+  "prefix": {
+    "cutoff_ns": 75000000000,
+    "all_exact": true,
+    "files": {
+      "study_app_rx_node_1585_port_1024.csv": {
+        "mode": "timed",
+        "rows": 60877,
+        "exact": true,
+        "prefix_sha256": "3f788cfccd131f4c4cadcb1ff4fb5542f59bbf5385ce7f5469211f6935c326e2"
+      },
+      "study_rx_node_1585_port_1024.csv": {
+        "mode": "timed",
+        "rows": 64011,
+        "exact": true,
+        "prefix_sha256": "282193064f2fd631ebe40634fe3f6832ba555137fc5bffc47621d174c7f718e5"
+      },
+      "study_drops.csv": {
+        "mode": "timed",
+        "rows": 348,
+        "exact": true,
+        "prefix_sha256": "0d15e4eada809d706bf8c01c3ba54e81700d1564cc4a84b79857ab6ebde85d9e"
+      },
+      "tcp_flow_0_cwnd.csv": {
+        "mode": "plain",
+        "rows": 1968,
+        "exact": true,
+        "prefix_sha256": "25cb8fa1b82e24baa231e2470b6c7a730ea0d7be030f8d03cb060a6c21c4c505"
+      },
+      "tcp_flow_0_progress.csv": {
+        "mode": "plain",
+        "rows": 30493,
+        "exact": true,
+        "prefix_sha256": "cdab89b479e3b5162658910326e4919777fdddba6ebebfe4abbbd8962fda464c"
+      },
+      "tcp_flow_0_rtt.csv": {
+        "mode": "plain",
+        "rows": 30442,
+        "exact": true,
+        "prefix_sha256": "4d670c4f4f9db39bbfb41f327fd285a0f76d1b9489c1af4e63549a62cdcd7b03"
+      },
+      "tcp_flow_0_study_events.csv": {
+        "mode": "timed",
+        "rows": 74,
+        "exact": true,
+        "prefix_sha256": "16b2749fe5d05b63823c28b02ae23f80541a4d16d1cae739dd5a7469f443b3b4"
+      },
+      "tcp_flow_0_study_packets.csv": {
+        "mode": "timed",
+        "rows": 98472,
+        "exact": true,
+        "prefix_sha256": "83554859018b8ec85a8bf87f3eea938f38a1acd1e730742385da8e88ec3fa5d2"
+      },
+      "tcp_flow_0_orbit_loss.csv": {
+        "mode": "timed",
+        "rows": 8,
+        "exact": true,
+        "prefix_sha256": "7bab1c46489a5492ce075a11d6c672ca9d8cc85843134687abe232dded150328"
+      },
+      "queue_focus.csv": {
+        "mode": "timed",
+        "rows": 13083,
+        "exact": true,
+        "prefix_sha256": "25062dfe0eebcd00d62b1f80912a69a545753484f5df760455b9810416b4eb5a"
+      },
+      "queue_occupancy.csv": {
+        "mode": "occupancy",
+        "rows": 21005,
+        "exact": true,
+        "prefix_sha256": "7bbed75f7d4e98f2378a5d10442ae5abcc1f155bfb6c7212b51cbbfb3123346f",
+        "device_groups": 7922
+      },
+      "queue_flow_state.csv": {
+        "mode": "timed",
+        "rows": 2044,
+        "exact": true,
+        "prefix_sha256": "c4f1c46f54696291f9db360f474dae4b43b2c6849137c6c949116a3426faf6fe"
+      },
+      "queue_tc_drop.csv": {
+        "mode": "timed",
+        "rows": 348,
+        "exact": true,
+        "prefix_sha256": "fe7a627020095dc5b02224783e932bca9abb15020a071dd017c0ba43228fbd9b"
+      },
+      "orbit_drops.csv": {
+        "mode": "timed",
+        "rows": 348,
+        "exact": true,
+        "prefix_sha256": "178a7e32fb83bace1436d1b93ae0c9be1d84157f29e1dac5e67679059c09d778"
+      },
+      "orbit_queue_bins.csv": {
+        "mode": "queue_bins",
+        "rows": 15996,
+        "exact": true,
+        "prefix_sha256": "b12e6734025d294a032ce5f2fbcf9b3a39e6705a0d55aa43dc2267a4d23cb460"
+      },
+      "orbit_service_bins.csv": {
+        "mode": "service_bins",
+        "rows": 15998,
+        "exact": true,
+        "prefix_sha256": "9adbf523f6e71129bdf04a720d8b68ba5711272f735bd50e5406c96b15e3a001"
+      },
+      "study_drop_coverage.csv": {
+        "mode": "static_full_file",
+        "exact": true,
+        "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+      },
+      "orbit_coverage.csv": {
+        "mode": "static_full_file",
+        "exact": true,
+        "sha256": "7785a349bbcd58d321430e5454d4e7193dfc4ed7766e00af84b503fa6bafef9c"
+      },
+      "orbit_service_coverage.csv": {
+        "mode": "static_full_file",
+        "exact": true,
+        "sha256": "102295605d325a6491f26c20a955d8fde2c96fa6aec15a166e8043f42510cdf8"
+      },
+      "queue_devices.csv": {
+        "mode": "static_full_file",
+        "exact": true,
+        "sha256": "36639705e7d001b7f59ab2ef2f509fc8a326a0ed8ef25d1f17cbc7fc90cac2ee"
+      }
+    },
+    "exclusions": [
+      "timing_results.csv measures wallclock profiling.",
+      "tcp_flows.csv contains final ACK progress, so it has no temporal prefix.",
+      "Queue pending tables are final-cutoff measurements, not pre-T75 histories.",
+      "Queue bin flush_time/queue-at-flush and service cutoff/active-at-cutoff fields are excluded because their observation can be after T75.",
+      "Occupancy is compared in recorded order per device; synthetic held boundaries need not have global file-time order."
+    ]
+  },
+  "counterfactual": {
+    "schema": 1,
+    "case": "selective-route75-delayed78",
+    "observer_only": false,
+    "equality": {
+      "pre75_prefix_exact": true,
+      "original_case": "selective-natural",
+      "original_manifest_sha256": "a41a6acb2a429037ed1b004a0d641af2a7b27300722e6f913c41e8b0412f7ea1",
+      "original_launch_commit": "66b2409f722bc68e3a4973254ceb599c3d6b5892",
+      "new_launch_commit": "3767411cb0f154e7b40b7c098f9516f1c47fbc73",
+      "entire_trajectory_equality_claimed": false
+    },
+    "measurements": {
+      "whole": {
+        "start_ns": 0,
+        "end_ns": 200000000000,
+        "app_bytes": 238662720,
+        "tx_packets": 173532,
+        "retx_packets": 507,
+        "explicit_retx_events": 507,
+        "recovery_entries": 40,
+        "loss_state_entries": 1,
+        "tagged_drop_count": 486,
+        "tagged_TcDrop": 486,
+        "app_goodput_mbps": 9.5465088
+      },
+      "pre": {
+        "start_ns": 74500000000,
+        "end_ns": 75000000000,
+        "app_bytes": 600300,
+        "tx_packets": 447,
+        "retx_packets": 0,
+        "recovery_entries": 0,
+        "loss_state_entries": 0,
+        "tagged_drop_count": 0,
+        "tagged_TcDrop": 0,
+        "explicit_retx_events": 0,
+        "app_goodput_mbps": 9.6048
+      },
+      "post": {
+        "start_ns": 75000000000,
+        "end_ns": 75500000000,
+        "app_bytes": 601680,
+        "tx_packets": 452,
+        "retx_packets": 0,
+        "recovery_entries": 0,
+        "loss_state_entries": 0,
+        "tagged_drop_count": 0,
+        "tagged_TcDrop": 0,
+        "explicit_retx_events": 0,
+        "app_goodput_mbps": 9.62688
+      },
+      "legacy": {
+        "start_ns": 74500000000,
+        "end_ns": 77000000000,
+        "app_bytes": 3005640,
+        "tx_packets": 2138,
+        "retx_packets": 12,
+        "explicit_retx_events": 12,
+        "recovery_entries": 2,
+        "loss_state_entries": 0,
+        "tagged_drop_count": 11,
+        "tagged_TcDrop": 11,
+        "app_goodput_mbps": 9.618048
+      },
+      "focus": {
+        "start_ns": 74500000000,
+        "end_ns": 77500000000,
+        "app_bytes": 3607320,
+        "tx_packets": 2579,
+        "retx_packets": 12,
+        "explicit_retx_events": 12,
+        "recovery_entries": 2,
+        "loss_state_entries": 0,
+        "tagged_drop_count": 11,
+        "tagged_TcDrop": 11,
+        "app_goodput_mbps": 9.61952
+      }
+    },
+    "devices": [
+      {
+        "mapping": {
+          "node_id": "224",
+          "device_id": "3",
+          "if_index": "3",
+          "device_type": "ns3::PointToPointLaserNetDevice",
+          "queue_type": "ns3::DropTailQueue<Packet>",
+          "max_size": "100p",
+          "txq": "0",
+          "queue_limits_type": "none",
+          "root_qdisc_type": "none"
+        },
+        "windows": {
+          "pre": {
+            "occupancy": {
+              "time_weighted_packets": 0.0,
+              "time_weighted_bytes": 0.0,
+              "peak_packets": 0,
+              "peak_bytes": 0,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 74500000000,
+              "end_ns": 75000000000
+            },
+            "served_sojourn": {
+              "samples": 218,
+              "mean_ns": 0.0,
+              "p95_ns": 0,
+              "p99_ns": 0,
+              "max_ns": 0
+            },
+            "visits": {
+              "ENQUEUE": 218,
+              "DEQUEUE": 218
+            },
+            "serialization_busy_ns": 9417600,
+            "serialization_busy_fraction": 0.0188352,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          },
+          "post": {
+            "occupancy": {
+              "time_weighted_packets": 0.0,
+              "time_weighted_bytes": 0.0,
+              "peak_packets": 0,
+              "peak_bytes": 0,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 75000000000,
+              "end_ns": 75500000000
+            },
+            "served_sojourn": {
+              "samples": 218,
+              "mean_ns": 0.0,
+              "p95_ns": 0,
+              "p99_ns": 0,
+              "max_ns": 0
+            },
+            "visits": {
+              "ENQUEUE": 218,
+              "DEQUEUE": 218
+            },
+            "serialization_busy_ns": 9417600,
+            "serialization_busy_fraction": 0.0188352,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          },
+          "legacy": {
+            "occupancy": {
+              "time_weighted_packets": 0.0,
+              "time_weighted_bytes": 0.0,
+              "peak_packets": 0,
+              "peak_bytes": 0,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 74500000000,
+              "end_ns": 77000000000
+            },
+            "served_sojourn": {
+              "samples": 1262,
+              "mean_ns": 0.0,
+              "p95_ns": 0,
+              "p99_ns": 0,
+              "max_ns": 0
+            },
+            "visits": {
+              "ENQUEUE": 1262,
+              "DEQUEUE": 1262
+            },
+            "serialization_busy_ns": 60483200,
+            "serialization_busy_fraction": 0.02419328,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          },
+          "focus": {
+            "occupancy": {
+              "time_weighted_packets": 0.0,
+              "time_weighted_bytes": 0.0,
+              "peak_packets": 0,
+              "peak_bytes": 0,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 74500000000,
+              "end_ns": 77500000000
+            },
+            "served_sojourn": {
+              "samples": 1480,
+              "mean_ns": 0.0,
+              "p95_ns": 0,
+              "p99_ns": 0,
+              "max_ns": 0
+            },
+            "visits": {
+              "ENQUEUE": 1480,
+              "DEQUEUE": 1480
+            },
+            "serialization_busy_ns": 69900800,
+            "serialization_busy_fraction": 0.023300266666666666,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          }
+        },
+        "full_run_tc_drop_count": 0
+      },
+      {
+        "mapping": {
+          "node_id": "224",
+          "device_id": "5",
+          "if_index": "5",
+          "device_type": "ns3::GSLNetDevice",
+          "queue_type": "ns3::DropTailQueue<Packet>",
+          "max_size": "100p",
+          "txq": "0",
+          "queue_limits_type": "none",
+          "root_qdisc_type": "none"
+        },
+        "windows": {
+          "pre": {
+            "occupancy": {
+              "time_weighted_packets": 2.8776e-05,
+              "time_weighted_bytes": 0.041264784,
+              "peak_packets": 1,
+              "peak_bytes": 1434,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 74500000000,
+              "end_ns": 75000000000
+            },
+            "served_sojourn": {
+              "samples": 436,
+              "mean_ns": 33.0,
+              "p95_ns": 33,
+              "p99_ns": 33,
+              "max_ns": 33
+            },
+            "visits": {
+              "ENQUEUE": 436,
+              "DEQUEUE": 436
+            },
+            "serialization_busy_ns": 500000000,
+            "serialization_busy_fraction": 1.0,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          },
+          "post": {
+            "occupancy": {
+              "time_weighted_packets": 2.8776e-05,
+              "time_weighted_bytes": 0.041264784,
+              "peak_packets": 1,
+              "peak_bytes": 1434,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 75000000000,
+              "end_ns": 75500000000
+            },
+            "served_sojourn": {
+              "samples": 436,
+              "mean_ns": 33.0,
+              "p95_ns": 33,
+              "p99_ns": 33,
+              "max_ns": 33
+            },
+            "visits": {
+              "ENQUEUE": 436,
+              "DEQUEUE": 436
+            },
+            "serialization_busy_ns": 500000000,
+            "serialization_busy_fraction": 1.0,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          },
+          "legacy": {
+            "occupancy": {
+              "time_weighted_packets": 2.89136e-05,
+              "time_weighted_bytes": 0.0414621024,
+              "peak_packets": 1,
+              "peak_bytes": 1434,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 74500000000,
+              "end_ns": 77000000000
+            },
+            "served_sojourn": {
+              "samples": 2179,
+              "mean_ns": 33.173015144561724,
+              "p95_ns": 34,
+              "p99_ns": 34,
+              "max_ns": 34
+            },
+            "visits": {
+              "ENQUEUE": 2179,
+              "DEQUEUE": 2179
+            },
+            "serialization_busy_ns": 2500000000,
+            "serialization_busy_fraction": 1.0,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          },
+          "focus": {
+            "occupancy": {
+              "time_weighted_packets": 2.9036e-05,
+              "time_weighted_bytes": 0.041637624,
+              "peak_packets": 1,
+              "peak_bytes": 1434,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 74500000000,
+              "end_ns": 77500000000
+            },
+            "served_sojourn": {
+              "samples": 2615,
+              "mean_ns": 33.310898661567876,
+              "p95_ns": 34,
+              "p99_ns": 34,
+              "max_ns": 34
+            },
+            "visits": {
+              "ENQUEUE": 2615,
+              "DEQUEUE": 2615
+            },
+            "serialization_busy_ns": 3000000000,
+            "serialization_busy_fraction": 1.0,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          }
+        },
+        "full_run_tc_drop_count": 0
+      },
+      {
+        "mapping": {
+          "node_id": "225",
+          "device_id": "2",
+          "if_index": "2",
+          "device_type": "ns3::PointToPointLaserNetDevice",
+          "queue_type": "ns3::DropTailQueue<Packet>",
+          "max_size": "100p",
+          "txq": "0",
+          "queue_limits_type": "none",
+          "root_qdisc_type": "none"
+        },
+        "windows": {
+          "pre": {
+            "occupancy": {
+              "time_weighted_packets": 0.001128536,
+              "time_weighted_bytes": 1.618320624,
+              "peak_packets": 1,
+              "peak_bytes": 1434,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 74500000000,
+              "end_ns": 75000000000
+            },
+            "served_sojourn": {
+              "samples": 436,
+              "mean_ns": 1294.1926605504586,
+              "p95_ns": 1296,
+              "p99_ns": 1296,
+              "max_ns": 1296
+            },
+            "visits": {
+              "ENQUEUE": 436,
+              "DEQUEUE": 436
+            },
+            "serialization_busy_ns": 500000000,
+            "serialization_busy_fraction": 1.0,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          },
+          "post": {
+            "occupancy": {
+              "time_weighted_packets": 0.001125336,
+              "time_weighted_bytes": 1.613731824,
+              "peak_packets": 1,
+              "peak_bytes": 1434,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 75000000000,
+              "end_ns": 75500000000
+            },
+            "served_sojourn": {
+              "samples": 436,
+              "mean_ns": 1290.5229357798164,
+              "p95_ns": 1292,
+              "p99_ns": 1292,
+              "max_ns": 1292
+            },
+            "visits": {
+              "ENQUEUE": 436,
+              "DEQUEUE": 436
+            },
+            "serialization_busy_ns": 500000000,
+            "serialization_busy_fraction": 1.0,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          },
+          "legacy": {
+            "occupancy": {
+              "time_weighted_packets": 0.0011213376,
+              "time_weighted_bytes": 1.6079981184,
+              "peak_packets": 1,
+              "peak_bytes": 1434,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 74500000000,
+              "end_ns": 77000000000
+            },
+            "served_sojourn": {
+              "samples": 2179,
+              "mean_ns": 1286.52776502983,
+              "p95_ns": 1295,
+              "p99_ns": 1296,
+              "max_ns": 1296
+            },
+            "visits": {
+              "ENQUEUE": 2179,
+              "DEQUEUE": 2179
+            },
+            "serialization_busy_ns": 2500000000,
+            "serialization_busy_fraction": 1.0,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          },
+          "focus": {
+            "occupancy": {
+              "time_weighted_packets": 0.001119625,
+              "time_weighted_bytes": 1.60554225,
+              "peak_packets": 1,
+              "peak_bytes": 1434,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 74500000000,
+              "end_ns": 77500000000
+            },
+            "served_sojourn": {
+              "samples": 2615,
+              "mean_ns": 1284.4646271510517,
+              "p95_ns": 1295,
+              "p99_ns": 1296,
+              "max_ns": 1296
+            },
+            "visits": {
+              "ENQUEUE": 2615,
+              "DEQUEUE": 2615
+            },
+            "serialization_busy_ns": 3000000000,
+            "serialization_busy_fraction": 1.0,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          }
+        },
+        "full_run_tc_drop_count": 0
+      },
+      {
+        "mapping": {
+          "node_id": "225",
+          "device_id": "4",
+          "if_index": "4",
+          "device_type": "ns3::PointToPointLaserNetDevice",
+          "queue_type": "ns3::DropTailQueue<Packet>",
+          "max_size": "100p",
+          "txq": "0",
+          "queue_limits_type": "none",
+          "root_qdisc_type": "none"
+        },
+        "windows": {
+          "pre": {
+            "occupancy": {
+              "time_weighted_packets": 0.0,
+              "time_weighted_bytes": 0.0,
+              "peak_packets": 0,
+              "peak_bytes": 0,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 74500000000,
+              "end_ns": 75000000000
+            },
+            "served_sojourn": {
+              "samples": 218,
+              "mean_ns": 0.0,
+              "p95_ns": 0,
+              "p99_ns": 0,
+              "max_ns": 0
+            },
+            "visits": {
+              "ENQUEUE": 218,
+              "DEQUEUE": 218
+            },
+            "serialization_busy_ns": 9417600,
+            "serialization_busy_fraction": 0.0188352,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          },
+          "post": {
+            "occupancy": {
+              "time_weighted_packets": 0.0,
+              "time_weighted_bytes": 0.0,
+              "peak_packets": 0,
+              "peak_bytes": 0,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 75000000000,
+              "end_ns": 75500000000
+            },
+            "served_sojourn": {
+              "samples": 218,
+              "mean_ns": 0.0,
+              "p95_ns": 0,
+              "p99_ns": 0,
+              "max_ns": 0
+            },
+            "visits": {
+              "ENQUEUE": 218,
+              "DEQUEUE": 218
+            },
+            "serialization_busy_ns": 9417600,
+            "serialization_busy_fraction": 0.0188352,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          },
+          "legacy": {
+            "occupancy": {
+              "time_weighted_packets": 0.0,
+              "time_weighted_bytes": 0.0,
+              "peak_packets": 0,
+              "peak_bytes": 0,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 74500000000,
+              "end_ns": 77000000000
+            },
+            "served_sojourn": {
+              "samples": 1262,
+              "mean_ns": 0.0,
+              "p95_ns": 0,
+              "p99_ns": 0,
+              "max_ns": 0
+            },
+            "visits": {
+              "ENQUEUE": 1262,
+              "DEQUEUE": 1262
+            },
+            "serialization_busy_ns": 60483200,
+            "serialization_busy_fraction": 0.02419328,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          },
+          "focus": {
+            "occupancy": {
+              "time_weighted_packets": 0.0,
+              "time_weighted_bytes": 0.0,
+              "peak_packets": 0,
+              "peak_bytes": 0,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 74500000000,
+              "end_ns": 77500000000
+            },
+            "served_sojourn": {
+              "samples": 1480,
+              "mean_ns": 0.0,
+              "p95_ns": 0,
+              "p99_ns": 0,
+              "max_ns": 0
+            },
+            "visits": {
+              "ENQUEUE": 1480,
+              "DEQUEUE": 1480
+            },
+            "serialization_busy_ns": 69900800,
+            "serialization_busy_fraction": 0.023300266666666666,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          }
+        },
+        "full_run_tc_drop_count": 0
+      },
+      {
+        "mapping": {
+          "node_id": "247",
+          "device_id": "1",
+          "if_index": "1",
+          "device_type": "ns3::PointToPointLaserNetDevice",
+          "queue_type": "ns3::DropTailQueue<Packet>",
+          "max_size": "100p",
+          "txq": "0",
+          "queue_limits_type": "none",
+          "root_qdisc_type": "none"
+        },
+        "windows": {
+          "pre": {
+            "occupancy": {
+              "time_weighted_packets": 0.002422596,
+              "time_weighted_bytes": 3.474002664,
+              "peak_packets": 1,
+              "peak_bytes": 1434,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 74500000000,
+              "end_ns": 75000000000
+            },
+            "served_sojourn": {
+              "samples": 436,
+              "mean_ns": 2778.206422018349,
+              "p95_ns": 2782,
+              "p99_ns": 2782,
+              "max_ns": 2782
+            },
+            "visits": {
+              "ENQUEUE": 436,
+              "DEQUEUE": 436
+            },
+            "serialization_busy_ns": 500000000,
+            "serialization_busy_fraction": 1.0,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          },
+          "post": {
+            "occupancy": {
+              "time_weighted_packets": 0.002410214,
+              "time_weighted_bytes": 3.456246876,
+              "peak_packets": 1,
+              "peak_bytes": 1434,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 75000000000,
+              "end_ns": 75500000000
+            },
+            "served_sojourn": {
+              "samples": 435,
+              "mean_ns": 2770.36091954023,
+              "p95_ns": 2774,
+              "p99_ns": 2774,
+              "max_ns": 2774
+            },
+            "visits": {
+              "ENQUEUE": 435,
+              "DEQUEUE": 435
+            },
+            "serialization_busy_ns": 500000000,
+            "serialization_busy_fraction": 1.0,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          },
+          "legacy": {
+            "occupancy": {
+              "time_weighted_packets": 0.0024071536,
+              "time_weighted_bytes": 3.4518582624,
+              "peak_packets": 1,
+              "peak_bytes": 1434,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 74500000000,
+              "end_ns": 77000000000
+            },
+            "served_sojourn": {
+              "samples": 2179,
+              "mean_ns": 2761.7641119779714,
+              "p95_ns": 2780,
+              "p99_ns": 2782,
+              "max_ns": 2782
+            },
+            "visits": {
+              "ENQUEUE": 2179,
+              "DEQUEUE": 2179
+            },
+            "serialization_busy_ns": 2500000000,
+            "serialization_busy_fraction": 1.0,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          },
+          "focus": {
+            "occupancy": {
+              "time_weighted_packets": 0.0024034813333333334,
+              "time_weighted_bytes": 3.446592232,
+              "peak_packets": 1,
+              "peak_bytes": 1434,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 74500000000,
+              "end_ns": 77500000000
+            },
+            "served_sojourn": {
+              "samples": 2615,
+              "mean_ns": 2757.339961759082,
+              "p95_ns": 2780,
+              "p99_ns": 2782,
+              "max_ns": 2782
+            },
+            "visits": {
+              "ENQUEUE": 2615,
+              "DEQUEUE": 2615
+            },
+            "serialization_busy_ns": 3000000000,
+            "serialization_busy_fraction": 1.0,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          }
+        },
+        "full_run_tc_drop_count": 0
+      },
+      {
+        "mapping": {
+          "node_id": "247",
+          "device_id": "4",
+          "if_index": "4",
+          "device_type": "ns3::PointToPointLaserNetDevice",
+          "queue_type": "ns3::DropTailQueue<Packet>",
+          "max_size": "100p",
+          "txq": "0",
+          "queue_limits_type": "none",
+          "root_qdisc_type": "none"
+        },
+        "windows": {
+          "pre": {
+            "occupancy": {
+              "time_weighted_packets": 0.0,
+              "time_weighted_bytes": 0.0,
+              "peak_packets": 0,
+              "peak_bytes": 0,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 74500000000,
+              "end_ns": 75000000000
+            },
+            "served_sojourn": {
+              "samples": 218,
+              "mean_ns": 0.0,
+              "p95_ns": 0,
+              "p99_ns": 0,
+              "max_ns": 0
+            },
+            "visits": {
+              "ENQUEUE": 218,
+              "DEQUEUE": 218
+            },
+            "serialization_busy_ns": 9417600,
+            "serialization_busy_fraction": 0.0188352,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          },
+          "post": {
+            "occupancy": {
+              "time_weighted_packets": 0.0,
+              "time_weighted_bytes": 0.0,
+              "peak_packets": 0,
+              "peak_bytes": 0,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 75000000000,
+              "end_ns": 75500000000
+            },
+            "served_sojourn": {
+              "samples": 218,
+              "mean_ns": 0.0,
+              "p95_ns": 0,
+              "p99_ns": 0,
+              "max_ns": 0
+            },
+            "visits": {
+              "ENQUEUE": 218,
+              "DEQUEUE": 218
+            },
+            "serialization_busy_ns": 9417600,
+            "serialization_busy_fraction": 0.0188352,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          },
+          "legacy": {
+            "occupancy": {
+              "time_weighted_packets": 0.0,
+              "time_weighted_bytes": 0.0,
+              "peak_packets": 0,
+              "peak_bytes": 0,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 74500000000,
+              "end_ns": 77000000000
+            },
+            "served_sojourn": {
+              "samples": 1262,
+              "mean_ns": 0.0,
+              "p95_ns": 0,
+              "p99_ns": 0,
+              "max_ns": 0
+            },
+            "visits": {
+              "ENQUEUE": 1262,
+              "DEQUEUE": 1262
+            },
+            "serialization_busy_ns": 60483200,
+            "serialization_busy_fraction": 0.02419328,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          },
+          "focus": {
+            "occupancy": {
+              "time_weighted_packets": 0.0,
+              "time_weighted_bytes": 0.0,
+              "peak_packets": 0,
+              "peak_bytes": 0,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 74500000000,
+              "end_ns": 77500000000
+            },
+            "served_sojourn": {
+              "samples": 1480,
+              "mean_ns": 0.0,
+              "p95_ns": 0,
+              "p99_ns": 0,
+              "max_ns": 0
+            },
+            "visits": {
+              "ENQUEUE": 1480,
+              "DEQUEUE": 1480
+            },
+            "serialization_busy_ns": 69900800,
+            "serialization_busy_fraction": 0.023300266666666666,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          }
+        },
+        "full_run_tc_drop_count": 0
+      },
+      {
+        "mapping": {
+          "node_id": "269",
+          "device_id": "1",
+          "if_index": "1",
+          "device_type": "ns3::PointToPointLaserNetDevice",
+          "queue_type": "ns3::DropTailQueue<Packet>",
+          "max_size": "100p",
+          "txq": "0",
+          "queue_limits_type": "none",
+          "root_qdisc_type": "none"
+        },
+        "windows": {
+          "pre": {
+            "occupancy": {
+              "time_weighted_packets": 0.001126822,
+              "time_weighted_bytes": 1.615862748,
+              "peak_packets": 1,
+              "peak_bytes": 1434,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 74500000000,
+              "end_ns": 75000000000
+            },
+            "served_sojourn": {
+              "samples": 435,
+              "mean_ns": 1295.1977011494253,
+              "p95_ns": 1297,
+              "p99_ns": 1297,
+              "max_ns": 1297
+            },
+            "visits": {
+              "ENQUEUE": 435,
+              "DEQUEUE": 435
+            },
+            "serialization_busy_ns": 500000000,
+            "serialization_busy_fraction": 1.0,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          },
+          "post": {
+            "occupancy": {
+              "time_weighted_packets": 0.00112621,
+              "time_weighted_bytes": 1.61498514,
+              "peak_packets": 1,
+              "peak_bytes": 1434,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 75000000000,
+              "end_ns": 75500000000
+            },
+            "served_sojourn": {
+              "samples": 436,
+              "mean_ns": 1291.5252293577983,
+              "p95_ns": 1293,
+              "p99_ns": 1293,
+              "max_ns": 1293
+            },
+            "visits": {
+              "ENQUEUE": 436,
+              "DEQUEUE": 436
+            },
+            "serialization_busy_ns": 500000000,
+            "serialization_busy_fraction": 1.0,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          },
+          "legacy": {
+            "occupancy": {
+              "time_weighted_packets": 0.0011222064,
+              "time_weighted_bytes": 1.6092439776,
+              "peak_packets": 1,
+              "peak_bytes": 1434,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 74500000000,
+              "end_ns": 77000000000
+            },
+            "served_sojourn": {
+              "samples": 2179,
+              "mean_ns": 1287.52455254704,
+              "p95_ns": 1296,
+              "p99_ns": 1297,
+              "max_ns": 1297
+            },
+            "visits": {
+              "ENQUEUE": 2179,
+              "DEQUEUE": 2179
+            },
+            "serialization_busy_ns": 2500000000,
+            "serialization_busy_fraction": 1.0,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          },
+          "focus": {
+            "occupancy": {
+              "time_weighted_packets": 0.001120494,
+              "time_weighted_bytes": 1.606788396,
+              "peak_packets": 1,
+              "peak_bytes": 1434,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 74500000000,
+              "end_ns": 77500000000
+            },
+            "served_sojourn": {
+              "samples": 2615,
+              "mean_ns": 1285.461567877629,
+              "p95_ns": 1296,
+              "p99_ns": 1297,
+              "max_ns": 1297
+            },
+            "visits": {
+              "ENQUEUE": 2615,
+              "DEQUEUE": 2615
+            },
+            "serialization_busy_ns": 3000000000,
+            "serialization_busy_fraction": 1.0,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          }
+        },
+        "full_run_tc_drop_count": 0
+      },
+      {
+        "mapping": {
+          "node_id": "269",
+          "device_id": "4",
+          "if_index": "4",
+          "device_type": "ns3::PointToPointLaserNetDevice",
+          "queue_type": "ns3::DropTailQueue<Packet>",
+          "max_size": "100p",
+          "txq": "0",
+          "queue_limits_type": "none",
+          "root_qdisc_type": "none"
+        },
+        "windows": {
+          "pre": {
+            "occupancy": {
+              "time_weighted_packets": 0.0,
+              "time_weighted_bytes": 0.0,
+              "peak_packets": 0,
+              "peak_bytes": 0,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 74500000000,
+              "end_ns": 75000000000
+            },
+            "served_sojourn": {
+              "samples": 218,
+              "mean_ns": 0.0,
+              "p95_ns": 0,
+              "p99_ns": 0,
+              "max_ns": 0
+            },
+            "visits": {
+              "ENQUEUE": 218,
+              "DEQUEUE": 218
+            },
+            "serialization_busy_ns": 9417600,
+            "serialization_busy_fraction": 0.0188352,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          },
+          "post": {
+            "occupancy": {
+              "time_weighted_packets": 0.0,
+              "time_weighted_bytes": 0.0,
+              "peak_packets": 0,
+              "peak_bytes": 0,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 75000000000,
+              "end_ns": 75500000000
+            },
+            "served_sojourn": {
+              "samples": 218,
+              "mean_ns": 0.0,
+              "p95_ns": 0,
+              "p99_ns": 0,
+              "max_ns": 0
+            },
+            "visits": {
+              "ENQUEUE": 218,
+              "DEQUEUE": 218
+            },
+            "serialization_busy_ns": 9417600,
+            "serialization_busy_fraction": 0.0188352,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          },
+          "legacy": {
+            "occupancy": {
+              "time_weighted_packets": 0.0,
+              "time_weighted_bytes": 0.0,
+              "peak_packets": 0,
+              "peak_bytes": 0,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 74500000000,
+              "end_ns": 77000000000
+            },
+            "served_sojourn": {
+              "samples": 1263,
+              "mean_ns": 0.0,
+              "p95_ns": 0,
+              "p99_ns": 0,
+              "max_ns": 0
+            },
+            "visits": {
+              "ENQUEUE": 1263,
+              "DEQUEUE": 1263
+            },
+            "serialization_busy_ns": 60526400,
+            "serialization_busy_fraction": 0.02421056,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          },
+          "focus": {
+            "occupancy": {
+              "time_weighted_packets": 0.0,
+              "time_weighted_bytes": 0.0,
+              "peak_packets": 0,
+              "peak_bytes": 0,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 74500000000,
+              "end_ns": 77500000000
+            },
+            "served_sojourn": {
+              "samples": 1480,
+              "mean_ns": 0.0,
+              "p95_ns": 0,
+              "p99_ns": 0,
+              "max_ns": 0
+            },
+            "visits": {
+              "ENQUEUE": 1480,
+              "DEQUEUE": 1480
+            },
+            "serialization_busy_ns": 69900800,
+            "serialization_busy_fraction": 0.023300266666666666,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          }
+        },
+        "full_run_tc_drop_count": 0
+      },
+      {
+        "mapping": {
+          "node_id": "291",
+          "device_id": "1",
+          "if_index": "1",
+          "device_type": "ns3::PointToPointLaserNetDevice",
+          "queue_type": "ns3::DropTailQueue<Packet>",
+          "max_size": "100p",
+          "txq": "0",
+          "queue_limits_type": "none",
+          "root_qdisc_type": "none"
+        },
+        "windows": {
+          "pre": {
+            "occupancy": {
+              "time_weighted_packets": 0.002423478,
+              "time_weighted_bytes": 3.475267452,
+              "peak_packets": 1,
+              "peak_bytes": 1434,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 74500000000,
+              "end_ns": 75000000000
+            },
+            "served_sojourn": {
+              "samples": 436,
+              "mean_ns": 2779.217889908257,
+              "p95_ns": 2783,
+              "p99_ns": 2783,
+              "max_ns": 2783
+            },
+            "visits": {
+              "ENQUEUE": 436,
+              "DEQUEUE": 436
+            },
+            "serialization_busy_ns": 500000000,
+            "serialization_busy_fraction": 1.0,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          },
+          "post": {
+            "occupancy": {
+              "time_weighted_packets": 0.00241663,
+              "time_weighted_bytes": 3.46544742,
+              "peak_packets": 1,
+              "peak_bytes": 1434,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 75000000000,
+              "end_ns": 75500000000
+            },
+            "served_sojourn": {
+              "samples": 436,
+              "mean_ns": 2771.3646788990827,
+              "p95_ns": 2775,
+              "p99_ns": 2775,
+              "max_ns": 2775
+            },
+            "visits": {
+              "ENQUEUE": 436,
+              "DEQUEUE": 436
+            },
+            "serialization_busy_ns": 500000000,
+            "serialization_busy_fraction": 1.0,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          },
+          "legacy": {
+            "occupancy": {
+              "time_weighted_packets": 0.002409132,
+              "time_weighted_bytes": 3.454695288,
+              "peak_packets": 1,
+              "peak_bytes": 1434,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 74500000000,
+              "end_ns": 77000000000
+            },
+            "served_sojourn": {
+              "samples": 2180,
+              "mean_ns": 2762.766055045872,
+              "p95_ns": 2781,
+              "p99_ns": 2783,
+              "max_ns": 2783
+            },
+            "visits": {
+              "ENQUEUE": 2180,
+              "DEQUEUE": 2180
+            },
+            "serialization_busy_ns": 2500000000,
+            "serialization_busy_fraction": 1.0,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          },
+          "focus": {
+            "occupancy": {
+              "time_weighted_packets": 0.0024052743333333334,
+              "time_weighted_bytes": 3.449163394,
+              "peak_packets": 1,
+              "peak_bytes": 1434,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 74500000000,
+              "end_ns": 77500000000
+            },
+            "served_sojourn": {
+              "samples": 2616,
+              "mean_ns": 2758.342125382263,
+              "p95_ns": 2781,
+              "p99_ns": 2783,
+              "max_ns": 2783
+            },
+            "visits": {
+              "ENQUEUE": 2616,
+              "DEQUEUE": 2616
+            },
+            "serialization_busy_ns": 3000000000,
+            "serialization_busy_fraction": 1.0,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          }
+        },
+        "full_run_tc_drop_count": 0
+      },
+      {
+        "mapping": {
+          "node_id": "291",
+          "device_id": "4",
+          "if_index": "4",
+          "device_type": "ns3::PointToPointLaserNetDevice",
+          "queue_type": "ns3::DropTailQueue<Packet>",
+          "max_size": "100p",
+          "txq": "0",
+          "queue_limits_type": "none",
+          "root_qdisc_type": "none"
+        },
+        "windows": {
+          "pre": {
+            "occupancy": {
+              "time_weighted_packets": 0.0,
+              "time_weighted_bytes": 0.0,
+              "peak_packets": 0,
+              "peak_bytes": 0,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 74500000000,
+              "end_ns": 75000000000
+            },
+            "served_sojourn": {
+              "samples": 218,
+              "mean_ns": 0.0,
+              "p95_ns": 0,
+              "p99_ns": 0,
+              "max_ns": 0
+            },
+            "visits": {
+              "ENQUEUE": 218,
+              "DEQUEUE": 218
+            },
+            "serialization_busy_ns": 9417600,
+            "serialization_busy_fraction": 0.0188352,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          },
+          "post": {
+            "occupancy": {
+              "time_weighted_packets": 0.0,
+              "time_weighted_bytes": 0.0,
+              "peak_packets": 0,
+              "peak_bytes": 0,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 75000000000,
+              "end_ns": 75500000000
+            },
+            "served_sojourn": {
+              "samples": 218,
+              "mean_ns": 0.0,
+              "p95_ns": 0,
+              "p99_ns": 0,
+              "max_ns": 0
+            },
+            "visits": {
+              "ENQUEUE": 218,
+              "DEQUEUE": 218
+            },
+            "serialization_busy_ns": 9417600,
+            "serialization_busy_fraction": 0.0188352,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          },
+          "legacy": {
+            "occupancy": {
+              "time_weighted_packets": 0.0,
+              "time_weighted_bytes": 0.0,
+              "peak_packets": 0,
+              "peak_bytes": 0,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 74500000000,
+              "end_ns": 77000000000
+            },
+            "served_sojourn": {
+              "samples": 1263,
+              "mean_ns": 0.0,
+              "p95_ns": 0,
+              "p99_ns": 0,
+              "max_ns": 0
+            },
+            "visits": {
+              "ENQUEUE": 1263,
+              "DEQUEUE": 1263
+            },
+            "serialization_busy_ns": 60526400,
+            "serialization_busy_fraction": 0.02421056,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          },
+          "focus": {
+            "occupancy": {
+              "time_weighted_packets": 0.0,
+              "time_weighted_bytes": 0.0,
+              "peak_packets": 0,
+              "peak_bytes": 0,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 74500000000,
+              "end_ns": 77500000000
+            },
+            "served_sojourn": {
+              "samples": 1480,
+              "mean_ns": 0.0,
+              "p95_ns": 0,
+              "p99_ns": 0,
+              "max_ns": 0
+            },
+            "visits": {
+              "ENQUEUE": 1480,
+              "DEQUEUE": 1480
+            },
+            "serialization_busy_ns": 69900800,
+            "serialization_busy_fraction": 0.023300266666666666,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          }
+        },
+        "full_run_tc_drop_count": 0
+      },
+      {
+        "mapping": {
+          "node_id": "313",
+          "device_id": "1",
+          "if_index": "1",
+          "device_type": "ns3::PointToPointLaserNetDevice",
+          "queue_type": "ns3::DropTailQueue<Packet>",
+          "max_size": "100p",
+          "txq": "0",
+          "queue_limits_type": "none",
+          "root_qdisc_type": "none"
+        },
+        "windows": {
+          "pre": {
+            "occupancy": {
+              "time_weighted_packets": 5.24546021,
+              "time_weighted_bytes": 7521.98994114,
+              "peak_packets": 6,
+              "peak_bytes": 8604,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 74500000000,
+              "end_ns": 75000000000
+            },
+            "served_sojourn": {
+              "samples": 436,
+              "mean_ns": 6017570.0,
+              "p95_ns": 6017570,
+              "p99_ns": 6017570,
+              "max_ns": 6017570
+            },
+            "visits": {
+              "DEQUEUE": 436,
+              "ENQUEUE": 435
+            },
+            "serialization_busy_ns": 500000000,
+            "serialization_busy_fraction": 1.0,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          },
+          "post": {
+            "occupancy": {
+              "time_weighted_packets": 5.245528634,
+              "time_weighted_bytes": 7522.088061156,
+              "peak_packets": 6,
+              "peak_bytes": 8604,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 75000000000,
+              "end_ns": 75500000000
+            },
+            "served_sojourn": {
+              "samples": 436,
+              "mean_ns": 6017569.5458715595,
+              "p95_ns": 6017570,
+              "p99_ns": 6017570,
+              "max_ns": 6017570
+            },
+            "visits": {
+              "ENQUEUE": 436,
+              "DEQUEUE": 436
+            },
+            "serialization_busy_ns": 500000000,
+            "serialization_busy_fraction": 1.0,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          },
+          "legacy": {
+            "occupancy": {
+              "time_weighted_packets": 5.2455141584,
+              "time_weighted_bytes": 7522.0673031456,
+              "peak_packets": 6,
+              "peak_bytes": 8604,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 74500000000,
+              "end_ns": 77000000000
+            },
+            "served_sojourn": {
+              "samples": 2180,
+              "mean_ns": 6017568.725229357,
+              "p95_ns": 6017570,
+              "p99_ns": 6017570,
+              "max_ns": 6017570
+            },
+            "visits": {
+              "DEQUEUE": 2180,
+              "ENQUEUE": 2179
+            },
+            "serialization_busy_ns": 2500000000,
+            "serialization_busy_fraction": 1.0,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          },
+          "focus": {
+            "occupancy": {
+              "time_weighted_packets": 5.245457832,
+              "time_weighted_bytes": 7521.986531088,
+              "peak_packets": 6,
+              "peak_bytes": 8604,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 74500000000,
+              "end_ns": 77500000000
+            },
+            "served_sojourn": {
+              "samples": 2615,
+              "mean_ns": 6017568.456596558,
+              "p95_ns": 6017570,
+              "p99_ns": 6017570,
+              "max_ns": 6017570
+            },
+            "visits": {
+              "DEQUEUE": 2615,
+              "ENQUEUE": 2615
+            },
+            "serialization_busy_ns": 3000000000,
+            "serialization_busy_fraction": 1.0,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          }
+        },
+        "full_run_tc_drop_count": 0
+      },
+      {
+        "mapping": {
+          "node_id": "313",
+          "device_id": "3",
+          "if_index": "3",
+          "device_type": "ns3::PointToPointLaserNetDevice",
+          "queue_type": "ns3::DropTailQueue<Packet>",
+          "max_size": "100p",
+          "txq": "0",
+          "queue_limits_type": "none",
+          "root_qdisc_type": "none"
+        },
+        "windows": {
+          "pre": {
+            "occupancy": {
+              "time_weighted_packets": 0.0,
+              "time_weighted_bytes": 0.0,
+              "peak_packets": 0,
+              "peak_bytes": 0,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 74500000000,
+              "end_ns": 75000000000
+            },
+            "served_sojourn": {
+              "samples": 217,
+              "mean_ns": 0.0,
+              "p95_ns": 0,
+              "p99_ns": 0,
+              "max_ns": 0
+            },
+            "visits": {
+              "ENQUEUE": 217,
+              "DEQUEUE": 217
+            },
+            "serialization_busy_ns": 9374400,
+            "serialization_busy_fraction": 0.0187488,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          },
+          "post": {
+            "occupancy": {
+              "time_weighted_packets": 0.0,
+              "time_weighted_bytes": 0.0,
+              "peak_packets": 0,
+              "peak_bytes": 0,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 75000000000,
+              "end_ns": 75500000000
+            },
+            "served_sojourn": {
+              "samples": 218,
+              "mean_ns": 0.0,
+              "p95_ns": 0,
+              "p99_ns": 0,
+              "max_ns": 0
+            },
+            "visits": {
+              "ENQUEUE": 218,
+              "DEQUEUE": 218
+            },
+            "serialization_busy_ns": 9417600,
+            "serialization_busy_fraction": 0.0188352,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          },
+          "legacy": {
+            "occupancy": {
+              "time_weighted_packets": 0.0,
+              "time_weighted_bytes": 0.0,
+              "peak_packets": 0,
+              "peak_bytes": 0,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 74500000000,
+              "end_ns": 77000000000
+            },
+            "served_sojourn": {
+              "samples": 1262,
+              "mean_ns": 0.0,
+              "p95_ns": 0,
+              "p99_ns": 0,
+              "max_ns": 0
+            },
+            "visits": {
+              "ENQUEUE": 1262,
+              "DEQUEUE": 1262
+            },
+            "serialization_busy_ns": 60483200,
+            "serialization_busy_fraction": 0.02419328,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          },
+          "focus": {
+            "occupancy": {
+              "time_weighted_packets": 0.0,
+              "time_weighted_bytes": 0.0,
+              "peak_packets": 0,
+              "peak_bytes": 0,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 74500000000,
+              "end_ns": 77500000000
+            },
+            "served_sojourn": {
+              "samples": 1480,
+              "mean_ns": 0.0,
+              "p95_ns": 0,
+              "p99_ns": 0,
+              "max_ns": 0
+            },
+            "visits": {
+              "ENQUEUE": 1480,
+              "DEQUEUE": 1480
+            },
+            "serialization_busy_ns": 69900800,
+            "serialization_busy_fraction": 0.023300266666666666,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          }
+        },
+        "full_run_tc_drop_count": 0
+      },
+      {
+        "mapping": {
+          "node_id": "314",
+          "device_id": "2",
+          "if_index": "2",
+          "device_type": "ns3::PointToPointLaserNetDevice",
+          "queue_type": "ns3::DropTailQueue<Packet>",
+          "max_size": "100p",
+          "txq": "0",
+          "queue_limits_type": "none",
+          "root_qdisc_type": "none"
+        },
+        "windows": {
+          "pre": {
+            "occupancy": {
+              "time_weighted_packets": 0.0,
+              "time_weighted_bytes": 0.0,
+              "peak_packets": 0,
+              "peak_bytes": 0,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 74500000000,
+              "end_ns": 75000000000
+            },
+            "served_sojourn": {
+              "samples": 436,
+              "mean_ns": 0.0,
+              "p95_ns": 0,
+              "p99_ns": 0,
+              "max_ns": 0
+            },
+            "visits": {
+              "ENQUEUE": 436,
+              "DEQUEUE": 436
+            },
+            "serialization_busy_ns": 500000000,
+            "serialization_busy_fraction": 1.0,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          },
+          "post": {
+            "occupancy": {
+              "time_weighted_packets": 0.0,
+              "time_weighted_bytes": 0.0,
+              "peak_packets": 0,
+              "peak_bytes": 0,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 75000000000,
+              "end_ns": 75500000000
+            },
+            "served_sojourn": {
+              "samples": 436,
+              "mean_ns": 0.0,
+              "p95_ns": 0,
+              "p99_ns": 0,
+              "max_ns": 0
+            },
+            "visits": {
+              "ENQUEUE": 436,
+              "DEQUEUE": 436
+            },
+            "serialization_busy_ns": 499999999,
+            "serialization_busy_fraction": 0.999999998,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          },
+          "legacy": {
+            "occupancy": {
+              "time_weighted_packets": 0.0,
+              "time_weighted_bytes": 0.0,
+              "peak_packets": 0,
+              "peak_bytes": 0,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 74500000000,
+              "end_ns": 77000000000
+            },
+            "served_sojourn": {
+              "samples": 2179,
+              "mean_ns": 0.0,
+              "p95_ns": 0,
+              "p99_ns": 0,
+              "max_ns": 0
+            },
+            "visits": {
+              "ENQUEUE": 2179,
+              "DEQUEUE": 2179
+            },
+            "serialization_busy_ns": 2499999998,
+            "serialization_busy_fraction": 0.9999999992,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          },
+          "focus": {
+            "occupancy": {
+              "time_weighted_packets": 0.0,
+              "time_weighted_bytes": 0.0,
+              "peak_packets": 0,
+              "peak_bytes": 0,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 74500000000,
+              "end_ns": 77500000000
+            },
+            "served_sojourn": {
+              "samples": 2615,
+              "mean_ns": 0.0,
+              "p95_ns": 0,
+              "p99_ns": 0,
+              "max_ns": 0
+            },
+            "visits": {
+              "ENQUEUE": 2615,
+              "DEQUEUE": 2615
+            },
+            "serialization_busy_ns": 2999999997,
+            "serialization_busy_fraction": 0.999999999,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          }
+        },
+        "full_run_tc_drop_count": 0
+      },
+      {
+        "mapping": {
+          "node_id": "314",
+          "device_id": "3",
+          "if_index": "3",
+          "device_type": "ns3::PointToPointLaserNetDevice",
+          "queue_type": "ns3::DropTailQueue<Packet>",
+          "max_size": "100p",
+          "txq": "0",
+          "queue_limits_type": "none",
+          "root_qdisc_type": "none"
+        },
+        "windows": {
+          "pre": {
+            "occupancy": {
+              "time_weighted_packets": 0.0,
+              "time_weighted_bytes": 0.0,
+              "peak_packets": 0,
+              "peak_bytes": 0,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 74500000000,
+              "end_ns": 75000000000
+            },
+            "served_sojourn": {
+              "samples": 218,
+              "mean_ns": 0.0,
+              "p95_ns": 0,
+              "p99_ns": 0,
+              "max_ns": 0
+            },
+            "visits": {
+              "ENQUEUE": 218,
+              "DEQUEUE": 218
+            },
+            "serialization_busy_ns": 9417600,
+            "serialization_busy_fraction": 0.0188352,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          },
+          "post": {
+            "occupancy": {
+              "time_weighted_packets": 0.0,
+              "time_weighted_bytes": 0.0,
+              "peak_packets": 0,
+              "peak_bytes": 0,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 75000000000,
+              "end_ns": 75500000000
+            },
+            "served_sojourn": {
+              "samples": 218,
+              "mean_ns": 0.0,
+              "p95_ns": 0,
+              "p99_ns": 0,
+              "max_ns": 0
+            },
+            "visits": {
+              "ENQUEUE": 218,
+              "DEQUEUE": 218
+            },
+            "serialization_busy_ns": 9417600,
+            "serialization_busy_fraction": 0.0188352,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          },
+          "legacy": {
+            "occupancy": {
+              "time_weighted_packets": 0.0,
+              "time_weighted_bytes": 0.0,
+              "peak_packets": 0,
+              "peak_bytes": 0,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 74500000000,
+              "end_ns": 77000000000
+            },
+            "served_sojourn": {
+              "samples": 1262,
+              "mean_ns": 0.0,
+              "p95_ns": 0,
+              "p99_ns": 0,
+              "max_ns": 0
+            },
+            "visits": {
+              "ENQUEUE": 1262,
+              "DEQUEUE": 1262
+            },
+            "serialization_busy_ns": 60483200,
+            "serialization_busy_fraction": 0.02419328,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          },
+          "focus": {
+            "occupancy": {
+              "time_weighted_packets": 0.0,
+              "time_weighted_bytes": 0.0,
+              "peak_packets": 0,
+              "peak_bytes": 0,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 74500000000,
+              "end_ns": 77500000000
+            },
+            "served_sojourn": {
+              "samples": 1480,
+              "mean_ns": 0.0,
+              "p95_ns": 0,
+              "p99_ns": 0,
+              "max_ns": 0
+            },
+            "visits": {
+              "ENQUEUE": 1480,
+              "DEQUEUE": 1480
+            },
+            "serialization_busy_ns": 69900800,
+            "serialization_busy_fraction": 0.023300266666666666,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          }
+        },
+        "full_run_tc_drop_count": 0
+      },
+      {
+        "mapping": {
+          "node_id": "315",
+          "device_id": "2",
+          "if_index": "2",
+          "device_type": "ns3::PointToPointLaserNetDevice",
+          "queue_type": "ns3::DropTailQueue<Packet>",
+          "max_size": "100p",
+          "txq": "0",
+          "queue_limits_type": "none",
+          "root_qdisc_type": "none"
+        },
+        "windows": {
+          "pre": {
+            "occupancy": {
+              "time_weighted_packets": 0.0,
+              "time_weighted_bytes": 0.0,
+              "peak_packets": 0,
+              "peak_bytes": 0,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 74500000000,
+              "end_ns": 75000000000
+            },
+            "served_sojourn": {
+              "samples": 436,
+              "mean_ns": 0.0,
+              "p95_ns": 0,
+              "p99_ns": 0,
+              "max_ns": 0
+            },
+            "visits": {
+              "ENQUEUE": 436,
+              "DEQUEUE": 436
+            },
+            "serialization_busy_ns": 500000000,
+            "serialization_busy_fraction": 1.0,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          },
+          "post": {
+            "occupancy": {
+              "time_weighted_packets": 0.0,
+              "time_weighted_bytes": 0.0,
+              "peak_packets": 0,
+              "peak_bytes": 0,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 75000000000,
+              "end_ns": 75500000000
+            },
+            "served_sojourn": {
+              "samples": 436,
+              "mean_ns": 0.0,
+              "p95_ns": 0,
+              "p99_ns": 0,
+              "max_ns": 0
+            },
+            "visits": {
+              "ENQUEUE": 436,
+              "DEQUEUE": 436
+            },
+            "serialization_busy_ns": 500000000,
+            "serialization_busy_fraction": 1.0,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          },
+          "legacy": {
+            "occupancy": {
+              "time_weighted_packets": 0.0,
+              "time_weighted_bytes": 0.0,
+              "peak_packets": 0,
+              "peak_bytes": 0,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 74500000000,
+              "end_ns": 77000000000
+            },
+            "served_sojourn": {
+              "samples": 2179,
+              "mean_ns": 0.0,
+              "p95_ns": 0,
+              "p99_ns": 0,
+              "max_ns": 0
+            },
+            "visits": {
+              "ENQUEUE": 2179,
+              "DEQUEUE": 2179
+            },
+            "serialization_busy_ns": 2499999999,
+            "serialization_busy_fraction": 0.9999999996,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          },
+          "focus": {
+            "occupancy": {
+              "time_weighted_packets": 0.0,
+              "time_weighted_bytes": 0.0,
+              "peak_packets": 0,
+              "peak_bytes": 0,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 74500000000,
+              "end_ns": 77500000000
+            },
+            "served_sojourn": {
+              "samples": 2615,
+              "mean_ns": 0.0,
+              "p95_ns": 0,
+              "p99_ns": 0,
+              "max_ns": 0
+            },
+            "visits": {
+              "ENQUEUE": 2615,
+              "DEQUEUE": 2615
+            },
+            "serialization_busy_ns": 2999999999,
+            "serialization_busy_fraction": 0.9999999996666666,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          }
+        },
+        "full_run_tc_drop_count": 0
+      },
+      {
+        "mapping": {
+          "node_id": "315",
+          "device_id": "3",
+          "if_index": "3",
+          "device_type": "ns3::PointToPointLaserNetDevice",
+          "queue_type": "ns3::DropTailQueue<Packet>",
+          "max_size": "100p",
+          "txq": "0",
+          "queue_limits_type": "none",
+          "root_qdisc_type": "none"
+        },
+        "windows": {
+          "pre": {
+            "occupancy": {
+              "time_weighted_packets": 0.0,
+              "time_weighted_bytes": 0.0,
+              "peak_packets": 0,
+              "peak_bytes": 0,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 74500000000,
+              "end_ns": 75000000000
+            },
+            "served_sojourn": {
+              "samples": 218,
+              "mean_ns": 0.0,
+              "p95_ns": 0,
+              "p99_ns": 0,
+              "max_ns": 0
+            },
+            "visits": {
+              "ENQUEUE": 218,
+              "DEQUEUE": 218
+            },
+            "serialization_busy_ns": 9417600,
+            "serialization_busy_fraction": 0.0188352,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          },
+          "post": {
+            "occupancy": {
+              "time_weighted_packets": 0.0,
+              "time_weighted_bytes": 0.0,
+              "peak_packets": 0,
+              "peak_bytes": 0,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 75000000000,
+              "end_ns": 75500000000
+            },
+            "served_sojourn": {
+              "samples": 218,
+              "mean_ns": 0.0,
+              "p95_ns": 0,
+              "p99_ns": 0,
+              "max_ns": 0
+            },
+            "visits": {
+              "ENQUEUE": 218,
+              "DEQUEUE": 218
+            },
+            "serialization_busy_ns": 9417600,
+            "serialization_busy_fraction": 0.0188352,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          },
+          "legacy": {
+            "occupancy": {
+              "time_weighted_packets": 0.0,
+              "time_weighted_bytes": 0.0,
+              "peak_packets": 0,
+              "peak_bytes": 0,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 74500000000,
+              "end_ns": 77000000000
+            },
+            "served_sojourn": {
+              "samples": 1262,
+              "mean_ns": 0.0,
+              "p95_ns": 0,
+              "p99_ns": 0,
+              "max_ns": 0
+            },
+            "visits": {
+              "ENQUEUE": 1262,
+              "DEQUEUE": 1262
+            },
+            "serialization_busy_ns": 60483200,
+            "serialization_busy_fraction": 0.02419328,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          },
+          "focus": {
+            "occupancy": {
+              "time_weighted_packets": 0.0,
+              "time_weighted_bytes": 0.0,
+              "peak_packets": 0,
+              "peak_bytes": 0,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 74500000000,
+              "end_ns": 77500000000
+            },
+            "served_sojourn": {
+              "samples": 1480,
+              "mean_ns": 0.0,
+              "p95_ns": 0,
+              "p99_ns": 0,
+              "max_ns": 0
+            },
+            "visits": {
+              "ENQUEUE": 1480,
+              "DEQUEUE": 1480
+            },
+            "serialization_busy_ns": 69900800,
+            "serialization_busy_fraction": 0.023300266666666666,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          }
+        },
+        "full_run_tc_drop_count": 0
+      },
+      {
+        "mapping": {
+          "node_id": "316",
+          "device_id": "2",
+          "if_index": "2",
+          "device_type": "ns3::PointToPointLaserNetDevice",
+          "queue_type": "ns3::DropTailQueue<Packet>",
+          "max_size": "100p",
+          "txq": "0",
+          "queue_limits_type": "none",
+          "root_qdisc_type": "none"
+        },
+        "windows": {
+          "pre": {
+            "occupancy": {
+              "time_weighted_packets": 0.34018673,
+              "time_weighted_bytes": 487.82777082,
+              "peak_packets": 1,
+              "peak_bytes": 1434,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 74500000000,
+              "end_ns": 75000000000
+            },
+            "served_sojourn": {
+              "samples": 435,
+              "mean_ns": 390165.7816091954,
+              "p95_ns": 391150,
+              "p99_ns": 391237,
+              "max_ns": 391259
+            },
+            "visits": {
+              "ENQUEUE": 436,
+              "DEQUEUE": 435
+            },
+            "serialization_busy_ns": 500000000,
+            "serialization_busy_fraction": 1.0,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          },
+          "post": {
+            "occupancy": {
+              "time_weighted_packets": 0.3417683,
+              "time_weighted_bytes": 490.0957422,
+              "peak_packets": 1,
+              "peak_bytes": 1434,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 75000000000,
+              "end_ns": 75500000000
+            },
+            "served_sojourn": {
+              "samples": 436,
+              "mean_ns": 392342.18348623853,
+              "p95_ns": 393314,
+              "p99_ns": 393395,
+              "max_ns": 393416
+            },
+            "visits": {
+              "DEQUEUE": 436,
+              "ENQUEUE": 436
+            },
+            "serialization_busy_ns": 500000000,
+            "serialization_busy_fraction": 1.0,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          },
+          "legacy": {
+            "occupancy": {
+              "time_weighted_packets": 0.3437949192,
+              "time_weighted_bytes": 493.0019141328,
+              "peak_packets": 1,
+              "peak_bytes": 1434,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 74500000000,
+              "end_ns": 77000000000
+            },
+            "served_sojourn": {
+              "samples": 2179,
+              "mean_ns": 394441.16475447454,
+              "p95_ns": 399141,
+              "p99_ns": 399545,
+              "max_ns": 399642
+            },
+            "visits": {
+              "ENQUEUE": 2179,
+              "DEQUEUE": 2179
+            },
+            "serialization_busy_ns": 2500000000,
+            "serialization_busy_fraction": 1.0,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          },
+          "focus": {
+            "occupancy": {
+              "time_weighted_packets": 0.3447229,
+              "time_weighted_bytes": 494.3326386,
+              "peak_packets": 1,
+              "peak_bytes": 1434,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 74500000000,
+              "end_ns": 77500000000
+            },
+            "served_sojourn": {
+              "samples": 2615,
+              "mean_ns": 395475.60229445505,
+              "p95_ns": 401045,
+              "p99_ns": 401520,
+              "max_ns": 401634
+            },
+            "visits": {
+              "ENQUEUE": 2615,
+              "DEQUEUE": 2615
+            },
+            "serialization_busy_ns": 3000000000,
+            "serialization_busy_fraction": 1.0,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          }
+        },
+        "full_run_tc_drop_count": 0
+      },
+      {
+        "mapping": {
+          "node_id": "316",
+          "device_id": "5",
+          "if_index": "5",
+          "device_type": "ns3::GSLNetDevice",
+          "queue_type": "ns3::DropTailQueue<Packet>",
+          "max_size": "100p",
+          "txq": "0",
+          "queue_limits_type": "none",
+          "root_qdisc_type": "none"
+        },
+        "windows": {
+          "pre": {
+            "occupancy": {
+              "time_weighted_packets": 0.0,
+              "time_weighted_bytes": 0.0,
+              "peak_packets": 0,
+              "peak_bytes": 0,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 74500000000,
+              "end_ns": 75000000000
+            },
+            "served_sojourn": {
+              "samples": 218,
+              "mean_ns": 0.0,
+              "p95_ns": 0,
+              "p99_ns": 0,
+              "max_ns": 0
+            },
+            "visits": {
+              "ENQUEUE": 218,
+              "DEQUEUE": 218
+            },
+            "serialization_busy_ns": 9417600,
+            "serialization_busy_fraction": 0.0188352,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          },
+          "post": {
+            "occupancy": {
+              "time_weighted_packets": 0.0,
+              "time_weighted_bytes": 0.0,
+              "peak_packets": 0,
+              "peak_bytes": 0,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 75000000000,
+              "end_ns": 75500000000
+            },
+            "served_sojourn": {
+              "samples": 218,
+              "mean_ns": 0.0,
+              "p95_ns": 0,
+              "p99_ns": 0,
+              "max_ns": 0
+            },
+            "visits": {
+              "ENQUEUE": 218,
+              "DEQUEUE": 218
+            },
+            "serialization_busy_ns": 9417600,
+            "serialization_busy_fraction": 0.0188352,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          },
+          "legacy": {
+            "occupancy": {
+              "time_weighted_packets": 0.0,
+              "time_weighted_bytes": 0.0,
+              "peak_packets": 0,
+              "peak_bytes": 0,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 74500000000,
+              "end_ns": 77000000000
+            },
+            "served_sojourn": {
+              "samples": 1262,
+              "mean_ns": 0.0,
+              "p95_ns": 0,
+              "p99_ns": 0,
+              "max_ns": 0
+            },
+            "visits": {
+              "ENQUEUE": 1262,
+              "DEQUEUE": 1262
+            },
+            "serialization_busy_ns": 60483200,
+            "serialization_busy_fraction": 0.02419328,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          },
+          "focus": {
+            "occupancy": {
+              "time_weighted_packets": 0.0,
+              "time_weighted_bytes": 0.0,
+              "peak_packets": 0,
+              "peak_bytes": 0,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 74500000000,
+              "end_ns": 77500000000
+            },
+            "served_sojourn": {
+              "samples": 1480,
+              "mean_ns": 0.0,
+              "p95_ns": 0,
+              "p99_ns": 0,
+              "max_ns": 0
+            },
+            "visits": {
+              "ENQUEUE": 1480,
+              "DEQUEUE": 1480
+            },
+            "serialization_busy_ns": 69900800,
+            "serialization_busy_fraction": 0.023300266666666666,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          }
+        },
+        "full_run_tc_drop_count": 0
+      },
+      {
+        "mapping": {
+          "node_id": "1584",
+          "device_id": "1",
+          "if_index": "1",
+          "device_type": "ns3::GSLNetDevice",
+          "queue_type": "ns3::DropTailQueue<Packet>",
+          "max_size": "100p",
+          "txq": "0",
+          "queue_limits_type": "none",
+          "root_qdisc_type": "none"
+        },
+        "windows": {
+          "pre": {
+            "occupancy": {
+              "time_weighted_packets": 71.178559878,
+              "time_weighted_bytes": 102070.054865052,
+              "peak_packets": 79,
+              "peak_bytes": 113286,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 74500000000,
+              "end_ns": 75000000000
+            },
+            "served_sojourn": {
+              "samples": 436,
+              "mean_ns": 79469925.4793578,
+              "p95_ns": 85717908,
+              "p99_ns": 86864635,
+              "max_ns": 86864811
+            },
+            "visits": {
+              "DEQUEUE": 436,
+              "ENQUEUE": 447
+            },
+            "serialization_busy_ns": 500000000,
+            "serialization_busy_fraction": 1.0,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          },
+          "post": {
+            "occupancy": {
+              "time_weighted_packets": 85.87535017,
+              "time_weighted_bytes": 123145.25214378,
+              "peak_packets": 95,
+              "peak_bytes": 136230,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 75000000000,
+              "end_ns": 75500000000
+            },
+            "served_sojourn": {
+              "samples": 435,
+              "mean_ns": 94956239.3724138,
+              "p95_ns": 102917052,
+              "p99_ns": 104063825,
+              "max_ns": 104064004
+            },
+            "visits": {
+              "ENQUEUE": 452,
+              "DEQUEUE": 435
+            },
+            "serialization_busy_ns": 500000000,
+            "serialization_busy_fraction": 1.0,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          },
+          "legacy": {
+            "occupancy": {
+              "time_weighted_packets": 56.869473768,
+              "time_weighted_bytes": 81550.825383312,
+              "peak_packets": 100,
+              "peak_bytes": 143400,
+              "literally_full_ns": 95664354,
+              "full_intervals_ns": [
+                [
+                  75617356228,
+                  75618167509
+                ],
+                [
+                  75619650665,
+                  75620461909
+                ],
+                [
+                  75621945115,
+                  75622756309
+                ],
+                [
+                  75624239564,
+                  75625050709
+                ],
+                [
+                  75626533997,
+                  75627345109
+                ],
+                [
+                  75628828434,
+                  75629639509
+                ],
+                [
+                  75631122895,
+                  75631933909
+                ],
+                [
+                  75633417329,
+                  75634228309
+                ],
+                [
+                  75635711766,
+                  75636522709
+                ],
+                [
+                  75638006215,
+                  75638817109
+                ],
+                [
+                  75640300660,
+                  75641111509
+                ],
+                [
+                  75642595098,
+                  75643405909
+                ],
+                [
+                  75644889535,
+                  75645700309
+                ],
+                [
+                  75647183997,
+                  75647994709
+                ],
+                [
+                  75649478430,
+                  75650289109
+                ],
+                [
+                  75651772867,
+                  75652583509
+                ],
+                [
+                  75654067327,
+                  75654877909
+                ],
+                [
+                  75656361760,
+                  75657172309
+                ],
+                [
+                  75658656198,
+                  75659466709
+                ],
+                [
+                  75660950647,
+                  75661761109
+                ],
+                [
+                  75663245097,
+                  75664055509
+                ],
+                [
+                  75665539530,
+                  75666349909
+                ],
+                [
+                  75667833967,
+                  75668644309
+                ],
+                [
+                  75670128427,
+                  75670938709
+                ],
+                [
+                  75672422860,
+                  75673233109
+                ],
+                [
+                  75674717299,
+                  75675527509
+                ],
+                [
+                  75677011748,
+                  75677821909
+                ],
+                [
+                  75679306193,
+                  75680116309
+                ],
+                [
+                  75681600632,
+                  75682410709
+                ],
+                [
+                  75683895069,
+                  75684705109
+                ],
+                [
+                  75686189529,
+                  75686999509
+                ],
+                [
+                  75688483962,
+                  75689293909
+                ],
+                [
+                  75690778400,
+                  75691588309
+                ],
+                [
+                  75693072860,
+                  75693882709
+                ],
+                [
+                  75695367293,
+                  75696177109
+                ],
+                [
+                  75697661731,
+                  75698471509
+                ],
+                [
+                  75699956182,
+                  75700765909
+                ],
+                [
+                  75702250631,
+                  75703060309
+                ],
+                [
+                  75704545064,
+                  75705354709
+                ],
+                [
+                  75706839502,
+                  75707649109
+                ],
+                [
+                  75709133961,
+                  75709943509
+                ],
+                [
+                  75711428395,
+                  75712237909
+                ],
+                [
+                  75713722832,
+                  75714532309
+                ],
+                [
+                  75716017282,
+                  75716826709
+                ],
+                [
+                  75718311727,
+                  75719121109
+                ],
+                [
+                  75720606165,
+                  75721415509
+                ],
+                [
+                  75722900602,
+                  75723709909
+                ],
+                [
+                  75725195062,
+                  75726004309
+                ],
+                [
+                  75727489495,
+                  75728298709
+                ],
+                [
+                  75729783932,
+                  75730593109
+                ],
+                [
+                  75732078394,
+                  75732887509
+                ],
+                [
+                  75734372827,
+                  75735181909
+                ],
+                [
+                  75736667265,
+                  75737476309
+                ],
+                [
+                  75738961714,
+                  75739770709
+                ],
+                [
+                  75741256163,
+                  75742065109
+                ],
+                [
+                  75743550597,
+                  75744359509
+                ],
+                [
+                  75745845035,
+                  75746653909
+                ],
+                [
+                  75748139494,
+                  75748948309
+                ],
+                [
+                  75750433927,
+                  75751242709
+                ],
+                [
+                  75752728366,
+                  75753537109
+                ],
+                [
+                  75755022816,
+                  75755831509
+                ],
+                [
+                  75757317261,
+                  75758125909
+                ],
+                [
+                  75759611699,
+                  75760420309
+                ],
+                [
+                  75761906137,
+                  75762714709
+                ],
+                [
+                  75764200596,
+                  75765009109
+                ],
+                [
+                  75766495030,
+                  75767303509
+                ],
+                [
+                  75768789467,
+                  75769597909
+                ],
+                [
+                  75771083929,
+                  75771892309
+                ],
+                [
+                  75773378362,
+                  75774186709
+                ],
+                [
+                  75775672800,
+                  75776481109
+                ],
+                [
+                  75777967248,
+                  75778775509
+                ],
+                [
+                  75780261697,
+                  75781069909
+                ],
+                [
+                  75782556130,
+                  75783364309
+                ],
+                [
+                  75784850568,
+                  75785658709
+                ],
+                [
+                  75787145029,
+                  75787953109
+                ],
+                [
+                  75789439463,
+                  75790247509
+                ],
+                [
+                  75791733900,
+                  75792541909
+                ],
+                [
+                  75794028349,
+                  75794836309
+                ],
+                [
+                  75796322793,
+                  75797130709
+                ],
+                [
+                  75798617231,
+                  75799425109
+                ],
+                [
+                  75800911669,
+                  75801719509
+                ],
+                [
+                  75803206131,
+                  75804013909
+                ],
+                [
+                  75805500564,
+                  75806308309
+                ],
+                [
+                  75807795002,
+                  75808602709
+                ],
+                [
+                  75810089464,
+                  75810897109
+                ],
+                [
+                  75812383898,
+                  75813191509
+                ],
+                [
+                  75814678336,
+                  75815485909
+                ],
+                [
+                  75816972784,
+                  75817780309
+                ],
+                [
+                  75819267234,
+                  75820074709
+                ],
+                [
+                  75821561667,
+                  75822369109
+                ],
+                [
+                  75823856105,
+                  75824663509
+                ],
+                [
+                  75826150567,
+                  75826957909
+                ],
+                [
+                  75828445000,
+                  75829252309
+                ],
+                [
+                  75830739437,
+                  75831546709
+                ],
+                [
+                  75833033886,
+                  75833841109
+                ],
+                [
+                  75835328330,
+                  75836135509
+                ],
+                [
+                  75837622769,
+                  75838429909
+                ],
+                [
+                  75839917206,
+                  75840724309
+                ],
+                [
+                  75842211667,
+                  75843018709
+                ],
+                [
+                  75844506100,
+                  75845313109
+                ],
+                [
+                  75846800538,
+                  75847607509
+                ],
+                [
+                  75849094999,
+                  75849901909
+                ],
+                [
+                  75851389433,
+                  75852196309
+                ],
+                [
+                  75853683870,
+                  75854490709
+                ],
+                [
+                  75855978319,
+                  75856785109
+                ],
+                [
+                  75858272768,
+                  75859079509
+                ],
+                [
+                  75860567201,
+                  75861373909
+                ],
+                [
+                  75862861639,
+                  75863668309
+                ],
+                [
+                  75865156100,
+                  75865962709
+                ],
+                [
+                  75867450533,
+                  75868257109
+                ],
+                [
+                  75869808971,
+                  75870551509
+                ],
+                [
+                  75870956192,
+                  75871698709
+                ],
+                [
+                  75872103422,
+                  75872845909
+                ],
+                [
+                  75873250651,
+                  75873993109
+                ],
+                [
+                  75874397867,
+                  75875140309
+                ],
+                [
+                  75875545085,
+                  75876287509
+                ],
+                [
+                  75876692304,
+                  75877434709
+                ],
+                [
+                  75877839523,
+                  75878581909
+                ],
+                [
+                  75878986743,
+                  75879729109
+                ]
+              ],
+              "start_ns": 74500000000,
+              "end_ns": 77000000000
+            },
+            "served_sojourn": {
+              "samples": 2179,
+              "mean_ns": 66297667.24047729,
+              "p95_ns": 114379409,
+              "p99_ns": 114383179,
+              "max_ns": 114384081
+            },
+            "visits": {
+              "DEQUEUE": 2179,
+              "ENQUEUE": 2127
+            },
+            "serialization_busy_ns": 2500000000,
+            "serialization_busy_fraction": 1.0,
+            "tc_drop_count": 11,
+            "tc_drop_rows": [
+              {
+                "time_ns": "75644889535",
+                "node_id": "1584",
+                "device_id": "1",
+                "txq": "0",
+                "device_type": "ns3::GSLNetDevice",
+                "packet_uid": "70375",
+                "flow_id": "0",
+                "tx_id": "65087",
+                "tx_time_ns": "75644889535",
+                "seq": "89326021",
+                "payload_bytes": "1380",
+                "device_stop": "1",
+                "bql_stop": "0",
+                "is_stopped": "1",
+                "queue_mapped": "1",
+                "queue_packets": "100",
+                "queue_bytes": "143400",
+                "max_size": "100p",
+                "would_overflow_one_mtu": "1",
+                "queue_limits_type": "none"
+              },
+              {
+                "time_ns": "75672422860",
+                "node_id": "1584",
+                "device_id": "1",
+                "txq": "0",
+                "device_type": "ns3::GSLNetDevice",
+                "packet_uid": "70375",
+                "flow_id": "0",
+                "tx_id": "65112",
+                "tx_time_ns": "75672422860",
+                "seq": "89360521",
+                "payload_bytes": "1380",
+                "device_stop": "1",
+                "bql_stop": "0",
+                "is_stopped": "1",
+                "queue_mapped": "1",
+                "queue_packets": "100",
+                "queue_bytes": "143400",
+                "max_size": "100p",
+                "would_overflow_one_mtu": "1",
+                "queue_limits_type": "none"
+              },
+              {
+                "time_ns": "75699956182",
+                "node_id": "1584",
+                "device_id": "1",
+                "txq": "0",
+                "device_type": "ns3::GSLNetDevice",
+                "packet_uid": "70375",
+                "flow_id": "0",
+                "tx_id": "65137",
+                "tx_time_ns": "75699956182",
+                "seq": "89395021",
+                "payload_bytes": "1380",
+                "device_stop": "1",
+                "bql_stop": "0",
+                "is_stopped": "1",
+                "queue_mapped": "1",
+                "queue_packets": "100",
+                "queue_bytes": "143400",
+                "max_size": "100p",
+                "would_overflow_one_mtu": "1",
+                "queue_limits_type": "none"
+              },
+              {
+                "time_ns": "75722900602",
+                "node_id": "1584",
+                "device_id": "1",
+                "txq": "0",
+                "device_type": "ns3::GSLNetDevice",
+                "packet_uid": "70375",
+                "flow_id": "0",
+                "tx_id": "65158",
+                "tx_time_ns": "75722900602",
+                "seq": "89424001",
+                "payload_bytes": "1380",
+                "device_stop": "1",
+                "bql_stop": "0",
+                "is_stopped": "1",
+                "queue_mapped": "1",
+                "queue_packets": "100",
+                "queue_bytes": "143400",
+                "max_size": "100p",
+                "would_overflow_one_mtu": "1",
+                "queue_limits_type": "none"
+              },
+              {
+                "time_ns": "75745845035",
+                "node_id": "1584",
+                "device_id": "1",
+                "txq": "0",
+                "device_type": "ns3::GSLNetDevice",
+                "packet_uid": "70375",
+                "flow_id": "0",
+                "tx_id": "65179",
+                "tx_time_ns": "75745845035",
+                "seq": "89452981",
+                "payload_bytes": "1380",
+                "device_stop": "1",
+                "bql_stop": "0",
+                "is_stopped": "1",
+                "queue_mapped": "1",
+                "queue_packets": "100",
+                "queue_bytes": "143400",
+                "max_size": "100p",
+                "would_overflow_one_mtu": "1",
+                "queue_limits_type": "none"
+              },
+              {
+                "time_ns": "75771083929",
+                "node_id": "1584",
+                "device_id": "1",
+                "txq": "0",
+                "device_type": "ns3::GSLNetDevice",
+                "packet_uid": "70375",
+                "flow_id": "0",
+                "tx_id": "65202",
+                "tx_time_ns": "75771083929",
+                "seq": "89484721",
+                "payload_bytes": "1380",
+                "device_stop": "1",
+                "bql_stop": "0",
+                "is_stopped": "1",
+                "queue_mapped": "1",
+                "queue_packets": "100",
+                "queue_bytes": "143400",
+                "max_size": "100p",
+                "would_overflow_one_mtu": "1",
+                "queue_limits_type": "none"
+              },
+              {
+                "time_ns": "75796322793",
+                "node_id": "1584",
+                "device_id": "1",
+                "txq": "0",
+                "device_type": "ns3::GSLNetDevice",
+                "packet_uid": "70375",
+                "flow_id": "0",
+                "tx_id": "65225",
+                "tx_time_ns": "75796322793",
+                "seq": "89516461",
+                "payload_bytes": "1380",
+                "device_stop": "1",
+                "bql_stop": "0",
+                "is_stopped": "1",
+                "queue_mapped": "1",
+                "queue_packets": "100",
+                "queue_bytes": "143400",
+                "max_size": "100p",
+                "would_overflow_one_mtu": "1",
+                "queue_limits_type": "none"
+              },
+              {
+                "time_ns": "75821561667",
+                "node_id": "1584",
+                "device_id": "1",
+                "txq": "0",
+                "device_type": "ns3::GSLNetDevice",
+                "packet_uid": "70375",
+                "flow_id": "0",
+                "tx_id": "65248",
+                "tx_time_ns": "75821561667",
+                "seq": "89548201",
+                "payload_bytes": "1380",
+                "device_stop": "1",
+                "bql_stop": "0",
+                "is_stopped": "1",
+                "queue_mapped": "1",
+                "queue_packets": "100",
+                "queue_bytes": "143400",
+                "max_size": "100p",
+                "would_overflow_one_mtu": "1",
+                "queue_limits_type": "none"
+              },
+              {
+                "time_ns": "75846800538",
+                "node_id": "1584",
+                "device_id": "1",
+                "txq": "0",
+                "device_type": "ns3::GSLNetDevice",
+                "packet_uid": "70375",
+                "flow_id": "0",
+                "tx_id": "65271",
+                "tx_time_ns": "75846800538",
+                "seq": "89579941",
+                "payload_bytes": "1380",
+                "device_stop": "1",
+                "bql_stop": "0",
+                "is_stopped": "1",
+                "queue_mapped": "1",
+                "queue_packets": "100",
+                "queue_bytes": "143400",
+                "max_size": "100p",
+                "would_overflow_one_mtu": "1",
+                "queue_limits_type": "none"
+              },
+              {
+                "time_ns": "75874397867",
+                "node_id": "1584",
+                "device_id": "1",
+                "txq": "0",
+                "device_type": "ns3::GSLNetDevice",
+                "packet_uid": "70375",
+                "flow_id": "0",
+                "tx_id": "65296",
+                "tx_time_ns": "75874397867",
+                "seq": "89613061",
+                "payload_bytes": "1380",
+                "device_stop": "1",
+                "bql_stop": "0",
+                "is_stopped": "1",
+                "queue_mapped": "1",
+                "queue_packets": "100",
+                "queue_bytes": "143400",
+                "max_size": "100p",
+                "would_overflow_one_mtu": "1",
+                "queue_limits_type": "none"
+              },
+              {
+                "time_ns": "75876692304",
+                "node_id": "1584",
+                "device_id": "1",
+                "txq": "0",
+                "device_type": "ns3::GSLNetDevice",
+                "packet_uid": "70375",
+                "flow_id": "0",
+                "tx_id": "65299",
+                "tx_time_ns": "75876692304",
+                "seq": "89617201",
+                "payload_bytes": "1380",
+                "device_stop": "1",
+                "bql_stop": "0",
+                "is_stopped": "1",
+                "queue_mapped": "1",
+                "queue_packets": "100",
+                "queue_bytes": "143400",
+                "max_size": "100p",
+                "would_overflow_one_mtu": "1",
+                "queue_limits_type": "none"
+              }
+            ],
+            "stop_count": 119,
+            "wake_count": 119,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 238,
+            "first_flow_state": {
+              "time_ns": "75617356228",
+              "node_id": "1584",
+              "device_id": "1",
+              "txq": "0",
+              "reason": "DEVICE_STOP",
+              "old_device_stop": "0",
+              "old_bql_stop": "0",
+              "new_device_stop": "1",
+              "new_bql_stop": "0",
+              "is_stopped": "1",
+              "wake_callback_will_run": "0",
+              "queue_packets": "100",
+              "queue_bytes": "143400",
+              "max_size": "100p",
+              "would_overflow_one_mtu": "1",
+              "queue_limits_type": "none"
+            },
+            "last_flow_state": {
+              "time_ns": "75879729109",
+              "node_id": "1584",
+              "device_id": "1",
+              "txq": "0",
+              "reason": "DEVICE_WAKE",
+              "old_device_stop": "1",
+              "old_bql_stop": "0",
+              "new_device_stop": "0",
+              "new_bql_stop": "0",
+              "is_stopped": "0",
+              "wake_callback_will_run": "0",
+              "queue_packets": "99",
+              "queue_bytes": "141966",
+              "max_size": "100p",
+              "would_overflow_one_mtu": "0",
+              "queue_limits_type": "none"
+            }
+          },
+          "focus": {
+            "occupancy": {
+              "time_weighted_packets": 50.089640821,
+              "time_weighted_bytes": 71828.544937314,
+              "peak_packets": 100,
+              "peak_bytes": 143400,
+              "literally_full_ns": 95664354,
+              "full_intervals_ns": [
+                [
+                  75617356228,
+                  75618167509
+                ],
+                [
+                  75619650665,
+                  75620461909
+                ],
+                [
+                  75621945115,
+                  75622756309
+                ],
+                [
+                  75624239564,
+                  75625050709
+                ],
+                [
+                  75626533997,
+                  75627345109
+                ],
+                [
+                  75628828434,
+                  75629639509
+                ],
+                [
+                  75631122895,
+                  75631933909
+                ],
+                [
+                  75633417329,
+                  75634228309
+                ],
+                [
+                  75635711766,
+                  75636522709
+                ],
+                [
+                  75638006215,
+                  75638817109
+                ],
+                [
+                  75640300660,
+                  75641111509
+                ],
+                [
+                  75642595098,
+                  75643405909
+                ],
+                [
+                  75644889535,
+                  75645700309
+                ],
+                [
+                  75647183997,
+                  75647994709
+                ],
+                [
+                  75649478430,
+                  75650289109
+                ],
+                [
+                  75651772867,
+                  75652583509
+                ],
+                [
+                  75654067327,
+                  75654877909
+                ],
+                [
+                  75656361760,
+                  75657172309
+                ],
+                [
+                  75658656198,
+                  75659466709
+                ],
+                [
+                  75660950647,
+                  75661761109
+                ],
+                [
+                  75663245097,
+                  75664055509
+                ],
+                [
+                  75665539530,
+                  75666349909
+                ],
+                [
+                  75667833967,
+                  75668644309
+                ],
+                [
+                  75670128427,
+                  75670938709
+                ],
+                [
+                  75672422860,
+                  75673233109
+                ],
+                [
+                  75674717299,
+                  75675527509
+                ],
+                [
+                  75677011748,
+                  75677821909
+                ],
+                [
+                  75679306193,
+                  75680116309
+                ],
+                [
+                  75681600632,
+                  75682410709
+                ],
+                [
+                  75683895069,
+                  75684705109
+                ],
+                [
+                  75686189529,
+                  75686999509
+                ],
+                [
+                  75688483962,
+                  75689293909
+                ],
+                [
+                  75690778400,
+                  75691588309
+                ],
+                [
+                  75693072860,
+                  75693882709
+                ],
+                [
+                  75695367293,
+                  75696177109
+                ],
+                [
+                  75697661731,
+                  75698471509
+                ],
+                [
+                  75699956182,
+                  75700765909
+                ],
+                [
+                  75702250631,
+                  75703060309
+                ],
+                [
+                  75704545064,
+                  75705354709
+                ],
+                [
+                  75706839502,
+                  75707649109
+                ],
+                [
+                  75709133961,
+                  75709943509
+                ],
+                [
+                  75711428395,
+                  75712237909
+                ],
+                [
+                  75713722832,
+                  75714532309
+                ],
+                [
+                  75716017282,
+                  75716826709
+                ],
+                [
+                  75718311727,
+                  75719121109
+                ],
+                [
+                  75720606165,
+                  75721415509
+                ],
+                [
+                  75722900602,
+                  75723709909
+                ],
+                [
+                  75725195062,
+                  75726004309
+                ],
+                [
+                  75727489495,
+                  75728298709
+                ],
+                [
+                  75729783932,
+                  75730593109
+                ],
+                [
+                  75732078394,
+                  75732887509
+                ],
+                [
+                  75734372827,
+                  75735181909
+                ],
+                [
+                  75736667265,
+                  75737476309
+                ],
+                [
+                  75738961714,
+                  75739770709
+                ],
+                [
+                  75741256163,
+                  75742065109
+                ],
+                [
+                  75743550597,
+                  75744359509
+                ],
+                [
+                  75745845035,
+                  75746653909
+                ],
+                [
+                  75748139494,
+                  75748948309
+                ],
+                [
+                  75750433927,
+                  75751242709
+                ],
+                [
+                  75752728366,
+                  75753537109
+                ],
+                [
+                  75755022816,
+                  75755831509
+                ],
+                [
+                  75757317261,
+                  75758125909
+                ],
+                [
+                  75759611699,
+                  75760420309
+                ],
+                [
+                  75761906137,
+                  75762714709
+                ],
+                [
+                  75764200596,
+                  75765009109
+                ],
+                [
+                  75766495030,
+                  75767303509
+                ],
+                [
+                  75768789467,
+                  75769597909
+                ],
+                [
+                  75771083929,
+                  75771892309
+                ],
+                [
+                  75773378362,
+                  75774186709
+                ],
+                [
+                  75775672800,
+                  75776481109
+                ],
+                [
+                  75777967248,
+                  75778775509
+                ],
+                [
+                  75780261697,
+                  75781069909
+                ],
+                [
+                  75782556130,
+                  75783364309
+                ],
+                [
+                  75784850568,
+                  75785658709
+                ],
+                [
+                  75787145029,
+                  75787953109
+                ],
+                [
+                  75789439463,
+                  75790247509
+                ],
+                [
+                  75791733900,
+                  75792541909
+                ],
+                [
+                  75794028349,
+                  75794836309
+                ],
+                [
+                  75796322793,
+                  75797130709
+                ],
+                [
+                  75798617231,
+                  75799425109
+                ],
+                [
+                  75800911669,
+                  75801719509
+                ],
+                [
+                  75803206131,
+                  75804013909
+                ],
+                [
+                  75805500564,
+                  75806308309
+                ],
+                [
+                  75807795002,
+                  75808602709
+                ],
+                [
+                  75810089464,
+                  75810897109
+                ],
+                [
+                  75812383898,
+                  75813191509
+                ],
+                [
+                  75814678336,
+                  75815485909
+                ],
+                [
+                  75816972784,
+                  75817780309
+                ],
+                [
+                  75819267234,
+                  75820074709
+                ],
+                [
+                  75821561667,
+                  75822369109
+                ],
+                [
+                  75823856105,
+                  75824663509
+                ],
+                [
+                  75826150567,
+                  75826957909
+                ],
+                [
+                  75828445000,
+                  75829252309
+                ],
+                [
+                  75830739437,
+                  75831546709
+                ],
+                [
+                  75833033886,
+                  75833841109
+                ],
+                [
+                  75835328330,
+                  75836135509
+                ],
+                [
+                  75837622769,
+                  75838429909
+                ],
+                [
+                  75839917206,
+                  75840724309
+                ],
+                [
+                  75842211667,
+                  75843018709
+                ],
+                [
+                  75844506100,
+                  75845313109
+                ],
+                [
+                  75846800538,
+                  75847607509
+                ],
+                [
+                  75849094999,
+                  75849901909
+                ],
+                [
+                  75851389433,
+                  75852196309
+                ],
+                [
+                  75853683870,
+                  75854490709
+                ],
+                [
+                  75855978319,
+                  75856785109
+                ],
+                [
+                  75858272768,
+                  75859079509
+                ],
+                [
+                  75860567201,
+                  75861373909
+                ],
+                [
+                  75862861639,
+                  75863668309
+                ],
+                [
+                  75865156100,
+                  75865962709
+                ],
+                [
+                  75867450533,
+                  75868257109
+                ],
+                [
+                  75869808971,
+                  75870551509
+                ],
+                [
+                  75870956192,
+                  75871698709
+                ],
+                [
+                  75872103422,
+                  75872845909
+                ],
+                [
+                  75873250651,
+                  75873993109
+                ],
+                [
+                  75874397867,
+                  75875140309
+                ],
+                [
+                  75875545085,
+                  75876287509
+                ],
+                [
+                  75876692304,
+                  75877434709
+                ],
+                [
+                  75877839523,
+                  75878581909
+                ],
+                [
+                  75878986743,
+                  75879729109
+                ]
+              ],
+              "start_ns": 74500000000,
+              "end_ns": 77500000000
+            },
+            "served_sojourn": {
+              "samples": 2615,
+              "mean_ns": 58306215.95793499,
+              "p95_ns": 113236914,
+              "p99_ns": 114382961,
+              "max_ns": 114384081
+            },
+            "visits": {
+              "DEQUEUE": 2615,
+              "ENQUEUE": 2568
+            },
+            "serialization_busy_ns": 3000000000,
+            "serialization_busy_fraction": 1.0,
+            "tc_drop_count": 11,
+            "tc_drop_rows": [
+              {
+                "time_ns": "75644889535",
+                "node_id": "1584",
+                "device_id": "1",
+                "txq": "0",
+                "device_type": "ns3::GSLNetDevice",
+                "packet_uid": "70375",
+                "flow_id": "0",
+                "tx_id": "65087",
+                "tx_time_ns": "75644889535",
+                "seq": "89326021",
+                "payload_bytes": "1380",
+                "device_stop": "1",
+                "bql_stop": "0",
+                "is_stopped": "1",
+                "queue_mapped": "1",
+                "queue_packets": "100",
+                "queue_bytes": "143400",
+                "max_size": "100p",
+                "would_overflow_one_mtu": "1",
+                "queue_limits_type": "none"
+              },
+              {
+                "time_ns": "75672422860",
+                "node_id": "1584",
+                "device_id": "1",
+                "txq": "0",
+                "device_type": "ns3::GSLNetDevice",
+                "packet_uid": "70375",
+                "flow_id": "0",
+                "tx_id": "65112",
+                "tx_time_ns": "75672422860",
+                "seq": "89360521",
+                "payload_bytes": "1380",
+                "device_stop": "1",
+                "bql_stop": "0",
+                "is_stopped": "1",
+                "queue_mapped": "1",
+                "queue_packets": "100",
+                "queue_bytes": "143400",
+                "max_size": "100p",
+                "would_overflow_one_mtu": "1",
+                "queue_limits_type": "none"
+              },
+              {
+                "time_ns": "75699956182",
+                "node_id": "1584",
+                "device_id": "1",
+                "txq": "0",
+                "device_type": "ns3::GSLNetDevice",
+                "packet_uid": "70375",
+                "flow_id": "0",
+                "tx_id": "65137",
+                "tx_time_ns": "75699956182",
+                "seq": "89395021",
+                "payload_bytes": "1380",
+                "device_stop": "1",
+                "bql_stop": "0",
+                "is_stopped": "1",
+                "queue_mapped": "1",
+                "queue_packets": "100",
+                "queue_bytes": "143400",
+                "max_size": "100p",
+                "would_overflow_one_mtu": "1",
+                "queue_limits_type": "none"
+              },
+              {
+                "time_ns": "75722900602",
+                "node_id": "1584",
+                "device_id": "1",
+                "txq": "0",
+                "device_type": "ns3::GSLNetDevice",
+                "packet_uid": "70375",
+                "flow_id": "0",
+                "tx_id": "65158",
+                "tx_time_ns": "75722900602",
+                "seq": "89424001",
+                "payload_bytes": "1380",
+                "device_stop": "1",
+                "bql_stop": "0",
+                "is_stopped": "1",
+                "queue_mapped": "1",
+                "queue_packets": "100",
+                "queue_bytes": "143400",
+                "max_size": "100p",
+                "would_overflow_one_mtu": "1",
+                "queue_limits_type": "none"
+              },
+              {
+                "time_ns": "75745845035",
+                "node_id": "1584",
+                "device_id": "1",
+                "txq": "0",
+                "device_type": "ns3::GSLNetDevice",
+                "packet_uid": "70375",
+                "flow_id": "0",
+                "tx_id": "65179",
+                "tx_time_ns": "75745845035",
+                "seq": "89452981",
+                "payload_bytes": "1380",
+                "device_stop": "1",
+                "bql_stop": "0",
+                "is_stopped": "1",
+                "queue_mapped": "1",
+                "queue_packets": "100",
+                "queue_bytes": "143400",
+                "max_size": "100p",
+                "would_overflow_one_mtu": "1",
+                "queue_limits_type": "none"
+              },
+              {
+                "time_ns": "75771083929",
+                "node_id": "1584",
+                "device_id": "1",
+                "txq": "0",
+                "device_type": "ns3::GSLNetDevice",
+                "packet_uid": "70375",
+                "flow_id": "0",
+                "tx_id": "65202",
+                "tx_time_ns": "75771083929",
+                "seq": "89484721",
+                "payload_bytes": "1380",
+                "device_stop": "1",
+                "bql_stop": "0",
+                "is_stopped": "1",
+                "queue_mapped": "1",
+                "queue_packets": "100",
+                "queue_bytes": "143400",
+                "max_size": "100p",
+                "would_overflow_one_mtu": "1",
+                "queue_limits_type": "none"
+              },
+              {
+                "time_ns": "75796322793",
+                "node_id": "1584",
+                "device_id": "1",
+                "txq": "0",
+                "device_type": "ns3::GSLNetDevice",
+                "packet_uid": "70375",
+                "flow_id": "0",
+                "tx_id": "65225",
+                "tx_time_ns": "75796322793",
+                "seq": "89516461",
+                "payload_bytes": "1380",
+                "device_stop": "1",
+                "bql_stop": "0",
+                "is_stopped": "1",
+                "queue_mapped": "1",
+                "queue_packets": "100",
+                "queue_bytes": "143400",
+                "max_size": "100p",
+                "would_overflow_one_mtu": "1",
+                "queue_limits_type": "none"
+              },
+              {
+                "time_ns": "75821561667",
+                "node_id": "1584",
+                "device_id": "1",
+                "txq": "0",
+                "device_type": "ns3::GSLNetDevice",
+                "packet_uid": "70375",
+                "flow_id": "0",
+                "tx_id": "65248",
+                "tx_time_ns": "75821561667",
+                "seq": "89548201",
+                "payload_bytes": "1380",
+                "device_stop": "1",
+                "bql_stop": "0",
+                "is_stopped": "1",
+                "queue_mapped": "1",
+                "queue_packets": "100",
+                "queue_bytes": "143400",
+                "max_size": "100p",
+                "would_overflow_one_mtu": "1",
+                "queue_limits_type": "none"
+              },
+              {
+                "time_ns": "75846800538",
+                "node_id": "1584",
+                "device_id": "1",
+                "txq": "0",
+                "device_type": "ns3::GSLNetDevice",
+                "packet_uid": "70375",
+                "flow_id": "0",
+                "tx_id": "65271",
+                "tx_time_ns": "75846800538",
+                "seq": "89579941",
+                "payload_bytes": "1380",
+                "device_stop": "1",
+                "bql_stop": "0",
+                "is_stopped": "1",
+                "queue_mapped": "1",
+                "queue_packets": "100",
+                "queue_bytes": "143400",
+                "max_size": "100p",
+                "would_overflow_one_mtu": "1",
+                "queue_limits_type": "none"
+              },
+              {
+                "time_ns": "75874397867",
+                "node_id": "1584",
+                "device_id": "1",
+                "txq": "0",
+                "device_type": "ns3::GSLNetDevice",
+                "packet_uid": "70375",
+                "flow_id": "0",
+                "tx_id": "65296",
+                "tx_time_ns": "75874397867",
+                "seq": "89613061",
+                "payload_bytes": "1380",
+                "device_stop": "1",
+                "bql_stop": "0",
+                "is_stopped": "1",
+                "queue_mapped": "1",
+                "queue_packets": "100",
+                "queue_bytes": "143400",
+                "max_size": "100p",
+                "would_overflow_one_mtu": "1",
+                "queue_limits_type": "none"
+              },
+              {
+                "time_ns": "75876692304",
+                "node_id": "1584",
+                "device_id": "1",
+                "txq": "0",
+                "device_type": "ns3::GSLNetDevice",
+                "packet_uid": "70375",
+                "flow_id": "0",
+                "tx_id": "65299",
+                "tx_time_ns": "75876692304",
+                "seq": "89617201",
+                "payload_bytes": "1380",
+                "device_stop": "1",
+                "bql_stop": "0",
+                "is_stopped": "1",
+                "queue_mapped": "1",
+                "queue_packets": "100",
+                "queue_bytes": "143400",
+                "max_size": "100p",
+                "would_overflow_one_mtu": "1",
+                "queue_limits_type": "none"
+              }
+            ],
+            "stop_count": 119,
+            "wake_count": 119,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 238,
+            "first_flow_state": {
+              "time_ns": "75617356228",
+              "node_id": "1584",
+              "device_id": "1",
+              "txq": "0",
+              "reason": "DEVICE_STOP",
+              "old_device_stop": "0",
+              "old_bql_stop": "0",
+              "new_device_stop": "1",
+              "new_bql_stop": "0",
+              "is_stopped": "1",
+              "wake_callback_will_run": "0",
+              "queue_packets": "100",
+              "queue_bytes": "143400",
+              "max_size": "100p",
+              "would_overflow_one_mtu": "1",
+              "queue_limits_type": "none"
+            },
+            "last_flow_state": {
+              "time_ns": "75879729109",
+              "node_id": "1584",
+              "device_id": "1",
+              "txq": "0",
+              "reason": "DEVICE_WAKE",
+              "old_device_stop": "1",
+              "old_bql_stop": "0",
+              "new_device_stop": "0",
+              "new_bql_stop": "0",
+              "is_stopped": "0",
+              "wake_callback_will_run": "0",
+              "queue_packets": "99",
+              "queue_bytes": "141966",
+              "max_size": "100p",
+              "would_overflow_one_mtu": "0",
+              "queue_limits_type": "none"
+            }
+          }
+        },
+        "full_run_tc_drop_count": 486
+      },
+      {
+        "mapping": {
+          "node_id": "1585",
+          "device_id": "1",
+          "if_index": "1",
+          "device_type": "ns3::GSLNetDevice",
+          "queue_type": "ns3::DropTailQueue<Packet>",
+          "max_size": "100p",
+          "txq": "0",
+          "queue_limits_type": "none",
+          "root_qdisc_type": "none"
+        },
+        "windows": {
+          "pre": {
+            "occupancy": {
+              "time_weighted_packets": 0.0,
+              "time_weighted_bytes": 0.0,
+              "peak_packets": 0,
+              "peak_bytes": 0,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 74500000000,
+              "end_ns": 75000000000
+            },
+            "served_sojourn": {
+              "samples": 217,
+              "mean_ns": 0.0,
+              "p95_ns": 0,
+              "p99_ns": 0,
+              "max_ns": 0
+            },
+            "visits": {
+              "ENQUEUE": 217,
+              "DEQUEUE": 217
+            },
+            "serialization_busy_ns": 9374400,
+            "serialization_busy_fraction": 0.0187488,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          },
+          "post": {
+            "occupancy": {
+              "time_weighted_packets": 0.0,
+              "time_weighted_bytes": 0.0,
+              "peak_packets": 0,
+              "peak_bytes": 0,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 75000000000,
+              "end_ns": 75500000000
+            },
+            "served_sojourn": {
+              "samples": 218,
+              "mean_ns": 0.0,
+              "p95_ns": 0,
+              "p99_ns": 0,
+              "max_ns": 0
+            },
+            "visits": {
+              "ENQUEUE": 218,
+              "DEQUEUE": 218
+            },
+            "serialization_busy_ns": 9417600,
+            "serialization_busy_fraction": 0.0188352,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          },
+          "legacy": {
+            "occupancy": {
+              "time_weighted_packets": 0.0,
+              "time_weighted_bytes": 0.0,
+              "peak_packets": 0,
+              "peak_bytes": 0,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 74500000000,
+              "end_ns": 77000000000
+            },
+            "served_sojourn": {
+              "samples": 1262,
+              "mean_ns": 0.0,
+              "p95_ns": 0,
+              "p99_ns": 0,
+              "max_ns": 0
+            },
+            "visits": {
+              "ENQUEUE": 1262,
+              "DEQUEUE": 1262
+            },
+            "serialization_busy_ns": 60483200,
+            "serialization_busy_fraction": 0.02419328,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          },
+          "focus": {
+            "occupancy": {
+              "time_weighted_packets": 0.0,
+              "time_weighted_bytes": 0.0,
+              "peak_packets": 0,
+              "peak_bytes": 0,
+              "literally_full_ns": 0,
+              "full_intervals_ns": [],
+              "start_ns": 74500000000,
+              "end_ns": 77500000000
+            },
+            "served_sojourn": {
+              "samples": 1480,
+              "mean_ns": 0.0,
+              "p95_ns": 0,
+              "p99_ns": 0,
+              "max_ns": 0
+            },
+            "visits": {
+              "ENQUEUE": 1480,
+              "DEQUEUE": 1480
+            },
+            "serialization_busy_ns": 69900800,
+            "serialization_busy_fraction": 0.023300266666666666,
+            "tc_drop_count": 0,
+            "tc_drop_rows": [],
+            "stop_count": 0,
+            "wake_count": 0,
+            "bql_stop_count": 0,
+            "bql_wake_count": 0,
+            "state_event_count": 0,
+            "first_flow_state": null,
+            "last_flow_state": null
+          }
+        },
+        "full_run_tc_drop_count": 0
+      }
+    ],
+    "queue_conservation": [
+      {
+        "node_id": 180,
+        "device_id": 3,
+        "flow_id": "",
+        "enqueued": 2794,
+        "dequeued": 2794,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 2794,
+        "sojourn_sum_ns": 0,
+        "sojourn_max_ns": 0,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 180,
+        "device_id": 4,
+        "flow_id": "",
+        "enqueued": 2870,
+        "dequeued": 2870,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 2870,
+        "sojourn_sum_ns": 0,
+        "sojourn_max_ns": 0,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 180,
+        "device_id": 5,
+        "flow_id": "0",
+        "enqueued": 10982,
+        "dequeued": 10982,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 10982,
+        "sojourn_sum_ns": 12766541,
+        "sojourn_max_ns": 40560,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 181,
+        "device_id": 2,
+        "flow_id": "0",
+        "enqueued": 5576,
+        "dequeued": 5576,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 5576,
+        "sojourn_sum_ns": 0,
+        "sojourn_max_ns": 0,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 181,
+        "device_id": 4,
+        "flow_id": "",
+        "enqueued": 2794,
+        "dequeued": 2794,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 2794,
+        "sojourn_sum_ns": 0,
+        "sojourn_max_ns": 0,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 202,
+        "device_id": 1,
+        "flow_id": "0",
+        "enqueued": 5410,
+        "dequeued": 5410,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 5410,
+        "sojourn_sum_ns": 3096209,
+        "sojourn_max_ns": 1147,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 202,
+        "device_id": 3,
+        "flow_id": "",
+        "enqueued": 170,
+        "dequeued": 170,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 170,
+        "sojourn_sum_ns": 0,
+        "sojourn_max_ns": 0,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 202,
+        "device_id": 4,
+        "flow_id": "",
+        "enqueued": 2698,
+        "dequeued": 2698,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 2698,
+        "sojourn_sum_ns": 0,
+        "sojourn_max_ns": 0,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 203,
+        "device_id": 1,
+        "flow_id": "0",
+        "enqueued": 5576,
+        "dequeued": 5576,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 5576,
+        "sojourn_sum_ns": 0,
+        "sojourn_max_ns": 0,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 203,
+        "device_id": 2,
+        "flow_id": "0",
+        "enqueued": 182,
+        "dequeued": 182,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 182,
+        "sojourn_sum_ns": 0,
+        "sojourn_max_ns": 0,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 203,
+        "device_id": 4,
+        "flow_id": "",
+        "enqueued": 2964,
+        "dequeued": 2964,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 2964,
+        "sojourn_sum_ns": 0,
+        "sojourn_max_ns": 0,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 223,
+        "device_id": 5,
+        "flow_id": "0",
+        "enqueued": 7,
+        "dequeued": 7,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 7,
+        "sojourn_sum_ns": 1,
+        "sojourn_max_ns": 1,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 224,
+        "device_id": 1,
+        "flow_id": "0",
+        "enqueued": 5231,
+        "dequeued": 5231,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 5231,
+        "sojourn_sum_ns": 1372195,
+        "sojourn_max_ns": 522,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 224,
+        "device_id": 3,
+        "flow_id": "",
+        "enqueued": 54809,
+        "dequeued": 54809,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 54809,
+        "sojourn_sum_ns": 0,
+        "sojourn_max_ns": 0,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 224,
+        "device_id": 4,
+        "flow_id": "",
+        "enqueued": 2698,
+        "dequeued": 2698,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 2698,
+        "sojourn_sum_ns": 0,
+        "sojourn_max_ns": 0,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 224,
+        "device_id": 5,
+        "flow_id": "0",
+        "enqueued": 104645,
+        "dequeued": 104645,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 104645,
+        "sojourn_sum_ns": 2752859,
+        "sojourn_max_ns": 50,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 225,
+        "device_id": 1,
+        "flow_id": "0",
+        "enqueued": 5758,
+        "dequeued": 5758,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 5758,
+        "sojourn_sum_ns": 0,
+        "sojourn_max_ns": 0,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 225,
+        "device_id": 2,
+        "flow_id": "0",
+        "enqueued": 104651,
+        "dequeued": 104651,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 104651,
+        "sojourn_sum_ns": 94809234,
+        "sojourn_max_ns": 1330,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 225,
+        "device_id": 4,
+        "flow_id": "",
+        "enqueued": 57773,
+        "dequeued": 57773,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 57773,
+        "sojourn_sum_ns": 0,
+        "sojourn_max_ns": 0,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 245,
+        "device_id": 1,
+        "flow_id": "0",
+        "enqueued": 7,
+        "dequeued": 7,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 7,
+        "sojourn_sum_ns": 0,
+        "sojourn_max_ns": 0,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 245,
+        "device_id": 3,
+        "flow_id": "",
+        "enqueued": 29702,
+        "dequeued": 29702,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 29702,
+        "sojourn_sum_ns": 0,
+        "sojourn_max_ns": 0,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 245,
+        "device_id": 5,
+        "flow_id": "0",
+        "enqueued": 57337,
+        "dequeued": 57337,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 57337,
+        "sojourn_sum_ns": 44,
+        "sojourn_max_ns": 1,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 246,
+        "device_id": 1,
+        "flow_id": "0",
+        "enqueued": 5230,
+        "dequeued": 5230,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 5230,
+        "sojourn_sum_ns": 3112187,
+        "sojourn_max_ns": 1150,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 246,
+        "device_id": 2,
+        "flow_id": "0",
+        "enqueued": 57344,
+        "dequeued": 57344,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 57344,
+        "sojourn_sum_ns": 0,
+        "sojourn_max_ns": 0,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 246,
+        "device_id": 3,
+        "flow_id": "",
+        "enqueued": 29702,
+        "dequeued": 29702,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 29702,
+        "sojourn_sum_ns": 0,
+        "sojourn_max_ns": 0,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 246,
+        "device_id": 4,
+        "flow_id": "",
+        "enqueued": 2696,
+        "dequeued": 2696,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 2696,
+        "sojourn_sum_ns": 0,
+        "sojourn_max_ns": 0,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 247,
+        "device_id": 1,
+        "flow_id": "0",
+        "enqueued": 110409,
+        "dequeued": 110409,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 110409,
+        "sojourn_sum_ns": 203522812,
+        "sojourn_max_ns": 2856,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 247,
+        "device_id": 2,
+        "flow_id": "0",
+        "enqueued": 57358,
+        "dequeued": 57358,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 57358,
+        "sojourn_sum_ns": 0,
+        "sojourn_max_ns": 0,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 247,
+        "device_id": 4,
+        "flow_id": "",
+        "enqueued": 87475,
+        "dequeued": 87475,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 87475,
+        "sojourn_sum_ns": 0,
+        "sojourn_max_ns": 0,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 268,
+        "device_id": 1,
+        "flow_id": "0",
+        "enqueued": 5219,
+        "dequeued": 5219,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 5219,
+        "sojourn_sum_ns": 1372339,
+        "sojourn_max_ns": 522,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 268,
+        "device_id": 4,
+        "flow_id": "",
+        "enqueued": 2695,
+        "dequeued": 2695,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 2695,
+        "sojourn_sum_ns": 0,
+        "sojourn_max_ns": 0,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 269,
+        "device_id": 1,
+        "flow_id": "0",
+        "enqueued": 167767,
+        "dequeued": 167767,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 167767,
+        "sojourn_sum_ns": 94942527,
+        "sojourn_max_ns": 1331,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 269,
+        "device_id": 4,
+        "flow_id": "",
+        "enqueued": 87475,
+        "dequeued": 87475,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 87475,
+        "sojourn_sum_ns": 0,
+        "sojourn_max_ns": 0,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 290,
+        "device_id": 1,
+        "flow_id": "0",
+        "enqueued": 5224,
+        "dequeued": 5224,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 5224,
+        "sojourn_sum_ns": 3128121,
+        "sojourn_max_ns": 1154,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 290,
+        "device_id": 4,
+        "flow_id": "",
+        "enqueued": 2693,
+        "dequeued": 2693,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 2693,
+        "sojourn_sum_ns": 0,
+        "sojourn_max_ns": 0,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 291,
+        "device_id": 1,
+        "flow_id": "0",
+        "enqueued": 167767,
+        "dequeued": 167767,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 167767,
+        "sojourn_sum_ns": 203688390,
+        "sojourn_max_ns": 2857,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 291,
+        "device_id": 2,
+        "flow_id": "0",
+        "enqueued": 8,
+        "dequeued": 8,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 8,
+        "sojourn_sum_ns": 0,
+        "sojourn_max_ns": 0,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 291,
+        "device_id": 4,
+        "flow_id": "",
+        "enqueued": 87475,
+        "dequeued": 87475,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 87475,
+        "sojourn_sum_ns": 0,
+        "sojourn_max_ns": 0,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 312,
+        "device_id": 1,
+        "flow_id": "0",
+        "enqueued": 5219,
+        "dequeued": 5219,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 5219,
+        "sojourn_sum_ns": 1357108,
+        "sojourn_max_ns": 517,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 312,
+        "device_id": 4,
+        "flow_id": "",
+        "enqueued": 2692,
+        "dequeued": 2692,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 2692,
+        "sojourn_sum_ns": 0,
+        "sojourn_max_ns": 0,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 313,
+        "device_id": 1,
+        "flow_id": "0",
+        "enqueued": 167775,
+        "dequeued": 167775,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 167775,
+        "sojourn_sum_ns": 581670879855,
+        "sojourn_max_ns": 8134418,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 313,
+        "device_id": 3,
+        "flow_id": "",
+        "enqueued": 23445,
+        "dequeued": 23445,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 23445,
+        "sojourn_sum_ns": 0,
+        "sojourn_max_ns": 0,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 313,
+        "device_id": 4,
+        "flow_id": "",
+        "enqueued": 64030,
+        "dequeued": 64030,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 64030,
+        "sojourn_sum_ns": 0,
+        "sojourn_max_ns": 0,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 314,
+        "device_id": 2,
+        "flow_id": "0",
+        "enqueued": 45157,
+        "dequeued": 45157,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 45157,
+        "sojourn_sum_ns": 0,
+        "sojourn_max_ns": 0,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 314,
+        "device_id": 3,
+        "flow_id": "",
+        "enqueued": 23443,
+        "dequeued": 23443,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 23443,
+        "sojourn_sum_ns": 0,
+        "sojourn_max_ns": 0,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 314,
+        "device_id": 4,
+        "flow_id": "",
+        "enqueued": 2,
+        "dequeued": 2,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 2,
+        "sojourn_sum_ns": 0,
+        "sojourn_max_ns": 0,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 315,
+        "device_id": 2,
+        "flow_id": "0",
+        "enqueued": 45157,
+        "dequeued": 45157,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 45157,
+        "sojourn_sum_ns": 0,
+        "sojourn_max_ns": 0,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 315,
+        "device_id": 3,
+        "flow_id": "",
+        "enqueued": 23440,
+        "dequeued": 23440,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 23440,
+        "sojourn_sum_ns": 0,
+        "sojourn_max_ns": 0,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 315,
+        "device_id": 4,
+        "flow_id": "",
+        "enqueued": 3,
+        "dequeued": 3,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 3,
+        "sojourn_sum_ns": 0,
+        "sojourn_max_ns": 0,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 316,
+        "device_id": 2,
+        "flow_id": "0",
+        "enqueued": 45157,
+        "dequeued": 45157,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 45157,
+        "sojourn_sum_ns": 10568450880,
+        "sojourn_max_ns": 403697,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 316,
+        "device_id": 5,
+        "flow_id": "",
+        "enqueued": 23440,
+        "dequeued": 23440,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 23440,
+        "sojourn_sum_ns": 0,
+        "sojourn_max_ns": 0,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 334,
+        "device_id": 1,
+        "flow_id": "0",
+        "enqueued": 5224,
+        "dequeued": 5224,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 5224,
+        "sojourn_sum_ns": 0,
+        "sojourn_max_ns": 0,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 334,
+        "device_id": 3,
+        "flow_id": "",
+        "enqueued": 2690,
+        "dequeued": 2690,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 2690,
+        "sojourn_sum_ns": 0,
+        "sojourn_max_ns": 0,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 335,
+        "device_id": 1,
+        "flow_id": "0",
+        "enqueued": 122618,
+        "dequeued": 122618,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 122618,
+        "sojourn_sum_ns": 19097082,
+        "sojourn_max_ns": 1749,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 335,
+        "device_id": 2,
+        "flow_id": "0",
+        "enqueued": 5230,
+        "dequeued": 5230,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 5230,
+        "sojourn_sum_ns": 0,
+        "sojourn_max_ns": 0,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 335,
+        "device_id": 3,
+        "flow_id": "",
+        "enqueued": 56020,
+        "dequeued": 56020,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 56020,
+        "sojourn_sum_ns": 0,
+        "sojourn_max_ns": 0,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 335,
+        "device_id": 4,
+        "flow_id": "",
+        "enqueued": 10697,
+        "dequeued": 10697,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 10697,
+        "sojourn_sum_ns": 0,
+        "sojourn_max_ns": 0,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 336,
+        "device_id": 2,
+        "flow_id": "0",
+        "enqueued": 107462,
+        "dequeued": 107462,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 107462,
+        "sojourn_sum_ns": 0,
+        "sojourn_max_ns": 0,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 336,
+        "device_id": 3,
+        "flow_id": "",
+        "enqueued": 56019,
+        "dequeued": 56019,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 56019,
+        "sojourn_sum_ns": 0,
+        "sojourn_max_ns": 0,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 337,
+        "device_id": 2,
+        "flow_id": "0",
+        "enqueued": 107469,
+        "dequeued": 107469,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 107469,
+        "sojourn_sum_ns": 37632583972,
+        "sojourn_max_ns": 684394,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 337,
+        "device_id": 3,
+        "flow_id": "",
+        "enqueued": 964,
+        "dequeued": 964,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 964,
+        "sojourn_sum_ns": 0,
+        "sojourn_max_ns": 0,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 337,
+        "device_id": 5,
+        "flow_id": "",
+        "enqueued": 55055,
+        "dequeued": 55055,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 55055,
+        "sojourn_sum_ns": 0,
+        "sojourn_max_ns": 0,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 338,
+        "device_id": 2,
+        "flow_id": "0",
+        "enqueued": 1162,
+        "dequeued": 1162,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 1162,
+        "sojourn_sum_ns": 0,
+        "sojourn_max_ns": 0,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 338,
+        "device_id": 5,
+        "flow_id": "",
+        "enqueued": 964,
+        "dequeued": 964,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 964,
+        "sojourn_sum_ns": 0,
+        "sojourn_max_ns": 0,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 357,
+        "device_id": 1,
+        "flow_id": "0",
+        "enqueued": 20393,
+        "dequeued": 20393,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 20393,
+        "sojourn_sum_ns": 8687975,
+        "sojourn_max_ns": 794,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 357,
+        "device_id": 4,
+        "flow_id": "",
+        "enqueued": 10697,
+        "dequeued": 10697,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 10697,
+        "sojourn_sum_ns": 0,
+        "sojourn_max_ns": 0,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 379,
+        "device_id": 1,
+        "flow_id": "0",
+        "enqueued": 20393,
+        "dequeued": 20393,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 20393,
+        "sojourn_sum_ns": 0,
+        "sojourn_max_ns": 0,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 379,
+        "device_id": 3,
+        "flow_id": "",
+        "enqueued": 10697,
+        "dequeued": 10697,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 10697,
+        "sojourn_sum_ns": 0,
+        "sojourn_max_ns": 0,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 380,
+        "device_id": 2,
+        "flow_id": "0",
+        "enqueued": 20393,
+        "dequeued": 20393,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 20393,
+        "sojourn_sum_ns": 0,
+        "sojourn_max_ns": 0,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 380,
+        "device_id": 3,
+        "flow_id": "",
+        "enqueued": 10697,
+        "dequeued": 10697,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 10697,
+        "sojourn_sum_ns": 0,
+        "sojourn_max_ns": 0,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 381,
+        "device_id": 2,
+        "flow_id": "0",
+        "enqueued": 20393,
+        "dequeued": 20393,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 20393,
+        "sojourn_sum_ns": 4183821491,
+        "sojourn_max_ns": 404359,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 381,
+        "device_id": 5,
+        "flow_id": "",
+        "enqueued": 10697,
+        "dequeued": 10697,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 10697,
+        "sojourn_sum_ns": 0,
+        "sojourn_max_ns": 0,
+        "pending": 0,
+        "valid": true
+      },
+      {
+        "node_id": 1584,
+        "device_id": 1,
+        "flow_id": "0",
+        "enqueued": 173048,
+        "dequeued": 173022,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 173022,
+        "sojourn_sum_ns": 7235833458721,
+        "sojourn_max_ns": 114682779,
+        "pending": 26,
+        "valid": true
+      },
+      {
+        "node_id": 1585,
+        "device_id": 1,
+        "flow_id": "",
+        "enqueued": 90177,
+        "dequeued": 90177,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 90177,
+        "sojourn_sum_ns": 0,
+        "sojourn_max_ns": 0,
+        "pending": 0,
+        "valid": true
+      }
+    ],
+    "qa": {
+      "manifest_hashes_verified": true,
+      "input_state_equal": false,
+      "exact_tc_drop_multiset": true,
+      "all_queue_conservation": true,
+      "tagged_tc_drops_match_sender_tx": true,
+      "source_runtime_unchanged": true,
+      "input_change_exactly_declared": true,
+      "pre75_prefix_exact": true,
+      "same_policy_schedule": true,
+      "same_patch_and_runtime": true
+    },
+    "source": {
+      "manifest_sha256": "d037677c8373378137248f612da9420c67f59097ade762ccc0a07255b1b8ca8d",
+      "patch_sha256": "f0e85cab5a351e67d95a80d098cf65cf509300f73077e27b2d35dd6cbaf3e301",
+      "launch_commit": "3767411cb0f154e7b40b7c098f9516f1c47fbc73",
+      "launch_analyzer_sha256": "9e13e7cc76943b6d8f1ec31e7d96681aad95ec678bc02b7497470ce7b4a81585",
+      "source_checkpoint": "3767411cb0f154e7b40b7c098f9516f1c47fbc73",
+      "input_files": {
+        "config_ns3.properties": {
+          "bytes": 603,
+          "sha256": "d6df7760c8851eaada741e6dcc605b55d269ba8ba2f37392c166e9fe08794e5a"
+        },
+        "schedule.csv": {
+          "bytes": 119,
+          "sha256": "c441ec9f73e726dcc20348d6c2fb2562401925fd26385a8c7ec8c45c9cf6c809"
+        }
+      },
+      "runtime_mapping_sha256": "fc3797810e41c1514841cba7a3440fad9aa1fa5b6b698b2a9aa550eaa102a821"
+    },
+    "caveats": [
+      "Device-stop, BQL-stop, literal-full occupancy and Queue drop callbacks are distinct.",
+      "TC rejection before enqueue can occur with zero Queue::DropBeforeEnqueue callbacks.",
+      "Sojourn is per served queue visit; it is not an end-to-end waiting-time sum.",
+      "Focus start/end rows hold the preceding state and do not add simulator events.",
+      "Natural pairs alone do not isolate routing causality.",
+      "Original selective forecast/policy schedule stays at T75; it is not reforecast to T78.",
+      "Both directional routes/link choices are retained until T78; the intervention is not pure RTT geometry.",
+      "Native GSLHelper uses one shared channel with no visibility/range gate; physical feasibility is not proved.",
+      "Input validation does not authorize the third simulation; independent and parent review are still required."
+    ]
+  },
+  "late_transition": {
+    "selective-natural": {
+      "start_ns": 77500000000,
+      "end_ns": 80500000000,
+      "app_bytes": 3608700,
+      "retx_packets": 0,
+      "recovery_entries": 0,
+      "loss_state_entries": 0,
+      "app_goodput_mbps": 9.6232,
+      "tc_drop_count": 0,
+      "tc_drop_rows": [],
+      "source_queue_visits": {
+        "enqueued": 2623,
+        "dequeued": 2615,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 2615,
+        "sojourn_sum_ns": 70574794703
+      },
+      "source_served_mean_ns": 26988449.21720841,
+      "source_served_max_ns": 28859739,
+      "source_time_weighted_occupancy": null,
+      "limit": "Exact occupancy trace ends at77.5; later visit waits use aligned100ms bins, and source occupancy is not inferred from flush snapshots."
+    },
+    "selective-route75-delayed78": {
+      "start_ns": 77500000000,
+      "end_ns": 80500000000,
+      "app_bytes": 3608700,
+      "recovery_entries": 0,
+      "loss_state_entries": 0,
+      "retx_packets": 0,
+      "app_goodput_mbps": 9.6232,
+      "tc_drop_count": 0,
+      "tc_drop_rows": [],
+      "source_queue_visits": {
+        "enqueued": 2622,
+        "dequeued": 2615,
+        "drop_before": 0,
+        "drop_after": 0,
+        "sojourn_samples": 2615,
+        "sojourn_sum_ns": 75524479236
+      },
+      "source_served_mean_ns": 28881254.00994264,
+      "source_served_max_ns": 31153792,
+      "source_time_weighted_occupancy": null,
+      "limit": "Exact occupancy trace ends at77.5; later visit waits use aligned100ms bins, and source occupancy is not inferred from flush snapshots."
+    }
+  },
+  "policy": {
+    "selective-natural": {
+      "full_run_event_counts": {
+        "EPOCH_REGISTER": 2,
+        "COHORT_WAIT_BEGIN": 1,
+        "COHORT_WAIT_CONTINUE": 5,
+        "ACK_MOVED_OUTSIDE_COHORT": 1,
+        "EPOCH_END": 1
+      },
+      "focus_event_counts": {
+        "EPOCH_REGISTER": 1,
+        "EPOCH_END": 1
+      },
+      "delayed_event_counts": {},
+      "wait_begin_count": 1,
+      "wait_rows": [
+        {
+          "flow_id": "0",
+          "time_ns": "26328788841",
+          "event": "COHORT_WAIT_BEGIN",
+          "epoch_ns": "26200000000",
+          "epoch_end_ns": "26395390816",
+          "seq": "29737621",
+          "cohort_lo": "29577541",
+          "cohort_hi": "29739001",
+          "last_sent_ns": "26197905233",
+          "sacked_pkts": "3",
+          "budget_pkts": "7",
+          "deadline_ns": "26335420359",
+          "dupacks": "0",
+          "lost_bytes": "0",
+          "pipe_bytes": "161460",
+          "cong_state": "0",
+          "threshold": "3"
+        },
+        {
+          "flow_id": "0",
+          "time_ns": "26328788841",
+          "event": "COHORT_WAIT_CONTINUE",
+          "epoch_ns": "26200000000",
+          "epoch_end_ns": "26395390816",
+          "seq": "29736241",
+          "cohort_lo": "29577541",
+          "cohort_hi": "29739001",
+          "last_sent_ns": "26197905233",
+          "sacked_pkts": "3",
+          "budget_pkts": "7",
+          "deadline_ns": "26335420359",
+          "dupacks": "0",
+          "lost_bytes": "0",
+          "pipe_bytes": "161460",
+          "cong_state": "0",
+          "threshold": "3"
+        },
+        {
+          "flow_id": "0",
+          "time_ns": "26328788841",
+          "event": "COHORT_WAIT_CONTINUE",
+          "epoch_ns": "26200000000",
+          "epoch_end_ns": "26395390816",
+          "seq": "29734861",
+          "cohort_lo": "29577541",
+          "cohort_hi": "29739001",
+          "last_sent_ns": "26195610854",
+          "sacked_pkts": "3",
+          "budget_pkts": "7",
+          "deadline_ns": "26335420359",
+          "dupacks": "0",
+          "lost_bytes": "0",
+          "pipe_bytes": "161460",
+          "cong_state": "0",
+          "threshold": "3"
+        },
+        {
+          "flow_id": "0",
+          "time_ns": "26331083235",
+          "event": "COHORT_WAIT_CONTINUE",
+          "epoch_ns": "26200000000",
+          "epoch_end_ns": "26395390816",
+          "seq": "29737621",
+          "cohort_lo": "29577541",
+          "cohort_hi": "29739001",
+          "last_sent_ns": "26197905233",
+          "sacked_pkts": "4",
+          "budget_pkts": "7",
+          "deadline_ns": "26335420359",
+          "dupacks": "0",
+          "lost_bytes": "0",
+          "pipe_bytes": "161460",
+          "cong_state": "0",
+          "threshold": "3"
+        },
+        {
+          "flow_id": "0",
+          "time_ns": "26331083235",
+          "event": "COHORT_WAIT_CONTINUE",
+          "epoch_ns": "26200000000",
+          "epoch_end_ns": "26395390816",
+          "seq": "29736241",
+          "cohort_lo": "29577541",
+          "cohort_hi": "29739001",
+          "last_sent_ns": "26197905233",
+          "sacked_pkts": "4",
+          "budget_pkts": "7",
+          "deadline_ns": "26335420359",
+          "dupacks": "0",
+          "lost_bytes": "0",
+          "pipe_bytes": "161460",
+          "cong_state": "0",
+          "threshold": "3"
+        },
+        {
+          "flow_id": "0",
+          "time_ns": "26333377623",
+          "event": "COHORT_WAIT_CONTINUE",
+          "epoch_ns": "26200000000",
+          "epoch_end_ns": "26395390816",
+          "seq": "29737621",
+          "cohort_lo": "29577541",
+          "cohort_hi": "29739001",
+          "last_sent_ns": "26197905233",
+          "sacked_pkts": "5",
+          "budget_pkts": "7",
+          "deadline_ns": "26335420359",
+          "dupacks": "0",
+          "lost_bytes": "0",
+          "pipe_bytes": "161460",
+          "cong_state": "0",
+          "threshold": "3"
+        }
+      ]
+    },
+    "selective-route75-delayed78": {
+      "full_run_event_counts": {
+        "EPOCH_REGISTER": 2,
+        "COHORT_WAIT_BEGIN": 1,
+        "COHORT_WAIT_CONTINUE": 5,
+        "ACK_MOVED_OUTSIDE_COHORT": 1,
+        "EPOCH_END": 1
+      },
+      "focus_event_counts": {
+        "EPOCH_REGISTER": 1,
+        "EPOCH_END": 1
+      },
+      "delayed_event_counts": {},
+      "wait_begin_count": 1,
+      "wait_rows": [
+        {
+          "flow_id": "0",
+          "time_ns": "26328788841",
+          "event": "COHORT_WAIT_BEGIN",
+          "epoch_ns": "26200000000",
+          "epoch_end_ns": "26395390816",
+          "seq": "29737621",
+          "cohort_lo": "29577541",
+          "cohort_hi": "29739001",
+          "last_sent_ns": "26197905233",
+          "sacked_pkts": "3",
+          "budget_pkts": "7",
+          "deadline_ns": "26335420359",
+          "dupacks": "0",
+          "lost_bytes": "0",
+          "pipe_bytes": "161460",
+          "cong_state": "0",
+          "threshold": "3"
+        },
+        {
+          "flow_id": "0",
+          "time_ns": "26328788841",
+          "event": "COHORT_WAIT_CONTINUE",
+          "epoch_ns": "26200000000",
+          "epoch_end_ns": "26395390816",
+          "seq": "29736241",
+          "cohort_lo": "29577541",
+          "cohort_hi": "29739001",
+          "last_sent_ns": "26197905233",
+          "sacked_pkts": "3",
+          "budget_pkts": "7",
+          "deadline_ns": "26335420359",
+          "dupacks": "0",
+          "lost_bytes": "0",
+          "pipe_bytes": "161460",
+          "cong_state": "0",
+          "threshold": "3"
+        },
+        {
+          "flow_id": "0",
+          "time_ns": "26328788841",
+          "event": "COHORT_WAIT_CONTINUE",
+          "epoch_ns": "26200000000",
+          "epoch_end_ns": "26395390816",
+          "seq": "29734861",
+          "cohort_lo": "29577541",
+          "cohort_hi": "29739001",
+          "last_sent_ns": "26195610854",
+          "sacked_pkts": "3",
+          "budget_pkts": "7",
+          "deadline_ns": "26335420359",
+          "dupacks": "0",
+          "lost_bytes": "0",
+          "pipe_bytes": "161460",
+          "cong_state": "0",
+          "threshold": "3"
+        },
+        {
+          "flow_id": "0",
+          "time_ns": "26331083235",
+          "event": "COHORT_WAIT_CONTINUE",
+          "epoch_ns": "26200000000",
+          "epoch_end_ns": "26395390816",
+          "seq": "29737621",
+          "cohort_lo": "29577541",
+          "cohort_hi": "29739001",
+          "last_sent_ns": "26197905233",
+          "sacked_pkts": "4",
+          "budget_pkts": "7",
+          "deadline_ns": "26335420359",
+          "dupacks": "0",
+          "lost_bytes": "0",
+          "pipe_bytes": "161460",
+          "cong_state": "0",
+          "threshold": "3"
+        },
+        {
+          "flow_id": "0",
+          "time_ns": "26331083235",
+          "event": "COHORT_WAIT_CONTINUE",
+          "epoch_ns": "26200000000",
+          "epoch_end_ns": "26395390816",
+          "seq": "29736241",
+          "cohort_lo": "29577541",
+          "cohort_hi": "29739001",
+          "last_sent_ns": "26197905233",
+          "sacked_pkts": "4",
+          "budget_pkts": "7",
+          "deadline_ns": "26335420359",
+          "dupacks": "0",
+          "lost_bytes": "0",
+          "pipe_bytes": "161460",
+          "cong_state": "0",
+          "threshold": "3"
+        },
+        {
+          "flow_id": "0",
+          "time_ns": "26333377623",
+          "event": "COHORT_WAIT_CONTINUE",
+          "epoch_ns": "26200000000",
+          "epoch_end_ns": "26395390816",
+          "seq": "29737621",
+          "cohort_lo": "29577541",
+          "cohort_hi": "29739001",
+          "last_sent_ns": "26197905233",
+          "sacked_pkts": "5",
+          "budget_pkts": "7",
+          "deadline_ns": "26335420359",
+          "dupacks": "0",
+          "lost_bytes": "0",
+          "pipe_bytes": "161460",
+          "cong_state": "0",
+          "threshold": "3"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "reviewer": "audit_research_handoff",
+  "scope": "Read-only final archive, source correspondence, evidence and report checks; no extra simulation.",
+  "zip_sha256": "695af4d2338576c6bfd84a6401521964368303bf735b46dd61005844f48e9595",
+  "bytes": 773756,
+  "members_rehashed": 54,
+  "candidate_equal_members_rehashed": 27,
+  "only_documented_top_level_analysis_adapters_changed": ["analyze.py", "merge.py"],
+  "controller_build_run_common_copied_inputs_and_lock_unchanged": true,
+  "no_git_logs_state_ns3_build_venv_preflight_aux_pycache": true,
+  "no_unsafe_archive_paths": true,
+  "root_and_code_readme_byte_equal": true,
+  "report_pdf_sha256": "3cd0da9394f0db36f30810a333c759932518e02a115f32b397845fb6a63cc770",
+  "report_pages": 5,
+  "authors_team_and_required_sections_checked": true,
+  "fresh_data_sha256": "2fe4ddb013c0bce29429e624fce18145dd8a9b6ddfc0f494b38dd27c90ef9df1",
+  "fresh_witness_sha256": "66ed61ba7f885fafe4fde97c2f12a75bb39e244557b15176ab3773f3a06c5ac4",
+  "fresh_plot_table_inputs_and_outputs_checked": true,
+  "standalone_commands_require_no_historical_logs_or_repository": true,
+  "physical_runs": 19,
+  "mapped_conditions": 22,
+  "publication_blockers": []
+}

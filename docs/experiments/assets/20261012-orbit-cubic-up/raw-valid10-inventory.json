@@ -1,0 +1,145 @@
+{
+  "case": "cubic10-observed200",
+  "execution_status": "success",
+  "eligible_for_performance_analysis": true,
+  "archive_path": "/tmp/orbit-cubic-up-valid10-20261012.tar.gz",
+  "archive_bytes": 13418032,
+  "archive_sha256": "34c840e67092bab00ce71f8889e95bbbe1bed5b8a2e17f8bc18b6fd9dd589400",
+  "file_count": 25,
+  "uncompressed_bytes": 67931080,
+  "every_decompressed_member_verified": true,
+  "files": [
+    {
+      "path": "cubic10-observed200/config_ns3.properties",
+      "bytes": 613,
+      "sha256": "8c46772c95c46ca99935dd68cf6957631972a2bb519acabe0880640408b0f4d4"
+    },
+    {
+      "path": "cubic10-observed200/console.txt",
+      "bytes": 6118,
+      "sha256": "da2497aaf98372a4b32210d7eab72c0bdca9353df328ac4c1d2dad8555ea9884"
+    },
+    {
+      "path": "cubic10-observed200/logs_ns3/finished.txt",
+      "bytes": 4,
+      "sha256": "927580bf287560d4a26a5d6e129f91ffa9cb63031b1a8c772be6ec584e65e82b"
+    },
+    {
+      "path": "cubic10-observed200/logs_ns3/orbit_coverage.csv",
+      "bytes": 1398438,
+      "sha256": "7785a349bbcd58d321430e5454d4e7193dfc4ed7766e00af84b503fa6bafef9c"
+    },
+    {
+      "path": "cubic10-observed200/logs_ns3/orbit_drops.csv",
+      "bytes": 45724,
+      "sha256": "393e461b8462fee285eb34675d5856f9bc676b3cbbb9712b584ba687e8c48fa3"
+    },
+    {
+      "path": "cubic10-observed200/logs_ns3/orbit_queue_bins.csv",
+      "bytes": 2917050,
+      "sha256": "5b5e0fc0b2aedcd887096afdbcb8dd1b9ff1316aab52923b924e3ecdc1e60876"
+    },
+    {
+      "path": "cubic10-observed200/logs_ns3/orbit_queue_pending.csv",
+      "bytes": 134,
+      "sha256": "baaf7b9d86e81abd7dd4f2d6923ace26485795da4b50fc802a3a89fb8f47c216"
+    },
+    {
+      "path": "cubic10-observed200/logs_ns3/orbit_service_bins.csv",
+      "bytes": 2712688,
+      "sha256": "35f0122d79ca8b9a768affb761c7298f3b356f0829092e25ce6eff3c165be43a"
+    },
+    {
+      "path": "cubic10-observed200/logs_ns3/orbit_service_coverage.csv",
+      "bytes": 289969,
+      "sha256": "102295605d325a6491f26c20a955d8fde2c96fa6aec15a166e8043f42510cdf8"
+    },
+    {
+      "path": "cubic10-observed200/logs_ns3/orbit_window.csv",
+      "bytes": 1050789,
+      "sha256": "df5a767ec7db3f296ec9e375e31e587faadda4b1d271453949f43026dc293c30"
+    },
+    {
+      "path": "cubic10-observed200/logs_ns3/study_app_rx_node_1585_port_1024.csv",
+      "bytes": 14466654,
+      "sha256": "63defbe5710bafaafec06b3021dfda3c8d2df2bad3bf78ce15b54c84d7bc451d"
+    },
+    {
+      "path": "cubic10-observed200/logs_ns3/study_drop_coverage.csv",
+      "bytes": 1140184,
+      "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+    },
+    {
+      "path": "cubic10-observed200/logs_ns3/study_drops.csv",
+      "bytes": 55405,
+      "sha256": "c915297632311402f8a2b1b4d6d24b83691f5971f40477934b2e2826887e6821"
+    },
+    {
+      "path": "cubic10-observed200/logs_ns3/study_rx_node_1585_port_1024.csv",
+      "bytes": 19448001,
+      "sha256": "445161a24e3c943e61518cc5c67ce72aecbae5c1bb2caaf6bd4f4ce451b2f1cf"
+    },
+    {
+      "path": "cubic10-observed200/logs_ns3/tcp_flow_0_cwnd.csv",
+      "bytes": 101682,
+      "sha256": "6651966bdd19d9cbcbcc99fb18ec854f152de7e81ed93e075e8baa5d09599860"
+    },
+    {
+      "path": "cubic10-observed200/logs_ns3/tcp_flow_0_progress.csv",
+      "bytes": 1994572,
+      "sha256": "2a9181e6a8a5bf7e1c25b8a770096f43714ec03779e7d7ccd2673b9992339534"
+    },
+    {
+      "path": "cubic10-observed200/logs_ns3/tcp_flow_0_rtt.csv",
+      "bytes": 2029939,
+      "sha256": "b959d51947cf5f8d37d672ef2a239c942b8b57e9f3d574ce2f7624de42ab1e38"
+    },
+    {
+      "path": "cubic10-observed200/logs_ns3/tcp_flow_0_study_events.csv",
+      "bytes": 5534,
+      "sha256": "8809b380277e387dcc400a5d27a5679ccbdf446a08c7efb06fa7a021a42df78b"
+    },
+    {
+      "path": "cubic10-observed200/logs_ns3/tcp_flow_0_study_packets.csv",
+      "bytes": 19842749,
+      "sha256": "78fc54184c4481b1421d2139870debcbe72259c18ccb011ba180ef77784e146f"
+    },
+    {
+      "path": "cubic10-observed200/logs_ns3/tcp_flows.csv",
+      "bytes": 75,
+      "sha256": "709ed6139c27b6b511fb5d5f9f754342c493d3d5ab3ad0cfc2e9b97d1d1b9404"
+    },
+    {
+      "path": "cubic10-observed200/logs_ns3/tcp_flows.txt",
+      "bytes": 336,
+      "sha256": "69fd39585ba9507d66f14951e4e5b81f21930b099c5608eef996519083cf2758"
+    },
+    {
+      "path": "cubic10-observed200/logs_ns3/timing_results.csv",
+      "bytes": 563,
+      "sha256": "417152197e3d037801fe184a6d68b7ebbd4822e7ea8a78a911e6f6369fc84d48"
+    },
+    {
+      "path": "cubic10-observed200/logs_ns3/timing_results.txt",
+      "bytes": 909,
+      "sha256": "2b09198121f04fd1ac30081484f4c4850712f82a1e1de46ed066a27fe17463e8"
+    },
+    {
+      "path": "cubic10-observed200/manifest.json",
+      "bytes": 422921,
+      "sha256": "3f20fa4ad6b2782c0e316eefc0002cad5d530a23dd47ff506c44a9ae0b0d1ccf"
+    },
+    {
+      "path": "cubic10-observed200/schedule.csv",
+      "bytes": 29,
+      "sha256": "e6cde3aa7716856e46d24c3833354df90407313ece13a5ffbd1b789fa4fea23c"
+    }
+  ],
+  "exclusions": [
+    "No generated constellation state, ns-3 source, runtime binaries or build directories."
+  ],
+  "limits": [
+    "A preserved timeout archive is a failed attempt, not a completed 200-second result.",
+    "No independently repeated simulation was performed by this archive operation."
+  ]
+}

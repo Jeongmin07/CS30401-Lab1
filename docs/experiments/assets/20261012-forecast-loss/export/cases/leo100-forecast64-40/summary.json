@@ -1,0 +1,423 @@
+{
+  "analysis_parameters": {
+    "bin_s": 0.1,
+    "event_after_s": 2.0,
+    "event_before_s": 0.5,
+    "maximum_case_samples": 100,
+    "maximum_evidence_rows_per_sample": 12,
+    "root_queue_disc_absence_independently_audited": false,
+    "tx_identity_retention_s": 10.0
+  },
+  "controller": {
+    "actual_high_threshold_intervals": [
+      {
+        "censored": false,
+        "duration_s": 0.195396,
+        "end_event": "THRESHOLD_RESTORE",
+        "end_ns": 26395396000,
+        "start_ns": 26200000000,
+        "threshold": 64
+      }
+    ],
+    "bounded_restore_declared": true,
+    "event_counts": {
+      "BOUNDED_EXPIRY_REEVALUATE": 1,
+      "THRESHOLD_INIT": 1,
+      "THRESHOLD_RESTORE": 1,
+      "THRESHOLD_SET": 1
+    },
+    "events": [
+      {
+        "cong_state": 0,
+        "event": "THRESHOLD_INIT",
+        "flow_id": 0,
+        "new_value": 3,
+        "old_value": 3,
+        "threshold": 3,
+        "time_ns": 0
+      },
+      {
+        "cong_state": 0,
+        "event": "THRESHOLD_SET",
+        "flow_id": 0,
+        "new_value": 64,
+        "old_value": 3,
+        "threshold": 64,
+        "time_ns": 26200000000
+      },
+      {
+        "cong_state": 0,
+        "event": "THRESHOLD_RESTORE",
+        "flow_id": 0,
+        "new_value": 3,
+        "old_value": 64,
+        "threshold": 3,
+        "time_ns": 26395396000
+      },
+      {
+        "cong_state": 0,
+        "event": "BOUNDED_EXPIRY_REEVALUATE",
+        "flow_id": 0,
+        "new_value": 0,
+        "old_value": 0,
+        "threshold": 3,
+        "time_ns": 26395396000
+      }
+    ],
+    "requested_windows_ns": [
+      [
+        26200000000,
+        26395396000
+      ]
+    ]
+  },
+  "drop_coverage": {
+    "absence_of_drop_inference": "listed hooks connected with matching IPv4/TcDrop node coverage",
+    "available": true,
+    "connected": 50704,
+    "devices_without_root_queue_disc_absence_check": [],
+    "devices_without_root_queue_disc_absence_check_count": 0,
+    "ipv4_nodes_without_traffic_control_drop_hook": [],
+    "layer_entries": {
+      "DropAfterDequeue": 7922,
+      "DropBeforeEnqueue": 7922,
+      "MacTxDrop": 7922,
+      "PhyRxDrop": 7922,
+      "PhyTxDrop": 7922,
+      "TcDrop": 1586,
+      "ipv4": 1586,
+      "root_queue_disc_absent": 7922
+    },
+    "not_connected": [],
+    "qualification": "Manifest coverage is not an independent audit of every loss path.",
+    "root_queue_disc_absence_coverage_complete": true,
+    "traffic_control_drop_hook_present": true,
+    "traffic_control_node_coverage_complete": true
+  },
+  "drop_rows_by_layer": {
+    "TcDrop": 273
+  },
+  "drop_rows_without_usable_transmission_tag": 0,
+  "flow": {
+    "counts": {
+      "ack_rows_with_sack": 12846,
+      "application_delivered_bytes": 472552020,
+      "drop_trace_rows": 273,
+      "official_retransmission_rows": 273,
+      "out_of_order_payload_rows": 12544,
+      "overlapping_sequence_tx_rows": 273,
+      "recovery_state_entries": 4,
+      "repeated_cumulative_ack_rows": 12543,
+      "sender_new_sequence_bytes": 474166620,
+      "sender_payload_tx_bytes": 474543360,
+      "wire_payload_rx_bytes": 472552020,
+      "wire_unique_sequence_bytes": 472552020
+    },
+    "distinct_tagged_transmissions_dropped": 273,
+    "drop_case_samples_truncated": true,
+    "drop_sample_selection": "First example per observed drop layer, then chronological rows to sample cap.",
+    "drop_trace_row_cases_total": 273,
+    "first_receiver_application_delivery_time_s": 0.149087845,
+    "gap_case_samples_truncated": true,
+    "gap_cases_total": 131,
+    "gap_classifications": {
+      "gap_with_observed_actual_drop": 97,
+      "original_eventually_arrived_after_reordering": 34
+    },
+    "initial_retransmission_threshold": 3,
+    "last_receiver_application_delivery_time_s": 39.999974971,
+    "receiver_application_goodput_mbps": 94.510404,
+    "resolved_gap_tag_cache_misses": 0,
+    "restore_deadlines_missed": 0,
+    "restore_deferrals": 0,
+    "smoothed_rtt": {
+      "covered_duration_s": 39.901418529,
+      "maximum_ms": 214.632055,
+      "minimum_ms": 98.0,
+      "p50_ms": 182.320635,
+      "p95_ms": 210.131866,
+      "p99_ms": 214.29596,
+      "qualification": "Smoothed sender RTT held between trace changes; excludes initial unknown/zero SRTT; not raw packet RTT or isolated queueing delay.",
+      "time_weighted_mean_ms": 180.84604311907705,
+      "trace_rows": 158274
+    },
+    "unfinished_recovery_start_ns": null,
+    "wire_unique_payload_rate_mbps": 94.510404
+  },
+  "limitations": [
+    "Path-truth propagation RTT includes both directions; RTT decreases alone do not prove forward-path overtaking.",
+    "Repeated cumulative ACKs are observations, not an independent reconstruction of every duplicate-ACK predicate.",
+    "Exact tx_id tags, not packet UIDs, identify transmission instances; joins are retained for a bounded time.",
+    "Candidate unnecessary recovery associates a sequence gap, ACK evidence, retransmission and eventual original delivery; controlled comparisons are still needed for a causal performance claim.",
+    "LOSS state is reported directly and is not automatically called an RTO without a dedicated timer trace.",
+    "Drop trace rows can duplicate one physical loss; distinct tagged transmission counts and per-layer counts are separate.",
+    "No observed drop is not proof of no drop when coverage or packet parsing is incomplete.",
+    "Traffic-control TcDrop coverage is required before excluding network loss; pre-v3 coverage can omit this path.",
+    "Root queue-disc absence must be verified per device or explicitly independently audited; TcDrop does not observe a root queue-disc's own losses.",
+    "Receiver TCP window rejection and PAWS/input discards are not covered by queue/IP/device/traffic-control hooks.",
+    "Pre-processing wire Rx does not prove acceptance: a gap fill requires subsequent expected_seq advancement or same-time application delivery.",
+    "Application HandleRead bytes are ordered unique delivery; wire interval union is a separate metric.",
+    "Sequence epochs assume adjacent relevant sequence references differ by less than 2^31 bytes.",
+    "Static and dynamic path controls, actual loss tests and deployment-information errors remain separate experimental requirements.",
+    "CA_LOSS is not independently identified as an RTO; FCT is reported only when receiver delivery equals positive MaxBytes.",
+    "High-threshold intervals come from actual setters; requested window ends alone do not prove restoration.",
+    "Source/binary hashes in the copied execution manifest are declarations, not independently rebuilt validation."
+  ],
+  "metrics": {
+    "actual_high_threshold_time_s": 0.195396,
+    "bounded_expiry_reevaluations": 1,
+    "ca_loss_entries": 0,
+    "case": "leo100-forecast64-40",
+    "censored_high_threshold_intervals": 0,
+    "distinct_tagged_drops": 273,
+    "drop_trace_rows": 273,
+    "duration_s": 40.0,
+    "expected_finite_bytes": null,
+    "expiry_entered_recovery": 0,
+    "fct_s": null,
+    "flow_start_s": 0.0,
+    "guard_start_skips": 0,
+    "guard_starts": 1,
+    "receiver_bytes": 472552020,
+    "receiver_goodput_mbps": 94.510404,
+    "recovery_entries": 4,
+    "retransmissions": 273,
+    "transfer_complete": null
+  },
+  "omissions": {
+    "drop_case_samples": 100,
+    "gap_case_samples": 100,
+    "receiver_application_bins": 400,
+    "recovery_periods": 4
+  },
+  "path_event_windows": [
+    {
+      "flows": {
+        "0": {
+          "application_delivered_bytes": 30071580,
+          "receiver_application_goodput_mbps": 96.22905599999999,
+          "sender_new_sequence_bytes": 30491100,
+          "sender_payload_tx_bytes": 30491100,
+          "wire_payload_rx_bytes": 30071580,
+          "wire_unique_sequence_bytes": 30071580
+        }
+      },
+      "forward_path_changed": true,
+      "rtt_change_ms": 0.001,
+      "time_s": 2.4,
+      "window_end_s": 4.4,
+      "window_start_s": 1.9
+    },
+    {
+      "flows": {
+        "0": {
+          "ack_rows_with_sack": 67,
+          "application_delivered_bytes": 30072960,
+          "original_eventually_arrived_after_reordering": 34,
+          "out_of_order_payload_rows": 34,
+          "receiver_application_goodput_mbps": 96.233472,
+          "repeated_cumulative_ack_rows": 33,
+          "sender_new_sequence_bytes": 30397260,
+          "sender_payload_tx_bytes": 30397260,
+          "wire_payload_rx_bytes": 30072960,
+          "wire_unique_sequence_bytes": 30072960
+        }
+      },
+      "forward_path_changed": true,
+      "rtt_change_ms": -6.634,
+      "time_s": 26.2,
+      "window_end_s": 28.2,
+      "window_start_s": 25.7
+    }
+  ],
+  "provenance": {
+    "analysis_inputs": [
+      {
+        "kind": "sender",
+        "path": "/tmp/predict-loss/leo100-forecast64-40/logs_ns3/tcp_flow_0_study_packets.csv"
+      },
+      {
+        "kind": "drop",
+        "path": "/tmp/predict-loss/leo100-forecast64-40/logs_ns3/study_drops.csv"
+      },
+      {
+        "kind": "receiver",
+        "path": "/tmp/predict-loss/leo100-forecast64-40/logs_ns3/study_rx_node_1585_port_1024.csv"
+      },
+      {
+        "kind": "app",
+        "path": "/tmp/predict-loss/leo100-forecast64-40/logs_ns3/study_app_rx_node_1585_port_1024.csv"
+      },
+      {
+        "kind": "state",
+        "path": "/tmp/predict-loss/leo100-forecast64-40/logs_ns3/tcp_flow_0_study_events.csv"
+      }
+    ],
+    "checked_settings": [
+      {
+        "bytes": 616,
+        "path": "/tmp/predict-loss/leo100-forecast64-40/config_ns3.properties",
+        "sha256": "53b8c3d65cce756d8d6308a707197881ab0bdf1d6c38a2afbd96e528344b19f1"
+      },
+      {
+        "bytes": 109,
+        "path": "/tmp/predict-loss/leo100-forecast64-40/schedule.csv",
+        "sha256": "9b5611f61b06fc83db8568c3a15cebd24dfc78cd2d9d46abb9d2e61f067b9bc2"
+      }
+    ],
+    "full_analysis": {
+      "bytes": 555727,
+      "path": "/tmp/predict-loss/leo100-forecast64-40/analysis.json",
+      "sha256": "fb6969b38ce2773feec564c256ee3aad634ca40cd3361a10105065ea5fb262b5"
+    },
+    "manifest": {
+      "bytes": 420454,
+      "path": "/tmp/predict-loss/leo100-forecast64-40/manifest.json",
+      "sha256": "d0e10e61a823b49072d1833935010b14adb0f5e367dd6f2f0654afb1f0c4b2ba"
+    },
+    "raw_inputs": [
+      {
+        "bytes": 28760320,
+        "path": "/tmp/predict-loss/leo100-forecast64-40/logs_ns3/study_app_rx_node_1585_port_1024.csv",
+        "sha256": "86d82d5525e19b2ba74b077af877d4cdb523fa448742526b8642e35d10f5aaf7"
+      },
+      {
+        "bytes": 1140184,
+        "path": "/tmp/predict-loss/leo100-forecast64-40/logs_ns3/study_drop_coverage.csv",
+        "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+      },
+      {
+        "bytes": 29765,
+        "path": "/tmp/predict-loss/leo100-forecast64-40/logs_ns3/study_drops.csv",
+        "sha256": "21caa483c6bdc313563e466f17f3a102358d0f4c2a0c3505a740a5844851bc72"
+      },
+      {
+        "bytes": 38446020,
+        "path": "/tmp/predict-loss/leo100-forecast64-40/logs_ns3/study_rx_node_1585_port_1024.csv",
+        "sha256": "17daf7d2b5d0363b84d4933d9ad504fb8f08912389f6b73ad96b3bb316939bdd"
+      },
+      {
+        "bytes": 106453,
+        "path": "/tmp/predict-loss/leo100-forecast64-40/logs_ns3/tcp_flow_0_cwnd.csv",
+        "sha256": "4fc18d64fdd7b3f3e3b73a2fa86f26f5b1dfaeccf3309f245921b76956128df0"
+      },
+      {
+        "bytes": 3883276,
+        "path": "/tmp/predict-loss/leo100-forecast64-40/logs_ns3/tcp_flow_0_progress.csv",
+        "sha256": "d2ae2801596a7ed1713fc90433082a4187c5ad4aecce2d042d2aa40d086945d7"
+      },
+      {
+        "bytes": 3760461,
+        "path": "/tmp/predict-loss/leo100-forecast64-40/logs_ns3/tcp_flow_0_rtt.csv",
+        "sha256": "18573d7074270ca49695488a8677d21074cc2bc82cf6affe3981395a02b41dbf"
+      },
+      {
+        "bytes": 2647,
+        "path": "/tmp/predict-loss/leo100-forecast64-40/logs_ns3/tcp_flow_0_study_events.csv",
+        "sha256": "e9a2d8736becba78d8c10356a46797a1df162dbbeabd64d531d94088d8880902"
+      },
+      {
+        "bytes": 38894594,
+        "path": "/tmp/predict-loss/leo100-forecast64-40/logs_ns3/tcp_flow_0_study_packets.csv",
+        "sha256": "0a6529335e361e52c5a8c622c74f9f4a4dbef70e9eb4c3154108b73ac963eb9e"
+      },
+      {
+        "bytes": 73,
+        "path": "/tmp/predict-loss/leo100-forecast64-40/logs_ns3/tcp_flows.csv",
+        "sha256": "ebc5bc0871c9cc01a9f8a5c06cbf50d5549cb178054455f279ad1c803351f9ef"
+      },
+      {
+        "bytes": 561,
+        "path": "/tmp/predict-loss/leo100-forecast64-40/logs_ns3/timing_results.csv",
+        "sha256": "4ff21b814751a6764c82bcd458240b508de7f8edea486cc79b32fc6bef6fea25"
+      }
+    ],
+    "verified_execution_outputs": [
+      {
+        "bytes": 616,
+        "path": "/tmp/predict-loss/leo100-forecast64-40/config_ns3.properties",
+        "sha256": "53b8c3d65cce756d8d6308a707197881ab0bdf1d6c38a2afbd96e528344b19f1"
+      },
+      {
+        "bytes": 6447,
+        "path": "/tmp/predict-loss/leo100-forecast64-40/console.txt",
+        "sha256": "d150ab146b86ac58f288802c404f153403afd607bfc4821a0cea8c6d0d9f5eb5"
+      },
+      {
+        "bytes": 4,
+        "path": "/tmp/predict-loss/leo100-forecast64-40/logs_ns3/finished.txt",
+        "sha256": "927580bf287560d4a26a5d6e129f91ffa9cb63031b1a8c772be6ec584e65e82b"
+      },
+      {
+        "bytes": 28760320,
+        "path": "/tmp/predict-loss/leo100-forecast64-40/logs_ns3/study_app_rx_node_1585_port_1024.csv",
+        "sha256": "86d82d5525e19b2ba74b077af877d4cdb523fa448742526b8642e35d10f5aaf7"
+      },
+      {
+        "bytes": 1140184,
+        "path": "/tmp/predict-loss/leo100-forecast64-40/logs_ns3/study_drop_coverage.csv",
+        "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+      },
+      {
+        "bytes": 29765,
+        "path": "/tmp/predict-loss/leo100-forecast64-40/logs_ns3/study_drops.csv",
+        "sha256": "21caa483c6bdc313563e466f17f3a102358d0f4c2a0c3505a740a5844851bc72"
+      },
+      {
+        "bytes": 38446020,
+        "path": "/tmp/predict-loss/leo100-forecast64-40/logs_ns3/study_rx_node_1585_port_1024.csv",
+        "sha256": "17daf7d2b5d0363b84d4933d9ad504fb8f08912389f6b73ad96b3bb316939bdd"
+      },
+      {
+        "bytes": 106453,
+        "path": "/tmp/predict-loss/leo100-forecast64-40/logs_ns3/tcp_flow_0_cwnd.csv",
+        "sha256": "4fc18d64fdd7b3f3e3b73a2fa86f26f5b1dfaeccf3309f245921b76956128df0"
+      },
+      {
+        "bytes": 3883276,
+        "path": "/tmp/predict-loss/leo100-forecast64-40/logs_ns3/tcp_flow_0_progress.csv",
+        "sha256": "d2ae2801596a7ed1713fc90433082a4187c5ad4aecce2d042d2aa40d086945d7"
+      },
+      {
+        "bytes": 3760461,
+        "path": "/tmp/predict-loss/leo100-forecast64-40/logs_ns3/tcp_flow_0_rtt.csv",
+        "sha256": "18573d7074270ca49695488a8677d21074cc2bc82cf6affe3981395a02b41dbf"
+      },
+      {
+        "bytes": 2647,
+        "path": "/tmp/predict-loss/leo100-forecast64-40/logs_ns3/tcp_flow_0_study_events.csv",
+        "sha256": "e9a2d8736becba78d8c10356a46797a1df162dbbeabd64d531d94088d8880902"
+      },
+      {
+        "bytes": 38894594,
+        "path": "/tmp/predict-loss/leo100-forecast64-40/logs_ns3/tcp_flow_0_study_packets.csv",
+        "sha256": "0a6529335e361e52c5a8c622c74f9f4a4dbef70e9eb4c3154108b73ac963eb9e"
+      },
+      {
+        "bytes": 73,
+        "path": "/tmp/predict-loss/leo100-forecast64-40/logs_ns3/tcp_flows.csv",
+        "sha256": "ebc5bc0871c9cc01a9f8a5c06cbf50d5549cb178054455f279ad1c803351f9ef"
+      },
+      {
+        "bytes": 336,
+        "path": "/tmp/predict-loss/leo100-forecast64-40/logs_ns3/tcp_flows.txt",
+        "sha256": "e336461939f76bca5125a9cf5175d4083254adacc04c423dac5df81c1970d453"
+      },
+      {
+        "bytes": 561,
+        "path": "/tmp/predict-loss/leo100-forecast64-40/logs_ns3/timing_results.csv",
+        "sha256": "4ff21b814751a6764c82bcd458240b508de7f8edea486cc79b32fc6bef6fea25"
+      },
+      {
+        "bytes": 909,
+        "path": "/tmp/predict-loss/leo100-forecast64-40/logs_ns3/timing_results.txt",
+        "sha256": "930c4deae9eae1d1249990ebe3bf9d54817a5c1f677111ad528d832bda6cc048"
+      },
+      {
+        "bytes": 109,
+        "path": "/tmp/predict-loss/leo100-forecast64-40/schedule.csv",
+        "sha256": "9b5611f61b06fc83db8568c3a15cebd24dfc78cd2d9d46abb9d2e61f067b9bc2"
+      }
+    ]
+  }
+}

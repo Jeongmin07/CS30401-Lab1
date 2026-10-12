@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "tag": "orbit-followups-20261012",
+  "url": "https://github.com/Jeongmin07/CS30401-Lab1/releases/tag/orbit-followups-20261012",
+  "is_prerelease": true,
+  "release_target_commit": "730ea20936dd668c914c3ad3689231104134b592",
+  "final_loss_execution_source_checkpoint": "730ea20936dd668c914c3ad3689231104134b592",
+  "verified_at_utc": "2026-10-12T14:53:55.833552+00:00",
+  "attempts": 11,
+  "successful_program_runs": 10,
+  "successful_passive_observations_shared_between_two_candidates": 1,
+  "performance_excluded_timeout_attempts": 1,
+  "successful_preliminary_v1_micro_attempts": 2,
+  "successful_final_v2_comparison_conditions": 7,
+  "new_active_cubic_up_or_down_policy_runs": 0,
+  "compressed_bytes": 148116200,
+  "assets": [
+    {
+      "name": "orbit-cubic-up-excluded100-20261012.tar.gz",
+      "bytes": 83955929,
+      "sha256": "0b5cfdff1a6dfbdc7bb8cc4df63c7a1b904fae791c3579d316c90a03e4e1ebf6",
+      "github_digest": "sha256:0b5cfdff1a6dfbdc7bb8cc4df63c7a1b904fae791c3579d316c90a03e4e1ebf6",
+      "github_asset_id": 634083968,
+      "url": "https://github.com/Jeongmin07/CS30401-Lab1/releases/download/orbit-followups-20261012/orbit-cubic-up-excluded100-20261012.tar.gz",
+      "size_and_sha_match": true
+    },
+    {
+      "name": "orbit-cubic-up-valid10-20261012.tar.gz",
+      "bytes": 13418032,
+      "sha256": "34c840e67092bab00ce71f8889e95bbbe1bed5b8a2e17f8bc18b6fd9dd589400",
+      "github_digest": "sha256:34c840e67092bab00ce71f8889e95bbbe1bed5b8a2e17f8bc18b6fd9dd589400",
+      "github_asset_id": 634083967,
+      "url": "https://github.com/Jeongmin07/CS30401-Lab1/releases/download/orbit-followups-20261012/orbit-cubic-up-valid10-20261012.tar.gz",
+      "size_and_sha_match": true
+    },
+    {
+      "name": "orbit-loss-v1-20261012.tar.gz",
+      "bytes": 18021,
+      "sha256": "ba8f232d78e7ad5754a3db208ebd01fb5c80ea2709c1e748ba60474e82d8f0d0",
+      "github_digest": "sha256:ba8f232d78e7ad5754a3db208ebd01fb5c80ea2709c1e748ba60474e82d8f0d0",
+      "github_asset_id": 634083969,
+      "url": "https://github.com/Jeongmin07/CS30401-Lab1/releases/download/orbit-followups-20261012/orbit-loss-v1-20261012.tar.gz",
+      "size_and_sha_match": true
+    },
+    {
+      "name": "orbit-loss-v2-20261012.tar.gz",
+      "bytes": 50724218,
+      "sha256": "8d1a13d1eefc2f60c0d013276a8587828348c34dad586a36987e358d2587fccc",
+      "github_digest": "sha256:8d1a13d1eefc2f60c0d013276a8587828348c34dad586a36987e358d2587fccc",
+      "github_asset_id": 634083972,
+      "url": "https://github.com/Jeongmin07/CS30401-Lab1/releases/download/orbit-followups-20261012/orbit-loss-v2-20261012.tar.gz",
+      "size_and_sha_match": true
+    }
+  ],
+  "verification": "Local archive SHA256/size matches fresh GitHub API asset digest/size for all four assets. Per-member checks are recorded in each track inventory.",
+  "limits": [
+    "No new download roundtrip.",
+    "No independent whole-matrix replay or statistical repetition.",
+    "V1 preliminary attempts are not added to final V2 comparisons.",
+    "Timeout bytes preserve provenance and partial output only, not completed performance results."
+  ]
+}

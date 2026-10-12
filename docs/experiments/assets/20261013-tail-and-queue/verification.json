@@ -1,0 +1,766 @@
+{
+  "schema_version": 1,
+  "checked_commit": "86c61b0164cd61f0e2d413fd0b398e0abcf22a77",
+  "baseline_commit": "184fc71ff19812d92c469db27445c0b078559d3c",
+  "changed_paths": [
+    ".gitattributes",
+    "README.md",
+    "code/orbit-queue/README.md",
+    "code/orbit-queue/analyze.py",
+    "code/orbit-queue/analyze_cf.py",
+    "code/orbit-queue/archive.py",
+    "code/orbit-queue/build-ready.json",
+    "code/orbit-queue/build.py",
+    "code/orbit-queue/delay_route.py",
+    "code/orbit-queue/flow_observer.h",
+    "code/orbit-queue/install.py",
+    "code/orbit-queue/ns3.patch",
+    "code/orbit-queue/queue_observer.h",
+    "code/orbit-queue/reference-receipt.json",
+    "code/orbit-queue/run.py",
+    "code/orbit-queue/run_cf.py",
+    "code/orbit-queue/service_observer.h",
+    "code/orbit-tail/.gitattributes",
+    "code/orbit-tail/README.md",
+    "code/orbit-tail/analyze.py",
+    "code/orbit-tail/archive.py",
+    "code/orbit-tail/build-ready-development.json",
+    "code/orbit-tail/build-ready.json",
+    "code/orbit-tail/build.py",
+    "code/orbit-tail/compare-at-launch.py",
+    "code/orbit-tail/compare.py",
+    "code/orbit-tail/install-receipt.json",
+    "code/orbit-tail/install.py",
+    "code/orbit-tail/ns3.patch",
+    "code/orbit-tail/run.py",
+    "docs/experiments/20261013-orbit-queue.md",
+    "docs/experiments/20261013-orbit-tail.md",
+    "docs/experiments/20261013-tail-and-queue.md",
+    "docs/experiments/assets/20261013-orbit-queue/counterfactual-raw-inventory.json",
+    "docs/experiments/assets/20261013-orbit-queue/counterfactual.json",
+    "docs/experiments/assets/20261013-orbit-queue/environment.json",
+    "docs/experiments/assets/20261013-orbit-queue/final-build-log.txt",
+    "docs/experiments/assets/20261013-orbit-queue/natural-pair.json",
+    "docs/experiments/assets/20261013-orbit-queue/natural-raw-inventory.json",
+    "docs/experiments/assets/20261013-orbit-queue/phases.json",
+    "docs/experiments/assets/20261013-orbit-queue/route-delay-input.json",
+    "docs/experiments/assets/20261013-orbit-queue/routing-delta/fstate_75000000000.txt",
+    "docs/experiments/assets/20261013-orbit-queue/routing-delta/fstate_78000000000.txt",
+    "docs/experiments/assets/20261013-orbit-queue/routing-replacements.json",
+    "docs/experiments/assets/20261013-orbit-tail/.gitattributes",
+    "docs/experiments/assets/20261013-orbit-tail/comparison.json",
+    "docs/experiments/assets/20261013-orbit-tail/development-before-ordinary-guard/build-log.txt",
+    "docs/experiments/assets/20261013-orbit-tail/development-before-ordinary-guard/build-ready.json",
+    "docs/experiments/assets/20261013-orbit-tail/development-before-ordinary-guard/install-receipt.json",
+    "docs/experiments/assets/20261013-orbit-tail/development-before-ordinary-guard/ns3.patch",
+    "docs/experiments/assets/20261013-orbit-tail/environment.json",
+    "docs/experiments/assets/20261013-orbit-tail/final-build-log.txt",
+    "docs/experiments/assets/20261013-orbit-tail/final/cases/leo10-base/config_ns3.properties",
+    "docs/experiments/assets/20261013-orbit-tail/final/cases/leo10-base/manifest.json",
+    "docs/experiments/assets/20261013-orbit-tail/final/cases/leo10-base/schedule.csv",
+    "docs/experiments/assets/20261013-orbit-tail/final/cases/leo10-base/summary.json",
+    "docs/experiments/assets/20261013-orbit-tail/final/cases/leo10-drop-base/config_ns3.properties",
+    "docs/experiments/assets/20261013-orbit-tail/final/cases/leo10-drop-base/manifest.json",
+    "docs/experiments/assets/20261013-orbit-tail/final/cases/leo10-drop-base/orbit_actual_drop.csv",
+    "docs/experiments/assets/20261013-orbit-tail/final/cases/leo10-drop-base/orbit_drop_install.csv",
+    "docs/experiments/assets/20261013-orbit-tail/final/cases/leo10-drop-base/schedule.csv",
+    "docs/experiments/assets/20261013-orbit-tail/final/cases/leo10-drop-base/summary.json",
+    "docs/experiments/assets/20261013-orbit-tail/final/cases/leo10-drop-tail/config_ns3.properties",
+    "docs/experiments/assets/20261013-orbit-tail/final/cases/leo10-drop-tail/manifest.json",
+    "docs/experiments/assets/20261013-orbit-tail/final/cases/leo10-drop-tail/orbit_actual_drop.csv",
+    "docs/experiments/assets/20261013-orbit-tail/final/cases/leo10-drop-tail/orbit_drop_install.csv",
+    "docs/experiments/assets/20261013-orbit-tail/final/cases/leo10-drop-tail/schedule.csv",
+    "docs/experiments/assets/20261013-orbit-tail/final/cases/leo10-drop-tail/summary.json",
+    "docs/experiments/assets/20261013-orbit-tail/final/cases/leo10-drop-tail/tcp_flow_0_orbit_loss.csv",
+    "docs/experiments/assets/20261013-orbit-tail/final/cases/leo10-drop-tail/tcp_flow_0_orbit_loss_tail.csv",
+    "docs/experiments/assets/20261013-orbit-tail/final/cases/leo10-selective/config_ns3.properties",
+    "docs/experiments/assets/20261013-orbit-tail/final/cases/leo10-selective/manifest.json",
+    "docs/experiments/assets/20261013-orbit-tail/final/cases/leo10-selective/schedule.csv",
+    "docs/experiments/assets/20261013-orbit-tail/final/cases/leo10-selective/summary.json",
+    "docs/experiments/assets/20261013-orbit-tail/final/cases/leo10-selective/tcp_flow_0_orbit_loss.csv",
+    "docs/experiments/assets/20261013-orbit-tail/final/cases/leo10-selective/tcp_flow_0_orbit_loss_tail.csv",
+    "docs/experiments/assets/20261013-orbit-tail/final/cases/leo10-tail/config_ns3.properties",
+    "docs/experiments/assets/20261013-orbit-tail/final/cases/leo10-tail/manifest.json",
+    "docs/experiments/assets/20261013-orbit-tail/final/cases/leo10-tail/schedule.csv",
+    "docs/experiments/assets/20261013-orbit-tail/final/cases/leo10-tail/summary.json",
+    "docs/experiments/assets/20261013-orbit-tail/final/cases/leo10-tail/tcp_flow_0_orbit_loss.csv",
+    "docs/experiments/assets/20261013-orbit-tail/final/cases/leo10-tail/tcp_flow_0_orbit_loss_tail.csv",
+    "docs/experiments/assets/20261013-orbit-tail/final/cases/micro-base/config_ns3.properties",
+    "docs/experiments/assets/20261013-orbit-tail/final/cases/micro-base/manifest.json",
+    "docs/experiments/assets/20261013-orbit-tail/final/cases/micro-base/summary.json",
+    "docs/experiments/assets/20261013-orbit-tail/final/cases/micro-selective/config_ns3.properties",
+    "docs/experiments/assets/20261013-orbit-tail/final/cases/micro-selective/manifest.json",
+    "docs/experiments/assets/20261013-orbit-tail/final/cases/micro-selective/summary.json",
+    "docs/experiments/assets/20261013-orbit-tail/final/cases/micro-selective/tcp_flow_0_orbit_loss.csv",
+    "docs/experiments/assets/20261013-orbit-tail/final/cases/micro-selective/tcp_flow_0_orbit_loss_tail.csv",
+    "docs/experiments/assets/20261013-orbit-tail/final/cases/micro-tail/config_ns3.properties",
+    "docs/experiments/assets/20261013-orbit-tail/final/cases/micro-tail/manifest.json",
+    "docs/experiments/assets/20261013-orbit-tail/final/cases/micro-tail/summary.json",
+    "docs/experiments/assets/20261013-orbit-tail/final/cases/micro-tail/tcp_flow_0_orbit_loss.csv",
+    "docs/experiments/assets/20261013-orbit-tail/final/cases/micro-tail/tcp_flow_0_orbit_loss_tail.csv",
+    "docs/experiments/assets/20261013-orbit-tail/final/cases/micro21-selective/config_ns3.properties",
+    "docs/experiments/assets/20261013-orbit-tail/final/cases/micro21-selective/manifest.json",
+    "docs/experiments/assets/20261013-orbit-tail/final/cases/micro21-selective/summary.json",
+    "docs/experiments/assets/20261013-orbit-tail/final/cases/micro21-selective/tcp_flow_0_orbit_loss.csv",
+    "docs/experiments/assets/20261013-orbit-tail/final/cases/micro21-selective/tcp_flow_0_orbit_loss_tail.csv",
+    "docs/experiments/assets/20261013-orbit-tail/final/cases/micro21-tail/config_ns3.properties",
+    "docs/experiments/assets/20261013-orbit-tail/final/cases/micro21-tail/manifest.json",
+    "docs/experiments/assets/20261013-orbit-tail/final/cases/micro21-tail/summary.json",
+    "docs/experiments/assets/20261013-orbit-tail/final/cases/micro21-tail/tcp_flow_0_orbit_loss.csv",
+    "docs/experiments/assets/20261013-orbit-tail/final/cases/micro21-tail/tcp_flow_0_orbit_loss_tail.csv",
+    "docs/experiments/assets/20261013-orbit-tail/final/receipt.json",
+    "docs/experiments/assets/20261013-orbit-tail/final/results.csv",
+    "docs/experiments/assets/20261013-orbit-tail/micro-audit.json",
+    "docs/experiments/assets/20261013-orbit-tail/micro/cases/micro-base/config_ns3.properties",
+    "docs/experiments/assets/20261013-orbit-tail/micro/cases/micro-base/manifest.json",
+    "docs/experiments/assets/20261013-orbit-tail/micro/cases/micro-base/summary.json",
+    "docs/experiments/assets/20261013-orbit-tail/micro/cases/micro-selective/config_ns3.properties",
+    "docs/experiments/assets/20261013-orbit-tail/micro/cases/micro-selective/manifest.json",
+    "docs/experiments/assets/20261013-orbit-tail/micro/cases/micro-selective/summary.json",
+    "docs/experiments/assets/20261013-orbit-tail/micro/cases/micro-selective/tcp_flow_0_orbit_loss.csv",
+    "docs/experiments/assets/20261013-orbit-tail/micro/cases/micro-selective/tcp_flow_0_orbit_loss_tail.csv",
+    "docs/experiments/assets/20261013-orbit-tail/micro/cases/micro-tail/config_ns3.properties",
+    "docs/experiments/assets/20261013-orbit-tail/micro/cases/micro-tail/manifest.json",
+    "docs/experiments/assets/20261013-orbit-tail/micro/cases/micro-tail/summary.json",
+    "docs/experiments/assets/20261013-orbit-tail/micro/cases/micro-tail/tcp_flow_0_orbit_loss.csv",
+    "docs/experiments/assets/20261013-orbit-tail/micro/cases/micro-tail/tcp_flow_0_orbit_loss_tail.csv",
+    "docs/experiments/assets/20261013-orbit-tail/micro/cases/micro21-selective/config_ns3.properties",
+    "docs/experiments/assets/20261013-orbit-tail/micro/cases/micro21-selective/manifest.json",
+    "docs/experiments/assets/20261013-orbit-tail/micro/cases/micro21-selective/summary.json",
+    "docs/experiments/assets/20261013-orbit-tail/micro/cases/micro21-selective/tcp_flow_0_orbit_loss.csv",
+    "docs/experiments/assets/20261013-orbit-tail/micro/cases/micro21-selective/tcp_flow_0_orbit_loss_tail.csv",
+    "docs/experiments/assets/20261013-orbit-tail/micro/cases/micro21-tail/config_ns3.properties",
+    "docs/experiments/assets/20261013-orbit-tail/micro/cases/micro21-tail/manifest.json",
+    "docs/experiments/assets/20261013-orbit-tail/micro/cases/micro21-tail/summary.json",
+    "docs/experiments/assets/20261013-orbit-tail/micro/cases/micro21-tail/tcp_flow_0_orbit_loss.csv",
+    "docs/experiments/assets/20261013-orbit-tail/micro/cases/micro21-tail/tcp_flow_0_orbit_loss_tail.csv",
+    "docs/experiments/assets/20261013-orbit-tail/micro/receipt.json",
+    "docs/experiments/assets/20261013-orbit-tail/micro/results.csv",
+    "docs/experiments/assets/20261013-orbit-tail/raw-inventory.json",
+    "docs/work/20261012-bbr-route-kim-seongchan.md"
+  ],
+  "prior_study_paths_unchanged": true,
+  "python_ast": [
+    {
+      "path": "code/orbit-tail/analyze.py",
+      "sha256": "90e115b20c109462d70ef5a4f846e9f9695ca1f47ad0cdf993b0758adc0d0e55"
+    },
+    {
+      "path": "code/orbit-tail/archive.py",
+      "sha256": "669dc17d48182e5db705fa95188aaecd3cf5d34d289b20570a0a0b7457f61a78"
+    },
+    {
+      "path": "code/orbit-tail/build.py",
+      "sha256": "4bd168de34036425b8ec6c7bbe7c99364fd3d5543ff5ce7509368cdc2610d663"
+    },
+    {
+      "path": "code/orbit-tail/compare-at-launch.py",
+      "sha256": "c4e70b7f8f1ac92292ec3c84e341ffae6a9fe8d7e13ff9204d5b94fc7145934c"
+    },
+    {
+      "path": "code/orbit-tail/compare.py",
+      "sha256": "48e9864c5030a6e31cb95711d211134d57c599d9c906ad5878b24be03e3b082b"
+    },
+    {
+      "path": "code/orbit-tail/install.py",
+      "sha256": "e4816d571ef4b4f1a67bd636472048533b0351ca20a86db5ac1d2925829ebe3a"
+    },
+    {
+      "path": "code/orbit-tail/run.py",
+      "sha256": "8f8455578f5c0fb5b0cacc05a64342b1bb7885e4034b0e66557fd11da4b78594"
+    },
+    {
+      "path": "code/orbit-queue/analyze.py",
+      "sha256": "efa69ba813f3c1d5984f7cfdac0b4af54b36572844a35b6f31dd3c7066038b2a"
+    },
+    {
+      "path": "code/orbit-queue/analyze_cf.py",
+      "sha256": "0d364a82229959e166cd40dd548bbf588a45ad823e8187c378c4dc14be34ff05"
+    },
+    {
+      "path": "code/orbit-queue/archive.py",
+      "sha256": "e2d5527f74b3d8b42a98b93917326afda730e581fb93c8ecc12a5a7b85fc400c"
+    },
+    {
+      "path": "code/orbit-queue/build.py",
+      "sha256": "cc0628ce6bf6b85d319085f331b7a3b4dfc86706fa75c46d7131795b85fe9af6"
+    },
+    {
+      "path": "code/orbit-queue/delay_route.py",
+      "sha256": "17e7f1729af148491e73df2d573d830a8b4281b8977d73696c33dfdf9ecd1742"
+    },
+    {
+      "path": "code/orbit-queue/install.py",
+      "sha256": "b5e62b9ec4865c68b59f0fb49cd48f4dd7daac2014bdf06bcddcea60377cc695"
+    },
+    {
+      "path": "code/orbit-queue/run.py",
+      "sha256": "769da56d262391942b16cc4a6ec299d10e5d898e386641d8c7d5bc4867ca2272"
+    },
+    {
+      "path": "code/orbit-queue/run_cf.py",
+      "sha256": "6545907653c570fc08b56df6c91fe61d7c2aa23346cd22705f94a0ff0642e4d7"
+    }
+  ],
+  "json_parse": [
+    {
+      "path": "code/orbit-tail/build-ready-development.json",
+      "sha256": "ceeb4f6d783621e9343edb5ffe04260c8bee12a9400c7b4d8c24a27687957fb0"
+    },
+    {
+      "path": "code/orbit-tail/build-ready.json",
+      "sha256": "197bce35e1451f9167842d3318b4e301de6cbbe56d834d926037c6c4235c7d6c"
+    },
+    {
+      "path": "code/orbit-tail/install-receipt.json",
+      "sha256": "ae9d1388087606cb7aacaf94c25ba6f6bdf1972e9ebf2e214eb87068e4c7d685"
+    },
+    {
+      "path": "code/orbit-queue/build-ready.json",
+      "sha256": "f599f115849d5e13320da64cfaec5786cdaaae3b24e5b5dc5a4ea073eb6259ca"
+    },
+    {
+      "path": "code/orbit-queue/reference-receipt.json",
+      "sha256": "e1f794c274a8a6dc49aba543d268124d9123fa5eb2e2b62ce227fd428bb15009"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-orbit-tail/comparison.json",
+      "sha256": "4f9ebae50f277b40c62b63119815ee0a426dfa6741a1ee9d64b5f3bf3d9edef3"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-orbit-tail/development-before-ordinary-guard/build-ready.json",
+      "sha256": "ceeb4f6d783621e9343edb5ffe04260c8bee12a9400c7b4d8c24a27687957fb0"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-orbit-tail/development-before-ordinary-guard/install-receipt.json",
+      "sha256": "4c6f0f390c534bb2020f90f541a46763e6fb14352bfc505b3e906f7dfcabdbc5"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-orbit-tail/environment.json",
+      "sha256": "9b16e3b7b042cd772ae69d0bcfe900079066f3e54f91dc37c037852a57e90ef2"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-orbit-tail/final/cases/leo10-base/manifest.json",
+      "sha256": "ad063c145019106b687d1a45f579d32f6808944b65dc3fbd472e35446ca2b770"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-orbit-tail/final/cases/leo10-base/summary.json",
+      "sha256": "25acc55e1c98bc1685fccb0d30220e312834d852437327e4cc75f8150764c267"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-orbit-tail/final/cases/leo10-drop-base/manifest.json",
+      "sha256": "7411aec9fae0081d20612481ca7a66357b30675d36f3d6de8cdaa51f22d3242a"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-orbit-tail/final/cases/leo10-drop-base/summary.json",
+      "sha256": "a186cfadfb1e1b25f948ccfb1ced4964712c1ccfac2e53345399270c1a0c9b6c"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-orbit-tail/final/cases/leo10-drop-tail/manifest.json",
+      "sha256": "569c0857f125c498ce0f89fd2442c333254837930b3850316c1ae7ab6cf0b343"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-orbit-tail/final/cases/leo10-drop-tail/summary.json",
+      "sha256": "9e4ba5bcc343f6c5367b6280bb917e36a63659ea4a9a0eccff1da61b36f21b4f"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-orbit-tail/final/cases/leo10-selective/manifest.json",
+      "sha256": "21688cc36db1769967a43e50ddc660c4215aeee96fb9c85fbf1d74ce6c004696"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-orbit-tail/final/cases/leo10-selective/summary.json",
+      "sha256": "348f9de05501cd7102b016ff009a2a38a33b392360a8c26ceb75b8bba739cc68"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-orbit-tail/final/cases/leo10-tail/manifest.json",
+      "sha256": "b9fe384486a6abaef2104b68dd0ea20f6b58292b006a557a8adde2c3277ff703"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-orbit-tail/final/cases/leo10-tail/summary.json",
+      "sha256": "127fd5ea373358339bb2701ab047d62fbc7061dbbfc3d2f5998ff25018cd1e22"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-orbit-tail/final/cases/micro-base/manifest.json",
+      "sha256": "c49cea9cd2fb4b81ccfbbff24137b40ed8d825fe3921debfb8f90dc751a0525b"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-orbit-tail/final/cases/micro-base/summary.json",
+      "sha256": "6b04dafa8bb388431f7774316b8fb1225193e585878dafb5c4fd99e9ec8c74ad"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-orbit-tail/final/cases/micro-selective/manifest.json",
+      "sha256": "d581b6bd355cf399b8c5c936649d90dafbe9d82ccda5952bf5bc9495bd23c28a"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-orbit-tail/final/cases/micro-selective/summary.json",
+      "sha256": "2c8595134dc1cb6dbbccbca7a697072c2d37175de539131f7b328a797bfcb0d5"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-orbit-tail/final/cases/micro-tail/manifest.json",
+      "sha256": "67b06a347a6c9f88f3ae819ab3af079cb63a1bcd7ec7eaa7bc168851b0c9fbbb"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-orbit-tail/final/cases/micro-tail/summary.json",
+      "sha256": "d355aa8acd9ce87d97039a89c4fb533d6f54eb579695b919aa34eae262d2bb66"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-orbit-tail/final/cases/micro21-selective/manifest.json",
+      "sha256": "55badd4c56af1bb3e0fa52c8de41a0f2279f57d9a74a0425eca8c9208d15e866"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-orbit-tail/final/cases/micro21-selective/summary.json",
+      "sha256": "d6aa2c0dc03841947c2df442dcfe740ed84422dc1739d1cf1e16e54ed8b375d1"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-orbit-tail/final/cases/micro21-tail/manifest.json",
+      "sha256": "bf19264a52fcbcb3dbd8c42027d8ed0f7bfc73907e0f008a6f8bfc2fbad28962"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-orbit-tail/final/cases/micro21-tail/summary.json",
+      "sha256": "776da4d5a5b7be267b9c259b2ff7b26d8f8cb8792fd5ab38c74a2aaae157b24e"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-orbit-tail/final/receipt.json",
+      "sha256": "7332a58ddfb962b0a4a51586219eddbe95da71c4343d142290581114af575f33"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-orbit-tail/micro/cases/micro-base/manifest.json",
+      "sha256": "c49cea9cd2fb4b81ccfbbff24137b40ed8d825fe3921debfb8f90dc751a0525b"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-orbit-tail/micro/cases/micro-base/summary.json",
+      "sha256": "6b04dafa8bb388431f7774316b8fb1225193e585878dafb5c4fd99e9ec8c74ad"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-orbit-tail/micro/cases/micro-selective/manifest.json",
+      "sha256": "d581b6bd355cf399b8c5c936649d90dafbe9d82ccda5952bf5bc9495bd23c28a"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-orbit-tail/micro/cases/micro-selective/summary.json",
+      "sha256": "2c8595134dc1cb6dbbccbca7a697072c2d37175de539131f7b328a797bfcb0d5"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-orbit-tail/micro/cases/micro-tail/manifest.json",
+      "sha256": "67b06a347a6c9f88f3ae819ab3af079cb63a1bcd7ec7eaa7bc168851b0c9fbbb"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-orbit-tail/micro/cases/micro-tail/summary.json",
+      "sha256": "d355aa8acd9ce87d97039a89c4fb533d6f54eb579695b919aa34eae262d2bb66"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-orbit-tail/micro/cases/micro21-selective/manifest.json",
+      "sha256": "55badd4c56af1bb3e0fa52c8de41a0f2279f57d9a74a0425eca8c9208d15e866"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-orbit-tail/micro/cases/micro21-selective/summary.json",
+      "sha256": "d6aa2c0dc03841947c2df442dcfe740ed84422dc1739d1cf1e16e54ed8b375d1"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-orbit-tail/micro/cases/micro21-tail/manifest.json",
+      "sha256": "bf19264a52fcbcb3dbd8c42027d8ed0f7bfc73907e0f008a6f8bfc2fbad28962"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-orbit-tail/micro/cases/micro21-tail/summary.json",
+      "sha256": "776da4d5a5b7be267b9c259b2ff7b26d8f8cb8792fd5ab38c74a2aaae157b24e"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-orbit-tail/micro/receipt.json",
+      "sha256": "312f051a628c4e5fec5e977555d1aca94000304171ba1bc568da9c4d840751ac"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-orbit-tail/micro-audit.json",
+      "sha256": "8402243c14985ef82a685c357abd2f16af50c9d379dae5f50b67f58f11bc1bc8"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-orbit-tail/raw-inventory.json",
+      "sha256": "2358866f54bd5c555936d806b2c592412f2890ca7e2c210e3a147bd1411b528c"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-orbit-queue/counterfactual-raw-inventory.json",
+      "sha256": "ac84da231803b98fb86b921fe7ad6b5ca3dcf27bc0efa8a42fb07f21f13d7a77"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-orbit-queue/counterfactual.json",
+      "sha256": "ca863d66fb421ae7a32a789b0069723c47df3d3232531cb97989fc5b8e252b81"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-orbit-queue/environment.json",
+      "sha256": "2c25d97387f089017b25d06da5cf9cabd14f63aa2411f0e610413e9eac62fe57"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-orbit-queue/natural-pair.json",
+      "sha256": "861cfece55fa110eab3b148c2b76e0f38e5f432b2c96c27348bc3e79d0a01589"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-orbit-queue/natural-raw-inventory.json",
+      "sha256": "1a9a031f98bd8729026b40eee989482cff78988d521dbb32e7a3916555bfa00f"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-orbit-queue/phases.json",
+      "sha256": "3caabb703e44c6fe0610e60529fcd56bfb3bdc9db94e8fea205629e763d71065"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-orbit-queue/route-delay-input.json",
+      "sha256": "a9186766b2b4022e9256c91f4b854c89f8da709b1cef71914ca89b0f5ebf8eaf"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-orbit-queue/routing-replacements.json",
+      "sha256": "a029fea8db9022f7685f0816729ba2fa3ce758d3f0a3192b89fb25784fff574c"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-tail-and-queue/release.json",
+      "sha256": "1db8613d1544a2cdcb60f4ce4391209d947286fbfb19bf425ea5c4cda7a5daa9"
+    }
+  ],
+  "local_links": [
+    {
+      "document": "README.md",
+      "target": "docs/experiments/20261013-tail-and-queue.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/experiments/20261013-orbit-tail.md"
+    },
+    {
+      "document": "README.md",
+      "target": "code/orbit-tail/README.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/experiments/20261013-orbit-queue.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/experiments/20261012-three-followups.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/experiments/20261012-orbit-loss.md"
+    },
+    {
+      "document": "README.md",
+      "target": "code/orbit-loss/README.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/research/20261012-progress-retrospective.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/experiments/20261012-parallel-candidates.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/experiments/20261012-forecast-loss.md"
+    },
+    {
+      "document": "README.md",
+      "target": "code/bbr-route/README.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/START_HERE.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/LAB_REFERENCE.md"
+    },
+    {
+      "document": "README.md",
+      "target": "code/kim-study/"
+    },
+    {
+      "document": "README.md",
+      "target": "code/kim-study/README.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/experiments/20261010-cubic-q75.md"
+    },
+    {
+      "document": "README.md",
+      "target": "shared-results/"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/PLAN.md"
+    },
+    {
+      "document": "README.md",
+      "target": "code/kim-study/EXPERIMENT_NOTE.md"
+    },
+    {
+      "document": "README.md",
+      "target": "code/kim-study/PHASE2_NOTE.md"
+    },
+    {
+      "document": "README.md",
+      "target": "code/kim-study/evidence/results.csv"
+    },
+    {
+      "document": "README.md",
+      "target": "code/kim-study/phase2_results.csv"
+    },
+    {
+      "document": "README.md",
+      "target": "code/kim-study/ns3.patch"
+    },
+    {
+      "document": "README.md",
+      "target": "code/kim-study/report/kim-study-draft.pdf"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/TEAM_WORKFLOW.md"
+    },
+    {
+      "document": "docs/work/20261012-bbr-route-kim-seongchan.md",
+      "target": "../experiments/20261013-tail-and-queue.md"
+    },
+    {
+      "document": "docs/work/20261012-bbr-route-kim-seongchan.md",
+      "target": "../experiments/20261012-three-followups.md"
+    },
+    {
+      "document": "docs/work/20261012-bbr-route-kim-seongchan.md",
+      "target": "../research/20261012-progress-retrospective.md"
+    },
+    {
+      "document": "docs/work/20261012-bbr-route-kim-seongchan.md",
+      "target": "../experiments/assets/20261012-progress-retrospective/source-audit.json"
+    },
+    {
+      "document": "docs/work/20261012-bbr-route-kim-seongchan.md",
+      "target": "../experiments/20261012-parallel-candidates.md"
+    },
+    {
+      "document": "docs/work/20261012-bbr-route-kim-seongchan.md",
+      "target": "../research/20261012-modern-tcp-direction.md"
+    },
+    {
+      "document": "docs/work/20261012-bbr-route-kim-seongchan.md",
+      "target": "../experiments/20261012-forecast-loss.md"
+    },
+    {
+      "document": "docs/work/20261012-bbr-route-kim-seongchan.md",
+      "target": "../../code/predict-loss/README.md"
+    },
+    {
+      "document": "docs/work/20261012-bbr-route-kim-seongchan.md",
+      "target": "../research/20261012-predictable-leo-tcp.md"
+    },
+    {
+      "document": "docs/work/20261012-bbr-route-kim-seongchan.md",
+      "target": "../experiments/20261012-forecast-loss.md"
+    },
+    {
+      "document": "docs/work/20261012-bbr-route-kim-seongchan.md",
+      "target": "../experiments/assets/20261012-forecast-loss/clean-replay.json"
+    },
+    {
+      "document": "docs/work/20261012-bbr-route-kim-seongchan.md",
+      "target": "../../code/bbr-route/NOTES.md"
+    },
+    {
+      "document": "docs/work/20261012-bbr-route-kim-seongchan.md",
+      "target": "../experiments/20261012-bbr-route-pilot.md"
+    },
+    {
+      "document": "docs/work/20261012-bbr-route-kim-seongchan.md",
+      "target": "../../code/bbr-route/README.md"
+    },
+    {
+      "document": "docs/work/20261012-bbr-route-kim-seongchan.md",
+      "target": "../experiments/assets/20261012-bbr-route/equivalence-original-off.json"
+    },
+    {
+      "document": "docs/work/20261012-bbr-route-kim-seongchan.md",
+      "target": "../experiments/assets/20261012-bbr-route/equivalence-original-on.json"
+    },
+    {
+      "document": "docs/work/20261012-bbr-route-kim-seongchan.md",
+      "target": "../experiments/assets/20261012-bbr-route/observer-negative-checks.json"
+    },
+    {
+      "document": "docs/work/20261012-bbr-route-kim-seongchan.md",
+      "target": "../experiments/assets/20261012-bbr-route/pilot-analysis/pilot-summary.json"
+    },
+    {
+      "document": "docs/work/20261012-bbr-route-kim-seongchan.md",
+      "target": "../experiments/assets/20261012-bbr-route/raw-inventory.json"
+    },
+    {
+      "document": "docs/work/20261012-bbr-route-kim-seongchan.md",
+      "target": "../experiments/20261012-forecast-loss.md"
+    },
+    {
+      "document": "code/orbit-tail/README.md",
+      "target": "../../docs/experiments/20261013-orbit-tail.md"
+    },
+    {
+      "document": "code/orbit-queue/README.md",
+      "target": "../../docs/experiments/20261013-orbit-queue.md"
+    },
+    {
+      "document": "code/orbit-queue/README.md",
+      "target": "../../docs/experiments/20261013-orbit-queue.md"
+    },
+    {
+      "document": "docs/experiments/20261013-orbit-tail.md",
+      "target": "20261012-orbit-loss.md"
+    },
+    {
+      "document": "docs/experiments/20261013-orbit-tail.md",
+      "target": "assets/20261013-orbit-tail/micro/results.csv"
+    },
+    {
+      "document": "docs/experiments/20261013-orbit-tail.md",
+      "target": "assets/20261013-orbit-tail/micro-audit.json"
+    },
+    {
+      "document": "docs/experiments/20261013-orbit-tail.md",
+      "target": "assets/20261013-orbit-tail/final/results.csv"
+    },
+    {
+      "document": "docs/experiments/20261013-orbit-tail.md",
+      "target": "assets/20261013-orbit-tail/final/"
+    },
+    {
+      "document": "docs/experiments/20261013-orbit-tail.md",
+      "target": "assets/20261013-orbit-tail/comparison.json"
+    },
+    {
+      "document": "docs/experiments/20261013-orbit-tail.md",
+      "target": "assets/20261013-orbit-tail/final-build-log.txt"
+    },
+    {
+      "document": "docs/experiments/20261013-orbit-tail.md",
+      "target": "assets/20261013-orbit-tail/development-before-ordinary-guard/build-log.txt"
+    },
+    {
+      "document": "docs/experiments/20261013-orbit-tail.md",
+      "target": "assets/20261013-orbit-tail/raw-inventory.json"
+    },
+    {
+      "document": "docs/experiments/20261013-orbit-tail.md",
+      "target": "../../code/orbit-tail/README.md"
+    },
+    {
+      "document": "docs/experiments/20261013-orbit-queue.md",
+      "target": "assets/20261013-orbit-queue/natural-pair.json"
+    },
+    {
+      "document": "docs/experiments/20261013-orbit-queue.md",
+      "target": "assets/20261013-orbit-queue/phases.json"
+    },
+    {
+      "document": "docs/experiments/20261013-orbit-queue.md",
+      "target": "assets/20261013-orbit-queue/routing-replacements.json"
+    },
+    {
+      "document": "docs/experiments/20261013-orbit-queue.md",
+      "target": "assets/20261013-orbit-queue/route-delay-input.json"
+    },
+    {
+      "document": "docs/experiments/20261013-orbit-queue.md",
+      "target": "assets/20261013-orbit-queue/counterfactual.json"
+    },
+    {
+      "document": "docs/experiments/20261013-orbit-queue.md",
+      "target": "../../code/orbit-queue/README.md"
+    },
+    {
+      "document": "docs/experiments/20261013-orbit-queue.md",
+      "target": "assets/20261013-orbit-queue/natural-raw-inventory.json"
+    },
+    {
+      "document": "docs/experiments/20261013-orbit-queue.md",
+      "target": "assets/20261013-orbit-queue/counterfactual-raw-inventory.json"
+    },
+    {
+      "document": "docs/experiments/20261013-orbit-queue.md",
+      "target": "assets/20261013-orbit-queue/environment.json"
+    },
+    {
+      "document": "docs/experiments/20261013-orbit-queue.md",
+      "target": "assets/20261013-orbit-queue/final-build-log.txt"
+    },
+    {
+      "document": "docs/experiments/20261013-orbit-queue.md",
+      "target": "20261013-tail-and-queue.md"
+    },
+    {
+      "document": "docs/experiments/20261013-tail-and-queue.md",
+      "target": "20261012-orbit-loss.md"
+    },
+    {
+      "document": "docs/experiments/20261013-tail-and-queue.md",
+      "target": "20261013-orbit-tail.md"
+    },
+    {
+      "document": "docs/experiments/20261013-tail-and-queue.md",
+      "target": "20261013-orbit-tail.md"
+    },
+    {
+      "document": "docs/experiments/20261013-tail-and-queue.md",
+      "target": "assets/20261013-orbit-tail/micro/results.csv"
+    },
+    {
+      "document": "docs/experiments/20261013-tail-and-queue.md",
+      "target": "assets/20261013-orbit-tail/micro-audit.json"
+    },
+    {
+      "document": "docs/experiments/20261013-tail-and-queue.md",
+      "target": "assets/20261013-orbit-tail/final/results.csv"
+    },
+    {
+      "document": "docs/experiments/20261013-tail-and-queue.md",
+      "target": "assets/20261013-orbit-tail/comparison.json"
+    },
+    {
+      "document": "docs/experiments/20261013-tail-and-queue.md",
+      "target": "assets/20261013-orbit-queue/natural-pair.json"
+    },
+    {
+      "document": "docs/experiments/20261013-tail-and-queue.md",
+      "target": "20261013-orbit-queue.md"
+    },
+    {
+      "document": "docs/experiments/20261013-tail-and-queue.md",
+      "target": "assets/20261013-orbit-queue/route-delay-input.json"
+    },
+    {
+      "document": "docs/experiments/20261013-tail-and-queue.md",
+      "target": "assets/20261013-orbit-queue/routing-delta/"
+    },
+    {
+      "document": "docs/experiments/20261013-tail-and-queue.md",
+      "target": "assets/20261013-orbit-queue/counterfactual.json"
+    },
+    {
+      "document": "docs/experiments/20261013-tail-and-queue.md",
+      "target": "assets/20261013-orbit-tail/raw-inventory.json"
+    },
+    {
+      "document": "docs/experiments/20261013-tail-and-queue.md",
+      "target": "assets/20261013-orbit-queue/natural-raw-inventory.json"
+    },
+    {
+      "document": "docs/experiments/20261013-tail-and-queue.md",
+      "target": "assets/20261013-orbit-queue/counterfactual-raw-inventory.json"
+    },
+    {
+      "document": "docs/experiments/20261013-tail-and-queue.md",
+      "target": "assets/20261013-tail-and-queue/release.json"
+    },
+    {
+      "document": "docs/experiments/20261013-tail-and-queue.md",
+      "target": "assets/20261013-tail-and-queue/verification.json"
+    }
+  ],
+  "actual_simulations_not_performed_by_this_verifier": true
+}

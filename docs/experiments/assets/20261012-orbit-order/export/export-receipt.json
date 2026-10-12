@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "tool": {
+    "path": "/work/code/orbit-order/summarize.py",
+    "bytes": 15699,
+    "sha256": "668e68fe4ac27ca6b557a5e8cdf2b2d7997700c8be259574bdf1516be939330e"
+  },
+  "cases": [
+    "leo10-base",
+    "leo10-hold1",
+    "leo10-hold2",
+    "loss-first-base",
+    "loss-first-hold"
+  ],
+  "outputs": [
+    {
+      "path": "/tmp/orbit-order-export-v2/cases/leo10-base/config_ns3.properties",
+      "bytes": 613,
+      "sha256": "8c46772c95c46ca99935dd68cf6957631972a2bb519acabe0880640408b0f4d4"
+    },
+    {
+      "path": "/tmp/orbit-order-export-v2/cases/leo10-base/manifest.json",
+      "bytes": 420176,
+      "sha256": "76462146bf2610bd8e7ca3a2eb54fec4343b774087f21399ed1661a4baf9e31a"
+    },
+    {
+      "path": "/tmp/orbit-order-export-v2/cases/leo10-base/schedule.csv",
+      "bytes": 29,
+      "sha256": "e6cde3aa7716856e46d24c3833354df90407313ece13a5ffbd1b789fa4fea23c"
+    },
+    {
+      "path": "/tmp/orbit-order-export-v2/cases/leo10-base/summary.json",
+      "bytes": 19679,
+      "sha256": "487a03eedd80da76851ae0f2958c8f9ab878d1d6f76f24968c3dac552450853a"
+    },
+    {
+      "path": "/tmp/orbit-order-export-v2/cases/leo10-hold1/config_ns3.properties",
+      "bytes": 613,
+      "sha256": "8c46772c95c46ca99935dd68cf6957631972a2bb519acabe0880640408b0f4d4"
+    },
+    {
+      "path": "/tmp/orbit-order-export-v2/cases/leo10-hold1/manifest.json",
+      "bytes": 420590,
+      "sha256": "85cb32a7cf0b0d14305c0ef4fb87ad1788c5325e26268d005ac02dfb1e75a12c"
+    },
+    {
+      "path": "/tmp/orbit-order-export-v2/cases/leo10-hold1/schedule.csv",
+      "bytes": 95,
+      "sha256": "8d868bee5dfdfc567dac2ebf650e648df5d0bea3770bad5075d7c4079a0d4bc9"
+    },
+    {
+      "path": "/tmp/orbit-order-export-v2/cases/leo10-hold1/summary.json",
+      "bytes": 20994,
+      "sha256": "6d1cabcd7a22ec15af34cdaf40f30c6c25d75e37370037721b40f3ecb9a64595"
+    },
+    {
+      "path": "/tmp/orbit-order-export-v2/cases/leo10-hold2/config_ns3.properties",
+      "bytes": 613,
+      "sha256": "8c46772c95c46ca99935dd68cf6957631972a2bb519acabe0880640408b0f4d4"
+    },
+    {
+      "path": "/tmp/orbit-order-export-v2/cases/leo10-hold2/manifest.json",
+      "bytes": 420589,
+      "sha256": "6dcca1e9a8a1732ae9bea6a4b201eb926ee0f9e91c7ccd24fe8758a7e2f56e82"
+    },
+    {
+      "path": "/tmp/orbit-order-export-v2/cases/leo10-hold2/schedule.csv",
+      "bytes": 95,
+      "sha256": "776d1a5f7386a99ecf01661e3f44cd0ee4ae4e86ae80f330155f03f713bdb9fd"
+    },
+    {
+      "path": "/tmp/orbit-order-export-v2/cases/leo10-hold2/summary.json",
+      "bytes": 20993,
+      "sha256": "43f76efd11ffac75b31371acb407940a263754a30febbcf8feba09ffee771243"
+    },
+    {
+      "path": "/tmp/orbit-order-export-v2/cases/loss-first-base/config_ns3.properties",
+      "bytes": 34,
+      "sha256": "f3f2e1b48fdfdd1d6ae0913db5fb1a817dd66b0fbca791dc678692fd6f1496f9"
+    },
+    {
+      "path": "/tmp/orbit-order-export-v2/cases/loss-first-base/manifest.json",
+      "bytes": 5696,
+      "sha256": "db4a93802dd342b7cc8aac4f317573594639b782e8b889e46856c6a9e2cf4a9c"
+    },
+    {
+      "path": "/tmp/orbit-order-export-v2/cases/loss-first-base/summary.json",
+      "bytes": 12382,
+      "sha256": "5a07b1449e94d54f14c6939515133f34d5a2c368be5ad2c8a4b843b24e14b79d"
+    },
+    {
+      "path": "/tmp/orbit-order-export-v2/cases/loss-first-hold/config_ns3.properties",
+      "bytes": 34,
+      "sha256": "f3f2e1b48fdfdd1d6ae0913db5fb1a817dd66b0fbca791dc678692fd6f1496f9"
+    },
+    {
+      "path": "/tmp/orbit-order-export-v2/cases/loss-first-hold/manifest.json",
+      "bytes": 5943,
+      "sha256": "b904202c116fec55ab8b4c3f282b2dff30513887b0160aa4a2d33062660b0981"
+    },
+    {
+      "path": "/tmp/orbit-order-export-v2/cases/loss-first-hold/summary.json",
+      "bytes": 13037,
+      "sha256": "646443784d369bb8c945f88cefaa465c2871140a69133211fbbe1c12a62a2236"
+    },
+    {
+      "path": "/tmp/orbit-order-export-v2/results.csv",
+      "bytes": 867,
+      "sha256": "b5662d52e9358e78edf5aaf0feeba2528fc64f3283ad3a0fc9796ab9ea6bdfdf"
+    }
+  ],
+  "raw_archives": "Not created or claimed by this exporter; raw_inputs receipts identify files for a separate archive manifest."
+}

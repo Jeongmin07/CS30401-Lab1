@@ -1,0 +1,38 @@
+[0/2] Re-checking globbed directories...
+[1/30] Building CXX object contrib/satellite-network/CMakeFiles/satellite-network.dir/model/ground-station.cc.o
+[2/30] Building CXX object contrib/satellite-network/CMakeFiles/satellite-network.dir/model/topology-satellite-network.cc.o
+[3/30] Building CXX object contrib/satellite-network/CMakeFiles/satellite-network.dir/model/arbiter-satnet.cc.o
+[4/30] Building CXX object contrib/satellite-network/CMakeFiles/satellite-network.dir/model/arbiter-single-forward.cc.o
+[5/30] Building CXX object contrib/satellite-network/CMakeFiles/satellite-network.dir/helper/arbiter-single-forward-helper.cc.o
+[6/30] Building CXX object contrib/satellite-network/CMakeFiles/satellite-network.dir/helper/gsl-if-bandwidth-helper.cc.o
+[7/30] Building CXX object contrib/basic-sim/CMakeFiles/basic-sim.dir/model/core/basic-simulation.cc.o
+/home/ubuntu/ns-3.48/contrib/basic-sim/model/core/basic-simulation.cc: In member function ‘void ns3::BasicSimulation::ConfirmAllConfigParamKeysRequested()’:
+/home/ubuntu/ns-3.48/contrib/basic-sim/model/core/basic-simulation.cc:249:53: warning: loop variable ‘key_val’ of type ‘const std::pair<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> >&’ binds to a temporary constructed from type ‘std::pair<const std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> >’ [-Wrange-loop-construct]
+  249 |     for (const std::pair<std::string, std::string>& key_val : m_config) {
+      |                                                     ^~~~~~~
+/home/ubuntu/ns-3.48/contrib/basic-sim/model/core/basic-simulation.cc:249:53: note: use non-reference type ‘const std::pair<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> >’ to make the copy explicit or ‘const std::pair<const std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> >&’ to prevent copying
+[8/30] Building CXX object contrib/basic-sim/CMakeFiles/basic-sim.dir/model/core/topology-ptop.cc.o
+[9/30] Building CXX object contrib/basic-sim/CMakeFiles/basic-sim.dir/model/core/topology-ptop-queue-selector-default.cc.o
+[10/30] Building CXX object contrib/basic-sim/CMakeFiles/basic-sim.dir/model/core/topology-ptop-tc-qdisc-selector-default.cc.o
+[11/30] Building CXX object contrib/basic-sim/CMakeFiles/basic-sim.dir/model/core/arbiter-ptop.cc.o
+[12/30] Building CXX object contrib/basic-sim/CMakeFiles/basic-sim.dir/model/core/arbiter-ecmp.cc.o
+[13/30] Building CXX object contrib/basic-sim/CMakeFiles/basic-sim.dir/model/core/ptop-link-utilization-tracker.cc.o
+[14/30] Building CXX object contrib/basic-sim/CMakeFiles/basic-sim.dir/model/core/ptop-link-queue-tracker.cc.o
+[15/30] Building CXX object contrib/basic-sim/CMakeFiles/basic-sim.dir/helper/core/arbiter-ecmp-helper.cc.o
+[16/30] Building CXX object contrib/basic-sim/CMakeFiles/basic-sim.dir/helper/core/ptop-link-utilization-tracker-helper.cc.o
+[17/30] Building CXX object contrib/basic-sim/CMakeFiles/basic-sim.dir/helper/core/ptop-link-queue-tracker-helper.cc.o
+[18/30] Building CXX object contrib/basic-sim/CMakeFiles/basic-sim.dir/helper/core/tcp-optimizer.cc.o
+[19/30] Building CXX object contrib/basic-sim/CMakeFiles/basic-sim.dir/model/apps/tcp-flow-send-application.cc.o
+[20/30] Building CXX object contrib/basic-sim/CMakeFiles/basic-sim.dir/model/apps/udp-burst-application.cc.o
+[21/30] Building CXX object contrib/basic-sim/CMakeFiles/basic-sim.dir/helper/apps/tcp-flow-scheduler.cc.o
+[22/30] Building CXX object contrib/basic-sim/CMakeFiles/basic-sim.dir/helper/apps/udp-burst-helper.cc.o
+[23/30] Building CXX object contrib/basic-sim/CMakeFiles/basic-sim.dir/helper/apps/udp-burst-scheduler.cc.o
+[24/30] Building CXX object contrib/basic-sim/CMakeFiles/basic-sim.dir/helper/apps/pingmesh-scheduler.cc.o
+[25/30] Building CXX object src/internet/CMakeFiles/internet.dir/model/tcp-bbr.cc.o
+[26/30] Linking CXX shared library /home/ubuntu/ns-3.48/build/lib/libns3.48-internet.so
+[27/30] Linking CXX shared library /home/ubuntu/ns-3.48/build/lib/libns3.48-basic-sim.so
+[28/30] Linking CXX shared library /home/ubuntu/ns-3.48/build/lib/libns3.48-satellite-network.so
+[29/30] Building CXX object scratch/CMakeFiles/scratch_main_satnet_main_satnet.dir/main_satnet/main_satnet.cc.o
+[30/30] Linking CXX executable /home/ubuntu/ns-3.48/build/scratch/main_satnet/ns3.48-main_satnet
+Finished executing the following commands:
+/usr/bin/cmake --build /home/ubuntu/ns-3.48/cmake-cache -j 1

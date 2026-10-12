@@ -1,0 +1,1191 @@
+{
+  "schema": 1,
+  "archive": {
+    "path": "/work/output/queue-mitigation-raw/queue-pacing-20261013.tar.gz",
+    "bytes": 65905317,
+    "sha256": "db3eb38196ac4a61e76051b31a0c6cca86e11e1c680f032e7b0266014d9391be"
+  },
+  "root": "/tmp/queue-pacing",
+  "cases": {
+    "off": {
+      "status": "success",
+      "exit_code": 0,
+      "wall_seconds": 37.31836074400053,
+      "launch_commit": "3e456b706cfa779654e0f3ec15a132fa6415c7d6",
+      "source_checkpoint": "3e456b706cfa779654e0f3ec15a132fa6415c7d6",
+      "patch_sha256": "ace08b170b04774c2eac849c1875e647a97e786611616cbb32867496cb2cb808",
+      "runtime_files": {
+        "scratch/main_satnet/ns3.48-main_satnet": "5e1e50399ecd3d87e6ca978bfd13556e137e2d1eea624f2352cccca8275a24bb",
+        "scratch/study_micro/ns3.48-study_micro": "70b41ba6c0864da599d8493654b67744726e7eff9346ce09d0f2cff65482c04f",
+        "lib/libns3.48-antenna.so": "edf56f782f446d54291425c4b357fb2a609f64da3a3a88a2d48e18dbcf4200b8",
+        "lib/libns3.48-applications.so": "029ee91a59a88fd8cff0c865053f31dfc36f6cc6f10484ebb3843864025750ca",
+        "lib/libns3.48-basic-sim.so": "254985ed61b7ad19bafd4cafd00df233e1e786d25f299729fc84f72e634bddbd",
+        "lib/libns3.48-bridge.so": "5c0e5f9092dc8a215a2d77aaa75ba0e3db181578566db25b9463cc220a94a1a0",
+        "lib/libns3.48-core.so": "5f6e271f0e98438059ac55c8dc5c94ee411050cb7cd7f23956963310674982a1",
+        "lib/libns3.48-flow-monitor.so": "5fbe40f2a843bf01f38b943a28377f7e9628b748506498298cfd6096c621b1ad",
+        "lib/libns3.48-internet-apps.so": "c31699838a1a449773562164af013663951dbd78c7b0e1bcddc4b451f2eaa6bc",
+        "lib/libns3.48-internet.so": "ebf71d9775f02db54d509dbb9926187c07b6f6f14a9ffc67656fa70e9e1eaede",
+        "lib/libns3.48-mobility.so": "45dc648f0ff11a8c83574fdea0dd189a35ccc606d625d3e3612afa3a6f806351",
+        "lib/libns3.48-network.so": "8258009efcadb296e3abc3da3d12606b258eb5545dc33bd0d4f047af5e552bb0",
+        "lib/libns3.48-point-to-point.so": "8b7e72efbe1af5906a8df5191ba0bd625f2c8796b35b3bc6443279be093ac6d8",
+        "lib/libns3.48-satellite-network.so": "4073a1defc99168132fce6b98b0ed9b06bae36c88be3bb07d4777c09e122d5fd",
+        "lib/libns3.48-satellite.so": "68e7ce4d29d13efe374989d3279a8587bedb7a8104757938ab2c14605e3d4002",
+        "lib/libns3.48-stats.so": "ab02ae3cfe9c8453b6b251528884a678fe470cb1aac2e6500064a6fd44caf447",
+        "lib/libns3.48-traffic-control.so": "a260ff14dd0c5d4b6950676f7d219d3563ec6039e84390eae6a880bbe81f6ddb"
+      },
+      "manifest_sha256": "1f58a2a0209abed2cae4e3a872c0fbf6f3ede2d4a4c5309ee1d5c0726c0870fe",
+      "source_unchanged": true,
+      "runtime_unchanged": true,
+      "derived_postprocessing_files": {
+        "analysis.json": {
+          "bytes": 893152,
+          "sha256": "cfd31699601b80ace3675d955c1ea252d32c48b5e5a2c0c35fbac7b9f6aa1aff"
+        }
+      }
+    },
+    "native": {
+      "status": "success",
+      "exit_code": 0,
+      "wall_seconds": 39.896830311001395,
+      "launch_commit": "d5d6d2932a9b27b7dafe76072df9c96cf3c956e4",
+      "source_checkpoint": "3e456b706cfa779654e0f3ec15a132fa6415c7d6",
+      "patch_sha256": "ace08b170b04774c2eac849c1875e647a97e786611616cbb32867496cb2cb808",
+      "runtime_files": {
+        "scratch/main_satnet/ns3.48-main_satnet": "5e1e50399ecd3d87e6ca978bfd13556e137e2d1eea624f2352cccca8275a24bb",
+        "scratch/study_micro/ns3.48-study_micro": "70b41ba6c0864da599d8493654b67744726e7eff9346ce09d0f2cff65482c04f",
+        "lib/libns3.48-antenna.so": "edf56f782f446d54291425c4b357fb2a609f64da3a3a88a2d48e18dbcf4200b8",
+        "lib/libns3.48-applications.so": "029ee91a59a88fd8cff0c865053f31dfc36f6cc6f10484ebb3843864025750ca",
+        "lib/libns3.48-basic-sim.so": "254985ed61b7ad19bafd4cafd00df233e1e786d25f299729fc84f72e634bddbd",
+        "lib/libns3.48-bridge.so": "5c0e5f9092dc8a215a2d77aaa75ba0e3db181578566db25b9463cc220a94a1a0",
+        "lib/libns3.48-core.so": "5f6e271f0e98438059ac55c8dc5c94ee411050cb7cd7f23956963310674982a1",
+        "lib/libns3.48-flow-monitor.so": "5fbe40f2a843bf01f38b943a28377f7e9628b748506498298cfd6096c621b1ad",
+        "lib/libns3.48-internet-apps.so": "c31699838a1a449773562164af013663951dbd78c7b0e1bcddc4b451f2eaa6bc",
+        "lib/libns3.48-internet.so": "ebf71d9775f02db54d509dbb9926187c07b6f6f14a9ffc67656fa70e9e1eaede",
+        "lib/libns3.48-mobility.so": "45dc648f0ff11a8c83574fdea0dd189a35ccc606d625d3e3612afa3a6f806351",
+        "lib/libns3.48-network.so": "8258009efcadb296e3abc3da3d12606b258eb5545dc33bd0d4f047af5e552bb0",
+        "lib/libns3.48-point-to-point.so": "8b7e72efbe1af5906a8df5191ba0bd625f2c8796b35b3bc6443279be093ac6d8",
+        "lib/libns3.48-satellite-network.so": "4073a1defc99168132fce6b98b0ed9b06bae36c88be3bb07d4777c09e122d5fd",
+        "lib/libns3.48-satellite.so": "68e7ce4d29d13efe374989d3279a8587bedb7a8104757938ab2c14605e3d4002",
+        "lib/libns3.48-stats.so": "ab02ae3cfe9c8453b6b251528884a678fe470cb1aac2e6500064a6fd44caf447",
+        "lib/libns3.48-traffic-control.so": "a260ff14dd0c5d4b6950676f7d219d3563ec6039e84390eae6a880bbe81f6ddb"
+      },
+      "manifest_sha256": "91dd926d4b58275308fb4fd4b97aeef2e92909ea75f5d2d663d8bddb997f9e57",
+      "source_unchanged": true,
+      "runtime_unchanged": true,
+      "derived_postprocessing_files": {
+        "analysis.json": {
+          "bytes": 748449,
+          "sha256": "5418161e59d5463b937cd7f088f7af0223c8f175e12f7b9b32a1d9d7bf55d300"
+        }
+      }
+    },
+    "capacity": {
+      "status": "success",
+      "exit_code": 0,
+      "wall_seconds": 36.21724755100149,
+      "launch_commit": "d5d6d2932a9b27b7dafe76072df9c96cf3c956e4",
+      "source_checkpoint": "3e456b706cfa779654e0f3ec15a132fa6415c7d6",
+      "patch_sha256": "ace08b170b04774c2eac849c1875e647a97e786611616cbb32867496cb2cb808",
+      "runtime_files": {
+        "scratch/main_satnet/ns3.48-main_satnet": "5e1e50399ecd3d87e6ca978bfd13556e137e2d1eea624f2352cccca8275a24bb",
+        "scratch/study_micro/ns3.48-study_micro": "70b41ba6c0864da599d8493654b67744726e7eff9346ce09d0f2cff65482c04f",
+        "lib/libns3.48-antenna.so": "edf56f782f446d54291425c4b357fb2a609f64da3a3a88a2d48e18dbcf4200b8",
+        "lib/libns3.48-applications.so": "029ee91a59a88fd8cff0c865053f31dfc36f6cc6f10484ebb3843864025750ca",
+        "lib/libns3.48-basic-sim.so": "254985ed61b7ad19bafd4cafd00df233e1e786d25f299729fc84f72e634bddbd",
+        "lib/libns3.48-bridge.so": "5c0e5f9092dc8a215a2d77aaa75ba0e3db181578566db25b9463cc220a94a1a0",
+        "lib/libns3.48-core.so": "5f6e271f0e98438059ac55c8dc5c94ee411050cb7cd7f23956963310674982a1",
+        "lib/libns3.48-flow-monitor.so": "5fbe40f2a843bf01f38b943a28377f7e9628b748506498298cfd6096c621b1ad",
+        "lib/libns3.48-internet-apps.so": "c31699838a1a449773562164af013663951dbd78c7b0e1bcddc4b451f2eaa6bc",
+        "lib/libns3.48-internet.so": "ebf71d9775f02db54d509dbb9926187c07b6f6f14a9ffc67656fa70e9e1eaede",
+        "lib/libns3.48-mobility.so": "45dc648f0ff11a8c83574fdea0dd189a35ccc606d625d3e3612afa3a6f806351",
+        "lib/libns3.48-network.so": "8258009efcadb296e3abc3da3d12606b258eb5545dc33bd0d4f047af5e552bb0",
+        "lib/libns3.48-point-to-point.so": "8b7e72efbe1af5906a8df5191ba0bd625f2c8796b35b3bc6443279be093ac6d8",
+        "lib/libns3.48-satellite-network.so": "4073a1defc99168132fce6b98b0ed9b06bae36c88be3bb07d4777c09e122d5fd",
+        "lib/libns3.48-satellite.so": "68e7ce4d29d13efe374989d3279a8587bedb7a8104757938ab2c14605e3d4002",
+        "lib/libns3.48-stats.so": "ab02ae3cfe9c8453b6b251528884a678fe470cb1aac2e6500064a6fd44caf447",
+        "lib/libns3.48-traffic-control.so": "a260ff14dd0c5d4b6950676f7d219d3563ec6039e84390eae6a880bbe81f6ddb"
+      },
+      "manifest_sha256": "11529ea6d447529b1cfb0bef4e68ae1c147b3100ee262d0eba45fca0085ae29d",
+      "source_unchanged": true,
+      "runtime_unchanged": true,
+      "derived_postprocessing_files": {
+        "analysis.json": {
+          "bytes": 352356,
+          "sha256": "f06bef964d8a1c21bd69eb134bda4d98b38e09cdf8d62873deaceb3b31ecd779"
+        }
+      }
+    },
+    "micro-original": {
+      "status": "success",
+      "exit_code": 0,
+      "wall_seconds": 0.03254197599744657,
+      "launch_commit": "a3cb6c575988fd895388ce17764e32bb7f95bffe",
+      "source_checkpoint": "a3cb6c575988fd895388ce17764e32bb7f95bffe",
+      "patch_sha256": "ace08b170b04774c2eac849c1875e647a97e786611616cbb32867496cb2cb808",
+      "runtime_files": {
+        "scratch/main_satnet/ns3.48-main_satnet": "5e1e50399ecd3d87e6ca978bfd13556e137e2d1eea624f2352cccca8275a24bb",
+        "scratch/study_micro/ns3.48-study_micro": "70b41ba6c0864da599d8493654b67744726e7eff9346ce09d0f2cff65482c04f",
+        "lib/libns3.48-antenna.so": "edf56f782f446d54291425c4b357fb2a609f64da3a3a88a2d48e18dbcf4200b8",
+        "lib/libns3.48-applications.so": "029ee91a59a88fd8cff0c865053f31dfc36f6cc6f10484ebb3843864025750ca",
+        "lib/libns3.48-basic-sim.so": "254985ed61b7ad19bafd4cafd00df233e1e786d25f299729fc84f72e634bddbd",
+        "lib/libns3.48-bridge.so": "5c0e5f9092dc8a215a2d77aaa75ba0e3db181578566db25b9463cc220a94a1a0",
+        "lib/libns3.48-core.so": "5f6e271f0e98438059ac55c8dc5c94ee411050cb7cd7f23956963310674982a1",
+        "lib/libns3.48-flow-monitor.so": "5fbe40f2a843bf01f38b943a28377f7e9628b748506498298cfd6096c621b1ad",
+        "lib/libns3.48-internet-apps.so": "c31699838a1a449773562164af013663951dbd78c7b0e1bcddc4b451f2eaa6bc",
+        "lib/libns3.48-internet.so": "ebf71d9775f02db54d509dbb9926187c07b6f6f14a9ffc67656fa70e9e1eaede",
+        "lib/libns3.48-mobility.so": "45dc648f0ff11a8c83574fdea0dd189a35ccc606d625d3e3612afa3a6f806351",
+        "lib/libns3.48-network.so": "8258009efcadb296e3abc3da3d12606b258eb5545dc33bd0d4f047af5e552bb0",
+        "lib/libns3.48-point-to-point.so": "8b7e72efbe1af5906a8df5191ba0bd625f2c8796b35b3bc6443279be093ac6d8",
+        "lib/libns3.48-satellite-network.so": "4073a1defc99168132fce6b98b0ed9b06bae36c88be3bb07d4777c09e122d5fd",
+        "lib/libns3.48-satellite.so": "68e7ce4d29d13efe374989d3279a8587bedb7a8104757938ab2c14605e3d4002",
+        "lib/libns3.48-stats.so": "ab02ae3cfe9c8453b6b251528884a678fe470cb1aac2e6500064a6fd44caf447",
+        "lib/libns3.48-traffic-control.so": "a260ff14dd0c5d4b6950676f7d219d3563ec6039e84390eae6a880bbe81f6ddb"
+      },
+      "manifest_sha256": "ec4cc9e1c63c8c9fe92968a0f620dfdef33b8ee5d86f149b4aec3d3b973a717d",
+      "source_unchanged": true,
+      "runtime_unchanged": true,
+      "derived_postprocessing_files": {
+        "analysis.json": {
+          "bytes": 15971,
+          "sha256": "71835ce70564680099ba6b9737c808be008a5b333213475f4c02118e4c52185d"
+        }
+      }
+    },
+    "micro-current": {
+      "status": "success",
+      "exit_code": 0,
+      "wall_seconds": 0.03402393600117648,
+      "launch_commit": "a3cb6c575988fd895388ce17764e32bb7f95bffe",
+      "source_checkpoint": "a3cb6c575988fd895388ce17764e32bb7f95bffe",
+      "patch_sha256": "ace08b170b04774c2eac849c1875e647a97e786611616cbb32867496cb2cb808",
+      "runtime_files": {
+        "scratch/main_satnet/ns3.48-main_satnet": "5e1e50399ecd3d87e6ca978bfd13556e137e2d1eea624f2352cccca8275a24bb",
+        "scratch/study_micro/ns3.48-study_micro": "70b41ba6c0864da599d8493654b67744726e7eff9346ce09d0f2cff65482c04f",
+        "lib/libns3.48-antenna.so": "edf56f782f446d54291425c4b357fb2a609f64da3a3a88a2d48e18dbcf4200b8",
+        "lib/libns3.48-applications.so": "029ee91a59a88fd8cff0c865053f31dfc36f6cc6f10484ebb3843864025750ca",
+        "lib/libns3.48-basic-sim.so": "254985ed61b7ad19bafd4cafd00df233e1e786d25f299729fc84f72e634bddbd",
+        "lib/libns3.48-bridge.so": "5c0e5f9092dc8a215a2d77aaa75ba0e3db181578566db25b9463cc220a94a1a0",
+        "lib/libns3.48-core.so": "5f6e271f0e98438059ac55c8dc5c94ee411050cb7cd7f23956963310674982a1",
+        "lib/libns3.48-flow-monitor.so": "5fbe40f2a843bf01f38b943a28377f7e9628b748506498298cfd6096c621b1ad",
+        "lib/libns3.48-internet-apps.so": "c31699838a1a449773562164af013663951dbd78c7b0e1bcddc4b451f2eaa6bc",
+        "lib/libns3.48-internet.so": "ebf71d9775f02db54d509dbb9926187c07b6f6f14a9ffc67656fa70e9e1eaede",
+        "lib/libns3.48-mobility.so": "45dc648f0ff11a8c83574fdea0dd189a35ccc606d625d3e3612afa3a6f806351",
+        "lib/libns3.48-network.so": "8258009efcadb296e3abc3da3d12606b258eb5545dc33bd0d4f047af5e552bb0",
+        "lib/libns3.48-point-to-point.so": "8b7e72efbe1af5906a8df5191ba0bd625f2c8796b35b3bc6443279be093ac6d8",
+        "lib/libns3.48-satellite-network.so": "4073a1defc99168132fce6b98b0ed9b06bae36c88be3bb07d4777c09e122d5fd",
+        "lib/libns3.48-satellite.so": "68e7ce4d29d13efe374989d3279a8587bedb7a8104757938ab2c14605e3d4002",
+        "lib/libns3.48-stats.so": "ab02ae3cfe9c8453b6b251528884a678fe470cb1aac2e6500064a6fd44caf447",
+        "lib/libns3.48-traffic-control.so": "a260ff14dd0c5d4b6950676f7d219d3563ec6039e84390eae6a880bbe81f6ddb"
+      },
+      "manifest_sha256": "6d998bd0e2ef5cdbda00e641b3c754d0a2d67d90949ad94efbe290153ae79f70",
+      "source_unchanged": true,
+      "runtime_unchanged": true,
+      "derived_postprocessing_files": {
+        "analysis.json": {
+          "bytes": 16108,
+          "sha256": "e108f0e0ffd86dd753a29e8669eb1469f855efa9a719879d56dc3da9a690ee87"
+        }
+      }
+    },
+    "micro-selected": {
+      "status": "success",
+      "exit_code": 0,
+      "wall_seconds": 0.03269813399674604,
+      "launch_commit": "a3cb6c575988fd895388ce17764e32bb7f95bffe",
+      "source_checkpoint": "a3cb6c575988fd895388ce17764e32bb7f95bffe",
+      "patch_sha256": "ace08b170b04774c2eac849c1875e647a97e786611616cbb32867496cb2cb808",
+      "runtime_files": {
+        "scratch/main_satnet/ns3.48-main_satnet": "5e1e50399ecd3d87e6ca978bfd13556e137e2d1eea624f2352cccca8275a24bb",
+        "scratch/study_micro/ns3.48-study_micro": "70b41ba6c0864da599d8493654b67744726e7eff9346ce09d0f2cff65482c04f",
+        "lib/libns3.48-antenna.so": "edf56f782f446d54291425c4b357fb2a609f64da3a3a88a2d48e18dbcf4200b8",
+        "lib/libns3.48-applications.so": "029ee91a59a88fd8cff0c865053f31dfc36f6cc6f10484ebb3843864025750ca",
+        "lib/libns3.48-basic-sim.so": "254985ed61b7ad19bafd4cafd00df233e1e786d25f299729fc84f72e634bddbd",
+        "lib/libns3.48-bridge.so": "5c0e5f9092dc8a215a2d77aaa75ba0e3db181578566db25b9463cc220a94a1a0",
+        "lib/libns3.48-core.so": "5f6e271f0e98438059ac55c8dc5c94ee411050cb7cd7f23956963310674982a1",
+        "lib/libns3.48-flow-monitor.so": "5fbe40f2a843bf01f38b943a28377f7e9628b748506498298cfd6096c621b1ad",
+        "lib/libns3.48-internet-apps.so": "c31699838a1a449773562164af013663951dbd78c7b0e1bcddc4b451f2eaa6bc",
+        "lib/libns3.48-internet.so": "ebf71d9775f02db54d509dbb9926187c07b6f6f14a9ffc67656fa70e9e1eaede",
+        "lib/libns3.48-mobility.so": "45dc648f0ff11a8c83574fdea0dd189a35ccc606d625d3e3612afa3a6f806351",
+        "lib/libns3.48-network.so": "8258009efcadb296e3abc3da3d12606b258eb5545dc33bd0d4f047af5e552bb0",
+        "lib/libns3.48-point-to-point.so": "8b7e72efbe1af5906a8df5191ba0bd625f2c8796b35b3bc6443279be093ac6d8",
+        "lib/libns3.48-satellite-network.so": "4073a1defc99168132fce6b98b0ed9b06bae36c88be3bb07d4777c09e122d5fd",
+        "lib/libns3.48-satellite.so": "68e7ce4d29d13efe374989d3279a8587bedb7a8104757938ab2c14605e3d4002",
+        "lib/libns3.48-stats.so": "ab02ae3cfe9c8453b6b251528884a678fe470cb1aac2e6500064a6fd44caf447",
+        "lib/libns3.48-traffic-control.so": "a260ff14dd0c5d4b6950676f7d219d3563ec6039e84390eae6a880bbe81f6ddb"
+      },
+      "manifest_sha256": "a4cc18cc1324e6fe81cd5ce4a9dff19d890454ad0b63a6622f429116f5f80f9b",
+      "source_unchanged": true,
+      "runtime_unchanged": true,
+      "derived_postprocessing_files": {
+        "analysis.json": {
+          "bytes": 16015,
+          "sha256": "fdc1a82ee0704a1f64a77155254ffd6fd9369aefa3645bb45c542c907915f70f"
+        }
+      }
+    },
+    "loss-current": {
+      "status": "success",
+      "exit_code": 0,
+      "wall_seconds": 33.81213703799585,
+      "launch_commit": "a3cb6c575988fd895388ce17764e32bb7f95bffe",
+      "source_checkpoint": "a3cb6c575988fd895388ce17764e32bb7f95bffe",
+      "patch_sha256": "ace08b170b04774c2eac849c1875e647a97e786611616cbb32867496cb2cb808",
+      "runtime_files": {
+        "scratch/main_satnet/ns3.48-main_satnet": "5e1e50399ecd3d87e6ca978bfd13556e137e2d1eea624f2352cccca8275a24bb",
+        "scratch/study_micro/ns3.48-study_micro": "70b41ba6c0864da599d8493654b67744726e7eff9346ce09d0f2cff65482c04f",
+        "lib/libns3.48-antenna.so": "edf56f782f446d54291425c4b357fb2a609f64da3a3a88a2d48e18dbcf4200b8",
+        "lib/libns3.48-applications.so": "029ee91a59a88fd8cff0c865053f31dfc36f6cc6f10484ebb3843864025750ca",
+        "lib/libns3.48-basic-sim.so": "254985ed61b7ad19bafd4cafd00df233e1e786d25f299729fc84f72e634bddbd",
+        "lib/libns3.48-bridge.so": "5c0e5f9092dc8a215a2d77aaa75ba0e3db181578566db25b9463cc220a94a1a0",
+        "lib/libns3.48-core.so": "5f6e271f0e98438059ac55c8dc5c94ee411050cb7cd7f23956963310674982a1",
+        "lib/libns3.48-flow-monitor.so": "5fbe40f2a843bf01f38b943a28377f7e9628b748506498298cfd6096c621b1ad",
+        "lib/libns3.48-internet-apps.so": "c31699838a1a449773562164af013663951dbd78c7b0e1bcddc4b451f2eaa6bc",
+        "lib/libns3.48-internet.so": "ebf71d9775f02db54d509dbb9926187c07b6f6f14a9ffc67656fa70e9e1eaede",
+        "lib/libns3.48-mobility.so": "45dc648f0ff11a8c83574fdea0dd189a35ccc606d625d3e3612afa3a6f806351",
+        "lib/libns3.48-network.so": "8258009efcadb296e3abc3da3d12606b258eb5545dc33bd0d4f047af5e552bb0",
+        "lib/libns3.48-point-to-point.so": "8b7e72efbe1af5906a8df5191ba0bd625f2c8796b35b3bc6443279be093ac6d8",
+        "lib/libns3.48-satellite-network.so": "4073a1defc99168132fce6b98b0ed9b06bae36c88be3bb07d4777c09e122d5fd",
+        "lib/libns3.48-satellite.so": "68e7ce4d29d13efe374989d3279a8587bedb7a8104757938ab2c14605e3d4002",
+        "lib/libns3.48-stats.so": "ab02ae3cfe9c8453b6b251528884a678fe470cb1aac2e6500064a6fd44caf447",
+        "lib/libns3.48-traffic-control.so": "a260ff14dd0c5d4b6950676f7d219d3563ec6039e84390eae6a880bbe81f6ddb"
+      },
+      "manifest_sha256": "acbbef074e9ccf88cf6688b14d326c5cda65bb04b4aea5cc2c5394d8701ad4ef",
+      "source_unchanged": true,
+      "runtime_unchanged": true,
+      "derived_postprocessing_files": {
+        "analysis.json": {
+          "bytes": 773106,
+          "sha256": "c2174ea53e9c21351d68a179ac92aa9272f48d0a63d8d433c23f425b4cc681e2"
+        }
+      }
+    },
+    "loss-selected": {
+      "status": "success",
+      "exit_code": 0,
+      "wall_seconds": 33.005310059001204,
+      "launch_commit": "a3cb6c575988fd895388ce17764e32bb7f95bffe",
+      "source_checkpoint": "a3cb6c575988fd895388ce17764e32bb7f95bffe",
+      "patch_sha256": "ace08b170b04774c2eac849c1875e647a97e786611616cbb32867496cb2cb808",
+      "runtime_files": {
+        "scratch/main_satnet/ns3.48-main_satnet": "5e1e50399ecd3d87e6ca978bfd13556e137e2d1eea624f2352cccca8275a24bb",
+        "scratch/study_micro/ns3.48-study_micro": "70b41ba6c0864da599d8493654b67744726e7eff9346ce09d0f2cff65482c04f",
+        "lib/libns3.48-antenna.so": "edf56f782f446d54291425c4b357fb2a609f64da3a3a88a2d48e18dbcf4200b8",
+        "lib/libns3.48-applications.so": "029ee91a59a88fd8cff0c865053f31dfc36f6cc6f10484ebb3843864025750ca",
+        "lib/libns3.48-basic-sim.so": "254985ed61b7ad19bafd4cafd00df233e1e786d25f299729fc84f72e634bddbd",
+        "lib/libns3.48-bridge.so": "5c0e5f9092dc8a215a2d77aaa75ba0e3db181578566db25b9463cc220a94a1a0",
+        "lib/libns3.48-core.so": "5f6e271f0e98438059ac55c8dc5c94ee411050cb7cd7f23956963310674982a1",
+        "lib/libns3.48-flow-monitor.so": "5fbe40f2a843bf01f38b943a28377f7e9628b748506498298cfd6096c621b1ad",
+        "lib/libns3.48-internet-apps.so": "c31699838a1a449773562164af013663951dbd78c7b0e1bcddc4b451f2eaa6bc",
+        "lib/libns3.48-internet.so": "ebf71d9775f02db54d509dbb9926187c07b6f6f14a9ffc67656fa70e9e1eaede",
+        "lib/libns3.48-mobility.so": "45dc648f0ff11a8c83574fdea0dd189a35ccc606d625d3e3612afa3a6f806351",
+        "lib/libns3.48-network.so": "8258009efcadb296e3abc3da3d12606b258eb5545dc33bd0d4f047af5e552bb0",
+        "lib/libns3.48-point-to-point.so": "8b7e72efbe1af5906a8df5191ba0bd625f2c8796b35b3bc6443279be093ac6d8",
+        "lib/libns3.48-satellite-network.so": "4073a1defc99168132fce6b98b0ed9b06bae36c88be3bb07d4777c09e122d5fd",
+        "lib/libns3.48-satellite.so": "68e7ce4d29d13efe374989d3279a8587bedb7a8104757938ab2c14605e3d4002",
+        "lib/libns3.48-stats.so": "ab02ae3cfe9c8453b6b251528884a678fe470cb1aac2e6500064a6fd44caf447",
+        "lib/libns3.48-traffic-control.so": "a260ff14dd0c5d4b6950676f7d219d3563ec6039e84390eae6a880bbe81f6ddb"
+      },
+      "manifest_sha256": "736deb12decd1c431c540b376b9a56744c39c738a2685843056361dac10a0c57",
+      "source_unchanged": true,
+      "runtime_unchanged": true,
+      "derived_postprocessing_files": {
+        "analysis.json": {
+          "bytes": 356383,
+          "sha256": "a4e9b807948e944ae8957479eee5299d4ff0eac1fde809f93c71859019c44aeb"
+        }
+      }
+    }
+  },
+  "files": {
+    "off/analysis.json": {
+      "bytes": 893152,
+      "sha256": "cfd31699601b80ace3675d955c1ea252d32c48b5e5a2c0c35fbac7b9f6aa1aff"
+    },
+    "off/config_ns3.properties": {
+      "bytes": 613,
+      "sha256": "8c46772c95c46ca99935dd68cf6957631972a2bb519acabe0880640408b0f4d4"
+    },
+    "off/console.txt": {
+      "bytes": 6010,
+      "sha256": "4a7afd40ee141e37ae6ab13f8ea779d30491cf58edf46f1ca779d77ebbe3ebb4"
+    },
+    "off/logs_ns3/finished.txt": {
+      "bytes": 4,
+      "sha256": "927580bf287560d4a26a5d6e129f91ffa9cb63031b1a8c772be6ec584e65e82b"
+    },
+    "off/logs_ns3/orbit_coverage.csv": {
+      "bytes": 1398438,
+      "sha256": "7785a349bbcd58d321430e5454d4e7193dfc4ed7766e00af84b503fa6bafef9c"
+    },
+    "off/logs_ns3/orbit_drops.csv": {
+      "bytes": 44468,
+      "sha256": "7c6430e5143ca2a44ff5ee49f5ff0795d789f58b042b1c60a101c87379ef3d55"
+    },
+    "off/logs_ns3/orbit_queue_bins.csv": {
+      "bytes": 2936446,
+      "sha256": "aa2b45cbacc8b442d0d4b561fcb5d0c8548186e9f6f64a1df22e0fa779ae6729"
+    },
+    "off/logs_ns3/orbit_queue_pending.csv": {
+      "bytes": 134,
+      "sha256": "f517122709969bb2a1d7bd47fb4ef58f9f914558203bbd7aef139e953669cb6c"
+    },
+    "off/logs_ns3/orbit_service_bins.csv": {
+      "bytes": 2713797,
+      "sha256": "420c7fec34bdc33beb3fc36f5b39859a4fe5a7196a1b5d00d4736b6d0a88ac4b"
+    },
+    "off/logs_ns3/orbit_service_coverage.csv": {
+      "bytes": 289969,
+      "sha256": "102295605d325a6491f26c20a955d8fde2c96fa6aec15a166e8043f42510cdf8"
+    },
+    "off/logs_ns3/queue_area_bins.csv": {
+      "bytes": 2671147,
+      "sha256": "ea9d92993619bcbb4b3de38b0cd08b7cee98ee12601a204ade3c97092e60bf95"
+    },
+    "off/logs_ns3/queue_devices.csv": {
+      "bytes": 645713,
+      "sha256": "36639705e7d001b7f59ab2ef2f509fc8a326a0ed8ef25d1f17cbc7fc90cac2ee"
+    },
+    "off/logs_ns3/queue_flow_state.csv": {
+      "bytes": 329388,
+      "sha256": "a0f7fe2f249523bfcb12c1d5dbc3603dc6359502489626e2c43f9a80c79fa5d1"
+    },
+    "off/logs_ns3/queue_focus.csv": {
+      "bytes": 5758765,
+      "sha256": "0d0764c3e64d4b0069239e6f1a682d71bab30c11b95219e0f1f61be650b65b9c"
+    },
+    "off/logs_ns3/queue_occupancy.csv": {
+      "bytes": 3802112,
+      "sha256": "3f67eec823aa1f64d9e8834c4829d36b643b206319999f9a0ce67f64346ad785"
+    },
+    "off/logs_ns3/queue_tc_drop.csv": {
+      "bytes": 51062,
+      "sha256": "5779f350f37249e7a55bef444013bbb33fc4d96db81da1fea71ec4b887af9185"
+    },
+    "off/logs_ns3/study_app_rx_node_1585_port_1024.csv": {
+      "bytes": 14465567,
+      "sha256": "bd7722c1cbb78f51335b6b181d55f2a2c10e427b2a4326a02c74b873712cb23d"
+    },
+    "off/logs_ns3/study_drop_coverage.csv": {
+      "bytes": 1140184,
+      "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+    },
+    "off/logs_ns3/study_drops.csv": {
+      "bytes": 53873,
+      "sha256": "9aca2d266ffc1b98cd56f7803d04bdc7d807e11e44d25952b6c1ede94b8ef02e"
+    },
+    "off/logs_ns3/study_rx_node_1585_port_1024.csv": {
+      "bytes": 19452445,
+      "sha256": "4fb3a7e70c6e79f54007de46368fd1e303359ef2882e0a314587c9e02292b71c"
+    },
+    "off/logs_ns3/tcp_flow_0_cwnd.csv": {
+      "bytes": 100679,
+      "sha256": "acf9286c1705fa2aa31eb56805f016c3793051f3d566bc91c87c151af2c5cace"
+    },
+    "off/logs_ns3/tcp_flow_0_orbit_loss.csv": {
+      "bytes": 1386,
+      "sha256": "dd65e13e2e79fefa5b63612950bd59f5e3fa772ee1b9fd8a07f9208234695374"
+    },
+    "off/logs_ns3/tcp_flow_0_orbit_loss_tail.csv": {
+      "bytes": 621,
+      "sha256": "8447baa1e3aa446ab7ca47c36eea5e2b8c8db4c38c3f04a3b805cbcd0f4af8ec"
+    },
+    "off/logs_ns3/tcp_flow_0_pacing.csv": {
+      "bytes": 32,
+      "sha256": "90cda193abed81c81cfac1c9ee13b48877511c6564bdbd416233bd10911fb356"
+    },
+    "off/logs_ns3/tcp_flow_0_progress.csv": {
+      "bytes": 1994229,
+      "sha256": "4ce98bb78f4f26fbc697971d23cfc085d8a3e89ad6b378222900a20469794ca4"
+    },
+    "off/logs_ns3/tcp_flow_0_rtt.csv": {
+      "bytes": 2030657,
+      "sha256": "5f7ed6085a55daca60bb23bb3df73b6098d879aa2005d8810d887b023080edc7"
+    },
+    "off/logs_ns3/tcp_flow_0_study_events.csv": {
+      "bytes": 5574,
+      "sha256": "56db00c9ed99c760c4d3b9a2d132f22eac6bf89570a8a5ff9d476c0be620d23a"
+    },
+    "off/logs_ns3/tcp_flow_0_study_packets.csv": {
+      "bytes": 19843355,
+      "sha256": "8129d3685fc3cc339409867b057b9126a6591aad06950e02052c97a52c02567c"
+    },
+    "off/logs_ns3/tcp_flows.csv": {
+      "bytes": 75,
+      "sha256": "2fa7e654ea06e0f91745acd609b08a9daa37dffdcf01b8035c2ded8567a85017"
+    },
+    "off/logs_ns3/tcp_flows.txt": {
+      "bytes": 336,
+      "sha256": "f971a8fa371d58169b3dcd209c3f33dd1fa2eac1a4ebb9a6d7ee751b00a56ed8"
+    },
+    "off/logs_ns3/timing_results.csv": {
+      "bytes": 564,
+      "sha256": "9f28cf8f67975d14af05f61bbaeac032eaea958cabb14f48fc3a5c308fdc4987"
+    },
+    "off/logs_ns3/timing_results.txt": {
+      "bytes": 909,
+      "sha256": "cae9cc820582ff4cb46763e3f0eabab2060a15b00c1858f208794a47abfa0b27"
+    },
+    "off/manifest.json": {
+      "bytes": 427516,
+      "sha256": "1f58a2a0209abed2cae4e3a872c0fbf6f3ede2d4a4c5309ee1d5c0726c0870fe"
+    },
+    "off/schedule.csv": {
+      "bytes": 119,
+      "sha256": "c441ec9f73e726dcc20348d6c2fb2562401925fd26385a8c7ec8c45c9cf6c809"
+    },
+    "native/analysis.json": {
+      "bytes": 748449,
+      "sha256": "5418161e59d5463b937cd7f088f7af0223c8f175e12f7b9b32a1d9d7bf55d300"
+    },
+    "native/config_ns3.properties": {
+      "bytes": 612,
+      "sha256": "d9b8f7df818fa7a1257fdfa4eea87d42c586019b5b30f12c3d28e888e626b285"
+    },
+    "native/console.txt": {
+      "bytes": 6068,
+      "sha256": "ebf3291105323d82f38094eaa2536fe118c783dd86280b54fbe1ed836a39e476"
+    },
+    "native/logs_ns3/finished.txt": {
+      "bytes": 4,
+      "sha256": "927580bf287560d4a26a5d6e129f91ffa9cb63031b1a8c772be6ec584e65e82b"
+    },
+    "native/logs_ns3/orbit_coverage.csv": {
+      "bytes": 1398438,
+      "sha256": "7785a349bbcd58d321430e5454d4e7193dfc4ed7766e00af84b503fa6bafef9c"
+    },
+    "native/logs_ns3/orbit_drops.csv": {
+      "bytes": 42350,
+      "sha256": "061658930917c1143ee20d793ee1af7771e74c22bd7e22456b3fc229968daa41"
+    },
+    "native/logs_ns3/orbit_queue_bins.csv": {
+      "bytes": 2861322,
+      "sha256": "f62b4f65fc8bd7723f2af7d7e28395ca2770f2fd7d23c1a3bb91f0943864ca71"
+    },
+    "native/logs_ns3/orbit_queue_pending.csv": {
+      "bytes": 134,
+      "sha256": "3a98357caa39629b7080010faf3aaca78a01dac0fff45652ee5d99962d9a6e2c"
+    },
+    "native/logs_ns3/orbit_service_bins.csv": {
+      "bytes": 2676229,
+      "sha256": "aca83b4a6cb86f67636745fb2c503bbc3a362b6d1c3abbf853ed499083e27e0e"
+    },
+    "native/logs_ns3/orbit_service_coverage.csv": {
+      "bytes": 289969,
+      "sha256": "102295605d325a6491f26c20a955d8fde2c96fa6aec15a166e8043f42510cdf8"
+    },
+    "native/logs_ns3/queue_area_bins.csv": {
+      "bytes": 2580263,
+      "sha256": "abb349ab7ef0077ee1012345aa9c945cf05f7fc0270124ad4c278f1272f057ba"
+    },
+    "native/logs_ns3/queue_devices.csv": {
+      "bytes": 645713,
+      "sha256": "36639705e7d001b7f59ab2ef2f509fc8a326a0ed8ef25d1f17cbc7fc90cac2ee"
+    },
+    "native/logs_ns3/queue_flow_state.csv": {
+      "bytes": 559682,
+      "sha256": "3c054bf200d9edef39e1980f8b6c25ebc409dd665d52d6c490ed9edfa1157a93"
+    },
+    "native/logs_ns3/queue_focus.csv": {
+      "bytes": 5522561,
+      "sha256": "259bf88dd6fa61c3a76f803dbdbd6f6f66c4a42e26e5137a106635f768123b6f"
+    },
+    "native/logs_ns3/queue_occupancy.csv": {
+      "bytes": 3672292,
+      "sha256": "718432fcc9e432b9590216e5b708843d224875acb894eae3c71c2bb8a6aa8f0f"
+    },
+    "native/logs_ns3/queue_tc_drop.csv": {
+      "bytes": 48824,
+      "sha256": "efb98e7572c91b80b8afcbd93d13e8653291b0d71e2e51b6bd0df804c2450950"
+    },
+    "native/logs_ns3/study_app_rx_node_1585_port_1024.csv": {
+      "bytes": 13278310,
+      "sha256": "be11c3c3db63e9d19ff353b087d4889b252812a34df9795d57808674b3c4dac7"
+    },
+    "native/logs_ns3/study_drop_coverage.csv": {
+      "bytes": 1140184,
+      "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+    },
+    "native/logs_ns3/study_drops.csv": {
+      "bytes": 51479,
+      "sha256": "aaf6fa13115b54330021b1327983a3f624f7feb54240af5b0168438f14104197"
+    },
+    "native/logs_ns3/study_rx_node_1585_port_1024.csv": {
+      "bytes": 18435517,
+      "sha256": "7e8d1b6019aa76b0c386fb644c3771458b8857569c709c5ef6f9429c112a94e2"
+    },
+    "native/logs_ns3/tcp_flow_0_cwnd.csv": {
+      "bytes": 89238,
+      "sha256": "e4b100975e67e38ac669f104236d599b7c77f9149c15e0d98d9ce21a610d3d17"
+    },
+    "native/logs_ns3/tcp_flow_0_orbit_loss.csv": {
+      "bytes": 1386,
+      "sha256": "cd130992e8bbbf83642e060f77a06bd605a85d388d6670fabd927b588e755928"
+    },
+    "native/logs_ns3/tcp_flow_0_orbit_loss_tail.csv": {
+      "bytes": 621,
+      "sha256": "f44e6aaa6511197bf29c1ea38a295fb0a148583f572016ed43bf88386c08d68d"
+    },
+    "native/logs_ns3/tcp_flow_0_pacing.csv": {
+      "bytes": 2502915,
+      "sha256": "73b59290c8da184c88e924ac1a9d6e5bd35b9778cbfacc3cb276fefe23bab7f8"
+    },
+    "native/logs_ns3/tcp_flow_0_progress.csv": {
+      "bytes": 1829014,
+      "sha256": "00cf75d9e477f97a10b671572d2b37c4c2d7325b9aaa01291d794c1e1f2b4a87"
+    },
+    "native/logs_ns3/tcp_flow_0_rtt.csv": {
+      "bytes": 1860618,
+      "sha256": "49d5c7067f0c1fb2866c1ba21a8b9aa731a4adeb3f592629236188c03ca35684"
+    },
+    "native/logs_ns3/tcp_flow_0_study_events.csv": {
+      "bytes": 4839,
+      "sha256": "45314c2b408ffd55c13cf808088e8f800b16abf38d7618d9380c8ffe1e7d9ab7"
+    },
+    "native/logs_ns3/tcp_flow_0_study_packets.csv": {
+      "bytes": 19249056,
+      "sha256": "cac61b57ab3173c09885572b0fee4d8cc4e6b78504c7d46137aa936d05ac6379"
+    },
+    "native/logs_ns3/tcp_flows.csv": {
+      "bytes": 75,
+      "sha256": "43faca732ba1169b9d840ce4f4f3afe195192ef848a23f5c24b842d980a68cb8"
+    },
+    "native/logs_ns3/tcp_flows.txt": {
+      "bytes": 336,
+      "sha256": "d8a73a7a990170d0acba797fc67173541ffea20578a121517d8568044dacd5c1"
+    },
+    "native/logs_ns3/timing_results.csv": {
+      "bytes": 563,
+      "sha256": "6c3aa59c6982a8d629770457596fec2e000f29ff7c5dd667883e35c5ae1ce6fc"
+    },
+    "native/logs_ns3/timing_results.txt": {
+      "bytes": 909,
+      "sha256": "4aae40d2807808b5cf6d1430fed2dd24134ac531f26fa74262a0259e95915c08"
+    },
+    "native/manifest.json": {
+      "bytes": 427530,
+      "sha256": "91dd926d4b58275308fb4fd4b97aeef2e92909ea75f5d2d663d8bddb997f9e57"
+    },
+    "native/schedule.csv": {
+      "bytes": 119,
+      "sha256": "c441ec9f73e726dcc20348d6c2fb2562401925fd26385a8c7ec8c45c9cf6c809"
+    },
+    "capacity/analysis.json": {
+      "bytes": 352356,
+      "sha256": "f06bef964d8a1c21bd69eb134bda4d98b38e09cdf8d62873deaceb3b31ecd779"
+    },
+    "capacity/config_ns3.properties": {
+      "bytes": 612,
+      "sha256": "d9b8f7df818fa7a1257fdfa4eea87d42c586019b5b30f12c3d28e888e626b285"
+    },
+    "capacity/console.txt": {
+      "bytes": 6079,
+      "sha256": "2622582dd2eacc60adad76b7acbf28ac40d679ec45734ee2122b2cd9d7ea900d"
+    },
+    "capacity/logs_ns3/finished.txt": {
+      "bytes": 4,
+      "sha256": "927580bf287560d4a26a5d6e129f91ffa9cb63031b1a8c772be6ec584e65e82b"
+    },
+    "capacity/logs_ns3/orbit_coverage.csv": {
+      "bytes": 1398438,
+      "sha256": "7785a349bbcd58d321430e5454d4e7193dfc4ed7766e00af84b503fa6bafef9c"
+    },
+    "capacity/logs_ns3/orbit_drops.csv": {
+      "bytes": 102,
+      "sha256": "9e96d658428b39768ff51bdb4813ead4343183c7be69410db98535fecadcb6c7"
+    },
+    "capacity/logs_ns3/orbit_queue_bins.csv": {
+      "bytes": 2899912,
+      "sha256": "ae39267ceb4fd3ca701089b4c94d00d8bc2545ccc565d4955bdaf53d18193b8c"
+    },
+    "capacity/logs_ns3/orbit_queue_pending.csv": {
+      "bytes": 90,
+      "sha256": "bd912a74a0dee1b032ecbeac1820c6c6d343cbec86b2fdcadf1b67eb243ce335"
+    },
+    "capacity/logs_ns3/orbit_service_bins.csv": {
+      "bytes": 2714526,
+      "sha256": "8d47369b9d91033c4cbed871b81ffaf69ac1bf84f4c5c555dbb7e8953b0bff3f"
+    },
+    "capacity/logs_ns3/orbit_service_coverage.csv": {
+      "bytes": 289969,
+      "sha256": "102295605d325a6491f26c20a955d8fde2c96fa6aec15a166e8043f42510cdf8"
+    },
+    "capacity/logs_ns3/queue_area_bins.csv": {
+      "bytes": 2622512,
+      "sha256": "42ad392b058a7b67b7acdae6a04a7a73e1399e46d0431519f4bb66cdc5d8a347"
+    },
+    "capacity/logs_ns3/queue_devices.csv": {
+      "bytes": 645713,
+      "sha256": "36639705e7d001b7f59ab2ef2f509fc8a326a0ed8ef25d1f17cbc7fc90cac2ee"
+    },
+    "capacity/logs_ns3/queue_flow_state.csv": {
+      "bytes": 205,
+      "sha256": "f4209430eec2bae0d1084b6bf1897752ce91be23316ffadcef9185f80903fc04"
+    },
+    "capacity/logs_ns3/queue_focus.csv": {
+      "bytes": 5527778,
+      "sha256": "91c7bb55fbef56e5515a9069a9d605a5d1045bec6bd8de3e34d7a8e99a5925ee"
+    },
+    "capacity/logs_ns3/queue_occupancy.csv": {
+      "bytes": 3654387,
+      "sha256": "c17fb39e45a8d8912ec2a277a6ae1ba54ab144eb8522232c3fa2924ef7487994"
+    },
+    "capacity/logs_ns3/queue_tc_drop.csv": {
+      "bytes": 217,
+      "sha256": "a22e92556510c09720bbe6a44986eb24cebf2e5bb5556d3c87ca55cbbb134f37"
+    },
+    "capacity/logs_ns3/study_app_rx_node_1585_port_1024.csv": {
+      "bytes": 15113215,
+      "sha256": "098e7547636ba09b6bcad0648013cd7f56370218b1d88c7e69d5433aeb3593bc"
+    },
+    "capacity/logs_ns3/study_drop_coverage.csv": {
+      "bytes": 1140184,
+      "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+    },
+    "capacity/logs_ns3/study_drops.csv": {
+      "bytes": 112,
+      "sha256": "ec37c4087cf6eb0bf412760b74ba37e2279e44d6bfff2d89f87c8135ec82b959"
+    },
+    "capacity/logs_ns3/study_rx_node_1585_port_1024.csv": {
+      "bytes": 19497354,
+      "sha256": "b403e69489fba87e95162783c2e40cf471e52c55492dfa76e24b5ce369f0c495"
+    },
+    "capacity/logs_ns3/tcp_flow_0_cwnd.csv": {
+      "bytes": 2283,
+      "sha256": "9777a1f3e14393fc18b4b4b2eebb7030e791f65216341a75937f3d4f31a09683"
+    },
+    "capacity/logs_ns3/tcp_flow_0_orbit_loss.csv": {
+      "bytes": 1386,
+      "sha256": "58cbd7db6402345d8f6dc41d852b45136de4d349eabfc93be652b9201a9e00bc"
+    },
+    "capacity/logs_ns3/tcp_flow_0_orbit_loss_tail.csv": {
+      "bytes": 630,
+      "sha256": "acc282c84cb780fe376b13547a1559bf6d46f47886c5717709c6205712d8fdb4"
+    },
+    "capacity/logs_ns3/tcp_flow_0_pacing.csv": {
+      "bytes": 4047,
+      "sha256": "564c15f404ce0eed8a97fc53807e63fade9cb830a84b47cf827c7c042f1d86fa"
+    },
+    "capacity/logs_ns3/tcp_flow_0_progress.csv": {
+      "bytes": 2078439,
+      "sha256": "d181d1c68b347c286c63bf558e0f7dc073ac9d9541f6bf19b67ee4468eee8489"
+    },
+    "capacity/logs_ns3/tcp_flow_0_rtt.csv": {
+      "bytes": 2080980,
+      "sha256": "e2d228dcf51c375ee03fc50716c8ee708a5d4b11d118347e89ba7644495281c3"
+    },
+    "capacity/logs_ns3/tcp_flow_0_study_events.csv": {
+      "bytes": 692,
+      "sha256": "632c808f1d4d68861ea2df9f3c59c26012cf021cce2f13631bf2e0545fde3c80"
+    },
+    "capacity/logs_ns3/tcp_flow_0_study_packets.csv": {
+      "bytes": 19207643,
+      "sha256": "1a6506a77023345f730d3353cccd2e401447d8ade329423028a58c35df773a78"
+    },
+    "capacity/logs_ns3/tcp_flows.csv": {
+      "bytes": 75,
+      "sha256": "7bc5a136e7c2a2f2c73a4c6db06279fda4f33061463fc96ec9f29fc98deb8b6f"
+    },
+    "capacity/logs_ns3/tcp_flows.txt": {
+      "bytes": 336,
+      "sha256": "ab128a82ddfebd4cee97a8de7aa3415c90f64328054e08774336ff0a831f28f5"
+    },
+    "capacity/logs_ns3/timing_results.csv": {
+      "bytes": 565,
+      "sha256": "95ac92a843592bfaece3dfb42449d5609227a4de8e31c85f648122bf563fd9f0"
+    },
+    "capacity/logs_ns3/timing_results.txt": {
+      "bytes": 909,
+      "sha256": "937f7b5f9b9058fb892b5d23febb6575840c7dcefc221e6be6a940e72e33de9e"
+    },
+    "capacity/manifest.json": {
+      "bytes": 427538,
+      "sha256": "11529ea6d447529b1cfb0bef4e68ae1c147b3100ee262d0eba45fca0085ae29d"
+    },
+    "capacity/schedule.csv": {
+      "bytes": 119,
+      "sha256": "c441ec9f73e726dcc20348d6c2fb2562401925fd26385a8c7ec8c45c9cf6c809"
+    },
+    "micro-original/analysis.json": {
+      "bytes": 15971,
+      "sha256": "71835ce70564680099ba6b9737c808be008a5b333213475f4c02118e4c52185d"
+    },
+    "micro-original/config_ns3.properties": {
+      "bytes": 34,
+      "sha256": "f3f2e1b48fdfdd1d6ae0913db5fb1a817dd66b0fbca791dc678692fd6f1496f9"
+    },
+    "micro-original/console.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "micro-original/logs_ns3/study_app_rx_node_1_port_1024.csv": {
+      "bytes": 733,
+      "sha256": "b35c9ac46bde2331da713fba1846eeb718c907027d0bb2f050acdf2fbca75b5e"
+    },
+    "micro-original/logs_ns3/study_drop_coverage.csv": {
+      "bytes": 328,
+      "sha256": "f2bbce727ae1f61019ef8f727753e3a8f64abdeb41d660a20a3607802f4524f4"
+    },
+    "micro-original/logs_ns3/study_drops.csv": {
+      "bytes": 194,
+      "sha256": "e875ed492bd803c301bd18a29514bca50a6edfe104a69a85ae1ec68003bac35c"
+    },
+    "micro-original/logs_ns3/study_rx_node_1_port_1024.csv": {
+      "bytes": 1849,
+      "sha256": "cb432b3cd841713975a574fc6919f5cf0812185846599bdd17182cccacd11e5a"
+    },
+    "micro-original/logs_ns3/tcp_flow_0_cwnd.csv": {
+      "bytes": 233,
+      "sha256": "ceb39256e8a1e4c940cb3f597b7e200596f2e9ff1f9ac9a0a5075021e8262630"
+    },
+    "micro-original/logs_ns3/tcp_flow_0_pacing.csv": {
+      "bytes": 32,
+      "sha256": "90cda193abed81c81cfac1c9ee13b48877511c6564bdbd416233bd10911fb356"
+    },
+    "micro-original/logs_ns3/tcp_flow_0_progress.csv": {
+      "bytes": 160,
+      "sha256": "b583a1b2888476107f8d65535c480fa872d89ef79c7b12c3cdb4380249a86e98"
+    },
+    "micro-original/logs_ns3/tcp_flow_0_rtt.csv": {
+      "bytes": 110,
+      "sha256": "f46faf24fbfea5e839643bcebcbd4b6f10073f725ed5a139f993b2c823b14278"
+    },
+    "micro-original/logs_ns3/tcp_flow_0_study_events.csv": {
+      "bytes": 238,
+      "sha256": "3038a5be2c89948a5724671c2c638a3c408f7828393d6a2513b0a6e6e636863e"
+    },
+    "micro-original/logs_ns3/tcp_flow_0_study_packets.csv": {
+      "bytes": 2680,
+      "sha256": "9774112da74ac364fbe1421ae7d2f532b3e0450cf2f32d874f6362b9043bd6e6"
+    },
+    "micro-original/manifest.json": {
+      "bytes": 19818,
+      "sha256": "ec4cc9e1c63c8c9fe92968a0f620dfdef33b8ee5d86f149b4aec3d3b973a717d"
+    },
+    "micro-current/analysis.json": {
+      "bytes": 16108,
+      "sha256": "e108f0e0ffd86dd753a29e8669eb1469f855efa9a719879d56dc3da9a690ee87"
+    },
+    "micro-current/config_ns3.properties": {
+      "bytes": 34,
+      "sha256": "f3f2e1b48fdfdd1d6ae0913db5fb1a817dd66b0fbca791dc678692fd6f1496f9"
+    },
+    "micro-current/console.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "micro-current/logs_ns3/study_app_rx_node_1_port_1024.csv": {
+      "bytes": 213,
+      "sha256": "0cc1691a749637b2e00fbe73a93d58fce89b016f43cd27994db7f0da140b3581"
+    },
+    "micro-current/logs_ns3/study_drop_coverage.csv": {
+      "bytes": 328,
+      "sha256": "f2bbce727ae1f61019ef8f727753e3a8f64abdeb41d660a20a3607802f4524f4"
+    },
+    "micro-current/logs_ns3/study_drops.csv": {
+      "bytes": 194,
+      "sha256": "e875ed492bd803c301bd18a29514bca50a6edfe104a69a85ae1ec68003bac35c"
+    },
+    "micro-current/logs_ns3/study_rx_node_1_port_1024.csv": {
+      "bytes": 1817,
+      "sha256": "fe6d05ecf49669bafc8d3e732755443215431c7b8cd666ea7270a069953eb874"
+    },
+    "micro-current/logs_ns3/tcp_flow_0_cwnd.csv": {
+      "bytes": 143,
+      "sha256": "17c74bef1830b3666d72b43fb6c67dfe3b64a8154f6ee6684f8232128abacfb9"
+    },
+    "micro-current/logs_ns3/tcp_flow_0_orbit_loss.csv": {
+      "bytes": 1233,
+      "sha256": "65425aa39716a0ddbbb98188869d0dd428c5474659ac00482c877a94582d2590"
+    },
+    "micro-current/logs_ns3/tcp_flow_0_orbit_loss_tail.csv": {
+      "bytes": 1008,
+      "sha256": "9b4059ca2cd970fba4641317e1507f9ea2b1b288817e72084da9a5481e918000"
+    },
+    "micro-current/logs_ns3/tcp_flow_0_pacing.csv": {
+      "bytes": 32,
+      "sha256": "90cda193abed81c81cfac1c9ee13b48877511c6564bdbd416233bd10911fb356"
+    },
+    "micro-current/logs_ns3/tcp_flow_0_progress.csv": {
+      "bytes": 74,
+      "sha256": "8131123d560f49d8565894b4789934eb98a7c51efd79c81c10f0a24c630654c8"
+    },
+    "micro-current/logs_ns3/tcp_flow_0_rtt.csv": {
+      "bytes": 44,
+      "sha256": "b7a405044fcf382bd907731a6904f647632ebafdcdd9c5ca2a2858afc18c9107"
+    },
+    "micro-current/logs_ns3/tcp_flow_0_study_events.csv": {
+      "bytes": 238,
+      "sha256": "40b65890df347d24b0f507e81eea09ed4ffb6893ca09255b6443670cc6f12fb5"
+    },
+    "micro-current/logs_ns3/tcp_flow_0_study_packets.csv": {
+      "bytes": 2896,
+      "sha256": "49e61b2453ecbab5ca6d6bc6b5bee7ebb183605863a50feaf5afb03cac74e82b"
+    },
+    "micro-current/manifest.json": {
+      "bytes": 20597,
+      "sha256": "6d998bd0e2ef5cdbda00e641b3c754d0a2d67d90949ad94efbe290153ae79f70"
+    },
+    "micro-selected/analysis.json": {
+      "bytes": 16015,
+      "sha256": "fdc1a82ee0704a1f64a77155254ffd6fd9369aefa3645bb45c542c907915f70f"
+    },
+    "micro-selected/config_ns3.properties": {
+      "bytes": 34,
+      "sha256": "f3f2e1b48fdfdd1d6ae0913db5fb1a817dd66b0fbca791dc678692fd6f1496f9"
+    },
+    "micro-selected/console.txt": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "micro-selected/logs_ns3/study_app_rx_node_1_port_1024.csv": {
+      "bytes": 733,
+      "sha256": "4b29df2b25b58461d294ea60533273f7b7f81bd48297ff1d0faf6d91dda55ef0"
+    },
+    "micro-selected/logs_ns3/study_drop_coverage.csv": {
+      "bytes": 328,
+      "sha256": "f2bbce727ae1f61019ef8f727753e3a8f64abdeb41d660a20a3607802f4524f4"
+    },
+    "micro-selected/logs_ns3/study_drops.csv": {
+      "bytes": 194,
+      "sha256": "e875ed492bd803c301bd18a29514bca50a6edfe104a69a85ae1ec68003bac35c"
+    },
+    "micro-selected/logs_ns3/study_rx_node_1_port_1024.csv": {
+      "bytes": 1849,
+      "sha256": "021da51a1d134e7c0f898ccaaee11671c094d363e20e65988364e199bc554147"
+    },
+    "micro-selected/logs_ns3/tcp_flow_0_cwnd.csv": {
+      "bytes": 86,
+      "sha256": "56399c1f0d65f24e2aede773297097815c697432ae29566c124fc1423da25168"
+    },
+    "micro-selected/logs_ns3/tcp_flow_0_orbit_loss.csv": {
+      "bytes": 1224,
+      "sha256": "57de46a60ff69710535fbaa34315a04cb56c8b867f152f4e8badbb2dd4a52168"
+    },
+    "micro-selected/logs_ns3/tcp_flow_0_orbit_loss_tail.csv": {
+      "bytes": 1029,
+      "sha256": "9be7109b01ae5a32f344989966f1f075d9822fe800502b09182dd3ffe39e399b"
+    },
+    "micro-selected/logs_ns3/tcp_flow_0_pacing.csv": {
+      "bytes": 218,
+      "sha256": "9de5355f620d36bb29098605a90bbde35437422e2146174fadb0e248a08a1470"
+    },
+    "micro-selected/logs_ns3/tcp_flow_0_progress.csv": {
+      "bytes": 164,
+      "sha256": "100436b6e9984562013070dd590678b60df7e0bfea8880fc9c0f5a902fedcec5"
+    },
+    "micro-selected/logs_ns3/tcp_flow_0_rtt.csv": {
+      "bytes": 132,
+      "sha256": "d7d1bafd8f12f9772f4e367dab6288aec7ad3a50394cae1124c974c0df2bd58c"
+    },
+    "micro-selected/logs_ns3/tcp_flow_0_study_events.csv": {
+      "bytes": 238,
+      "sha256": "40b65890df347d24b0f507e81eea09ed4ffb6893ca09255b6443670cc6f12fb5"
+    },
+    "micro-selected/logs_ns3/tcp_flow_0_study_packets.csv": {
+      "bytes": 2680,
+      "sha256": "a39873049a24436523c86a3cb3ed4485e274d968ac5a831c897997dcbb7dbebe"
+    },
+    "micro-selected/manifest.json": {
+      "bytes": 20675,
+      "sha256": "a4cc18cc1324e6fe81cd5ce4a9dff19d890454ad0b63a6622f429116f5f80f9b"
+    },
+    "loss-current/analysis.json": {
+      "bytes": 773106,
+      "sha256": "c2174ea53e9c21351d68a179ac92aa9272f48d0a63d8d433c23f425b4cc681e2"
+    },
+    "loss-current/config_ns3.properties": {
+      "bytes": 613,
+      "sha256": "8c46772c95c46ca99935dd68cf6957631972a2bb519acabe0880640408b0f4d4"
+    },
+    "loss-current/console.txt": {
+      "bytes": 6064,
+      "sha256": "360eac98a0815947d0f3bf742e71261a9c95c1e784e80414b40ad02e597c7db3"
+    },
+    "loss-current/logs_ns3/finished.txt": {
+      "bytes": 4,
+      "sha256": "927580bf287560d4a26a5d6e129f91ffa9cb63031b1a8c772be6ec584e65e82b"
+    },
+    "loss-current/logs_ns3/orbit_coverage.csv": {
+      "bytes": 1398438,
+      "sha256": "7785a349bbcd58d321430e5454d4e7193dfc4ed7766e00af84b503fa6bafef9c"
+    },
+    "loss-current/logs_ns3/orbit_drops.csv": {
+      "bytes": 18463,
+      "sha256": "bcf7f65b93908cace990fc46d2b1e1ec9addea435f2b4f9713847b0a50186f5b"
+    },
+    "loss-current/logs_ns3/orbit_queue_bins.csv": {
+      "bytes": 2941868,
+      "sha256": "1931ec283a83e0f82c78e12643dc9707c4a17b7e9a8ebd7dd593fb4cbd1741e4"
+    },
+    "loss-current/logs_ns3/orbit_queue_pending.csv": {
+      "bytes": 213,
+      "sha256": "eb1c56c5626919e3ca9bfeca07d221807def6bb822ce1e635b8890dab4fc6659"
+    },
+    "loss-current/logs_ns3/orbit_service_bins.csv": {
+      "bytes": 2711842,
+      "sha256": "f829afa4c68861e023e1aa640edd78dbb4cbd7008fcca847be61eeb12103d0c4"
+    },
+    "loss-current/logs_ns3/orbit_service_coverage.csv": {
+      "bytes": 289969,
+      "sha256": "102295605d325a6491f26c20a955d8fde2c96fa6aec15a166e8043f42510cdf8"
+    },
+    "loss-current/logs_ns3/pacing_first_loss.csv": {
+      "bytes": 100,
+      "sha256": "266ddf0e757caf8cfba1a7c5dde547f752b40a130ec9c6b57ce39621b06f9c8c"
+    },
+    "loss-current/logs_ns3/pacing_first_loss_install.csv": {
+      "bytes": 90,
+      "sha256": "0607f701d5ba9cb6ab82bbc68812cd170aff4837750b5341c631d1bcddf22724"
+    },
+    "loss-current/logs_ns3/queue_area_bins.csv": {
+      "bytes": 2681722,
+      "sha256": "fee942ef5274585e42c72ffb78dd82eef42b53ed344af4dbc9b10907a047efa5"
+    },
+    "loss-current/logs_ns3/queue_devices.csv": {
+      "bytes": 645713,
+      "sha256": "36639705e7d001b7f59ab2ef2f509fc8a326a0ed8ef25d1f17cbc7fc90cac2ee"
+    },
+    "loss-current/logs_ns3/queue_flow_state.csv": {
+      "bytes": 274819,
+      "sha256": "b88022fdc30a5a19be6245d23a4771d4b032945db3c5dc84894142368ed2a0b9"
+    },
+    "loss-current/logs_ns3/queue_focus.csv": {
+      "bytes": 5555887,
+      "sha256": "1567d6a1d6bda14ca231423e6472d8c0948bc2f84b04e26fdf3d4d416d45d3fe"
+    },
+    "loss-current/logs_ns3/queue_occupancy.csv": {
+      "bytes": 3675694,
+      "sha256": "015f10e58c71ef781d25c2a5a582f30a01c9065113949cf3dd3e02a7ee2f50aa"
+    },
+    "loss-current/logs_ns3/queue_tc_drop.csv": {
+      "bytes": 21497,
+      "sha256": "15808adcc261f6113d0930e974b8e8469ef628c3782c5dca3e70441235bfe55e"
+    },
+    "loss-current/logs_ns3/study_app_rx_node_1585_port_1024.csv": {
+      "bytes": 14260161,
+      "sha256": "6c1e28ad925d13d6b5a0b564804bf27ce3b571136432a8acbaf1c716c1683796"
+    },
+    "loss-current/logs_ns3/study_drop_coverage.csv": {
+      "bytes": 1140184,
+      "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+    },
+    "loss-current/logs_ns3/study_drops.csv": {
+      "bytes": 22628,
+      "sha256": "b9b3244b43ca52830051e9f4469e54e6da1858c085ff6f60c2a3e36c9d169db6"
+    },
+    "loss-current/logs_ns3/study_rx_node_1585_port_1024.csv": {
+      "bytes": 19043333,
+      "sha256": "bea8f32f66f0e8981bc55f585d3931b458a60c3474dd0283a8601dca74fde000"
+    },
+    "loss-current/logs_ns3/tcp_flow_0_cwnd.csv": {
+      "bytes": 93165,
+      "sha256": "a57766cce5abd168cc66669a8ff5c5b1c94a1d617c5f301d5283fc8d88ca6256"
+    },
+    "loss-current/logs_ns3/tcp_flow_0_orbit_loss.csv": {
+      "bytes": 1386,
+      "sha256": "796f7901aaeb3b41a27f8df0473350bc36f490a1c115aa60971f907465d3a0ac"
+    },
+    "loss-current/logs_ns3/tcp_flow_0_orbit_loss_tail.csv": {
+      "bytes": 621,
+      "sha256": "d5464dbc5add21469fc4dead417dde71f49f60c6a8d32c34d6dbdd89130e0ae3"
+    },
+    "loss-current/logs_ns3/tcp_flow_0_pacing.csv": {
+      "bytes": 32,
+      "sha256": "90cda193abed81c81cfac1c9ee13b48877511c6564bdbd416233bd10911fb356"
+    },
+    "loss-current/logs_ns3/tcp_flow_0_progress.csv": {
+      "bytes": 1966490,
+      "sha256": "8aee08eb3f35402c4211082d5e055739efa4046404cd7e13486207e083807556"
+    },
+    "loss-current/logs_ns3/tcp_flow_0_rtt.csv": {
+      "bytes": 2004624,
+      "sha256": "79a1bb82253f9792291e0d048d3e6245ac92633fb2d8c759974c8a50298debf3"
+    },
+    "loss-current/logs_ns3/tcp_flow_0_study_events.csv": {
+      "bytes": 5253,
+      "sha256": "3427c474c75f803e9c9e1569d8a9ebdfd5889a3e7f9e6beef25d5b3f244dae83"
+    },
+    "loss-current/logs_ns3/tcp_flow_0_study_packets.csv": {
+      "bytes": 19295960,
+      "sha256": "ee5fdfe6e7e6df0d53bae5ef6aa4a0f09f0d575f0f560ca6ffee9e420ce0814d"
+    },
+    "loss-current/logs_ns3/tcp_flows.csv": {
+      "bytes": 75,
+      "sha256": "8cfad02fbf8419db81bdbf8eabf4879f9acf45bf4e2d0a4f185ff9258f46dfc5"
+    },
+    "loss-current/logs_ns3/tcp_flows.txt": {
+      "bytes": 336,
+      "sha256": "65ed3bd769232451d7193e64949c8ba7f4263b03fc93196a6f147f31f584c781"
+    },
+    "loss-current/logs_ns3/timing_results.csv": {
+      "bytes": 563,
+      "sha256": "95b87644a03970508ad1140083247ff1a1377ed0c9123266fbfc60c03cb7ef6f"
+    },
+    "loss-current/logs_ns3/timing_results.txt": {
+      "bytes": 909,
+      "sha256": "6a17adcebb44b7f7262d590ef934f469a5773e9ee7adcc615cca741444f3f035"
+    },
+    "loss-current/manifest.json": {
+      "bytes": 437968,
+      "sha256": "acbbef074e9ccf88cf6688b14d326c5cda65bb04b4aea5cc2c5394d8701ad4ef"
+    },
+    "loss-current/schedule.csv": {
+      "bytes": 119,
+      "sha256": "c441ec9f73e726dcc20348d6c2fb2562401925fd26385a8c7ec8c45c9cf6c809"
+    },
+    "loss-selected/analysis.json": {
+      "bytes": 356383,
+      "sha256": "a4e9b807948e944ae8957479eee5299d4ff0eac1fde809f93c71859019c44aeb"
+    },
+    "loss-selected/config_ns3.properties": {
+      "bytes": 612,
+      "sha256": "d9b8f7df818fa7a1257fdfa4eea87d42c586019b5b30f12c3d28e888e626b285"
+    },
+    "loss-selected/console.txt": {
+      "bytes": 6109,
+      "sha256": "f39884419de28f66b4130c2b1f935c960383a2c142b48cd67061ce1870327e7b"
+    },
+    "loss-selected/logs_ns3/finished.txt": {
+      "bytes": 4,
+      "sha256": "927580bf287560d4a26a5d6e129f91ffa9cb63031b1a8c772be6ec584e65e82b"
+    },
+    "loss-selected/logs_ns3/orbit_coverage.csv": {
+      "bytes": 1398438,
+      "sha256": "7785a349bbcd58d321430e5454d4e7193dfc4ed7766e00af84b503fa6bafef9c"
+    },
+    "loss-selected/logs_ns3/orbit_drops.csv": {
+      "bytes": 178,
+      "sha256": "120c99367bae861f083fe716a380d2c5683f145706116b24c5e93596a6bfcf01"
+    },
+    "loss-selected/logs_ns3/orbit_queue_bins.csv": {
+      "bytes": 2891991,
+      "sha256": "83146b3646210a7a340b9edc3b6c53ec3023ac7ea5b5c64d205d0ae3563dabb9"
+    },
+    "loss-selected/logs_ns3/orbit_queue_pending.csv": {
+      "bytes": 90,
+      "sha256": "bd912a74a0dee1b032ecbeac1820c6c6d343cbec86b2fdcadf1b67eb243ce335"
+    },
+    "loss-selected/logs_ns3/orbit_service_bins.csv": {
+      "bytes": 2710990,
+      "sha256": "e66a69ae0556eb6523277823ef9b0e14a68a4dab5b7708f2e0f9d6799d5e28a7"
+    },
+    "loss-selected/logs_ns3/orbit_service_coverage.csv": {
+      "bytes": 289969,
+      "sha256": "102295605d325a6491f26c20a955d8fde2c96fa6aec15a166e8043f42510cdf8"
+    },
+    "loss-selected/logs_ns3/pacing_first_loss.csv": {
+      "bytes": 100,
+      "sha256": "266ddf0e757caf8cfba1a7c5dde547f752b40a130ec9c6b57ce39621b06f9c8c"
+    },
+    "loss-selected/logs_ns3/pacing_first_loss_install.csv": {
+      "bytes": 90,
+      "sha256": "0607f701d5ba9cb6ab82bbc68812cd170aff4837750b5341c631d1bcddf22724"
+    },
+    "loss-selected/logs_ns3/queue_area_bins.csv": {
+      "bytes": 2613594,
+      "sha256": "8753d6ffca3a24c58afc2708e038bb78ceb5c15106298c2299e65e11b91b2785"
+    },
+    "loss-selected/logs_ns3/queue_devices.csv": {
+      "bytes": 645713,
+      "sha256": "36639705e7d001b7f59ab2ef2f509fc8a326a0ed8ef25d1f17cbc7fc90cac2ee"
+    },
+    "loss-selected/logs_ns3/queue_flow_state.csv": {
+      "bytes": 205,
+      "sha256": "f4209430eec2bae0d1084b6bf1897752ce91be23316ffadcef9185f80903fc04"
+    },
+    "loss-selected/logs_ns3/queue_focus.csv": {
+      "bytes": 5518327,
+      "sha256": "93525d832586be39105128d18c899bb5da295bd1ae7b3ca61ba50a151f8a1412"
+    },
+    "loss-selected/logs_ns3/queue_occupancy.csv": {
+      "bytes": 3652189,
+      "sha256": "9e86ad1c6bdfc4f0f1847278f5470491e138cafdc1a9e1dfa5556825e9da4e72"
+    },
+    "loss-selected/logs_ns3/queue_tc_drop.csv": {
+      "bytes": 217,
+      "sha256": "a22e92556510c09720bbe6a44986eb24cebf2e5bb5556d3c87ca55cbbb134f37"
+    },
+    "loss-selected/logs_ns3/study_app_rx_node_1585_port_1024.csv": {
+      "bytes": 14744408,
+      "sha256": "4323b08b170af275f77df31e563ee9e311b1e40c66fd32fded7a2cace4cd50d9"
+    },
+    "loss-selected/logs_ns3/study_drop_coverage.csv": {
+      "bytes": 1140184,
+      "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+    },
+    "loss-selected/logs_ns3/study_drops.csv": {
+      "bytes": 202,
+      "sha256": "76a41ae6119fac6ef244555581cc4f66588ffbb31b5370f0bce8688f90eb26e7"
+    },
+    "loss-selected/logs_ns3/study_rx_node_1585_port_1024.csv": {
+      "bytes": 19023598,
+      "sha256": "74b13743f6f637dce63d02244a5e8f6da88b8f27bbfda6d03537f3aacaeb3f63"
+    },
+    "loss-selected/logs_ns3/tcp_flow_0_cwnd.csv": {
+      "bytes": 3313,
+      "sha256": "b2e33cdb272300aae2c0fae9962754fa1fe8d7e637b5afc68caed0ab7ea62882"
+    },
+    "loss-selected/logs_ns3/tcp_flow_0_orbit_loss.csv": {
+      "bytes": 1386,
+      "sha256": "8a38d3d37353d00e5c94fc13f055dfacb63d614f092daf46b04675500488ac63"
+    },
+    "loss-selected/logs_ns3/tcp_flow_0_orbit_loss_tail.csv": {
+      "bytes": 630,
+      "sha256": "972e86d11d0e926506ade1c2e22dc981db53067815076b59adc4da22735fa40c"
+    },
+    "loss-selected/logs_ns3/tcp_flow_0_pacing.csv": {
+      "bytes": 29236,
+      "sha256": "f2b00c25002e1f4aa904e5b9853c0e1660a1116abf62b71a6baa7624813746e1"
+    },
+    "loss-selected/logs_ns3/tcp_flow_0_progress.csv": {
+      "bytes": 2029743,
+      "sha256": "852f723e96e9ecbfe8e6b2cbe3577dbf5f9475b7078931c854412636bda1de75"
+    },
+    "loss-selected/logs_ns3/tcp_flow_0_rtt.csv": {
+      "bytes": 1906597,
+      "sha256": "31c84b8a2eb3bf516bc7326efcc50235272c33bb9c7666f7021e92cec617d7b6"
+    },
+    "loss-selected/logs_ns3/tcp_flow_0_study_events.csv": {
+      "bytes": 802,
+      "sha256": "7d59d708137e86e53b371f463f93869f52438892ce6d170523b5e5a06e1ab7b1"
+    },
+    "loss-selected/logs_ns3/tcp_flow_0_study_packets.csv": {
+      "bytes": 18745013,
+      "sha256": "df9204659a4a49c3c848eedc86d38819b9b345862fc001fa13db32fb4dd199d8"
+    },
+    "loss-selected/logs_ns3/tcp_flows.csv": {
+      "bytes": 75,
+      "sha256": "0d209c1a0f43956192d396058288bec44a2c81712990bc5e4cb7f4da3dcc4458"
+    },
+    "loss-selected/logs_ns3/tcp_flows.txt": {
+      "bytes": 336,
+      "sha256": "a860e8c1bda1690bd4bbe1fc35224195c6c63919e7295865f5fadce69ca3b94b"
+    },
+    "loss-selected/logs_ns3/timing_results.csv": {
+      "bytes": 563,
+      "sha256": "250ea71f980f2674fecf76609701671d2695cb51d89d904ad7d6dd032e75b885"
+    },
+    "loss-selected/logs_ns3/timing_results.txt": {
+      "bytes": 909,
+      "sha256": "71f42de15b8e5efd9a8b95af980ad4487312cdf699a942c9e85d0fdb9b141c1c"
+    },
+    "loss-selected/manifest.json": {
+      "bytes": 438034,
+      "sha256": "736deb12decd1c431c540b376b9a56744c39c738a2685843056361dac10a0c57"
+    },
+    "loss-selected/schedule.csv": {
+      "bytes": 119,
+      "sha256": "c441ec9f73e726dcc20348d6c2fb2562401925fd26385a8c7ec8c45c9cf6c809"
+    }
+  },
+  "file_count": 220,
+  "raw_bytes": 398207559,
+  "archive_members_byte_verified": true,
+  "source_files_still_unchanged": true,
+  "helper_sha256": "4efc72627bc159bffd6b2076b6ca1e5c2c418216105136701ef08949ffb9a077",
+  "posthoc_git_head": "f9d6f4d86ec9fbadd00629c075375ac3db146598",
+  "posthoc_repo_dirty": true,
+  "wall_seconds": 31.22073746300157,
+  "scope": "Completed run files only; no source volume or generated full routing state.",
+  "source_recipe": "Launch source commits and full runtime hashes are recorded separately per case; posthoc archiver identity is distinct."
+}

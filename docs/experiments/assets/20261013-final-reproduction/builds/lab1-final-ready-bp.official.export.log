@@ -1,0 +1,21 @@
+Wrote /tmp/lab1-final-ready-bp.official.patch
+ contrib/basic-sim/model/apps/tcp-flow-sink.cc      | 121 ++++++
+ contrib/basic-sim/model/apps/tcp-flow-sink.h       |  32 ++
+ scratch/main_satnet/backpressure.h                 | 215 +++++++++++
+ scratch/main_satnet/flow_observer.h                |  89 +++++
+ scratch/main_satnet/main_satnet.cc                 |  14 +
+ scratch/main_satnet/old_flight_drop.h              |  76 ++++
+ scratch/main_satnet/queue_observer.h               | 276 ++++++++++++++
+ scratch/main_satnet/service_observer.h             |  76 ++++
+ scratch/main_satnet/study_drop_trace.h             | 129 +++++++
+ scratch/study_micro/study_micro.cc                 | 103 ++++++
+ src/internet/model/tcp-socket-base.cc              | 263 ++++++++++++-
+ src/internet/model/tcp-socket-base.h               |  27 ++
+ src/internet/model/tcp-tx-buffer.cc                |  28 +-
+ src/internet/model/tcp-tx-buffer.h                 |   6 +
+ src/network/utils/net-device-queue-interface.cc    |  10 +
+ src/network/utils/net-device-queue-interface.h     |  11 +
+ src/traffic-control/model/queue-disc.h             |   4 +
+ src/traffic-control/model/traffic-control-layer.cc |   6 +
+ src/traffic-control/model/traffic-control-layer.h  |   5 +
+ 21 files changed, 1990 insertions(+), 9 deletions(-)

@@ -1,0 +1,53 @@
+{
+  "inputs": [
+    {
+      "path": "/work/docs/experiments/assets/20261012-orbit-probe/v2/summary.json",
+      "bytes": 26953,
+      "sha256": "c1b8c782a3d097fc2cd90269355e5e98049bfded45b2fe2345d841cfe050ec49"
+    },
+    {
+      "path": "/work/code/kim-study/path_truth_200s.csv",
+      "bytes": 135964,
+      "sha256": "49bd5418f2b13bdbf6d703f719d61075f814cc86d44c745651bf797f4e5f656c"
+    },
+    {
+      "path": "/work/docs/experiments/assets/20261012-orbit-probe/v2/cases/v2-rise140-off/bbr_state.csv",
+      "bytes": 72572,
+      "sha256": "5f4264f72aa2c97deabeb8d9beee8fbefc4f57d18da641f41e504dbe11f46bb4"
+    },
+    {
+      "path": "/work/docs/experiments/assets/20261012-orbit-probe/v2/cases/v2-rise140-off/bbr_app_rx.csv",
+      "bytes": 29346,
+      "sha256": "feeae2b74942ef31094a42a50b059e1fccb569724a73aaf37029fadae9e96e4e"
+    },
+    {
+      "path": "/work/docs/experiments/assets/20261012-orbit-probe/v2/cases/v2-rise140-on/bbr_state.csv",
+      "bytes": 72126,
+      "sha256": "5cac8f2026dcd02bd3bd9838e68265ee84f98b9f0bbf2964452cc4e6ac999a17"
+    },
+    {
+      "path": "/work/docs/experiments/assets/20261012-orbit-probe/v2/cases/v2-rise140-on/bbr_app_rx.csv",
+      "bytes": 29345,
+      "sha256": "c2b0f8100d9a646c44d52dff125b9002bbb049ee5ca444dcf1376e5040cde86d"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "/tmp/orbit-probe-v2-figures/v2-timing-tradeoff.png",
+      "bytes": 133779,
+      "sha256": "883009a91d453a78ec19c09c2c498bdee1036cb6c72dcdcad05812fb6c7a0b34"
+    },
+    {
+      "path": "/tmp/orbit-probe-v2-figures/v2-timing-tradeoff.pdf",
+      "bytes": 19417,
+      "sha256": "d4271ec39475de5a6a2b88d314f4ed6a2fafd8719a35f921da6aaa9b556082ce"
+    }
+  ],
+  "tool": {
+    "path": "/work/code/orbit-probe/plot.py",
+    "bytes": 4434,
+    "sha256": "4c73b2f4da8cd801a5dcef5978f93afb782e8b5fbdf9d2d84a460656e82d4bac"
+  },
+  "matplotlib": "3.10.8",
+  "limits": "RTprop uses sparse cached ACK-driven samples held to next row. Geometry is nominal RTT at snapshot time, not a tagged packet path or measured RTT. Goodput bins use receiver application bytes; shading uses exact instrumented ProbeRTT entry/completion."
+}

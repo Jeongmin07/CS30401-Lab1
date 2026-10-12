@@ -1,0 +1,32 @@
+{
+  "patch_sha256": "feb35824112dcc2031477dbb32c2002e4b548e3a30c3d3dde3d9f85d2eab9e1d",
+  "runtime_files": {
+    "scratch/main_satnet/ns3.48-main_satnet": "675aebf711537763f8d0e1641179fb9c6b6be5486120f6502f86de891fd362b6",
+    "scratch/study_micro/ns3.48-study_micro": "6cd406069c283831b051c1d728e03804954e6638267b85f600b1ac5851ce2448",
+    "lib/libns3.48-antenna.so": "edf56f782f446d54291425c4b357fb2a609f64da3a3a88a2d48e18dbcf4200b8",
+    "lib/libns3.48-applications.so": "029ee91a59a88fd8cff0c865053f31dfc36f6cc6f10484ebb3843864025750ca",
+    "lib/libns3.48-basic-sim.so": "da4eaff53e07af0b2c7d8ebd79929016e62b01550f15bcf936b6f8961b887d9a",
+    "lib/libns3.48-bridge.so": "5c0e5f9092dc8a215a2d77aaa75ba0e3db181578566db25b9463cc220a94a1a0",
+    "lib/libns3.48-core.so": "5f6e271f0e98438059ac55c8dc5c94ee411050cb7cd7f23956963310674982a1",
+    "lib/libns3.48-flow-monitor.so": "5fbe40f2a843bf01f38b943a28377f7e9628b748506498298cfd6096c621b1ad",
+    "lib/libns3.48-internet-apps.so": "c31699838a1a449773562164af013663951dbd78c7b0e1bcddc4b451f2eaa6bc",
+    "lib/libns3.48-internet.so": "1b57057038874d3413db29cecf9930452a12af9398d6f4050e8b32b0ca93e323",
+    "lib/libns3.48-mobility.so": "45dc648f0ff11a8c83574fdea0dd189a35ccc606d625d3e3612afa3a6f806351",
+    "lib/libns3.48-network.so": "7930b3ed5f927eb731b7a010e5664ebd7927d1b25ecd2ef1f950857b434621b7",
+    "lib/libns3.48-point-to-point.so": "af4a8a6c3378e80fc6347fd77ad9c0bad5783eb34c2ea90e416f797b985e3f89",
+    "lib/libns3.48-satellite-network.so": "6c54072c67b2a2470abe2aca9f561d57093df69fa832ae2035753e2e52ebf907",
+    "lib/libns3.48-satellite.so": "68e7ce4d29d13efe374989d3279a8587bedb7a8104757938ab2c14605e3d4002",
+    "lib/libns3.48-stats.so": "ab02ae3cfe9c8453b6b251528884a678fe470cb1aac2e6500064a6fd44caf447",
+    "lib/libns3.48-traffic-control.so": "354fd4e2ef550af211e9abf272fd64b45818636c845b4876b606a0ffa6520d53"
+  },
+  "build_log_sha256": "1bd14129996480d97d2129369e786628b7e8b0f695205efdb5cbf5bf0a220307",
+  "wall_seconds": 23.100659519997862,
+  "build_command": [
+    "./ns3",
+    "build",
+    "-j",
+    "1"
+  ],
+  "build_status": "success",
+  "tool_sha256": "03aa8c1cc6e3c7cad08d445278e9e0d8de3bb04361d3934eee41602c61e9dfd0"
+}

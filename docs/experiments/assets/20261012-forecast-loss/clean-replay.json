@@ -1,0 +1,678 @@
+{
+  "status": "PASS",
+  "pass_definition": "Clean official combined-patch build and two successful representative simulations; all measurement and schedule CSVs, generated conditions, input hashes, and runtime binary/library hashes match the primary runs. Wall-clock profiling is compared and preserved separately.",
+  "scope": {
+    "original_declared_conditions": 13,
+    "independently_replayed_conditions": [
+      "loss-first-bounded",
+      "leo10-forecast"
+    ],
+    "independently_replayed_condition_count": 2,
+    "other_conditions_not_replayed": 11,
+    "all_13_conditions_replayed": false,
+    "independent_seed_replications": false,
+    "full_analysis_or_figure_replay_performed": false
+  },
+  "clean_environment": {
+    "container": "lab1-predict-loss-replay-20261012",
+    "container_id": "18ed32ec257b4bdcd0cd299846d0edd1980c4809e6dd89dfc21083fc7d4b3932",
+    "volume": "cs30401-predict-loss-replay-ns3-20261012",
+    "new_volume_verified_absent_before_creation": true,
+    "actual_image_ref": "ghcr.io/yeonjong21/cs30401-lab1@sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+    "actual_image_id": "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+    "image_repo_digests": [
+      "ghcr.io/yeonjong21/cs30401-lab1@sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4"
+    ],
+    "cpus": 4,
+    "memory_bytes": 6442450944,
+    "bind_destination": "/work",
+    "ns3_source_volume_destination": "/home/ubuntu/ns-3.48",
+    "container_create_wall_seconds": 4.0452822,
+    "container_create_command": [
+      "docker",
+      "run",
+      "-d",
+      "--name",
+      "lab1-predict-loss-replay-20261012",
+      "--cpus",
+      "4",
+      "--memory",
+      "6g",
+      "--mount",
+      "type=bind,source=C:\\Users\\Newbiedev\\Desktop\\네떡CS30401\\CS30401-Lab1,target=/work",
+      "--mount",
+      "type=volume,source=cs30401-predict-loss-replay-ns3-20261012,target=/home/ubuntu/ns-3.48",
+      "ghcr.io/yeonjong21/cs30401-lab1@sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+      "sleep",
+      "infinity"
+    ]
+  },
+  "clean_setup": {
+    "container": "lab1-predict-loss-replay-20261012",
+    "ns3_head": "99bc6f733274475b7a6e804128651e17ee2a2536",
+    "clean_source_before_apply": true,
+    "combined_patch_sha256": "666c376fe68687f053786d850af926402f59f925c9b7706c72faec6e50b42340",
+    "applied_patch_count": 1,
+    "started_utc": "2026-10-12T10:21:44.938311+00:00",
+    "steps": [
+      {
+        "command": [
+          "git",
+          "apply",
+          "--check",
+          "/work/code/predict-loss/ns3.patch"
+        ],
+        "cwd": "/home/ubuntu/ns-3.48",
+        "exit_code": 0,
+        "wall_seconds": 0.010354573999393324,
+        "output_file": "/tmp/predict-loss-replay-buildlogs/00.txt",
+        "output_bytes": 0,
+        "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "command": [
+          "git",
+          "apply",
+          "/work/code/predict-loss/ns3.patch"
+        ],
+        "cwd": "/home/ubuntu/ns-3.48",
+        "exit_code": 0,
+        "wall_seconds": 0.008373190999918734,
+        "output_file": "/tmp/predict-loss-replay-buildlogs/01.txt",
+        "output_bytes": 0,
+        "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "command": [
+          "git",
+          "add",
+          "-N",
+          "scratch/main_satnet/study_drop_trace.h",
+          "scratch/study_micro/study_micro.cc"
+        ],
+        "cwd": "/home/ubuntu/ns-3.48",
+        "exit_code": 0,
+        "wall_seconds": 0.004907583999738563,
+        "output_file": "/tmp/predict-loss-replay-buildlogs/02.txt",
+        "output_bytes": 0,
+        "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "command": [
+          "git",
+          "diff",
+          "--check"
+        ],
+        "cwd": "/home/ubuntu/ns-3.48",
+        "exit_code": 0,
+        "wall_seconds": 0.01164583300032973,
+        "output_file": "/tmp/predict-loss-replay-buildlogs/03.txt",
+        "output_bytes": 0,
+        "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "command": [
+          "git",
+          "apply",
+          "--reverse",
+          "--check",
+          "/work/code/predict-loss/ns3.patch"
+        ],
+        "cwd": "/home/ubuntu/ns-3.48",
+        "exit_code": 0,
+        "wall_seconds": 0.006579426999451243,
+        "output_file": "/tmp/predict-loss-replay-buildlogs/04.txt",
+        "output_bytes": 0,
+        "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "command": [
+          "./ns3",
+          "build",
+          "-j",
+          "4"
+        ],
+        "cwd": "/home/ubuntu/ns-3.48",
+        "exit_code": 0,
+        "wall_seconds": 33.05676322299951,
+        "output_file": "/tmp/predict-loss-replay-buildlogs/05.txt",
+        "output_bytes": 8560,
+        "output_sha256": "60fcac69e423e3e091dfa0229fe44594eef0b4186fc9fd5d2879dadd9cd65a5e"
+      }
+    ],
+    "installed_diff_byte_exact": true,
+    "installed_diff_sha256": "666c376fe68687f053786d850af926402f59f925c9b7706c72faec6e50b42340",
+    "status": "success",
+    "finished_utc": "2026-10-12T10:22:18.050449+00:00",
+    "runtime_files": {
+      "scratch/main_satnet/ns3.48-main_satnet": {
+        "bytes": 181104,
+        "sha256": "de9f678113c37a72df7e3215e876f18945c0ccecf9123f60fc8f655f9d9a6eab"
+      },
+      "scratch/study_micro/ns3.48-study_micro": {
+        "bytes": 219816,
+        "sha256": "6cd406069c283831b051c1d728e03804954e6638267b85f600b1ac5851ce2448"
+      },
+      "lib/libns3.48-antenna.so": {
+        "bytes": 275168,
+        "sha256": "edf56f782f446d54291425c4b357fb2a609f64da3a3a88a2d48e18dbcf4200b8"
+      },
+      "lib/libns3.48-applications.so": {
+        "bytes": 2450392,
+        "sha256": "029ee91a59a88fd8cff0c865053f31dfc36f6cc6f10484ebb3843864025750ca"
+      },
+      "lib/libns3.48-basic-sim.so": {
+        "bytes": 1630296,
+        "sha256": "005f6059fd2669ee3ba4dfaa5b7e76a35542eaa5a98093f72eded4c94360bdd8"
+      },
+      "lib/libns3.48-bridge.so": {
+        "bytes": 165088,
+        "sha256": "5c0e5f9092dc8a215a2d77aaa75ba0e3db181578566db25b9463cc220a94a1a0"
+      },
+      "lib/libns3.48-core.so": {
+        "bytes": 2246560,
+        "sha256": "5f6e271f0e98438059ac55c8dc5c94ee411050cb7cd7f23956963310674982a1"
+      },
+      "lib/libns3.48-flow-monitor.so": {
+        "bytes": 490280,
+        "sha256": "5fbe40f2a843bf01f38b943a28377f7e9628b748506498298cfd6096c621b1ad"
+      },
+      "lib/libns3.48-internet-apps.so": {
+        "bytes": 1379408,
+        "sha256": "c31699838a1a449773562164af013663951dbd78c7b0e1bcddc4b451f2eaa6bc"
+      },
+      "lib/libns3.48-internet.so": {
+        "bytes": 7204312,
+        "sha256": "e8928e5155bf36a0e800c171c661ab30dea9d0d72b25014aa3ed544616552817"
+      },
+      "lib/libns3.48-mobility.so": {
+        "bytes": 1146440,
+        "sha256": "45dc648f0ff11a8c83574fdea0dd189a35ccc606d625d3e3612afa3a6f806351"
+      },
+      "lib/libns3.48-network.so": {
+        "bytes": 2378368,
+        "sha256": "7930b3ed5f927eb731b7a010e5664ebd7927d1b25ecd2ef1f950857b434621b7"
+      },
+      "lib/libns3.48-point-to-point.so": {
+        "bytes": 517296,
+        "sha256": "af4a8a6c3378e80fc6347fd77ad9c0bad5783eb34c2ea90e416f797b985e3f89"
+      },
+      "lib/libns3.48-satellite-network.so": {
+        "bytes": 761504,
+        "sha256": "6c54072c67b2a2470abe2aca9f561d57093df69fa832ae2035753e2e52ebf907"
+      },
+      "lib/libns3.48-satellite.so": {
+        "bytes": 568888,
+        "sha256": "68e7ce4d29d13efe374989d3279a8587bedb7a8104757938ab2c14605e3d4002"
+      },
+      "lib/libns3.48-stats.so": {
+        "bytes": 974776,
+        "sha256": "ab02ae3cfe9c8453b6b251528884a678fe470cb1aac2e6500064a6fd44caf447"
+      },
+      "lib/libns3.48-traffic-control.so": {
+        "bytes": 1364680,
+        "sha256": "354fd4e2ef550af211e9abf272fd64b45818636c845b4876b606a0ffa6520d53"
+      }
+    }
+  },
+  "run_dispatch_command": [
+    "docker",
+    "exec",
+    "lab1-predict-loss-replay-20261012",
+    "python3",
+    "-B",
+    "/work/code/predict-loss/run.py",
+    "loss-first-bounded",
+    "leo10-forecast",
+    "--root",
+    "/tmp/predict-loss-replay",
+    "--timeout",
+    "180"
+  ],
+  "timing_source": {
+    "source": "contrib/basic-sim/model/core/basic-simulation.cc",
+    "wall_clock_timestamp_lines": [
+      58,
+      59,
+      62,
+      63
+    ],
+    "csv_write_lines": [
+      327,
+      328
+    ],
+    "reason": "RegisterTimestamp uses std::chrono::system_clock; timing_results.csv records execution activity durations, not simulated packet measurements."
+  },
+  "comparison_totals": {
+    "all_manifest_csv_count": 21,
+    "all_csv_byte_identical": false,
+    "byte_identical_csv_count": 20,
+    "measurement_csv_count": 19,
+    "byte_identical_measurement_csv_count": 19,
+    "schedule_csv_count": 1,
+    "byte_identical_schedule_csv_count": 1,
+    "wall_clock_profile_csv_count": 1,
+    "wall_clock_profile_mismatch_count": 1,
+    "primary_csv_bytes_compared": 59094151
+  },
+  "cases": {
+    "loss-first-bounded": {
+      "matched_input_and_runtime_fields": {
+        "definition": true,
+        "patch_sha256": true,
+        "installed_diff_sha256": true,
+        "ns3_head": true,
+        "recorded_image_identity": true,
+        "runtime_files": true,
+        "additional_parameters": true,
+        "hints": true,
+        "forecast_source_sha256": true,
+        "state_static_count": true,
+        "state_static_mapping_sha256": true,
+        "dynamic_input_count": true,
+        "dynamic_input_mapping_sha256": true,
+        "config_schedule_sha256": true,
+        "command_equal_after_run_dir_normalization": true,
+        "environment_equal_after_output_dir_normalization": true
+      },
+      "definition": {
+        "kind": "micro",
+        "mode": "bounded",
+        "loss_seq": 1
+      },
+      "hints": [
+        {
+          "start_ns": 150000000,
+          "end_ns": 350000000,
+          "note": "False forecast on stable path; adverse real-loss control"
+        }
+      ],
+      "additional_parameters": "study_threshold=20;study_windows=150000000:350000000;study_bounded_restore=1",
+      "input_sha256": {
+        "forecast_source": "49bd5418f2b13bdbf6d703f719d61075f814cc86d44c745651bf797f4e5f656c",
+        "static_mapping": "afc13d0f402e082dd83a65ee52222e91b41f2bb775a0694a34ac33dfe216becf",
+        "static_file_count": 7,
+        "dynamic_mapping": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "dynamic_file_count": 0,
+        "config_and_schedule": {
+          "config_ns3.properties": "f3f2e1b48fdfdd1d6ae0913db5fb1a817dd66b0fbca791dc678692fd6f1496f9"
+        }
+      },
+      "primary": {
+        "manifest_path": "/tmp/predict-loss/loss-first-bounded/manifest.json",
+        "manifest_sha256": "19b165cab4c5e07539b19c650c4a0f699f5da5490f5376b60fa4504db2f42c57",
+        "status": "success",
+        "exit_code": 0,
+        "launch_repo_commit": "4a1441a6a1b04b3d61f07e5be8477dcc8960c0d2",
+        "launch_repo_dirty": true,
+        "runner_sha256": "4adecbf986fda81326f17fcd286b6262d84a24470fbd593f229ebb28cfce8acc",
+        "image_record_key": "image_digest",
+        "wall_seconds": 0.03216524799972831,
+        "command": [
+          "/home/ubuntu/ns-3.48/build/scratch/study_micro/ns3.48-study_micro",
+          "--run_dir=/tmp/predict-loss/loss-first-bounded",
+          "--cc=TcpCubic",
+          "--duration=4",
+          "--rate=100",
+          "--queue_pkts=2000",
+          "--before_ms=50",
+          "--after_ms=50",
+          "--event_s=2",
+          "--initial_ssthresh_pkts=900",
+          "--max_bytes=27600",
+          "--loss_seq=1",
+          "--parameters=study_threshold=20;study_windows=150000000:350000000;study_bounded_restore=1"
+        ],
+        "environment": {
+          "CS30401_STUDY_TRACE": "1",
+          "CS30401_STUDY_TRACE_DIR": "/tmp/predict-loss/loss-first-bounded/logs_ns3",
+          "LD_LIBRARY_PATH": "/home/ubuntu/ns-3.48/build/lib"
+        }
+      },
+      "replay": {
+        "manifest_path": "/tmp/predict-loss-replay/loss-first-bounded/manifest.json",
+        "manifest_sha256": "8f6a305060bf4d0044cf251a5728e34954de9de77b6e8dd0d5c94598943f198f",
+        "status": "success",
+        "exit_code": 0,
+        "launch_repo_commit": "0942d227394fb7d51bf3b3665897afd41d8e74ac",
+        "launch_repo_dirty": true,
+        "runner_sha256": "ecea49bff332186d340ca5b865c6486cfaf91099847967c4f017c173e8661c97",
+        "image_record_key": "declared_image_digest",
+        "wall_seconds": 0.03208961600012117,
+        "command": [
+          "/home/ubuntu/ns-3.48/build/scratch/study_micro/ns3.48-study_micro",
+          "--run_dir=/tmp/predict-loss-replay/loss-first-bounded",
+          "--cc=TcpCubic",
+          "--duration=4",
+          "--rate=100",
+          "--queue_pkts=2000",
+          "--before_ms=50",
+          "--after_ms=50",
+          "--event_s=2",
+          "--initial_ssthresh_pkts=900",
+          "--max_bytes=27600",
+          "--loss_seq=1",
+          "--parameters=study_threshold=20;study_windows=150000000:350000000;study_bounded_restore=1"
+        ],
+        "environment": {
+          "CS30401_STUDY_TRACE": "1",
+          "CS30401_STUDY_TRACE_DIR": "/tmp/predict-loss-replay/loss-first-bounded/logs_ns3",
+          "LD_LIBRARY_PATH": "/home/ubuntu/ns-3.48/build/lib"
+        }
+      },
+      "all_actual_csv_receipts_verified_in_both": true,
+      "all_runtime_receipts_verified_against_actual_in_both": true,
+      "all_state_receipts_verified_against_actual_in_both": true,
+      "runner_identity_equal": false,
+      "launch_commit_equal": false,
+      "csv_checks": [
+        {
+          "file": "logs_ns3/study_app_rx_node_1_port_1024.csv",
+          "category": "measurement",
+          "primary_bytes": 213,
+          "replay_bytes": 213,
+          "primary_sha256": "ef86b0cf7effe5aa6ef511dc4f96af230be669757805d6fa491a00ae38ce61a5",
+          "replay_sha256": "ef86b0cf7effe5aa6ef511dc4f96af230be669757805d6fa491a00ae38ce61a5",
+          "byte_identical": true
+        },
+        {
+          "file": "logs_ns3/study_drop_coverage.csv",
+          "category": "measurement",
+          "primary_bytes": 328,
+          "replay_bytes": 328,
+          "primary_sha256": "f2bbce727ae1f61019ef8f727753e3a8f64abdeb41d660a20a3607802f4524f4",
+          "replay_sha256": "f2bbce727ae1f61019ef8f727753e3a8f64abdeb41d660a20a3607802f4524f4",
+          "byte_identical": true
+        },
+        {
+          "file": "logs_ns3/study_drops.csv",
+          "category": "measurement",
+          "primary_bytes": 194,
+          "replay_bytes": 194,
+          "primary_sha256": "e875ed492bd803c301bd18a29514bca50a6edfe104a69a85ae1ec68003bac35c",
+          "replay_sha256": "e875ed492bd803c301bd18a29514bca50a6edfe104a69a85ae1ec68003bac35c",
+          "byte_identical": true
+        },
+        {
+          "file": "logs_ns3/study_rx_node_1_port_1024.csv",
+          "category": "measurement",
+          "primary_bytes": 1817,
+          "replay_bytes": 1817,
+          "primary_sha256": "fc41b37e0d1cfa5f25e9d52a3083ec9faa395c0338c81f8918e2e1c8ce1adb70",
+          "replay_sha256": "fc41b37e0d1cfa5f25e9d52a3083ec9faa395c0338c81f8918e2e1c8ce1adb70",
+          "byte_identical": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_cwnd.csv",
+          "category": "measurement",
+          "primary_bytes": 88,
+          "replay_bytes": 88,
+          "primary_sha256": "c17f52c8cd62edfd6f14cdb68864a7d8cfab3c44eb06722f694f8dc62986d448",
+          "replay_sha256": "c17f52c8cd62edfd6f14cdb68864a7d8cfab3c44eb06722f694f8dc62986d448",
+          "byte_identical": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_progress.csv",
+          "category": "measurement",
+          "primary_bytes": 74,
+          "replay_bytes": 74,
+          "primary_sha256": "1db434101b1a53132b7d6a8e8ff1a5fb8e390cdd205362f17a13031e4238634a",
+          "replay_sha256": "1db434101b1a53132b7d6a8e8ff1a5fb8e390cdd205362f17a13031e4238634a",
+          "byte_identical": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_rtt.csv",
+          "category": "measurement",
+          "primary_bytes": 44,
+          "replay_bytes": 44,
+          "primary_sha256": "cfdb79fc26272833c6cb4ec53de3ee5f1102c7fe9f6aa6aab229a8b61f136f64",
+          "replay_sha256": "cfdb79fc26272833c6cb4ec53de3ee5f1102c7fe9f6aa6aab229a8b61f136f64",
+          "byte_identical": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_study_events.csv",
+          "category": "measurement",
+          "primary_bytes": 360,
+          "replay_bytes": 360,
+          "primary_sha256": "7b2adf2789a0da578329e15e102c8948faab42da6ccef563dc5bd7940bc6037d",
+          "replay_sha256": "7b2adf2789a0da578329e15e102c8948faab42da6ccef563dc5bd7940bc6037d",
+          "byte_identical": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_study_packets.csv",
+          "category": "measurement",
+          "primary_bytes": 2924,
+          "replay_bytes": 2924,
+          "primary_sha256": "9247e5ba05ee087785bd83934fa98b3a900963fae50456a1e000fa5a75abe958",
+          "replay_sha256": "9247e5ba05ee087785bd83934fa98b3a900963fae50456a1e000fa5a75abe958",
+          "byte_identical": true
+        }
+      ]
+    },
+    "leo10-forecast": {
+      "matched_input_and_runtime_fields": {
+        "definition": true,
+        "patch_sha256": true,
+        "installed_diff_sha256": true,
+        "ns3_head": true,
+        "recorded_image_identity": true,
+        "runtime_files": true,
+        "additional_parameters": true,
+        "hints": true,
+        "forecast_source_sha256": true,
+        "state_static_count": true,
+        "state_static_mapping_sha256": true,
+        "dynamic_input_count": true,
+        "dynamic_input_mapping_sha256": true,
+        "config_schedule_sha256": true,
+        "command_equal_after_run_dir_normalization": true,
+        "environment_equal_after_output_dir_normalization": true
+      },
+      "definition": {
+        "kind": "leo",
+        "mode": "bounded",
+        "rate": 10,
+        "queue": 100,
+        "duration": 200
+      },
+      "hints": [
+        {
+          "event_ns": 26200000000,
+          "start_ns": 26200000000,
+          "end_ns": 26395396000,
+          "horizon_ns": 195396000,
+          "old_prop_rtt_ms": 97.698,
+          "new_prop_rtt_ms": 91.064
+        },
+        {
+          "event_ns": 75000000000,
+          "start_ns": 75000000000,
+          "end_ns": 75181974000,
+          "horizon_ns": 181974000,
+          "old_prop_rtt_ms": 90.987,
+          "new_prop_rtt_ms": 87.644
+        }
+      ],
+      "additional_parameters": "study_threshold=20;study_windows=26200000000:26395396000|75000000000:75181974000;study_bounded_restore=1",
+      "input_sha256": {
+        "forecast_source": "49bd5418f2b13bdbf6d703f719d61075f814cc86d44c745651bf797f4e5f656c",
+        "static_mapping": "afc13d0f402e082dd83a65ee52222e91b41f2bb775a0694a34ac33dfe216becf",
+        "static_file_count": 7,
+        "dynamic_mapping": "afbe0eb800dd2c8bf608b6241c5f94349677e6036dd883045c7c42fb80cddd8a",
+        "dynamic_file_count": 4000,
+        "config_and_schedule": {
+          "config_ns3.properties": "8c46772c95c46ca99935dd68cf6957631972a2bb519acabe0880640408b0f4d4",
+          "schedule.csv": "888cbe8a34bc8b71b68497a7e150696ee493bfd01b206b8b928e176afb466109"
+        }
+      },
+      "primary": {
+        "manifest_path": "/tmp/predict-loss/leo10-forecast/manifest.json",
+        "manifest_sha256": "0d6b6d3f198abfa6d84bf0ffd5ae4a49c94d3fc865558c74489a18db07168038",
+        "status": "success",
+        "exit_code": 0,
+        "launch_repo_commit": "10a09ba35af2ce4fdaffdd77153408f24d614e38",
+        "launch_repo_dirty": true,
+        "runner_sha256": "4adecbf986fda81326f17fcd286b6262d84a24470fbd593f229ebb28cfce8acc",
+        "image_record_key": "image_digest",
+        "wall_seconds": 19.105935461000627,
+        "command": [
+          "/home/ubuntu/ns-3.48/build/scratch/main_satnet/ns3.48-main_satnet",
+          "--run_dir=/tmp/predict-loss/leo10-forecast"
+        ],
+        "environment": {
+          "CS30401_STUDY_TRACE": "1",
+          "CS30401_STUDY_TRACE_DIR": "/tmp/predict-loss/leo10-forecast/logs_ns3",
+          "LD_LIBRARY_PATH": "/home/ubuntu/ns-3.48/build/lib"
+        }
+      },
+      "replay": {
+        "manifest_path": "/tmp/predict-loss-replay/leo10-forecast/manifest.json",
+        "manifest_sha256": "00d02f05fae46bc76d08346f5c9a605fe540795718438f4a8f3d0eb3dbffa202",
+        "status": "success",
+        "exit_code": 0,
+        "launch_repo_commit": "0942d227394fb7d51bf3b3665897afd41d8e74ac",
+        "launch_repo_dirty": true,
+        "runner_sha256": "ecea49bff332186d340ca5b865c6486cfaf91099847967c4f017c173e8661c97",
+        "image_record_key": "declared_image_digest",
+        "wall_seconds": 17.7400243459997,
+        "command": [
+          "/home/ubuntu/ns-3.48/build/scratch/main_satnet/ns3.48-main_satnet",
+          "--run_dir=/tmp/predict-loss-replay/leo10-forecast"
+        ],
+        "environment": {
+          "CS30401_STUDY_TRACE": "1",
+          "CS30401_STUDY_TRACE_DIR": "/tmp/predict-loss-replay/leo10-forecast/logs_ns3",
+          "LD_LIBRARY_PATH": "/home/ubuntu/ns-3.48/build/lib"
+        }
+      },
+      "all_actual_csv_receipts_verified_in_both": true,
+      "all_runtime_receipts_verified_against_actual_in_both": true,
+      "all_state_receipts_verified_against_actual_in_both": true,
+      "runner_identity_equal": false,
+      "launch_commit_equal": false,
+      "csv_checks": [
+        {
+          "file": "logs_ns3/study_app_rx_node_1585_port_1024.csv",
+          "category": "measurement",
+          "primary_bytes": 14465567,
+          "replay_bytes": 14465567,
+          "primary_sha256": "bd7722c1cbb78f51335b6b181d55f2a2c10e427b2a4326a02c74b873712cb23d",
+          "replay_sha256": "bd7722c1cbb78f51335b6b181d55f2a2c10e427b2a4326a02c74b873712cb23d",
+          "byte_identical": true
+        },
+        {
+          "file": "logs_ns3/study_drop_coverage.csv",
+          "category": "measurement",
+          "primary_bytes": 1140184,
+          "replay_bytes": 1140184,
+          "primary_sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499",
+          "replay_sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499",
+          "byte_identical": true
+        },
+        {
+          "file": "logs_ns3/study_drops.csv",
+          "category": "measurement",
+          "primary_bytes": 53873,
+          "replay_bytes": 53873,
+          "primary_sha256": "9aca2d266ffc1b98cd56f7803d04bdc7d807e11e44d25952b6c1ede94b8ef02e",
+          "replay_sha256": "9aca2d266ffc1b98cd56f7803d04bdc7d807e11e44d25952b6c1ede94b8ef02e",
+          "byte_identical": true
+        },
+        {
+          "file": "logs_ns3/study_rx_node_1585_port_1024.csv",
+          "category": "measurement",
+          "primary_bytes": 19452445,
+          "replay_bytes": 19452445,
+          "primary_sha256": "4fb3a7e70c6e79f54007de46368fd1e303359ef2882e0a314587c9e02292b71c",
+          "replay_sha256": "4fb3a7e70c6e79f54007de46368fd1e303359ef2882e0a314587c9e02292b71c",
+          "byte_identical": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_cwnd.csv",
+          "category": "measurement",
+          "primary_bytes": 100679,
+          "replay_bytes": 100679,
+          "primary_sha256": "acf9286c1705fa2aa31eb56805f016c3793051f3d566bc91c87c151af2c5cace",
+          "replay_sha256": "acf9286c1705fa2aa31eb56805f016c3793051f3d566bc91c87c151af2c5cace",
+          "byte_identical": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_progress.csv",
+          "category": "measurement",
+          "primary_bytes": 1994229,
+          "replay_bytes": 1994229,
+          "primary_sha256": "4ce98bb78f4f26fbc697971d23cfc085d8a3e89ad6b378222900a20469794ca4",
+          "replay_sha256": "4ce98bb78f4f26fbc697971d23cfc085d8a3e89ad6b378222900a20469794ca4",
+          "byte_identical": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_rtt.csv",
+          "category": "measurement",
+          "primary_bytes": 2030657,
+          "replay_bytes": 2030657,
+          "primary_sha256": "5f7ed6085a55daca60bb23bb3df73b6098d879aa2005d8810d887b023080edc7",
+          "replay_sha256": "5f7ed6085a55daca60bb23bb3df73b6098d879aa2005d8810d887b023080edc7",
+          "byte_identical": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_study_events.csv",
+          "category": "measurement",
+          "primary_bytes": 5838,
+          "replay_bytes": 5838,
+          "primary_sha256": "501afe86f9f5921e07c5bf304f939ec1792d47769e22ca5453e4a5b40eae9349",
+          "replay_sha256": "501afe86f9f5921e07c5bf304f939ec1792d47769e22ca5453e4a5b40eae9349",
+          "byte_identical": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_study_packets.csv",
+          "category": "measurement",
+          "primary_bytes": 19843868,
+          "replay_bytes": 19843868,
+          "primary_sha256": "c63e5d869761f9b664e89e52833cf28a9b5b4a3fa4f834baf65842755ba61f1e",
+          "replay_sha256": "c63e5d869761f9b664e89e52833cf28a9b5b4a3fa4f834baf65842755ba61f1e",
+          "byte_identical": true
+        },
+        {
+          "file": "logs_ns3/tcp_flows.csv",
+          "category": "measurement",
+          "primary_bytes": 75,
+          "replay_bytes": 75,
+          "primary_sha256": "2fa7e654ea06e0f91745acd609b08a9daa37dffdcf01b8035c2ded8567a85017",
+          "replay_sha256": "2fa7e654ea06e0f91745acd609b08a9daa37dffdcf01b8035c2ded8567a85017",
+          "byte_identical": true
+        },
+        {
+          "file": "logs_ns3/timing_results.csv",
+          "category": "wall_clock_profile",
+          "primary_bytes": 561,
+          "replay_bytes": 561,
+          "primary_sha256": "a17fd947d047fc44144c738b3bc2495a5232627463df4ba8b362fe9138801b3e",
+          "replay_sha256": "3d2cb1b50e1f9026fddfc695a9c8105299e2a74847ccd22f6a7e514ea03648cf",
+          "byte_identical": false
+        },
+        {
+          "file": "schedule.csv",
+          "category": "input_schedule",
+          "primary_bytes": 133,
+          "replay_bytes": 133,
+          "primary_sha256": "888cbe8a34bc8b71b68497a7e150696ee493bfd01b206b8b928e176afb466109",
+          "replay_sha256": "888cbe8a34bc8b71b68497a7e150696ee493bfd01b206b8b928e176afb466109",
+          "byte_identical": true
+        }
+      ]
+    }
+  },
+  "comparison_method": "Hash every actual CSV declared by each completed manifest in its own container, require the actual CSV set to match the receipt, validate byte lengths/SHA256 against receipts, then compare the two validated hash maps. Runtime and every declared state-input file were also hashed in both containers.",
+  "limits": [
+    "Only these two declared conditions were replayed in a separate clean volume; the other eleven conditions were not replayed here.",
+    "This is deterministic artifact portability evidence, not statistical replication or a general performance claim.",
+    "Primary and replay launch commits, dirty flags, runner hashes, and manifest image-field names differ and are retained separately. Generated commands excluding run-directory paths, forecasts, inputs, patch and runtime files match.",
+    "timing_results.csv differs as expected for wall-clock profiling; all-CSV byte identity is false and both hashes are preserved.",
+    "Build logs and replay raw outputs remain in the retained replay container; this receipt contains no large raw traces. Full analysis JSON and figure regeneration were not performed here."
+  ],
+  "comparison_helper": {
+    "path": "/tmp/predict-loss-replay-raw-audit.py",
+    "sha256": "076c82d116adde7a7482afbdb1e069249dab92e1d4eb7d16ab8a49e5f68055ee",
+    "source_format": "LF UTF-8; same inline stdlib source used for both audits"
+  }
+}

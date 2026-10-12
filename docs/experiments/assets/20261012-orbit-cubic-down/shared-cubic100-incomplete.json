@@ -1,0 +1,210 @@
+{
+  "case": "cubic100-observed200",
+  "run_path": "/tmp/orbit-cubic-up/cubic100-observed200",
+  "status": "timeout",
+  "exit_code": null,
+  "wall_seconds": 240.101341081001,
+  "timeout_s": 240,
+  "baseline_complete": false,
+  "usable_for_completed_condition_comparison": false,
+  "csv_semantic_completeness_validated": false,
+  "policy_implemented": false,
+  "runtime_unchanged_after_run": true,
+  "source": {
+    "repo_commit": "58e51e3bd73076eb9a03efa7d9b829b8ef6fe79f",
+    "repo_dirty": true,
+    "runner_sha256": "33dfd3224a8de9029553a3cf9be99df99a1300da65dbfa3dff255cdea368736b",
+    "patch_sha256": "910aac06723fac851e46eb6522146d896a433a04b3a8464d46e5c4c72ff8fc78",
+    "installed_diff_sha256": "910aac06723fac851e46eb6522146d896a433a04b3a8464d46e5c4c72ff8fc78",
+    "ns3_head": "99bc6f733274475b7a6e804128651e17ee2a2536",
+    "image_ref": "ghcr.io/yeonjong21/cs30401-lab1@sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+    "build_receipt_sha256": "ee3ec0d98bae0016235fda3acd4fa16853b0ee825a2f16c5b27d7fa1e9a67cb5",
+    "runtime_files": {
+      "scratch/main_satnet/ns3.48-main_satnet": "ced722e32d9b075e8239a81725682261d7638d8e3c7d4f7a15d2a9f21cb47f3a",
+      "lib/libns3.48-antenna.so": "edf56f782f446d54291425c4b357fb2a609f64da3a3a88a2d48e18dbcf4200b8",
+      "lib/libns3.48-applications.so": "029ee91a59a88fd8cff0c865053f31dfc36f6cc6f10484ebb3843864025750ca",
+      "lib/libns3.48-basic-sim.so": "1c5acda2ef338025219228846bc98dbf22e0f327eacdca8c80088f7cc04b37c8",
+      "lib/libns3.48-bridge.so": "5c0e5f9092dc8a215a2d77aaa75ba0e3db181578566db25b9463cc220a94a1a0",
+      "lib/libns3.48-core.so": "5f6e271f0e98438059ac55c8dc5c94ee411050cb7cd7f23956963310674982a1",
+      "lib/libns3.48-flow-monitor.so": "5fbe40f2a843bf01f38b943a28377f7e9628b748506498298cfd6096c621b1ad",
+      "lib/libns3.48-internet-apps.so": "c31699838a1a449773562164af013663951dbd78c7b0e1bcddc4b451f2eaa6bc",
+      "lib/libns3.48-internet.so": "f0daaa7b06ca750dffedf6be9fcfd8954a0dce1056247e71f5f41ced562a99b6",
+      "lib/libns3.48-mobility.so": "45dc648f0ff11a8c83574fdea0dd189a35ccc606d625d3e3612afa3a6f806351",
+      "lib/libns3.48-network.so": "7930b3ed5f927eb731b7a010e5664ebd7927d1b25ecd2ef1f950857b434621b7",
+      "lib/libns3.48-point-to-point.so": "af4a8a6c3378e80fc6347fd77ad9c0bad5783eb34c2ea90e416f797b985e3f89",
+      "lib/libns3.48-satellite-network.so": "6c54072c67b2a2470abe2aca9f561d57093df69fa832ae2035753e2e52ebf907",
+      "lib/libns3.48-satellite.so": "68e7ce4d29d13efe374989d3279a8587bedb7a8104757938ab2c14605e3d4002",
+      "lib/libns3.48-stats.so": "ab02ae3cfe9c8453b6b251528884a678fe470cb1aac2e6500064a6fd44caf447",
+      "lib/libns3.48-traffic-control.so": "354fd4e2ef550af211e9abf272fd64b45818636c845b4876b606a0ffa6520d53"
+    },
+    "source_files": {
+      "README.md": "9410c52a8752a52d8714fec01e203327a1e14c5e963a07c05efe2a648046086d",
+      "build-receipt.json": "ee3ec0d98bae0016235fda3acd4fa16853b0ee825a2f16c5b27d7fa1e9a67cb5",
+      "install.py": "edee5646f3f036311c53ce7ab3266a5d98df61f9d44ddc8a4e61e77944afc161",
+      "ns3.patch": "910aac06723fac851e46eb6522146d896a433a04b3a8464d46e5c4c72ff8fc78",
+      "queue_observer.h": "651539400674bda010b7143d69b7cc8697a3287b18f889272245d50df2e900b4",
+      "run.py": "33dfd3224a8de9029553a3cf9be99df99a1300da65dbfa3dff255cdea368736b",
+      "service_observer.h": "5d1d5a4e0a13ff3b250708c138dc5e025e93d42bf867944e1923d8cb8f48be08"
+    },
+    "command": [
+      "/home/ubuntu/ns-3.48/build/scratch/main_satnet/ns3.48-main_satnet",
+      "--run_dir=/tmp/orbit-cubic-up/cubic100-observed200"
+    ],
+    "environment": {
+      "LD_LIBRARY_PATH": "/home/ubuntu/ns-3.48/build/lib",
+      "CS30401_STUDY_TRACE": "1",
+      "CS30401_STUDY_TRACE_DIR": "/tmp/orbit-cubic-up/cubic100-observed200/logs_ns3",
+      "CS30401_ORBIT_WINDOW_TRACE": "1",
+      "CS30401_ORBIT_QUEUE_TRACE": "1",
+      "CS30401_ORBIT_QUEUE_TRACE_DIR": "/tmp/orbit-cubic-up/cubic100-observed200/logs_ns3",
+      "CS30401_ORBIT_SERVICE_TRACE": "1"
+    },
+    "config_sha256": "4cf593f0956ca4d1c4a7b9fc9722ae88aed27a02b0b552b924233b437834e90f",
+    "schedule_sha256": "e6cde3aa7716856e46d24c3833354df90407313ece13a5ffbd1b789fa4fea23c",
+    "path_truth_sha256": "49bd5418f2b13bdbf6d703f719d61075f814cc86d44c745651bf797f4e5f656c"
+  },
+  "definition": {
+    "kind": "leo",
+    "cc": "TcpCubic",
+    "rate": 100,
+    "queue": 100,
+    "duration": 200,
+    "max_bytes": 100000000000,
+    "start_s": 0,
+    "observe": true,
+    "scale_up": false
+  },
+  "manifest_source": {
+    "path": "/tmp/orbit-cubic-up/cubic100-observed200/manifest.json",
+    "sha256": "7f5819f77f773c53582cec0cc1fa738dbb5bf9a4786f97c87b30993f0e4faed2",
+    "bytes": 422346
+  },
+  "partial_file_hash_checks": [
+    {
+      "path": "/tmp/orbit-cubic-up/cubic100-observed200/config_ns3.properties",
+      "bytes": 615,
+      "sha256": "4cf593f0956ca4d1c4a7b9fc9722ae88aed27a02b0b552b924233b437834e90f",
+      "manifest_match": true
+    },
+    {
+      "path": "/tmp/orbit-cubic-up/cubic100-observed200/console.txt",
+      "bytes": 5350,
+      "sha256": "4357d9f3ea7adf5d82e04d46977afcc55135269afc72818fda55cacc0315727e",
+      "manifest_match": true
+    },
+    {
+      "path": "/tmp/orbit-cubic-up/cubic100-observed200/logs_ns3/finished.txt",
+      "bytes": 3,
+      "sha256": "31375587f8bedb1f33f6eca3d8cee94ab70845a6dd1a7c7eeb929f4aa7dc10ab",
+      "manifest_match": true
+    },
+    {
+      "path": "/tmp/orbit-cubic-up/cubic100-observed200/logs_ns3/orbit_coverage.csv",
+      "bytes": 1398438,
+      "sha256": "7785a349bbcd58d321430e5454d4e7193dfc4ed7766e00af84b503fa6bafef9c",
+      "manifest_match": true
+    },
+    {
+      "path": "/tmp/orbit-cubic-up/cubic100-observed200/logs_ns3/orbit_drops.csv",
+      "bytes": 16383,
+      "sha256": "b9013bc51c7d1dcbd28af7f1b45c2924e03fb8a76e05796072cc3431206d6f9e",
+      "manifest_match": true
+    },
+    {
+      "path": "/tmp/orbit-cubic-up/cubic100-observed200/logs_ns3/orbit_queue_bins.csv",
+      "bytes": 2482876,
+      "sha256": "99fc4dfaca07fd0a1b9d712fbc41f63589c84e6956d06a6bc032f6d471165bc8",
+      "manifest_match": true
+    },
+    {
+      "path": "/tmp/orbit-cubic-up/cubic100-observed200/logs_ns3/orbit_queue_pending.csv",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "manifest_match": true
+    },
+    {
+      "path": "/tmp/orbit-cubic-up/cubic100-observed200/logs_ns3/orbit_service_bins.csv",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "manifest_match": true
+    },
+    {
+      "path": "/tmp/orbit-cubic-up/cubic100-observed200/logs_ns3/orbit_service_coverage.csv",
+      "bytes": 286795,
+      "sha256": "b35e873e45610c9b9be816b10fee236a38847270d3ee12d0f5f4827ba6a6c701",
+      "manifest_match": true
+    },
+    {
+      "path": "/tmp/orbit-cubic-up/cubic100-observed200/logs_ns3/orbit_window.csv",
+      "bytes": 3712441,
+      "sha256": "4127b4622318d92f288e73a4002945d52d3c680e8c7eb9614c024fe534ed11a8",
+      "manifest_match": true
+    },
+    {
+      "path": "/tmp/orbit-cubic-up/cubic100-observed200/logs_ns3/study_app_rx_node_1585_port_1024.csv",
+      "bytes": 109715208,
+      "sha256": "7d85fefc43caf0c21c3ae8312c75507f8b2ddc900387f11d96720b01a647c391",
+      "manifest_match": true
+    },
+    {
+      "path": "/tmp/orbit-cubic-up/cubic100-observed200/logs_ns3/study_drop_coverage.csv",
+      "bytes": 1140184,
+      "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499",
+      "manifest_match": true
+    },
+    {
+      "path": "/tmp/orbit-cubic-up/cubic100-observed200/logs_ns3/study_drops.csv",
+      "bytes": 24581,
+      "sha256": "f887fc38560c9cd08528025b065824a42cdb07c314ebbcb4dfdc6521fc98fda5",
+      "manifest_match": true
+    },
+    {
+      "path": "/tmp/orbit-cubic-up/cubic100-observed200/logs_ns3/study_rx_node_1585_port_1024.csv",
+      "bytes": 144312907,
+      "sha256": "554ac54bb56f5cf7d678299ec0855a5a7ce382917c6075d4abfb237096ae6e55",
+      "manifest_match": true
+    },
+    {
+      "path": "/tmp/orbit-cubic-up/cubic100-observed200/logs_ns3/tcp_flow_0_cwnd.csv",
+      "bytes": 218276,
+      "sha256": "74d97d6ba4b5a9ec295f9197a130468cb775d1bd45aafc352c383ce882b64032",
+      "manifest_match": true
+    },
+    {
+      "path": "/tmp/orbit-cubic-up/cubic100-observed200/logs_ns3/tcp_flow_0_progress.csv",
+      "bytes": 15157105,
+      "sha256": "9a59754c927bbd1bb6dc988f57800272d4abc5cee95172748667bc18d7d02942",
+      "manifest_match": true
+    },
+    {
+      "path": "/tmp/orbit-cubic-up/cubic100-observed200/logs_ns3/tcp_flow_0_rtt.csv",
+      "bytes": 14228592,
+      "sha256": "809346b17956eafa498417c580b66a75e019a4b25d2ed609ea2fdc3b6a2dc615",
+      "manifest_match": true
+    },
+    {
+      "path": "/tmp/orbit-cubic-up/cubic100-observed200/logs_ns3/tcp_flow_0_study_events.csv",
+      "bytes": 63,
+      "sha256": "205548a203e3aceecc990209b237207a210b37e9c49af6a9cb35b04763aab4e1",
+      "manifest_match": true
+    },
+    {
+      "path": "/tmp/orbit-cubic-up/cubic100-observed200/logs_ns3/tcp_flow_0_study_packets.csv",
+      "bytes": 143737492,
+      "sha256": "28235f596033b06143f3a00f05b867ac8cd9beb877a150163ccd1417b6da5214",
+      "manifest_match": true
+    },
+    {
+      "path": "/tmp/orbit-cubic-up/cubic100-observed200/schedule.csv",
+      "bytes": 29,
+      "sha256": "e6cde3aa7716856e46d24c3833354df90407313ece13a5ffbd1b789fa4fea23c",
+      "manifest_match": true
+    }
+  ],
+  "limits": [
+    "Wall cap timeout is a failed/incomplete attempt, not a completed 200-second baseline or a controller result.",
+    "Partial raw logs may lack final flush/closure, complete CSV formatting or final queue/pending conservation records. No app/goodput/drop-window values are extracted from this failed attempt.",
+    "Byte/SHA agreement with the failed manifest verifies preservation only; it does not validate semantic completeness.",
+    "No automatic rerun, longer cap, added topology, controller implementation or parameter sweep is performed."
+  ]
+}

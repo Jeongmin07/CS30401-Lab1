@@ -1,0 +1,56 @@
+[0/2] Re-checking globbed directories...
+[1/4] Building CXX object scratch/CMakeFiles/scratch_main_satnet_main_satnet.dir/main_satnet/main_satnet.cc.o
+In file included from /home/ubuntu/ns-3.48/scratch/main_satnet/main_satnet.cc:47:
+/home/ubuntu/ns-3.48/scratch/main_satnet/backpressure.h: In function ‘void ns3::backpressure::Fields(std::ostream&, const Identity&)’:
+/home/ubuntu/ns-3.48/scratch/main_satnet/backpressure.h:45:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   45 |     if(id.tagged)out << id.flow;out << ',';if(id.tagged)out << id.tx;
+      |     ^~
+/home/ubuntu/ns-3.48/scratch/main_satnet/backpressure.h:45:33: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   45 |     if(id.tagged)out << id.flow;out << ',';if(id.tagged)out << id.tx;
+      |                                 ^~~
+/home/ubuntu/ns-3.48/scratch/main_satnet/backpressure.h: In function ‘void ns3::backpressure::Verify()’:
+/home/ubuntu/ns-3.48/scratch/main_satnet/backpressure.h:76:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   76 |     if(verified)return;verified=true;
+      |     ^~
+/home/ubuntu/ns-3.48/scratch/main_satnet/backpressure.h:76:24: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   76 |     if(verified)return;verified=true;
+      |                        ^~~~~~~~
+/home/ubuntu/ns-3.48/scratch/main_satnet/backpressure.h: In function ‘void ns3::backpressure::Ingress(ns3::Ptr<ns3::NetDevice>, uint32_t, ns3::Ptr<const ns3::QueueDiscItem>)’:
+/home/ubuntu/ns-3.48/scratch/main_satnet/backpressure.h:85:5: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   85 |     if(target!=device)return;Verify();NS_ABORT_MSG_IF(txq!=0,"Unexpected source transmit queue");
+      |     ^~
+/home/ubuntu/ns-3.48/scratch/main_satnet/backpressure.h:85:30: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   85 |     if(target!=device)return;Verify();NS_ABORT_MSG_IF(txq!=0,"Unexpected source transmit queue");
+      |                              ^~~~~~
+In file included from /home/ubuntu/ns-3.48/src/core/model/attribute-helper.h:11,
+                 from /home/ubuntu/ns-3.48/src/core/model/nstime.h:12,
+                 from /home/ubuntu/ns-3.48/src/core/model/event-id.h:12,
+                 from /home/ubuntu/ns-3.48/build/include/ns3/event-id.h:1,
+                 from /home/ubuntu/ns-3.48/src/core/helper/event-garbage-collector.h:11,
+                 from /home/ubuntu/ns-3.48/build/include/ns3/event-garbage-collector.h:1,
+                 from /home/ubuntu/ns-3.48/build/include/ns3/core-module.h:9,
+                 from /home/ubuntu/ns-3.48/contrib/basic-sim/model/core/basic-simulation.h:38,
+                 from /home/ubuntu/ns-3.48/build/include/ns3/basic-simulation.h:1,
+                 from /home/ubuntu/ns-3.48/scratch/main_satnet/main_satnet.cc:33:
+/home/ubuntu/ns-3.48/scratch/main_satnet/backpressure.h: In function ‘ns3::backpressure::Entry& ns3::backpressure::Find(ns3::Ptr<const ns3::Packet>)’:
+/home/ubuntu/ns-3.48/scratch/main_satnet/backpressure.h:94:156: warning: comparison of integer expressions of different signedness: ‘int64_t’ {aka ‘long int’} and ‘uint64_t’ {aka ‘long unsigned int’} [-Wsign-compare]
+   94 |     NS_ABORT_MSG_IF(tagged!=it->second.id.tagged || (tagged && (tag.GetFlowId()!=it->second.id.flow || tag.GetTxId()!=it->second.id.tx || tag.GetTxTimeNs()!=it->second.id.txTime)),"Source transmission tag changed");
+      |                                                                                                                                           ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+/home/ubuntu/ns-3.48/src/core/model/abort.h:100:13: note: in definition of macro ‘NS_ABORT_MSG_IF’
+  100 |         if (cond)                                                                                  \
+      |             ^~~~
+/home/ubuntu/ns-3.48/scratch/main_satnet/backpressure.h: In member function ‘virtual bool ns3::backpressure::FirstOriginalDrop::DoCorrupt(ns3::Ptr<ns3::Packet>)’:
+/home/ubuntu/ns-3.48/scratch/main_satnet/backpressure.h:131:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  131 |         if(!firstReady || physicalDropFired)return false;TcpStudyTxTag tag;
+      |         ^~
+/home/ubuntu/ns-3.48/scratch/main_satnet/backpressure.h:131:58: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  131 |         if(!firstReady || physicalDropFired)return false;TcpStudyTxTag tag;
+      |                                                          ^~~~~~~~~~~~~
+/home/ubuntu/ns-3.48/scratch/main_satnet/backpressure.h:132:134: warning: comparison of integer expressions of different signedness: ‘int64_t’ {aka ‘long int’} and ‘uint64_t’ {aka ‘long unsigned int’} [-Wsign-compare]
+  132 |         if(!packet->PeekPacketTag(tag) || tag.GetFlowId()!=firstOriginal.flow || tag.GetTxId()!=firstOriginal.tx || tag.GetTxTimeNs()!=firstOriginal.txTime)return false;
+      |                                                                                                                     ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+[2/4] Linking CXX executable /home/ubuntu/ns-3.48/build/scratch/main_satnet/ns3.48-main_satnet
+[3/4] Building CXX object scratch/CMakeFiles/scratch_study_micro_study_micro.dir/study_micro/study_micro.cc.o
+[4/4] Linking CXX executable /home/ubuntu/ns-3.48/build/scratch/study_micro/ns3.48-study_micro
+Finished executing the following commands:
+/usr/bin/cmake --build /home/ubuntu/ns-3.48/cmake-cache -j 1

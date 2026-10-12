@@ -1,0 +1,83 @@
+{
+  "baseline_csv_hashes": [
+    {
+      "file": "study_app_rx_node_1_port_1024.csv",
+      "old_sha256": "b35c9ac46bde2331da713fba1846eeb718c907027d0bb2f050acdf2fbca75b5e",
+      "new_sha256": "b35c9ac46bde2331da713fba1846eeb718c907027d0bb2f050acdf2fbca75b5e",
+      "identical": true
+    },
+    {
+      "file": "study_drop_coverage.csv",
+      "old_sha256": "f2bbce727ae1f61019ef8f727753e3a8f64abdeb41d660a20a3607802f4524f4",
+      "new_sha256": "f2bbce727ae1f61019ef8f727753e3a8f64abdeb41d660a20a3607802f4524f4",
+      "identical": true
+    },
+    {
+      "file": "study_drops.csv",
+      "old_sha256": "e875ed492bd803c301bd18a29514bca50a6edfe104a69a85ae1ec68003bac35c",
+      "new_sha256": "e875ed492bd803c301bd18a29514bca50a6edfe104a69a85ae1ec68003bac35c",
+      "identical": true
+    },
+    {
+      "file": "study_rx_node_1_port_1024.csv",
+      "old_sha256": "cb432b3cd841713975a574fc6919f5cf0812185846599bdd17182cccacd11e5a",
+      "new_sha256": "cb432b3cd841713975a574fc6919f5cf0812185846599bdd17182cccacd11e5a",
+      "identical": true
+    },
+    {
+      "file": "tcp_flow_0_cwnd.csv",
+      "old_sha256": "ceb39256e8a1e4c940cb3f597b7e200596f2e9ff1f9ac9a0a5075021e8262630",
+      "new_sha256": "ceb39256e8a1e4c940cb3f597b7e200596f2e9ff1f9ac9a0a5075021e8262630",
+      "identical": true
+    },
+    {
+      "file": "tcp_flow_0_progress.csv",
+      "old_sha256": "b583a1b2888476107f8d65535c480fa872d89ef79c7b12c3cdb4380249a86e98",
+      "new_sha256": "b583a1b2888476107f8d65535c480fa872d89ef79c7b12c3cdb4380249a86e98",
+      "identical": true
+    },
+    {
+      "file": "tcp_flow_0_rtt.csv",
+      "old_sha256": "f46faf24fbfea5e839643bcebcbd4b6f10073f725ed5a139f993b2c823b14278",
+      "new_sha256": "f46faf24fbfea5e839643bcebcbd4b6f10073f725ed5a139f993b2c823b14278",
+      "identical": true
+    },
+    {
+      "file": "tcp_flow_0_study_events.csv",
+      "old_sha256": "3038a5be2c89948a5724671c2c638a3c408f7828393d6a2513b0a6e6e636863e",
+      "new_sha256": "3038a5be2c89948a5724671c2c638a3c408f7828393d6a2513b0a6e6e636863e",
+      "identical": true
+    },
+    {
+      "file": "tcp_flow_0_study_packets.csv",
+      "old_sha256": "9774112da74ac364fbe1421ae7d2f532b3e0450cf2f32d874f6362b9043bd6e6",
+      "new_sha256": "9774112da74ac364fbe1421ae7d2f532b3e0450cf2f32d874f6362b9043bd6e6",
+      "identical": true
+    }
+  ],
+  "all_baseline_measurement_equal": true,
+  "policy": [
+    {
+      "epoch_ns": 150000000,
+      "start_ns": 200477440,
+      "end_ns": 207108958,
+      "deadline_ns": 207108958,
+      "duration_s": 0.006631518,
+      "end_event": "COHORT_DEADLINE",
+      "deferred_sequences": [
+        1
+      ]
+    }
+  ],
+  "baseline_fct_s": 0.25150992,
+  "selective_fct_s": 0.3504824,
+  "selective_first_retx_ns": 207108958,
+  "true_loss_wait_ns": 6631518,
+  "fct_delta_s": 0.09897248000000003,
+  "tail_original_seq": 26221,
+  "tail_original_tx_ns": 300367680,
+  "qualification": "A bounded retransmission wait does not bound total finite-flow FCT change; PRR/ACK timing changes the unsent tail schedule.",
+  "assert_build_settings": [
+    "NS3_ASSERT:BOOL=OFF"
+  ]
+}

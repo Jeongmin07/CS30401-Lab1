@@ -1,0 +1,90 @@
+{
+  "checked_date_utc": "2026-10-12",
+  "method": "Primary author paper, RFC Editor documents, and official project/template documentation. No secondary source is used for technical claims.",
+  "references": [
+    {
+      "key": "hypatia",
+      "authors": ["Simon Kassing", "Debopam Bhattacherjee", "Andre Baptista Aguas", "Jens Eirik Saethre", "Ankit Singla"],
+      "title": "Exploring the Internet from space with Hypatia",
+      "venue": "ACM Internet Measurement Conference",
+      "year": 2020,
+      "pages": "214-229",
+      "doi": "10.1145/3419394.3423635",
+      "url": "https://bdebopam.github.io/papers/imc2020-hypatia.pdf",
+      "use": "Packet-level LEO simulation, predictable route changes, route-shortening reordering and false loss inference are prior observations."
+    },
+    {
+      "key": "cubic",
+      "authors": ["L. Xu", "S. Ha", "I. Rhee", "V. Goel", "L. Eggert"],
+      "title": "CUBIC for Fast and Long-Distance Networks",
+      "venue": "RFC 9438",
+      "year": 2023,
+      "url": "https://www.rfc-editor.org/rfc/rfc9438.html",
+      "use": "CUBIC relevance and standardized congestion-control design; not equivalence of the course recovery stack to all current Linux implementations."
+    },
+    {
+      "key": "ncr",
+      "authors": ["S. Bhandarkar", "A. L. N. Reddy", "M. Allman", "E. Blanton"],
+      "title": "Improving the Robustness of TCP to Non-Congestion Events",
+      "venue": "RFC 4653",
+      "year": 2006,
+      "url": "https://www.rfc-editor.org/rfc/rfc4653.html",
+      "use": "Prior loss-decision delay and Extended Limited Transmit; the prototype does not implement TCP-NCR wholesale."
+    },
+    {
+      "key": "rack",
+      "authors": ["Y. Cheng", "N. Cardwell", "N. Dukkipati", "P. Jha"],
+      "title": "The RACK-TLP Loss Detection Algorithm for TCP",
+      "venue": "RFC 8985",
+      "year": 2021,
+      "url": "https://www.rfc-editor.org/rfc/rfc8985.html",
+      "use": "Prior transmission-time evidence and probing; no RACK-TLP implementation or Linux performance comparison is claimed."
+    },
+    {
+      "key": "prr",
+      "authors": ["M. Mathis", "N. Dukkipati", "Y. Cheng"],
+      "title": "Proportional Rate Reduction for TCP",
+      "venue": "RFC 6937",
+      "year": 2013,
+      "url": "https://www.rfc-editor.org/rfc/rfc6937.html",
+      "use": "Native recovery transmission accounting is preserved."
+    },
+    {
+      "key": "sack",
+      "authors": ["E. Blanton", "M. Allman", "L. Wang", "I. Jarvinen", "M. Kojo", "Y. Nishida"],
+      "title": "A Conservative Loss Recovery Algorithm Based on Selective Acknowledgment (SACK) for TCP",
+      "venue": "RFC 6675",
+      "year": 2012,
+      "url": "https://www.rfc-editor.org/rfc/rfc6675.html",
+      "use": "Packet-count presumed-loss evidence and SACK recovery background."
+    },
+    {
+      "key": "codel",
+      "authors": ["K. Nichols", "V. Jacobson", "A. McGregor", "J. Iyengar"],
+      "title": "Controlled Delay Active Queue Management",
+      "venue": "RFC 8289",
+      "year": 2018,
+      "url": "https://www.rfc-editor.org/rfc/rfc8289.html",
+      "use": "CoDel's existing sojourn-time AQM mechanism; tested fixed defaults do not establish general CoDel inferiority."
+    },
+    {
+      "key": "ns3",
+      "authors": ["ns-3 Project"],
+      "title": "TCP models and TcpSocketState pacing attributes",
+      "url": "https://www.nsnam.org/docs/models/html/tcp.html",
+      "verified_class_reference": "https://www.nsnam.org/docs/doxygen/d4/d00/classns3_1_1_tcp_socket_state.html",
+      "qualification": "Model-library opening failed during reference verification; primary search text and official class attributes were inspected. The pinned course source controls actual evaluated behavior."
+    }
+  ],
+  "template": {
+    "official_author_instructions": "https://conferences.ieeeauthorcenter.ieee.org/write-your-paper/authoring-tools-and-templates/",
+    "maintained_class": "https://ctan.org/texarchive/macros/latex/contrib/IEEEtran",
+    "compiled_class": "IEEEtran 1.8b conference, 10 point, US letter, unchanged default margins"
+  },
+  "claims_excluded": [
+    "The reordering phenomenon is newly discovered.",
+    "The final segment allowance implements RACK-TLP or TCP-NCR.",
+    "The course ns-3 stack represents every modern TCP implementation.",
+    "The known-capacity pacing comparison establishes independent stock-plus-pacing gains or deployment-wide safety."
+  ]
+}

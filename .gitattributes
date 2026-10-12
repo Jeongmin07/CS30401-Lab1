@@ -1,0 +1,60 @@
+# Preserve byte receipts when these experiments are checked out on another OS.
+code/orbit-bdp/** -text whitespace=cr-at-eol
+code/orbit-probe/** -text whitespace=cr-at-eol
+code/orbit-hystart/** -text whitespace=cr-at-eol
+docs/experiments/assets/20261012-orbit-bdp/** -text whitespace=cr-at-eol
+docs/experiments/assets/20261012-orbit-probe/** -text whitespace=cr-at-eol
+docs/experiments/assets/20261012-orbit-hystart/** -text whitespace=cr-at-eol
+docs/experiments/assets/20261012-orbit-order/** -text whitespace=cr-at-eol
+docs/experiments/assets/20261012-parallel-candidates/** -text whitespace=cr-at-eol
+docs/experiments/20261012-orbit-bdp.md -text whitespace=cr-at-eol
+docs/experiments/20261012-orbit-probe.md -text whitespace=cr-at-eol
+docs/experiments/20261012-orbit-hystart.md -text whitespace=cr-at-eol
+code/orbit-bdp/*.patch whitespace=-blank-at-eol,cr-at-eol
+code/orbit-probe/*.patch whitespace=-blank-at-eol,cr-at-eol
+code/orbit-hystart/*.patch whitespace=-blank-at-eol,cr-at-eol
+
+# Keep the new diagnostic and geometry receipts identical on every notebook.
+code/orbit-geometry/** -text whitespace=cr-at-eol
+code/orbit-cubic-up/** -text whitespace=cr-at-eol
+code/orbit-cubic-down/** -text whitespace=cr-at-eol
+code/orbit-loss/** -text whitespace=cr-at-eol
+docs/experiments/assets/20261012-orbit-cubic-up/** -text whitespace=cr-at-eol
+docs/experiments/assets/20261012-orbit-cubic-down/** -text whitespace=cr-at-eol
+docs/experiments/assets/20261012-orbit-loss/** -text whitespace=cr-at-eol
+docs/experiments/assets/20261012-three-followups/** -text whitespace=cr-at-eol
+code/orbit-tail/** -text whitespace=cr-at-eol
+code/orbit-queue/** -text whitespace=cr-at-eol
+docs/experiments/assets/20261013-orbit-tail/** -text whitespace=cr-at-eol
+docs/experiments/assets/20261013-orbit-queue/** -text whitespace=cr-at-eol
+docs/experiments/assets/20261013-tail-and-queue/** -text whitespace=cr-at-eol
+code/orbit-tail/*.patch whitespace=-blank-at-eol,cr-at-eol
+code/orbit-queue/*.patch whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+code/orbit-cubic-up/*.patch whitespace=-blank-at-eol,cr-at-eol
+code/orbit-loss/*.patch whitespace=-blank-at-eol,cr-at-eol
+# Actual build/console logs retain emitted spaces for their SHA receipts.
+docs/experiments/assets/20261013-orbit-tail/**/*.txt -whitespace
+docs/experiments/assets/20261013-orbit-queue/**/*.txt -whitespace
+code/queue-pacing/** -text whitespace=cr-at-eol
+code/queue-metrics/** -text whitespace=cr-at-eol
+code/queue-backpressure/** -text whitespace=cr-at-eol
+docs/experiments/assets/20261013-queue-pacing/** -text whitespace=cr-at-eol
+docs/experiments/assets/20261013-queue-backpressure/** -text whitespace=cr-at-eol
+docs/experiments/assets/20261013-queue-mitigation/** -text whitespace=cr-at-eol
+code/queue-pacing/*.patch whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+code/queue-backpressure/*.patch whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+docs/experiments/assets/20261013-queue-pacing/**/*.txt -whitespace
+docs/experiments/assets/20261013-queue-backpressure/**/*.txt -whitespace
+code/queue-pacing/development-initial/*.txt -whitespace
+code/queue-backpressure/development-initial/*.txt -whitespace
+docs/experiments/assets/20261013-queue-pacing/**/*.log -whitespace
+docs/experiments/assets/20261013-queue-backpressure/**/*.log -whitespace
+code/queue-backpressure/development-initial/*.patch whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+code/lab1-final/** -text whitespace=cr-at-eol
+code/lab1-final/**/*.patch whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+docs/experiments/assets/20261013-final-reproduction/** -text whitespace=cr-at-eol
+docs/experiments/assets/20261013-finalization/** -text whitespace=cr-at-eol
+docs/experiments/assets/20261013-report-facts/** -text whitespace=cr-at-eol
+docs/experiments/assets/20261013-final-reproduction/**/*.txt -whitespace
+docs/experiments/assets/20261013-final-reproduction/**/*.log -whitespace
+docs/experiments/assets/20261013-final-reproduction/**/*.patch -whitespace

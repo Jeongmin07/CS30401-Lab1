@@ -1,0 +1,890 @@
+{
+  "schema_version": 1,
+  "tool": {
+    "path": "/work/code/orbit-tail/compare.py",
+    "bytes": 9571,
+    "sha256": "48e9864c5030a6e31cb95711d211134d57c599d9c906ad5878b24be03e3b082b"
+  },
+  "inputs": [
+    {
+      "path": "/tmp/orbit-tail-final-export/cases/leo10-base/summary.json",
+      "bytes": 19517,
+      "sha256": "25acc55e1c98bc1685fccb0d30220e312834d852437327e4cc75f8150764c267"
+    },
+    {
+      "path": "/tmp/orbit-tail-final-export/cases/leo10-drop-base/summary.json",
+      "bytes": 21902,
+      "sha256": "a186cfadfb1e1b25f948ccfb1ced4964712c1ccfac2e53345399270c1a0c9b6c"
+    },
+    {
+      "path": "/tmp/orbit-tail-final-export/cases/leo10-drop-tail/summary.json",
+      "bytes": 31798,
+      "sha256": "9e4ba5bcc343f6c5367b6280bb917e36a63659ea4a9a0eccff1da61b36f21b4f"
+    },
+    {
+      "path": "/tmp/orbit-tail-final-export/cases/leo10-selective/summary.json",
+      "bytes": 27070,
+      "sha256": "348f9de05501cd7102b016ff009a2a38a33b392360a8c26ceb75b8bba739cc68"
+    },
+    {
+      "path": "/tmp/orbit-tail-final-export/cases/leo10-tail/summary.json",
+      "bytes": 28779,
+      "sha256": "127fd5ea373358339bb2701ab047d62fbc7061dbbfc3d2f5998ff25018cd1e22"
+    },
+    {
+      "path": "/tmp/orbit-tail-final-export/cases/micro-base/summary.json",
+      "bytes": 12099,
+      "sha256": "6b04dafa8bb388431f7774316b8fb1225193e585878dafb5c4fd99e9ec8c74ad"
+    },
+    {
+      "path": "/tmp/orbit-tail-final-export/cases/micro-selective/summary.json",
+      "bytes": 19696,
+      "sha256": "2c8595134dc1cb6dbbccbca7a697072c2d37175de539131f7b328a797bfcb0d5"
+    },
+    {
+      "path": "/tmp/orbit-tail-final-export/cases/micro-tail/summary.json",
+      "bytes": 24827,
+      "sha256": "d355aa8acd9ce87d97039a89c4fb533d6f54eb579695b919aa34eae262d2bb66"
+    },
+    {
+      "path": "/tmp/orbit-tail-final-export/cases/micro21-selective/summary.json",
+      "bytes": 19771,
+      "sha256": "d6aa2c0dc03841947c2df442dcfe740ed84422dc1739d1cf1e16e54ed8b375d1"
+    },
+    {
+      "path": "/tmp/orbit-tail-final-export/cases/micro21-tail/summary.json",
+      "bytes": 23949,
+      "sha256": "776da4d5a5b7be267b9c259b2ff7b26d8f8cb8792fd5ab38c74a2aaae157b24e"
+    }
+  ],
+  "conditions": 10,
+  "not_statistical_replicates": true,
+  "final_patch_sha256": "5b847bbafe8d950072b5bc34e0420da8f7f1c860bc7fcc94c3c3ab8b37bb4d29",
+  "all_runtime_files_equal": true,
+  "phase": "Post-simulation extension: explicit zero-admission trajectory checks and prior injected selective control; launch helper preserved separately",
+  "launch_compare_tool": {
+    "path": "/work/code/orbit-tail/compare-at-launch.py",
+    "bytes": 8259,
+    "sha256": "c4e70b7f8f1ac92292ec3c84e341ffae6a9fe8d7e13ff9204d5b94fc7145934c"
+  },
+  "source_commits": [
+    "46d881046f76b93e5ae33f60bf638acc26ee5ff1",
+    "66b2409f722bc68e3a4973254ceb599c3d6b5892"
+  ],
+  "historical_off_controls": [
+    {
+      "case": "micro-base",
+      "previous_case": "micro-base",
+      "source": {
+        "path": "/work/docs/experiments/assets/20261012-orbit-loss/final/cases/micro-base/summary.json",
+        "bytes": 12082,
+        "sha256": "a26f61b9d90950bcf3e39362eb40a6a8b665d7101305dc05e5be008aeaa20202"
+      },
+      "checks": [
+        {
+          "file": "logs_ns3/study_app_rx_node_1_port_1024.csv",
+          "old_sha256": "b35c9ac46bde2331da713fba1846eeb718c907027d0bb2f050acdf2fbca75b5e",
+          "actual_sha256": "b35c9ac46bde2331da713fba1846eeb718c907027d0bb2f050acdf2fbca75b5e",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/study_drop_coverage.csv",
+          "old_sha256": "f2bbce727ae1f61019ef8f727753e3a8f64abdeb41d660a20a3607802f4524f4",
+          "actual_sha256": "f2bbce727ae1f61019ef8f727753e3a8f64abdeb41d660a20a3607802f4524f4",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/study_drops.csv",
+          "old_sha256": "e875ed492bd803c301bd18a29514bca50a6edfe104a69a85ae1ec68003bac35c",
+          "actual_sha256": "e875ed492bd803c301bd18a29514bca50a6edfe104a69a85ae1ec68003bac35c",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/study_rx_node_1_port_1024.csv",
+          "old_sha256": "cb432b3cd841713975a574fc6919f5cf0812185846599bdd17182cccacd11e5a",
+          "actual_sha256": "cb432b3cd841713975a574fc6919f5cf0812185846599bdd17182cccacd11e5a",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_cwnd.csv",
+          "old_sha256": "ceb39256e8a1e4c940cb3f597b7e200596f2e9ff1f9ac9a0a5075021e8262630",
+          "actual_sha256": "ceb39256e8a1e4c940cb3f597b7e200596f2e9ff1f9ac9a0a5075021e8262630",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_progress.csv",
+          "old_sha256": "b583a1b2888476107f8d65535c480fa872d89ef79c7b12c3cdb4380249a86e98",
+          "actual_sha256": "b583a1b2888476107f8d65535c480fa872d89ef79c7b12c3cdb4380249a86e98",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_rtt.csv",
+          "old_sha256": "f46faf24fbfea5e839643bcebcbd4b6f10073f725ed5a139f993b2c823b14278",
+          "actual_sha256": "f46faf24fbfea5e839643bcebcbd4b6f10073f725ed5a139f993b2c823b14278",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_study_events.csv",
+          "old_sha256": "3038a5be2c89948a5724671c2c638a3c408f7828393d6a2513b0a6e6e636863e",
+          "actual_sha256": "3038a5be2c89948a5724671c2c638a3c408f7828393d6a2513b0a6e6e636863e",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_study_packets.csv",
+          "old_sha256": "9774112da74ac364fbe1421ae7d2f532b3e0450cf2f32d874f6362b9043bd6e6",
+          "actual_sha256": "9774112da74ac364fbe1421ae7d2f532b3e0450cf2f32d874f6362b9043bd6e6",
+          "equal": true
+        }
+      ],
+      "excluded_wall_profiling": []
+    },
+    {
+      "case": "micro-selective",
+      "previous_case": "micro-selective",
+      "source": {
+        "path": "/work/docs/experiments/assets/20261012-orbit-loss/final/cases/micro-selective/summary.json",
+        "bytes": 18726,
+        "sha256": "d804ca9a26eb6245b676b4dd7905cdb6dc25b78d2f56926d1316c34faeeb777e"
+      },
+      "checks": [
+        {
+          "file": "logs_ns3/study_app_rx_node_1_port_1024.csv",
+          "old_sha256": "68282cab648ac5c1f1614dc8a9e324de04dfdce1fe96588313e66fc879de6ff4",
+          "actual_sha256": "68282cab648ac5c1f1614dc8a9e324de04dfdce1fe96588313e66fc879de6ff4",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/study_drop_coverage.csv",
+          "old_sha256": "f2bbce727ae1f61019ef8f727753e3a8f64abdeb41d660a20a3607802f4524f4",
+          "actual_sha256": "f2bbce727ae1f61019ef8f727753e3a8f64abdeb41d660a20a3607802f4524f4",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/study_drops.csv",
+          "old_sha256": "e875ed492bd803c301bd18a29514bca50a6edfe104a69a85ae1ec68003bac35c",
+          "actual_sha256": "e875ed492bd803c301bd18a29514bca50a6edfe104a69a85ae1ec68003bac35c",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/study_rx_node_1_port_1024.csv",
+          "old_sha256": "99168bced495f41fc683fe721c54f3dc14f68832ce4ffcc5b56432dca1af351c",
+          "actual_sha256": "99168bced495f41fc683fe721c54f3dc14f68832ce4ffcc5b56432dca1af351c",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_cwnd.csv",
+          "old_sha256": "e3fca5845078ebfe43cff4ea1364ceec472ab74e0938e2922c499f6b897630df",
+          "actual_sha256": "e3fca5845078ebfe43cff4ea1364ceec472ab74e0938e2922c499f6b897630df",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_orbit_loss.csv",
+          "old_sha256": "9218e1576a9faf477e39906a3bea23158ca96a17e77726accd74b3f6010bf59d",
+          "actual_sha256": "9218e1576a9faf477e39906a3bea23158ca96a17e77726accd74b3f6010bf59d",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_progress.csv",
+          "old_sha256": "d15bcf3891bebadf9b75b90269fc6bc9e235d2beeaa03f67f1f1d68ac5cbbad9",
+          "actual_sha256": "d15bcf3891bebadf9b75b90269fc6bc9e235d2beeaa03f67f1f1d68ac5cbbad9",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_rtt.csv",
+          "old_sha256": "8ffbede61eb234ea6a582be7c507d2e5d21fcbbb82ddb3b62f147771ec32ae83",
+          "actual_sha256": "8ffbede61eb234ea6a582be7c507d2e5d21fcbbb82ddb3b62f147771ec32ae83",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_study_events.csv",
+          "old_sha256": "40b65890df347d24b0f507e81eea09ed4ffb6893ca09255b6443670cc6f12fb5",
+          "actual_sha256": "40b65890df347d24b0f507e81eea09ed4ffb6893ca09255b6443670cc6f12fb5",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_study_packets.csv",
+          "old_sha256": "4283cde1fd113e2e34cdf1e9660449d11eced8500f41608d3b52d34342c0ca26",
+          "actual_sha256": "4283cde1fd113e2e34cdf1e9660449d11eced8500f41608d3b52d34342c0ca26",
+          "equal": true
+        }
+      ],
+      "excluded_wall_profiling": []
+    },
+    {
+      "case": "leo10-base",
+      "previous_case": "leo10-base",
+      "source": {
+        "path": "/work/docs/experiments/assets/20261012-orbit-loss/final/cases/leo10-base/summary.json",
+        "bytes": 19527,
+        "sha256": "e83cf441545d43cc93ea4c87ac3b4c6c9ad3f72578481e87525dcea215a46053"
+      },
+      "checks": [
+        {
+          "file": "logs_ns3/study_app_rx_node_1585_port_1024.csv",
+          "old_sha256": "63defbe5710bafaafec06b3021dfda3c8d2df2bad3bf78ce15b54c84d7bc451d",
+          "actual_sha256": "63defbe5710bafaafec06b3021dfda3c8d2df2bad3bf78ce15b54c84d7bc451d",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/study_drop_coverage.csv",
+          "old_sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499",
+          "actual_sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/study_drops.csv",
+          "old_sha256": "c915297632311402f8a2b1b4d6d24b83691f5971f40477934b2e2826887e6821",
+          "actual_sha256": "c915297632311402f8a2b1b4d6d24b83691f5971f40477934b2e2826887e6821",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/study_rx_node_1585_port_1024.csv",
+          "old_sha256": "445161a24e3c943e61518cc5c67ce72aecbae5c1bb2caaf6bd4f4ce451b2f1cf",
+          "actual_sha256": "445161a24e3c943e61518cc5c67ce72aecbae5c1bb2caaf6bd4f4ce451b2f1cf",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_cwnd.csv",
+          "old_sha256": "6651966bdd19d9cbcbcc99fb18ec854f152de7e81ed93e075e8baa5d09599860",
+          "actual_sha256": "6651966bdd19d9cbcbcc99fb18ec854f152de7e81ed93e075e8baa5d09599860",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_progress.csv",
+          "old_sha256": "2a9181e6a8a5bf7e1c25b8a770096f43714ec03779e7d7ccd2673b9992339534",
+          "actual_sha256": "2a9181e6a8a5bf7e1c25b8a770096f43714ec03779e7d7ccd2673b9992339534",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_rtt.csv",
+          "old_sha256": "b959d51947cf5f8d37d672ef2a239c942b8b57e9f3d574ce2f7624de42ab1e38",
+          "actual_sha256": "b959d51947cf5f8d37d672ef2a239c942b8b57e9f3d574ce2f7624de42ab1e38",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_study_events.csv",
+          "old_sha256": "8809b380277e387dcc400a5d27a5679ccbdf446a08c7efb06fa7a021a42df78b",
+          "actual_sha256": "8809b380277e387dcc400a5d27a5679ccbdf446a08c7efb06fa7a021a42df78b",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_study_packets.csv",
+          "old_sha256": "78fc54184c4481b1421d2139870debcbe72259c18ccb011ba180ef77784e146f",
+          "actual_sha256": "78fc54184c4481b1421d2139870debcbe72259c18ccb011ba180ef77784e146f",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flows.csv",
+          "old_sha256": "709ed6139c27b6b511fb5d5f9f754342c493d3d5ab3ad0cfc2e9b97d1d1b9404",
+          "actual_sha256": "709ed6139c27b6b511fb5d5f9f754342c493d3d5ab3ad0cfc2e9b97d1d1b9404",
+          "equal": true
+        }
+      ],
+      "excluded_wall_profiling": [
+        "logs_ns3/timing_results.csv"
+      ]
+    },
+    {
+      "case": "leo10-selective",
+      "previous_case": "leo10-selective",
+      "source": {
+        "path": "/work/docs/experiments/assets/20261012-orbit-loss/final/cases/leo10-selective/summary.json",
+        "bytes": 26127,
+        "sha256": "ee60e1d4aeeed9c1c9070d72f50febf2f3bf7bcf310bd8672485cab06d2fbad4"
+      },
+      "checks": [
+        {
+          "file": "logs_ns3/study_app_rx_node_1585_port_1024.csv",
+          "old_sha256": "bd7722c1cbb78f51335b6b181d55f2a2c10e427b2a4326a02c74b873712cb23d",
+          "actual_sha256": "bd7722c1cbb78f51335b6b181d55f2a2c10e427b2a4326a02c74b873712cb23d",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/study_drop_coverage.csv",
+          "old_sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499",
+          "actual_sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/study_drops.csv",
+          "old_sha256": "9aca2d266ffc1b98cd56f7803d04bdc7d807e11e44d25952b6c1ede94b8ef02e",
+          "actual_sha256": "9aca2d266ffc1b98cd56f7803d04bdc7d807e11e44d25952b6c1ede94b8ef02e",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/study_rx_node_1585_port_1024.csv",
+          "old_sha256": "4fb3a7e70c6e79f54007de46368fd1e303359ef2882e0a314587c9e02292b71c",
+          "actual_sha256": "4fb3a7e70c6e79f54007de46368fd1e303359ef2882e0a314587c9e02292b71c",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_cwnd.csv",
+          "old_sha256": "acf9286c1705fa2aa31eb56805f016c3793051f3d566bc91c87c151af2c5cace",
+          "actual_sha256": "acf9286c1705fa2aa31eb56805f016c3793051f3d566bc91c87c151af2c5cace",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_orbit_loss.csv",
+          "old_sha256": "dd65e13e2e79fefa5b63612950bd59f5e3fa772ee1b9fd8a07f9208234695374",
+          "actual_sha256": "dd65e13e2e79fefa5b63612950bd59f5e3fa772ee1b9fd8a07f9208234695374",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_progress.csv",
+          "old_sha256": "4ce98bb78f4f26fbc697971d23cfc085d8a3e89ad6b378222900a20469794ca4",
+          "actual_sha256": "4ce98bb78f4f26fbc697971d23cfc085d8a3e89ad6b378222900a20469794ca4",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_rtt.csv",
+          "old_sha256": "5f7ed6085a55daca60bb23bb3df73b6098d879aa2005d8810d887b023080edc7",
+          "actual_sha256": "5f7ed6085a55daca60bb23bb3df73b6098d879aa2005d8810d887b023080edc7",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_study_events.csv",
+          "old_sha256": "56db00c9ed99c760c4d3b9a2d132f22eac6bf89570a8a5ff9d476c0be620d23a",
+          "actual_sha256": "56db00c9ed99c760c4d3b9a2d132f22eac6bf89570a8a5ff9d476c0be620d23a",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_study_packets.csv",
+          "old_sha256": "8129d3685fc3cc339409867b057b9126a6591aad06950e02052c97a52c02567c",
+          "actual_sha256": "8129d3685fc3cc339409867b057b9126a6591aad06950e02052c97a52c02567c",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flows.csv",
+          "old_sha256": "2fa7e654ea06e0f91745acd609b08a9daa37dffdcf01b8035c2ded8567a85017",
+          "actual_sha256": "2fa7e654ea06e0f91745acd609b08a9daa37dffdcf01b8035c2ded8567a85017",
+          "equal": true
+        }
+      ],
+      "excluded_wall_profiling": [
+        "logs_ns3/timing_results.csv"
+      ]
+    },
+    {
+      "case": "leo10-drop-base",
+      "previous_case": "leo10-drop-base",
+      "source": {
+        "path": "/work/docs/experiments/assets/20261012-orbit-loss/final/cases/leo10-drop-base/summary.json",
+        "bytes": 21927,
+        "sha256": "e2223582a88a7d08ebab1a35e153aa2216e89122c289220131bb1cf2f1590102"
+      },
+      "checks": [
+        {
+          "file": "logs_ns3/orbit_actual_drop.csv",
+          "old_sha256": "1853a585847be72c2b3d3c58f60fea3d153db9a2da756e4e3049e2b786bec8e3",
+          "actual_sha256": "1853a585847be72c2b3d3c58f60fea3d153db9a2da756e4e3049e2b786bec8e3",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/orbit_drop_install.csv",
+          "old_sha256": "639a91b644d909826cf4c0957c04d46d1e484c636cd331fe0c58b90b7ab41613",
+          "actual_sha256": "639a91b644d909826cf4c0957c04d46d1e484c636cd331fe0c58b90b7ab41613",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/study_app_rx_node_1585_port_1024.csv",
+          "old_sha256": "17568aaabc4f44397310d1e66094260d115cb2de4075f713b8ea2797a8a93215",
+          "actual_sha256": "17568aaabc4f44397310d1e66094260d115cb2de4075f713b8ea2797a8a93215",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/study_drop_coverage.csv",
+          "old_sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499",
+          "actual_sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/study_drops.csv",
+          "old_sha256": "13f432242f9397d517edf8e753eb28f943e2d77a0aa2a0bf1b8f6ebcec39361f",
+          "actual_sha256": "13f432242f9397d517edf8e753eb28f943e2d77a0aa2a0bf1b8f6ebcec39361f",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/study_rx_node_1585_port_1024.csv",
+          "old_sha256": "94ea0ca4f0176ccffa98404781ba063b648d9e16cd841cd3e4d9e8f2e1079480",
+          "actual_sha256": "94ea0ca4f0176ccffa98404781ba063b648d9e16cd841cd3e4d9e8f2e1079480",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_cwnd.csv",
+          "old_sha256": "91456dc7268723be452912b7831c8b4e419aa69306bb17f5f702ba543f037168",
+          "actual_sha256": "91456dc7268723be452912b7831c8b4e419aa69306bb17f5f702ba543f037168",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_progress.csv",
+          "old_sha256": "9e9ee9766c361dbf0bd6710a58fb37f75a62b4a6c183fd2d3ab40740d1fa1d19",
+          "actual_sha256": "9e9ee9766c361dbf0bd6710a58fb37f75a62b4a6c183fd2d3ab40740d1fa1d19",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_rtt.csv",
+          "old_sha256": "ea6b8d686a9d168a0eae372a4aebbd7123a5d87c23d9d6a77b8de9c44cd8f9f3",
+          "actual_sha256": "ea6b8d686a9d168a0eae372a4aebbd7123a5d87c23d9d6a77b8de9c44cd8f9f3",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_study_events.csv",
+          "old_sha256": "a42ae675a75dfebeb2c008ef80f07ba96cd7299faff6fa937b8efffba8048290",
+          "actual_sha256": "a42ae675a75dfebeb2c008ef80f07ba96cd7299faff6fa937b8efffba8048290",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_study_packets.csv",
+          "old_sha256": "87153c8c3575eee4c614f6f9eb1d1e53117f55230de3f930770c2191f5ae5b68",
+          "actual_sha256": "87153c8c3575eee4c614f6f9eb1d1e53117f55230de3f930770c2191f5ae5b68",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flows.csv",
+          "old_sha256": "e226d521080593f28e93b196d2a57880bf893d02605a5e81f1dfb9acbd62862b",
+          "actual_sha256": "e226d521080593f28e93b196d2a57880bf893d02605a5e81f1dfb9acbd62862b",
+          "equal": true
+        }
+      ],
+      "excluded_wall_profiling": [
+        "logs_ns3/timing_results.csv"
+      ]
+    },
+    {
+      "case": "leo10-drop-tail",
+      "previous_case": "leo10-drop-selective",
+      "source": {
+        "path": "/work/docs/experiments/assets/20261012-orbit-loss/final/cases/leo10-drop-selective/summary.json",
+        "bytes": 27909,
+        "sha256": "3fcf2bf5625a4c67076c0f2ca4538a3959ae97f0998a913a2db2572982037888"
+      },
+      "checks": [
+        {
+          "file": "logs_ns3/orbit_actual_drop.csv",
+          "old_sha256": "1853a585847be72c2b3d3c58f60fea3d153db9a2da756e4e3049e2b786bec8e3",
+          "actual_sha256": "1853a585847be72c2b3d3c58f60fea3d153db9a2da756e4e3049e2b786bec8e3",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/orbit_drop_install.csv",
+          "old_sha256": "639a91b644d909826cf4c0957c04d46d1e484c636cd331fe0c58b90b7ab41613",
+          "actual_sha256": "639a91b644d909826cf4c0957c04d46d1e484c636cd331fe0c58b90b7ab41613",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/study_app_rx_node_1585_port_1024.csv",
+          "old_sha256": "55fff2397fd105a138a8237071bed9def916d92d52e8dfa3bd7295a20e4404bc",
+          "actual_sha256": "55fff2397fd105a138a8237071bed9def916d92d52e8dfa3bd7295a20e4404bc",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/study_drop_coverage.csv",
+          "old_sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499",
+          "actual_sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/study_drops.csv",
+          "old_sha256": "16d2d7d6c50aebd8c423aef68cc0e1f483c458b18c899aeb3436ec073b1c2224",
+          "actual_sha256": "16d2d7d6c50aebd8c423aef68cc0e1f483c458b18c899aeb3436ec073b1c2224",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/study_rx_node_1585_port_1024.csv",
+          "old_sha256": "376c02eac88b430ed761ab96e9d92e8517f9bfb078d56caf9881a184e23df32c",
+          "actual_sha256": "376c02eac88b430ed761ab96e9d92e8517f9bfb078d56caf9881a184e23df32c",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_cwnd.csv",
+          "old_sha256": "c481d966bd03a8875ca40f8263e01b4edd53ad3f6fda1fbb6e65b1911f4a23e3",
+          "actual_sha256": "c481d966bd03a8875ca40f8263e01b4edd53ad3f6fda1fbb6e65b1911f4a23e3",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_orbit_loss.csv",
+          "old_sha256": "d2098605ab74323b576af006a45ce5ad7146aff3f3b20ee5e12fda0241d818ab",
+          "actual_sha256": "d2098605ab74323b576af006a45ce5ad7146aff3f3b20ee5e12fda0241d818ab",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_progress.csv",
+          "old_sha256": "f9367049342c6fbf98323ece36c6dc3d52990663ba919657cb4334b38ae0f5ac",
+          "actual_sha256": "f9367049342c6fbf98323ece36c6dc3d52990663ba919657cb4334b38ae0f5ac",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_rtt.csv",
+          "old_sha256": "254ac35be3723622db625e77f128db0681a9a6a403e28a01f66a1b85efbf88e7",
+          "actual_sha256": "254ac35be3723622db625e77f128db0681a9a6a403e28a01f66a1b85efbf88e7",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_study_events.csv",
+          "old_sha256": "df732fe7580d83cab6dd84efebd718ea0c5285bba06ceac27edd90cabc86a37d",
+          "actual_sha256": "df732fe7580d83cab6dd84efebd718ea0c5285bba06ceac27edd90cabc86a37d",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_study_packets.csv",
+          "old_sha256": "fea30f5b656faf0b607b98857d43fa8a8be400a55b9d1b12284ead0fa56b9339",
+          "actual_sha256": "fea30f5b656faf0b607b98857d43fa8a8be400a55b9d1b12284ead0fa56b9339",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flows.csv",
+          "old_sha256": "4abdf3e8ef592572a23f34e71d0c41588567bb3cc71a22ffcbbbd98db6b61466",
+          "actual_sha256": "4abdf3e8ef592572a23f34e71d0c41588567bb3cc71a22ffcbbbd98db6b61466",
+          "equal": true
+        }
+      ],
+      "excluded_wall_profiling": [
+        "logs_ns3/timing_results.csv"
+      ]
+    }
+  ],
+  "exact_declared_case_settings": [
+    {
+      "case": "micro-base",
+      "exact_definition_hints_forecast_and_native_cli": true
+    },
+    {
+      "case": "leo10-drop-tail",
+      "exact_definition_hints_forecast_and_native_cli": true
+    },
+    {
+      "case": "leo10-base",
+      "exact_definition_hints_forecast_and_native_cli": true
+    },
+    {
+      "case": "micro21-selective",
+      "exact_definition_hints_forecast_and_native_cli": true
+    },
+    {
+      "case": "leo10-selective",
+      "exact_definition_hints_forecast_and_native_cli": true
+    },
+    {
+      "case": "micro21-tail",
+      "exact_definition_hints_forecast_and_native_cli": true
+    },
+    {
+      "case": "leo10-tail",
+      "exact_definition_hints_forecast_and_native_cli": true
+    },
+    {
+      "case": "micro-selective",
+      "exact_definition_hints_forecast_and_native_cli": true
+    },
+    {
+      "case": "leo10-drop-base",
+      "exact_definition_hints_forecast_and_native_cli": true
+    },
+    {
+      "case": "micro-tail",
+      "exact_definition_hints_forecast_and_native_cli": true
+    }
+  ],
+  "matched_contrast_groups": [
+    [
+      "micro-base",
+      "micro-selective",
+      "micro-tail"
+    ],
+    [
+      "micro21-selective",
+      "micro21-tail"
+    ],
+    [
+      "leo10-base",
+      "leo10-selective",
+      "leo10-tail"
+    ],
+    [
+      "leo10-drop-base",
+      "leo10-drop-tail"
+    ]
+  ],
+  "comparisons": [
+    {
+      "baseline": "micro-base",
+      "policy": "micro-selective",
+      "metric": "fct_s",
+      "baseline_value": 0.25150992,
+      "policy_value": 0.3504824,
+      "delta": 0.09897248000000003,
+      "delta_percent": 39.35132260389571,
+      "baseline_retx": 1,
+      "policy_retx": 1,
+      "baseline_recovery": 1,
+      "policy_recovery": 1,
+      "baseline_distinct_drops": 1,
+      "policy_distinct_drops": 1
+    },
+    {
+      "baseline": "micro-selective",
+      "policy": "micro-tail",
+      "metric": "fct_s",
+      "baseline_value": 0.3504824,
+      "policy_value": 0.257223678,
+      "delta": -0.09325872200000002,
+      "delta_percent": -26.6086747865228,
+      "baseline_retx": 1,
+      "policy_retx": 1,
+      "baseline_recovery": 1,
+      "policy_recovery": 1,
+      "baseline_distinct_drops": 1,
+      "policy_distinct_drops": 1
+    },
+    {
+      "baseline": "micro-base",
+      "policy": "micro-tail",
+      "metric": "fct_s",
+      "baseline_value": 0.25150992,
+      "policy_value": 0.257223678,
+      "delta": 0.005713758000000013,
+      "delta_percent": 2.271782361506869,
+      "baseline_retx": 1,
+      "policy_retx": 1,
+      "baseline_recovery": 1,
+      "policy_recovery": 1,
+      "baseline_distinct_drops": 1,
+      "policy_distinct_drops": 1
+    },
+    {
+      "baseline": "micro21-selective",
+      "policy": "micro21-tail",
+      "metric": "fct_s",
+      "baseline_value": 0.35059712,
+      "policy_value": 0.35059712,
+      "delta": 0.0,
+      "delta_percent": 0.0,
+      "baseline_retx": 1,
+      "policy_retx": 1,
+      "baseline_recovery": 1,
+      "policy_recovery": 1,
+      "baseline_distinct_drops": 1,
+      "policy_distinct_drops": 1
+    },
+    {
+      "baseline": "leo10-base",
+      "policy": "leo10-tail",
+      "metric": "receiver_goodput_mbps",
+      "baseline_value": 9.544356,
+      "policy_value": 9.5465088,
+      "delta": 0.0021527999999992886,
+      "delta_percent": 0.022555738700424932,
+      "baseline_retx": 523,
+      "policy_retx": 507,
+      "baseline_recovery": 41,
+      "policy_recovery": 40,
+      "baseline_distinct_drops": 499,
+      "policy_distinct_drops": 486
+    },
+    {
+      "baseline": "leo10-selective",
+      "policy": "leo10-tail",
+      "metric": "receiver_goodput_mbps",
+      "baseline_value": 9.5465088,
+      "policy_value": 9.5465088,
+      "delta": 0.0,
+      "delta_percent": 0.0,
+      "baseline_retx": 507,
+      "policy_retx": 507,
+      "baseline_recovery": 40,
+      "policy_recovery": 40,
+      "baseline_distinct_drops": 486,
+      "policy_distinct_drops": 486
+    },
+    {
+      "baseline": "leo10-drop-base",
+      "policy": "leo10-drop-tail",
+      "metric": "receiver_goodput_mbps",
+      "baseline_value": 9.5441904,
+      "policy_value": 9.5442456,
+      "delta": 5.5200000000255045e-05,
+      "delta_percent": 0.0005783623092892043,
+      "baseline_retx": 522,
+      "policy_retx": 521,
+      "baseline_recovery": 41,
+      "policy_recovery": 41,
+      "baseline_distinct_drops": 500,
+      "policy_distinct_drops": 500
+    }
+  ],
+  "no_admission_measurement_equality": [
+    {
+      "left": "micro21-selective",
+      "right": "micro21-tail",
+      "zero_tail_admission": true,
+      "checks": [
+        {
+          "file": "logs_ns3/study_app_rx_node_1_port_1024.csv",
+          "bytes": 343,
+          "sha256": "4b443f381f3a1789e5217174ed8afbf52fad0f7db2d66593fa8767aafad5ea9b",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/study_drop_coverage.csv",
+          "bytes": 328,
+          "sha256": "f2bbce727ae1f61019ef8f727753e3a8f64abdeb41d660a20a3607802f4524f4",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/study_drops.csv",
+          "bytes": 194,
+          "sha256": "e875ed492bd803c301bd18a29514bca50a6edfe104a69a85ae1ec68003bac35c",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/study_rx_node_1_port_1024.csv",
+          "bytes": 1905,
+          "sha256": "e416d61299485757ff77793f8ff2a103680416e1f02e81cb782512b9c8267e2e",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_cwnd.csv",
+          "bytes": 143,
+          "sha256": "15c27df1662d3684046e77fc2870d145fc5ec00ee20bd74b147c64c6bbd15b5e",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_orbit_loss.csv",
+          "bytes": 1233,
+          "sha256": "9218e1576a9faf477e39906a3bea23158ca96a17e77726accd74b3f6010bf59d",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_progress.csv",
+          "bytes": 106,
+          "sha256": "2b2b1ffe258d82aa268e1505e7cf7ca8d4a354fe28a042fed6167a79e81e8389",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_rtt.csv",
+          "bytes": 44,
+          "sha256": "ced902551c2e5be981c1fdf07d10db108daf76f31c8729b907aa418c51dc378a",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_study_events.csv",
+          "bytes": 238,
+          "sha256": "40b65890df347d24b0f507e81eea09ed4ffb6893ca09255b6443670cc6f12fb5",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_study_packets.csv",
+          "bytes": 3008,
+          "sha256": "8c6054ac48f7e232eaab59398989ad12bf7a93c38e6ce91d0ec40a374872b891",
+          "equal": true
+        }
+      ],
+      "exclusions": [
+        "Wall profiling",
+        "Separate observer tail-check trace"
+      ]
+    },
+    {
+      "left": "leo10-selective",
+      "right": "leo10-tail",
+      "zero_tail_admission": true,
+      "checks": [
+        {
+          "file": "logs_ns3/study_app_rx_node_1585_port_1024.csv",
+          "bytes": 14465567,
+          "sha256": "bd7722c1cbb78f51335b6b181d55f2a2c10e427b2a4326a02c74b873712cb23d",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/study_drop_coverage.csv",
+          "bytes": 1140184,
+          "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/study_drops.csv",
+          "bytes": 53873,
+          "sha256": "9aca2d266ffc1b98cd56f7803d04bdc7d807e11e44d25952b6c1ede94b8ef02e",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/study_rx_node_1585_port_1024.csv",
+          "bytes": 19452445,
+          "sha256": "4fb3a7e70c6e79f54007de46368fd1e303359ef2882e0a314587c9e02292b71c",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_cwnd.csv",
+          "bytes": 100679,
+          "sha256": "acf9286c1705fa2aa31eb56805f016c3793051f3d566bc91c87c151af2c5cace",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_orbit_loss.csv",
+          "bytes": 1386,
+          "sha256": "dd65e13e2e79fefa5b63612950bd59f5e3fa772ee1b9fd8a07f9208234695374",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_progress.csv",
+          "bytes": 1994229,
+          "sha256": "4ce98bb78f4f26fbc697971d23cfc085d8a3e89ad6b378222900a20469794ca4",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_rtt.csv",
+          "bytes": 2030657,
+          "sha256": "5f7ed6085a55daca60bb23bb3df73b6098d879aa2005d8810d887b023080edc7",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_study_events.csv",
+          "bytes": 5574,
+          "sha256": "56db00c9ed99c760c4d3b9a2d132f22eac6bf89570a8a5ff9d476c0be620d23a",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_study_packets.csv",
+          "bytes": 19843355,
+          "sha256": "8129d3685fc3cc339409867b057b9126a6591aad06950e02052c97a52c02567c",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flows.csv",
+          "bytes": 75,
+          "sha256": "2fa7e654ea06e0f91745acd609b08a9daa37dffdcf01b8035c2ded8567a85017",
+          "equal": true
+        }
+      ],
+      "exclusions": [
+        "Wall profiling",
+        "Separate observer tail-check trace"
+      ]
+    }
+  ],
+  "tail_admissions": {
+    "micro-base": 0,
+    "leo10-drop-tail": 0,
+    "leo10-base": 0,
+    "micro21-selective": 0,
+    "leo10-selective": 0,
+    "micro21-tail": 0,
+    "leo10-tail": 0,
+    "micro-selective": 0,
+    "leo10-drop-base": 0,
+    "micro-tail": 1
+  },
+  "paired_drop_identity": {
+    "time_ns": 26235726816,
+    "flow_id": 0,
+    "tx_id": 21820,
+    "tx_time_ns": 26152017749,
+    "seq": 29681041,
+    "payload_bytes": 1380,
+    "event_ns": 26200000000,
+    "earliest_tx_ns": 26151152296
+  },
+  "paired_physical_drop_equal": true,
+  "extra_drop_to_first_retx_ns": 5735961,
+  "limitation": "One deterministic run per condition; no deployment, loss of the extra tail, zero-window, ECN or RTO boundary proof."
+}

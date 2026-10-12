@@ -233,3 +233,9 @@ __marimo__/
 **/logs_ns3/tcp_flow_*_cwnd.csv
 **/logs_ns3/tcp_flow_*_rtt.csv
 **/logs_ns3/tcp_flow_*_progress.csv
+
+# Final report's local preflight/render/compiler intermediates.
+code/lab1-final/report/*.aux
+code/lab1-final/report/*.out
+code/lab1-final/report/development/
+code/lab1-final/report/preflight-*.json

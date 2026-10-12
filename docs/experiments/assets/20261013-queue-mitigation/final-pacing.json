@@ -1,0 +1,520 @@
+{
+  "schema": 1,
+  "phase": "safety",
+  "tool": {
+    "path": "/work/code/queue-pacing/compare.py",
+    "bytes": 10673,
+    "sha256": "1cf4939d128d159d8290f9faa079626aa64fe96a208e83199f0e7545a94adca3"
+  },
+  "conditions": 8,
+  "not_statistical_replicates": true,
+  "prospective_gates": [
+    {
+      "case": "native",
+      "passed": false,
+      "tests": {
+        "goodput_floor": false,
+        "source_post_queue_half": true,
+        "source_post_served_wait_half": true,
+        "focus_drops_at_most_five": true,
+        "whole_all_device_queue_not_worse": true,
+        "whole_distinct_drops_not_worse": true
+      },
+      "whole_goodput_mbps": 9.0571056,
+      "source_post_mean_packets": 26.50164376,
+      "source_post_served_wait_ms": 30.101378431192657,
+      "focus_distinct_dropped_transmissions": 0,
+      "focus_drop_rows": 0,
+      "whole_distinct_drops": 460,
+      "whole_all_device_queue_packet_ns": 6736523791269
+    },
+    {
+      "case": "capacity",
+      "passed": true,
+      "tests": {
+        "goodput_floor": true,
+        "source_post_queue_half": true,
+        "source_post_served_wait_half": true,
+        "focus_drops_at_most_five": true,
+        "whole_all_device_queue_not_worse": true,
+        "whole_distinct_drops_not_worse": true
+      },
+      "whole_goodput_mbps": 9.5662704,
+      "source_post_mean_packets": 0.0,
+      "source_post_served_wait_ms": 0.0,
+      "focus_distinct_dropped_transmissions": 0,
+      "focus_drop_rows": 0,
+      "whole_distinct_drops": 0,
+      "whole_all_device_queue_packet_ns": 632853245227
+    }
+  ],
+  "prospective_gates_passed": true,
+  "winner": "capacity",
+  "patch_sha256": "ace08b170b04774c2eac849c1875e647a97e786611616cbb32867496cb2cb808",
+  "runtime_files": {
+    "scratch/main_satnet/ns3.48-main_satnet": "5e1e50399ecd3d87e6ca978bfd13556e137e2d1eea624f2352cccca8275a24bb",
+    "scratch/study_micro/ns3.48-study_micro": "70b41ba6c0864da599d8493654b67744726e7eff9346ce09d0f2cff65482c04f",
+    "lib/libns3.48-antenna.so": "edf56f782f446d54291425c4b357fb2a609f64da3a3a88a2d48e18dbcf4200b8",
+    "lib/libns3.48-applications.so": "029ee91a59a88fd8cff0c865053f31dfc36f6cc6f10484ebb3843864025750ca",
+    "lib/libns3.48-basic-sim.so": "254985ed61b7ad19bafd4cafd00df233e1e786d25f299729fc84f72e634bddbd",
+    "lib/libns3.48-bridge.so": "5c0e5f9092dc8a215a2d77aaa75ba0e3db181578566db25b9463cc220a94a1a0",
+    "lib/libns3.48-core.so": "5f6e271f0e98438059ac55c8dc5c94ee411050cb7cd7f23956963310674982a1",
+    "lib/libns3.48-flow-monitor.so": "5fbe40f2a843bf01f38b943a28377f7e9628b748506498298cfd6096c621b1ad",
+    "lib/libns3.48-internet-apps.so": "c31699838a1a449773562164af013663951dbd78c7b0e1bcddc4b451f2eaa6bc",
+    "lib/libns3.48-internet.so": "ebf71d9775f02db54d509dbb9926187c07b6f6f14a9ffc67656fa70e9e1eaede",
+    "lib/libns3.48-mobility.so": "45dc648f0ff11a8c83574fdea0dd189a35ccc606d625d3e3612afa3a6f806351",
+    "lib/libns3.48-network.so": "8258009efcadb296e3abc3da3d12606b258eb5545dc33bd0d4f047af5e552bb0",
+    "lib/libns3.48-point-to-point.so": "8b7e72efbe1af5906a8df5191ba0bd625f2c8796b35b3bc6443279be093ac6d8",
+    "lib/libns3.48-satellite-network.so": "4073a1defc99168132fce6b98b0ed9b06bae36c88be3bb07d4777c09e122d5fd",
+    "lib/libns3.48-satellite.so": "68e7ce4d29d13efe374989d3279a8587bedb7a8104757938ab2c14605e3d4002",
+    "lib/libns3.48-stats.so": "ab02ae3cfe9c8453b6b251528884a678fe470cb1aac2e6500064a6fd44caf447",
+    "lib/libns3.48-traffic-control.so": "a260ff14dd0c5d4b6950676f7d219d3563ec6039e84390eae6a880bbe81f6ddb"
+  },
+  "exact_settings": [
+    {
+      "case": "off",
+      "exact_definition_cli_hints_state_runtime": true
+    },
+    {
+      "case": "native",
+      "exact_definition_cli_hints_state_runtime": true
+    },
+    {
+      "case": "capacity",
+      "exact_definition_cli_hints_state_runtime": true
+    },
+    {
+      "case": "micro-current",
+      "exact_definition_cli_hints_state_runtime": true
+    },
+    {
+      "case": "loss-selected",
+      "exact_definition_cli_hints_state_runtime": true
+    },
+    {
+      "case": "micro-selected",
+      "exact_definition_cli_hints_state_runtime": true
+    },
+    {
+      "case": "micro-original",
+      "exact_definition_cli_hints_state_runtime": true
+    },
+    {
+      "case": "loss-current",
+      "exact_definition_cli_hints_state_runtime": true
+    }
+  ],
+  "matched_contrast_groups": [
+    [
+      "off",
+      "native",
+      "capacity"
+    ],
+    [
+      "micro-original",
+      "micro-current",
+      "micro-selected"
+    ],
+    [
+      "loss-current",
+      "loss-selected"
+    ]
+  ],
+  "historical_measurement_equality": [
+    {
+      "case": "off",
+      "prior_case": "leo10-tail",
+      "source": {
+        "path": "/work/docs/experiments/assets/20261013-orbit-tail/final/cases/leo10-tail/summary.json",
+        "bytes": 28779,
+        "sha256": "127fd5ea373358339bb2701ab047d62fbc7061dbbfc3d2f5998ff25018cd1e22"
+      },
+      "checks": [
+        {
+          "file": "logs_ns3/study_app_rx_node_1585_port_1024.csv",
+          "sha256": "bd7722c1cbb78f51335b6b181d55f2a2c10e427b2a4326a02c74b873712cb23d",
+          "bytes": 14465567,
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/study_drop_coverage.csv",
+          "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499",
+          "bytes": 1140184,
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/study_drops.csv",
+          "sha256": "9aca2d266ffc1b98cd56f7803d04bdc7d807e11e44d25952b6c1ede94b8ef02e",
+          "bytes": 53873,
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/study_rx_node_1585_port_1024.csv",
+          "sha256": "4fb3a7e70c6e79f54007de46368fd1e303359ef2882e0a314587c9e02292b71c",
+          "bytes": 19452445,
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_cwnd.csv",
+          "sha256": "acf9286c1705fa2aa31eb56805f016c3793051f3d566bc91c87c151af2c5cace",
+          "bytes": 100679,
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_orbit_loss.csv",
+          "sha256": "dd65e13e2e79fefa5b63612950bd59f5e3fa772ee1b9fd8a07f9208234695374",
+          "bytes": 1386,
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_orbit_loss_tail.csv",
+          "sha256": "8447baa1e3aa446ab7ca47c36eea5e2b8c8db4c38c3f04a3b805cbcd0f4af8ec",
+          "bytes": 621,
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_progress.csv",
+          "sha256": "4ce98bb78f4f26fbc697971d23cfc085d8a3e89ad6b378222900a20469794ca4",
+          "bytes": 1994229,
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_rtt.csv",
+          "sha256": "5f7ed6085a55daca60bb23bb3df73b6098d879aa2005d8810d887b023080edc7",
+          "bytes": 2030657,
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_study_events.csv",
+          "sha256": "56db00c9ed99c760c4d3b9a2d132f22eac6bf89570a8a5ff9d476c0be620d23a",
+          "bytes": 5574,
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_study_packets.csv",
+          "sha256": "8129d3685fc3cc339409867b057b9126a6591aad06950e02052c97a52c02567c",
+          "bytes": 19843355,
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flows.csv",
+          "sha256": "2fa7e654ea06e0f91745acd609b08a9daa37dffdcf01b8035c2ded8567a85017",
+          "bytes": 75,
+          "equal": true
+        }
+      ],
+      "exclusion": "Wall-clock timing_results.csv only"
+    },
+    {
+      "case": "micro-original",
+      "prior_case": "micro-base",
+      "source": {
+        "path": "/work/docs/experiments/assets/20261013-orbit-tail/final/cases/micro-base/summary.json",
+        "bytes": 12099,
+        "sha256": "6b04dafa8bb388431f7774316b8fb1225193e585878dafb5c4fd99e9ec8c74ad"
+      },
+      "checks": [
+        {
+          "file": "logs_ns3/study_app_rx_node_1_port_1024.csv",
+          "sha256": "b35c9ac46bde2331da713fba1846eeb718c907027d0bb2f050acdf2fbca75b5e",
+          "bytes": 733,
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/study_drop_coverage.csv",
+          "sha256": "f2bbce727ae1f61019ef8f727753e3a8f64abdeb41d660a20a3607802f4524f4",
+          "bytes": 328,
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/study_drops.csv",
+          "sha256": "e875ed492bd803c301bd18a29514bca50a6edfe104a69a85ae1ec68003bac35c",
+          "bytes": 194,
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/study_rx_node_1_port_1024.csv",
+          "sha256": "cb432b3cd841713975a574fc6919f5cf0812185846599bdd17182cccacd11e5a",
+          "bytes": 1849,
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_cwnd.csv",
+          "sha256": "ceb39256e8a1e4c940cb3f597b7e200596f2e9ff1f9ac9a0a5075021e8262630",
+          "bytes": 233,
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_progress.csv",
+          "sha256": "b583a1b2888476107f8d65535c480fa872d89ef79c7b12c3cdb4380249a86e98",
+          "bytes": 160,
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_rtt.csv",
+          "sha256": "f46faf24fbfea5e839643bcebcbd4b6f10073f725ed5a139f993b2c823b14278",
+          "bytes": 110,
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_study_events.csv",
+          "sha256": "3038a5be2c89948a5724671c2c638a3c408f7828393d6a2513b0a6e6e636863e",
+          "bytes": 238,
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_study_packets.csv",
+          "sha256": "9774112da74ac364fbe1421ae7d2f532b3e0450cf2f32d874f6362b9043bd6e6",
+          "bytes": 2680,
+          "equal": true
+        }
+      ],
+      "exclusion": "Wall-clock timing_results.csv only"
+    },
+    {
+      "case": "micro-current",
+      "prior_case": "micro-tail",
+      "source": {
+        "path": "/work/docs/experiments/assets/20261013-orbit-tail/final/cases/micro-tail/summary.json",
+        "bytes": 24827,
+        "sha256": "d355aa8acd9ce87d97039a89c4fb533d6f54eb579695b919aa34eae262d2bb66"
+      },
+      "checks": [
+        {
+          "file": "logs_ns3/study_app_rx_node_1_port_1024.csv",
+          "sha256": "0cc1691a749637b2e00fbe73a93d58fce89b016f43cd27994db7f0da140b3581",
+          "bytes": 213,
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/study_drop_coverage.csv",
+          "sha256": "f2bbce727ae1f61019ef8f727753e3a8f64abdeb41d660a20a3607802f4524f4",
+          "bytes": 328,
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/study_drops.csv",
+          "sha256": "e875ed492bd803c301bd18a29514bca50a6edfe104a69a85ae1ec68003bac35c",
+          "bytes": 194,
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/study_rx_node_1_port_1024.csv",
+          "sha256": "fe6d05ecf49669bafc8d3e732755443215431c7b8cd666ea7270a069953eb874",
+          "bytes": 1817,
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_cwnd.csv",
+          "sha256": "17c74bef1830b3666d72b43fb6c67dfe3b64a8154f6ee6684f8232128abacfb9",
+          "bytes": 143,
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_orbit_loss.csv",
+          "sha256": "65425aa39716a0ddbbb98188869d0dd428c5474659ac00482c877a94582d2590",
+          "bytes": 1233,
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_orbit_loss_tail.csv",
+          "sha256": "9b4059ca2cd970fba4641317e1507f9ea2b1b288817e72084da9a5481e918000",
+          "bytes": 1008,
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_progress.csv",
+          "sha256": "8131123d560f49d8565894b4789934eb98a7c51efd79c81c10f0a24c630654c8",
+          "bytes": 74,
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_rtt.csv",
+          "sha256": "b7a405044fcf382bd907731a6904f647632ebafdcdd9c5ca2a2858afc18c9107",
+          "bytes": 44,
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_study_events.csv",
+          "sha256": "40b65890df347d24b0f507e81eea09ed4ffb6893ca09255b6443670cc6f12fb5",
+          "bytes": 238,
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_study_packets.csv",
+          "sha256": "49e61b2453ecbab5ca6d6bc6b5bee7ebb183605863a50feaf5afb03cac74e82b",
+          "bytes": 2896,
+          "equal": true
+        }
+      ],
+      "exclusion": "Wall-clock timing_results.csv only"
+    }
+  ],
+  "comparisons": [
+    {
+      "case": "off",
+      "receiver_goodput_mbps": 9.5465088,
+      "receiver_bytes": 238662720,
+      "fct_s": null,
+      "retransmissions": 507,
+      "recovery_entries": 40,
+      "ca_loss_entries": 1,
+      "distinct_tagged_drops": 486,
+      "tail_admissions": 0,
+      "post_mean_queue_packets": 87.232380644,
+      "post_served_wait_ms": 96.19954323678161,
+      "focus_drop_rows": 11,
+      "focus_distinct_drops": 11,
+      "whole_queue_packet_ns": 7858720494834
+    },
+    {
+      "case": "native",
+      "receiver_goodput_mbps": 9.0571056,
+      "receiver_bytes": 226427640,
+      "fct_s": null,
+      "retransmissions": 471,
+      "recovery_entries": 29,
+      "ca_loss_entries": 10,
+      "distinct_tagged_drops": 460,
+      "tail_admissions": 0,
+      "post_mean_queue_packets": 26.50164376,
+      "post_served_wait_ms": 30.101378431192657,
+      "focus_drop_rows": 0,
+      "focus_distinct_drops": 0,
+      "whole_queue_packet_ns": 6736523791269
+    },
+    {
+      "case": "capacity",
+      "receiver_goodput_mbps": 9.5662704,
+      "receiver_bytes": 239156760,
+      "fct_s": null,
+      "retransmissions": 2,
+      "recovery_entries": 1,
+      "ca_loss_entries": 0,
+      "distinct_tagged_drops": 0,
+      "tail_admissions": 0,
+      "post_mean_queue_packets": 0.0,
+      "post_served_wait_ms": 0,
+      "focus_drop_rows": 0,
+      "focus_distinct_drops": 0,
+      "whole_queue_packet_ns": 632853245227
+    },
+    {
+      "case": "micro-original",
+      "receiver_goodput_mbps": 0.0552,
+      "receiver_bytes": 27600,
+      "fct_s": 0.25150992,
+      "retransmissions": 1,
+      "recovery_entries": 1,
+      "ca_loss_entries": 0,
+      "distinct_tagged_drops": 1,
+      "tail_admissions": 0
+    },
+    {
+      "case": "micro-current",
+      "receiver_goodput_mbps": 0.0552,
+      "receiver_bytes": 27600,
+      "fct_s": 0.257223678,
+      "retransmissions": 1,
+      "recovery_entries": 1,
+      "ca_loss_entries": 0,
+      "distinct_tagged_drops": 1,
+      "tail_admissions": 1
+    },
+    {
+      "case": "micro-selected",
+      "receiver_goodput_mbps": 0.0552,
+      "receiver_bytes": 27600,
+      "fct_s": 0.471434773,
+      "retransmissions": 1,
+      "recovery_entries": 1,
+      "ca_loss_entries": 0,
+      "distinct_tagged_drops": 1,
+      "tail_admissions": 0
+    },
+    {
+      "case": "loss-current",
+      "receiver_goodput_mbps": 9.3421584,
+      "receiver_bytes": 233553960,
+      "fct_s": null,
+      "retransmissions": 215,
+      "recovery_entries": 37,
+      "ca_loss_entries": 0,
+      "distinct_tagged_drops": 192,
+      "tail_admissions": 0,
+      "post_mean_queue_packets": 26.527307074,
+      "post_served_wait_ms": 30.266898834862385,
+      "focus_drop_rows": 0,
+      "focus_distinct_drops": 0,
+      "whole_queue_packet_ns": 8537606601547,
+      "drop_to_first_retx_ms": 53.228969
+    },
+    {
+      "case": "loss-selected",
+      "receiver_goodput_mbps": 9.332664,
+      "receiver_bytes": 233316600,
+      "fct_s": null,
+      "retransmissions": 3,
+      "recovery_entries": 2,
+      "ca_loss_entries": 0,
+      "distinct_tagged_drops": 1,
+      "tail_admissions": 0,
+      "post_mean_queue_packets": 0.0,
+      "post_served_wait_ms": 0,
+      "focus_drop_rows": 0,
+      "focus_distinct_drops": 0,
+      "whole_queue_packet_ns": 622083627889,
+      "drop_to_first_retx_ms": 53.228969
+    }
+  ],
+  "inputs": [
+    {
+      "path": "/tmp/queue-pacing-final-export/cases/capacity/summary.json",
+      "bytes": 319640,
+      "sha256": "a3c22489b32b7de6380080d12f7bc607faaf57e12a5c95505bfa828d8407baac"
+    },
+    {
+      "path": "/tmp/queue-pacing-final-export/cases/loss-current/summary.json",
+      "bytes": 323088,
+      "sha256": "fc58e47fc39c49fead94ed49bf4f62c197c27c4e65de18c74cb66b76755a15fd"
+    },
+    {
+      "path": "/tmp/queue-pacing-final-export/cases/loss-selected/summary.json",
+      "bytes": 322295,
+      "sha256": "50ee6aea125bbbb60aa2af7ca4b84b4c36a1a6a006018acbd0a0d2b1d4365a8a"
+    },
+    {
+      "path": "/tmp/queue-pacing-final-export/cases/micro-current/summary.json",
+      "bytes": 26976,
+      "sha256": "046d2179066636d679d154c73d28901dac22f97fae6d06e4e5fba8ddbdb123be"
+    },
+    {
+      "path": "/tmp/queue-pacing-final-export/cases/micro-original/summary.json",
+      "bytes": 14250,
+      "sha256": "77d84cbe90039cd27d3af39463cf0a6171fbbe458ad9481175ca259d14188afc"
+    },
+    {
+      "path": "/tmp/queue-pacing-final-export/cases/micro-selected/summary.json",
+      "bytes": 27342,
+      "sha256": "cb83c5ecc5d6489b81dc66220cacf3a2f589890886b5d8e499cfaf3eb50a176c"
+    },
+    {
+      "path": "/tmp/queue-pacing-final-export/cases/native/summary.json",
+      "bytes": 319443,
+      "sha256": "8bee9c39b9cdfcf4a16036663ada405ced49a7f43b63fff5467d21d730765e85"
+    },
+    {
+      "path": "/tmp/queue-pacing-final-export/cases/off/summary.json",
+      "bytes": 363446,
+      "sha256": "74eddcc47646c10220945ba73c3f5b385d8de8d68cd055a708edd6b5c5121d35"
+    }
+  ],
+  "limitations": [
+    "Fixed single-seed conditions, not repeated estimates.",
+    "Native initial window is unpaced; direct retransmissions can exceed the timer ceiling.",
+    "Finite or actual-loss regressions remain limits even when bulk queue gates pass.",
+    "Shared first-loss rules do not imply identical TX times under pacing."
+  ],
+  "actual_loss_pair_own_transmission_identity_verified": true,
+  "finite_fct_percent_vs_current": 83.27814012518706
+}

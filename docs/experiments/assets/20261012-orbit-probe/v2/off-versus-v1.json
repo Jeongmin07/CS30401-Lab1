@@ -1,0 +1,46 @@
+{
+  "scope": "Completed V1 OFF versus valid V2 OFF measurements; distinct source/runtime recorded in original manifests",
+  "checks": [
+    {
+      "path": "logs_ns3/bbr_app_rx_node_1585.csv",
+      "equal": true
+    },
+    {
+      "path": "logs_ns3/bbr_coverage.csv",
+      "equal": true
+    },
+    {
+      "path": "logs_ns3/bbr_drops.csv",
+      "equal": true
+    },
+    {
+      "path": "logs_ns3/bbr_queue_bins.csv",
+      "equal": true
+    },
+    {
+      "path": "logs_ns3/bbr_queue_pending.csv",
+      "equal": true
+    },
+    {
+      "path": "logs_ns3/bbr_state.csv",
+      "equal": true
+    },
+    {
+      "path": "logs_ns3/tcp_flow_0_cwnd.csv",
+      "equal": true
+    },
+    {
+      "path": "logs_ns3/tcp_flow_0_progress.csv",
+      "equal": true
+    },
+    {
+      "path": "logs_ns3/tcp_flow_0_rtt.csv",
+      "equal": true
+    },
+    {
+      "path": "logs_ns3/tcp_flows.csv",
+      "equal": true
+    }
+  ],
+  "all_measured_csv_equal": true
+}

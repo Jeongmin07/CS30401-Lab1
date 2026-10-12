@@ -1,0 +1,65 @@
+{
+  "valid_simulations": 1,
+  "excluded_attempts": 1,
+  "policy_ON_simulations": 0,
+  "additional_off_simulations": 0,
+  "source_gate": "No demonstrated need for proactive scale-up at the tested10Mbps natural steps. The100Mbps condition remains untested because of timeout.",
+  "files": {
+    "attempt-exclusion.json": {
+      "bytes": 650,
+      "sha256": "21d643159ee4ce4e66434a28019106397655c6f87025682da2d61a9600e4e8b8"
+    },
+    "cases/cubic10-observed200/config_ns3.properties": {
+      "bytes": 613,
+      "sha256": "8c46772c95c46ca99935dd68cf6957631972a2bb519acabe0880640408b0f4d4"
+    },
+    "cases/cubic10-observed200/manifest.json": {
+      "bytes": 422921,
+      "sha256": "3f20fa4ad6b2782c0e316eefc0002cad5d530a23dd47ff506c44a9ae0b0d1ccf"
+    },
+    "cases/cubic10-observed200/schedule.csv": {
+      "bytes": 29,
+      "sha256": "e6cde3aa7716856e46d24c3833354df90407313ece13a5ffbd1b789fa4fea23c"
+    },
+    "cases/cubic10-observed200/summary.json": {
+      "bytes": 18588,
+      "sha256": "f27ee2057f5c6de7e819e92131ae44571d865ef4c858931bb3ca116d94a70a86"
+    },
+    "environment.json": {
+      "bytes": 995,
+      "sha256": "d0f29a195b7eb2fc2f55f1577ab899b6ca842319b7a821752879efd495ea7196"
+    },
+    "equivalence10.json": {
+      "bytes": 2224,
+      "sha256": "3cbf18cecd453582a1168da11620c42606b64e6da58d9053fbc2309e4882bb07"
+    },
+    "excluded/cubic100-observed200/config_ns3.properties": {
+      "bytes": 615,
+      "sha256": "4cf593f0956ca4d1c4a7b9fc9722ae88aed27a02b0b552b924233b437834e90f"
+    },
+    "excluded/cubic100-observed200/console.txt": {
+      "bytes": 5350,
+      "sha256": "4357d9f3ea7adf5d82e04d46977afcc55135269afc72818fda55cacc0315727e"
+    },
+    "excluded/cubic100-observed200/manifest.json": {
+      "bytes": 422346,
+      "sha256": "7f5819f77f773c53582cec0cc1fa738dbb5bf9a4786f97c87b30993f0e4faed2"
+    },
+    "excluded/cubic100-observed200/schedule.csv": {
+      "bytes": 29,
+      "sha256": "e6cde3aa7716856e46d24c3833354df90407313ece13a5ffbd1b789fa4fea23c"
+    },
+    "raw-excluded100-inventory.json": {
+      "bytes": 4617,
+      "sha256": "f78d0de20522a7286eee1b1758a79b0086669fdf8575317bc20cf093768801e0"
+    },
+    "raw-valid10-inventory.json": {
+      "bytes": 5307,
+      "sha256": "47ac2b010ee30275e6857553f6c7048e9408fa7b05fd9424e76a6927b6dd6d8f"
+    },
+    "windows.csv": {
+      "bytes": 2635,
+      "sha256": "d4a7d3b5c9766713993d9a14937d1071e2480946bd03453dfffe872a1ca5bcd9"
+    }
+  }
+}

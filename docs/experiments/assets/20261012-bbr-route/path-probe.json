@@ -1,0 +1,1066 @@
+{
+  "kind": "bounded_existing_forwarding_prefix_probe",
+  "no_simulation_or_state_generation": true,
+  "script_sha256": "dfdde0dddc98c4b04d135bdb36e4b58df1f8a9d3089527f4dd4f357def38f44e",
+  "state_path": "/home/ubuntu/lab/data/seoul_london/state",
+  "dynamic_subdirectory": "dynamic_state_100ms_for_200s",
+  "step_ns": 100000000,
+  "state_duration_ns": 200000000000,
+  "satellite_count": 1584,
+  "ground_stations": [
+    {
+      "node_id": 1584,
+      "name": "Seoul",
+      "latitude": "37.568260",
+      "longitude": "126.977830"
+    },
+    {
+      "node_id": 1585,
+      "name": "London",
+      "latitude": "51.508530",
+      "longitude": "-0.125740"
+    }
+  ],
+  "metadata_inputs": [
+    {
+      "name": "tles.txt",
+      "bytes": 249168,
+      "sha256": "e8e944ac15ae28f2ba5fe8e0a845bdfe106694a1536711a52ec0e54f5ca29dd5"
+    },
+    {
+      "name": "ground_stations.txt",
+      "bytes": 165,
+      "sha256": "9a6f895ced480a880c7c5aa229be1cc6b23c2e85bca0b6ce312af823cdf57262"
+    },
+    {
+      "name": "node_ids.txt",
+      "bytes": 110,
+      "sha256": "5315315c59a2975faeedc133d40e35b3418cf343b77a1e9775d93b9d7c7e98a2"
+    }
+  ],
+  "pairs": [
+    {
+      "label": "gs-1584-to-1585",
+      "source": 1584,
+      "destination": 1585,
+      "source_name": "Seoul",
+      "destination_name": "London"
+    },
+    {
+      "label": "gs-1585-to-1584",
+      "source": 1585,
+      "destination": 1584,
+      "source_name": "London",
+      "destination_name": "Seoul"
+    }
+  ],
+  "requested_samples_ns": [
+    0,
+    20000000000,
+    40000000000,
+    60000000000,
+    100000000000,
+    140000000000,
+    180000000000,
+    199900000000
+  ],
+  "completed_samples_ns": [
+    0,
+    20000000000,
+    40000000000,
+    60000000000,
+    100000000000,
+    140000000000,
+    180000000000,
+    199900000000
+  ],
+  "complete_requested_prefix": true,
+  "stop_reason": null,
+  "last_applied_update_ns": 199900000000,
+  "route_changes": [
+    {
+      "time_ns": 2400000000,
+      "pair": "gs-1584-to-1585",
+      "status": "reachable",
+      "nodes": [
+        1584,
+        381,
+        380,
+        379,
+        357,
+        335,
+        313,
+        291,
+        269,
+        247,
+        225,
+        224,
+        1585
+      ],
+      "directed_egresses": [
+        [
+          1584,
+          0
+        ],
+        [
+          381,
+          1
+        ],
+        [
+          380,
+          1
+        ],
+        [
+          379,
+          0
+        ],
+        [
+          357,
+          0
+        ],
+        [
+          335,
+          0
+        ],
+        [
+          313,
+          0
+        ],
+        [
+          291,
+          0
+        ],
+        [
+          269,
+          0
+        ],
+        [
+          247,
+          0
+        ],
+        [
+          225,
+          1
+        ],
+        [
+          224,
+          4
+        ]
+      ]
+    },
+    {
+      "time_ns": 2400000000,
+      "pair": "gs-1585-to-1584",
+      "status": "reachable",
+      "nodes": [
+        1585,
+        224,
+        225,
+        247,
+        269,
+        291,
+        313,
+        335,
+        357,
+        379,
+        380,
+        381,
+        1584
+      ],
+      "directed_egresses": [
+        [
+          1585,
+          0
+        ],
+        [
+          224,
+          2
+        ],
+        [
+          225,
+          3
+        ],
+        [
+          247,
+          3
+        ],
+        [
+          269,
+          3
+        ],
+        [
+          291,
+          3
+        ],
+        [
+          313,
+          3
+        ],
+        [
+          335,
+          3
+        ],
+        [
+          357,
+          3
+        ],
+        [
+          379,
+          2
+        ],
+        [
+          380,
+          2
+        ],
+        [
+          381,
+          4
+        ]
+      ]
+    },
+    {
+      "time_ns": 26200000000,
+      "pair": "gs-1584-to-1585",
+      "status": "reachable",
+      "nodes": [
+        1584,
+        316,
+        315,
+        314,
+        313,
+        291,
+        269,
+        247,
+        225,
+        224,
+        1585
+      ],
+      "directed_egresses": [
+        [
+          1584,
+          0
+        ],
+        [
+          316,
+          1
+        ],
+        [
+          315,
+          1
+        ],
+        [
+          314,
+          1
+        ],
+        [
+          313,
+          0
+        ],
+        [
+          291,
+          0
+        ],
+        [
+          269,
+          0
+        ],
+        [
+          247,
+          0
+        ],
+        [
+          225,
+          1
+        ],
+        [
+          224,
+          4
+        ]
+      ]
+    },
+    {
+      "time_ns": 26200000000,
+      "pair": "gs-1585-to-1584",
+      "status": "reachable",
+      "nodes": [
+        1585,
+        224,
+        225,
+        247,
+        269,
+        291,
+        313,
+        314,
+        315,
+        316,
+        1584
+      ],
+      "directed_egresses": [
+        [
+          1585,
+          0
+        ],
+        [
+          224,
+          2
+        ],
+        [
+          225,
+          3
+        ],
+        [
+          247,
+          3
+        ],
+        [
+          269,
+          3
+        ],
+        [
+          291,
+          3
+        ],
+        [
+          313,
+          2
+        ],
+        [
+          314,
+          2
+        ],
+        [
+          315,
+          2
+        ],
+        [
+          316,
+          4
+        ]
+      ]
+    },
+    {
+      "time_ns": 75000000000,
+      "pair": "gs-1584-to-1585",
+      "status": "reachable",
+      "nodes": [
+        1584,
+        337,
+        336,
+        335,
+        313,
+        291,
+        269,
+        247,
+        225,
+        224,
+        1585
+      ],
+      "directed_egresses": [
+        [
+          1584,
+          0
+        ],
+        [
+          337,
+          1
+        ],
+        [
+          336,
+          1
+        ],
+        [
+          335,
+          0
+        ],
+        [
+          313,
+          0
+        ],
+        [
+          291,
+          0
+        ],
+        [
+          269,
+          0
+        ],
+        [
+          247,
+          0
+        ],
+        [
+          225,
+          1
+        ],
+        [
+          224,
+          4
+        ]
+      ]
+    },
+    {
+      "time_ns": 75000000000,
+      "pair": "gs-1585-to-1584",
+      "status": "reachable",
+      "nodes": [
+        1585,
+        224,
+        225,
+        247,
+        269,
+        291,
+        313,
+        335,
+        336,
+        337,
+        1584
+      ],
+      "directed_egresses": [
+        [
+          1585,
+          0
+        ],
+        [
+          224,
+          2
+        ],
+        [
+          225,
+          3
+        ],
+        [
+          247,
+          3
+        ],
+        [
+          269,
+          3
+        ],
+        [
+          291,
+          3
+        ],
+        [
+          313,
+          3
+        ],
+        [
+          335,
+          2
+        ],
+        [
+          336,
+          2
+        ],
+        [
+          337,
+          4
+        ]
+      ]
+    },
+    {
+      "time_ns": 121600000000,
+      "pair": "gs-1584-to-1585",
+      "status": "reachable",
+      "nodes": [
+        1584,
+        337,
+        336,
+        335,
+        313,
+        291,
+        269,
+        247,
+        246,
+        245,
+        1585
+      ],
+      "directed_egresses": [
+        [
+          1584,
+          0
+        ],
+        [
+          337,
+          1
+        ],
+        [
+          336,
+          1
+        ],
+        [
+          335,
+          0
+        ],
+        [
+          313,
+          0
+        ],
+        [
+          291,
+          0
+        ],
+        [
+          269,
+          0
+        ],
+        [
+          247,
+          1
+        ],
+        [
+          246,
+          1
+        ],
+        [
+          245,
+          4
+        ]
+      ]
+    },
+    {
+      "time_ns": 121600000000,
+      "pair": "gs-1585-to-1584",
+      "status": "reachable",
+      "nodes": [
+        1585,
+        245,
+        246,
+        247,
+        269,
+        291,
+        313,
+        335,
+        336,
+        337,
+        1584
+      ],
+      "directed_egresses": [
+        [
+          1585,
+          0
+        ],
+        [
+          245,
+          2
+        ],
+        [
+          246,
+          2
+        ],
+        [
+          247,
+          3
+        ],
+        [
+          269,
+          3
+        ],
+        [
+          291,
+          3
+        ],
+        [
+          313,
+          3
+        ],
+        [
+          335,
+          2
+        ],
+        [
+          336,
+          2
+        ],
+        [
+          337,
+          4
+        ]
+      ]
+    },
+    {
+      "time_ns": 187400000000,
+      "pair": "gs-1584-to-1585",
+      "status": "reachable",
+      "nodes": [
+        1584,
+        337,
+        336,
+        335,
+        313,
+        291,
+        269,
+        247,
+        225,
+        203,
+        181,
+        180,
+        1585
+      ],
+      "directed_egresses": [
+        [
+          1584,
+          0
+        ],
+        [
+          337,
+          1
+        ],
+        [
+          336,
+          1
+        ],
+        [
+          335,
+          0
+        ],
+        [
+          313,
+          0
+        ],
+        [
+          291,
+          0
+        ],
+        [
+          269,
+          0
+        ],
+        [
+          247,
+          0
+        ],
+        [
+          225,
+          0
+        ],
+        [
+          203,
+          0
+        ],
+        [
+          181,
+          1
+        ],
+        [
+          180,
+          4
+        ]
+      ]
+    },
+    {
+      "time_ns": 187400000000,
+      "pair": "gs-1585-to-1584",
+      "status": "reachable",
+      "nodes": [
+        1585,
+        180,
+        181,
+        203,
+        225,
+        247,
+        269,
+        291,
+        313,
+        335,
+        336,
+        337,
+        1584
+      ],
+      "directed_egresses": [
+        [
+          1585,
+          0
+        ],
+        [
+          180,
+          2
+        ],
+        [
+          181,
+          3
+        ],
+        [
+          203,
+          3
+        ],
+        [
+          225,
+          3
+        ],
+        [
+          247,
+          3
+        ],
+        [
+          269,
+          3
+        ],
+        [
+          291,
+          3
+        ],
+        [
+          313,
+          3
+        ],
+        [
+          335,
+          2
+        ],
+        [
+          336,
+          2
+        ],
+        [
+          337,
+          4
+        ]
+      ]
+    },
+    {
+      "time_ns": 193800000000,
+      "pair": "gs-1584-to-1585",
+      "status": "reachable",
+      "nodes": [
+        1584,
+        337,
+        336,
+        335,
+        313,
+        291,
+        269,
+        247,
+        225,
+        203,
+        202,
+        180,
+        1585
+      ],
+      "directed_egresses": [
+        [
+          1584,
+          0
+        ],
+        [
+          337,
+          1
+        ],
+        [
+          336,
+          1
+        ],
+        [
+          335,
+          0
+        ],
+        [
+          313,
+          0
+        ],
+        [
+          291,
+          0
+        ],
+        [
+          269,
+          0
+        ],
+        [
+          247,
+          0
+        ],
+        [
+          225,
+          0
+        ],
+        [
+          203,
+          1
+        ],
+        [
+          202,
+          0
+        ],
+        [
+          180,
+          4
+        ]
+      ]
+    },
+    {
+      "time_ns": 193800000000,
+      "pair": "gs-1585-to-1584",
+      "status": "reachable",
+      "nodes": [
+        1585,
+        180,
+        202,
+        203,
+        225,
+        247,
+        269,
+        291,
+        313,
+        335,
+        336,
+        337,
+        1584
+      ],
+      "directed_egresses": [
+        [
+          1585,
+          0
+        ],
+        [
+          180,
+          3
+        ],
+        [
+          202,
+          2
+        ],
+        [
+          203,
+          3
+        ],
+        [
+          225,
+          3
+        ],
+        [
+          247,
+          3
+        ],
+        [
+          269,
+          3
+        ],
+        [
+          291,
+          3
+        ],
+        [
+          313,
+          3
+        ],
+        [
+          335,
+          2
+        ],
+        [
+          336,
+          2
+        ],
+        [
+          337,
+          4
+        ]
+      ]
+    },
+    {
+      "time_ns": 194000000000,
+      "pair": "gs-1584-to-1585",
+      "status": "reachable",
+      "nodes": [
+        1584,
+        337,
+        336,
+        335,
+        334,
+        312,
+        290,
+        268,
+        246,
+        224,
+        202,
+        180,
+        1585
+      ],
+      "directed_egresses": [
+        [
+          1584,
+          0
+        ],
+        [
+          337,
+          1
+        ],
+        [
+          336,
+          1
+        ],
+        [
+          335,
+          1
+        ],
+        [
+          334,
+          0
+        ],
+        [
+          312,
+          0
+        ],
+        [
+          290,
+          0
+        ],
+        [
+          268,
+          0
+        ],
+        [
+          246,
+          0
+        ],
+        [
+          224,
+          0
+        ],
+        [
+          202,
+          0
+        ],
+        [
+          180,
+          4
+        ]
+      ]
+    },
+    {
+      "time_ns": 194000000000,
+      "pair": "gs-1585-to-1584",
+      "status": "reachable",
+      "nodes": [
+        1585,
+        180,
+        202,
+        224,
+        246,
+        268,
+        290,
+        312,
+        334,
+        335,
+        336,
+        337,
+        1584
+      ],
+      "directed_egresses": [
+        [
+          1585,
+          0
+        ],
+        [
+          180,
+          3
+        ],
+        [
+          202,
+          3
+        ],
+        [
+          224,
+          3
+        ],
+        [
+          246,
+          3
+        ],
+        [
+          268,
+          3
+        ],
+        [
+          290,
+          3
+        ],
+        [
+          312,
+          3
+        ],
+        [
+          334,
+          2
+        ],
+        [
+          335,
+          2
+        ],
+        [
+          336,
+          2
+        ],
+        [
+          337,
+          4
+        ]
+      ]
+    }
+  ],
+  "overlap_profiles": [
+    {
+      "pair_a": "gs-1584-to-1585",
+      "pair_b": "gs-1585-to-1584",
+      "four_distinct_endpoints": false,
+      "same_endpoints": false,
+      "reverse_endpoints": true,
+      "states_evaluated": 2000,
+      "both_reachable_states": 2000,
+      "isl_shared_states": 0,
+      "isl_unshared_states": 2000,
+      "gsl_shared_states": 0,
+      "gsl_unshared_states": 2000,
+      "overlap_changes": [],
+      "observed_isl_merge_split": false,
+      "gsl_overlap_at_every_reachable_state": false,
+      "candidate_for_distinct_endpoint_isl_merge_split": false
+    }
+  ],
+  "candidate_count": 0,
+  "endpoint_diversity_limit": "Only two GS nodes; repeated same-direction endpoints have identical routes, and opposite directions are not independent-endpoint data corridors.",
+  "budgets": {
+    "max_files": 2000,
+    "max_bytes": 16777216,
+    "max_rows": 2000000,
+    "max_elapsed_s": 30.0,
+    "max_metadata_bytes": 1048576,
+    "max_line_bytes": 1024,
+    "max_hops": 64
+  },
+  "read_cost": {
+    "forwarding_files_opened": 2000,
+    "forwarding_files_applied": 2000,
+    "forwarding_content_bytes_read": 133900,
+    "forwarding_rows_read": 7614,
+    "selected_forwarding_rows": 7614,
+    "metadata_content_bytes_read": 249443,
+    "total_input_content_bytes_read": 383343,
+    "retained_selected_entries": 3170,
+    "elapsed_s": 0.09310935999997128,
+    "meaning": "Logical input content bytes, including empty-file opens; not physical disk IO or simulator runtime. Elapsed limit is cooperatively checked before each read."
+  },
+  "limits": [
+    "All prefix updates are applied; no sorting-based early exit or independent-snapshot assumption.",
+    "Only selected destinations are retained, at most eight GS pairs and eight requested samples.",
+    "Directed overlap is a necessary path condition, not proof of a shared queue or bottleneck.",
+    "GSL overlap is reported separately; persistent endpoint sharing is not an intermittent ISL bottleneck.",
+    "No geometric propagation delay, packet in-flight transition, queue occupancy, capacity, or TCP outcome is measured.",
+    "A null result concerns only the declared nodes and completed time prefix; unfinished searches do not prove absence."
+  ],
+  "outputs": {
+    "path-samples.csv": {
+      "bytes": 5240,
+      "sha256": "4b2c5c2f929da08e5341789e8ce519dc80569ee8173d49436be9a7a73bddc43e"
+    },
+    "route-overlaps.csv": {
+      "bytes": 678,
+      "sha256": "0eac0391bcea477bee9ba0f5a5c893c3764c7f7100645fa0ceff3850e7f086f5"
+    },
+    "path-inputs.csv": {
+      "bytes": 207542,
+      "sha256": "5bf111804956b6423dc92581f3dc3b2fa3bb1842ec56a4af77ff14037a293bda"
+    }
+  }
+}

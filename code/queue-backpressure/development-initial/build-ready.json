@@ -1,0 +1,37 @@
+{
+  "build_status": "success",
+  "build_command": [
+    "./ns3",
+    "build",
+    "-j",
+    "1"
+  ],
+  "wall_seconds": 540.0657307299989,
+  "patch_sha256": "87e99a4e5f0890a5ea630739b92ca9f870fa87d01ffb019a7c3891be9c0fc4e9",
+  "installed_diff_sha256": "87e99a4e5f0890a5ea630739b92ca9f870fa87d01ffb019a7c3891be9c0fc4e9",
+  "tool_sha256": "790554d15e86079f19924c230bd4de4ff28c7dbfa336f31165fe71eb36419665",
+  "runtime_files": {
+    "scratch/main_satnet/ns3.48-main_satnet": "551885fbcbac89a594b0c44081c2e7750947fc89b309807349d6195ecb46e836",
+    "scratch/study_micro/ns3.48-study_micro": "54f876501ad6bb5b4b60f3af1080772adc1cb065e69a44092ad508a7bcca1d0a",
+    "lib/libns3.48-antenna.so": "edf56f782f446d54291425c4b357fb2a609f64da3a3a88a2d48e18dbcf4200b8",
+    "lib/libns3.48-applications.so": "029ee91a59a88fd8cff0c865053f31dfc36f6cc6f10484ebb3843864025750ca",
+    "lib/libns3.48-basic-sim.so": "9de948e3a13dbc418b344b53496407d09bfc694b473c5847715a327c25c800b2",
+    "lib/libns3.48-bridge.so": "5c0e5f9092dc8a215a2d77aaa75ba0e3db181578566db25b9463cc220a94a1a0",
+    "lib/libns3.48-core.so": "5f6e271f0e98438059ac55c8dc5c94ee411050cb7cd7f23956963310674982a1",
+    "lib/libns3.48-flow-monitor.so": "5fbe40f2a843bf01f38b943a28377f7e9628b748506498298cfd6096c621b1ad",
+    "lib/libns3.48-internet-apps.so": "c31699838a1a449773562164af013663951dbd78c7b0e1bcddc4b451f2eaa6bc",
+    "lib/libns3.48-internet.so": "ebf71d9775f02db54d509dbb9926187c07b6f6f14a9ffc67656fa70e9e1eaede",
+    "lib/libns3.48-mobility.so": "45dc648f0ff11a8c83574fdea0dd189a35ccc606d625d3e3612afa3a6f806351",
+    "lib/libns3.48-network.so": "8258009efcadb296e3abc3da3d12606b258eb5545dc33bd0d4f047af5e552bb0",
+    "lib/libns3.48-point-to-point.so": "3b611e9048204998fb43870d9d219e4f8e670e75c31a38e462741e968e356b0e",
+    "lib/libns3.48-satellite-network.so": "4073a1defc99168132fce6b98b0ed9b06bae36c88be3bb07d4777c09e122d5fd",
+    "lib/libns3.48-satellite.so": "68e7ce4d29d13efe374989d3279a8587bedb7a8104757938ab2c14605e3d4002",
+    "lib/libns3.48-stats.so": "ab02ae3cfe9c8453b6b251528884a678fe470cb1aac2e6500064a6fd44caf447",
+    "lib/libns3.48-traffic-control.so": "2c5b371c083227a1e09530b5d9bb3d9d2abd3c5d9271febf9f4c006dedf1f327"
+  },
+  "build_log": {
+    "path": "/tmp/queue-backpressure-build.log",
+    "bytes": 19740,
+    "sha256": "d6447ef773f76b30937ef40ca30f55fca8c129d1c374fbd67ff79ef3104eae5b"
+  }
+}

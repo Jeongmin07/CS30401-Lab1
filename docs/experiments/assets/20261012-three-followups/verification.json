@@ -1,0 +1,132 @@
+{
+  "verified_at_utc": "2026-10-12T14:57:43.552778+00:00",
+  "python_ast_files": 14,
+  "parsed_json_files": 49,
+  "local_link_count": 95,
+  "missing_links": [],
+  "files": [
+    {
+      "path": "code/orbit-cubic-down/analyze_gate.py",
+      "bytes": 11338,
+      "sha256": "5714e9dfef6235f0c3e1cd49b3adec0920609a3b417849cd26eddd002a46159e"
+    },
+    {
+      "path": "code/orbit-cubic-up/analyze.py",
+      "bytes": 9437,
+      "sha256": "a0401183856a54b9d37d706134b1d184b52a42cebf762388ebe00cfc1634e059"
+    },
+    {
+      "path": "code/orbit-cubic-up/archive.py",
+      "bytes": 2888,
+      "sha256": "36785e8c33c4e46aec15e7f004d2679b63e79ccaff5c22911e692d9a3aae7e63"
+    },
+    {
+      "path": "code/orbit-cubic-up/install.py",
+      "bytes": 6288,
+      "sha256": "edee5646f3f036311c53ce7ab3266a5d98df61f9d44ddc8a4e61e77944afc161"
+    },
+    {
+      "path": "code/orbit-cubic-up/run.py",
+      "bytes": 5481,
+      "sha256": "33dfd3224a8de9029553a3cf9be99df99a1300da65dbfa3dff255cdea368736b"
+    },
+    {
+      "path": "code/orbit-geometry/forward_hints.py",
+      "bytes": 5149,
+      "sha256": "06b91e6c02510cb5838b99fdedb498ab8acdc4fec7c343121a5d2507ab3ee4c7"
+    },
+    {
+      "path": "code/orbit-loss/analyze-before-drop-audit.py",
+      "bytes": 6779,
+      "sha256": "bc86ae54853cdd855f44617541ec3b4079dfbe7ba02b6ed8258cfcc3945a3372"
+    },
+    {
+      "path": "code/orbit-loss/analyze.py",
+      "bytes": 7564,
+      "sha256": "9641453064980aeaeaf7270dc1ff17d8417ffe7cf1347011ed03afe634c94ab1"
+    },
+    {
+      "path": "code/orbit-loss/archive.py",
+      "bytes": 2264,
+      "sha256": "3422dea8b2b5de7bc7e9fe14f5f9d54cf514c451a887d32588871258edfcf12d"
+    },
+    {
+      "path": "code/orbit-loss/build.py",
+      "bytes": 1619,
+      "sha256": "03aa8c1cc6e3c7cad08d445278e9e0d8de3bb04361d3934eee41602c61e9dfd0"
+    },
+    {
+      "path": "code/orbit-loss/compare.py",
+      "bytes": 8077,
+      "sha256": "d4fb19e75f23a072a165a3e21335bd432ecc5e99fad9425e2eaef9554c2839c1"
+    },
+    {
+      "path": "code/orbit-loss/install.py",
+      "bytes": 18843,
+      "sha256": "0db118698d7afee1588afd55460b04601df8b6a02f70d7261c2a12f3d252f88e"
+    },
+    {
+      "path": "code/orbit-loss/plot.py",
+      "bytes": 4361,
+      "sha256": "3a91a486980595ef119f3b934b4ea1b9321624923675d1809ee66478e6cba6b1"
+    },
+    {
+      "path": "code/orbit-loss/run.py",
+      "bytes": 7852,
+      "sha256": "f1589b032c2e864bed0f617c13b9f64fae5a0cc34a0f83a6b55444e6b1dda511"
+    },
+    {
+      "path": "README.md",
+      "bytes": 7870,
+      "sha256": "7261d371d6423753abce783d192a014d5344192f6048a062ecc7cdf4b28e9475"
+    },
+    {
+      "path": "docs/work/20261012-bbr-route-kim-seongchan.md",
+      "bytes": 12881,
+      "sha256": "b1f2020737b9e5cd0ef3a42b3096d1a990686ee3ec0dc049335d156459a0df74"
+    },
+    {
+      "path": "docs/research/20261012-progress-retrospective.md",
+      "bytes": 22130,
+      "sha256": "f577aefef180f669fce2835d093dbc2a5c9d6926a2cd60f5af5c0358ba649a7c"
+    },
+    {
+      "path": "docs/experiments/20261012-three-followups.md",
+      "bytes": 13189,
+      "sha256": "3eaceec9a4587f815c0dda4b91f65abbc19a64ba113c28628633c5df75a9ed97"
+    },
+    {
+      "path": "docs/experiments/20261012-orbit-cubic-up.md",
+      "bytes": 8327,
+      "sha256": "f840be7b44d3547b613aa88c9f6ef26ab44feae0391755d296e8c811f3a3c7c5"
+    },
+    {
+      "path": "docs/experiments/20261012-orbit-cubic-down.md",
+      "bytes": 11307,
+      "sha256": "dd3831ed94e6bec970e5c4ce5a638f2fbe68054e301d06949247e272f9451064"
+    },
+    {
+      "path": "docs/experiments/20261012-orbit-loss.md",
+      "bytes": 15067,
+      "sha256": "1c099f3d0b56333e9778c458886285691fd6f453af8f83f357b45cdad8df7cde"
+    },
+    {
+      "path": "code/orbit-cubic-up/README.md",
+      "bytes": 4345,
+      "sha256": "4c3de95f58ccd13740120a5c48afe782cba4ab545c7635cf0c3fa0728300acd8"
+    },
+    {
+      "path": "code/orbit-cubic-down/README.md",
+      "bytes": 1552,
+      "sha256": "8c70112d5b2d1928de148abad6831288db07f144e7f4f7dbffabb75355d0e675"
+    },
+    {
+      "path": "code/orbit-loss/README.md",
+      "bytes": 4829,
+      "sha256": "526a6d8e44c6ab9aceb705a2c22ff805884361950d2a5de9069a15bf8260a126"
+    }
+  ],
+  "limits": [
+    "Static syntax, JSON, local links, and current-byte receipts only; this is not an independent simulation replay or runtime branch-coverage test."
+  ]
+}

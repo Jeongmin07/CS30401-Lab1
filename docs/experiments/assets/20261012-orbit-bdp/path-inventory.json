@@ -1,0 +1,196 @@
+{
+  "files": [
+    {
+      "path": "code/orbit-bdp/analyze.py",
+      "bytes": 6556,
+      "sha256": "629f98ae7bc1e22cb1211a0f0ea99ee3b8bbbfa4ebe00300033e0636ad1741d0"
+    },
+    {
+      "path": "code/orbit-bdp/archive.py",
+      "bytes": 4037,
+      "sha256": "da9f65c1270b7781dcefa0424645d8ae7a74552d3bc519a230f3bd3e0a18a6a9"
+    },
+    {
+      "path": "code/orbit-bdp/geometry-receipt.json",
+      "bytes": 635,
+      "sha256": "7974cce6220f475c5f2d5d11e6e93c8b6d3aded8cabf12abaecc2dec17bc8789"
+    },
+    {
+      "path": "code/orbit-bdp/geometry.csv",
+      "bytes": 42902,
+      "sha256": "99770f4f652c81797d7e6bf00b858097365733027ae2974a9313d8f0835d3bd9"
+    },
+    {
+      "path": "code/orbit-bdp/install.py",
+      "bytes": 7371,
+      "sha256": "58cca38be2e60f5375362851399d395a3091d1b5868a06269fbb1673d660a26f"
+    },
+    {
+      "path": "code/orbit-bdp/ns3-initial-build-failure.patch",
+      "bytes": 31672,
+      "sha256": "333f0dc27e8878d922b4b4e8f717c4d77c697be71982967c66deedcd2e5d0bbc"
+    },
+    {
+      "path": "code/orbit-bdp/ns3.patch",
+      "bytes": 31712,
+      "sha256": "9172ff9c43de96a553b5d1b2b791622f5c486fc663d307af6ddea364218b67bb"
+    },
+    {
+      "path": "code/orbit-bdp/README.md",
+      "bytes": 3486,
+      "sha256": "109ef40a3df358e004ce128a4a55b537072b6baa8c4eb967365f723eb53f6250"
+    },
+    {
+      "path": "code/orbit-bdp/run.py",
+      "bytes": 6632,
+      "sha256": "046aee430d21530439decfcf91797cf6b82c297b0c31dc0aff874ac6baa761b4"
+    },
+    {
+      "path": "docs/experiments/20261012-orbit-bdp.md",
+      "bytes": 10192,
+      "sha256": "9762852e1405e738697eb6a47f576613acb83292e48e79cba621bba7c305cd72"
+    },
+    {
+      "path": "docs/experiments/assets/20261012-orbit-bdp/environment.json",
+      "bytes": 836,
+      "sha256": "21b60b303b1c12d08cd3faa9d652b3fad96e08a204631d61be6f17136cfffdb3"
+    },
+    {
+      "path": "docs/experiments/assets/20261012-orbit-bdp/evidence/bbr10-base40/bbr_state.csv",
+      "bytes": 73268,
+      "sha256": "d18c16349f12ac02a68a7b18f9b90ce48eb1f9ddc35b3df2403498ca6f790791"
+    },
+    {
+      "path": "docs/experiments/assets/20261012-orbit-bdp/evidence/bbr10-base40/config_ns3.properties",
+      "bytes": 609,
+      "sha256": "2168923f3930bfe7cbd2d9a3a3fd9364f878813bb2ce19f05959bb91b547392d"
+    },
+    {
+      "path": "docs/experiments/assets/20261012-orbit-bdp/evidence/bbr10-base40/manifest.json",
+      "bytes": 421034,
+      "sha256": "914484d027e7f28e24745dc68547ee873064a247180054dff353d3c8e4b34f90"
+    },
+    {
+      "path": "docs/experiments/assets/20261012-orbit-bdp/evidence/bbr10-base40/orbit_bdp_state.csv",
+      "bytes": 39065,
+      "sha256": "701e5da045650459561660c43bc7a718b289d1549871a4a0619fe86a12e4ba49"
+    },
+    {
+      "path": "docs/experiments/assets/20261012-orbit-bdp/evidence/bbr10-base40/schedule.csv",
+      "bytes": 29,
+      "sha256": "e6cde3aa7716856e46d24c3833354df90407313ece13a5ffbd1b789fa4fea23c"
+    },
+    {
+      "path": "docs/experiments/assets/20261012-orbit-bdp/evidence/bbr10-orbit40/bbr_state.csv",
+      "bytes": 73407,
+      "sha256": "ff2d72863845c0762aa9be4515cb2ddd106151ea022c2fdc0525d605557f6162"
+    },
+    {
+      "path": "docs/experiments/assets/20261012-orbit-bdp/evidence/bbr10-orbit40/config_ns3.properties",
+      "bytes": 609,
+      "sha256": "2168923f3930bfe7cbd2d9a3a3fd9364f878813bb2ce19f05959bb91b547392d"
+    },
+    {
+      "path": "docs/experiments/assets/20261012-orbit-bdp/evidence/bbr10-orbit40/manifest.json",
+      "bytes": 421036,
+      "sha256": "53b284478a3295b898492f4735fc4e85761354aee0b9f9cd9e0a25b5e9021192"
+    },
+    {
+      "path": "docs/experiments/assets/20261012-orbit-bdp/evidence/bbr10-orbit40/orbit_bdp_state.csv",
+      "bytes": 39352,
+      "sha256": "bbca9f9528de297391a68529d32b516606baeec072468d58f29d6b140b407193"
+    },
+    {
+      "path": "docs/experiments/assets/20261012-orbit-bdp/evidence/bbr10-orbit40/schedule.csv",
+      "bytes": 29,
+      "sha256": "e6cde3aa7716856e46d24c3833354df90407313ece13a5ffbd1b789fa4fea23c"
+    },
+    {
+      "path": "docs/experiments/assets/20261012-orbit-bdp/evidence/bbr100-base40/bbr_state.csv",
+      "bytes": 80971,
+      "sha256": "e8f22b6acd98596386af5466926f78cea3f8136a0945f5834c9d81515988ab4b"
+    },
+    {
+      "path": "docs/experiments/assets/20261012-orbit-bdp/evidence/bbr100-base40/config_ns3.properties",
+      "bytes": 611,
+      "sha256": "9533e0efa6dd560ba18c941afeadf3ac45212969f16f303c5e9ccc37c3407472"
+    },
+    {
+      "path": "docs/experiments/assets/20261012-orbit-bdp/evidence/bbr100-base40/manifest.json",
+      "bytes": 420958,
+      "sha256": "89ae3c1830e223ede7b20619b5ebeaf684ce634085585df942d5014b05b7b037"
+    },
+    {
+      "path": "docs/experiments/assets/20261012-orbit-bdp/evidence/bbr100-base40/orbit_bdp_state.csv",
+      "bytes": 40944,
+      "sha256": "e9da0ff169257a3a34f7478000ceac9da71c2437a68787eb6bc10452b1e91191"
+    },
+    {
+      "path": "docs/experiments/assets/20261012-orbit-bdp/evidence/bbr100-base40/schedule.csv",
+      "bytes": 29,
+      "sha256": "e6cde3aa7716856e46d24c3833354df90407313ece13a5ffbd1b789fa4fea23c"
+    },
+    {
+      "path": "docs/experiments/assets/20261012-orbit-bdp/evidence/bbr100-orbit40/bbr_state.csv",
+      "bytes": 80971,
+      "sha256": "4e9e8cad15747e0ffeb08fe6814a2013afe05f5856884079ea047d4018d81bdc"
+    },
+    {
+      "path": "docs/experiments/assets/20261012-orbit-bdp/evidence/bbr100-orbit40/config_ns3.properties",
+      "bytes": 611,
+      "sha256": "9533e0efa6dd560ba18c941afeadf3ac45212969f16f303c5e9ccc37c3407472"
+    },
+    {
+      "path": "docs/experiments/assets/20261012-orbit-bdp/evidence/bbr100-orbit40/manifest.json",
+      "bytes": 420960,
+      "sha256": "4c9ea320f561f0b96330761f35e6efefc4bbeea8d67fabba09e5304c132ad6e9"
+    },
+    {
+      "path": "docs/experiments/assets/20261012-orbit-bdp/evidence/bbr100-orbit40/orbit_bdp_state.csv",
+      "bytes": 41141,
+      "sha256": "56d27ebc173f8a344e3698de54f10d6f9d83a96dff8b999c049a72220129801d"
+    },
+    {
+      "path": "docs/experiments/assets/20261012-orbit-bdp/evidence/bbr100-orbit40/schedule.csv",
+      "bytes": 29,
+      "sha256": "e6cde3aa7716856e46d24c3833354df90407313ece13a5ffbd1b789fa4fea23c"
+    },
+    {
+      "path": "docs/experiments/assets/20261012-orbit-bdp/evidence/raw-inventory.json",
+      "bytes": 23217,
+      "sha256": "e6d486d7dfcc8185c6552c46a11ebcda1f2c874aff55f1a9b27445d551ffe6ee"
+    },
+    {
+      "path": "docs/experiments/assets/20261012-orbit-bdp/export/comparison.csv",
+      "bytes": 604,
+      "sha256": "b61aef4bc6db47214f4afe4f24fa60115dbc9711f2c6dd82f7eeb5cbf173d197"
+    },
+    {
+      "path": "docs/experiments/assets/20261012-orbit-bdp/export/device-queues.csv",
+      "bytes": 19989,
+      "sha256": "fa38cc83c5706cb7b9c1a353f9c5bb9f6518305b2b94297232e6d4fde06691e6"
+    },
+    {
+      "path": "docs/experiments/assets/20261012-orbit-bdp/export/results.csv",
+      "bytes": 1138,
+      "sha256": "4f923f551231dad9677ae56e409e71466dd83634fbd791080b058945a3ae3beb"
+    },
+    {
+      "path": "docs/experiments/assets/20261012-orbit-bdp/export/second-bins.csv",
+      "bytes": 6345,
+      "sha256": "6d44652350448d7a8641d35643d86b837e698b3394fa73b1af25baf9a4eea11d"
+    },
+    {
+      "path": "docs/experiments/assets/20261012-orbit-bdp/export/summary.json",
+      "bytes": 21495,
+      "sha256": "188982b8b5ca6565e8b7915fab20a53e9a3bbcf83c93a961f095b940b73cfbc3"
+    },
+    {
+      "path": "docs/experiments/assets/20261012-orbit-bdp/final-checks.json",
+      "bytes": 4477,
+      "sha256": "bbf0d0f3d921f7d43717968e866ef4ca287a255d474aab1a3da2057910bc41ca"
+    }
+  ],
+  "file_count": 38,
+  "inventory_self_excluded": true
+}

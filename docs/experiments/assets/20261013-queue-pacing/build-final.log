@@ -1,0 +1,5 @@
+[0/2] Re-checking globbed directories...
+[1/2] Building CXX object scratch/CMakeFiles/scratch_main_satnet_main_satnet.dir/main_satnet/main_satnet.cc.o
+[2/2] Linking CXX executable /home/ubuntu/ns-3.48/build/scratch/main_satnet/ns3.48-main_satnet
+Finished executing the following commands:
+/usr/bin/cmake --build /home/ubuntu/ns-3.48/cmake-cache -j 1

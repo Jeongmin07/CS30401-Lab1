@@ -1,0 +1,68 @@
+{
+  "status": "existing traces inspected; new shared baseline pending",
+  "existing_raw_diagnostics": [
+    {
+      "path": "docs/experiments/assets/20261012-orbit-cubic-down/existing-leo10-base.json",
+      "sha256": "63af8b66cc66c602e5e527690c7b8363d78f62b5c485be5d7b27a7ad7e871760",
+      "bytes": 23974
+    },
+    {
+      "path": "docs/experiments/assets/20261012-orbit-cubic-down/existing-leo100-base40.json",
+      "sha256": "9ac19071fd24114e341b035cb0df5bffdc167ec416ce2533fd5ae85650e4a780",
+      "bytes": 16496
+    }
+  ],
+  "legacy_raw_identity_checks": [
+    {
+      "file": "tcp_flow_0_study_packets.csv",
+      "published_sha256": "78fc54184c4481b1421d2139870debcbe72259c18ccb011ba180ef77784e146f",
+      "current_sha256": "78fc54184c4481b1421d2139870debcbe72259c18ccb011ba180ef77784e146f",
+      "equal": true
+    },
+    {
+      "file": "study_drops.csv",
+      "published_sha256": "c915297632311402f8a2b1b4d6d24b83691f5971f40477934b2e2826887e6821",
+      "current_sha256": "c915297632311402f8a2b1b4d6d24b83691f5971f40477934b2e2826887e6821",
+      "equal": true
+    },
+    {
+      "file": "study_app_rx_node_1585_port_1024.csv",
+      "published_sha256": "63defbe5710bafaafec06b3021dfda3c8d2df2bad3bf78ce15b54c84d7bc451d",
+      "current_sha256": "63defbe5710bafaafec06b3021dfda3c8d2df2bad3bf78ce15b54c84d7bc451d",
+      "equal": true
+    },
+    {
+      "file": "tcp_flow_0_study_events.csv",
+      "published_sha256": "8809b380277e387dcc400a5d27a5679ccbdf446a08c7efb06fa7a021a42df78b",
+      "current_sha256": "8809b380277e387dcc400a5d27a5679ccbdf446a08c7efb06fa7a021a42df78b",
+      "equal": true
+    }
+  ],
+  "q75_summary_only": {
+    "case": "q75-base",
+    "rate_mbps": 10,
+    "queue_packets": 75,
+    "duration_s": 200,
+    "whole_drop_rows": 440,
+    "event_26_2_retx": 2,
+    "event_75_retx": 11,
+    "source_path": "docs/experiments/assets/cubic-q75-20261010/results.csv",
+    "source_sha256": "e37a2b9f3588031121ba5b589b092ba2b404a712490e7d37a7b6d2cfcebe226d",
+    "limits": "Summary row only; q75 actual local drop times and queue traces were not read. Whole-run drop rows cannot identify route-shortening overflow."
+  },
+  "route_events": [
+    {
+      "time_s": 26.2,
+      "old_rtt_prop_ms": 97.698,
+      "new_rtt_prop_ms": 91.064,
+      "geometric_bdp_ratio": 0.9320968699461606
+    },
+    {
+      "time_s": 75.0,
+      "old_rtt_prop_ms": 90.987,
+      "new_rtt_prop_ms": 87.644,
+      "geometric_bdp_ratio": 0.9632584874762329
+    }
+  ],
+  "limits": "No new simulation or policy. Existing actual data/ACK drop0 in declared windows does not imply zero queued packets."
+}

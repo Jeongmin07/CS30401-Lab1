@@ -1,0 +1,5 @@
+*.patch -text
+*.py -text
+*.h -text
+*.json -text
+*.md text eol=lf

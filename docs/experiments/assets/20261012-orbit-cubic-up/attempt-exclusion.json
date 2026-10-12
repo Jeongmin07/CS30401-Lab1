@@ -1,0 +1,14 @@
+{
+  "case": "cubic100-observed200",
+  "execution_status_unchanged": "timeout",
+  "wall_seconds": 240.101341081001,
+  "excluded_from_performance_analysis": true,
+  "last_console_progress": {
+    "simulation_time_s": 154.79,
+    "wall_time_s": 212.18
+  },
+  "reason": "240s authorized wall cap reached before simulation completed. Final queue/service flush and the later natural187.4s transition were not completed. Partial trace content is preserved and may end within a CSV row.",
+  "manifest_sha256": "7f5819f77f773c53582cec0cc1fa738dbb5bf9a4786f97c87b30993f0e4faed2",
+  "source_runtime_unchanged": true,
+  "no_policy_ON_or_retry_performed": true
+}

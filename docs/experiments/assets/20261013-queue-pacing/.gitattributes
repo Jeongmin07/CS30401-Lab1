@@ -1,0 +1,4 @@
+*.patch -text -whitespace
+*.json -text
+*.csv -text
+*.log -text

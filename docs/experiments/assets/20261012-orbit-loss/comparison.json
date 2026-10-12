@@ -1,0 +1,529 @@
+{
+  "schema_version": 1,
+  "tool": {
+    "path": "/work/code/orbit-loss/compare.py",
+    "bytes": 8077,
+    "sha256": "d4fb19e75f23a072a165a3e21335bd432ecc5e99fad9425e2eaef9554c2839c1"
+  },
+  "inputs": [
+    {
+      "path": "/tmp/orbit-loss-final-export/cases/leo10-base/summary.json",
+      "bytes": 19527,
+      "sha256": "e83cf441545d43cc93ea4c87ac3b4c6c9ad3f72578481e87525dcea215a46053"
+    },
+    {
+      "path": "/tmp/orbit-loss-final-export/cases/leo10-bounded20/summary.json",
+      "bytes": 21670,
+      "sha256": "48a04d294fe752da541f76cdae007d254215393eaddc98216e933f3b88bce5bc"
+    },
+    {
+      "path": "/tmp/orbit-loss-final-export/cases/leo10-drop-base/summary.json",
+      "bytes": 21927,
+      "sha256": "e2223582a88a7d08ebab1a35e153aa2216e89122c289220131bb1cf2f1590102"
+    },
+    {
+      "path": "/tmp/orbit-loss-final-export/cases/leo10-drop-selective/summary.json",
+      "bytes": 27909,
+      "sha256": "3fcf2bf5625a4c67076c0f2ca4538a3959ae97f0998a913a2db2572982037888"
+    },
+    {
+      "path": "/tmp/orbit-loss-final-export/cases/leo10-selective/summary.json",
+      "bytes": 26127,
+      "sha256": "ee60e1d4aeeed9c1c9070d72f50febf2f3bf7bcf310bd8672485cab06d2fbad4"
+    },
+    {
+      "path": "/tmp/orbit-loss-final-export/cases/micro-base/summary.json",
+      "bytes": 12082,
+      "sha256": "a26f61b9d90950bcf3e39362eb40a6a8b665d7101305dc05e5be008aeaa20202"
+    },
+    {
+      "path": "/tmp/orbit-loss-final-export/cases/micro-selective/summary.json",
+      "bytes": 18726,
+      "sha256": "d804ca9a26eb6245b676b4dd7905cdb6dc25b78d2f56926d1316c34faeeb777e"
+    }
+  ],
+  "final_simulations": 7,
+  "preliminary_v1_simulations": 2,
+  "not_statistical_replicates": true,
+  "immutable_final_patch_sha256": "531bf802984af821afd928fb3932912aca383fcdec5771f30f78d75a806d5591",
+  "all_final_runtime_files_equal": true,
+  "final_source_commits": [
+    "730ea20936dd668c914c3ad3689231104134b592"
+  ],
+  "comparisons": [
+    {
+      "baseline": "micro-base",
+      "policy": "micro-selective",
+      "metric": "fct_s",
+      "baseline_value": 0.25150992,
+      "policy_value": 0.3504824,
+      "delta": 0.09897248000000003,
+      "delta_percent": 39.35132260389571,
+      "extra_first_retx_after_drop_ns": null
+    },
+    {
+      "baseline": "leo10-base",
+      "policy": "leo10-bounded20",
+      "metric": "receiver_goodput_mbps",
+      "baseline_value": 9.544356,
+      "policy_value": 9.5465088,
+      "delta": 0.0021527999999992886,
+      "delta_percent": 0.022555738700424932,
+      "extra_first_retx_after_drop_ns": null
+    },
+    {
+      "baseline": "leo10-base",
+      "policy": "leo10-selective",
+      "metric": "receiver_goodput_mbps",
+      "baseline_value": 9.544356,
+      "policy_value": 9.5465088,
+      "delta": 0.0021527999999992886,
+      "delta_percent": 0.022555738700424932,
+      "extra_first_retx_after_drop_ns": null
+    },
+    {
+      "baseline": "leo10-drop-base",
+      "policy": "leo10-drop-selective",
+      "metric": "receiver_goodput_mbps",
+      "baseline_value": 9.5441904,
+      "policy_value": 9.5442456,
+      "delta": 5.5200000000255045e-05,
+      "delta_percent": 0.0005783623092892043,
+      "extra_first_retx_after_drop_ns": 5735961
+    }
+  ],
+  "historical_default_control_equivalence": [
+    {
+      "case": "micro-base",
+      "previous_case": "loss-first-base",
+      "source": {
+        "path": "/work/docs/experiments/assets/20261012-forecast-loss/export/cases/loss-first-base/summary.json",
+        "bytes": 12054,
+        "sha256": "01de05d5c6692b6d921780a0f0461a4c624ee5310c3ee2efbe9acf5f26d0504b"
+      },
+      "checks": [
+        {
+          "file": "logs_ns3/study_app_rx_node_1_port_1024.csv",
+          "old_sha256": "b35c9ac46bde2331da713fba1846eeb718c907027d0bb2f050acdf2fbca75b5e",
+          "new_sha256": "b35c9ac46bde2331da713fba1846eeb718c907027d0bb2f050acdf2fbca75b5e",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/study_drop_coverage.csv",
+          "old_sha256": "f2bbce727ae1f61019ef8f727753e3a8f64abdeb41d660a20a3607802f4524f4",
+          "new_sha256": "f2bbce727ae1f61019ef8f727753e3a8f64abdeb41d660a20a3607802f4524f4",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/study_drops.csv",
+          "old_sha256": "e875ed492bd803c301bd18a29514bca50a6edfe104a69a85ae1ec68003bac35c",
+          "new_sha256": "e875ed492bd803c301bd18a29514bca50a6edfe104a69a85ae1ec68003bac35c",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/study_rx_node_1_port_1024.csv",
+          "old_sha256": "cb432b3cd841713975a574fc6919f5cf0812185846599bdd17182cccacd11e5a",
+          "new_sha256": "cb432b3cd841713975a574fc6919f5cf0812185846599bdd17182cccacd11e5a",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_cwnd.csv",
+          "old_sha256": "ceb39256e8a1e4c940cb3f597b7e200596f2e9ff1f9ac9a0a5075021e8262630",
+          "new_sha256": "ceb39256e8a1e4c940cb3f597b7e200596f2e9ff1f9ac9a0a5075021e8262630",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_progress.csv",
+          "old_sha256": "b583a1b2888476107f8d65535c480fa872d89ef79c7b12c3cdb4380249a86e98",
+          "new_sha256": "b583a1b2888476107f8d65535c480fa872d89ef79c7b12c3cdb4380249a86e98",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_rtt.csv",
+          "old_sha256": "f46faf24fbfea5e839643bcebcbd4b6f10073f725ed5a139f993b2c823b14278",
+          "new_sha256": "f46faf24fbfea5e839643bcebcbd4b6f10073f725ed5a139f993b2c823b14278",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_study_events.csv",
+          "old_sha256": "3038a5be2c89948a5724671c2c638a3c408f7828393d6a2513b0a6e6e636863e",
+          "new_sha256": "3038a5be2c89948a5724671c2c638a3c408f7828393d6a2513b0a6e6e636863e",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_study_packets.csv",
+          "old_sha256": "9774112da74ac364fbe1421ae7d2f532b3e0450cf2f32d874f6362b9043bd6e6",
+          "new_sha256": "9774112da74ac364fbe1421ae7d2f532b3e0450cf2f32d874f6362b9043bd6e6",
+          "equal": true
+        }
+      ],
+      "profiling_excluded": []
+    },
+    {
+      "case": "leo10-base",
+      "previous_case": "leo10-base",
+      "source": {
+        "path": "/work/docs/experiments/assets/20261012-forecast-loss/export/cases/leo10-base/summary.json",
+        "bytes": 19360,
+        "sha256": "67d520f98cd06f224942e094454ec045c6106f93d8b2b511fad6d4e089479534"
+      },
+      "checks": [
+        {
+          "file": "logs_ns3/study_app_rx_node_1585_port_1024.csv",
+          "old_sha256": "63defbe5710bafaafec06b3021dfda3c8d2df2bad3bf78ce15b54c84d7bc451d",
+          "new_sha256": "63defbe5710bafaafec06b3021dfda3c8d2df2bad3bf78ce15b54c84d7bc451d",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/study_drop_coverage.csv",
+          "old_sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499",
+          "new_sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/study_drops.csv",
+          "old_sha256": "c915297632311402f8a2b1b4d6d24b83691f5971f40477934b2e2826887e6821",
+          "new_sha256": "c915297632311402f8a2b1b4d6d24b83691f5971f40477934b2e2826887e6821",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/study_rx_node_1585_port_1024.csv",
+          "old_sha256": "445161a24e3c943e61518cc5c67ce72aecbae5c1bb2caaf6bd4f4ce451b2f1cf",
+          "new_sha256": "445161a24e3c943e61518cc5c67ce72aecbae5c1bb2caaf6bd4f4ce451b2f1cf",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_cwnd.csv",
+          "old_sha256": "6651966bdd19d9cbcbcc99fb18ec854f152de7e81ed93e075e8baa5d09599860",
+          "new_sha256": "6651966bdd19d9cbcbcc99fb18ec854f152de7e81ed93e075e8baa5d09599860",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_progress.csv",
+          "old_sha256": "2a9181e6a8a5bf7e1c25b8a770096f43714ec03779e7d7ccd2673b9992339534",
+          "new_sha256": "2a9181e6a8a5bf7e1c25b8a770096f43714ec03779e7d7ccd2673b9992339534",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_rtt.csv",
+          "old_sha256": "b959d51947cf5f8d37d672ef2a239c942b8b57e9f3d574ce2f7624de42ab1e38",
+          "new_sha256": "b959d51947cf5f8d37d672ef2a239c942b8b57e9f3d574ce2f7624de42ab1e38",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_study_events.csv",
+          "old_sha256": "8809b380277e387dcc400a5d27a5679ccbdf446a08c7efb06fa7a021a42df78b",
+          "new_sha256": "8809b380277e387dcc400a5d27a5679ccbdf446a08c7efb06fa7a021a42df78b",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_study_packets.csv",
+          "old_sha256": "78fc54184c4481b1421d2139870debcbe72259c18ccb011ba180ef77784e146f",
+          "new_sha256": "78fc54184c4481b1421d2139870debcbe72259c18ccb011ba180ef77784e146f",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flows.csv",
+          "old_sha256": "709ed6139c27b6b511fb5d5f9f754342c493d3d5ab3ad0cfc2e9b97d1d1b9404",
+          "new_sha256": "709ed6139c27b6b511fb5d5f9f754342c493d3d5ab3ad0cfc2e9b97d1d1b9404",
+          "equal": true
+        }
+      ],
+      "profiling_excluded": [
+        {
+          "file": "logs_ns3/timing_results.csv",
+          "old_sha256": "05f9f83634c0ac3fd259e48a441f92bab2e9241af86fd7b0f89aad8ed5663c4d",
+          "new_sha256": "d85ca3590f148cc6d8d74762efacfcbcdc58fb78b19ab4ce2fb74c894538553c",
+          "qualification": "Wall-clock profiling; excluded from measurement equality"
+        }
+      ]
+    },
+    {
+      "case": "leo10-bounded20",
+      "previous_case": "leo10-forecast",
+      "source": {
+        "path": "/work/docs/experiments/assets/20261012-forecast-loss/export/cases/leo10-forecast/summary.json",
+        "bytes": 21465,
+        "sha256": "efa0d8191938b51110e736ec16e56c973761475660bcc22a960d5d8a39964c65"
+      },
+      "checks": [
+        {
+          "file": "logs_ns3/study_app_rx_node_1585_port_1024.csv",
+          "old_sha256": "bd7722c1cbb78f51335b6b181d55f2a2c10e427b2a4326a02c74b873712cb23d",
+          "new_sha256": "bd7722c1cbb78f51335b6b181d55f2a2c10e427b2a4326a02c74b873712cb23d",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/study_drop_coverage.csv",
+          "old_sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499",
+          "new_sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/study_drops.csv",
+          "old_sha256": "9aca2d266ffc1b98cd56f7803d04bdc7d807e11e44d25952b6c1ede94b8ef02e",
+          "new_sha256": "9aca2d266ffc1b98cd56f7803d04bdc7d807e11e44d25952b6c1ede94b8ef02e",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/study_rx_node_1585_port_1024.csv",
+          "old_sha256": "4fb3a7e70c6e79f54007de46368fd1e303359ef2882e0a314587c9e02292b71c",
+          "new_sha256": "4fb3a7e70c6e79f54007de46368fd1e303359ef2882e0a314587c9e02292b71c",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_cwnd.csv",
+          "old_sha256": "acf9286c1705fa2aa31eb56805f016c3793051f3d566bc91c87c151af2c5cace",
+          "new_sha256": "acf9286c1705fa2aa31eb56805f016c3793051f3d566bc91c87c151af2c5cace",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_progress.csv",
+          "old_sha256": "4ce98bb78f4f26fbc697971d23cfc085d8a3e89ad6b378222900a20469794ca4",
+          "new_sha256": "4ce98bb78f4f26fbc697971d23cfc085d8a3e89ad6b378222900a20469794ca4",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_rtt.csv",
+          "old_sha256": "5f7ed6085a55daca60bb23bb3df73b6098d879aa2005d8810d887b023080edc7",
+          "new_sha256": "5f7ed6085a55daca60bb23bb3df73b6098d879aa2005d8810d887b023080edc7",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_study_events.csv",
+          "old_sha256": "501afe86f9f5921e07c5bf304f939ec1792d47769e22ca5453e4a5b40eae9349",
+          "new_sha256": "501afe86f9f5921e07c5bf304f939ec1792d47769e22ca5453e4a5b40eae9349",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_study_packets.csv",
+          "old_sha256": "c63e5d869761f9b664e89e52833cf28a9b5b4a3fa4f834baf65842755ba61f1e",
+          "new_sha256": "c63e5d869761f9b664e89e52833cf28a9b5b4a3fa4f834baf65842755ba61f1e",
+          "equal": true
+        },
+        {
+          "file": "logs_ns3/tcp_flows.csv",
+          "old_sha256": "2fa7e654ea06e0f91745acd609b08a9daa37dffdcf01b8035c2ded8567a85017",
+          "new_sha256": "2fa7e654ea06e0f91745acd609b08a9daa37dffdcf01b8035c2ded8567a85017",
+          "equal": true
+        }
+      ],
+      "profiling_excluded": [
+        {
+          "file": "logs_ns3/timing_results.csv",
+          "old_sha256": "a17fd947d047fc44144c738b3bc2495a5232627463df4ba8b362fe9138801b3e",
+          "new_sha256": "2ea3d54000546d9989a4f8d1986963e91b367752930eab462f8ecb85fd87f1ba",
+          "qualification": "Wall-clock profiling; excluded from measurement equality"
+        }
+      ]
+    }
+  ],
+  "natural_bounded20_selective_trajectory": [
+    {
+      "file": "study_app_rx_node_1585_port_1024.csv",
+      "equal": true,
+      "scope": "Raw byte-identical measurement",
+      "left": {
+        "bytes": 14465567,
+        "sha256": "bd7722c1cbb78f51335b6b181d55f2a2c10e427b2a4326a02c74b873712cb23d"
+      },
+      "right": {
+        "bytes": 14465567,
+        "sha256": "bd7722c1cbb78f51335b6b181d55f2a2c10e427b2a4326a02c74b873712cb23d"
+      }
+    },
+    {
+      "file": "study_drop_coverage.csv",
+      "equal": true,
+      "scope": "Raw byte-identical measurement",
+      "left": {
+        "bytes": 1140184,
+        "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+      },
+      "right": {
+        "bytes": 1140184,
+        "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+      }
+    },
+    {
+      "file": "study_drops.csv",
+      "equal": true,
+      "scope": "Raw byte-identical measurement",
+      "left": {
+        "bytes": 53873,
+        "sha256": "9aca2d266ffc1b98cd56f7803d04bdc7d807e11e44d25952b6c1ede94b8ef02e"
+      },
+      "right": {
+        "bytes": 53873,
+        "sha256": "9aca2d266ffc1b98cd56f7803d04bdc7d807e11e44d25952b6c1ede94b8ef02e"
+      }
+    },
+    {
+      "file": "study_rx_node_1585_port_1024.csv",
+      "equal": true,
+      "scope": "Raw byte-identical measurement",
+      "left": {
+        "bytes": 19452445,
+        "sha256": "4fb3a7e70c6e79f54007de46368fd1e303359ef2882e0a314587c9e02292b71c"
+      },
+      "right": {
+        "bytes": 19452445,
+        "sha256": "4fb3a7e70c6e79f54007de46368fd1e303359ef2882e0a314587c9e02292b71c"
+      }
+    },
+    {
+      "file": "tcp_flow_0_cwnd.csv",
+      "equal": true,
+      "scope": "Raw byte-identical measurement",
+      "left": {
+        "bytes": 100679,
+        "sha256": "acf9286c1705fa2aa31eb56805f016c3793051f3d566bc91c87c151af2c5cace"
+      },
+      "right": {
+        "bytes": 100679,
+        "sha256": "acf9286c1705fa2aa31eb56805f016c3793051f3d566bc91c87c151af2c5cace"
+      }
+    },
+    {
+      "file": "tcp_flow_0_progress.csv",
+      "equal": true,
+      "scope": "Raw byte-identical measurement",
+      "left": {
+        "bytes": 1994229,
+        "sha256": "4ce98bb78f4f26fbc697971d23cfc085d8a3e89ad6b378222900a20469794ca4"
+      },
+      "right": {
+        "bytes": 1994229,
+        "sha256": "4ce98bb78f4f26fbc697971d23cfc085d8a3e89ad6b378222900a20469794ca4"
+      }
+    },
+    {
+      "file": "tcp_flow_0_rtt.csv",
+      "equal": true,
+      "scope": "Raw byte-identical measurement",
+      "left": {
+        "bytes": 2030657,
+        "sha256": "5f7ed6085a55daca60bb23bb3df73b6098d879aa2005d8810d887b023080edc7"
+      },
+      "right": {
+        "bytes": 2030657,
+        "sha256": "5f7ed6085a55daca60bb23bb3df73b6098d879aa2005d8810d887b023080edc7"
+      }
+    },
+    {
+      "file": "tcp_flow_0_study_events.csv",
+      "equal": true,
+      "scope": "All congestion/SSTHRESH rows retained; omit threshold column and policy setter/expiry events",
+      "left": {
+        "fields": [
+          "flow_id",
+          "time_ns",
+          "event",
+          "old_value",
+          "new_value",
+          "cong_state"
+        ],
+        "rows": 179,
+        "normalized_sha256": "24963928416f4b3bbd26e9db846b53ca970980714efe701c482e752313f66abb"
+      },
+      "right": {
+        "fields": [
+          "flow_id",
+          "time_ns",
+          "event",
+          "old_value",
+          "new_value",
+          "cong_state"
+        ],
+        "rows": 179,
+        "normalized_sha256": "24963928416f4b3bbd26e9db846b53ca970980714efe701c482e752313f66abb"
+      }
+    },
+    {
+      "file": "tcp_flow_0_study_packets.csv",
+      "equal": true,
+      "scope": "All fields retained except actual threshold column",
+      "left": {
+        "fields": [
+          "flow_id",
+          "time_ns",
+          "event",
+          "packet_uid",
+          "tx_id",
+          "tx_time_ns",
+          "seq",
+          "ack",
+          "payload_bytes",
+          "flags",
+          "sack_blocks",
+          "cong_state",
+          "local_port",
+          "peer_port"
+        ],
+        "rows": 264195,
+        "normalized_sha256": "26daadab572e5f419f033e170864f467f8d13bc8d1529e61420ee54a86560016"
+      },
+      "right": {
+        "fields": [
+          "flow_id",
+          "time_ns",
+          "event",
+          "packet_uid",
+          "tx_id",
+          "tx_time_ns",
+          "seq",
+          "ack",
+          "payload_bytes",
+          "flags",
+          "sack_blocks",
+          "cong_state",
+          "local_port",
+          "peer_port"
+        ],
+        "rows": 264195,
+        "normalized_sha256": "26daadab572e5f419f033e170864f467f8d13bc8d1529e61420ee54a86560016"
+      }
+    },
+    {
+      "file": "tcp_flows.csv",
+      "equal": true,
+      "scope": "Raw byte-identical measurement",
+      "left": {
+        "bytes": 75,
+        "sha256": "2fa7e654ea06e0f91745acd609b08a9daa37dffdcf01b8035c2ded8567a85017"
+      },
+      "right": {
+        "bytes": 75,
+        "sha256": "2fa7e654ea06e0f91745acd609b08a9daa37dffdcf01b8035c2ded8567a85017"
+      }
+    }
+  ],
+  "paired_actual_loss": {
+    "selection_equal": true,
+    "physical_drop_equal": true,
+    "inputs_config_endpoints_equal": true,
+    "selection": {
+      "time_ns": 26235726816,
+      "flow_id": 0,
+      "tx_id": 21820,
+      "tx_time_ns": 26152017749,
+      "seq": 29681041,
+      "payload_bytes": 1380,
+      "event_ns": 26200000000,
+      "earliest_tx_ns": 26151152296
+    },
+    "baseline_drop_to_retx_ns": 49468699,
+    "policy_drop_to_retx_ns": 55204660,
+    "extra_retx_delay_ns": 5735961,
+    "baseline_earlier_retx_ns": [],
+    "policy_earlier_retx_ns": []
+  },
+  "open_recovery_branch_events": 0,
+  "qualifications": [
+    "Same-formula registration horizons differ by 5.184us and 3.820us from rounded historical windows.",
+    "The saved deadline column on an epoch without a wait can retain the previous epoch value; only wait events define a current deadline.",
+    "Whole-run RETX differences are not all independently classified as spurious.",
+    "Receiver goodput is not sender ACK progress; positive SRTT is not isolated queue delay.",
+    "No competing-flow, prediction-error sweep, statistical repetition or independent final-volume replay."
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "schema": 1,
+  "tag": "queue-mitigation-20261013",
+  "url": "https://github.com/Jeongmin07/CS30401-Lab1/releases/tag/queue-mitigation-20261013",
+  "release_target_commit": "2a9a8ace5097e86f66e6659f58415e28fb739c02",
+  "is_prerelease": true,
+  "verified_at_utc": "2026-10-12T17:49:06.943044+00:00",
+  "attempts": [
+    {
+      "archive": "queue-pacing-20261013.tar.gz",
+      "case": "off",
+      "status": "success",
+      "wall_seconds": 37.31836074400053,
+      "launch_commit": "3e456b706cfa779654e0f3ec15a132fa6415c7d6",
+      "checkpoint": "3e456b706cfa779654e0f3ec15a132fa6415c7d6"
+    },
+    {
+      "archive": "queue-pacing-20261013.tar.gz",
+      "case": "native",
+      "status": "success",
+      "wall_seconds": 39.896830311001395,
+      "launch_commit": "d5d6d2932a9b27b7dafe76072df9c96cf3c956e4",
+      "checkpoint": "3e456b706cfa779654e0f3ec15a132fa6415c7d6"
+    },
+    {
+      "archive": "queue-pacing-20261013.tar.gz",
+      "case": "capacity",
+      "status": "success",
+      "wall_seconds": 36.21724755100149,
+      "launch_commit": "d5d6d2932a9b27b7dafe76072df9c96cf3c956e4",
+      "checkpoint": "3e456b706cfa779654e0f3ec15a132fa6415c7d6"
+    },
+    {
+      "archive": "queue-pacing-20261013.tar.gz",
+      "case": "micro-original",
+      "status": "success",
+      "wall_seconds": 0.03254197599744657,
+      "launch_commit": "a3cb6c575988fd895388ce17764e32bb7f95bffe",
+      "checkpoint": "a3cb6c575988fd895388ce17764e32bb7f95bffe"
+    },
+    {
+      "archive": "queue-pacing-20261013.tar.gz",
+      "case": "micro-current",
+      "status": "success",
+      "wall_seconds": 0.03402393600117648,
+      "launch_commit": "a3cb6c575988fd895388ce17764e32bb7f95bffe",
+      "checkpoint": "a3cb6c575988fd895388ce17764e32bb7f95bffe"
+    },
+    {
+      "archive": "queue-pacing-20261013.tar.gz",
+      "case": "micro-selected",
+      "status": "success",
+      "wall_seconds": 0.03269813399674604,
+      "launch_commit": "a3cb6c575988fd895388ce17764e32bb7f95bffe",
+      "checkpoint": "a3cb6c575988fd895388ce17764e32bb7f95bffe"
+    },
+    {
+      "archive": "queue-pacing-20261013.tar.gz",
+      "case": "loss-current",
+      "status": "success",
+      "wall_seconds": 33.81213703799585,
+      "launch_commit": "a3cb6c575988fd895388ce17764e32bb7f95bffe",
+      "checkpoint": "a3cb6c575988fd895388ce17764e32bb7f95bffe"
+    },
+    {
+      "archive": "queue-pacing-20261013.tar.gz",
+      "case": "loss-selected",
+      "status": "success",
+      "wall_seconds": 33.005310059001204,
+      "launch_commit": "a3cb6c575988fd895388ce17764e32bb7f95bffe",
+      "checkpoint": "a3cb6c575988fd895388ce17764e32bb7f95bffe"
+    },
+    {
+      "archive": "queue-backpressure-20261013-raw.tar.gz",
+      "case": "control100",
+      "status": "success",
+      "wall_seconds": 39.944446177003556,
+      "launch_commit": "b6112ce8bd4e2be9c0508bb2cbded4aad1713dad",
+      "checkpoint": "b6112ce8bd4e2be9c0508bb2cbded4aad1713dad"
+    },
+    {
+      "archive": "queue-backpressure-20261013-raw.tar.gz",
+      "case": "fifo4-96",
+      "status": "success",
+      "wall_seconds": 41.04705493599613,
+      "launch_commit": "d5d6d2932a9b27b7dafe76072df9c96cf3c956e4",
+      "checkpoint": "b6112ce8bd4e2be9c0508bb2cbded4aad1713dad"
+    },
+    {
+      "archive": "queue-backpressure-20261013-raw.tar.gz",
+      "case": "codel4-96",
+      "status": "success",
+      "wall_seconds": 34.17341446100181,
+      "launch_commit": "d5d6d2932a9b27b7dafe76072df9c96cf3c956e4",
+      "checkpoint": "b6112ce8bd4e2be9c0508bb2cbded4aad1713dad"
+    }
+  ],
+  "successful_simulations": 11,
+  "failed_or_excluded_simulations": 0,
+  "initial_queue_controls": 6,
+  "conditional_safety_controls": 5,
+  "compressed_bytes": 119650296,
+  "raw_and_derived_bytes": 731543022,
+  "assets": [
+    {
+      "name": "queue-pacing-20261013.tar.gz",
+      "bytes": 65905317,
+      "sha256": "db3eb38196ac4a61e76051b31a0c6cca86e11e1c680f032e7b0266014d9391be",
+      "members": 220,
+      "inventory": "docs/experiments/assets/20261013-queue-pacing/archive-inventory.json",
+      "inventory_sha256": "dcea338fec7dcbaa0cf790bca6a022e312446ee42514de4722b38a2bf61f6378",
+      "github_asset_id": 634519566,
+      "github_digest": "sha256:db3eb38196ac4a61e76051b31a0c6cca86e11e1c680f032e7b0266014d9391be",
+      "url": "https://github.com/Jeongmin07/CS30401-Lab1/releases/download/queue-mitigation-20261013/queue-pacing-20261013.tar.gz",
+      "all_members_verified": true,
+      "size_and_digest_match": true
+    },
+    {
+      "name": "queue-backpressure-20261013-raw.tar.gz",
+      "bytes": 53744979,
+      "sha256": "7b844773692b7aaaeb70522d036a49e6036d901e7578c7a6e7c3788c82a34533",
+      "members": 114,
+      "inventory": "docs/experiments/assets/20261013-queue-backpressure/raw-inventory.json",
+      "inventory_sha256": "5aa243f2b6bfce559385c319dacfad17a6f0d3c73770ffec9d962e82f5163963",
+      "github_asset_id": 634519563,
+      "github_digest": "sha256:7b844773692b7aaaeb70522d036a49e6036d901e7578c7a6e7c3788c82a34533",
+      "url": "https://github.com/Jeongmin07/CS30401-Lab1/releases/download/queue-mitigation-20261013/queue-backpressure-20261013-raw.tar.gz",
+      "all_members_verified": true,
+      "size_and_digest_match": true
+    }
+  ],
+  "scope": "Actual simulations and original manifests are preserved. Derived analysis is separately inventoried; preliminary builds ran no simulation.",
+  "qualification": "Independent local member stream/hash check and GitHub asset digest/size comparison; no download roundtrip or fresh full simulation replay."
+}

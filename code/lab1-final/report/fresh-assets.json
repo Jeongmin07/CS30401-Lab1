@@ -1,0 +1,118 @@
+{
+  "schema": 1,
+  "phase": "final-fresh-replay-report-assets",
+  "input_root": "output/lab1-final-candidate-extracted/output/lab1-final-replay",
+  "fresh_data_sha256": "2fe4ddb013c0bce29429e624fce18145dd8a9b6ddfc0f494b38dd27c90ef9df1",
+  "copied_file_count": 14,
+  "files": [
+    {
+      "path": "figures/finite-cost.pdf",
+      "bytes": 11642,
+      "sha256": "6006729aed03c7284dcf2ce6621710401f2b90b29a134772a24aeeaadba31d83",
+      "copied_byte_exact": true
+    },
+    {
+      "path": "figures/finite-cost.png",
+      "bytes": 39018,
+      "sha256": "c090d62911c515f63fc6425fcf3283325e287ef1ce95a2ae9734d4845b985bf4",
+      "copied_byte_exact": true
+    },
+    {
+      "path": "figures/natural-event.pdf",
+      "bytes": 12139,
+      "sha256": "ca50a41a4f17ef946926e8a966835a640c2c1154494e80d79927d0dfc7e138ef",
+      "copied_byte_exact": true
+    },
+    {
+      "path": "figures/natural-event.png",
+      "bytes": 43368,
+      "sha256": "975ba9761b95f30e3a778cccf5aa5be8e4c717d636e85eb03e3e0f254727c223",
+      "copied_byte_exact": true
+    },
+    {
+      "path": "figures/queue-causality.pdf",
+      "bytes": 12945,
+      "sha256": "3cc57929192796fcb36323b069436e0491bb27f281eb505819fa7dd1e9aef823",
+      "copied_byte_exact": true
+    },
+    {
+      "path": "figures/queue-causality.png",
+      "bytes": 54531,
+      "sha256": "717e5616d6602dd91687fb99803a2e2db1027685dd37ca9c8b2be13e9b63f626",
+      "copied_byte_exact": true
+    },
+    {
+      "path": "figures/receipt.json",
+      "bytes": 20887,
+      "sha256": "635882ff71a05072b9232cb5bece24b63f6ba3238c1b4a42f3cbffc2f3a73a51",
+      "copied_byte_exact": true
+    },
+    {
+      "path": "tables/magnitudes.tex",
+      "bytes": 619,
+      "sha256": "0fc345b18049b5ad598ffa55d3e9bc265f9beeb526811fa3896483ef1f9722f1",
+      "copied_byte_exact": true
+    },
+    {
+      "path": "tables/receipt.json",
+      "bytes": 809,
+      "sha256": "035eec562a64a91267340bc4d179356cb79b2655ba3f63345e0069056eab7afa",
+      "copied_byte_exact": true
+    },
+    {
+      "path": "tables/table-I-spec-map.csv",
+      "bytes": 2651,
+      "sha256": "885079627a24c19da7ff5158a9f13084d72f647be6007f4bd6a57b46db49fdcf",
+      "copied_byte_exact": true
+    },
+    {
+      "path": "tables/table-II.csv",
+      "bytes": 530,
+      "sha256": "5a5970d95a95338f97e119f24e14b8115608f6abe27aad909e1ac5b61450f065",
+      "copied_byte_exact": true
+    },
+    {
+      "path": "tables/values.json",
+      "bytes": 207118,
+      "sha256": "6da900c181a23d4baa214412c4b0a9f251d496a8b1cbfa5155cd6038edc64f17",
+      "copied_byte_exact": true
+    },
+    {
+      "path": "report-data.json",
+      "bytes": 2002343,
+      "sha256": "2fe4ddb013c0bce29429e624fce18145dd8a9b6ddfc0f494b38dd27c90ef9df1",
+      "copied_byte_exact": true
+    },
+    {
+      "path": "witnesses-final.json",
+      "bytes": 165623,
+      "sha256": "66ed61ba7f885fafe4fde97c2f12a75bb39e244557b15176ab3773f3a06c5ac4",
+      "copied_byte_exact": true
+    }
+  ],
+  "numeric_and_curve_review": {
+    "receipt": "fresh-parity.json",
+    "sha256": "ab3ca1bb98d3718bee33ca26054c69e456f92be302a894f4f0a93a86aa66efef",
+    "cases": 19,
+    "scalar_fields_per_case": 7,
+    "figure_series": 6,
+    "passed": true
+  },
+  "visual_review": {
+    "method": "viewed all three actual copied PNG previews at full provided resolution",
+    "figures": [
+      "natural-event.png",
+      "finite-cost.png",
+      "queue-causality.png"
+    ],
+    "legible_labels_no_clipping_or_curve_occlusion": true,
+    "full_manuscript_pdf_review": "parent compiler/render review still pending"
+  },
+  "source_helper_hashes": {
+    "report.tex": "d11b9669df2ccf4f3af3a0ebd6a03e854dd5f77bdf9e5c7e2c27d03a61f3b48e",
+    "README.md": "541c0ba534f23cf4449f495386c5b6f640eebdcb23e2c6ec41cb1b20ad6a4e66",
+    "build_figures.py": "ed3acb0270d6c98946c9528c8a4d0c8387de54f828d235b1a7ae6e4aeece5cc1",
+    "build_tables.py": "678d7d7081052e90c9472beb2d3620685b455418cd730aeba9b41223aae6ce0c"
+  },
+  "scope": "No simulation, policy, runtime or helper-source change. Historical preview preserved under development, not used as final plot/table input. This receipt covers staging and figure review, not archive contents or final PDF compilation."
+}

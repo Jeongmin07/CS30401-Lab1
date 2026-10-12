@@ -1,0 +1,47 @@
+{
+  "helper_sha256": "4daad26d9ed94f8ef68c3e12fc1f7c334257bc355718a34006036df2d45a06b8",
+  "checks": [
+    {
+      "name": "same-directory",
+      "rejected": true,
+      "reason": "Reference and observed directories must be distinct",
+      "output_written": false
+    },
+    {
+      "name": "actual-failed-observer-run",
+      "rejected": true,
+      "reason": "Run did not complete successfully: /tmp/bbr-route-pilot-v2/observed-solo",
+      "output_written": false
+    },
+    {
+      "name": "small-valid-control",
+      "accepted": true
+    },
+    {
+      "name": "changed-output-invalid-receipt",
+      "rejected": true,
+      "reason": "Actual output differs from manifest: /tmp/bbr-compare-negative-1qep8x2b/observed/logs_ns3/tcp_flow_0_progress.csv",
+      "output_written": false
+    },
+    {
+      "name": "different-config-with-valid-receipt",
+      "rejected": true,
+      "reason": "Matched-condition input differs: config_sha256",
+      "output_written": false
+    },
+    {
+      "name": "different-legacy-csv-set-valid-receipts",
+      "rejected": true,
+      "reason": "Existing measurement CSV sets are empty or differ",
+      "output_written": false
+    },
+    {
+      "name": "observation-flag-definition-disagreement",
+      "rejected": true,
+      "reason": "Observation flag disagrees with definition: /tmp/bbr-compare-negative-1qep8x2b/observed",
+      "output_written": false
+    }
+  ],
+  "simulations_run": false,
+  "limits": "Tiny fixtures exercise compare fail-closed behavior; actual runs and manifests remain untouched."
+}

@@ -1,0 +1,37 @@
+{
+  "build_status": "success",
+  "build_command": [
+    "./ns3",
+    "build",
+    "-j",
+    "1"
+  ],
+  "wall_seconds": 438.9745095870021,
+  "patch_sha256": "f0e85cab5a351e67d95a80d098cf65cf509300f73077e27b2d35dd6cbaf3e301",
+  "installed_diff_sha256": "f0e85cab5a351e67d95a80d098cf65cf509300f73077e27b2d35dd6cbaf3e301",
+  "tool_sha256": "cc0628ce6bf6b85d319085f331b7a3b4dfc86706fa75c46d7131795b85fe9af6",
+  "runtime_files": {
+    "scratch/main_satnet/ns3.48-main_satnet": "647a0359399d97cec58447afab03ca11b50290904275723fe323520c59b026ba",
+    "scratch/study_micro/ns3.48-study_micro": "00c73fc938af9f336437131926377088dd3e1fdc36597d0c5ca2154e6846430e",
+    "lib/libns3.48-antenna.so": "edf56f782f446d54291425c4b357fb2a609f64da3a3a88a2d48e18dbcf4200b8",
+    "lib/libns3.48-applications.so": "029ee91a59a88fd8cff0c865053f31dfc36f6cc6f10484ebb3843864025750ca",
+    "lib/libns3.48-basic-sim.so": "9de948e3a13dbc418b344b53496407d09bfc694b473c5847715a327c25c800b2",
+    "lib/libns3.48-bridge.so": "5c0e5f9092dc8a215a2d77aaa75ba0e3db181578566db25b9463cc220a94a1a0",
+    "lib/libns3.48-core.so": "5f6e271f0e98438059ac55c8dc5c94ee411050cb7cd7f23956963310674982a1",
+    "lib/libns3.48-flow-monitor.so": "5fbe40f2a843bf01f38b943a28377f7e9628b748506498298cfd6096c621b1ad",
+    "lib/libns3.48-internet-apps.so": "c31699838a1a449773562164af013663951dbd78c7b0e1bcddc4b451f2eaa6bc",
+    "lib/libns3.48-internet.so": "a55cbb36db4aa4e15d32064acfcf6b9111a981d41f59ab5d95cd1ffd0c6b8957",
+    "lib/libns3.48-mobility.so": "45dc648f0ff11a8c83574fdea0dd189a35ccc606d625d3e3612afa3a6f806351",
+    "lib/libns3.48-network.so": "8258009efcadb296e3abc3da3d12606b258eb5545dc33bd0d4f047af5e552bb0",
+    "lib/libns3.48-point-to-point.so": "8b7e72efbe1af5906a8df5191ba0bd625f2c8796b35b3bc6443279be093ac6d8",
+    "lib/libns3.48-satellite-network.so": "4073a1defc99168132fce6b98b0ed9b06bae36c88be3bb07d4777c09e122d5fd",
+    "lib/libns3.48-satellite.so": "68e7ce4d29d13efe374989d3279a8587bedb7a8104757938ab2c14605e3d4002",
+    "lib/libns3.48-stats.so": "ab02ae3cfe9c8453b6b251528884a678fe470cb1aac2e6500064a6fd44caf447",
+    "lib/libns3.48-traffic-control.so": "a260ff14dd0c5d4b6950676f7d219d3563ec6039e84390eae6a880bbe81f6ddb"
+  },
+  "build_log": {
+    "path": "/tmp/orbit-queue-build.log",
+    "bytes": 12632,
+    "sha256": "2a44ba0594bd678d152ac76205e78ffa0f6d25c0b171ea7b2f59e318655dc9f3"
+  }
+}

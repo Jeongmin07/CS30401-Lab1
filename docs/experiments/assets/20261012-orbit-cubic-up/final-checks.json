@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "valid_simulations": 1,
+  "excluded_attempts": 1,
+  "active_policy_implemented": false,
+  "active_policy_simulations": 0,
+  "independent_replay_performed": false,
+  "eight_legacy_measurement_files_byte_identical": true,
+  "runtime_unchanged_during_both_attempts": true,
+  "current_repository_commit": "efdc735a81aebbf454e1b23f5fcad9aaf8f39a5a",
+  "source_sha256": {
+    "code\\orbit-cubic-up\\analyze.py": "a0401183856a54b9d37d706134b1d184b52a42cebf762388ebe00cfc1634e059",
+    "code\\orbit-cubic-up\\archive.py": "36785e8c33c4e46aec15e7f004d2679b63e79ccaff5c22911e692d9a3aae7e63",
+    "code\\orbit-cubic-up\\build-receipt.json": "ee3ec0d98bae0016235fda3acd4fa16853b0ee825a2f16c5b27d7fa1e9a67cb5",
+    "code\\orbit-cubic-up\\install.py": "edee5646f3f036311c53ce7ab3266a5d98df61f9d44ddc8a4e61e77944afc161",
+    "code\\orbit-cubic-up\\ns3.patch": "910aac06723fac851e46eb6522146d896a433a04b3a8464d46e5c4c72ff8fc78",
+    "code\\orbit-cubic-up\\queue_observer.h": "651539400674bda010b7143d69b7cc8697a3287b18f889272245d50df2e900b4",
+    "code\\orbit-cubic-up\\README.md": "4c3de95f58ccd13740120a5c48afe782cba4ab545c7635cf0c3fa0728300acd8",
+    "code\\orbit-cubic-up\\run.py": "33dfd3224a8de9029553a3cf9be99df99a1300da65dbfa3dff255cdea368736b",
+    "code\\orbit-cubic-up\\service_observer.h": "5d1d5a4e0a13ff3b250708c138dc5e025e93d42bf867944e1923d8cb8f48be08"
+  },
+  "document_sha256": "f840be7b44d3547b613aa88c9f6ef26ab44feae0391755d296e8c811f3a3c7c5",
+  "manifest_sha256": {
+    "cubic10-observed200": "3f20fa4ad6b2782c0e316eefc0002cad5d530a23dd47ff506c44a9ae0b0d1ccf",
+    "cubic100-observed200": "7f5819f77f773c53582cec0cc1fa738dbb5bf9a4786f97c87b30993f0e4faed2"
+  },
+  "summary_sha256": "f27ee2057f5c6de7e819e92131ae44571d865ef4c858931bb3ca116d94a70a86",
+  "limits": [
+    "Cwnd-limited/available0 existed; full source serialization prevented proving a throughput need for scale-up in10Mbps.",
+    "100Mbps200s is untested because of timeout; excluded partial logs are not null-effect policy results."
+  ]
+}

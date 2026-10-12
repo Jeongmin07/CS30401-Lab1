@@ -1,0 +1,79 @@
+{
+  "tool": {
+    "path": "/work/code/orbit-tail/analyze.py",
+    "bytes": 5515,
+    "sha256": "90e115b20c109462d70ef5a4f846e9f9695ca1f47ad0cdf993b0758adc0d0e55"
+  },
+  "dependency": {
+    "path": "/work/code/orbit-loss/analyze.py",
+    "bytes": 7564,
+    "sha256": "9641453064980aeaeaf7270dc1ff17d8417ffe7cf1347011ed03afe634c94ab1"
+  },
+  "cases": [
+    {
+      "case": "micro-base",
+      "manifest": {
+        "path": "/tmp/orbit-tail/micro-base/manifest.json",
+        "bytes": 7211,
+        "sha256": "c49cea9cd2fb4b81ccfbbff24137b40ed8d825fe3921debfb8f90dc751a0525b"
+      },
+      "full_analysis": {
+        "path": "/tmp/orbit-tail/micro-base/analysis.json",
+        "bytes": 15937,
+        "sha256": "6ed678aca5e01d0927f3bcd03d77e5b169e9a8ea1166cccabbd5a83042acd9b7"
+      }
+    },
+    {
+      "case": "micro-selective",
+      "manifest": {
+        "path": "/tmp/orbit-tail/micro-selective/manifest.json",
+        "bytes": 8012,
+        "sha256": "d581b6bd355cf399b8c5c936649d90dafbe9d82ccda5952bf5bc9495bd23c28a"
+      },
+      "full_analysis": {
+        "path": "/tmp/orbit-tail/micro-selective/analysis.json",
+        "bytes": 16127,
+        "sha256": "52eaeff0a4652dbeffed5f85b0bcb92f43722aac7bf76117b657b52693f387d4"
+      }
+    },
+    {
+      "case": "micro-tail",
+      "manifest": {
+        "path": "/tmp/orbit-tail/micro-tail/manifest.json",
+        "bytes": 8013,
+        "sha256": "67b06a347a6c9f88f3ae819ab3af079cb63a1bcd7ec7eaa7bc168851b0c9fbbb"
+      },
+      "full_analysis": {
+        "path": "/tmp/orbit-tail/micro-tail/analysis.json",
+        "bytes": 16080,
+        "sha256": "01800ff47aa9afdd17298dcb05ecba084973f412aa7fedeaa09755061bc30d6c"
+      }
+    },
+    {
+      "case": "micro21-selective",
+      "manifest": {
+        "path": "/tmp/orbit-tail/micro21-selective/manifest.json",
+        "bytes": 8038,
+        "sha256": "55badd4c56af1bb3e0fa52c8de41a0f2279f57d9a74a0425eca8c9208d15e866"
+      },
+      "full_analysis": {
+        "path": "/tmp/orbit-tail/micro21-selective/analysis.json",
+        "bytes": 16142,
+        "sha256": "f6b5a04e984f02a169c5e728a3cffaf93735bd5020762fd3381ee1c7414c4bc3"
+      }
+    },
+    {
+      "case": "micro21-tail",
+      "manifest": {
+        "path": "/tmp/orbit-tail/micro21-tail/manifest.json",
+        "bytes": 8040,
+        "sha256": "bf19264a52fcbcb3dbd8c42027d8ed0f7bfc73907e0f008a6f8bfc2fbad28962"
+      },
+      "full_analysis": {
+        "path": "/tmp/orbit-tail/micro21-tail/analysis.json",
+        "bytes": 16112,
+        "sha256": "7ea1b7c57c567166ba618561833f4fa5ccb8b2575c1f33c9662b42302f204067"
+      }
+    }
+  ]
+}

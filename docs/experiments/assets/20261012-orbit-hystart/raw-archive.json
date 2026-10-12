@@ -1,0 +1,577 @@
+{
+  "archive_path": "/work/output/orbit-hystart-20261012.tar.gz",
+  "archive_bytes": 4381571,
+  "archive_sha256": "752be45fb1ee1807cda5060a98bffa19769fdaf8312266a8ea7cf183d1f7c273",
+  "member_count": 139,
+  "uncompressed_member_bytes": 32884348,
+  "all_members_stream_verified": true,
+  "cases": [
+    "near-on",
+    "near-off",
+    "stable-on",
+    "stable-off",
+    "near-on-unobserved",
+    "near-forecast"
+  ],
+  "wall_seconds": 0.7725890849997086,
+  "helper_sha256": "23bb06e01ebe00a0dfb08ffbc6d179df41b50ea673ed3232d41717f8843e2ace",
+  "members": {
+    "near-on/config_ns3.properties": {
+      "bytes": 617,
+      "sha256": "e7119e4b547611a756f2fc7c5ed966d9f5318839603ac9ab81bb84765dbc6d4e"
+    },
+    "near-on/console.txt": {
+      "bytes": 5824,
+      "sha256": "485aa36ee2e4254e515283ddee575dcf67dc533f4eba2874b0f96c4f5bb4ae92"
+    },
+    "near-on/logs_ns3/finished.txt": {
+      "bytes": 4,
+      "sha256": "927580bf287560d4a26a5d6e129f91ffa9cb63031b1a8c772be6ec584e65e82b"
+    },
+    "near-on/logs_ns3/hystart_socket.csv": {
+      "bytes": 116,
+      "sha256": "b47c28eaf4030f205ce34b851f95be318c9c87ec338dbc16fcb7453416cc5f78"
+    },
+    "near-on/logs_ns3/hystart_state.csv": {
+      "bytes": 706025,
+      "sha256": "5255f557d010b5a5124d501f69f9ec0e8de4ec437376623fc13e925b198f94c7"
+    },
+    "near-on/logs_ns3/orbit_coverage.csv": {
+      "bytes": 1398438,
+      "sha256": "7785a349bbcd58d321430e5454d4e7193dfc4ed7766e00af84b503fa6bafef9c"
+    },
+    "near-on/logs_ns3/orbit_drops.csv": {
+      "bytes": 18330,
+      "sha256": "9b017e274944a0f7c4ed379ba98aeb5f47e690d68a2779d161df0457c1a258a7"
+    },
+    "near-on/logs_ns3/orbit_queue_bins.csv": {
+      "bytes": 21199,
+      "sha256": "f43ab26b3bf14d4c1c45626fd8da046e7079ed4c00abf9105394f8c84a07b18e"
+    },
+    "near-on/logs_ns3/orbit_queue_pending.csv": {
+      "bytes": 90,
+      "sha256": "bd912a74a0dee1b032ecbeac1820c6c6d343cbec86b2fdcadf1b67eb243ce335"
+    },
+    "near-on/logs_ns3/study_app_rx_node_1585_port_1024.csv": {
+      "bytes": 312579,
+      "sha256": "a4677cb8cba9b4170ec0ce994c6fc5a9d701f1745c4cb76023eb366654572efd"
+    },
+    "near-on/logs_ns3/study_drop_coverage.csv": {
+      "bytes": 1140184,
+      "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+    },
+    "near-on/logs_ns3/study_drops.csv": {
+      "bytes": 22540,
+      "sha256": "5a34164a5edd41f629aaf8f3fe18b51cd365584137e5546097acc378fc447304"
+    },
+    "near-on/logs_ns3/study_rx_node_1585_port_1024.csv": {
+      "bytes": 636911,
+      "sha256": "6400f0e66739ff9ad86a545120f022ffd53de206c3a41cc7040660840c091df6"
+    },
+    "near-on/logs_ns3/tcp_flow_0_cwnd.csv": {
+      "bytes": 34271,
+      "sha256": "8ac916277d8feb4ed4bf48d051151e1c675f975f73897c2ef4f387dce9538e2a"
+    },
+    "near-on/logs_ns3/tcp_flow_0_progress.csv": {
+      "bytes": 45724,
+      "sha256": "e6250444a1e6cfa790852dba6ead1db00ba9ba17b8d4fa4a9572b8f84ead08e3"
+    },
+    "near-on/logs_ns3/tcp_flow_0_rtt.csv": {
+      "bytes": 49606,
+      "sha256": "acbf56d6730dc7c4851392bc57c084bf06c910c988d4788263a1e9e8a8eda08b"
+    },
+    "near-on/logs_ns3/tcp_flow_0_study_events.csv": {
+      "bytes": 317,
+      "sha256": "9ae3dc325e47d38c26759fc4611218476d6e84bee0a1133277380e50f08e2146"
+    },
+    "near-on/logs_ns3/tcp_flow_0_study_packets.csv": {
+      "bytes": 852463,
+      "sha256": "1637d26f0f21652eb30113c86f9bd9814449518531a520203cc9a117a0a1573c"
+    },
+    "near-on/logs_ns3/tcp_flows.csv": {
+      "bytes": 70,
+      "sha256": "6652f3ac700fcab0565474df4951f76599f9a8f4c9e67ec8f9ab40aaa60cb05a"
+    },
+    "near-on/logs_ns3/tcp_flows.txt": {
+      "bytes": 336,
+      "sha256": "916c6ee3275bd78b080c8407364421c9be44d326676663b7911400e3dfe30df1"
+    },
+    "near-on/logs_ns3/timing_results.csv": {
+      "bytes": 560,
+      "sha256": "03218e77117d06a6ae598e8cb08da8fafe0bfa3c9b4c1e11d50684354a18ba1d"
+    },
+    "near-on/logs_ns3/timing_results.txt": {
+      "bytes": 908,
+      "sha256": "4ed6a55402b5b4226be808cb0bf282efb4a24a68446f0bd8bcf2192373bd34a9"
+    },
+    "near-on/manifest.json": {
+      "bytes": 421311,
+      "sha256": "bd4a450ec6691a0124906a86e8008a52bcc08fb785a6895cdaf03a5929664ed6"
+    },
+    "near-on/schedule.csv": {
+      "bytes": 35,
+      "sha256": "00fdb12d4acecb6b1d9cbfac3f0d8217f7bf7ea300770e8fc8bb8680f5f3b1ea"
+    },
+    "near-off/config_ns3.properties": {
+      "bytes": 617,
+      "sha256": "e7119e4b547611a756f2fc7c5ed966d9f5318839603ac9ab81bb84765dbc6d4e"
+    },
+    "near-off/console.txt": {
+      "bytes": 5830,
+      "sha256": "c67106bb245b8209bd516bb6cc9bbdbf56170894cb67d313329af195810047f2"
+    },
+    "near-off/logs_ns3/finished.txt": {
+      "bytes": 4,
+      "sha256": "927580bf287560d4a26a5d6e129f91ffa9cb63031b1a8c772be6ec584e65e82b"
+    },
+    "near-off/logs_ns3/hystart_socket.csv": {
+      "bytes": 116,
+      "sha256": "127ad4500dc3fabcc63027285f483e688266030452059b38795fc6b9013e9370"
+    },
+    "near-off/logs_ns3/hystart_state.csv": {
+      "bytes": 679872,
+      "sha256": "941bf52232df62a91b0721bd8c0cabd1d6e60bc066ce92f00281a94c9c8fc56c"
+    },
+    "near-off/logs_ns3/orbit_coverage.csv": {
+      "bytes": 1398438,
+      "sha256": "7785a349bbcd58d321430e5454d4e7193dfc4ed7766e00af84b503fa6bafef9c"
+    },
+    "near-off/logs_ns3/orbit_drops.csv": {
+      "bytes": 113935,
+      "sha256": "8ab8111533da0b2f35aee3786e00550de291de291600bbd7dc97941a9b557853"
+    },
+    "near-off/logs_ns3/orbit_queue_bins.csv": {
+      "bytes": 22129,
+      "sha256": "afdcec2c073b66597a9e51acd16fe33f13ba7ddc680349f874ae79250259ee41"
+    },
+    "near-off/logs_ns3/orbit_queue_pending.csv": {
+      "bytes": 90,
+      "sha256": "bd912a74a0dee1b032ecbeac1820c6c6d343cbec86b2fdcadf1b67eb243ce335"
+    },
+    "near-off/logs_ns3/study_app_rx_node_1585_port_1024.csv": {
+      "bytes": 399227,
+      "sha256": "df2285b802bf4a1aed231411d2cfb33a1a80affe16d537e651ebd56660ee9314"
+    },
+    "near-off/logs_ns3/study_drop_coverage.csv": {
+      "bytes": 1140184,
+      "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+    },
+    "near-off/logs_ns3/study_drops.csv": {
+      "bytes": 140090,
+      "sha256": "b60481aaba9870b45a5b581b3f8343b4c2b02f6ebce9420940d594112ca02e86"
+    },
+    "near-off/logs_ns3/study_rx_node_1585_port_1024.csv": {
+      "bytes": 636911,
+      "sha256": "00e0372eaa4c6ea6311ad97f6da304718c7e8e8c5641ccf1146a614be0567993"
+    },
+    "near-off/logs_ns3/tcp_flow_0_cwnd.csv": {
+      "bytes": 38687,
+      "sha256": "cc58e8318cc8a801d2dda520e0c3ca7580eee9ac43efae80234be244772a2e99"
+    },
+    "near-off/logs_ns3/tcp_flow_0_progress.csv": {
+      "bytes": 76429,
+      "sha256": "53cfad7dc5ea2776c9134880c6c49557dd9c070944521028aa24f15de4a06ad6"
+    },
+    "near-off/logs_ns3/tcp_flow_0_rtt.csv": {
+      "bytes": 75734,
+      "sha256": "43cf30d99a88a29dbe73d67c82c5bc19d3e54219e6c3836503dd635528a73eca"
+    },
+    "near-off/logs_ns3/tcp_flow_0_study_events.csv": {
+      "bytes": 273,
+      "sha256": "e02d10e445d30a6e8e7c6f9d7a9ef16b35e80634e80ff4c45b74219325cfbdfb"
+    },
+    "near-off/logs_ns3/tcp_flow_0_study_packets.csv": {
+      "bytes": 1006021,
+      "sha256": "7131aad2a317b5f68ccfe24d097934f3b8bce5fb05092c783a07ae0b3084f099"
+    },
+    "near-off/logs_ns3/tcp_flows.csv": {
+      "bytes": 70,
+      "sha256": "16d086c4010403ea31f1509704ca82f10a174eee55177844e3dd4f9e67f01c2f"
+    },
+    "near-off/logs_ns3/tcp_flows.txt": {
+      "bytes": 336,
+      "sha256": "78f3f0c24e5422f506b33e6dc3bcf390b9e1a79f95e5be5eefb6d8a254fe6f26"
+    },
+    "near-off/logs_ns3/timing_results.csv": {
+      "bytes": 561,
+      "sha256": "126af3a937009027bbfd35832adf6beb3383163e7b6dba56acb1bb9ca76fd1fc"
+    },
+    "near-off/logs_ns3/timing_results.txt": {
+      "bytes": 908,
+      "sha256": "cf1b85115c54cda3b4a1886335d813c6dd90604322bb67b573f0c86eb754d51a"
+    },
+    "near-off/manifest.json": {
+      "bytes": 421319,
+      "sha256": "d193da6f4f8b9948de60ad25f7c0c26bc3a383c60d717b0a288e702c4f08a39e"
+    },
+    "near-off/schedule.csv": {
+      "bytes": 35,
+      "sha256": "00fdb12d4acecb6b1d9cbfac3f0d8217f7bf7ea300770e8fc8bb8680f5f3b1ea"
+    },
+    "stable-on/config_ns3.properties": {
+      "bytes": 617,
+      "sha256": "e7119e4b547611a756f2fc7c5ed966d9f5318839603ac9ab81bb84765dbc6d4e"
+    },
+    "stable-on/console.txt": {
+      "bytes": 5836,
+      "sha256": "31983f3b5be93371ad2509450ab96efcee443edf7e02fb672792c3f1b585cfc2"
+    },
+    "stable-on/logs_ns3/finished.txt": {
+      "bytes": 4,
+      "sha256": "927580bf287560d4a26a5d6e129f91ffa9cb63031b1a8c772be6ec584e65e82b"
+    },
+    "stable-on/logs_ns3/hystart_socket.csv": {
+      "bytes": 116,
+      "sha256": "b47c28eaf4030f205ce34b851f95be318c9c87ec338dbc16fcb7453416cc5f78"
+    },
+    "stable-on/logs_ns3/hystart_state.csv": {
+      "bytes": 719067,
+      "sha256": "63d963979dea2244d770772cd62449e0cd58aef9baa1aa80f2df79c1827f91e5"
+    },
+    "stable-on/logs_ns3/orbit_coverage.csv": {
+      "bytes": 1398438,
+      "sha256": "7785a349bbcd58d321430e5454d4e7193dfc4ed7766e00af84b503fa6bafef9c"
+    },
+    "stable-on/logs_ns3/orbit_drops.csv": {
+      "bytes": 20420,
+      "sha256": "2a4497a355bf668a1b1d7e8a4e28aee1ff88ee4ffe9e2318a7d9f6df05ac61a4"
+    },
+    "stable-on/logs_ns3/orbit_queue_bins.csv": {
+      "bytes": 20462,
+      "sha256": "3721b452f51884fa6c779bd423a7d9535112b883fcab7385026a5d2d6e46957c"
+    },
+    "stable-on/logs_ns3/orbit_queue_pending.csv": {
+      "bytes": 90,
+      "sha256": "bd912a74a0dee1b032ecbeac1820c6c6d343cbec86b2fdcadf1b67eb243ce335"
+    },
+    "stable-on/logs_ns3/study_app_rx_node_1585_port_1024.csv": {
+      "bytes": 310169,
+      "sha256": "c486e1d573f59d223fb44d0cc5fae22c9de2ef596a0e3e0e2c43c8f6a4f35600"
+    },
+    "stable-on/logs_ns3/study_drop_coverage.csv": {
+      "bytes": 1140184,
+      "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+    },
+    "stable-on/logs_ns3/study_drops.csv": {
+      "bytes": 25113,
+      "sha256": "353bdfb4bce5e16babb89b8a578447ceb8a668f634d343133e2abc9949cb339e"
+    },
+    "stable-on/logs_ns3/study_rx_node_1585_port_1024.csv": {
+      "bytes": 636911,
+      "sha256": "85ddc1f40f5a1f7bee13c945a5a8f9056ce253b14a9b0a460e139b307c624f19"
+    },
+    "stable-on/logs_ns3/tcp_flow_0_cwnd.csv": {
+      "bytes": 33627,
+      "sha256": "b6b33235bfdfaf1a588e3529885dd4268221634885cc7af7b177345fbcd6f7b0"
+    },
+    "stable-on/logs_ns3/tcp_flow_0_progress.csv": {
+      "bytes": 45563,
+      "sha256": "28fc7c02e08b314a2afa9914cd323d35f7404fc09fd3e322c14475e484763738"
+    },
+    "stable-on/logs_ns3/tcp_flow_0_rtt.csv": {
+      "bytes": 49444,
+      "sha256": "14459a965085cf33a7c2ba37a11f1747f520b864faead625c4a2f18021e8e2bb"
+    },
+    "stable-on/logs_ns3/tcp_flow_0_study_events.csv": {
+      "bytes": 317,
+      "sha256": "30ce59a72ecbc6d55437c0072d2d2905d31436c05b5e931f5da080e5ea89e548"
+    },
+    "stable-on/logs_ns3/tcp_flow_0_study_packets.csv": {
+      "bytes": 859897,
+      "sha256": "4ec4b0dfc46d847a6956d603c14d9abb323fed10108db38b1320940202e36a2e"
+    },
+    "stable-on/logs_ns3/tcp_flows.csv": {
+      "bytes": 70,
+      "sha256": "9647850ae37ad66e3d9ce154ea24b73fedec89dc298ca4ff27889e24377494a1"
+    },
+    "stable-on/logs_ns3/tcp_flows.txt": {
+      "bytes": 336,
+      "sha256": "951f52ff05f1fd2518275c0c171ca897b883aca26456c87c0be7d5d94e5759bd"
+    },
+    "stable-on/logs_ns3/timing_results.csv": {
+      "bytes": 558,
+      "sha256": "ee60e95065684cc41f287e7cee9c7092c9debaa23261392a117aa631329c6864"
+    },
+    "stable-on/logs_ns3/timing_results.txt": {
+      "bytes": 908,
+      "sha256": "3ee61bad2c23a43e088456d28ddce253155de66f092ccb27e7a518506026d90b"
+    },
+    "stable-on/manifest.json": {
+      "bytes": 421320,
+      "sha256": "ed07f928e2d1c01ded5a60438e6df5e04df3e7e11e8ff59c3a01d61307c0db81"
+    },
+    "stable-on/schedule.csv": {
+      "bytes": 35,
+      "sha256": "dcd8c49787cdc946b56c885fd5febcd4cdc567a912d334bea4986587203a55fa"
+    },
+    "stable-off/config_ns3.properties": {
+      "bytes": 617,
+      "sha256": "e7119e4b547611a756f2fc7c5ed966d9f5318839603ac9ab81bb84765dbc6d4e"
+    },
+    "stable-off/console.txt": {
+      "bytes": 5842,
+      "sha256": "ba9768a10644f9d0d2c8fcdb6de61d586a9e9407820f4c5ae99cec20ac4c496c"
+    },
+    "stable-off/logs_ns3/finished.txt": {
+      "bytes": 4,
+      "sha256": "927580bf287560d4a26a5d6e129f91ffa9cb63031b1a8c772be6ec584e65e82b"
+    },
+    "stable-off/logs_ns3/hystart_socket.csv": {
+      "bytes": 116,
+      "sha256": "127ad4500dc3fabcc63027285f483e688266030452059b38795fc6b9013e9370"
+    },
+    "stable-off/logs_ns3/hystart_state.csv": {
+      "bytes": 679344,
+      "sha256": "f169123e55cc57fd9e32444f0940498fdbe1419e966f85d6d1652029289361b6"
+    },
+    "stable-off/logs_ns3/orbit_coverage.csv": {
+      "bytes": 1398438,
+      "sha256": "7785a349bbcd58d321430e5454d4e7193dfc4ed7766e00af84b503fa6bafef9c"
+    },
+    "stable-off/logs_ns3/orbit_drops.csv": {
+      "bytes": 116301,
+      "sha256": "e7a56ce9a09da88c1d3e6e28ccd51c42faa6b5a22b8ed9f94b043b843f2f2efd"
+    },
+    "stable-off/logs_ns3/orbit_queue_bins.csv": {
+      "bytes": 21664,
+      "sha256": "ad376c1d648a725ce7f9ff6717e72ca500a0af1ee62255c8848b86fabf502411"
+    },
+    "stable-off/logs_ns3/orbit_queue_pending.csv": {
+      "bytes": 90,
+      "sha256": "bd912a74a0dee1b032ecbeac1820c6c6d343cbec86b2fdcadf1b67eb243ce335"
+    },
+    "stable-off/logs_ns3/study_app_rx_node_1585_port_1024.csv": {
+      "bytes": 397069,
+      "sha256": "7c6b0f659d29ed069cc27977f8dea6c4e7518724af8611ed4a20574920b84a7d"
+    },
+    "stable-off/logs_ns3/study_drop_coverage.csv": {
+      "bytes": 1140184,
+      "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+    },
+    "stable-off/logs_ns3/study_drops.csv": {
+      "bytes": 143002,
+      "sha256": "8e102477f7cf7d70262b475762a3142499268bd29a4fce0d108eafa5e4d58b44"
+    },
+    "stable-off/logs_ns3/study_rx_node_1585_port_1024.csv": {
+      "bytes": 636911,
+      "sha256": "5db31f0ad5ce996756fbd07d091a8d883ce6cb36de15c7b8349485083d50ff8d"
+    },
+    "stable-off/logs_ns3/tcp_flow_0_cwnd.csv": {
+      "bytes": 39285,
+      "sha256": "e62b7139581cc455fa032d91edba65556482597634397b87e99db0315f2522ee"
+    },
+    "stable-off/logs_ns3/tcp_flow_0_progress.csv": {
+      "bytes": 76245,
+      "sha256": "113a6afeb9ee86410f94842a0c8e60b7a59a1dea0eac00bdeb0ddaeb0e93b145"
+    },
+    "stable-off/logs_ns3/tcp_flow_0_rtt.csv": {
+      "bytes": 75644,
+      "sha256": "28f51946b4959c66de99270e3d7488b6ac342a3ec22f7f1d343efa316ea27430"
+    },
+    "stable-off/logs_ns3/tcp_flow_0_study_events.csv": {
+      "bytes": 273,
+      "sha256": "e381576a1adb8d05f5d4b9fd8a867a7b87ba96cb4eb0ab57448bb4e87d29480c"
+    },
+    "stable-off/logs_ns3/tcp_flow_0_study_packets.csv": {
+      "bytes": 1013899,
+      "sha256": "ae8b9ec0e270033712bfdde3e6d14e3a61fe3c01d3f558c9ba972dd6e6d42ce5"
+    },
+    "stable-off/logs_ns3/tcp_flows.csv": {
+      "bytes": 70,
+      "sha256": "56eabb9af5b085f776521eefb8340da41ace6df0b00ed73eefcb1a05fbad8600"
+    },
+    "stable-off/logs_ns3/tcp_flows.txt": {
+      "bytes": 336,
+      "sha256": "5b9cb8d1c413742b10333d665e8ff51d63cc57b0307ecfb66d755098ee31ee20"
+    },
+    "stable-off/logs_ns3/timing_results.csv": {
+      "bytes": 560,
+      "sha256": "d1c26154f81e93ceb28245bf52786ce42f24493d26b8ebb23bf661762376cef1"
+    },
+    "stable-off/logs_ns3/timing_results.txt": {
+      "bytes": 908,
+      "sha256": "43f5faf910865db51d3f53f2594aa5aaacdf35c8a4e886c05303ecae024bbeb6"
+    },
+    "stable-off/manifest.json": {
+      "bytes": 421327,
+      "sha256": "cf88f981a1fcdca7620104e9795ada7009cf042506b816e98a173f993f2e3076"
+    },
+    "stable-off/schedule.csv": {
+      "bytes": 35,
+      "sha256": "dcd8c49787cdc946b56c885fd5febcd4cdc567a912d334bea4986587203a55fa"
+    },
+    "near-on-unobserved/config_ns3.properties": {
+      "bytes": 617,
+      "sha256": "e7119e4b547611a756f2fc7c5ed966d9f5318839603ac9ab81bb84765dbc6d4e"
+    },
+    "near-on-unobserved/console.txt": {
+      "bytes": 5890,
+      "sha256": "6bf4035b8f54607d00060c6759d37e08919e51d0e13c61579480bee3a86602cd"
+    },
+    "near-on-unobserved/logs_ns3/finished.txt": {
+      "bytes": 4,
+      "sha256": "927580bf287560d4a26a5d6e129f91ffa9cb63031b1a8c772be6ec584e65e82b"
+    },
+    "near-on-unobserved/logs_ns3/hystart_socket.csv": {
+      "bytes": 137,
+      "sha256": "c80f259f233a3304607e5e6786fa3bf15c837b0e74c2afa28aac517cdbd08565"
+    },
+    "near-on-unobserved/logs_ns3/study_app_rx_node_1585_port_1024.csv": {
+      "bytes": 312579,
+      "sha256": "a4677cb8cba9b4170ec0ce994c6fc5a9d701f1745c4cb76023eb366654572efd"
+    },
+    "near-on-unobserved/logs_ns3/study_drop_coverage.csv": {
+      "bytes": 1140184,
+      "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+    },
+    "near-on-unobserved/logs_ns3/study_drops.csv": {
+      "bytes": 22540,
+      "sha256": "5a34164a5edd41f629aaf8f3fe18b51cd365584137e5546097acc378fc447304"
+    },
+    "near-on-unobserved/logs_ns3/study_rx_node_1585_port_1024.csv": {
+      "bytes": 636911,
+      "sha256": "6400f0e66739ff9ad86a545120f022ffd53de206c3a41cc7040660840c091df6"
+    },
+    "near-on-unobserved/logs_ns3/tcp_flow_0_cwnd.csv": {
+      "bytes": 34271,
+      "sha256": "8ac916277d8feb4ed4bf48d051151e1c675f975f73897c2ef4f387dce9538e2a"
+    },
+    "near-on-unobserved/logs_ns3/tcp_flow_0_progress.csv": {
+      "bytes": 45724,
+      "sha256": "e6250444a1e6cfa790852dba6ead1db00ba9ba17b8d4fa4a9572b8f84ead08e3"
+    },
+    "near-on-unobserved/logs_ns3/tcp_flow_0_rtt.csv": {
+      "bytes": 49606,
+      "sha256": "acbf56d6730dc7c4851392bc57c084bf06c910c988d4788263a1e9e8a8eda08b"
+    },
+    "near-on-unobserved/logs_ns3/tcp_flow_0_study_events.csv": {
+      "bytes": 317,
+      "sha256": "9ae3dc325e47d38c26759fc4611218476d6e84bee0a1133277380e50f08e2146"
+    },
+    "near-on-unobserved/logs_ns3/tcp_flow_0_study_packets.csv": {
+      "bytes": 852463,
+      "sha256": "1637d26f0f21652eb30113c86f9bd9814449518531a520203cc9a117a0a1573c"
+    },
+    "near-on-unobserved/logs_ns3/tcp_flows.csv": {
+      "bytes": 70,
+      "sha256": "6652f3ac700fcab0565474df4951f76599f9a8f4c9e67ec8f9ab40aaa60cb05a"
+    },
+    "near-on-unobserved/logs_ns3/tcp_flows.txt": {
+      "bytes": 336,
+      "sha256": "916c6ee3275bd78b080c8407364421c9be44d326676663b7911400e3dfe30df1"
+    },
+    "near-on-unobserved/logs_ns3/timing_results.csv": {
+      "bytes": 560,
+      "sha256": "67fd433419ee04a558ed929b7f747b3522437fbd2f6730962dabe25ad4c9fac6"
+    },
+    "near-on-unobserved/logs_ns3/timing_results.txt": {
+      "bytes": 908,
+      "sha256": "54daa9aab0d24c2c5842e941727e77bb5ef4a431c0ea39a5cb1c80679ccc3007"
+    },
+    "near-on-unobserved/manifest.json": {
+      "bytes": 420648,
+      "sha256": "e131dcc7e40a8bbcaced9354da7dc1326a3e873ab4ff9e69314ffdc7172123db"
+    },
+    "near-on-unobserved/schedule.csv": {
+      "bytes": 35,
+      "sha256": "00fdb12d4acecb6b1d9cbfac3f0d8217f7bf7ea300770e8fc8bb8680f5f3b1ea"
+    },
+    "near-forecast/config_ns3.properties": {
+      "bytes": 617,
+      "sha256": "e7119e4b547611a756f2fc7c5ed966d9f5318839603ac9ab81bb84765dbc6d4e"
+    },
+    "near-forecast/console.txt": {
+      "bytes": 5860,
+      "sha256": "d886b74acbc6259e63624dee348efd4f063ab598255b4e9ac4d3f17d3683d000"
+    },
+    "near-forecast/logs_ns3/finished.txt": {
+      "bytes": 4,
+      "sha256": "927580bf287560d4a26a5d6e129f91ffa9cb63031b1a8c772be6ec584e65e82b"
+    },
+    "near-forecast/logs_ns3/hystart_socket.csv": {
+      "bytes": 162,
+      "sha256": "545cc93dbf27a33bbafb1883d5d22d3fb73f40bb932f362a19499e0ea678531a"
+    },
+    "near-forecast/logs_ns3/hystart_state.csv": {
+      "bytes": 713923,
+      "sha256": "9fac3abe5aff939f492e3aeaee86c92e4e23083081a5044c0064f55754511800"
+    },
+    "near-forecast/logs_ns3/orbit_coverage.csv": {
+      "bytes": 1398438,
+      "sha256": "7785a349bbcd58d321430e5454d4e7193dfc4ed7766e00af84b503fa6bafef9c"
+    },
+    "near-forecast/logs_ns3/orbit_drops.csv": {
+      "bytes": 18330,
+      "sha256": "9b017e274944a0f7c4ed379ba98aeb5f47e690d68a2779d161df0457c1a258a7"
+    },
+    "near-forecast/logs_ns3/orbit_queue_bins.csv": {
+      "bytes": 21199,
+      "sha256": "f43ab26b3bf14d4c1c45626fd8da046e7079ed4c00abf9105394f8c84a07b18e"
+    },
+    "near-forecast/logs_ns3/orbit_queue_pending.csv": {
+      "bytes": 90,
+      "sha256": "bd912a74a0dee1b032ecbeac1820c6c6d343cbec86b2fdcadf1b67eb243ce335"
+    },
+    "near-forecast/logs_ns3/study_app_rx_node_1585_port_1024.csv": {
+      "bytes": 312579,
+      "sha256": "a4677cb8cba9b4170ec0ce994c6fc5a9d701f1745c4cb76023eb366654572efd"
+    },
+    "near-forecast/logs_ns3/study_drop_coverage.csv": {
+      "bytes": 1140184,
+      "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+    },
+    "near-forecast/logs_ns3/study_drops.csv": {
+      "bytes": 22540,
+      "sha256": "5a34164a5edd41f629aaf8f3fe18b51cd365584137e5546097acc378fc447304"
+    },
+    "near-forecast/logs_ns3/study_rx_node_1585_port_1024.csv": {
+      "bytes": 636911,
+      "sha256": "6400f0e66739ff9ad86a545120f022ffd53de206c3a41cc7040660840c091df6"
+    },
+    "near-forecast/logs_ns3/tcp_flow_0_cwnd.csv": {
+      "bytes": 34271,
+      "sha256": "8ac916277d8feb4ed4bf48d051151e1c675f975f73897c2ef4f387dce9538e2a"
+    },
+    "near-forecast/logs_ns3/tcp_flow_0_progress.csv": {
+      "bytes": 45724,
+      "sha256": "e6250444a1e6cfa790852dba6ead1db00ba9ba17b8d4fa4a9572b8f84ead08e3"
+    },
+    "near-forecast/logs_ns3/tcp_flow_0_rtt.csv": {
+      "bytes": 49606,
+      "sha256": "acbf56d6730dc7c4851392bc57c084bf06c910c988d4788263a1e9e8a8eda08b"
+    },
+    "near-forecast/logs_ns3/tcp_flow_0_study_events.csv": {
+      "bytes": 317,
+      "sha256": "9ae3dc325e47d38c26759fc4611218476d6e84bee0a1133277380e50f08e2146"
+    },
+    "near-forecast/logs_ns3/tcp_flow_0_study_packets.csv": {
+      "bytes": 852463,
+      "sha256": "1637d26f0f21652eb30113c86f9bd9814449518531a520203cc9a117a0a1573c"
+    },
+    "near-forecast/logs_ns3/tcp_flows.csv": {
+      "bytes": 70,
+      "sha256": "6652f3ac700fcab0565474df4951f76599f9a8f4c9e67ec8f9ab40aaa60cb05a"
+    },
+    "near-forecast/logs_ns3/tcp_flows.txt": {
+      "bytes": 336,
+      "sha256": "916c6ee3275bd78b080c8407364421c9be44d326676663b7911400e3dfe30df1"
+    },
+    "near-forecast/logs_ns3/timing_results.csv": {
+      "bytes": 559,
+      "sha256": "61e16dd639ac3beebcdc2f8b8d887133c0e3a0269ca9152fb9c89a3c57586cf7"
+    },
+    "near-forecast/logs_ns3/timing_results.txt": {
+      "bytes": 908,
+      "sha256": "b6cdb7aa367b823cf136bc7bc8440e599af5c6018b6ef1da83acf30dcdc36a29"
+    },
+    "near-forecast/manifest.json": {
+      "bytes": 421482,
+      "sha256": "4bfd7f4ebc5fc0c9b42306369c22a1bcdff14b61131e9a64c8242c54d2a988ca"
+    },
+    "near-forecast/schedule.csv": {
+      "bytes": 35,
+      "sha256": "00fdb12d4acecb6b1d9cbfac3f0d8217f7bf7ea300770e8fc8bb8680f5f3b1ea"
+    }
+  },
+  "limits": "Local archive verification only. Root records the shared prerelease URL/digest. No independent simulation replay or statistical replication is claimed."
+}

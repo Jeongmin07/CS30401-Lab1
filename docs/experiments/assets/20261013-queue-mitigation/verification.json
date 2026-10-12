@@ -1,0 +1,748 @@
+{
+  "schema": 1,
+  "checked_commit": "2a9a8ace5097e86f66e6659f58415e28fb739c02",
+  "baseline_commit": "d3136e6573d3864b351c1e6aa6aeb4606547478a",
+  "changed_paths": [
+    ".gitattributes",
+    "README.md",
+    "code/queue-backpressure/README.md",
+    "code/queue-backpressure/analyze.py",
+    "code/queue-backpressure/backpressure.h",
+    "code/queue-backpressure/build-ready.json",
+    "code/queue-backpressure/build.py",
+    "code/queue-backpressure/development-initial/build-log.txt",
+    "code/queue-backpressure/development-initial/build-ready.json",
+    "code/queue-backpressure/development-initial/ns3.patch",
+    "code/queue-backpressure/export.py",
+    "code/queue-backpressure/flow_observer.h",
+    "code/queue-backpressure/install.py",
+    "code/queue-backpressure/ns3.patch",
+    "code/queue-backpressure/queue_observer.h",
+    "code/queue-backpressure/reference-receipt.json",
+    "code/queue-backpressure/run.py",
+    "code/queue-backpressure/service_observer.h",
+    "code/queue-metrics/README.md",
+    "code/queue-metrics/check_area.cc",
+    "code/queue-metrics/queue_area.h",
+    "code/queue-pacing/.gitattributes",
+    "code/queue-pacing/README.md",
+    "code/queue-pacing/analyze.py",
+    "code/queue-pacing/archive.py",
+    "code/queue-pacing/build-ready.json",
+    "code/queue-pacing/build.py",
+    "code/queue-pacing/compare.py",
+    "code/queue-pacing/copied-sources.json",
+    "code/queue-pacing/first_sequence_drop.h",
+    "code/queue-pacing/flow_observer.h",
+    "code/queue-pacing/install.py",
+    "code/queue-pacing/ns3.patch",
+    "code/queue-pacing/posthoc.py",
+    "code/queue-pacing/queue_area.h",
+    "code/queue-pacing/queue_observer.h",
+    "code/queue-pacing/run.py",
+    "code/queue-pacing/service_observer.h",
+    "docs/experiments/20261013-queue-backpressure.md",
+    "docs/experiments/20261013-queue-mitigation.md",
+    "docs/experiments/20261013-queue-pacing.md",
+    "docs/experiments/assets/20261013-queue-backpressure/analysis.json",
+    "docs/experiments/assets/20261013-queue-backpressure/cases/codel4-96.json",
+    "docs/experiments/assets/20261013-queue-backpressure/cases/control100.json",
+    "docs/experiments/assets/20261013-queue-backpressure/cases/fifo4-96.json",
+    "docs/experiments/assets/20261013-queue-backpressure/export.json",
+    "docs/experiments/assets/20261013-queue-backpressure/final-build-log.txt",
+    "docs/experiments/assets/20261013-queue-backpressure/phases.json",
+    "docs/experiments/assets/20261013-queue-backpressure/raw-inventory.json",
+    "docs/experiments/assets/20261013-queue-backpressure/results.csv",
+    "docs/experiments/assets/20261013-queue-mitigation/final-pacing.json",
+    "docs/experiments/assets/20261013-queue-mitigation/independent-review.json",
+    "docs/experiments/assets/20261013-queue-mitigation/initial-backpressure.json",
+    "docs/experiments/assets/20261013-queue-mitigation/initial-pacing.json",
+    "docs/experiments/assets/20261013-queue-mitigation/queue-area-check.json",
+    "docs/experiments/assets/20261013-queue-pacing/.gitattributes",
+    "docs/experiments/assets/20261013-queue-pacing/archive-inventory.json",
+    "docs/experiments/assets/20261013-queue-pacing/build-final.log",
+    "docs/experiments/assets/20261013-queue-pacing/build-ready.json",
+    "docs/experiments/assets/20261013-queue-pacing/development/build-pre-error-model-guard.log",
+    "docs/experiments/assets/20261013-queue-pacing/development/build-ready-pre-error-model-guard.json",
+    "docs/experiments/assets/20261013-queue-pacing/development/ns3-pre-error-model-guard.patch",
+    "docs/experiments/assets/20261013-queue-pacing/final/cases/capacity/config_ns3.properties",
+    "docs/experiments/assets/20261013-queue-pacing/final/cases/capacity/manifest.json",
+    "docs/experiments/assets/20261013-queue-pacing/final/cases/capacity/schedule.csv",
+    "docs/experiments/assets/20261013-queue-pacing/final/cases/capacity/summary.json",
+    "docs/experiments/assets/20261013-queue-pacing/final/cases/capacity/tcp_flow_0_orbit_loss.csv",
+    "docs/experiments/assets/20261013-queue-pacing/final/cases/capacity/tcp_flow_0_orbit_loss_tail.csv",
+    "docs/experiments/assets/20261013-queue-pacing/final/cases/loss-current/config_ns3.properties",
+    "docs/experiments/assets/20261013-queue-pacing/final/cases/loss-current/manifest.json",
+    "docs/experiments/assets/20261013-queue-pacing/final/cases/loss-current/pacing_first_loss.csv",
+    "docs/experiments/assets/20261013-queue-pacing/final/cases/loss-current/pacing_first_loss_install.csv",
+    "docs/experiments/assets/20261013-queue-pacing/final/cases/loss-current/schedule.csv",
+    "docs/experiments/assets/20261013-queue-pacing/final/cases/loss-current/summary.json",
+    "docs/experiments/assets/20261013-queue-pacing/final/cases/loss-current/tcp_flow_0_orbit_loss.csv",
+    "docs/experiments/assets/20261013-queue-pacing/final/cases/loss-current/tcp_flow_0_orbit_loss_tail.csv",
+    "docs/experiments/assets/20261013-queue-pacing/final/cases/loss-selected/config_ns3.properties",
+    "docs/experiments/assets/20261013-queue-pacing/final/cases/loss-selected/manifest.json",
+    "docs/experiments/assets/20261013-queue-pacing/final/cases/loss-selected/pacing_first_loss.csv",
+    "docs/experiments/assets/20261013-queue-pacing/final/cases/loss-selected/pacing_first_loss_install.csv",
+    "docs/experiments/assets/20261013-queue-pacing/final/cases/loss-selected/schedule.csv",
+    "docs/experiments/assets/20261013-queue-pacing/final/cases/loss-selected/summary.json",
+    "docs/experiments/assets/20261013-queue-pacing/final/cases/loss-selected/tcp_flow_0_orbit_loss.csv",
+    "docs/experiments/assets/20261013-queue-pacing/final/cases/loss-selected/tcp_flow_0_orbit_loss_tail.csv",
+    "docs/experiments/assets/20261013-queue-pacing/final/cases/micro-current/config_ns3.properties",
+    "docs/experiments/assets/20261013-queue-pacing/final/cases/micro-current/manifest.json",
+    "docs/experiments/assets/20261013-queue-pacing/final/cases/micro-current/summary.json",
+    "docs/experiments/assets/20261013-queue-pacing/final/cases/micro-current/tcp_flow_0_orbit_loss.csv",
+    "docs/experiments/assets/20261013-queue-pacing/final/cases/micro-current/tcp_flow_0_orbit_loss_tail.csv",
+    "docs/experiments/assets/20261013-queue-pacing/final/cases/micro-original/config_ns3.properties",
+    "docs/experiments/assets/20261013-queue-pacing/final/cases/micro-original/manifest.json",
+    "docs/experiments/assets/20261013-queue-pacing/final/cases/micro-original/summary.json",
+    "docs/experiments/assets/20261013-queue-pacing/final/cases/micro-selected/config_ns3.properties",
+    "docs/experiments/assets/20261013-queue-pacing/final/cases/micro-selected/manifest.json",
+    "docs/experiments/assets/20261013-queue-pacing/final/cases/micro-selected/summary.json",
+    "docs/experiments/assets/20261013-queue-pacing/final/cases/micro-selected/tcp_flow_0_orbit_loss.csv",
+    "docs/experiments/assets/20261013-queue-pacing/final/cases/micro-selected/tcp_flow_0_orbit_loss_tail.csv",
+    "docs/experiments/assets/20261013-queue-pacing/final/cases/native/config_ns3.properties",
+    "docs/experiments/assets/20261013-queue-pacing/final/cases/native/manifest.json",
+    "docs/experiments/assets/20261013-queue-pacing/final/cases/native/schedule.csv",
+    "docs/experiments/assets/20261013-queue-pacing/final/cases/native/summary.json",
+    "docs/experiments/assets/20261013-queue-pacing/final/cases/native/tcp_flow_0_orbit_loss.csv",
+    "docs/experiments/assets/20261013-queue-pacing/final/cases/native/tcp_flow_0_orbit_loss_tail.csv",
+    "docs/experiments/assets/20261013-queue-pacing/final/cases/off/config_ns3.properties",
+    "docs/experiments/assets/20261013-queue-pacing/final/cases/off/manifest.json",
+    "docs/experiments/assets/20261013-queue-pacing/final/cases/off/schedule.csv",
+    "docs/experiments/assets/20261013-queue-pacing/final/cases/off/summary.json",
+    "docs/experiments/assets/20261013-queue-pacing/final/cases/off/tcp_flow_0_orbit_loss.csv",
+    "docs/experiments/assets/20261013-queue-pacing/final/cases/off/tcp_flow_0_orbit_loss_tail.csv",
+    "docs/experiments/assets/20261013-queue-pacing/final/comparison.json",
+    "docs/experiments/assets/20261013-queue-pacing/final/posthoc.json",
+    "docs/experiments/assets/20261013-queue-pacing/final/receipt.json",
+    "docs/experiments/assets/20261013-queue-pacing/final/results.csv",
+    "docs/experiments/assets/20261013-queue-pacing/initial/cases/capacity/config_ns3.properties",
+    "docs/experiments/assets/20261013-queue-pacing/initial/cases/capacity/manifest.json",
+    "docs/experiments/assets/20261013-queue-pacing/initial/cases/capacity/schedule.csv",
+    "docs/experiments/assets/20261013-queue-pacing/initial/cases/capacity/summary.json",
+    "docs/experiments/assets/20261013-queue-pacing/initial/cases/capacity/tcp_flow_0_orbit_loss.csv",
+    "docs/experiments/assets/20261013-queue-pacing/initial/cases/capacity/tcp_flow_0_orbit_loss_tail.csv",
+    "docs/experiments/assets/20261013-queue-pacing/initial/cases/native/config_ns3.properties",
+    "docs/experiments/assets/20261013-queue-pacing/initial/cases/native/manifest.json",
+    "docs/experiments/assets/20261013-queue-pacing/initial/cases/native/schedule.csv",
+    "docs/experiments/assets/20261013-queue-pacing/initial/cases/native/summary.json",
+    "docs/experiments/assets/20261013-queue-pacing/initial/cases/native/tcp_flow_0_orbit_loss.csv",
+    "docs/experiments/assets/20261013-queue-pacing/initial/cases/native/tcp_flow_0_orbit_loss_tail.csv",
+    "docs/experiments/assets/20261013-queue-pacing/initial/cases/off/config_ns3.properties",
+    "docs/experiments/assets/20261013-queue-pacing/initial/cases/off/manifest.json",
+    "docs/experiments/assets/20261013-queue-pacing/initial/cases/off/schedule.csv",
+    "docs/experiments/assets/20261013-queue-pacing/initial/cases/off/summary.json",
+    "docs/experiments/assets/20261013-queue-pacing/initial/cases/off/tcp_flow_0_orbit_loss.csv",
+    "docs/experiments/assets/20261013-queue-pacing/initial/cases/off/tcp_flow_0_orbit_loss_tail.csv",
+    "docs/experiments/assets/20261013-queue-pacing/initial/comparison.json",
+    "docs/experiments/assets/20261013-queue-pacing/initial/receipt.json",
+    "docs/experiments/assets/20261013-queue-pacing/initial/results.csv",
+    "docs/experiments/assets/20261013-queue-pacing/source-build-receipt.json",
+    "docs/work/20261012-bbr-route-kim-seongchan.md"
+  ],
+  "earlier_study_paths_unchanged": true,
+  "python_ast": [
+    {
+      "path": "code/queue-pacing/analyze.py",
+      "sha256": "5dc28fb0fad89c82ea6435e4c4a0202f3ceff16fe416b692d328312dfff4bb9e"
+    },
+    {
+      "path": "code/queue-pacing/archive.py",
+      "sha256": "4efc72627bc159bffd6b2076b6ca1e5c2c418216105136701ef08949ffb9a077"
+    },
+    {
+      "path": "code/queue-pacing/build.py",
+      "sha256": "40c7d39d540d768d1c6753ff78a5cfb2ca8201700a2a650e22805c513adc29d1"
+    },
+    {
+      "path": "code/queue-pacing/compare.py",
+      "sha256": "1cf4939d128d159d8290f9faa079626aa64fe96a208e83199f0e7545a94adca3"
+    },
+    {
+      "path": "code/queue-pacing/install.py",
+      "sha256": "1b65887f298b31bcef3570f66ff0ffbcd79351ffd02afc5a2e2134857702c6ac"
+    },
+    {
+      "path": "code/queue-pacing/posthoc.py",
+      "sha256": "86886c37deaa0c87d016a13442a72a7e55d6ef4e6af0db32c7518bced2f94fdd"
+    },
+    {
+      "path": "code/queue-pacing/run.py",
+      "sha256": "50a9d84257863fa606b1e93f39c94f7340311375ba83feefe33862c7d1e25dbe"
+    },
+    {
+      "path": "code/queue-backpressure/analyze.py",
+      "sha256": "1b04dcf7bd2ca3439caebdfcecf28fb1c377a0eea15dcdee5767786c3c5901b5"
+    },
+    {
+      "path": "code/queue-backpressure/build.py",
+      "sha256": "790554d15e86079f19924c230bd4de4ff28c7dbfa336f31165fe71eb36419665"
+    },
+    {
+      "path": "code/queue-backpressure/export.py",
+      "sha256": "ccba7a4cdbf6b11a271cb46ec003a5cdb18ed86c8523428f3bc639bc0209583b"
+    },
+    {
+      "path": "code/queue-backpressure/install.py",
+      "sha256": "3376682206c068d1ea8893f59b038530c724149dd97b1420d4c8c12b4f596b8e"
+    },
+    {
+      "path": "code/queue-backpressure/run.py",
+      "sha256": "1f519bdf5490ca28cc7441ba2981f578320272e2c5e660720306a735c0d65d80"
+    }
+  ],
+  "json_parse": [
+    {
+      "path": "code/queue-pacing/build-ready.json",
+      "sha256": "fcd8188369a389d119c752216ff928dc75462bf6ff3b38369bc8bd4430c949aa"
+    },
+    {
+      "path": "code/queue-pacing/copied-sources.json",
+      "sha256": "6d3564664fda9d65e8a0569869b84fd6f87f5e6ed3f5f152c166bbc4f507a07c"
+    },
+    {
+      "path": "code/queue-backpressure/build-ready.json",
+      "sha256": "5995697fcb1a751ea3bcd8e83a374edcc59e525d7e3b8fd8d36f8db4b9d9f951"
+    },
+    {
+      "path": "code/queue-backpressure/development-initial/build-ready.json",
+      "sha256": "d2b3d4f439e1de73fcc53f4232cccee85adf326fd9b7e421488a497986905883"
+    },
+    {
+      "path": "code/queue-backpressure/reference-receipt.json",
+      "sha256": "ee9e5ef6dd8e862599a5e4a853baad596658c5d912f98b296a5738806c5eb52a"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-queue-pacing/archive-inventory.json",
+      "sha256": "dcea338fec7dcbaa0cf790bca6a022e312446ee42514de4722b38a2bf61f6378"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-queue-pacing/build-ready.json",
+      "sha256": "fcd8188369a389d119c752216ff928dc75462bf6ff3b38369bc8bd4430c949aa"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-queue-pacing/development/build-ready-pre-error-model-guard.json",
+      "sha256": "2cee1ca12d597d8119ea094acb685fb04a28e0c1066ea5c11920e3090efbc33d"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-queue-pacing/final/cases/capacity/manifest.json",
+      "sha256": "11529ea6d447529b1cfb0bef4e68ae1c147b3100ee262d0eba45fca0085ae29d"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-queue-pacing/final/cases/capacity/summary.json",
+      "sha256": "a3c22489b32b7de6380080d12f7bc607faaf57e12a5c95505bfa828d8407baac"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-queue-pacing/final/cases/loss-current/manifest.json",
+      "sha256": "acbbef074e9ccf88cf6688b14d326c5cda65bb04b4aea5cc2c5394d8701ad4ef"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-queue-pacing/final/cases/loss-current/summary.json",
+      "sha256": "fc58e47fc39c49fead94ed49bf4f62c197c27c4e65de18c74cb66b76755a15fd"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-queue-pacing/final/cases/loss-selected/manifest.json",
+      "sha256": "736deb12decd1c431c540b376b9a56744c39c738a2685843056361dac10a0c57"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-queue-pacing/final/cases/loss-selected/summary.json",
+      "sha256": "50ee6aea125bbbb60aa2af7ca4b84b4c36a1a6a006018acbd0a0d2b1d4365a8a"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-queue-pacing/final/cases/micro-current/manifest.json",
+      "sha256": "6d998bd0e2ef5cdbda00e641b3c754d0a2d67d90949ad94efbe290153ae79f70"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-queue-pacing/final/cases/micro-current/summary.json",
+      "sha256": "046d2179066636d679d154c73d28901dac22f97fae6d06e4e5fba8ddbdb123be"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-queue-pacing/final/cases/micro-original/manifest.json",
+      "sha256": "ec4cc9e1c63c8c9fe92968a0f620dfdef33b8ee5d86f149b4aec3d3b973a717d"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-queue-pacing/final/cases/micro-original/summary.json",
+      "sha256": "77d84cbe90039cd27d3af39463cf0a6171fbbe458ad9481175ca259d14188afc"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-queue-pacing/final/cases/micro-selected/manifest.json",
+      "sha256": "a4cc18cc1324e6fe81cd5ce4a9dff19d890454ad0b63a6622f429116f5f80f9b"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-queue-pacing/final/cases/micro-selected/summary.json",
+      "sha256": "cb83c5ecc5d6489b81dc66220cacf3a2f589890886b5d8e499cfaf3eb50a176c"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-queue-pacing/final/cases/native/manifest.json",
+      "sha256": "91dd926d4b58275308fb4fd4b97aeef2e92909ea75f5d2d663d8bddb997f9e57"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-queue-pacing/final/cases/native/summary.json",
+      "sha256": "8bee9c39b9cdfcf4a16036663ada405ced49a7f43b63fff5467d21d730765e85"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-queue-pacing/final/cases/off/manifest.json",
+      "sha256": "1f58a2a0209abed2cae4e3a872c0fbf6f3ede2d4a4c5309ee1d5c0726c0870fe"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-queue-pacing/final/cases/off/summary.json",
+      "sha256": "74eddcc47646c10220945ba73c3f5b385d8de8d68cd055a708edd6b5c5121d35"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-queue-pacing/final/comparison.json",
+      "sha256": "8b6fc4ced622aa1861677260eb22822adcb795f54d346f31ce64c04a69aa2e01"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-queue-pacing/final/posthoc.json",
+      "sha256": "ea2df1889ab5e721e13e870bc7cc23689f90565f1551965f6ff24a3436edaae6"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-queue-pacing/final/receipt.json",
+      "sha256": "caa07bddbdeaf1bfb16c608be881983f6a229b917e6177997521d23023ff4841"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-queue-pacing/initial/cases/capacity/manifest.json",
+      "sha256": "11529ea6d447529b1cfb0bef4e68ae1c147b3100ee262d0eba45fca0085ae29d"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-queue-pacing/initial/cases/capacity/summary.json",
+      "sha256": "a3c22489b32b7de6380080d12f7bc607faaf57e12a5c95505bfa828d8407baac"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-queue-pacing/initial/cases/native/manifest.json",
+      "sha256": "91dd926d4b58275308fb4fd4b97aeef2e92909ea75f5d2d663d8bddb997f9e57"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-queue-pacing/initial/cases/native/summary.json",
+      "sha256": "8bee9c39b9cdfcf4a16036663ada405ced49a7f43b63fff5467d21d730765e85"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-queue-pacing/initial/cases/off/manifest.json",
+      "sha256": "1f58a2a0209abed2cae4e3a872c0fbf6f3ede2d4a4c5309ee1d5c0726c0870fe"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-queue-pacing/initial/cases/off/summary.json",
+      "sha256": "74eddcc47646c10220945ba73c3f5b385d8de8d68cd055a708edd6b5c5121d35"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-queue-pacing/initial/comparison.json",
+      "sha256": "6c7572a707ea8e815920bb838f5b2c2a3f56fdcd130e758cc67104228edbdf73"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-queue-pacing/initial/receipt.json",
+      "sha256": "499cb2028ab42ffcc2ffa4b7f492fac1e2ddc1aa1c9b6548bc43a99655fdb135"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-queue-pacing/source-build-receipt.json",
+      "sha256": "1cede21aa589ea4a5f616259017a9e931dbac027f93eb2fd9f38b511b51d55fe"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-queue-backpressure/analysis.json",
+      "sha256": "63597aa8b5e175abaf7ff0826358b99df2eff282d3a53fa5fa9325f164869c48"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-queue-backpressure/cases/codel4-96.json",
+      "sha256": "2251fb8088c89a3867caffa287bf1a02a3d2962cd8c949d09636eceb71f83d57"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-queue-backpressure/cases/control100.json",
+      "sha256": "8b189487ddadc591d802ded7deb9c7bada3c801d30f7a0838a5ae7cdcc912426"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-queue-backpressure/cases/fifo4-96.json",
+      "sha256": "27400b8efc22c86490761626786ec24944a293bc8e80b98e3890691c9afb8b6c"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-queue-backpressure/export.json",
+      "sha256": "4557cae4951998328fd2f08cca8beaa4e08e1b381c33e190fbc3b3a479a818e2"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-queue-backpressure/phases.json",
+      "sha256": "ad31a44bc600a803cf7140d72dcd5d2ea5281f6adf62d2a25d5cc5561c0da35d"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-queue-backpressure/raw-inventory.json",
+      "sha256": "5aa243f2b6bfce559385c319dacfad17a6f0d3c73770ffec9d962e82f5163963"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-queue-mitigation/final-pacing.json",
+      "sha256": "8b6fc4ced622aa1861677260eb22822adcb795f54d346f31ce64c04a69aa2e01"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-queue-mitigation/independent-review.json",
+      "sha256": "d77adf126ad042adcaf45981e8418b6e8eac70bbcc41c8fbd839c31acfdb8a5e"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-queue-mitigation/initial-backpressure.json",
+      "sha256": "63597aa8b5e175abaf7ff0826358b99df2eff282d3a53fa5fa9325f164869c48"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-queue-mitigation/initial-pacing.json",
+      "sha256": "6c7572a707ea8e815920bb838f5b2c2a3f56fdcd130e758cc67104228edbdf73"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-queue-mitigation/queue-area-check.json",
+      "sha256": "943219560cf79d2cc847103e8e86440206ff1f9082205805c09ad00d7e678c5c"
+    },
+    {
+      "path": "docs/experiments/assets/20261013-queue-mitigation/release.json",
+      "sha256": "2aefe66d82ea2d307a72f1da9deed92f8fdfe9bd0031f02c53f83ed4e0372bd2"
+    }
+  ],
+  "local_links": [
+    {
+      "document": "README.md",
+      "target": "docs/experiments/20261013-queue-mitigation.md"
+    },
+    {
+      "document": "README.md",
+      "target": "code/queue-pacing/README.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/experiments/20261013-queue-pacing.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/experiments/20261013-queue-backpressure.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/experiments/20261013-tail-and-queue.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/experiments/20261013-orbit-tail.md"
+    },
+    {
+      "document": "README.md",
+      "target": "code/orbit-tail/README.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/experiments/20261013-orbit-queue.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/experiments/20261012-three-followups.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/experiments/20261012-orbit-loss.md"
+    },
+    {
+      "document": "README.md",
+      "target": "code/orbit-loss/README.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/research/20261012-progress-retrospective.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/experiments/20261012-parallel-candidates.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/experiments/20261012-forecast-loss.md"
+    },
+    {
+      "document": "README.md",
+      "target": "code/bbr-route/README.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/START_HERE.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/LAB_REFERENCE.md"
+    },
+    {
+      "document": "README.md",
+      "target": "code/kim-study/"
+    },
+    {
+      "document": "README.md",
+      "target": "code/kim-study/README.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/experiments/20261010-cubic-q75.md"
+    },
+    {
+      "document": "README.md",
+      "target": "shared-results/"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/PLAN.md"
+    },
+    {
+      "document": "README.md",
+      "target": "code/kim-study/EXPERIMENT_NOTE.md"
+    },
+    {
+      "document": "README.md",
+      "target": "code/kim-study/PHASE2_NOTE.md"
+    },
+    {
+      "document": "README.md",
+      "target": "code/kim-study/evidence/results.csv"
+    },
+    {
+      "document": "README.md",
+      "target": "code/kim-study/phase2_results.csv"
+    },
+    {
+      "document": "README.md",
+      "target": "code/kim-study/ns3.patch"
+    },
+    {
+      "document": "README.md",
+      "target": "code/kim-study/report/kim-study-draft.pdf"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/TEAM_WORKFLOW.md"
+    },
+    {
+      "document": "docs/work/20261012-bbr-route-kim-seongchan.md",
+      "target": "../experiments/20261013-queue-mitigation.md"
+    },
+    {
+      "document": "docs/work/20261012-bbr-route-kim-seongchan.md",
+      "target": "../experiments/20261013-tail-and-queue.md"
+    },
+    {
+      "document": "docs/work/20261012-bbr-route-kim-seongchan.md",
+      "target": "../experiments/20261012-three-followups.md"
+    },
+    {
+      "document": "docs/work/20261012-bbr-route-kim-seongchan.md",
+      "target": "../research/20261012-progress-retrospective.md"
+    },
+    {
+      "document": "docs/work/20261012-bbr-route-kim-seongchan.md",
+      "target": "../experiments/assets/20261012-progress-retrospective/source-audit.json"
+    },
+    {
+      "document": "docs/work/20261012-bbr-route-kim-seongchan.md",
+      "target": "../experiments/20261012-parallel-candidates.md"
+    },
+    {
+      "document": "docs/work/20261012-bbr-route-kim-seongchan.md",
+      "target": "../research/20261012-modern-tcp-direction.md"
+    },
+    {
+      "document": "docs/work/20261012-bbr-route-kim-seongchan.md",
+      "target": "../experiments/20261012-forecast-loss.md"
+    },
+    {
+      "document": "docs/work/20261012-bbr-route-kim-seongchan.md",
+      "target": "../../code/predict-loss/README.md"
+    },
+    {
+      "document": "docs/work/20261012-bbr-route-kim-seongchan.md",
+      "target": "../research/20261012-predictable-leo-tcp.md"
+    },
+    {
+      "document": "docs/work/20261012-bbr-route-kim-seongchan.md",
+      "target": "../experiments/20261012-forecast-loss.md"
+    },
+    {
+      "document": "docs/work/20261012-bbr-route-kim-seongchan.md",
+      "target": "../experiments/assets/20261012-forecast-loss/clean-replay.json"
+    },
+    {
+      "document": "docs/work/20261012-bbr-route-kim-seongchan.md",
+      "target": "../../code/bbr-route/NOTES.md"
+    },
+    {
+      "document": "docs/work/20261012-bbr-route-kim-seongchan.md",
+      "target": "../experiments/20261012-bbr-route-pilot.md"
+    },
+    {
+      "document": "docs/work/20261012-bbr-route-kim-seongchan.md",
+      "target": "../../code/bbr-route/README.md"
+    },
+    {
+      "document": "docs/work/20261012-bbr-route-kim-seongchan.md",
+      "target": "../experiments/assets/20261012-bbr-route/equivalence-original-off.json"
+    },
+    {
+      "document": "docs/work/20261012-bbr-route-kim-seongchan.md",
+      "target": "../experiments/assets/20261012-bbr-route/equivalence-original-on.json"
+    },
+    {
+      "document": "docs/work/20261012-bbr-route-kim-seongchan.md",
+      "target": "../experiments/assets/20261012-bbr-route/observer-negative-checks.json"
+    },
+    {
+      "document": "docs/work/20261012-bbr-route-kim-seongchan.md",
+      "target": "../experiments/assets/20261012-bbr-route/pilot-analysis/pilot-summary.json"
+    },
+    {
+      "document": "docs/work/20261012-bbr-route-kim-seongchan.md",
+      "target": "../experiments/assets/20261012-bbr-route/raw-inventory.json"
+    },
+    {
+      "document": "docs/work/20261012-bbr-route-kim-seongchan.md",
+      "target": "../experiments/20261012-forecast-loss.md"
+    },
+    {
+      "document": "code/queue-pacing/README.md",
+      "target": "../../docs/experiments/20261013-queue-pacing.md"
+    },
+    {
+      "document": "code/queue-pacing/README.md",
+      "target": "../../docs/experiments/assets/20261013-queue-pacing"
+    },
+    {
+      "document": "code/queue-backpressure/README.md",
+      "target": "../../docs/experiments/20261013-queue-backpressure.md"
+    },
+    {
+      "document": "code/queue-backpressure/README.md",
+      "target": "../../docs/experiments/assets/20261013-queue-backpressure/results.csv"
+    },
+    {
+      "document": "code/queue-backpressure/README.md",
+      "target": "../../docs/experiments/assets/20261013-queue-backpressure/analysis.json"
+    },
+    {
+      "document": "code/queue-backpressure/README.md",
+      "target": "../../docs/experiments/20261013-queue-mitigation.md"
+    },
+    {
+      "document": "docs/experiments/20261013-queue-pacing.md",
+      "target": "assets/20261013-queue-pacing/final/comparison.json"
+    },
+    {
+      "document": "docs/experiments/20261013-queue-pacing.md",
+      "target": "assets/20261013-queue-pacing/final/posthoc.json"
+    },
+    {
+      "document": "docs/experiments/20261013-queue-pacing.md",
+      "target": "assets/20261013-queue-pacing/final/posthoc.json"
+    },
+    {
+      "document": "docs/experiments/20261013-queue-pacing.md",
+      "target": "assets/20261013-queue-pacing/final/posthoc.json"
+    },
+    {
+      "document": "docs/experiments/20261013-queue-pacing.md",
+      "target": "20261013-orbit-queue.md"
+    },
+    {
+      "document": "docs/experiments/20261013-queue-pacing.md",
+      "target": "assets/20261013-queue-pacing/final/comparison.json"
+    },
+    {
+      "document": "docs/experiments/20261013-queue-pacing.md",
+      "target": "assets/20261013-queue-pacing/source-build-receipt.json"
+    },
+    {
+      "document": "docs/experiments/20261013-queue-pacing.md",
+      "target": "assets/20261013-queue-pacing/build-ready.json"
+    },
+    {
+      "document": "docs/experiments/20261013-queue-pacing.md",
+      "target": "assets/20261013-queue-pacing/archive-inventory.json"
+    },
+    {
+      "document": "docs/experiments/20261013-queue-pacing.md",
+      "target": "20261013-queue-mitigation.md"
+    },
+    {
+      "document": "docs/experiments/20261013-queue-backpressure.md",
+      "target": "../../code/queue-backpressure/build-ready.json"
+    },
+    {
+      "document": "docs/experiments/20261013-queue-backpressure.md",
+      "target": "assets/20261013-queue-backpressure/final-build-log.txt"
+    },
+    {
+      "document": "docs/experiments/20261013-queue-backpressure.md",
+      "target": "../../code/queue-backpressure/README.md"
+    },
+    {
+      "document": "docs/experiments/20261013-queue-backpressure.md",
+      "target": "assets/20261013-queue-backpressure/cases/control100.json"
+    },
+    {
+      "document": "docs/experiments/20261013-queue-backpressure.md",
+      "target": "assets/20261013-queue-backpressure/analysis.json"
+    },
+    {
+      "document": "docs/experiments/20261013-queue-backpressure.md",
+      "target": "assets/20261013-queue-backpressure/results.csv"
+    },
+    {
+      "document": "docs/experiments/20261013-queue-backpressure.md",
+      "target": "assets/20261013-queue-backpressure/export.json"
+    },
+    {
+      "document": "docs/experiments/20261013-queue-backpressure.md",
+      "target": "assets/20261013-queue-backpressure/raw-inventory.json"
+    },
+    {
+      "document": "docs/experiments/20261013-queue-backpressure.md",
+      "target": "20261013-queue-mitigation.md"
+    },
+    {
+      "document": "docs/experiments/20261013-queue-mitigation.md",
+      "target": "20261013-tail-and-queue.md"
+    },
+    {
+      "document": "docs/experiments/20261013-queue-mitigation.md",
+      "target": "20261013-queue-pacing.md"
+    },
+    {
+      "document": "docs/experiments/20261013-queue-mitigation.md",
+      "target": "20261013-queue-backpressure.md"
+    },
+    {
+      "document": "docs/experiments/20261013-queue-mitigation.md",
+      "target": "assets/20261013-queue-mitigation/initial-pacing.json"
+    },
+    {
+      "document": "docs/experiments/20261013-queue-mitigation.md",
+      "target": "assets/20261013-queue-mitigation/initial-backpressure.json"
+    },
+    {
+      "document": "docs/experiments/20261013-queue-mitigation.md",
+      "target": "assets/20261013-queue-pacing/final/posthoc.json"
+    },
+    {
+      "document": "docs/experiments/20261013-queue-mitigation.md",
+      "target": "assets/20261013-queue-mitigation/final-pacing.json"
+    },
+    {
+      "document": "docs/experiments/20261013-queue-mitigation.md",
+      "target": "assets/20261013-queue-mitigation/independent-review.json"
+    },
+    {
+      "document": "docs/experiments/20261013-queue-mitigation.md",
+      "target": "assets/20261013-queue-pacing/archive-inventory.json"
+    },
+    {
+      "document": "docs/experiments/20261013-queue-mitigation.md",
+      "target": "assets/20261013-queue-backpressure/raw-inventory.json"
+    },
+    {
+      "document": "docs/experiments/20261013-queue-mitigation.md",
+      "target": "assets/20261013-queue-mitigation/release.json"
+    },
+    {
+      "document": "docs/experiments/20261013-queue-mitigation.md",
+      "target": "assets/20261013-queue-mitigation/verification.json"
+    }
+  ],
+  "scope": "Artifact parse/link/scope audit; no simulation or independent full replay.",
+  "release_verification": "See release.json for streamed archive members and remote digest/size checks."
+}

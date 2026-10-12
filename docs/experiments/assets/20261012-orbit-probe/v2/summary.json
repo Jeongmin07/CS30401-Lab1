@@ -1,0 +1,767 @@
+{
+  "analyzer_sha256": "581242f57773fcdc7ed58f42d85671cfa5436c4ecdea37ae5764000753c65e33",
+  "passive_helper_sha256": "e0da9eba0f3c038cd52fe23dd6a9cf82b41f07ad66bc5b8fe62c34383ccca76e",
+  "cases": [
+    {
+      "case": "v2-rise140-off",
+      "execution_manifest_sha256": "924f0db7cbea9c8a5dccaad3fa3a3b880db203029d71c9df1207e903668d500c",
+      "inputs": {
+        "bbr_app_rx_node_1585.csv": {
+          "bytes": 29346,
+          "sha256": "feeae2b74942ef31094a42a50b059e1fccb569724a73aaf37029fadae9e96e4e"
+        },
+        "bbr_coverage.csv": {
+          "bytes": 1398438,
+          "sha256": "7785a349bbcd58d321430e5454d4e7193dfc4ed7766e00af84b503fa6bafef9c"
+        },
+        "bbr_drops.csv": {
+          "bytes": 638135,
+          "sha256": "791b6319b52c0943aa4d18792773df8683162a88a2ca8891a5542a6ebe3c73ae"
+        },
+        "bbr_queue_bins.csv": {
+          "bytes": 510862,
+          "sha256": "45d28167c9f42e30d5b51783f80b049f19bceba0123567e1d2d6736e474c5f77"
+        },
+        "bbr_queue_pending.csv": {
+          "bytes": 133,
+          "sha256": "26213eabea454a12b8bedfcfe921d3bd32ef5be132ef1143b4be4fa4fb87ed06"
+        },
+        "bbr_state.csv": {
+          "bytes": 72572,
+          "sha256": "5f4264f72aa2c97deabeb8d9beee8fbefc4f57d18da641f41e504dbe11f46bb4"
+        }
+      },
+      "receiver_total_app_bytes_by_flow": {
+        "0": 390531720
+      },
+      "bb_state_ranges": {
+        "0": {
+          "sample_count": 491,
+          "last_record_time_ns": 139969416956,
+          "max_bw_bps_min": 124536,
+          "max_bw_bps_max": 99018523,
+          "rtprop_ns_min": 87000000,
+          "rtprop_ns_max": 91000000,
+          "last_rate_sample_acked_sacked_total_bytes": 389627820,
+          "last_rate_sample_loss_total_bytes": 16758720
+        }
+      },
+      "queue_conservation_verified": true,
+      "censored_pending_packets": 64,
+      "windows": [
+        {
+          "case": "v2-rise140-off",
+          "window": "whole",
+          "start_s": 0,
+          "end_s": 140,
+          "app_goodput_mbps_by_flow": {
+            "0": 22.316098285714286
+          },
+          "aggregate_app_goodput_mbps": 22.316098285714286,
+          "jain_equal_rate_index": 1.0,
+          "drop_events_by_layer": {
+            "TcDrop": 6696
+          },
+          "served_queue_visit_samples": 4536693,
+          "served_queue_visit_mean_wait_ms": 0.10461399032511128,
+          "served_queue_visit_max_wait_ms": 11.471992,
+          "mode_seconds_sample_hold_by_flow": {
+            "0": {
+              "STARTUP": 1.019383577,
+              "DRAIN": 0.6876097080000001,
+              "ProbeBW": 32.395866316999985,
+              "ProbeRTT": 0.720944389
+            }
+          }
+        },
+        {
+          "case": "v2-rise140-off",
+          "window": "active",
+          "start_s": 105,
+          "end_s": 140,
+          "app_goodput_mbps_by_flow": {
+            "0": 89.26439314285714
+          },
+          "aggregate_app_goodput_mbps": 89.26439314285714,
+          "jain_equal_rate_index": 1.0,
+          "drop_events_by_layer": {
+            "TcDrop": 6696
+          },
+          "served_queue_visit_samples": 4536693,
+          "served_queue_visit_mean_wait_ms": 0.10461399032511128,
+          "served_queue_visit_max_wait_ms": 11.471992,
+          "mode_seconds_sample_hold_by_flow": {
+            "0": {
+              "STARTUP": 1.019383577,
+              "DRAIN": 0.6876097080000001,
+              "ProbeBW": 32.395866316999985,
+              "ProbeRTT": 0.720944389
+            }
+          }
+        },
+        {
+          "case": "v2-rise140-off",
+          "window": "pre",
+          "start_s": 116.6,
+          "end_s": 121.6,
+          "app_goodput_mbps_by_flow": {
+            "0": 96.173856
+          },
+          "aggregate_app_goodput_mbps": 96.173856,
+          "jain_equal_rate_index": 1.0,
+          "drop_events_by_layer": {
+            "TcDrop": 644
+          },
+          "served_queue_visit_samples": 683067,
+          "served_queue_visit_mean_wait_ms": 0.09178524097636104,
+          "served_queue_visit_max_wait_ms": 11.471982,
+          "mode_seconds_sample_hold_by_flow": {
+            "0": {
+              "STARTUP": 0.0,
+              "DRAIN": 0.0,
+              "ProbeBW": 4.999999999999998,
+              "ProbeRTT": 0.0
+            }
+          }
+        },
+        {
+          "case": "v2-rise140-off",
+          "window": "post",
+          "start_s": 121.6,
+          "end_s": 126.6,
+          "app_goodput_mbps_by_flow": {
+            "0": 93.80688
+          },
+          "aggregate_app_goodput_mbps": 93.80688,
+          "jain_equal_rate_index": 1.0,
+          "drop_events_by_layer": {
+            "TcDrop": 942
+          },
+          "served_queue_visit_samples": 683418,
+          "served_queue_visit_mean_wait_ms": 0.12906661561738203,
+          "served_queue_visit_max_wait_ms": 11.471992,
+          "mode_seconds_sample_hold_by_flow": {
+            "0": {
+              "STARTUP": 0.0,
+              "DRAIN": 0.0,
+              "ProbeBW": 5.000000000000001,
+              "ProbeRTT": 0.0
+            }
+          }
+        },
+        {
+          "case": "v2-rise140-off",
+          "window": "late",
+          "start_s": 131.6,
+          "end_s": 136.6,
+          "app_goodput_mbps_by_flow": {
+            "0": 85.875744
+          },
+          "aggregate_app_goodput_mbps": 85.875744,
+          "jain_equal_rate_index": 1.0,
+          "drop_events_by_layer": {
+            "TcDrop": 690
+          },
+          "served_queue_visit_samples": 632068,
+          "served_queue_visit_mean_wait_ms": 0.10270058045495105,
+          "served_queue_visit_max_wait_ms": 11.471918,
+          "mode_seconds_sample_hold_by_flow": {
+            "0": {
+              "STARTUP": 0.0,
+              "DRAIN": 0.0,
+              "ProbeBW": 4.633814671,
+              "ProbeRTT": 0.366185329
+            }
+          }
+        }
+      ],
+      "wall_seconds": 50.51455155499934,
+      "raw_logs_bytes": 9965007,
+      "exact_probe_intervals": [
+        {
+          "start_ns": 115087600125,
+          "enter": {
+            "time_ns": "115087600125",
+            "flow_id": "0",
+            "event": "PROBE_ENTER",
+            "policy_enabled": "0",
+            "hint_event_ns": "-1",
+            "hint_ready_ns": "-1",
+            "old_stamp_ns": "-1",
+            "rtprop_ns": "89000000",
+            "last_rtt_ns": "89000000",
+            "srtt_ns": "94513508",
+            "bbr_state": "3",
+            "cwnd_bytes": "1584240",
+            "inflight_bytes": "1023960",
+            "min_pipe_cwnd_bytes": "5520",
+            "min_rtt_stamp_ns": "115087600125",
+            "min_rtt_expired": "1",
+            "probe_done_ns": "0",
+            "round_start": "0",
+            "probe_round_done": "0",
+            "min_rtt_filter_ns": "10000000000",
+            "probe_duration_ns": "200000000",
+            "round_count": "110",
+            "last_probe_complete_ns": "-1",
+            "cong_state": "3"
+          },
+          "drained_ns": 115175788249,
+          "drain": {
+            "time_ns": "115175788249",
+            "flow_id": "0",
+            "event": "PROBE_DRAINED",
+            "policy_enabled": "0",
+            "hint_event_ns": "-1",
+            "hint_ready_ns": "-1",
+            "old_stamp_ns": "-1",
+            "rtprop_ns": "88000000",
+            "last_rtt_ns": "88000000",
+            "srtt_ns": "88710928",
+            "bbr_state": "3",
+            "cwnd_bytes": "5520",
+            "inflight_bytes": "5520",
+            "min_pipe_cwnd_bytes": "5520",
+            "min_rtt_stamp_ns": "115175788249",
+            "min_rtt_expired": "0",
+            "probe_done_ns": "115375788249",
+            "round_start": "0",
+            "probe_round_done": "0",
+            "min_rtt_filter_ns": "10000000000",
+            "probe_duration_ns": "200000000",
+            "round_count": "111",
+            "last_probe_complete_ns": "-1",
+            "cong_state": "0"
+          },
+          "end_ns": 115442359185,
+          "residence_s": 0.35475906,
+          "low_inflight_s": 0.266570936,
+          "accepted_samples_after_drain": 2,
+          "minimum_accepted_rtprop_after_drain_ns": 88000000,
+          "completion": {
+            "time_ns": "115442359185",
+            "flow_id": "0",
+            "event": "PROBE_COMPLETE",
+            "policy_enabled": "0",
+            "hint_event_ns": "-1",
+            "hint_ready_ns": "-1",
+            "old_stamp_ns": "-1",
+            "rtprop_ns": "88000000",
+            "last_rtt_ns": "89000000",
+            "srtt_ns": "88703834",
+            "bbr_state": "3",
+            "cwnd_bytes": "5520",
+            "inflight_bytes": "2760",
+            "min_pipe_cwnd_bytes": "5520",
+            "min_rtt_stamp_ns": "115442359185",
+            "min_rtt_expired": "0",
+            "probe_done_ns": "115375788249",
+            "round_start": "1",
+            "probe_round_done": "1",
+            "min_rtt_filter_ns": "10000000000",
+            "probe_duration_ns": "200000000",
+            "round_count": "114",
+            "last_probe_complete_ns": "115442359185",
+            "cong_state": "0"
+          },
+          "censored": false
+        },
+        {
+          "start_ns": 131642990084,
+          "enter": {
+            "time_ns": "131642990084",
+            "flow_id": "0",
+            "event": "PROBE_ENTER",
+            "policy_enabled": "0",
+            "hint_event_ns": "-1",
+            "hint_ready_ns": "-1",
+            "old_stamp_ns": "-1",
+            "rtprop_ns": "91000000",
+            "last_rtt_ns": "91000000",
+            "srtt_ns": "91592025",
+            "bbr_state": "3",
+            "cwnd_bytes": "2126406",
+            "inflight_bytes": "1091580",
+            "min_pipe_cwnd_bytes": "5520",
+            "min_rtt_stamp_ns": "131642990084",
+            "min_rtt_expired": "1",
+            "probe_done_ns": "0",
+            "round_start": "0",
+            "probe_round_done": "1",
+            "min_rtt_filter_ns": "10000000000",
+            "probe_duration_ns": "200000000",
+            "round_count": "289",
+            "last_probe_complete_ns": "115442359185",
+            "cong_state": "0"
+          },
+          "drained_ns": 131734199804,
+          "drain": {
+            "time_ns": "131734199804",
+            "flow_id": "0",
+            "event": "PROBE_DRAINED",
+            "policy_enabled": "0",
+            "hint_event_ns": "-1",
+            "hint_ready_ns": "-1",
+            "old_stamp_ns": "-1",
+            "rtprop_ns": "91000000",
+            "last_rtt_ns": "92000000",
+            "srtt_ns": "91643119",
+            "bbr_state": "3",
+            "cwnd_bytes": "5520",
+            "inflight_bytes": "4140",
+            "min_pipe_cwnd_bytes": "5520",
+            "min_rtt_stamp_ns": "131733968304",
+            "min_rtt_expired": "0",
+            "probe_done_ns": "131934199804",
+            "round_start": "0",
+            "probe_round_done": "0",
+            "min_rtt_filter_ns": "10000000000",
+            "probe_duration_ns": "200000000",
+            "round_count": "290",
+            "last_probe_complete_ns": "115442359185",
+            "cong_state": "0"
+          },
+          "end_ns": 132009175413,
+          "residence_s": 0.366185329,
+          "low_inflight_s": 0.274975609,
+          "accepted_samples_after_drain": 1,
+          "minimum_accepted_rtprop_after_drain_ns": 91000000,
+          "completion": {
+            "time_ns": "132009175413",
+            "flow_id": "0",
+            "event": "PROBE_COMPLETE",
+            "policy_enabled": "0",
+            "hint_event_ns": "-1",
+            "hint_ready_ns": "-1",
+            "old_stamp_ns": "-1",
+            "rtprop_ns": "91000000",
+            "last_rtt_ns": "92000000",
+            "srtt_ns": "98398272",
+            "bbr_state": "3",
+            "cwnd_bytes": "5520",
+            "inflight_bytes": "2760",
+            "min_pipe_cwnd_bytes": "5520",
+            "min_rtt_stamp_ns": "132009175413",
+            "min_rtt_expired": "0",
+            "probe_done_ns": "131934199804",
+            "round_start": "1",
+            "probe_round_done": "1",
+            "min_rtt_filter_ns": "10000000000",
+            "probe_duration_ns": "200000000",
+            "round_count": "293",
+            "last_probe_complete_ns": "132009175413",
+            "cong_state": "0"
+          },
+          "censored": false
+        }
+      ],
+      "policy_decisions": [],
+      "probe_cwnd_cap_bytes": 5520,
+      "probe_sample_rows": 8,
+      "measured_sample_installation_verified": true,
+      "orbit_trace": {
+        "sha256": "b3355d24ff5777469ae7880f3d3502d753f85ca9444f856b7df2531aaed47f11",
+        "rows": 270
+      }
+    },
+    {
+      "case": "v2-rise140-on",
+      "execution_manifest_sha256": "211828f8143e4dfbbdf646b4d60abe1182ce206ae37720a9dd9b058500eff07d",
+      "inputs": {
+        "bbr_app_rx_node_1585.csv": {
+          "bytes": 29345,
+          "sha256": "c2b0f8100d9a646c44d52dff125b9002bbb049ee5ca444dcf1376e5040cde86d"
+        },
+        "bbr_coverage.csv": {
+          "bytes": 1398438,
+          "sha256": "7785a349bbcd58d321430e5454d4e7193dfc4ed7766e00af84b503fa6bafef9c"
+        },
+        "bbr_drops.csv": {
+          "bytes": 651463,
+          "sha256": "a1e6bf423c2492b32fbf6b14de979874c8cd60dd779681ba4294489734459fe3"
+        },
+        "bbr_queue_bins.csv": {
+          "bytes": 510727,
+          "sha256": "3d100d6b8d4c07401bbbd1d6c4e67c579e4c5dd4dda11a78d27404ffe5fc6044"
+        },
+        "bbr_queue_pending.csv": {
+          "bytes": 90,
+          "sha256": "bd912a74a0dee1b032ecbeac1820c6c6d343cbec86b2fdcadf1b67eb243ce335"
+        },
+        "bbr_state.csv": {
+          "bytes": 72126,
+          "sha256": "5cac8f2026dcd02bd3bd9838e68265ee84f98b9f0bbf2964452cc4e6ac999a17"
+        }
+      },
+      "receiver_total_app_bytes_by_flow": {
+        "0": 390854640
+      },
+      "bb_state_ranges": {
+        "0": {
+          "sample_count": 488,
+          "last_record_time_ns": 139900113969,
+          "max_bw_bps_min": 124536,
+          "max_bw_bps_max": 96434431,
+          "rtprop_ns_min": 87000000,
+          "rtprop_ns_max": 100000000,
+          "last_rate_sample_acked_sacked_total_bytes": 389124120,
+          "last_rate_sample_loss_total_bytes": 17134080
+        }
+      },
+      "queue_conservation_verified": true,
+      "censored_pending_packets": 0,
+      "windows": [
+        {
+          "case": "v2-rise140-on",
+          "window": "whole",
+          "start_s": 0,
+          "end_s": 140,
+          "app_goodput_mbps_by_flow": {
+            "0": 22.334550857142858
+          },
+          "aggregate_app_goodput_mbps": 22.334550857142858,
+          "jain_equal_rate_index": 1.0,
+          "drop_events_by_layer": {
+            "TcDrop": 6832
+          },
+          "served_queue_visit_samples": 4542234,
+          "served_queue_visit_mean_wait_ms": 0.10246499610235844,
+          "served_queue_visit_max_wait_ms": 11.471982,
+          "mode_seconds_sample_hold_by_flow": {
+            "0": {
+              "STARTUP": 1.019383577,
+              "DRAIN": 0.6876097080000001,
+              "ProbeBW": 32.395305505999985,
+              "ProbeRTT": 0.7215052000000001
+            }
+          }
+        },
+        {
+          "case": "v2-rise140-on",
+          "window": "active",
+          "start_s": 105,
+          "end_s": 140,
+          "app_goodput_mbps_by_flow": {
+            "0": 89.33820342857143
+          },
+          "aggregate_app_goodput_mbps": 89.33820342857143,
+          "jain_equal_rate_index": 1.0,
+          "drop_events_by_layer": {
+            "TcDrop": 6832
+          },
+          "served_queue_visit_samples": 4542234,
+          "served_queue_visit_mean_wait_ms": 0.10246499610235844,
+          "served_queue_visit_max_wait_ms": 11.471982,
+          "mode_seconds_sample_hold_by_flow": {
+            "0": {
+              "STARTUP": 1.019383577,
+              "DRAIN": 0.6876097080000001,
+              "ProbeBW": 32.395305505999985,
+              "ProbeRTT": 0.7215052000000001
+            }
+          }
+        },
+        {
+          "case": "v2-rise140-on",
+          "window": "pre",
+          "start_s": 116.6,
+          "end_s": 121.6,
+          "app_goodput_mbps_by_flow": {
+            "0": 96.173856
+          },
+          "aggregate_app_goodput_mbps": 96.173856,
+          "jain_equal_rate_index": 1.0,
+          "drop_events_by_layer": {
+            "TcDrop": 644
+          },
+          "served_queue_visit_samples": 683067,
+          "served_queue_visit_mean_wait_ms": 0.09178524097636104,
+          "served_queue_visit_max_wait_ms": 11.471982,
+          "mode_seconds_sample_hold_by_flow": {
+            "0": {
+              "STARTUP": 0.0,
+              "DRAIN": 0.0,
+              "ProbeBW": 4.999999999999998,
+              "ProbeRTT": 0.0
+            }
+          }
+        },
+        {
+          "case": "v2-rise140-on",
+          "window": "post",
+          "start_s": 121.6,
+          "end_s": 126.6,
+          "app_goodput_mbps_by_flow": {
+            "0": 87.242496
+          },
+          "aggregate_app_goodput_mbps": 87.242496,
+          "jain_equal_rate_index": 1.0,
+          "drop_events_by_layer": {
+            "TcDrop": 870
+          },
+          "served_queue_visit_samples": 632408,
+          "served_queue_visit_mean_wait_ms": 0.10491644262564674,
+          "served_queue_visit_max_wait_ms": 11.471964,
+          "mode_seconds_sample_hold_by_flow": {
+            "0": {
+              "STARTUP": 0.0,
+              "DRAIN": 0.0,
+              "ProbeBW": 4.63325386,
+              "ProbeRTT": 0.36674614
+            }
+          }
+        },
+        {
+          "case": "v2-rise140-on",
+          "window": "late",
+          "start_s": 131.6,
+          "end_s": 136.6,
+          "app_goodput_mbps_by_flow": {
+            "0": 94.409664
+          },
+          "aggregate_app_goodput_mbps": 94.409664,
+          "jain_equal_rate_index": 1.0,
+          "drop_events_by_layer": {
+            "TcDrop": 697
+          },
+          "served_queue_visit_samples": 681510,
+          "served_queue_visit_mean_wait_ms": 0.09533129321066457,
+          "served_queue_visit_max_wait_ms": 11.471844,
+          "mode_seconds_sample_hold_by_flow": {
+            "0": {
+              "STARTUP": 0.0,
+              "DRAIN": 0.0,
+              "ProbeBW": 4.999999999999999,
+              "ProbeRTT": 0.0
+            }
+          }
+        }
+      ],
+      "wall_seconds": 50.93774345299971,
+      "raw_logs_bytes": 10008120,
+      "exact_probe_intervals": [
+        {
+          "start_ns": 115087600125,
+          "enter": {
+            "time_ns": "115087600125",
+            "flow_id": "0",
+            "event": "PROBE_ENTER",
+            "policy_enabled": "1",
+            "hint_event_ns": "-1",
+            "hint_ready_ns": "-1",
+            "old_stamp_ns": "-1",
+            "rtprop_ns": "89000000",
+            "last_rtt_ns": "89000000",
+            "srtt_ns": "94513508",
+            "bbr_state": "3",
+            "cwnd_bytes": "1584240",
+            "inflight_bytes": "1023960",
+            "min_pipe_cwnd_bytes": "5520",
+            "min_rtt_stamp_ns": "115087600125",
+            "min_rtt_expired": "1",
+            "probe_done_ns": "0",
+            "round_start": "0",
+            "probe_round_done": "0",
+            "min_rtt_filter_ns": "10000000000",
+            "probe_duration_ns": "200000000",
+            "round_count": "110",
+            "last_probe_complete_ns": "-1",
+            "cong_state": "3"
+          },
+          "drained_ns": 115175788249,
+          "drain": {
+            "time_ns": "115175788249",
+            "flow_id": "0",
+            "event": "PROBE_DRAINED",
+            "policy_enabled": "1",
+            "hint_event_ns": "-1",
+            "hint_ready_ns": "-1",
+            "old_stamp_ns": "-1",
+            "rtprop_ns": "88000000",
+            "last_rtt_ns": "88000000",
+            "srtt_ns": "88710928",
+            "bbr_state": "3",
+            "cwnd_bytes": "5520",
+            "inflight_bytes": "5520",
+            "min_pipe_cwnd_bytes": "5520",
+            "min_rtt_stamp_ns": "115175788249",
+            "min_rtt_expired": "0",
+            "probe_done_ns": "115375788249",
+            "round_start": "0",
+            "probe_round_done": "0",
+            "min_rtt_filter_ns": "10000000000",
+            "probe_duration_ns": "200000000",
+            "round_count": "111",
+            "last_probe_complete_ns": "-1",
+            "cong_state": "0"
+          },
+          "end_ns": 115442359185,
+          "residence_s": 0.35475906,
+          "low_inflight_s": 0.266570936,
+          "accepted_samples_after_drain": 2,
+          "minimum_accepted_rtprop_after_drain_ns": 88000000,
+          "completion": {
+            "time_ns": "115442359185",
+            "flow_id": "0",
+            "event": "PROBE_COMPLETE",
+            "policy_enabled": "1",
+            "hint_event_ns": "-1",
+            "hint_ready_ns": "-1",
+            "old_stamp_ns": "-1",
+            "rtprop_ns": "88000000",
+            "last_rtt_ns": "89000000",
+            "srtt_ns": "88703834",
+            "bbr_state": "3",
+            "cwnd_bytes": "5520",
+            "inflight_bytes": "2760",
+            "min_pipe_cwnd_bytes": "5520",
+            "min_rtt_stamp_ns": "115442359185",
+            "min_rtt_expired": "0",
+            "probe_done_ns": "115375788249",
+            "round_start": "1",
+            "probe_round_done": "1",
+            "min_rtt_filter_ns": "10000000000",
+            "probe_duration_ns": "200000000",
+            "round_count": "114",
+            "last_probe_complete_ns": "115442359185",
+            "cong_state": "0"
+          },
+          "censored": false
+        },
+        {
+          "start_ns": 121781230119,
+          "enter": {
+            "time_ns": "121781230119",
+            "flow_id": "0",
+            "event": "PROBE_ENTER",
+            "policy_enabled": "1",
+            "hint_event_ns": "121600000000",
+            "hint_ready_ns": "121781136000",
+            "old_stamp_ns": "121642864104",
+            "rtprop_ns": "100000000",
+            "last_rtt_ns": "100000000",
+            "srtt_ns": "99500844",
+            "bbr_state": "3",
+            "cwnd_bytes": "1342543",
+            "inflight_bytes": "1317900",
+            "min_pipe_cwnd_bytes": "5520",
+            "min_rtt_stamp_ns": "121781230119",
+            "min_rtt_expired": "1",
+            "probe_done_ns": "0",
+            "round_start": "0",
+            "probe_round_done": "1",
+            "min_rtt_filter_ns": "10000000000",
+            "probe_duration_ns": "200000000",
+            "round_count": "184",
+            "last_probe_complete_ns": "115442359185",
+            "cong_state": "0"
+          },
+          "drained_ns": 121872554641,
+          "drain": {
+            "time_ns": "121872554641",
+            "flow_id": "0",
+            "event": "PROBE_DRAINED",
+            "policy_enabled": "1",
+            "hint_event_ns": "121600000000",
+            "hint_ready_ns": "121781136000",
+            "old_stamp_ns": "121642864104",
+            "rtprop_ns": "100000000",
+            "last_rtt_ns": "103000000",
+            "srtt_ns": "102785604",
+            "bbr_state": "3",
+            "cwnd_bytes": "5520",
+            "inflight_bytes": "5520",
+            "min_pipe_cwnd_bytes": "5520",
+            "min_rtt_stamp_ns": "121783983377",
+            "min_rtt_expired": "0",
+            "probe_done_ns": "122072554641",
+            "round_start": "0",
+            "probe_round_done": "0",
+            "min_rtt_filter_ns": "10000000000",
+            "probe_duration_ns": "200000000",
+            "round_count": "185",
+            "last_probe_complete_ns": "115442359185",
+            "cong_state": "3"
+          },
+          "end_ns": 122147976259,
+          "residence_s": 0.36674614,
+          "low_inflight_s": 0.275421618,
+          "accepted_samples_after_drain": 10,
+          "minimum_accepted_rtprop_after_drain_ns": 91000000,
+          "completion": {
+            "time_ns": "122147976259",
+            "flow_id": "0",
+            "event": "PROBE_COMPLETE",
+            "policy_enabled": "1",
+            "hint_event_ns": "121600000000",
+            "hint_ready_ns": "121781136000",
+            "old_stamp_ns": "121642864104",
+            "rtprop_ns": "91000000",
+            "last_rtt_ns": "91000000",
+            "srtt_ns": "94603052",
+            "bbr_state": "3",
+            "cwnd_bytes": "5520",
+            "inflight_bytes": "4140",
+            "min_pipe_cwnd_bytes": "5520",
+            "min_rtt_stamp_ns": "122147976259",
+            "min_rtt_expired": "0",
+            "probe_done_ns": "122072554641",
+            "round_start": "1",
+            "probe_round_done": "1",
+            "min_rtt_filter_ns": "10000000000",
+            "probe_duration_ns": "200000000",
+            "round_count": "188",
+            "last_probe_complete_ns": "122147976259",
+            "cong_state": "3"
+          },
+          "censored": false
+        }
+      ],
+      "policy_decisions": [
+        {
+          "time_ns": "121781230119",
+          "flow_id": "0",
+          "event": "HINT_INVALIDATE",
+          "policy_enabled": "1",
+          "hint_event_ns": "121600000000",
+          "hint_ready_ns": "121781136000",
+          "old_stamp_ns": "121642864104",
+          "rtprop_ns": "88000000",
+          "last_rtt_ns": "100000000",
+          "srtt_ns": "99500844",
+          "bbr_state": "2",
+          "cwnd_bytes": "1342543",
+          "inflight_bytes": "1317900",
+          "min_pipe_cwnd_bytes": "5520",
+          "min_rtt_stamp_ns": "111781230118",
+          "min_rtt_expired": "0",
+          "probe_done_ns": "115375788249",
+          "round_start": "0",
+          "probe_round_done": "1",
+          "min_rtt_filter_ns": "10000000000",
+          "probe_duration_ns": "200000000",
+          "round_count": "184",
+          "last_probe_complete_ns": "115442359185",
+          "cong_state": "0"
+        }
+      ],
+      "probe_cwnd_cap_bytes": 5520,
+      "probe_sample_rows": 8,
+      "measured_sample_installation_verified": true,
+      "orbit_trace": {
+        "sha256": "3e538bdbce05899a154f0ab4af6c9d9b95e6db7f0dcf77837505c6fde8386126",
+        "rows": 170
+      }
+    }
+  ],
+  "limits": [
+    "TcpBbr is the provided BBRv1 family, not modern BBRv3.",
+    "Operator hints are ideal geometry information; two-direction propagation RTT does not prove queue clearance.",
+    "RTprop installations are accepted TCP lastRtt samples, which may be quantized and cache the latest RTT observation; no geometry value is installed.",
+    "Per served device-queue visit includes zero waits and both data/ACK directions, not end-to-end queue latency.",
+    "Drop layers are hook-event counts, not distinct physical packet losses.",
+    "Sparse bbr_state rows are sample-hold traces; exact ProbeRTT lifecycle is separately instrumented.",
+    "Early filter invalidation is the policy; filter length remains ten seconds and the original measurement conditions are retained.",
+    "No random repetitions, competition, predictor error study or deployment validation."
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "base_patch_sha256": "531bf802984af821afd928fb3932912aca383fcdec5771f30f78d75a806d5591",
+  "final_patch_sha256": "5b847bbafe8d950072b5bc34e0420da8f7f1c860bc7fcc94c3c3ab8b37bb4d29",
+  "installer_sha256": "e4816d571ef4b4f1a67bd636472048533b0351ca20a86db5ac1d2925829ebe3a",
+  "ns3_head": "99bc6f733274475b7a6e804128651e17ee2a2536",
+  "tail_source_files": {
+    "src/internet/model/tcp-socket-base.cc": "baed29017f11b6f984adc3307fbe9c4d1e63d07a40114a9f42c117293a7461cb",
+    "src/internet/model/tcp-socket-base.h": "2303f2a83affaf95439a547d416bf8a4153cf442f4a7c7afed303723eb182e12"
+  },
+  "pre_simulation_correction": "Require ordinary allowance smaller than actual unsent tail; no simulations used the development build"
+}

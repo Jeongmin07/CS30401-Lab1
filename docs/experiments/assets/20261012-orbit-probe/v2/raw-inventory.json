@@ -1,0 +1,171 @@
+{
+  "archive": "orbit-probe-v2-20261012.tar.gz",
+  "bytes": 5617613,
+  "sha256": "22a3a6cc4a56f39f5674676eae761c22d59268c9629488931c1c0ba4aa028afd",
+  "file_count": 40,
+  "uncompressed_bytes": 20827453,
+  "every_decompressed_member_verified": true,
+  "members": {
+    "v2-rise140-off/config_ns3.properties": {
+      "bytes": 612,
+      "sha256": "d21adce9300e18c904323482e5c46df145840f692c70f353e5922a437734aae7"
+    },
+    "v2-rise140-off/console.txt": {
+      "bytes": 5949,
+      "sha256": "5be606798fed581d6f0083b5cb9dcf0294a6714e0fa8e6e8fc3e49b3a56b73c2"
+    },
+    "v2-rise140-off/forecast.txt": {
+      "bytes": 26,
+      "sha256": "2019783036ae5ac9073684621c730603ba05a88f2ca0e68bfa04a194d0c897c8"
+    },
+    "v2-rise140-off/logs_ns3/bbr_app_rx_node_1585.csv": {
+      "bytes": 29346,
+      "sha256": "feeae2b74942ef31094a42a50b059e1fccb569724a73aaf37029fadae9e96e4e"
+    },
+    "v2-rise140-off/logs_ns3/bbr_coverage.csv": {
+      "bytes": 1398438,
+      "sha256": "7785a349bbcd58d321430e5454d4e7193dfc4ed7766e00af84b503fa6bafef9c"
+    },
+    "v2-rise140-off/logs_ns3/bbr_drops.csv": {
+      "bytes": 638135,
+      "sha256": "791b6319b52c0943aa4d18792773df8683162a88a2ca8891a5542a6ebe3c73ae"
+    },
+    "v2-rise140-off/logs_ns3/bbr_queue_bins.csv": {
+      "bytes": 510862,
+      "sha256": "45d28167c9f42e30d5b51783f80b049f19bceba0123567e1d2d6736e474c5f77"
+    },
+    "v2-rise140-off/logs_ns3/bbr_queue_pending.csv": {
+      "bytes": 133,
+      "sha256": "26213eabea454a12b8bedfcfe921d3bd32ef5be132ef1143b4be4fa4fb87ed06"
+    },
+    "v2-rise140-off/logs_ns3/bbr_state.csv": {
+      "bytes": 72572,
+      "sha256": "5f4264f72aa2c97deabeb8d9beee8fbefc4f57d18da641f41e504dbe11f46bb4"
+    },
+    "v2-rise140-off/logs_ns3/finished.txt": {
+      "bytes": 4,
+      "sha256": "927580bf287560d4a26a5d6e129f91ffa9cb63031b1a8c772be6ec584e65e82b"
+    },
+    "v2-rise140-off/logs_ns3/orbit_probe.csv": {
+      "bytes": 38899,
+      "sha256": "b3355d24ff5777469ae7880f3d3502d753f85ca9444f856b7df2531aaed47f11"
+    },
+    "v2-rise140-off/logs_ns3/tcp_flow_0_cwnd.csv": {
+      "bytes": 1560172,
+      "sha256": "6d52f04e1995e962b7a8bffce30034c120cb4fe7f0d023c0ec6f5ebbde1fd7fd"
+    },
+    "v2-rise140-off/logs_ns3/tcp_flow_0_progress.csv": {
+      "bytes": 2909487,
+      "sha256": "084d3b5422587b5a3827d18c9ad703e4674153d95fb5ec4abb62121c7849d429"
+    },
+    "v2-rise140-off/logs_ns3/tcp_flow_0_rtt.csv": {
+      "bytes": 2805071,
+      "sha256": "7937717f095b16ffe27a83c57af30fd1cc61157f715d18decb69dcfc71ce3e9b"
+    },
+    "v2-rise140-off/logs_ns3/tcp_flows.csv": {
+      "bytes": 85,
+      "sha256": "1dcf41fc20e41991dba178ea87b92616dbabf58b714666e90e842ed508753aa4"
+    },
+    "v2-rise140-off/logs_ns3/tcp_flows.txt": {
+      "bytes": 336,
+      "sha256": "adddd3500d7e0472f04b9b383a1abf3ee473cafb45902809d301bdd76f89406b"
+    },
+    "v2-rise140-off/logs_ns3/timing_results.csv": {
+      "bytes": 558,
+      "sha256": "d3b37ce6e8d2425fb12bd8f6af696fc6d9221713e2bf99da78270f7cf399f81f"
+    },
+    "v2-rise140-off/logs_ns3/timing_results.txt": {
+      "bytes": 909,
+      "sha256": "4f907e73617e55ccd0d0e9a9aeee55aabfccd27b846e7e1113a4812f36c578cc"
+    },
+    "v2-rise140-off/manifest.json": {
+      "bytes": 420673,
+      "sha256": "924f0db7cbea9c8a5dccaad3fa3a3b880db203029d71c9df1207e903668d500c"
+    },
+    "v2-rise140-off/schedule.csv": {
+      "bytes": 40,
+      "sha256": "9442a582acbac4df93d6ad13cfeb49305a1bff4c272c7393fd4071c770c43d86"
+    },
+    "v2-rise140-on/config_ns3.properties": {
+      "bytes": 612,
+      "sha256": "d21adce9300e18c904323482e5c46df145840f692c70f353e5922a437734aae7"
+    },
+    "v2-rise140-on/console.txt": {
+      "bytes": 5883,
+      "sha256": "fdad4c1acf5522be717e0df2f6a3663fbfd628c904481936b1aedc31984b2956"
+    },
+    "v2-rise140-on/forecast.txt": {
+      "bytes": 26,
+      "sha256": "2019783036ae5ac9073684621c730603ba05a88f2ca0e68bfa04a194d0c897c8"
+    },
+    "v2-rise140-on/logs_ns3/bbr_app_rx_node_1585.csv": {
+      "bytes": 29345,
+      "sha256": "c2b0f8100d9a646c44d52dff125b9002bbb049ee5ca444dcf1376e5040cde86d"
+    },
+    "v2-rise140-on/logs_ns3/bbr_coverage.csv": {
+      "bytes": 1398438,
+      "sha256": "7785a349bbcd58d321430e5454d4e7193dfc4ed7766e00af84b503fa6bafef9c"
+    },
+    "v2-rise140-on/logs_ns3/bbr_drops.csv": {
+      "bytes": 651463,
+      "sha256": "a1e6bf423c2492b32fbf6b14de979874c8cd60dd779681ba4294489734459fe3"
+    },
+    "v2-rise140-on/logs_ns3/bbr_queue_bins.csv": {
+      "bytes": 510727,
+      "sha256": "3d100d6b8d4c07401bbbd1d6c4e67c579e4c5dd4dda11a78d27404ffe5fc6044"
+    },
+    "v2-rise140-on/logs_ns3/bbr_queue_pending.csv": {
+      "bytes": 90,
+      "sha256": "bd912a74a0dee1b032ecbeac1820c6c6d343cbec86b2fdcadf1b67eb243ce335"
+    },
+    "v2-rise140-on/logs_ns3/bbr_state.csv": {
+      "bytes": 72126,
+      "sha256": "5cac8f2026dcd02bd3bd9838e68265ee84f98b9f0bbf2964452cc4e6ac999a17"
+    },
+    "v2-rise140-on/logs_ns3/finished.txt": {
+      "bytes": 4,
+      "sha256": "927580bf287560d4a26a5d6e129f91ffa9cb63031b1a8c772be6ec584e65e82b"
+    },
+    "v2-rise140-on/logs_ns3/orbit_probe.csv": {
+      "bytes": 24893,
+      "sha256": "3e538bdbce05899a154f0ab4af6c9d9b95e6db7f0dcf77837505c6fde8386126"
+    },
+    "v2-rise140-on/logs_ns3/tcp_flow_0_cwnd.csv": {
+      "bytes": 1602237,
+      "sha256": "ac54e3efdb3de4141dc873183e2fa36b078239a5fb8df0388ae758505f047ff5"
+    },
+    "v2-rise140-on/logs_ns3/tcp_flow_0_progress.csv": {
+      "bytes": 2910662,
+      "sha256": "4a4aab862602a1842a1e5ed15616b6dcb92793e390f9137cf314f2fe181f19ad"
+    },
+    "v2-rise140-on/logs_ns3/tcp_flow_0_rtt.csv": {
+      "bytes": 2806244,
+      "sha256": "9f1a9c346d930be1e931e952be2517e9471e42ae99290372724da6d48ca1ec9f"
+    },
+    "v2-rise140-on/logs_ns3/tcp_flows.csv": {
+      "bytes": 85,
+      "sha256": "6c457901eda9623d62bbc0a62c7eb4d9c74de476c2468b5820e54c6deaf1523c"
+    },
+    "v2-rise140-on/logs_ns3/tcp_flows.txt": {
+      "bytes": 336,
+      "sha256": "2e77eb76179f2ede5bcd608c16da85dc4b21a0025207d6c40d3259aa854024ee"
+    },
+    "v2-rise140-on/logs_ns3/timing_results.csv": {
+      "bytes": 561,
+      "sha256": "b199eff3f4215bd6b094b4c3d172f6a250f4a9c822aabeb5a43b6a27635bdb9f"
+    },
+    "v2-rise140-on/logs_ns3/timing_results.txt": {
+      "bytes": 909,
+      "sha256": "f75d3603b10c0582aba15118b359b52605ba9932fe8ffba8320425e40ae1c0f9"
+    },
+    "v2-rise140-on/manifest.json": {
+      "bytes": 420465,
+      "sha256": "211828f8143e4dfbbdf646b4d60abe1182ce206ae37720a9dd9b058500eff07d"
+    },
+    "v2-rise140-on/schedule.csv": {
+      "bytes": 40,
+      "sha256": "9442a582acbac4df93d6ad13cfeb49305a1bff4c272c7393fd4071c770c43d86"
+    }
+  },
+  "scope": "Completed text logs/settings/manifests only; no ns-3 tree, binaries or generated state. Archive bytes identify this artifact; byte-identical reruns or deterministic gzip are not claimed."
+}

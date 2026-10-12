@@ -1,0 +1,767 @@
+{
+  "schema_version": 1,
+  "run": "/tmp/predict-loss/leo10-base",
+  "duration_ns": 200000000000,
+  "actual_config": {
+    "simulation_end_time_ns": "200000000000",
+    "simulation_seed": "123456789",
+    "satellite_network_dir": "\"../../../home/ubuntu/lab/data/seoul_london/state\"",
+    "satellite_network_routes_dir": "\"../../../home/ubuntu/lab/data/seoul_london/state/dynamic_state_100ms_for_200s\"",
+    "dynamic_state_update_interval_ns": "100000000",
+    "isl_data_rate_megabit_per_s": "10",
+    "gsl_data_rate_megabit_per_s": "10",
+    "isl_max_queue_size_pkts": "100",
+    "gsl_max_queue_size_pkts": "100",
+    "enable_isl_utilization_tracking": "false",
+    "tcp_socket_type": "TcpCubic",
+    "tcp_enable_pacing": "false",
+    "enable_tcp_flow_scheduler": "true",
+    "tcp_flow_schedule_filename": "\"schedule.csv\"",
+    "tcp_flow_enable_logging_for_tcp_flow_ids": "set(0)"
+  },
+  "original_manifest": {
+    "case": "leo10-base",
+    "definition": {
+      "kind": "leo",
+      "mode": "base",
+      "rate": 10,
+      "queue": 100,
+      "duration": 200
+    },
+    "command": [
+      "/home/ubuntu/ns-3.48/build/scratch/main_satnet/ns3.48-main_satnet",
+      "--run_dir=/tmp/predict-loss/leo10-base"
+    ],
+    "status": "success",
+    "repo_commit": "10a09ba35af2ce4fdaffdd77153408f24d614e38",
+    "repo_dirty": true,
+    "runner_sha256": "4adecbf986fda81326f17fcd286b6262d84a24470fbd593f229ebb28cfce8acc",
+    "patch_sha256": "666c376fe68687f053786d850af926402f59f925c9b7706c72faec6e50b42340",
+    "installed_diff_sha256": "666c376fe68687f053786d850af926402f59f925c9b7706c72faec6e50b42340",
+    "ns3_head": "99bc6f733274475b7a6e804128651e17ee2a2536",
+    "image_digest": "ghcr.io/yeonjong21/cs30401-lab1@sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+    "runtime_files": {
+      "scratch/main_satnet/ns3.48-main_satnet": "de9f678113c37a72df7e3215e876f18945c0ccecf9123f60fc8f655f9d9a6eab",
+      "lib/libns3.48-antenna.so": "edf56f782f446d54291425c4b357fb2a609f64da3a3a88a2d48e18dbcf4200b8",
+      "lib/libns3.48-applications.so": "029ee91a59a88fd8cff0c865053f31dfc36f6cc6f10484ebb3843864025750ca",
+      "lib/libns3.48-basic-sim.so": "005f6059fd2669ee3ba4dfaa5b7e76a35542eaa5a98093f72eded4c94360bdd8",
+      "lib/libns3.48-bridge.so": "5c0e5f9092dc8a215a2d77aaa75ba0e3db181578566db25b9463cc220a94a1a0",
+      "lib/libns3.48-core.so": "5f6e271f0e98438059ac55c8dc5c94ee411050cb7cd7f23956963310674982a1",
+      "lib/libns3.48-flow-monitor.so": "5fbe40f2a843bf01f38b943a28377f7e9628b748506498298cfd6096c621b1ad",
+      "lib/libns3.48-internet-apps.so": "c31699838a1a449773562164af013663951dbd78c7b0e1bcddc4b451f2eaa6bc",
+      "lib/libns3.48-internet.so": "e8928e5155bf36a0e800c171c661ab30dea9d0d72b25014aa3ed544616552817",
+      "lib/libns3.48-mobility.so": "45dc648f0ff11a8c83574fdea0dd189a35ccc606d625d3e3612afa3a6f806351",
+      "lib/libns3.48-network.so": "7930b3ed5f927eb731b7a010e5664ebd7927d1b25ecd2ef1f950857b434621b7",
+      "lib/libns3.48-point-to-point.so": "af4a8a6c3378e80fc6347fd77ad9c0bad5783eb34c2ea90e416f797b985e3f89",
+      "lib/libns3.48-satellite-network.so": "6c54072c67b2a2470abe2aca9f561d57093df69fa832ae2035753e2e52ebf907",
+      "lib/libns3.48-satellite.so": "68e7ce4d29d13efe374989d3279a8587bedb7a8104757938ab2c14605e3d4002",
+      "lib/libns3.48-stats.so": "ab02ae3cfe9c8453b6b251528884a678fe470cb1aac2e6500064a6fd44caf447",
+      "lib/libns3.48-traffic-control.so": "354fd4e2ef550af211e9abf272fd64b45818636c845b4876b606a0ffa6520d53"
+    },
+    "forecast_source_sha256": "49bd5418f2b13bdbf6d703f719d61075f814cc86d44c745651bf797f4e5f656c",
+    "forecast_rule": "H=2*max(old,new propagation RTT)",
+    "hints": [],
+    "additional_parameters": "",
+    "environment": {
+      "CS30401_STUDY_TRACE": "1",
+      "CS30401_STUDY_TRACE_DIR": "/tmp/predict-loss/leo10-base/logs_ns3",
+      "LD_LIBRARY_PATH": "/home/ubuntu/ns-3.48/build/lib"
+    },
+    "declared_event_windows_s": [
+      [
+        25.7,
+        28.2
+      ],
+      [
+        74.5,
+        77.0
+      ]
+    ],
+    "timeout_s": 180,
+    "expected_finite_bytes": null,
+    "exit_code": 0,
+    "wall_seconds": 19.055926517000444
+  },
+  "state_mapping_receipts": {
+    "state_static_sha256": {
+      "count": 7,
+      "sha256": "afc13d0f402e082dd83a65ee52222e91b41f2bb775a0694a34ac33dfe216becf"
+    },
+    "dynamic_input_sha256": {
+      "count": 4000,
+      "sha256": "afbe0eb800dd2c8bf608b6241c5f94349677e6036dd883045c7c42fb80cddd8a"
+    }
+  },
+  "events": [
+    {
+      "time_ns": 26200000000,
+      "time_s": 26.2,
+      "old_rtt_prop_ms": 97.698,
+      "new_rtt_prop_ms": 91.064,
+      "rtt_decrease_ms": 6.634,
+      "geometric_bdp_ratio": 0.9320968699461606,
+      "old_path_nodes": [
+        1584,
+        381,
+        380,
+        379,
+        357,
+        335,
+        313,
+        291,
+        269,
+        247,
+        225,
+        224,
+        1585
+      ],
+      "new_path_nodes": [
+        1584,
+        316,
+        315,
+        314,
+        313,
+        291,
+        269,
+        247,
+        225,
+        224,
+        1585
+      ],
+      "changed_forward_nodes": [
+        314,
+        315,
+        316,
+        335,
+        357,
+        379,
+        380,
+        381
+      ],
+      "windows": {
+        "pre": {
+          "start_ns": 25700000000,
+          "end_ns": 26200000000,
+          "duration_s": 0.5,
+          "application_bytes": 600300,
+          "application_goodput_mbps": 9.604800000000001,
+          "sender_event_counts": {
+            "RX_ACK": 218,
+            "TX": 440
+          },
+          "sender_event_payload_bytes": {
+            "RX_ACK": 0,
+            "TX": 607200
+          },
+          "congestion_event_counts": {},
+          "all_direction_drop_rows": 0,
+          "distinct_tagged_drop_transmissions": 0,
+          "drop_rows_by_layer": {},
+          "drop_rows_by_device": [],
+          "exact_drop_rows": [],
+          "tagged_flow0_device_queue_visits": null,
+          "cwnd_bytes_trace": {
+            "held_at_start": {
+              "time_ns": 25624311760,
+              "value": 155940
+            },
+            "first_change": {
+              "time_ns": 25745913555,
+              "value": 157320
+            },
+            "last_change": {
+              "time_ns": 26085480908,
+              "value": 161460
+            },
+            "change_count": 4,
+            "minimum": 155940,
+            "maximum": 161460
+          },
+          "srtt_ns_trace": {
+            "held_at_start": {
+              "time_ns": 25697731707,
+              "value": 128449909
+            },
+            "first_change": {
+              "time_ns": 25700026082,
+              "value": 128518670
+            },
+            "last_change": {
+              "time_ns": 26197905233,
+              "value": 133093645
+            },
+            "change_count": 218,
+            "minimum": 128370083,
+            "maximum": 133193409
+          }
+        },
+        "post": {
+          "start_ns": 26200000000,
+          "end_ns": 26700000000,
+          "duration_s": 0.5,
+          "application_bytes": 572700,
+          "application_goodput_mbps": 9.1632,
+          "sender_event_counts": {
+            "RX_ACK": 220,
+            "TX": 396,
+            "RETX": 3
+          },
+          "sender_event_payload_bytes": {
+            "RX_ACK": 0,
+            "TX": 546480,
+            "RETX": 4140
+          },
+          "congestion_event_counts": {
+            "CONG": 7,
+            "SSTHRESH": 1
+          },
+          "all_direction_drop_rows": 0,
+          "distinct_tagged_drop_transmissions": 0,
+          "drop_rows_by_layer": {},
+          "drop_rows_by_device": [],
+          "exact_drop_rows": [],
+          "tagged_flow0_device_queue_visits": null,
+          "cwnd_bytes_trace": {
+            "held_at_start": {
+              "time_ns": 26085480908,
+              "value": 161460
+            },
+            "first_change": {
+              "time_ns": 26218554597,
+              "value": 162840
+            },
+            "last_change": {
+              "time_ns": 26645926968,
+              "value": 118680
+            },
+            "change_count": 47,
+            "minimum": 113160,
+            "maximum": 162840
+          },
+          "srtt_ns_trace": {
+            "held_at_start": {
+              "time_ns": 26197905233,
+              "value": 133093645
+            },
+            "first_change": {
+              "time_ns": 26200199611,
+              "value": 133081939
+            },
+            "last_change": {
+              "time_ns": 26699843428,
+              "value": 105371338
+            },
+            "change_count": 211,
+            "minimum": 104259393,
+            "maximum": 135699731
+          }
+        },
+        "legacy": {
+          "start_ns": 25700000000,
+          "end_ns": 28200000000,
+          "duration_s": 2.5,
+          "application_bytes": 2964240,
+          "application_goodput_mbps": 9.485568,
+          "sender_event_counts": {
+            "RX_ACK": 1084,
+            "TX": 2140,
+            "RETX": 3
+          },
+          "sender_event_payload_bytes": {
+            "RX_ACK": 0,
+            "TX": 2953200,
+            "RETX": 4140
+          },
+          "congestion_event_counts": {
+            "CONG": 7,
+            "SSTHRESH": 1
+          },
+          "all_direction_drop_rows": 0,
+          "distinct_tagged_drop_transmissions": 0,
+          "drop_rows_by_layer": {},
+          "drop_rows_by_device": [],
+          "exact_drop_rows": [],
+          "tagged_flow0_device_queue_visits": null,
+          "cwnd_bytes_trace": {
+            "held_at_start": {
+              "time_ns": 25624311760,
+              "value": 155940
+            },
+            "first_change": {
+              "time_ns": 25745913555,
+              "value": 157320
+            },
+            "last_change": {
+              "time_ns": 27959153539,
+              "value": 135240
+            },
+            "change_count": 63,
+            "minimum": 113160,
+            "maximum": 162840
+          },
+          "srtt_ns_trace": {
+            "held_at_start": {
+              "time_ns": 25697731707,
+              "value": 128449909
+            },
+            "first_change": {
+              "time_ns": 25700026082,
+              "value": 128518670
+            },
+            "last_change": {
+              "time_ns": 28197769903,
+              "value": 112387484
+            },
+            "change_count": 1075,
+            "minimum": 104190059,
+            "maximum": 135699731
+          }
+        },
+        "tight_legacy": {
+          "start_ns": 26100000000,
+          "end_ns": 26600000000,
+          "duration_s": 0.5,
+          "application_bytes": 580980,
+          "application_goodput_mbps": 9.29568,
+          "sender_event_counts": {
+            "RX_ACK": 222,
+            "TX": 399,
+            "RETX": 3
+          },
+          "sender_event_payload_bytes": {
+            "RX_ACK": 0,
+            "TX": 550620,
+            "RETX": 4140
+          },
+          "congestion_event_counts": {
+            "CONG": 7,
+            "SSTHRESH": 1
+          },
+          "all_direction_drop_rows": 0,
+          "distinct_tagged_drop_transmissions": 0,
+          "drop_rows_by_layer": {},
+          "drop_rows_by_device": [],
+          "exact_drop_rows": [],
+          "tagged_flow0_device_queue_visits": null,
+          "cwnd_bytes_trace": {
+            "held_at_start": {
+              "time_ns": 26085480908,
+              "value": 161460
+            },
+            "first_change": {
+              "time_ns": 26218554597,
+              "value": 162840
+            },
+            "last_change": {
+              "time_ns": 26550996033,
+              "value": 117300
+            },
+            "change_count": 46,
+            "minimum": 113160,
+            "maximum": 162840
+          },
+          "srtt_ns_trace": {
+            "held_at_start": {
+              "time_ns": 26099247149,
+              "value": 133113372
+            },
+            "first_change": {
+              "time_ns": 26101541513,
+              "value": 133099200
+            },
+            "last_change": {
+              "time_ns": 26599177317,
+              "value": 105305682
+            },
+            "change_count": 213,
+            "minimum": 104987062,
+            "maximum": 135699731
+          }
+        }
+      }
+    },
+    {
+      "time_ns": 75000000000,
+      "time_s": 75.0,
+      "old_rtt_prop_ms": 90.987,
+      "new_rtt_prop_ms": 87.644,
+      "rtt_decrease_ms": 3.343,
+      "geometric_bdp_ratio": 0.9632584874762329,
+      "old_path_nodes": [
+        1584,
+        316,
+        315,
+        314,
+        313,
+        291,
+        269,
+        247,
+        225,
+        224,
+        1585
+      ],
+      "new_path_nodes": [
+        1584,
+        337,
+        336,
+        335,
+        313,
+        291,
+        269,
+        247,
+        225,
+        224,
+        1585
+      ],
+      "changed_forward_nodes": [
+        314,
+        315,
+        316,
+        335,
+        336,
+        337
+      ],
+      "windows": {
+        "pre": {
+          "start_ns": 74500000000,
+          "end_ns": 75000000000,
+          "duration_s": 0.5,
+          "application_bytes": 601680,
+          "application_goodput_mbps": 9.626880000000002,
+          "sender_event_counts": {
+            "RX_ACK": 218,
+            "TX": 444
+          },
+          "sender_event_payload_bytes": {
+            "RX_ACK": 0,
+            "TX": 612720
+          },
+          "congestion_event_counts": {},
+          "all_direction_drop_rows": 0,
+          "distinct_tagged_drop_transmissions": 0,
+          "drop_rows_by_layer": {},
+          "drop_rows_by_device": [],
+          "exact_drop_rows": [],
+          "tagged_flow0_device_queue_visits": null,
+          "cwnd_bytes_trace": {
+            "held_at_start": {
+              "time_ns": 74432543421,
+              "value": 179400
+            },
+            "first_change": {
+              "time_ns": 74512848881,
+              "value": 180780
+            },
+            "last_change": {
+              "time_ns": 74985503970,
+              "value": 190440
+            },
+            "change_count": 8,
+            "minimum": 179400,
+            "maximum": 190440
+          },
+          "srtt_ns_trace": {
+            "held_at_start": {
+              "time_ns": 74499082248,
+              "value": 147490493
+            },
+            "first_change": {
+              "time_ns": 74501376680,
+              "value": 147679181
+            },
+            "last_change": {
+              "time_ns": 74999270634,
+              "value": 155860656
+            },
+            "change_count": 218,
+            "minimum": 147490493,
+            "maximum": 155860656
+          }
+        },
+        "post": {
+          "start_ns": 75000000000,
+          "end_ns": 75500000000,
+          "duration_s": 0.5,
+          "application_bytes": 601680,
+          "application_goodput_mbps": 9.626880000000002,
+          "sender_event_counts": {
+            "RX_ACK": 219,
+            "TX": 446
+          },
+          "sender_event_payload_bytes": {
+            "RX_ACK": 0,
+            "TX": 615480
+          },
+          "congestion_event_counts": {
+            "CONG": 2
+          },
+          "all_direction_drop_rows": 0,
+          "distinct_tagged_drop_transmissions": 0,
+          "drop_rows_by_layer": {},
+          "drop_rows_by_device": [],
+          "exact_drop_rows": [],
+          "tagged_flow0_device_queue_visits": null,
+          "cwnd_bytes_trace": {
+            "held_at_start": {
+              "time_ns": 74985503970,
+              "value": 190440
+            },
+            "first_change": {
+              "time_ns": 75043486662,
+              "value": 191820
+            },
+            "last_change": {
+              "time_ns": 75457628025,
+              "value": 202860
+            },
+            "change_count": 9,
+            "minimum": 190440,
+            "maximum": 202860
+          },
+          "srtt_ns_trace": {
+            "held_at_start": {
+              "time_ns": 74999270634,
+              "value": 155860656
+            },
+            "first_change": {
+              "time_ns": 75001565066,
+              "value": 155878074
+            },
+            "last_change": {
+              "time_ns": 75498927422,
+              "value": 165148799
+            },
+            "change_count": 219,
+            "minimum": 154326727,
+            "maximum": 165222115
+          }
+        },
+        "legacy": {
+          "start_ns": 74500000000,
+          "end_ns": 77000000000,
+          "duration_s": 2.5,
+          "application_bytes": 3008400,
+          "application_goodput_mbps": 9.626880000000002,
+          "sender_event_counts": {
+            "RX_ACK": 1091,
+            "TX": 2237
+          },
+          "sender_event_payload_bytes": {
+            "RX_ACK": 0,
+            "TX": 3087060
+          },
+          "congestion_event_counts": {
+            "CONG": 2
+          },
+          "all_direction_drop_rows": 0,
+          "distinct_tagged_drop_transmissions": 0,
+          "drop_rows_by_layer": {},
+          "drop_rows_by_device": [],
+          "exact_drop_rows": [],
+          "tagged_flow0_device_queue_visits": null,
+          "cwnd_bytes_trace": {
+            "held_at_start": {
+              "time_ns": 74432543421,
+              "value": 179400
+            },
+            "first_change": {
+              "time_ns": 74512848881,
+              "value": 180780
+            },
+            "last_change": {
+              "time_ns": 76983412511,
+              "value": 256680
+            },
+            "change_count": 56,
+            "minimum": 179400,
+            "maximum": 256680
+          },
+          "srtt_ns_trace": {
+            "held_at_start": {
+              "time_ns": 74499082248,
+              "value": 147490493
+            },
+            "first_change": {
+              "time_ns": 74501376680,
+              "value": 147679181
+            },
+            "last_change": {
+              "time_ns": 76999473405,
+              "value": 205534876
+            },
+            "change_count": 1091,
+            "minimum": 147490493,
+            "maximum": 205534876
+          }
+        },
+        "tight_legacy": {
+          "start_ns": 74900000000,
+          "end_ns": 75400000000,
+          "duration_s": 0.5,
+          "application_bytes": 601680,
+          "application_goodput_mbps": 9.626880000000002,
+          "sender_event_counts": {
+            "RX_ACK": 219,
+            "TX": 446
+          },
+          "sender_event_payload_bytes": {
+            "RX_ACK": 0,
+            "TX": 615480
+          },
+          "congestion_event_counts": {
+            "CONG": 2
+          },
+          "all_direction_drop_rows": 0,
+          "distinct_tagged_drop_transmissions": 0,
+          "drop_rows_by_layer": {},
+          "drop_rows_by_device": [],
+          "exact_drop_rows": [],
+          "tagged_flow0_device_queue_visits": null,
+          "cwnd_bytes_trace": {
+            "held_at_start": {
+              "time_ns": 74861604082,
+              "value": 187680
+            },
+            "first_change": {
+              "time_ns": 74925848463,
+              "value": 189060
+            },
+            "last_change": {
+              "time_ns": 75361262705,
+              "value": 200100
+            },
+            "change_count": 9,
+            "minimum": 187680,
+            "maximum": 200100
+          },
+          "srtt_ns_trace": {
+            "held_at_start": {
+              "time_ns": 74898315166,
+              "value": 153817723
+            },
+            "first_change": {
+              "time_ns": 74900609603,
+              "value": 153840507
+            },
+            "last_change": {
+              "time_ns": 75397973288,
+              "value": 162794663
+            },
+            "change_count": 219,
+            "minimum": 153655648,
+            "maximum": 162909060
+          }
+        }
+      }
+    }
+  ],
+  "queue_trace_available": false,
+  "manifest_output_checks": [
+    {
+      "file": "config_ns3.properties",
+      "sha256": "8c46772c95c46ca99935dd68cf6957631972a2bb519acabe0880640408b0f4d4",
+      "matches": true
+    },
+    {
+      "file": "schedule.csv",
+      "sha256": "e6cde3aa7716856e46d24c3833354df90407313ece13a5ffbd1b789fa4fea23c",
+      "matches": true
+    },
+    {
+      "file": "logs_ns3/study_drops.csv",
+      "sha256": "c915297632311402f8a2b1b4d6d24b83691f5971f40477934b2e2826887e6821",
+      "matches": true
+    },
+    {
+      "file": "logs_ns3/tcp_flow_0_study_packets.csv",
+      "sha256": "78fc54184c4481b1421d2139870debcbe72259c18ccb011ba180ef77784e146f",
+      "matches": true
+    },
+    {
+      "file": "logs_ns3/tcp_flow_0_study_events.csv",
+      "sha256": "8809b380277e387dcc400a5d27a5679ccbdf446a08c7efb06fa7a021a42df78b",
+      "matches": true
+    },
+    {
+      "file": "logs_ns3/study_app_rx_node_1585_port_1024.csv",
+      "sha256": "63defbe5710bafaafec06b3021dfda3c8d2df2bad3bf78ce15b54c84d7bc451d",
+      "matches": true
+    },
+    {
+      "file": "logs_ns3/tcp_flow_0_cwnd.csv",
+      "sha256": "6651966bdd19d9cbcbcc99fb18ec854f152de7e81ed93e075e8baa5d09599860",
+      "matches": true
+    },
+    {
+      "file": "logs_ns3/tcp_flow_0_rtt.csv",
+      "sha256": "b959d51947cf5f8d37d672ef2a239c942b8b57e9f3d574ce2f7624de42ab1e38",
+      "matches": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "/tmp/predict-loss/leo10-base/manifest.json",
+      "bytes": 420144,
+      "sha256": "bfbfd42ada5775fc67f382d19069d4fa8ab73b35c9ce774ce6446f330b7a07ee"
+    },
+    {
+      "path": "/work/code/kim-study/path_truth_200s.csv",
+      "bytes": 135964,
+      "sha256": "49bd5418f2b13bdbf6d703f719d61075f814cc86d44c745651bf797f4e5f656c"
+    },
+    {
+      "path": "/tmp/predict-loss/leo10-base/config_ns3.properties",
+      "bytes": 613,
+      "sha256": "8c46772c95c46ca99935dd68cf6957631972a2bb519acabe0880640408b0f4d4"
+    },
+    {
+      "path": "/tmp/predict-loss/leo10-base/schedule.csv",
+      "bytes": 29,
+      "sha256": "e6cde3aa7716856e46d24c3833354df90407313ece13a5ffbd1b789fa4fea23c"
+    },
+    {
+      "path": "/tmp/predict-loss/leo10-base/logs_ns3/study_drops.csv",
+      "bytes": 55405,
+      "sha256": "c915297632311402f8a2b1b4d6d24b83691f5971f40477934b2e2826887e6821"
+    },
+    {
+      "path": "/tmp/predict-loss/leo10-base/logs_ns3/tcp_flow_0_study_packets.csv",
+      "bytes": 19842749,
+      "sha256": "78fc54184c4481b1421d2139870debcbe72259c18ccb011ba180ef77784e146f"
+    },
+    {
+      "path": "/tmp/predict-loss/leo10-base/logs_ns3/tcp_flow_0_study_events.csv",
+      "bytes": 5534,
+      "sha256": "8809b380277e387dcc400a5d27a5679ccbdf446a08c7efb06fa7a021a42df78b"
+    },
+    {
+      "path": "/tmp/predict-loss/leo10-base/logs_ns3/study_app_rx_node_1585_port_1024.csv",
+      "bytes": 14466654,
+      "sha256": "63defbe5710bafaafec06b3021dfda3c8d2df2bad3bf78ce15b54c84d7bc451d"
+    },
+    {
+      "path": "/tmp/predict-loss/leo10-base/logs_ns3/tcp_flow_0_cwnd.csv",
+      "bytes": 101682,
+      "sha256": "6651966bdd19d9cbcbcc99fb18ec854f152de7e81ed93e075e8baa5d09599860"
+    },
+    {
+      "path": "/tmp/predict-loss/leo10-base/logs_ns3/tcp_flow_0_rtt.csv",
+      "bytes": 2029939,
+      "sha256": "b959d51947cf5f8d37d672ef2a239c942b8b57e9f3d574ce2f7624de42ab1e38"
+    }
+  ],
+  "helper": {
+    "path": "/work/code/orbit-cubic-down/analyze_gate.py",
+    "bytes": 11338,
+    "sha256": "5714e9dfef6235f0c3e1cd49b3adec0920609a3b417849cd26eddd002a46159e"
+  },
+  "causal_gate": "Manual evidence assessment required; this extractor never labels shortening as overflow.",
+  "limits": [
+    "Windows are half-open. Sender events and ordered app bytes are separate.",
+    "No queue trace means queue surge is unmeasured, not zero.",
+    "Queue visits are flow0-tagged served visits at each device, not end-to-end queue delay.",
+    "Flush occupancy is device-global at flush_time_ns, not a bin boundary snapshot.",
+    "A route snapshot changes more than geometric propagation; no pure-shortening causality is inferred.",
+    "Existing-run output hash checks depend on available original receipt fields."
+  ]
+}

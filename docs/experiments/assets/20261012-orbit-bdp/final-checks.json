@@ -1,0 +1,95 @@
+{
+  "final_patch_sha256": "9172ff9c43de96a553b5d1b2b791622f5c486fc663d307af6ddea364218b67bb",
+  "installed_source_diff_matches_patch": true,
+  "source_hashes": {
+    "code/orbit-bdp/README.md": "109ef40a3df358e004ce128a4a55b537072b6baa8c4eb967365f723eb53f6250",
+    "code/orbit-bdp/analyze.py": "629f98ae7bc1e22cb1211a0f0ea99ee3b8bbbfa4ebe00300033e0636ad1741d0",
+    "code/orbit-bdp/archive.py": "da9f65c1270b7781dcefa0424645d8ae7a74552d3bc519a230f3bd3e0a18a6a9",
+    "code/orbit-bdp/geometry-receipt.json": "7974cce6220f475c5f2d5d11e6e93c8b6d3aded8cabf12abaecc2dec17bc8789",
+    "code/orbit-bdp/geometry.csv": "99770f4f652c81797d7e6bf00b858097365733027ae2974a9313d8f0835d3bd9",
+    "code/orbit-bdp/install.py": "58cca38be2e60f5375362851399d395a3091d1b5868a06269fbb1673d660a26f",
+    "code/orbit-bdp/ns3-initial-build-failure.patch": "333f0dc27e8878d922b4b4e8f717c4d77c697be71982967c66deedcd2e5d0bbc",
+    "code/orbit-bdp/ns3.patch": "9172ff9c43de96a553b5d1b2b791622f5c486fc663d307af6ddea364218b67bb",
+    "code/orbit-bdp/run.py": "046aee430d21530439decfcf91797cf6b82c297b0c31dc0aff874ac6baa761b4"
+  },
+  "experiment_document_sha256": "9762852e1405e738697eb6a47f576613acb83292e48e79cba621bba7c305cd72",
+  "manifest_sha256": {
+    "bbr100-base40": "89ae3c1830e223ede7b20619b5ebeaf684ce634085585df942d5014b05b7b037",
+    "bbr100-orbit40": "4c9ea320f561f0b96330761f35e6efefc4bbeea8d67fabba09e5304c132ad6e9",
+    "bbr10-base40": "914484d027e7f28e24745dc68547ee873064a247180054dff353d3c8e4b34f90",
+    "bbr10-orbit40": "53b284478a3295b898492f4735fc4e85761354aee0b9f9cd9e0a25b5e9021192"
+  },
+  "summary_sha256": "188982b8b5ca6565e8b7915fab20a53e9a3bbcf83c93a961f095b940b73cfbc3",
+  "export_file_sha256": {
+    "comparison.csv": "b61aef4bc6db47214f4afe4f24fa60115dbc9711f2c6dd82f7eeb5cbf173d197",
+    "device-queues.csv": "fa38cc83c5706cb7b9c1a353f9c5bb9f6518305b2b94297232e6d4fde06691e6",
+    "results.csv": "4f923f551231dad9677ae56e409e71466dd83634fbd791080b058945a3ae3beb",
+    "second-bins.csv": "6d44652350448d7a8641d35643d86b837e698b3394fa73b1af25baf9a4eea11d",
+    "summary.json": "188982b8b5ca6565e8b7915fab20a53e9a3bbcf83c93a961f095b940b73cfbc3"
+  },
+  "trace_audits": [
+    {
+      "case": "bbr100-base40",
+      "retained_trace_rows": 399,
+      "active_retained_rows": 0,
+      "lower_target_rows": 0,
+      "higher_target_rows": 0,
+      "cwnd_before_above_policy_target_rows": 0
+    },
+    {
+      "case": "bbr100-orbit40",
+      "retained_trace_rows": 401,
+      "active_retained_rows": 376,
+      "lower_target_rows": 296,
+      "higher_target_rows": 80,
+      "cwnd_before_above_policy_target_rows": 2
+    },
+    {
+      "case": "bbr10-base40",
+      "retained_trace_rows": 397,
+      "active_retained_rows": 0,
+      "lower_target_rows": 0,
+      "higher_target_rows": 0,
+      "cwnd_before_above_policy_target_rows": 0
+    },
+    {
+      "case": "bbr10-orbit40",
+      "retained_trace_rows": 400,
+      "active_retained_rows": 370,
+      "lower_target_rows": 370,
+      "higher_target_rows": 0,
+      "cwnd_before_above_policy_target_rows": 46
+    }
+  ],
+  "build_receipts": {
+    "orbit-bdp-build.log": {
+      "bytes": 18864,
+      "sha256": "5ac4b0200f6a4128cbe103d0679e0f598db36d0d3d913b382effb2b0b330ee4f",
+      "last_lines": [
+        "ninja: build stopped: subcommand failed.",
+        "Finished executing the following commands:",
+        "/usr/bin/cmake --build /home/ubuntu/ns-3.48/cmake-cache -j 1"
+      ]
+    },
+    "orbit-bdp-build2.log": {
+      "bytes": 5333,
+      "sha256": "731a74012ddc78f25c5139fd1573991c662912aa4c75570d0238a47c9909a0f1",
+      "last_lines": [
+        "[31/31] Linking CXX executable /home/ubuntu/ns-3.48/build/scratch/main_satnet/ns3.48-main_satnet",
+        "Finished executing the following commands:",
+        "/usr/bin/cmake --build /home/ubuntu/ns-3.48/cmake-cache -j 1"
+      ]
+    }
+  },
+  "verified_archive_copy": {
+    "path": "/work/output/orbit-bdp-20261012.tar.gz",
+    "bytes": 7743962,
+    "sha256": "7e284e9331b17a84c9df5d6206ba467626c7ac6778aebb45353bcbefb30b02db"
+  },
+  "exclusions": [
+    "timing_results.csv and policy decision CSV excluded only from cross-policy measurement equality; both retained in raw archive.",
+    "No build/source tree/generated constellation state in raw archive.",
+    "No independently repeated simulation or forecast-error/competition experiment.",
+    "Raw image input geometry is sampled/rounded two-direction propagation; no queue or exact per-packet arrival input."
+  ]
+}

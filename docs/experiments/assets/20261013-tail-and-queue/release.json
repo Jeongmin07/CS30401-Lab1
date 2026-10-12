@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "tag": "orbit-tail-queue-20261013",
+  "url": "https://github.com/Jeongmin07/CS30401-Lab1/releases/tag/orbit-tail-queue-20261013",
+  "is_prerelease": true,
+  "release_target_commit": "86c61b0164cd61f0e2d413fd0b398e0abcf22a77",
+  "verified_at_utc": "2026-10-12T16:43:00.500615+00:00",
+  "attempts": 13,
+  "successful_program_runs": 13,
+  "final_tail_conditions": 10,
+  "pure_queue_observers": 2,
+  "conditional_routing_controls": 1,
+  "performance_excluded_attempts": 0,
+  "compressed_bytes": 87694817,
+  "assets": [
+    {
+      "name": "orbit-tail-20261013.tar.gz",
+      "bytes": 50758951,
+      "sha256": "61ee4e5848e793447d030ed1349dc5927e9e830141c8d1ca5164e77b5f14fbfe",
+      "members": 178,
+      "inventory_path": "docs\\experiments\\assets\\20261013-orbit-tail\\raw-inventory.json",
+      "inventory_sha256": "2358866f54bd5c555936d806b2c592412f2890ca7e2c210e3a147bd1411b528c",
+      "github_digest": "sha256:61ee4e5848e793447d030ed1349dc5927e9e830141c8d1ca5164e77b5f14fbfe",
+      "github_asset_id": 634359364,
+      "url": "https://github.com/Jeongmin07/CS30401-Lab1/releases/download/orbit-tail-queue-20261013/orbit-tail-20261013.tar.gz",
+      "size_and_sha_match": true
+    },
+    {
+      "name": "orbit-queue-natural-20261013.tar.gz",
+      "bytes": 24629094,
+      "sha256": "cfafbeae5f4761f53d0e823da84ee3388ff28b6817e67c05e8e2285c5310e064",
+      "members": 59,
+      "inventory_path": "docs\\experiments\\assets\\20261013-orbit-queue\\natural-raw-inventory.json",
+      "inventory_sha256": "1a9a031f98bd8729026b40eee989482cff78988d521dbb32e7a3916555bfa00f",
+      "github_digest": "sha256:cfafbeae5f4761f53d0e823da84ee3388ff28b6817e67c05e8e2285c5310e064",
+      "github_asset_id": 634359360,
+      "url": "https://github.com/Jeongmin07/CS30401-Lab1/releases/download/orbit-tail-queue-20261013/orbit-queue-natural-20261013.tar.gz",
+      "size_and_sha_match": true
+    },
+    {
+      "name": "orbit-queue-route-delay-20261013.tar.gz",
+      "bytes": 12306772,
+      "sha256": "f852d8bbe44e6b5be4da7b6487172f5e0b29df5f0755f829162754dde8fc6157",
+      "members": 30,
+      "inventory_path": "docs\\experiments\\assets\\20261013-orbit-queue\\counterfactual-raw-inventory.json",
+      "inventory_sha256": "ac84da231803b98fb86b921fe7ad6b5ca3dcf27bc0efa8a42fb07f21f13d7a77",
+      "github_digest": "sha256:f852d8bbe44e6b5be4da7b6487172f5e0b29df5f0755f829162754dde8fc6157",
+      "github_asset_id": 634359356,
+      "url": "https://github.com/Jeongmin07/CS30401-Lab1/releases/download/orbit-tail-queue-20261013/orbit-queue-route-delay-20261013.tar.gz",
+      "size_and_sha_match": true
+    }
+  ],
+  "qualification": "Streamed member verification and local/GitHub metadata comparison; no independent full rerun or download roundtrip claimed."
+}

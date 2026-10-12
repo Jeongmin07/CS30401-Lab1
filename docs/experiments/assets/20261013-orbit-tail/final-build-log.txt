@@ -1,0 +1,16 @@
+[0/2] Re-checking globbed directories...
+[1/2] Building CXX object src/internet/CMakeFiles/internet.dir/model/tcp-socket-base.cc.o
+In file included from /home/ubuntu/ns-3.48/src/internet/model/tcp-socket-base.cc:16:
+/home/ubuntu/ns-3.48/src/internet/model/tcp-socket-base.h: In copy constructor ‘ns3::TcpSocketBase::TcpSocketBase(const ns3::TcpSocketBase&)’:
+/home/ubuntu/ns-3.48/src/internet/model/tcp-socket-base.h:1494:10: warning: ‘ns3::TcpSocketBase::m_orbitTailEnabled’ will be initialized after [-Wreorder]
+ 1494 |     bool m_orbitTailEnabled{false}, m_orbitTailUsed{false};
+      |          ^~~~~~~~~~~~~~~~~~
+/home/ubuntu/ns-3.48/src/internet/model/tcp-socket-base.h:1446:10: warning:   ‘bool ns3::TcpSocketBase::m_shutdownSend’ [-Wreorder]
+ 1446 |     bool m_shutdownSend{false};  //!< Send no longer allowed
+      |          ^~~~~~~~~~~~~~
+/home/ubuntu/ns-3.48/src/internet/model/tcp-socket-base.cc:391:1: warning:   when initialized here [-Wreorder]
+  391 | TcpSocketBase::TcpSocketBase(const TcpSocketBase& sock)
+      | ^~~~~~~~~~~~~
+[2/2] Linking CXX shared library /home/ubuntu/ns-3.48/build/lib/libns3.48-internet.so
+Finished executing the following commands:
+/usr/bin/cmake --build /home/ubuntu/ns-3.48/cmake-cache -j 1

@@ -1,0 +1,157 @@
+{
+  "inputs": [
+    {
+      "run": "/tmp/orbit-probe/solo40-off",
+      "manifest_sha256": "eca05476427846e5fe07bf1ea0a45184902a5c78afdc125c857c1434c88b851f"
+    },
+    {
+      "run": "/tmp/orbit-probe/solo40-on",
+      "manifest_sha256": "5fee011b031a3d87d39b44fe536be0d039caabac09ab9c6d69100dd1e660d00a"
+    },
+    {
+      "run": "/tmp/orbit-probe/rise140-off",
+      "manifest_sha256": "fec386ed7ef465e710ed962937e09a54e1d9eecf17172521164e5552d5170a0f"
+    },
+    {
+      "run": "/tmp/orbit-probe/rise140-on",
+      "manifest_sha256": "b39bb4aa8e1471b34989b5735a0145e69a011d1785389edb88515610a6d0b725"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "cases/rise140-off/config_ns3.properties",
+      "bytes": 612,
+      "sha256": "d21adce9300e18c904323482e5c46df145840f692c70f353e5922a437734aae7"
+    },
+    {
+      "path": "cases/rise140-off/forecast.txt",
+      "bytes": 74,
+      "sha256": "1544d8ec10a9c46380ceb2efaf3e4a8f82411fcc4b843366b17fd286e1915b17"
+    },
+    {
+      "path": "cases/rise140-off/manifest.json",
+      "bytes": 420740,
+      "sha256": "fec386ed7ef465e710ed962937e09a54e1d9eecf17172521164e5552d5170a0f"
+    },
+    {
+      "path": "cases/rise140-off/orbit_probe.csv",
+      "bytes": 36285,
+      "sha256": "92f843df35ab5f7553f9e5b3edbd2992cc1aa1ace5113f30155877fe4cab1536"
+    },
+    {
+      "path": "cases/rise140-off/schedule.csv",
+      "bytes": 40,
+      "sha256": "9442a582acbac4df93d6ad13cfeb49305a1bff4c272c7393fd4071c770c43d86"
+    },
+    {
+      "path": "cases/rise140-off/summary.json",
+      "bytes": 10510,
+      "sha256": "0e845b0d5f3fa67cff57b256466833cef32c2cd3d601d4a91587bb091d4b70c6"
+    },
+    {
+      "path": "cases/rise140-on/config_ns3.properties",
+      "bytes": 612,
+      "sha256": "d21adce9300e18c904323482e5c46df145840f692c70f353e5922a437734aae7"
+    },
+    {
+      "path": "cases/rise140-on/forecast.txt",
+      "bytes": 74,
+      "sha256": "1544d8ec10a9c46380ceb2efaf3e4a8f82411fcc4b843366b17fd286e1915b17"
+    },
+    {
+      "path": "cases/rise140-on/manifest.json",
+      "bytes": 420734,
+      "sha256": "b39bb4aa8e1471b34989b5735a0145e69a011d1785389edb88515610a6d0b725"
+    },
+    {
+      "path": "cases/rise140-on/orbit_probe.csv",
+      "bytes": 44592,
+      "sha256": "f26c99e2ca32d170221e60658d29eee4edc290e5c81918f475d331a9616c8705"
+    },
+    {
+      "path": "cases/rise140-on/schedule.csv",
+      "bytes": 40,
+      "sha256": "9442a582acbac4df93d6ad13cfeb49305a1bff4c272c7393fd4071c770c43d86"
+    },
+    {
+      "path": "cases/rise140-on/summary.json",
+      "bytes": 12875,
+      "sha256": "3a15c4455bb8d49668d27fb9344e8aacaf9e37b88185042c45f6ea3110cf7627"
+    },
+    {
+      "path": "cases/solo40-off/config_ns3.properties",
+      "bytes": 611,
+      "sha256": "9533e0efa6dd560ba18c941afeadf3ac45212969f16f303c5e9ccc37c3407472"
+    },
+    {
+      "path": "cases/solo40-off/forecast.txt",
+      "bytes": 24,
+      "sha256": "3f6d449b5e2a1f749fd6cf63f32aa828e57a5a8e8017b981de346656615a15fe"
+    },
+    {
+      "path": "cases/solo40-off/manifest.json",
+      "bytes": 420317,
+      "sha256": "eca05476427846e5fe07bf1ea0a45184902a5c78afdc125c857c1434c88b851f"
+    },
+    {
+      "path": "cases/solo40-off/orbit_probe.csv",
+      "bytes": 14422,
+      "sha256": "8d7088d33d89846189bdbef3d73bcd82d2f830da14e54ff95c46f1a65e4162e8"
+    },
+    {
+      "path": "cases/solo40-off/schedule.csv",
+      "bytes": 29,
+      "sha256": "e6cde3aa7716856e46d24c3833354df90407313ece13a5ffbd1b789fa4fea23c"
+    },
+    {
+      "path": "cases/solo40-off/summary.json",
+      "bytes": 5810,
+      "sha256": "ef388bb64eb1629b5d69693d50505f32f0ddc6f756516470363f4f1986a0594c"
+    },
+    {
+      "path": "cases/solo40-on/config_ns3.properties",
+      "bytes": 611,
+      "sha256": "9533e0efa6dd560ba18c941afeadf3ac45212969f16f303c5e9ccc37c3407472"
+    },
+    {
+      "path": "cases/solo40-on/forecast.txt",
+      "bytes": 24,
+      "sha256": "3f6d449b5e2a1f749fd6cf63f32aa828e57a5a8e8017b981de346656615a15fe"
+    },
+    {
+      "path": "cases/solo40-on/manifest.json",
+      "bytes": 420311,
+      "sha256": "5fee011b031a3d87d39b44fe536be0d039caabac09ab9c6d69100dd1e660d00a"
+    },
+    {
+      "path": "cases/solo40-on/orbit_probe.csv",
+      "bytes": 14623,
+      "sha256": "fb150fc208d7d333a91e6570baa9521d95675c32d3c2c24d8ea453b82a0f9d32"
+    },
+    {
+      "path": "cases/solo40-on/schedule.csv",
+      "bytes": 29,
+      "sha256": "e6cde3aa7716856e46d24c3833354df90407313ece13a5ffbd1b789fa4fea23c"
+    },
+    {
+      "path": "cases/solo40-on/summary.json",
+      "bytes": 6547,
+      "sha256": "9b5220346b3a37076efd2a8d33793919ee6c6c6cc56c7b80945c2405311a2297"
+    },
+    {
+      "path": "device-queues.csv",
+      "bytes": 17299,
+      "sha256": "e3c983503a519f29dfbdde4c13a3dfcc25c9fdcc02fa594ddace9f9500edabe5"
+    },
+    {
+      "path": "summary.json",
+      "bytes": 41566,
+      "sha256": "df5fab15b591cd5acba1ccbbd25302edd337d64859e72d620d90dffa4d3c9ae0"
+    },
+    {
+      "path": "windows.csv",
+      "bytes": 3536,
+      "sha256": "a4add83e72dc7f827ca9e2608f8f9c5a373df134102d3105f849901e59f205f2"
+    }
+  ]
+}

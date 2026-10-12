@@ -1,0 +1,4 @@
+*.patch -text
+run-v2-before-guard.py -text
+compare-v2-before-replay.py -text
+build-ready-v2.json -text

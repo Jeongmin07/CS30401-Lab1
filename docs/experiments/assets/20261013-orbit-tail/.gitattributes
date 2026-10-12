@@ -1,0 +1,5 @@
+*.json -text
+*.csv -text
+*.png -text
+*.pdf -text
+*.patch -text -whitespace

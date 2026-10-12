@@ -1,0 +1,8 @@
+family,role,case,policy,fct_ms,tail_admissions,goodput_mbps,data_losses
+finite20,stock_finite,micro-base,Stock,251.50992,0,,
+finite20,selective_finite,micro-selective,Selective,350.48240000000004,0,,
+finite20,tail_finite,micro-tail,Selective + tail,257.223678,1,,
+finite20,capacity_finite,micro-selected,+ Capacity pacing,471.43477299999995,0,,
+natural200,stock_bulk,leo10-base,Stock,,,9.544356,499
+natural200,tail_bulk,leo10-tail,Selective + tail,,,9.5465088,486
+natural200,capacity_bulk,capacity,+ Capacity pacing,,,9.5662704,0

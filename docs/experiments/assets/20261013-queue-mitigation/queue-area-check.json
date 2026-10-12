@@ -1,0 +1,17 @@
+{
+  "helper_sha256": "048f884e11e1c7ed1bfa17f3f4643c01f071d4ab3b166a3d959e371b249fabb1",
+  "test_source_sha256": "1e8a86eb64219f9c1da80f1634138c49a101db8f4d3139f47d4ff7e38923ff4b",
+  "actual_console": {
+    "nonuniform_two_bin_integrals": true,
+    "packet_byte_callback_order_independent": true,
+    "partial_final_bin_pending": true,
+    "idle_intervals_exact_zero": true,
+    "combined_no_false_strict_capacity": true,
+    "ns3_simulations": 0
+  },
+  "container": "lab1-orbit-queue-20261013",
+  "compiler_command": "g++ -std=c++17 -I/home/ubuntu/ns-3.48/build/include /work/code/queue-metrics/check_area.cc -L/home/ubuntu/ns-3.48/build/lib -lns3.48-core -o /tmp/queue-area-check",
+  "run_command": "LD_LIBRARY_PATH=/home/ubuntu/ns-3.48/build/lib /tmp/queue-area-check",
+  "scope": "Standalone arithmetic/callback-state check; no topology, TCP policy or simulation is executed. Actual callback coverage and pending conservation are checked in each track.",
+  "checks_run_successfully": true
+}

@@ -1,0 +1,717 @@
+diff --git a/contrib/basic-sim/model/apps/tcp-flow-send-application.cc b/contrib/basic-sim/model/apps/tcp-flow-send-application.cc
+index bb9ab06..e931a8f 100644
+--- a/contrib/basic-sim/model/apps/tcp-flow-send-application.cc
++++ b/contrib/basic-sim/model/apps/tcp-flow-send-application.cc
+@@ -39,6 +39,9 @@
+ #include "ns3/exp-util.h"
+ #include "tcp-flow-send-application.h"
+ #include <fstream>
++#include <cstdlib>
++#include "ns3/tcp-bbr.h"
++#include "ns3/pointer.h"
+ 
+ namespace ns3 {
+ // [ns-3.48 port] Keep per-flow log files open instead of re-opening them on every event
+@@ -57,6 +60,44 @@ NS_LOG_COMPONENT_DEFINE ("TcpFlowSendApplication");
+ 
+ NS_OBJECT_ENSURE_REGISTERED (TcpFlowSendApplication);
+ 
++NS_OBJECT_ENSURE_REGISTERED(TcpBbrObserveTag);
++TypeId TcpBbrObserveTag::GetTypeId() {
++    static TypeId tid = TypeId("ns3::TcpBbrObserveTag").SetParent<Tag>()
++        .SetGroupName("Applications").AddConstructor<TcpBbrObserveTag>();
++    return tid;
++}
++TypeId TcpBbrObserveTag::GetInstanceTypeId() const { return GetTypeId(); }
++uint32_t TcpBbrObserveTag::GetSerializedSize() const { return 8; }
++void TcpBbrObserveTag::Serialize(TagBuffer buffer) const { buffer.WriteU64(m_flow); }
++void TcpBbrObserveTag::Deserialize(TagBuffer buffer) { m_flow = buffer.ReadU64(); }
++void TcpBbrObserveTag::Print(std::ostream& os) const { os << m_flow; }
++
++void TcpFlowSendApplication::InitializeBbrObservation() {
++    const char* enabled = std::getenv("CS30401_BBR_OBSERVE");
++    if (!enabled || std::string(enabled) != "1") return;
++    PointerValue congestion;
++    m_socket->GetAttribute("CongestionOps", congestion);
++    if (auto bbr = DynamicCast<TcpBbr>(congestion.Get<TcpCongestionOps>()))
++    {
++        bbr->SetObservationFlow(m_tcpFlowId);
++        if (const char* csv = std::getenv("CS30401_ORBIT_BDP_CSV")) {
++            const char* flag = std::getenv("CS30401_ORBIT_BDP");
++            NS_ABORT_MSG_IF(!flag || (std::string(flag)!="0" && std::string(flag)!="1"), "Invalid orbit flag");
++            bbr->ConfigureOrbitBdp(std::string(flag)=="1", csv);
++        }
++    }
++    NS_ABORT_MSG_IF(!m_socket->TraceConnectWithoutContext("Tx",
++        MakeCallback(&TcpFlowSendApplication::ObserveBbrTx, this)), "Missing TCP Tx observer");
++}
++void TcpFlowSendApplication::ObserveBbrTx(Ptr<const Packet> packet, const TcpHeader&,
++                                       Ptr<const TcpSocketBase>) {
++    auto copy = ConstCast<Packet>(packet);
++    TcpBbrObserveTag previous;
++    copy->RemovePacketTag(previous);
++    copy->AddPacketTag(TcpBbrObserveTag(m_tcpFlowId));
++}
++
++
+ TypeId
+ TcpFlowSendApplication::GetTypeId(void) {
+     static TypeId tid = TypeId("ns3::TcpFlowSendApplication")
+@@ -163,6 +204,8 @@ void TcpFlowSendApplication::StartApplication(void) { // Called at time specifie
+             }
+         }
+ 
++        InitializeBbrObservation();
++
+         // Connect, no receiver
+         m_socket->Connect(m_peer);
+         m_socket->ShutdownRecv();
+diff --git a/contrib/basic-sim/model/apps/tcp-flow-send-application.h b/contrib/basic-sim/model/apps/tcp-flow-send-application.h
+index 1dd61ed..053a4b5 100644
+--- a/contrib/basic-sim/model/apps/tcp-flow-send-application.h
++++ b/contrib/basic-sim/model/apps/tcp-flow-send-application.h
+@@ -29,12 +29,33 @@
+ #include "ns3/ptr.h"
+ #include "ns3/string.h"
+ #include "ns3/traced-callback.h"
++#include "ns3/tag.h"
+ 
+ namespace ns3 {
+ 
+ class Address;
+ class Socket;
+ 
++class TcpHeader;
++class TcpSocketBase;
++
++// PacketTag is simulator-only metadata: it contributes no bytes to the wire.
++class TcpBbrObserveTag : public Tag
++{
++public:
++  static TypeId GetTypeId();
++  TypeId GetInstanceTypeId() const override;
++  uint32_t GetSerializedSize() const override;
++  void Serialize(TagBuffer buffer) const override;
++  void Deserialize(TagBuffer buffer) override;
++  void Print(std::ostream& os) const override;
++  TcpBbrObserveTag() = default;
++  explicit TcpBbrObserveTag(uint64_t flow) : m_flow(flow) {}
++  uint64_t GetFlowId() const { return m_flow; }
++private:
++  uint64_t m_flow{0};
++};
++
+ class TcpFlowSendApplication : public Application
+ {
+ public:
+@@ -88,6 +109,8 @@ private:
+   TracedCallback<Ptr<const Packet> > m_txTrace;
+ 
+ private:
++  void InitializeBbrObservation();
++  void ObserveBbrTx(Ptr<const Packet> packet, const TcpHeader& header, Ptr<const TcpSocketBase> socket);
+   void ConnectionSucceeded (Ptr<Socket> socket);
+   void ConnectionFailed (Ptr<Socket> socket);
+   void DataSend (Ptr<Socket>, uint32_t);
+diff --git a/contrib/basic-sim/model/apps/tcp-flow-sink.cc b/contrib/basic-sim/model/apps/tcp-flow-sink.cc
+index 572ee57..6847ca7 100644
+--- a/contrib/basic-sim/model/apps/tcp-flow-sink.cc
++++ b/contrib/basic-sim/model/apps/tcp-flow-sink.cc
+@@ -33,6 +33,10 @@
+ #include "ns3/trace-source-accessor.h"
+ #include "ns3/tcp-socket-factory.h"
+ #include "tcp-flow-sink.h"
++#include "tcp-flow-send-application.h"
++#include "ns3/tcp-socket-base.h"
++#include "ns3/tcp-header.h"
++#include <cstdlib>
+ 
+ namespace ns3 {
+ 
+@@ -66,10 +70,12 @@ TcpFlowSink::TcpFlowSink() {
+ }
+ 
+ TcpFlowSink::~TcpFlowSink() {
++    FlushBbrApps();
+     NS_LOG_FUNCTION(this);
+ }
+ 
+ void TcpFlowSink::DoDispose(void) {
++    FlushBbrApps();
+     NS_LOG_FUNCTION(this);
+     m_socket = 0;
+     m_socketList.clear();
+@@ -108,6 +114,7 @@ void TcpFlowSink::StartApplication() { // Called at time specified by Start
+ }
+ 
+ void TcpFlowSink::StopApplication() {  // Called at time specified by Stop
++    FlushBbrApps();
+     NS_LOG_FUNCTION(this);
+     while (!m_socketList.empty()) {
+         Ptr <Socket> socket = m_socketList.front();
+@@ -120,6 +127,7 @@ void TcpFlowSink::StopApplication() {  // Called at time specified by Stop
+ }
+ 
+ void TcpFlowSink::HandleAccept(Ptr<Socket> socket, const Address &from) {
++    StartBbrObservation(socket);
+     NS_LOG_FUNCTION(this << socket << from);
+     socket->SetRecvCallback (MakeCallback (&TcpFlowSink::HandleRead, this));
+     socket->SetCloseCallbacks(
+@@ -140,6 +148,7 @@ void TcpFlowSink::HandleRead(Ptr<Socket> socket) {
+             break;
+         }
+         m_totalRx += packet->GetSize ();
++        RecordBbrApp(socket, packet->GetSize());
+ 
+         // Other fields that could be useful here if actually did something:
+         // Size: packet->GetSize()
+@@ -173,4 +182,65 @@ void TcpFlowSink::CleanUp(Ptr<Socket> socket) {
+     }
+ }
+ 
++
++void TcpFlowSink::StartBbrObservation(Ptr<Socket> socket) {
++    const char* enabled = std::getenv("CS30401_BBR_OBSERVE");
++    if (!enabled || std::string(enabled) != "1") return;
++    const char* directory = std::getenv("CS30401_BBR_OBSERVE_DIR");
++    NS_ABORT_MSG_IF(!directory, "CS30401_BBR_OBSERVE_DIR is required");
++    if (!m_observeApp.is_open()) {
++        m_observeApp.open(std::string(directory) + "/bbr_app_rx_node_" +
++                         std::to_string(GetNode()->GetId()) + ".csv");
++        NS_ABORT_MSG_IF(!m_observeApp.good(), "Cannot open app observation CSV");
++        m_observeApp << "bin_start_ns,bin_end_ns,observed_until_ns,node_id,connection_id,flow_id,local_port,peer_port,app_bytes,connection_total_bytes,sink_total_bytes\n";
++    }
++    BbrConnection row;
++    row.id = m_observeConnections.size();
++    Address local, peer;
++    socket->GetSockName(local);
++    socket->GetPeerName(peer);
++    if (InetSocketAddress::IsMatchingType(local)) row.localPort = InetSocketAddress::ConvertFrom(local).GetPort();
++    if (InetSocketAddress::IsMatchingType(peer)) row.peerPort = InetSocketAddress::ConvertFrom(peer).GetPort();
++    m_observeConnections[PeekPointer(socket)] = row;
++    NS_ABORT_MSG_IF(!socket->TraceConnectWithoutContext("Rx",
++        MakeCallback(&TcpFlowSink::ObserveBbrRx, this)), "Missing TCP Rx observer");
++}
++void TcpFlowSink::ObserveBbrRx(Ptr<const Packet> packet, const TcpHeader&,
++                            Ptr<const TcpSocketBase> socket) {
++    auto it = m_observeConnections.find(PeekPointer(socket));
++    if (it == m_observeConnections.end()) return;
++    TcpBbrObserveTag tag;
++    if (packet->PeekPacketTag(tag)) {
++        it->second.tagged = true;
++        it->second.flow = tag.GetFlowId();
++    }
++}
++void TcpFlowSink::RecordBbrApp(Ptr<Socket> socket, uint32_t bytes) {
++    auto it = m_observeConnections.find(PeekPointer(socket));
++    if (it == m_observeConnections.end()) return;
++    auto& row = it->second;
++    const int64_t bucket = Simulator::Now().GetNanoSeconds() / 100000000;
++    if (row.bucket != bucket) {
++        FlushBbrApp(row);
++        row.bucket = bucket;
++    }
++    row.bytes += bytes;
++    row.total += bytes;
++    row.sinkTotal = m_totalRx;
++}
++void TcpFlowSink::FlushBbrApp(BbrConnection& row) {
++    if (row.bucket < 0 || row.bytes == 0) return;
++    m_observeApp << row.bucket * 100000000 << ',' << (row.bucket + 1) * 100000000
++        << ',' << Simulator::Now().GetNanoSeconds() << ',' << GetNode()->GetId()
++        << ',' << row.id << ',';
++    if (row.tagged) m_observeApp << row.flow;
++    m_observeApp << ',' << row.localPort << ',' << row.peerPort << ',' << row.bytes
++                 << ',' << row.total << ',' << row.sinkTotal << '\n';
++    row.bytes = 0;
++}
++void TcpFlowSink::FlushBbrApps() {
++    for (auto& entry : m_observeConnections) FlushBbrApp(entry.second);
++    if (m_observeApp.is_open()) m_observeApp.flush();
++}
++
+ } // Namespace ns3
+diff --git a/contrib/basic-sim/model/apps/tcp-flow-sink.h b/contrib/basic-sim/model/apps/tcp-flow-sink.h
+index ff61bfd..88428a7 100644
+--- a/contrib/basic-sim/model/apps/tcp-flow-sink.h
++++ b/contrib/basic-sim/model/apps/tcp-flow-sink.h
+@@ -28,12 +28,16 @@
+ #include "ns3/ptr.h"
+ #include "ns3/traced-callback.h"
+ #include "ns3/address.h"
++#include <fstream>
++#include <map>
+ 
+ namespace ns3 {
+ 
+ class Address;
+ class Socket;
+ class Packet;
++class TcpHeader;
++class TcpSocketBase;
+ 
+ class TcpFlowSink : public Application
+ {
+@@ -50,6 +54,19 @@ private:
+   virtual void StartApplication (void);    // Called at time specified by Start
+   virtual void StopApplication (void);     // Called at time specified by Stop
+   
++  struct BbrConnection {
++    uint64_t id{0}, flow{0}, bytes{0}, total{0}, sinkTotal{0};
++    int64_t bucket{-1};
++    uint16_t localPort{0}, peerPort{0};
++    bool tagged{false};
++  };
++  std::map<const Socket*, BbrConnection> m_observeConnections;
++  std::ofstream m_observeApp;
++  void StartBbrObservation(Ptr<Socket> socket);
++  void ObserveBbrRx(Ptr<const Packet>, const TcpHeader&, Ptr<const TcpSocketBase>);
++  void RecordBbrApp(Ptr<Socket> socket, uint32_t bytes);
++  void FlushBbrApp(BbrConnection& row);
++  void FlushBbrApps();
+   void HandleRead (Ptr<Socket> socket);
+   void HandleAccept (Ptr<Socket> socket, const Address& from);
+   void HandlePeerClose (Ptr<Socket> socket);
+diff --git a/scratch/main_satnet/bbr_route_observer.h b/scratch/main_satnet/bbr_route_observer.h
+new file mode 100644
+index 0000000..69bc3ce
+--- /dev/null
++++ b/scratch/main_satnet/bbr_route_observer.h
+@@ -0,0 +1,194 @@
++#ifndef CS30401_BBR_ROUTE_OBSERVER_H
++#define CS30401_BBR_ROUTE_OBSERVER_H
++#include "ns3/ipv4-l3-protocol.h"
++#include "ns3/ipv4-header.h"
++#include "ns3/tcp-header.h"
++#include "ns3/ppp-header.h"
++#include "ns3/point-to-point-laser-net-device.h"
++#include "ns3/gsl-net-device.h"
++#include "ns3/point-to-point-net-device.h"
++#include "ns3/tcp-flow-send-application.h"
++#include "ns3/traffic-control-layer.h"
++#include <cstdlib>
++#include <fstream>
++#include <map>
++#include <memory>
++#include <vector>
++#include <algorithm>
++#include <cstdint>
++
++namespace ns3 { namespace bbrroute {
++static std::unique_ptr<std::ofstream> drops, coverage, queues, pendingCsv;
++struct Counters { uint64_t enq{0}, deq{0}, before{0}, after{0}, samples{0}, sum{0}, max{0}; };
++struct Pending { int64_t time; uint64_t flow; };
++struct QueueRecord {
++    uint32_t node, device;
++    Ptr<Queue<Packet>> queue;
++    int64_t bucket{-1};
++    std::map<uint64_t, Counters> counters;
++    // Queue::DoEnqueue stores this same Ptr; DoDequeue traces the stored Ptr.
++    // Fragments can share a UID, so UID is not a unique queue-entry identity.
++    std::map<const Packet*, Pending> pending;
++};
++static std::vector<std::unique_ptr<QueueRecord>> records;
++static uint64_t Flow(Ptr<const Packet> p) {
++    TcpBbrObserveTag tag;
++    return p->PeekPacketTag(tag) ? tag.GetFlowId() : UINT64_MAX;
++}
++static void FlushQueue(QueueRecord& r) {
++    if (r.bucket < 0) return;
++    for (const auto& entry : r.counters) {
++        const auto& c = entry.second;
++        *queues << r.bucket * 100000000 << ',' << (r.bucket + 1) * 100000000
++                << ',' << r.node << ',' << r.device << ',';
++        if (entry.first != UINT64_MAX) *queues << entry.first;
++        *queues << ',' << c.enq << ',' << c.deq << ',' << c.before << ',' << c.after
++                << ',' << c.samples << ',' << c.sum << ',' << c.max
++                << ',' << Simulator::Now().GetNanoSeconds()
++                << ',' << r.queue->GetNPackets() << ',' << r.queue->GetNBytes() << '\n';
++    }
++    r.counters.clear();
++}
++static Counters& At(QueueRecord* r, Ptr<const Packet> p) {
++    const int64_t bucket = Simulator::Now().GetNanoSeconds() / 100000000;
++    if (r->bucket != bucket) { FlushQueue(*r); r->bucket = bucket; }
++    return r->counters[Flow(p)];
++}
++static void Enqueue(QueueRecord* r, Ptr<const Packet> p) {
++    ++At(r,p).enq;
++    const Packet* key = PeekPointer(p);
++    NS_ABORT_MSG_IF(r->pending.count(key), "Same Packet object queued twice in one device queue");
++    r->pending[key] = {Simulator::Now().GetNanoSeconds(), Flow(p)};
++}
++static void Dequeue(QueueRecord* r, Ptr<const Packet> p) {
++    auto& c = At(r,p); ++c.deq;
++    auto it = r->pending.find(PeekPointer(p));
++    NS_ABORT_MSG_IF(it == r->pending.end(), "Dequeue without observed enqueue");
++    NS_ABORT_MSG_IF(Flow(p) != it->second.flow, "Flow metadata changed inside device queue");
++    const uint64_t wait = Simulator::Now().GetNanoSeconds() - it->second.time;
++    ++c.samples; c.sum += wait; c.max = std::max(c.max, wait);
++    r->pending.erase(it);
++}
++static void QueueBefore(QueueRecord* r, Ptr<const Packet> p) { ++At(r,p).before; }
++static void QueueAfter(QueueRecord* r, Ptr<const Packet> p) {
++    ++At(r,p).after;
++    // Dequeue precedes DropAfterDequeue, so served-sojourn interpretation fails.
++    NS_ABORT_MSG_IF(true,"DropAfterDequeue is outside served-sojourn observer semantics");
++}
++static void Drop(uint32_t node, uint32_t device, std::string layer,
++                 Ptr<const Packet> p, const Ipv4Header* supplied=nullptr, int reason=-1) {
++    auto copy = p->Copy();
++    Ipv4Header ip;
++    bool parsed = false;
++    if (supplied) { ip = *supplied; parsed = true; }
++    else if (copy->GetSize() >= 20) {
++        uint8_t bytes[2]; copy->CopyData(bytes,2);
++        if ((bytes[0] >> 4) != 4 && bytes[0] == 0 && bytes[1] == 0x21) {
++            PppHeader ppp; copy->RemoveHeader(ppp);
++        }
++        copy->CopyData(bytes,1);
++        if ((bytes[0] >> 4) == 4) parsed = copy->RemoveHeader(ip) > 0;
++    }
++    *drops << Simulator::Now().GetNanoSeconds() << ',' << node << ',' << device << ','
++           << layer << ',' << reason << ',' << p->GetUid() << ',';
++    const uint64_t flow = Flow(p);
++    if (flow != UINT64_MAX) *drops << flow;
++    *drops << ',';
++    if (parsed) *drops << ip.GetSource() << ',' << ip.GetDestination(); else *drops << ',';
++    *drops << ',';
++    if (parsed && ip.GetProtocol() == 6 && ip.GetFragmentOffset() == 0 && copy->GetSize() >= 20) {
++        TcpHeader tcp; copy->RemoveHeader(tcp);
++        *drops << tcp.GetSourcePort() << ',' << tcp.GetDestinationPort() << ','
++               << tcp.GetSequenceNumber().GetValue() << ',' << copy->GetSize();
++    } else *drops << ",,,";
++    *drops << '\n';
++}
++static void DeviceDrop(uint32_t node,uint32_t device,std::string layer,Ptr<const Packet> p) {
++    Drop(node,device,layer,p);
++}
++static void IpDrop(uint32_t node,const Ipv4Header& ip,Ptr<const Packet> p,
++                   Ipv4L3Protocol::DropReason reason,Ptr<Ipv4>,uint32_t interface) {
++    Drop(node,interface,"ipv4",p,&ip,static_cast<int>(reason));
++}
++static void Finish() {
++    const int64_t cutoff = Simulator::Now().GetNanoSeconds();
++    for (auto& r : records) {
++        FlushQueue(*r);
++        NS_ABORT_MSG_IF(r->pending.size() != r->queue->GetNPackets(),
++                        "Observed pending count differs from actual device queue");
++        std::map<uint64_t, Counters> byFlow;
++        for (const auto& item : r->pending) {
++            auto& row = byFlow[item.second.flow];
++            const uint64_t age = cutoff - item.second.time;
++            ++row.samples; row.sum += age; row.max = std::max(row.max,age);
++        }
++        for (const auto& item : byFlow) {
++            *pendingCsv << cutoff << ',' << r->node << ',' << r->device << ',';
++            if (item.first != UINT64_MAX) *pendingCsv << item.first;
++            *pendingCsv << ',' << item.second.samples << ',' << item.second.sum
++                        << ',' << item.second.max << '\n';
++        }
++    }
++    queues->flush(); drops->flush(); coverage->flush(); pendingCsv->flush();
++}
++static void Install(NodeContainer nodes) {
++    const char* enabled = std::getenv("CS30401_BBR_OBSERVE");
++    if (!enabled || std::string(enabled) != "1") return;
++    const char* directory = std::getenv("CS30401_BBR_OBSERVE_DIR");
++    NS_ABORT_MSG_IF(!directory, "Observation directory is required");
++    drops = std::make_unique<std::ofstream>(std::string(directory)+"/bbr_drops.csv");
++    coverage = std::make_unique<std::ofstream>(std::string(directory)+"/bbr_coverage.csv");
++    queues = std::make_unique<std::ofstream>(std::string(directory)+"/bbr_queue_bins.csv");
++    pendingCsv = std::make_unique<std::ofstream>(std::string(directory)+"/bbr_queue_pending.csv");
++    NS_ABORT_MSG_IF(!drops->good() || !coverage->good() || !queues->good() || !pendingCsv->good(), "Cannot open network observers");
++    *drops << "time_ns,node_id,device_id,layer,reason,packet_uid,flow_id,src,dst,src_port,dst_port,seq,payload_bytes\n";
++    *coverage << "node_id,device_id,layer,connected\n";
++    *queues << "bin_start_ns,bin_end_ns,node_id,device_id,flow_id,enqueued,dequeued,drop_before,drop_after,sojourn_samples,sojourn_sum_ns,sojourn_max_ns,flush_time_ns,queue_packets_at_flush,queue_bytes_at_flush\n";
++    *pendingCsv << "cutoff_ns,node_id,device_id,flow_id,pending_packets,pending_age_sum_ns,max_pending_age_ns\n";
++    for (auto it=nodes.Begin();it!=nodes.End();++it) {
++        auto node=*it;
++        auto ip=node->GetObject<Ipv4L3Protocol>();
++        bool ok=ip && ip->TraceConnectWithoutContext("Drop",MakeBoundCallback(&IpDrop,node->GetId()));
++        *coverage << node->GetId() << ",-1,ipv4," << ok << '\n';
++        NS_ABORT_MSG_IF(!ok,"Missing IPv4 drop observer");
++        auto tc=node->GetObject<TrafficControlLayer>();
++        ok=tc && tc->TraceConnectWithoutContext("TcDrop",MakeBoundCallback(&DeviceDrop,node->GetId(),UINT32_MAX,std::string("TcDrop")));
++        *coverage << node->GetId() << ",-1,TcDrop," << ok << '\n';
++        NS_ABORT_MSG_IF(!ok,"Missing TcDrop observer");
++        for (uint32_t i=0;i<node->GetNDevices();++i) {
++            auto device=node->GetDevice(i);
++            Ptr<Queue<Packet>> queue;
++            if (auto isl=DynamicCast<PointToPointLaserNetDevice>(device)) queue=isl->GetQueue();
++            else if (auto gsl=DynamicCast<GSLNetDevice>(device)) queue=gsl->GetQueue();
++            else if (auto p2p=DynamicCast<PointToPointNetDevice>(device)) queue=p2p->GetQueue();
++            else continue;
++            NS_ABORT_MSG_IF(!queue,"Missing device queue");
++            ok=!tc->GetRootQueueDiscOnDevice(device);
++            *coverage << node->GetId() << ',' << i << ",root_queue_disc_absent," << ok << '\n';
++            NS_ABORT_MSG_IF(!ok,"Root QueueDisc is outside this observer's coverage");
++            auto r=std::make_unique<QueueRecord>(); r->node=node->GetId(); r->device=i; r->queue=queue;
++            for (const std::string layer : {"MacTxDrop","PhyTxDrop","PhyRxDrop"}) {
++                ok=device->TraceConnectWithoutContext(layer,MakeBoundCallback(&DeviceDrop,node->GetId(),i,layer));
++                *coverage << node->GetId() << ',' << i << ',' << layer << ',' << ok << '\n';
++                NS_ABORT_MSG_IF(!ok,"Missing device drop observer");
++            }
++            for (const auto& hook : std::vector<std::pair<std::string,Callback<void,Ptr<const Packet>>>>{
++                {"Enqueue",MakeBoundCallback(&Enqueue,r.get())},
++                {"Dequeue",MakeBoundCallback(&Dequeue,r.get())},
++                {"DropBeforeEnqueue",MakeBoundCallback(&QueueBefore,r.get())},
++                {"DropAfterDequeue",MakeBoundCallback(&QueueAfter,r.get())}}) {
++                ok=queue->TraceConnectWithoutContext(hook.first,hook.second);
++                *coverage << node->GetId() << ',' << i << ',' << hook.first << ',' << ok << '\n';
++                NS_ABORT_MSG_IF(!ok,"Missing queue observer");
++            }
++            // Also preserve sparse, attributable drop records at the device queue layer.
++            for (const std::string layer : {"DropBeforeEnqueue","DropAfterDequeue"})
++                NS_ABORT_MSG_IF(!queue->TraceConnectWithoutContext(layer,MakeBoundCallback(&DeviceDrop,node->GetId(),i,layer)),"Missing queue drop observer");
++            records.push_back(std::move(r));
++        }
++    }
++    coverage->flush();
++    Simulator::ScheduleDestroy(&Finish);
++}
++}} // ns3::bbrroute
++#endif
+diff --git a/scratch/main_satnet/main_satnet.cc b/scratch/main_satnet/main_satnet.cc
+index 774f5c1..8d80a23 100644
+--- a/scratch/main_satnet/main_satnet.cc
++++ b/scratch/main_satnet/main_satnet.cc
+@@ -39,6 +39,7 @@
+ #include "ns3/arbiter-single-forward-helper.h"
+ #include "ns3/ipv4-arbiter-routing-helper.h"
+ #include "ns3/gsl-if-bandwidth-helper.h"
++#include "bbr_route_observer.h"
+ 
+ using namespace ns3;
+ 
+@@ -79,6 +80,8 @@ int main(int argc, char *argv[]) {
+     ArbiterSingleForwardHelper arbiterHelper(basicSimulation, topology->GetNodes());
+     GslIfBandwidthHelper gslIfBandwidthHelper(basicSimulation, topology->GetNodes());
+ 
++    bbrroute::Install(topology->GetNodes());
++
+     // Schedule flows
+     TcpFlowScheduler tcpFlowScheduler(basicSimulation, topology); // Requires enable_tcp_flow_scheduler=true
+ 
+diff --git a/src/internet/model/tcp-bbr.cc b/src/internet/model/tcp-bbr.cc
+index 08fbf95..7aaa742 100644
+--- a/src/internet/model/tcp-bbr.cc
++++ b/src/internet/model/tcp-bbr.cc
+@@ -9,6 +9,12 @@
+  */
+ 
+ #include "tcp-bbr.h"
++#include <limits>
++#include <sstream>
++#include <algorithm>
++#include <cstdlib>
++#include <fstream>
++#include <memory>
+ 
+ #include "ns3/log.h"
+ #include "ns3/simulator.h"
+@@ -126,7 +132,9 @@ TcpBbr::TcpBbr(const TcpBbr& sock)
+       m_extraAckedIdx(sock.m_extraAckedIdx),
+       m_ackEpochTime(sock.m_ackEpochTime),
+       m_ackEpochAcked(sock.m_ackEpochAcked),
+-      m_hasSeenRtt(sock.m_hasSeenRtt)
++      m_hasSeenRtt(sock.m_hasSeenRtt),
++      m_orbitEnabled(sock.m_orbitEnabled),
++      m_orbitRows(sock.m_orbitRows)
+ {
+     NS_LOG_FUNCTION(this);
+ }
+@@ -477,6 +485,7 @@ TcpBbr::UpdateTargetCwnd(Ptr<TcpSocketState> tcb)
+ {
+     NS_LOG_FUNCTION(this << tcb);
+     m_targetCWnd = InFlight(tcb, m_cWndGain) + AckAggregationCwnd();
++    ApplyOrbitTarget(tcb);
+ }
+ 
+ uint32_t
+@@ -712,6 +721,7 @@ TcpBbr::CongControl(Ptr<TcpSocketState> tcb,
+     m_delivered = rc.m_delivered;
+     UpdateModelAndState(tcb, rs);
+     UpdateControlParameters(tcb, rs);
++    ObserveAck(tcb, rs);
+ }
+ 
+ void
+@@ -804,4 +814,135 @@ TcpBbr::Fork()
+     return CopyObject<TcpBbr>(this);
+ }
+ 
++
++void
++TcpBbr::SetObservationFlow(uint64_t flowId)
++{
++    const char* enabled = std::getenv("CS30401_BBR_OBSERVE");
++    m_observeEnabled = enabled && std::string(enabled) == "1";
++    m_observeFlow = flowId;
++}
++
++void
++TcpBbr::ObserveAck(Ptr<TcpSocketState> tcb, const TcpRateOps::TcpRateSample& rs)
++{
++    if (!m_observeEnabled) return;
++    ++m_observeAcks;
++    m_observeAcked += rs.m_ackedSacked;
++    m_observeLost += rs.m_bytesLoss;
++    const int64_t now = Simulator::Now().GetNanoSeconds();
++    const int64_t bucket = now / 100000000;
++    const int state = static_cast<int>(m_state);
++    const double gain = m_pacingGain.Get();
++    if (bucket == m_observeBucket && state == m_observeState && gain == m_observeGain) return;
++    static std::unique_ptr<std::ofstream> out;
++    if (!out)
++    {
++        const char* directory = std::getenv("CS30401_BBR_OBSERVE_DIR");
++        NS_ABORT_MSG_IF(!directory, "CS30401_BBR_OBSERVE_DIR is required");
++        out = std::make_unique<std::ofstream>(std::string(directory) + "/bbr_state.csv");
++        NS_ABORT_MSG_IF(!out->good(), "Cannot open BBR observation CSV");
++        *out << "time_ns,flow_id,reason,bbr_state,rtprop_ns,last_rtt_ns,srtt_ns,max_bw_bps,delivery_rate_bps,rate_interval_ns,pacing_gain,cwnd_gain,cwnd_bytes,inflight_bytes,pacing_rate_bps,cong_state,round_count,min_rtt_expired,pipe_filled,packet_conservation,ack_calls_total,acked_sacked_bytes_total,loss_bytes_total\n";
++        out->precision(17);
++    }
++    *out << now << ',' << m_observeFlow << ','
++         << ((state != m_observeState || gain != m_observeGain) ? "transition" : "sample")
++         << ',' << state << ',';
++    if (m_minRtt.Get() != Time::Max()) *out << m_minRtt.Get().GetNanoSeconds();
++    *out << ',';
++    if (tcb->m_lastRtt.Get() != Time::Max()) *out << tcb->m_lastRtt.Get().GetNanoSeconds();
++    *out << ',';
++    if (tcb->m_srtt.Get() != Time::Max()) *out << tcb->m_srtt.Get().GetNanoSeconds();
++    *out << ',' << m_maxBwFilter.GetBest().GetBitRate() << ',' << rs.m_deliveryRate.GetBitRate()
++         << ',' << rs.m_interval.GetNanoSeconds() << ',' << gain << ',' << m_cWndGain.Get()
++         << ',' << tcb->m_cWnd.Get() << ',' << tcb->m_bytesInFlight.Get()
++         << ',' << tcb->m_pacingRate.Get().GetBitRate() << ',' << static_cast<int>(tcb->m_congState)
++         << ',' << m_roundCount << ',' << m_minRttExpired << ',' << m_isPipeFilled
++         << ',' << m_packetConservation << ',' << m_observeAcks << ',' << m_observeAcked
++         << ',' << m_observeLost << '\n';
++    m_observeBucket = bucket;
++    m_observeState = state;
++    m_observeGain = gain;
++}
++
+ } // namespace ns3
++
++
++void
++TcpBbr::ConfigureOrbitBdp(bool enabled, const std::string& path)
++{
++    m_orbitEnabled = enabled;
++    std::ifstream input(path);
++    NS_ABORT_MSG_IF(!input.good(), "Cannot open declared orbit geometry");
++    std::string line;
++    std::getline(input, line);
++    NS_ABORT_MSG_IF(line != "time_ns,prop_rtt_ns", "Unexpected orbit CSV header");
++    while (std::getline(input, line))
++    {
++        std::istringstream fields(line);
++        std::string a, b, extra;
++        NS_ABORT_MSG_IF(!std::getline(fields,a,',') || !std::getline(fields,b,',') ||
++                        std::getline(fields,extra,','), "Invalid orbit geometry row");
++        const int64_t t = std::stoll(a), rtt = std::stoll(b);
++        NS_ABORT_MSG_IF(t < 0 || rtt <= 0 ||
++                        (!m_orbitRows.empty() && t <= m_orbitRows.back().first),
++                        "Invalid orbit geometry ordering/value");
++        m_orbitRows.emplace_back(t,rtt);
++    }
++    NS_ABORT_MSG_IF(m_orbitRows.empty() || m_orbitRows.front().first != 0,
++                    "Orbit geometry must start at zero");
++}
++
++int64_t
++TcpBbr::OrbitRttAt(int64_t t) const
++{
++    NS_ABORT_MSG_IF(m_orbitRows.empty() || t < 0 || t > m_orbitRows.back().first,
++                    "Orbit lookup outside declared geometry");
++    auto it = std::upper_bound(m_orbitRows.begin(), m_orbitRows.end(), t,
++        [](int64_t value, const std::pair<int64_t,int64_t>& row) {
++            return value < row.first;
++        });
++    return std::prev(it)->second;
++}
++
++void
++TcpBbr::ApplyOrbitTarget(Ptr<TcpSocketState> tcb)
++{
++    if (m_orbitRows.empty()) return;
++    const int64_t now = Simulator::Now().GetNanoSeconds();
++    const int64_t current = OrbitRttAt(now);
++    const int64_t lookup = now + current;
++    const int64_t future = OrbitRttAt(lookup);
++    const uint32_t original = m_targetCWnd;
++    const bool active = m_orbitEnabled && m_isPipeFilled &&
++                        m_state == BbrMode_t::BBR_PROBE_BW;
++    if (active)
++    {
++        const double bdp = m_maxBwFilter.GetBest() * NanoSeconds(future) / 8.0;
++        double target = m_cWndGain.Get() * bdp + 3 * m_sendQuantum;
++        if (m_cycleIndex == 0) target += 2 * tcb->m_segmentSize;
++        NS_ABORT_MSG_IF(target < 0 || target > std::numeric_limits<uint32_t>::max(),
++                        "Orbit target outside cwnd integer range");
++        m_targetCWnd = static_cast<uint32_t>(target) + AckAggregationCwnd();
++    }
++    const int64_t bucket = now / 100000000;
++    if (bucket == m_orbitLastBucket && active == m_orbitLastActive) return;
++    static std::unique_ptr<std::ofstream> out;
++    if (!out)
++    {
++        const char* directory = std::getenv("CS30401_BBR_OBSERVE_DIR");
++        NS_ABORT_MSG_IF(!directory, "Missing orbit trace directory");
++        out = std::make_unique<std::ofstream>(std::string(directory)+"/orbit_bdp_state.csv");
++        NS_ABORT_MSG_IF(!out->good(), "Cannot open orbit trace");
++        *out << "time_ns,flow_id,enabled,active,bbr_state,min_rtt_ns,geo_now_ns,geo_future_ns,lookup_time_ns,max_bw_bps,cwnd_gain,original_target_bytes,actual_target_bytes,cwnd_before_bytes,inflight_bytes\n";
++        out->precision(17);
++    }
++    *out << now << ',' << m_observeFlow << ',' << m_orbitEnabled << ',' << active
++         << ',' << static_cast<int>(m_state) << ',' << m_minRtt.Get().GetNanoSeconds()
++         << ',' << current << ',' << future << ',' << lookup << ','
++         << m_maxBwFilter.GetBest().GetBitRate() << ',' << m_cWndGain.Get()
++         << ',' << original << ',' << m_targetCWnd << ',' << tcb->m_cWnd.Get()
++         << ',' << tcb->m_bytesInFlight.Get() << '\n';
++    m_orbitLastBucket = bucket;
++    m_orbitLastActive = active;
++}
+diff --git a/src/internet/model/tcp-bbr.h b/src/internet/model/tcp-bbr.h
+index 863a1e5..f550737 100644
+--- a/src/internet/model/tcp-bbr.h
++++ b/src/internet/model/tcp-bbr.h
+@@ -12,6 +12,9 @@
+ #define TCPBBR_H
+ 
+ #include "tcp-congestion-ops.h"
++#include <string>
++#include <vector>
++#include <utility>
+ #include "windowed-filter.h"
+ 
+ #include "ns3/data-rate.h"
+@@ -49,6 +52,8 @@ class TcpBbr : public TcpCongestionOps
+      * @return the object TypeId
+      */
+     static TypeId GetTypeId();
++    void SetObservationFlow(uint64_t flowId);
++    void ConfigureOrbitBdp(bool enabled, const std::string& path);
+ 
+     /**
+      * @brief Constructor
+@@ -338,6 +343,18 @@ class TcpBbr : public TcpCongestionOps
+     void UpdateAckAggregation(Ptr<TcpSocketState> tcb, const TcpRateOps::TcpRateSample& rs);
+ 
+   private:
++    void ObserveAck(Ptr<TcpSocketState> tcb, const TcpRateOps::TcpRateSample& rs);
++    int64_t OrbitRttAt(int64_t t) const;
++    void ApplyOrbitTarget(Ptr<TcpSocketState> tcb);
++    bool m_orbitEnabled{false};
++    std::vector<std::pair<int64_t,int64_t>> m_orbitRows;
++    int64_t m_orbitLastBucket{-1};
++    bool m_orbitLastActive{false};
++    bool m_observeEnabled{false};
++    uint64_t m_observeFlow{0}, m_observeAcks{0}, m_observeAcked{0}, m_observeLost{0};
++    int64_t m_observeBucket{-1};
++    int m_observeState{-1};
++    double m_observeGain{-1};
+     BbrMode_t m_state{BbrMode_t::BBR_STARTUP}; //!< Current state of BBR state machine
+     MaxBandwidthFilter_t m_maxBwFilter;        //!< Maximum bandwidth filter
+     uint32_t m_bandwidthWindowLength{0}; //!< A constant specifying the length of the BBR.BtlBw max

@@ -1,0 +1,135 @@
+{
+  "schema": 1,
+  "helper_sha256": "ccba7a4cdbf6b11a271cb46ec003a5cdb18ed86c8523428f3bc639bc0209583b",
+  "analysis_sha256": "63597aa8b5e175abaf7ff0826358b99df2eff282d3a53fa5fa9325f164869c48",
+  "actual_analysis_helper_sha256": "1b04dcf7bd2ca3439caebdfcecf28fb1c377a0eea15dcdee5767786c3c5901b5",
+  "launch_analysis_helper_sha256": {
+    "control100": "52763aabc17748db1528360819bd8241611a9ebc3757fc7aba87e9f50bb95b29",
+    "fifo4-96": "52763aabc17748db1528360819bd8241611a9ebc3757fc7aba87e9f50bb95b29",
+    "codel4-96": "52763aabc17748db1528360819bd8241611a9ebc3757fc7aba87e9f50bb95b29"
+  },
+  "analysis_phase": "After all3 simulations: added first-event report and explicit matched-input/runtime receipts; no simulation/source/runtime changes.",
+  "matched_inputs": {
+    "all_pass": true,
+    "checks": {
+      "control100": {
+        "definition": true,
+        "tail_admission": true,
+        "policy_changed": true,
+        "forwarding_input_changed": true,
+        "physical_drop_first_original_seq1": true,
+        "source_checkpoint": true,
+        "source_files": true,
+        "dependencies": true,
+        "tail_base_patch_sha256": true,
+        "patch_sha256": true,
+        "installed_diff_sha256": true,
+        "ns3_head": true,
+        "runtime_files": true,
+        "build_ready_sha256": true,
+        "image_ref": true,
+        "hints": true,
+        "additional_parameters": true,
+        "input_files": true,
+        "state_static_sha256": true,
+        "dynamic_input_sha256": true,
+        "timeout_s": true,
+        "prospective_gates": true,
+        "command_except_output_locator": true,
+        "environment_except_queue_mode_output_locators": true
+      },
+      "fifo4-96": {
+        "definition": true,
+        "tail_admission": true,
+        "policy_changed": true,
+        "forwarding_input_changed": true,
+        "physical_drop_first_original_seq1": true,
+        "source_checkpoint": true,
+        "source_files": true,
+        "dependencies": true,
+        "tail_base_patch_sha256": true,
+        "patch_sha256": true,
+        "installed_diff_sha256": true,
+        "ns3_head": true,
+        "runtime_files": true,
+        "build_ready_sha256": true,
+        "image_ref": true,
+        "hints": true,
+        "additional_parameters": true,
+        "input_files": true,
+        "state_static_sha256": true,
+        "dynamic_input_sha256": true,
+        "timeout_s": true,
+        "prospective_gates": true,
+        "command_except_output_locator": true,
+        "environment_except_queue_mode_output_locators": true
+      },
+      "codel4-96": {
+        "definition": true,
+        "tail_admission": true,
+        "policy_changed": true,
+        "forwarding_input_changed": true,
+        "physical_drop_first_original_seq1": true,
+        "source_checkpoint": true,
+        "source_files": true,
+        "dependencies": true,
+        "tail_base_patch_sha256": true,
+        "patch_sha256": true,
+        "installed_diff_sha256": true,
+        "ns3_head": true,
+        "runtime_files": true,
+        "build_ready_sha256": true,
+        "image_ref": true,
+        "hints": true,
+        "additional_parameters": true,
+        "input_files": true,
+        "state_static_sha256": true,
+        "dynamic_input_sha256": true,
+        "timeout_s": true,
+        "prospective_gates": true,
+        "command_except_output_locator": true,
+        "environment_except_queue_mode_output_locators": true
+      }
+    },
+    "actual_launch_commits": {
+      "control100": "b6112ce8bd4e2be9c0508bb2cbded4aad1713dad",
+      "fifo4-96": "d5d6d2932a9b27b7dafe76072df9c96cf3c956e4",
+      "codel4-96": "d5d6d2932a9b27b7dafe76072df9c96cf3c956e4"
+    },
+    "launch_analyzer_sha256": {
+      "control100": "52763aabc17748db1528360819bd8241611a9ebc3757fc7aba87e9f50bb95b29",
+      "fifo4-96": "52763aabc17748db1528360819bd8241611a9ebc3757fc7aba87e9f50bb95b29",
+      "codel4-96": "52763aabc17748db1528360819bd8241611a9ebc3757fc7aba87e9f50bb95b29"
+    },
+    "allowed_differences": [
+      "source queue mode/maxima and their native qdisc default metadata",
+      "run-output locator; corresponding trace-output directories"
+    ],
+    "launch_commit_boundary": "Actual Git HEAD is recorded per case; exact executed source/runtime identities are compared independently."
+  },
+  "cases": {
+    "control100": {
+      "path": "/work/docs/experiments/assets/20261013-queue-backpressure/cases/control100.json",
+      "sha256": "8b189487ddadc591d802ded7deb9c7bada3c801d30f7a0838a5ae7cdcc912426"
+    },
+    "fifo4-96": {
+      "path": "/work/docs/experiments/assets/20261013-queue-backpressure/cases/fifo4-96.json",
+      "sha256": "27400b8efc22c86490761626786ec24944a293bc8e80b98e3890691c9afb8b6c"
+    },
+    "codel4-96": {
+      "path": "/work/docs/experiments/assets/20261013-queue-backpressure/cases/codel4-96.json",
+      "sha256": "2251fb8088c89a3867caffa287bf1a02a3d2962cd8c949d09636eceb71f83d57"
+    }
+  },
+  "results": {
+    "path": "/work/docs/experiments/assets/20261013-queue-backpressure/results.csv",
+    "sha256": "c7de3b138462fb94c76655ea10b0a0c1d589acae98e3e2c38a28d3e04c935c19",
+    "rows": 12
+  },
+  "raw_scope": "All3 complete original run files preserved in the separate raw archive; no raw CSV is copied into this small export.",
+  "limitations": [
+    "Served residence windows use serialization-start event time; dropped and pending ages are separate in analysis.json.",
+    "Unique all-layer losses are tagged payload-bearing transmissions; unmapped ACK/control notifications are separate.",
+    "No Stage2 receiver-drop control or result-dependent parameter tuning was run."
+  ]
+}

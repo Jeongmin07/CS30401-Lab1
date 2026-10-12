@@ -1,0 +1,259 @@
+{
+  "tool": {
+    "path": "/work/code/queue-pacing/analyze.py",
+    "bytes": 11169,
+    "sha256": "5dc28fb0fad89c82ea6435e4c4a0202f3ceff16fe416b692d328312dfff4bb9e"
+  },
+  "cases": [
+    "off",
+    "native",
+    "capacity",
+    "micro-original",
+    "micro-current",
+    "micro-selected",
+    "loss-current",
+    "loss-selected"
+  ],
+  "outputs": [
+    {
+      "path": "/tmp/queue-pacing-final-export/cases/capacity/config_ns3.properties",
+      "bytes": 612,
+      "sha256": "d9b8f7df818fa7a1257fdfa4eea87d42c586019b5b30f12c3d28e888e626b285"
+    },
+    {
+      "path": "/tmp/queue-pacing-final-export/cases/capacity/manifest.json",
+      "bytes": 427538,
+      "sha256": "11529ea6d447529b1cfb0bef4e68ae1c147b3100ee262d0eba45fca0085ae29d"
+    },
+    {
+      "path": "/tmp/queue-pacing-final-export/cases/capacity/schedule.csv",
+      "bytes": 119,
+      "sha256": "c441ec9f73e726dcc20348d6c2fb2562401925fd26385a8c7ec8c45c9cf6c809"
+    },
+    {
+      "path": "/tmp/queue-pacing-final-export/cases/capacity/summary.json",
+      "bytes": 319640,
+      "sha256": "a3c22489b32b7de6380080d12f7bc607faaf57e12a5c95505bfa828d8407baac"
+    },
+    {
+      "path": "/tmp/queue-pacing-final-export/cases/capacity/tcp_flow_0_orbit_loss.csv",
+      "bytes": 1386,
+      "sha256": "58cbd7db6402345d8f6dc41d852b45136de4d349eabfc93be652b9201a9e00bc"
+    },
+    {
+      "path": "/tmp/queue-pacing-final-export/cases/capacity/tcp_flow_0_orbit_loss_tail.csv",
+      "bytes": 630,
+      "sha256": "acc282c84cb780fe376b13547a1559bf6d46f47886c5717709c6205712d8fdb4"
+    },
+    {
+      "path": "/tmp/queue-pacing-final-export/cases/loss-current/config_ns3.properties",
+      "bytes": 613,
+      "sha256": "8c46772c95c46ca99935dd68cf6957631972a2bb519acabe0880640408b0f4d4"
+    },
+    {
+      "path": "/tmp/queue-pacing-final-export/cases/loss-current/manifest.json",
+      "bytes": 437968,
+      "sha256": "acbbef074e9ccf88cf6688b14d326c5cda65bb04b4aea5cc2c5394d8701ad4ef"
+    },
+    {
+      "path": "/tmp/queue-pacing-final-export/cases/loss-current/pacing_first_loss.csv",
+      "bytes": 100,
+      "sha256": "266ddf0e757caf8cfba1a7c5dde547f752b40a130ec9c6b57ce39621b06f9c8c"
+    },
+    {
+      "path": "/tmp/queue-pacing-final-export/cases/loss-current/pacing_first_loss_install.csv",
+      "bytes": 90,
+      "sha256": "0607f701d5ba9cb6ab82bbc68812cd170aff4837750b5341c631d1bcddf22724"
+    },
+    {
+      "path": "/tmp/queue-pacing-final-export/cases/loss-current/schedule.csv",
+      "bytes": 119,
+      "sha256": "c441ec9f73e726dcc20348d6c2fb2562401925fd26385a8c7ec8c45c9cf6c809"
+    },
+    {
+      "path": "/tmp/queue-pacing-final-export/cases/loss-current/summary.json",
+      "bytes": 323088,
+      "sha256": "fc58e47fc39c49fead94ed49bf4f62c197c27c4e65de18c74cb66b76755a15fd"
+    },
+    {
+      "path": "/tmp/queue-pacing-final-export/cases/loss-current/tcp_flow_0_orbit_loss.csv",
+      "bytes": 1386,
+      "sha256": "796f7901aaeb3b41a27f8df0473350bc36f490a1c115aa60971f907465d3a0ac"
+    },
+    {
+      "path": "/tmp/queue-pacing-final-export/cases/loss-current/tcp_flow_0_orbit_loss_tail.csv",
+      "bytes": 621,
+      "sha256": "d5464dbc5add21469fc4dead417dde71f49f60c6a8d32c34d6dbdd89130e0ae3"
+    },
+    {
+      "path": "/tmp/queue-pacing-final-export/cases/loss-selected/config_ns3.properties",
+      "bytes": 612,
+      "sha256": "d9b8f7df818fa7a1257fdfa4eea87d42c586019b5b30f12c3d28e888e626b285"
+    },
+    {
+      "path": "/tmp/queue-pacing-final-export/cases/loss-selected/manifest.json",
+      "bytes": 438034,
+      "sha256": "736deb12decd1c431c540b376b9a56744c39c738a2685843056361dac10a0c57"
+    },
+    {
+      "path": "/tmp/queue-pacing-final-export/cases/loss-selected/pacing_first_loss.csv",
+      "bytes": 100,
+      "sha256": "266ddf0e757caf8cfba1a7c5dde547f752b40a130ec9c6b57ce39621b06f9c8c"
+    },
+    {
+      "path": "/tmp/queue-pacing-final-export/cases/loss-selected/pacing_first_loss_install.csv",
+      "bytes": 90,
+      "sha256": "0607f701d5ba9cb6ab82bbc68812cd170aff4837750b5341c631d1bcddf22724"
+    },
+    {
+      "path": "/tmp/queue-pacing-final-export/cases/loss-selected/schedule.csv",
+      "bytes": 119,
+      "sha256": "c441ec9f73e726dcc20348d6c2fb2562401925fd26385a8c7ec8c45c9cf6c809"
+    },
+    {
+      "path": "/tmp/queue-pacing-final-export/cases/loss-selected/summary.json",
+      "bytes": 322295,
+      "sha256": "50ee6aea125bbbb60aa2af7ca4b84b4c36a1a6a006018acbd0a0d2b1d4365a8a"
+    },
+    {
+      "path": "/tmp/queue-pacing-final-export/cases/loss-selected/tcp_flow_0_orbit_loss.csv",
+      "bytes": 1386,
+      "sha256": "8a38d3d37353d00e5c94fc13f055dfacb63d614f092daf46b04675500488ac63"
+    },
+    {
+      "path": "/tmp/queue-pacing-final-export/cases/loss-selected/tcp_flow_0_orbit_loss_tail.csv",
+      "bytes": 630,
+      "sha256": "972e86d11d0e926506ade1c2e22dc981db53067815076b59adc4da22735fa40c"
+    },
+    {
+      "path": "/tmp/queue-pacing-final-export/cases/micro-current/config_ns3.properties",
+      "bytes": 34,
+      "sha256": "f3f2e1b48fdfdd1d6ae0913db5fb1a817dd66b0fbca791dc678692fd6f1496f9"
+    },
+    {
+      "path": "/tmp/queue-pacing-final-export/cases/micro-current/manifest.json",
+      "bytes": 20597,
+      "sha256": "6d998bd0e2ef5cdbda00e641b3c754d0a2d67d90949ad94efbe290153ae79f70"
+    },
+    {
+      "path": "/tmp/queue-pacing-final-export/cases/micro-current/summary.json",
+      "bytes": 26976,
+      "sha256": "046d2179066636d679d154c73d28901dac22f97fae6d06e4e5fba8ddbdb123be"
+    },
+    {
+      "path": "/tmp/queue-pacing-final-export/cases/micro-current/tcp_flow_0_orbit_loss.csv",
+      "bytes": 1233,
+      "sha256": "65425aa39716a0ddbbb98188869d0dd428c5474659ac00482c877a94582d2590"
+    },
+    {
+      "path": "/tmp/queue-pacing-final-export/cases/micro-current/tcp_flow_0_orbit_loss_tail.csv",
+      "bytes": 1008,
+      "sha256": "9b4059ca2cd970fba4641317e1507f9ea2b1b288817e72084da9a5481e918000"
+    },
+    {
+      "path": "/tmp/queue-pacing-final-export/cases/micro-original/config_ns3.properties",
+      "bytes": 34,
+      "sha256": "f3f2e1b48fdfdd1d6ae0913db5fb1a817dd66b0fbca791dc678692fd6f1496f9"
+    },
+    {
+      "path": "/tmp/queue-pacing-final-export/cases/micro-original/manifest.json",
+      "bytes": 19818,
+      "sha256": "ec4cc9e1c63c8c9fe92968a0f620dfdef33b8ee5d86f149b4aec3d3b973a717d"
+    },
+    {
+      "path": "/tmp/queue-pacing-final-export/cases/micro-original/summary.json",
+      "bytes": 14250,
+      "sha256": "77d84cbe90039cd27d3af39463cf0a6171fbbe458ad9481175ca259d14188afc"
+    },
+    {
+      "path": "/tmp/queue-pacing-final-export/cases/micro-selected/config_ns3.properties",
+      "bytes": 34,
+      "sha256": "f3f2e1b48fdfdd1d6ae0913db5fb1a817dd66b0fbca791dc678692fd6f1496f9"
+    },
+    {
+      "path": "/tmp/queue-pacing-final-export/cases/micro-selected/manifest.json",
+      "bytes": 20675,
+      "sha256": "a4cc18cc1324e6fe81cd5ce4a9dff19d890454ad0b63a6622f429116f5f80f9b"
+    },
+    {
+      "path": "/tmp/queue-pacing-final-export/cases/micro-selected/summary.json",
+      "bytes": 27342,
+      "sha256": "cb83c5ecc5d6489b81dc66220cacf3a2f589890886b5d8e499cfaf3eb50a176c"
+    },
+    {
+      "path": "/tmp/queue-pacing-final-export/cases/micro-selected/tcp_flow_0_orbit_loss.csv",
+      "bytes": 1224,
+      "sha256": "57de46a60ff69710535fbaa34315a04cb56c8b867f152f4e8badbb2dd4a52168"
+    },
+    {
+      "path": "/tmp/queue-pacing-final-export/cases/micro-selected/tcp_flow_0_orbit_loss_tail.csv",
+      "bytes": 1029,
+      "sha256": "9be7109b01ae5a32f344989966f1f075d9822fe800502b09182dd3ffe39e399b"
+    },
+    {
+      "path": "/tmp/queue-pacing-final-export/cases/native/config_ns3.properties",
+      "bytes": 612,
+      "sha256": "d9b8f7df818fa7a1257fdfa4eea87d42c586019b5b30f12c3d28e888e626b285"
+    },
+    {
+      "path": "/tmp/queue-pacing-final-export/cases/native/manifest.json",
+      "bytes": 427530,
+      "sha256": "91dd926d4b58275308fb4fd4b97aeef2e92909ea75f5d2d663d8bddb997f9e57"
+    },
+    {
+      "path": "/tmp/queue-pacing-final-export/cases/native/schedule.csv",
+      "bytes": 119,
+      "sha256": "c441ec9f73e726dcc20348d6c2fb2562401925fd26385a8c7ec8c45c9cf6c809"
+    },
+    {
+      "path": "/tmp/queue-pacing-final-export/cases/native/summary.json",
+      "bytes": 319443,
+      "sha256": "8bee9c39b9cdfcf4a16036663ada405ced49a7f43b63fff5467d21d730765e85"
+    },
+    {
+      "path": "/tmp/queue-pacing-final-export/cases/native/tcp_flow_0_orbit_loss.csv",
+      "bytes": 1386,
+      "sha256": "cd130992e8bbbf83642e060f77a06bd605a85d388d6670fabd927b588e755928"
+    },
+    {
+      "path": "/tmp/queue-pacing-final-export/cases/native/tcp_flow_0_orbit_loss_tail.csv",
+      "bytes": 621,
+      "sha256": "f44e6aaa6511197bf29c1ea38a295fb0a148583f572016ed43bf88386c08d68d"
+    },
+    {
+      "path": "/tmp/queue-pacing-final-export/cases/off/config_ns3.properties",
+      "bytes": 613,
+      "sha256": "8c46772c95c46ca99935dd68cf6957631972a2bb519acabe0880640408b0f4d4"
+    },
+    {
+      "path": "/tmp/queue-pacing-final-export/cases/off/manifest.json",
+      "bytes": 427516,
+      "sha256": "1f58a2a0209abed2cae4e3a872c0fbf6f3ede2d4a4c5309ee1d5c0726c0870fe"
+    },
+    {
+      "path": "/tmp/queue-pacing-final-export/cases/off/schedule.csv",
+      "bytes": 119,
+      "sha256": "c441ec9f73e726dcc20348d6c2fb2562401925fd26385a8c7ec8c45c9cf6c809"
+    },
+    {
+      "path": "/tmp/queue-pacing-final-export/cases/off/summary.json",
+      "bytes": 363446,
+      "sha256": "74eddcc47646c10220945ba73c3f5b385d8de8d68cd055a708edd6b5c5121d35"
+    },
+    {
+      "path": "/tmp/queue-pacing-final-export/cases/off/tcp_flow_0_orbit_loss.csv",
+      "bytes": 1386,
+      "sha256": "dd65e13e2e79fefa5b63612950bd59f5e3fa772ee1b9fd8a07f9208234695374"
+    },
+    {
+      "path": "/tmp/queue-pacing-final-export/cases/off/tcp_flow_0_orbit_loss_tail.csv",
+      "bytes": 621,
+      "sha256": "8447baa1e3aa446ab7ca47c36eea5e2b8c8db4c38c3f04a3b805cbcd0f4af8ec"
+    },
+    {
+      "path": "/tmp/queue-pacing-final-export/results.csv",
+      "bytes": 939,
+      "sha256": "9b94f93e3fe8919ebca5ea653ce0caa45d3391b91ab69b42ad9b7934e78a0479"
+    }
+  ]
+}

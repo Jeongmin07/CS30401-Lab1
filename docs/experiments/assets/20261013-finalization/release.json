@@ -1,0 +1,45 @@
+{
+  "url": "https://github.com/Jeongmin07/CS30401-Lab1/releases/tag/lab1-final-20261013",
+  "tag": "lab1-final-20261013",
+  "tag_commit": "385be59765a670a14e8379caab43e0b82d3e87af",
+  "is_prerelease": true,
+  "is_draft": false,
+  "assets": [
+    {
+      "name": "Lab1_5.zip",
+      "bytes": 773756,
+      "sha256": "695af4d2338576c6bfd84a6401521964368303bf735b46dd61005844f48e9595",
+      "url": "https://github.com/Jeongmin07/CS30401-Lab1/releases/download/lab1-final-20261013/Lab1_5.zip",
+      "remote_digest_equal": true
+    },
+    {
+      "name": "report.pdf",
+      "bytes": 185984,
+      "sha256": "3cd0da9394f0db36f30810a333c759932518e02a115f32b397845fb6a63cc770",
+      "url": "https://github.com/Jeongmin07/CS30401-Lab1/releases/download/lab1-final-20261013/report.pdf",
+      "remote_digest_equal": true
+    },
+    {
+      "name": "lab1-final-bp-20261013.tar.gz",
+      "bytes": 53775408,
+      "sha256": "d3076df71f124e4cc21644d675708fe5570f085f98fb880d571ee176a0eae029",
+      "url": "https://github.com/Jeongmin07/CS30401-Lab1/releases/download/lab1-final-20261013/lab1-final-bp-20261013.tar.gz",
+      "remote_digest_equal": true
+    },
+    {
+      "name": "lab1-final-pace-20261013.tar.gz",
+      "bytes": 129625046,
+      "sha256": "881ea9904c31a68467aa5c873fff222e0cd9a973cf5a78f087ed6b6e628109cd",
+      "url": "https://github.com/Jeongmin07/CS30401-Lab1/releases/download/lab1-final-20261013/lab1-final-pace-20261013.tar.gz",
+      "remote_digest_equal": true
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "bytes": 352,
+      "sha256": "b74e55b305e5aa90050702b7079551b2a5b6ec25baf65cdbf34081f7ba2574dd",
+      "url": "https://github.com/Jeongmin07/CS30401-Lab1/releases/download/lab1-final-20261013/SHA256SUMS.txt",
+      "remote_digest_equal": true
+    }
+  ],
+  "every_remote_size_and_sha256_equal": true
+}

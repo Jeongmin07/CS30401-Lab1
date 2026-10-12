@@ -1,0 +1,202 @@
+{
+  "fresh_data_sha256": "2fe4ddb013c0bce29429e624fce18145dd8a9b6ddfc0f494b38dd27c90ef9df1",
+  "fresh_cases": 19,
+  "metric_fields": [
+    "receiver_bytes",
+    "receiver_goodput_mbps",
+    "fct_s",
+    "retransmissions",
+    "recovery_entries",
+    "ca_loss_entries",
+    "distinct_tagged_drops"
+  ],
+  "metric_checks": {
+    "leo10-base": {
+      "receiver_bytes": true,
+      "receiver_goodput_mbps": true,
+      "fct_s": true,
+      "retransmissions": true,
+      "recovery_entries": true,
+      "ca_loss_entries": true,
+      "distinct_tagged_drops": true
+    },
+    "leo10-selective": {
+      "receiver_bytes": true,
+      "receiver_goodput_mbps": true,
+      "fct_s": true,
+      "retransmissions": true,
+      "recovery_entries": true,
+      "ca_loss_entries": true,
+      "distinct_tagged_drops": true
+    },
+    "leo10-tail": {
+      "receiver_bytes": true,
+      "receiver_goodput_mbps": true,
+      "fct_s": true,
+      "retransmissions": true,
+      "recovery_entries": true,
+      "ca_loss_entries": true,
+      "distinct_tagged_drops": true
+    },
+    "micro-base": {
+      "receiver_bytes": true,
+      "receiver_goodput_mbps": true,
+      "fct_s": true,
+      "retransmissions": true,
+      "recovery_entries": true,
+      "ca_loss_entries": true,
+      "distinct_tagged_drops": true
+    },
+    "micro-selective": {
+      "receiver_bytes": true,
+      "receiver_goodput_mbps": true,
+      "fct_s": true,
+      "retransmissions": true,
+      "recovery_entries": true,
+      "ca_loss_entries": true,
+      "distinct_tagged_drops": true
+    },
+    "micro-tail": {
+      "receiver_bytes": true,
+      "receiver_goodput_mbps": true,
+      "fct_s": true,
+      "retransmissions": true,
+      "recovery_entries": true,
+      "ca_loss_entries": true,
+      "distinct_tagged_drops": true
+    },
+    "micro21-selective": {
+      "receiver_bytes": true,
+      "receiver_goodput_mbps": true,
+      "fct_s": true,
+      "retransmissions": true,
+      "recovery_entries": true,
+      "ca_loss_entries": true,
+      "distinct_tagged_drops": true
+    },
+    "micro21-tail": {
+      "receiver_bytes": true,
+      "receiver_goodput_mbps": true,
+      "fct_s": true,
+      "retransmissions": true,
+      "recovery_entries": true,
+      "ca_loss_entries": true,
+      "distinct_tagged_drops": true
+    },
+    "leo10-drop-base": {
+      "receiver_bytes": true,
+      "receiver_goodput_mbps": true,
+      "fct_s": true,
+      "retransmissions": true,
+      "recovery_entries": true,
+      "ca_loss_entries": true,
+      "distinct_tagged_drops": true
+    },
+    "leo10-drop-tail": {
+      "receiver_bytes": true,
+      "receiver_goodput_mbps": true,
+      "fct_s": true,
+      "retransmissions": true,
+      "recovery_entries": true,
+      "ca_loss_entries": true,
+      "distinct_tagged_drops": true
+    },
+    "capacity": {
+      "receiver_bytes": true,
+      "receiver_goodput_mbps": true,
+      "fct_s": true,
+      "retransmissions": true,
+      "recovery_entries": true,
+      "ca_loss_entries": true,
+      "distinct_tagged_drops": true
+    },
+    "native": {
+      "receiver_bytes": true,
+      "receiver_goodput_mbps": true,
+      "fct_s": true,
+      "retransmissions": true,
+      "recovery_entries": true,
+      "ca_loss_entries": true,
+      "distinct_tagged_drops": true
+    },
+    "micro-selected": {
+      "receiver_bytes": true,
+      "receiver_goodput_mbps": true,
+      "fct_s": true,
+      "retransmissions": true,
+      "recovery_entries": true,
+      "ca_loss_entries": true,
+      "distinct_tagged_drops": true
+    },
+    "loss-current": {
+      "receiver_bytes": true,
+      "receiver_goodput_mbps": true,
+      "fct_s": true,
+      "retransmissions": true,
+      "recovery_entries": true,
+      "ca_loss_entries": true,
+      "distinct_tagged_drops": true
+    },
+    "loss-selected": {
+      "receiver_bytes": true,
+      "receiver_goodput_mbps": true,
+      "fct_s": true,
+      "retransmissions": true,
+      "recovery_entries": true,
+      "ca_loss_entries": true,
+      "distinct_tagged_drops": true
+    },
+    "selective-route75-delayed78": {
+      "receiver_bytes": true,
+      "receiver_goodput_mbps": true,
+      "fct_s": true,
+      "retransmissions": true,
+      "recovery_entries": true,
+      "ca_loss_entries": true,
+      "distinct_tagged_drops": true
+    },
+    "control100": {
+      "receiver_bytes": true,
+      "receiver_goodput_mbps": true,
+      "fct_s": true,
+      "retransmissions": true,
+      "recovery_entries": true,
+      "ca_loss_entries": true,
+      "distinct_tagged_drops": true
+    },
+    "fifo4-96": {
+      "receiver_bytes": true,
+      "receiver_goodput_mbps": true,
+      "fct_s": true,
+      "retransmissions": true,
+      "recovery_entries": true,
+      "ca_loss_entries": true,
+      "distinct_tagged_drops": true
+    },
+    "codel4-96": {
+      "receiver_bytes": true,
+      "receiver_goodput_mbps": true,
+      "fct_s": true,
+      "retransmissions": true,
+      "recovery_entries": true,
+      "ca_loss_entries": true,
+      "distinct_tagged_drops": true
+    }
+  },
+  "series": {
+    "stock_bulk/cwnd": true,
+    "stock_bulk/source_queue_bins": true,
+    "tail_bulk/cwnd": true,
+    "tail_bulk/source_queue_bins": true,
+    "capacity_bulk/source_queue_bins": true,
+    "route_delayed/source_queue_bins": true
+  },
+  "vector_pdfs_byte_equal": {
+    "finite-cost.pdf": true,
+    "natural-event.pdf": true,
+    "queue-causality.pdf": true
+  },
+  "table_II_tex_byte_equal": true,
+  "table_II_csv_byte_equal": true,
+  "qualification": "Input provenance remains fresh/historical separately; comparisons never substitute historical values for fresh outputs."
+}

@@ -1,0 +1,44 @@
+{
+  "kind": "source-and-provided-geometry-feasibility-screen-not-TCP-simulation",
+  "source": "code/kim-study/path_truth_200s.csv",
+  "source_sha256": "49bd5418f2b13bdbf6d703f719d61075f814cc86d44c745651bf797f4e5f656c",
+  "rows": 2000,
+  "min_prop_rtt_ms": 87.454,
+  "max_prop_rtt_ms": 98.535,
+  "max_over_min": 1.1267066114757474,
+  "twice_min_ms": 174.908,
+  "route_step_rtt_changes": [
+    {
+      "time_s": 2.4,
+      "delta_ms": 0.001
+    },
+    {
+      "time_s": 26.2,
+      "delta_ms": -6.634
+    },
+    {
+      "time_s": 75.0,
+      "delta_ms": -3.343
+    },
+    {
+      "time_s": 121.6,
+      "delta_ms": 3.061
+    },
+    {
+      "time_s": 187.4,
+      "delta_ms": 7.231
+    },
+    {
+      "time_s": 193.8,
+      "delta_ms": 0.004
+    },
+    {
+      "time_s": 194.0,
+      "delta_ms": 0.003
+    }
+  ],
+  "bbr_probe_bw_cwnd_gain": 2,
+  "bbr_screen": "Pure geometry increase does not exceed the 2BDP target if bandwidth estimate is accurate; actual recovery/app/cwnd limits and queue costs are not excluded.",
+  "hystart_delay_threshold": "clamp(minRTT,4ms,1000ms), not minRTT/8",
+  "hystart_screen": "Geometry-only changes are below the existing ns3 delay detector threshold; ACK-train behavior is untested."
+}

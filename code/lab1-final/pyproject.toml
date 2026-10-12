@@ -1,0 +1,8 @@
+[project]
+name = "cs30401-lab1-final"
+version = "1.0.0"
+requires-python = ">=3.11"
+dependencies = ["matplotlib==3.10.8"]
+
+[tool.uv]
+package = false

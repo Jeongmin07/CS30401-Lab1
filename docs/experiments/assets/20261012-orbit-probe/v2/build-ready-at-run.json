@@ -1,0 +1,24 @@
+{
+  "patch_sha256": "d3f1984bcdffbf3a9404e1a4f6de47d4a412f8ae00e719ad8b634276257a004e",
+  "source_diff_sha256": "d3f1984bcdffbf3a9404e1a4f6de47d4a412f8ae00e719ad8b634276257a004e",
+  "build_log_sha256": "a82426af0ed0bc9244b88d5b6a679b3ff5422e58df41ae55efeface78624f513",
+  "build_completed_exit_code": 0,
+  "runtime_files": {
+    "scratch/main_satnet/ns3.48-main_satnet": "a55f2db17a5741ffe01fbfd5f37ed8b66519ef150ef4f8bd4adc5b3c454103ba",
+    "lib/libns3.48-antenna.so": "edf56f782f446d54291425c4b357fb2a609f64da3a3a88a2d48e18dbcf4200b8",
+    "lib/libns3.48-applications.so": "029ee91a59a88fd8cff0c865053f31dfc36f6cc6f10484ebb3843864025750ca",
+    "lib/libns3.48-basic-sim.so": "1b932145bbc93ea58461d54fe29f9795bf654a21a33d7955352584086cc05e5a",
+    "lib/libns3.48-bridge.so": "5c0e5f9092dc8a215a2d77aaa75ba0e3db181578566db25b9463cc220a94a1a0",
+    "lib/libns3.48-core.so": "5f6e271f0e98438059ac55c8dc5c94ee411050cb7cd7f23956963310674982a1",
+    "lib/libns3.48-flow-monitor.so": "5fbe40f2a843bf01f38b943a28377f7e9628b748506498298cfd6096c621b1ad",
+    "lib/libns3.48-internet-apps.so": "c31699838a1a449773562164af013663951dbd78c7b0e1bcddc4b451f2eaa6bc",
+    "lib/libns3.48-internet.so": "8a1095f4c4128e544447d78292a8ef247be126af2d501ad5b9897a6e1c7b154f",
+    "lib/libns3.48-mobility.so": "45dc648f0ff11a8c83574fdea0dd189a35ccc606d625d3e3612afa3a6f806351",
+    "lib/libns3.48-network.so": "7930b3ed5f927eb731b7a010e5664ebd7927d1b25ecd2ef1f950857b434621b7",
+    "lib/libns3.48-point-to-point.so": "af4a8a6c3378e80fc6347fd77ad9c0bad5783eb34c2ea90e416f797b985e3f89",
+    "lib/libns3.48-satellite-network.so": "6c54072c67b2a2470abe2aca9f561d57093df69fa832ae2035753e2e52ebf907",
+    "lib/libns3.48-satellite.so": "68e7ce4d29d13efe374989d3279a8587bedb7a8104757938ab2c14605e3d4002",
+    "lib/libns3.48-stats.so": "ab02ae3cfe9c8453b6b251528884a678fe470cb1aac2e6500064a6fd44caf447",
+    "lib/libns3.48-traffic-control.so": "354fd4e2ef550af211e9abf272fd64b45818636c845b4876b606a0ffa6520d53"
+  }
+}

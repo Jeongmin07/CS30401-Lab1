@@ -1,0 +1,258 @@
+{
+  "case_metrics": {
+    "micro-base": {
+      "case": "micro-base",
+      "duration_s": 4.0,
+      "flow_start_s": 0.0,
+      "expected_finite_bytes": 27600,
+      "receiver_bytes": 27600,
+      "receiver_goodput_mbps": 0.0552,
+      "transfer_complete": true,
+      "fct_s": 0.25150992,
+      "retransmissions": 1,
+      "recovery_entries": 1,
+      "ca_loss_entries": 0,
+      "distinct_tagged_drops": 1,
+      "drop_trace_rows": 1,
+      "actual_high_threshold_time_s": 0,
+      "censored_high_threshold_intervals": 0,
+      "guard_starts": 0,
+      "guard_start_skips": 0,
+      "bounded_expiry_reevaluations": 0,
+      "expiry_entered_recovery": 0
+    },
+    "micro21-selective": {
+      "case": "micro21-selective",
+      "duration_s": 4.0,
+      "flow_start_s": 0.0,
+      "expected_finite_bytes": 28980,
+      "receiver_bytes": 28980,
+      "receiver_goodput_mbps": 0.05796,
+      "transfer_complete": true,
+      "fct_s": 0.35059712,
+      "retransmissions": 1,
+      "recovery_entries": 1,
+      "ca_loss_entries": 0,
+      "distinct_tagged_drops": 1,
+      "drop_trace_rows": 1,
+      "actual_high_threshold_time_s": 0,
+      "censored_high_threshold_intervals": 0,
+      "guard_starts": 0,
+      "guard_start_skips": 0,
+      "bounded_expiry_reevaluations": 0,
+      "expiry_entered_recovery": 0
+    },
+    "micro21-tail": {
+      "case": "micro21-tail",
+      "duration_s": 4.0,
+      "flow_start_s": 0.0,
+      "expected_finite_bytes": 28980,
+      "receiver_bytes": 28980,
+      "receiver_goodput_mbps": 0.05796,
+      "transfer_complete": true,
+      "fct_s": 0.35059712,
+      "retransmissions": 1,
+      "recovery_entries": 1,
+      "ca_loss_entries": 0,
+      "distinct_tagged_drops": 1,
+      "drop_trace_rows": 1,
+      "actual_high_threshold_time_s": 0,
+      "censored_high_threshold_intervals": 0,
+      "guard_starts": 0,
+      "guard_start_skips": 0,
+      "bounded_expiry_reevaluations": 0,
+      "expiry_entered_recovery": 0
+    },
+    "micro-selective": {
+      "case": "micro-selective",
+      "duration_s": 4.0,
+      "flow_start_s": 0.0,
+      "expected_finite_bytes": 27600,
+      "receiver_bytes": 27600,
+      "receiver_goodput_mbps": 0.0552,
+      "transfer_complete": true,
+      "fct_s": 0.3504824,
+      "retransmissions": 1,
+      "recovery_entries": 1,
+      "ca_loss_entries": 0,
+      "distinct_tagged_drops": 1,
+      "drop_trace_rows": 1,
+      "actual_high_threshold_time_s": 0,
+      "censored_high_threshold_intervals": 0,
+      "guard_starts": 0,
+      "guard_start_skips": 0,
+      "bounded_expiry_reevaluations": 0,
+      "expiry_entered_recovery": 0
+    },
+    "micro-tail": {
+      "case": "micro-tail",
+      "duration_s": 4.0,
+      "flow_start_s": 0.0,
+      "expected_finite_bytes": 27600,
+      "receiver_bytes": 27600,
+      "receiver_goodput_mbps": 0.0552,
+      "transfer_complete": true,
+      "fct_s": 0.257223678,
+      "retransmissions": 1,
+      "recovery_entries": 1,
+      "ca_loss_entries": 0,
+      "distinct_tagged_drops": 1,
+      "drop_trace_rows": 1,
+      "actual_high_threshold_time_s": 0,
+      "censored_high_threshold_intervals": 0,
+      "guard_starts": 0,
+      "guard_start_skips": 0,
+      "bounded_expiry_reevaluations": 0,
+      "expiry_entered_recovery": 0
+    }
+  },
+  "tail_admission": [
+    {
+      "admission": {
+        "flow_id": 0,
+        "time_ns": 201165760,
+        "event": "TAIL_ADMIT",
+        "epoch_ns": 150000000,
+        "deadline_ns": 207108958,
+        "seq": 26221,
+        "admitted_bytes": 1380,
+        "new_sack_bytes": 1380,
+        "unsent_bytes": 1380,
+        "pipe_before": 13800,
+        "pipe_after": 15180,
+        "cwnd_bytes": 13800,
+        "receiver_right_edge": 33554433,
+        "used_before": 0,
+        "used_after": 1,
+        "cong_state": 1,
+        "close_on_empty": 1,
+        "shutdown_send": 0,
+        "normal_packets_sent": 1,
+        "ordinary_window_bytes": 0
+      },
+      "actual_original_tx": {
+        "time_ns": 201165760,
+        "seq": 26221,
+        "payload_bytes": 1380,
+        "tx_id": 22,
+        "flags": 17,
+        "cong_state": 1
+      },
+      "later_retransmissions": []
+    }
+  ],
+  "tail_event_counts": {
+    "MORE_THAN_ONE_MSS": 6,
+    "TAIL_ADMIT": 1
+  },
+  "micro21_skip_events": {
+    "MORE_THAN_ONE_MSS": 7
+  },
+  "historical_off_byte_equal_checks": [
+    {
+      "case": "micro-base",
+      "file": "study_app_rx_node_1_port_1024.csv",
+      "sha256": "b35c9ac46bde2331da713fba1846eeb718c907027d0bb2f050acdf2fbca75b5e"
+    },
+    {
+      "case": "micro-base",
+      "file": "study_drop_coverage.csv",
+      "sha256": "f2bbce727ae1f61019ef8f727753e3a8f64abdeb41d660a20a3607802f4524f4"
+    },
+    {
+      "case": "micro-base",
+      "file": "study_drops.csv",
+      "sha256": "e875ed492bd803c301bd18a29514bca50a6edfe104a69a85ae1ec68003bac35c"
+    },
+    {
+      "case": "micro-base",
+      "file": "study_rx_node_1_port_1024.csv",
+      "sha256": "cb432b3cd841713975a574fc6919f5cf0812185846599bdd17182cccacd11e5a"
+    },
+    {
+      "case": "micro-base",
+      "file": "tcp_flow_0_cwnd.csv",
+      "sha256": "ceb39256e8a1e4c940cb3f597b7e200596f2e9ff1f9ac9a0a5075021e8262630"
+    },
+    {
+      "case": "micro-base",
+      "file": "tcp_flow_0_progress.csv",
+      "sha256": "b583a1b2888476107f8d65535c480fa872d89ef79c7b12c3cdb4380249a86e98"
+    },
+    {
+      "case": "micro-base",
+      "file": "tcp_flow_0_rtt.csv",
+      "sha256": "f46faf24fbfea5e839643bcebcbd4b6f10073f725ed5a139f993b2c823b14278"
+    },
+    {
+      "case": "micro-base",
+      "file": "tcp_flow_0_study_events.csv",
+      "sha256": "3038a5be2c89948a5724671c2c638a3c408f7828393d6a2513b0a6e6e636863e"
+    },
+    {
+      "case": "micro-base",
+      "file": "tcp_flow_0_study_packets.csv",
+      "sha256": "9774112da74ac364fbe1421ae7d2f532b3e0450cf2f32d874f6362b9043bd6e6"
+    },
+    {
+      "case": "micro-selective",
+      "file": "study_app_rx_node_1_port_1024.csv",
+      "sha256": "68282cab648ac5c1f1614dc8a9e324de04dfdce1fe96588313e66fc879de6ff4"
+    },
+    {
+      "case": "micro-selective",
+      "file": "study_drop_coverage.csv",
+      "sha256": "f2bbce727ae1f61019ef8f727753e3a8f64abdeb41d660a20a3607802f4524f4"
+    },
+    {
+      "case": "micro-selective",
+      "file": "study_drops.csv",
+      "sha256": "e875ed492bd803c301bd18a29514bca50a6edfe104a69a85ae1ec68003bac35c"
+    },
+    {
+      "case": "micro-selective",
+      "file": "study_rx_node_1_port_1024.csv",
+      "sha256": "99168bced495f41fc683fe721c54f3dc14f68832ce4ffcc5b56432dca1af351c"
+    },
+    {
+      "case": "micro-selective",
+      "file": "tcp_flow_0_cwnd.csv",
+      "sha256": "e3fca5845078ebfe43cff4ea1364ceec472ab74e0938e2922c499f6b897630df"
+    },
+    {
+      "case": "micro-selective",
+      "file": "tcp_flow_0_orbit_loss.csv",
+      "sha256": "9218e1576a9faf477e39906a3bea23158ca96a17e77726accd74b3f6010bf59d"
+    },
+    {
+      "case": "micro-selective",
+      "file": "tcp_flow_0_progress.csv",
+      "sha256": "d15bcf3891bebadf9b75b90269fc6bc9e235d2beeaa03f67f1f1d68ac5cbbad9"
+    },
+    {
+      "case": "micro-selective",
+      "file": "tcp_flow_0_rtt.csv",
+      "sha256": "8ffbede61eb234ea6a582be7c507d2e5d21fcbbb82ddb3b62f147771ec32ae83"
+    },
+    {
+      "case": "micro-selective",
+      "file": "tcp_flow_0_study_events.csv",
+      "sha256": "40b65890df347d24b0f507e81eea09ed4ffb6893ca09255b6443670cc6f12fb5"
+    },
+    {
+      "case": "micro-selective",
+      "file": "tcp_flow_0_study_packets.csv",
+      "sha256": "4283cde1fd113e2e34cdf1e9660449d11eced8500f41608d3b52d34342c0ca26"
+    }
+  ],
+  "shared_deadline_ns": 207108958,
+  "unchanged_first_retx_times_ns": [
+    207108958
+  ],
+  "all_five_runtime_equal": true,
+  "tail_fct_change_vs_selective_pct": -26.6086747865228,
+  "tail_fct_change_vs_baseline_pct": 2.271782361506869,
+  "final_checkpoint_commits": [
+    "46d881046f76b93e5ae33f60bf638acc26ee5ff1"
+  ]
+}

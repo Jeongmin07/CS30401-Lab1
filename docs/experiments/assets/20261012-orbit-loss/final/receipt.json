@@ -1,0 +1,101 @@
+{
+  "tool": {
+    "path": "/work/code/orbit-loss/analyze.py",
+    "bytes": 7564,
+    "sha256": "9641453064980aeaeaf7270dc1ff17d8417ffe7cf1347011ed03afe634c94ab1"
+  },
+  "phase": "Post-simulation export; physical-drop join and after-drop RETX filter strengthened after all seven runs",
+  "cases": [
+    {
+      "case": "micro-base",
+      "manifest": {
+        "path": "/tmp/orbit-loss-v2/micro-base/manifest.json",
+        "bytes": 6947,
+        "sha256": "b2d310987bca43d551836f193067d19823f9d5c2cb89ae3a62fc8a95f525a2d7"
+      },
+      "full_analysis": {
+        "path": "/tmp/orbit-loss-v2/micro-base/analysis.json",
+        "bytes": 15952,
+        "sha256": "60f6bf4c23813c6a47e1a8d9525b3847d94464c364f29df8c62c501822f1a96e"
+      }
+    },
+    {
+      "case": "micro-selective",
+      "manifest": {
+        "path": "/tmp/orbit-loss-v2/micro-selective/manifest.json",
+        "bytes": 7589,
+        "sha256": "cdc1503d8a867d84007421c75e8880f5bb2f88a996bdac52d986e2da6f620946"
+      },
+      "full_analysis": {
+        "path": "/tmp/orbit-loss-v2/micro-selective/analysis.json",
+        "bytes": 16142,
+        "sha256": "d10524d17fc9f802dd7e527a9b9b30b3d350eeced66f04b938ae9c47ca6e1445"
+      }
+    },
+    {
+      "case": "leo10-base",
+      "manifest": {
+        "path": "/tmp/orbit-loss-v2/leo10-base/manifest.json",
+        "bytes": 421443,
+        "sha256": "de87de64355748f7cefdb6d0a45d138317bbdfdb9ead81cbe3358961cddde5e2"
+      },
+      "full_analysis": {
+        "path": "/tmp/orbit-loss-v2/leo10-base/analysis.json",
+        "bytes": 856889,
+        "sha256": "4764f3d98b3729db1718dfdc69002f10d522d9170d47b5c652ac0d149aa45576"
+      }
+    },
+    {
+      "case": "leo10-bounded20",
+      "manifest": {
+        "path": "/tmp/orbit-loss-v2/leo10-bounded20/manifest.json",
+        "bytes": 421967,
+        "sha256": "a37290c7fa47c16c57a12598ecfabd144e1c8311ad059f75b29502ebf8b7c59e"
+      },
+      "full_analysis": {
+        "path": "/tmp/orbit-loss-v2/leo10-bounded20/analysis.json",
+        "bytes": 893479,
+        "sha256": "2277d95de60dfcccedf63052c99ccd75cc6c3d21a0e8a2e2ba794c25d4de72b8"
+      }
+    },
+    {
+      "case": "leo10-selective",
+      "manifest": {
+        "path": "/tmp/orbit-loss-v2/leo10-selective/manifest.json",
+        "bytes": 422228,
+        "sha256": "2cbfaaaf646aca08d1d18dcf496cdd4d06a3d852e85af71fa0c2538edbb07838"
+      },
+      "full_analysis": {
+        "path": "/tmp/orbit-loss-v2/leo10-selective/analysis.json",
+        "bytes": 893229,
+        "sha256": "a99468bc862738c3ce8dd4e0917c32c7c86061e05fa83e5c5c512487d45182d3"
+      }
+    },
+    {
+      "case": "leo10-drop-base",
+      "manifest": {
+        "path": "/tmp/orbit-loss-v2/leo10-drop-base/manifest.json",
+        "bytes": 421869,
+        "sha256": "f262d474945f0f08619efa1fc4436a2e467ef967d46d89061fe64d31822ffdc3"
+      },
+      "full_analysis": {
+        "path": "/tmp/orbit-loss-v2/leo10-drop-base/analysis.json",
+        "bytes": 860152,
+        "sha256": "e13df7458dfe983db198d03e71112b2edd706afc418cc3cb38958d8b61b3fc16"
+      }
+    },
+    {
+      "case": "leo10-drop-selective",
+      "manifest": {
+        "path": "/tmp/orbit-loss-v2/leo10-drop-selective/manifest.json",
+        "bytes": 422655,
+        "sha256": "46fc543a594b689786a52fe4cdf6a72db4641d6162787315743bea5ae5cb23a4"
+      },
+      "full_analysis": {
+        "path": "/tmp/orbit-loss-v2/leo10-drop-selective/analysis.json",
+        "bytes": 860365,
+        "sha256": "d2001f64426a736e43774a48d5e60e3f1c17a2942e8078268b74e6acd6e6ba49"
+      }
+    }
+  ]
+}

@@ -1,0 +1,391 @@
+{
+  "schema_version": 1,
+  "tool": {
+    "path": "/work/code/orbit-order/compare.py",
+    "bytes": 7229,
+    "sha256": "907fefaa6f01ec85a4dac075a30dbdd2b17506a07ee81ceade8fd07aea60e968"
+  },
+  "inputs": [
+    {
+      "path": "/tmp/orbit-order-export-v2/cases/leo10-base/summary.json",
+      "bytes": 19679,
+      "sha256": "487a03eedd80da76851ae0f2958c8f9ab878d1d6f76f24968c3dac552450853a"
+    },
+    {
+      "path": "/tmp/orbit-order-export-v2/cases/leo10-hold1/summary.json",
+      "bytes": 20994,
+      "sha256": "6d1cabcd7a22ec15af34cdaf40f30c6c25d75e37370037721b40f3ecb9a64595"
+    },
+    {
+      "path": "/tmp/orbit-order-export-v2/cases/leo10-hold2/summary.json",
+      "bytes": 20993,
+      "sha256": "43f76efd11ffac75b31371acb407940a263754a30febbcf8feba09ffee771243"
+    },
+    {
+      "path": "/tmp/orbit-order-export-v2/cases/loss-first-base/summary.json",
+      "bytes": 12382,
+      "sha256": "5a07b1449e94d54f14c6939515133f34d5a2c368be5ad2c8a4b843b24e14b79d"
+    },
+    {
+      "path": "/tmp/orbit-order-export-v2/cases/loss-first-hold/summary.json",
+      "bytes": 13037,
+      "sha256": "646443784d369bb8c945f88cefaa465c2871140a69133211fbbe1c12a62a2236"
+    }
+  ],
+  "historical_input": {
+    "path": "/work/code/kim-study/evidence/cases/leo10-base/summary.json",
+    "bytes": 35979,
+    "sha256": "81ff663cd67f9164e5861e4351ddfc6ac39c7bb3132c8cc9c4cad768ad19d365"
+  },
+  "historical_baseline_byte_matches": [
+    {
+      "name": "tcp_flow_0_study_packets.csv",
+      "bytes": 19842749,
+      "sha256": "78fc54184c4481b1421d2139870debcbe72259c18ccb011ba180ef77784e146f",
+      "matched": true
+    },
+    {
+      "name": "study_drops.csv",
+      "bytes": 55405,
+      "sha256": "c915297632311402f8a2b1b4d6d24b83691f5971f40477934b2e2826887e6821",
+      "matched": true
+    },
+    {
+      "name": "study_rx_node_1585_port_1024.csv",
+      "bytes": 19448001,
+      "sha256": "445161a24e3c943e61518cc5c67ce72aecbae5c1bb2caaf6bd4f4ce451b2f1cf",
+      "matched": true
+    },
+    {
+      "name": "study_app_rx_node_1585_port_1024.csv",
+      "bytes": 14466654,
+      "sha256": "63defbe5710bafaafec06b3021dfda3c8d2df2bad3bf78ce15b54c84d7bc451d",
+      "matched": true
+    },
+    {
+      "name": "tcp_flow_0_study_events.csv",
+      "bytes": 5534,
+      "sha256": "8809b380277e387dcc400a5d27a5679ccbdf446a08c7efb06fa7a021a42df78b",
+      "matched": true
+    },
+    {
+      "name": "tcp_flow_0_cwnd.csv",
+      "bytes": 101682,
+      "sha256": "6651966bdd19d9cbcbcc99fb18ec854f152de7e81ed93e075e8baa5d09599860",
+      "matched": true
+    },
+    {
+      "name": "tcp_flow_0_rtt.csv",
+      "bytes": 2029939,
+      "sha256": "b959d51947cf5f8d37d672ef2a239c942b8b57e9f3d574ce2f7624de42ab1e38",
+      "matched": true
+    },
+    {
+      "name": "tcp_flow_0_progress.csv",
+      "bytes": 1994572,
+      "sha256": "2a9181e6a8a5bf7e1c25b8a770096f43714ec03779e7d7ccd2673b9992339534",
+      "matched": true
+    }
+  ],
+  "comparisons": [
+    {
+      "baseline": "leo10-base",
+      "policy": "leo10-hold1",
+      "receiver_goodput_mbps": [
+        9.544356,
+        9.544356
+      ],
+      "receiver_goodput_change_percent": 0.0,
+      "fct_s": [
+        null,
+        null
+      ],
+      "fct_change_percent": null,
+      "srtt_mean_ms": [
+        148.13482455455843,
+        148.13124269795065
+      ],
+      "actual_hold_tx": {
+        "leo10-base": [
+          {
+            "window_ns": [
+              26196683000,
+              26203317000
+            ],
+            "new_tx_bytes": 8280,
+            "retx_rows": 0
+          },
+          {
+            "window_ns": [
+              74998328500,
+              75001671500
+            ],
+            "new_tx_bytes": 5520,
+            "retx_rows": 0
+          }
+        ],
+        "leo10-hold1": [
+          {
+            "window_ns": [
+              26196683000,
+              26203317000
+            ],
+            "new_tx_bytes": 0,
+            "retx_rows": 0
+          },
+          {
+            "window_ns": [
+              74998328500,
+              75001671500
+            ],
+            "new_tx_bytes": 0,
+            "retx_rows": 0
+          }
+        ]
+      },
+      "event_windows": [
+        {
+          "event_s": 26.2,
+          "window_s": [
+            25.7,
+            28.2
+          ],
+          "baseline": {
+            "ack_rows_with_sack": 9,
+            "application_delivered_bytes": 2964240,
+            "candidate_unnecessary_recovery_original_arrived": 1,
+            "official_retransmission_rows": 3,
+            "original_eventually_arrived_after_reordering": 4,
+            "out_of_order_payload_rows": 5,
+            "overlapping_sequence_tx_rows": 3,
+            "receiver_application_goodput_mbps": 9.485568,
+            "recovery_state_entries": 1,
+            "repeated_cumulative_ack_rows": 8,
+            "sender_new_sequence_bytes": 2949060,
+            "sender_payload_tx_bytes": 2953200,
+            "wire_payload_rx_bytes": 2964240,
+            "wire_unique_sequence_bytes": 2964240
+          },
+          "policy": {
+            "ack_rows_with_sack": 9,
+            "application_delivered_bytes": 2964240,
+            "candidate_unnecessary_recovery_original_arrived": 1,
+            "official_retransmission_rows": 3,
+            "original_eventually_arrived_after_reordering": 4,
+            "out_of_order_payload_rows": 5,
+            "overlapping_sequence_tx_rows": 3,
+            "receiver_application_goodput_mbps": 9.485568,
+            "recovery_state_entries": 1,
+            "repeated_cumulative_ack_rows": 8,
+            "sender_new_sequence_bytes": 2949060,
+            "sender_payload_tx_bytes": 2953200,
+            "wire_payload_rx_bytes": 2964240,
+            "wire_unique_sequence_bytes": 2964240
+          }
+        },
+        {
+          "event_s": 75.0,
+          "window_s": [
+            74.5,
+            77.0
+          ],
+          "baseline": {
+            "ack_rows_with_sack": 1,
+            "application_delivered_bytes": 3008400,
+            "original_eventually_arrived_after_reordering": 1,
+            "out_of_order_payload_rows": 1,
+            "receiver_application_goodput_mbps": 9.62688,
+            "sender_new_sequence_bytes": 3087060,
+            "sender_payload_tx_bytes": 3087060,
+            "wire_payload_rx_bytes": 3008400,
+            "wire_unique_sequence_bytes": 3008400
+          },
+          "policy": {
+            "ack_rows_with_sack": 1,
+            "application_delivered_bytes": 3008400,
+            "original_eventually_arrived_after_reordering": 1,
+            "out_of_order_payload_rows": 1,
+            "receiver_application_goodput_mbps": 9.62688,
+            "sender_new_sequence_bytes": 3087060,
+            "sender_payload_tx_bytes": 3087060,
+            "wire_payload_rx_bytes": 3008400,
+            "wire_unique_sequence_bytes": 3008400
+          }
+        }
+      ]
+    },
+    {
+      "baseline": "leo10-base",
+      "policy": "leo10-hold2",
+      "receiver_goodput_mbps": [
+        9.544356,
+        9.544356
+      ],
+      "receiver_goodput_change_percent": 0.0,
+      "fct_s": [
+        null,
+        null
+      ],
+      "fct_change_percent": null,
+      "srtt_mean_ms": [
+        148.13482455455843,
+        148.1326760878935
+      ],
+      "actual_hold_tx": {
+        "leo10-base": [
+          {
+            "window_ns": [
+              26193366000,
+              26206634000
+            ],
+            "new_tx_bytes": 13800,
+            "retx_rows": 0
+          },
+          {
+            "window_ns": [
+              74996657000,
+              75003343000
+            ],
+            "new_tx_bytes": 8280,
+            "retx_rows": 0
+          }
+        ],
+        "leo10-hold2": [
+          {
+            "window_ns": [
+              26193366000,
+              26206634000
+            ],
+            "new_tx_bytes": 0,
+            "retx_rows": 0
+          },
+          {
+            "window_ns": [
+              74996657000,
+              75003343000
+            ],
+            "new_tx_bytes": 0,
+            "retx_rows": 0
+          }
+        ]
+      },
+      "event_windows": [
+        {
+          "event_s": 26.2,
+          "window_s": [
+            25.7,
+            28.2
+          ],
+          "baseline": {
+            "ack_rows_with_sack": 9,
+            "application_delivered_bytes": 2964240,
+            "candidate_unnecessary_recovery_original_arrived": 1,
+            "official_retransmission_rows": 3,
+            "original_eventually_arrived_after_reordering": 4,
+            "out_of_order_payload_rows": 5,
+            "overlapping_sequence_tx_rows": 3,
+            "receiver_application_goodput_mbps": 9.485568,
+            "recovery_state_entries": 1,
+            "repeated_cumulative_ack_rows": 8,
+            "sender_new_sequence_bytes": 2949060,
+            "sender_payload_tx_bytes": 2953200,
+            "wire_payload_rx_bytes": 2964240,
+            "wire_unique_sequence_bytes": 2964240
+          },
+          "policy": {
+            "ack_rows_with_sack": 9,
+            "application_delivered_bytes": 2964240,
+            "candidate_unnecessary_recovery_original_arrived": 1,
+            "official_retransmission_rows": 3,
+            "original_eventually_arrived_after_reordering": 4,
+            "out_of_order_payload_rows": 5,
+            "overlapping_sequence_tx_rows": 3,
+            "receiver_application_goodput_mbps": 9.485568,
+            "recovery_state_entries": 1,
+            "repeated_cumulative_ack_rows": 8,
+            "sender_new_sequence_bytes": 2949060,
+            "sender_payload_tx_bytes": 2953200,
+            "wire_payload_rx_bytes": 2964240,
+            "wire_unique_sequence_bytes": 2964240
+          }
+        },
+        {
+          "event_s": 75.0,
+          "window_s": [
+            74.5,
+            77.0
+          ],
+          "baseline": {
+            "ack_rows_with_sack": 1,
+            "application_delivered_bytes": 3008400,
+            "original_eventually_arrived_after_reordering": 1,
+            "out_of_order_payload_rows": 1,
+            "receiver_application_goodput_mbps": 9.62688,
+            "sender_new_sequence_bytes": 3087060,
+            "sender_payload_tx_bytes": 3087060,
+            "wire_payload_rx_bytes": 3008400,
+            "wire_unique_sequence_bytes": 3008400
+          },
+          "policy": {
+            "ack_rows_with_sack": 1,
+            "application_delivered_bytes": 3008400,
+            "original_eventually_arrived_after_reordering": 1,
+            "out_of_order_payload_rows": 1,
+            "receiver_application_goodput_mbps": 9.62688,
+            "sender_new_sequence_bytes": 3087060,
+            "sender_payload_tx_bytes": 3087060,
+            "wire_payload_rx_bytes": 3008400,
+            "wire_unique_sequence_bytes": 3008400
+          }
+        }
+      ]
+    },
+    {
+      "baseline": "loss-first-base",
+      "policy": "loss-first-hold",
+      "receiver_goodput_mbps": [
+        0.0552,
+        0.0552
+      ],
+      "receiver_goodput_change_percent": 0.0,
+      "fct_s": [
+        0.25150992,
+        0.3620972
+      ],
+      "fct_change_percent": 43.96935118901075,
+      "srtt_mean_ms": [
+        100.19450315966117,
+        100.28599908559691
+      ],
+      "actual_hold_tx": {
+        "loss-first-base": [
+          {
+            "window_ns": [
+              198366000,
+              211634000
+            ],
+            "new_tx_bytes": 13800,
+            "retx_rows": 1
+          }
+        ],
+        "loss-first-hold": [
+          {
+            "window_ns": [
+              198366000,
+              211634000
+            ],
+            "new_tx_bytes": 0,
+            "retx_rows": 1
+          }
+        ]
+      },
+      "event_windows": []
+    }
+  ],
+  "limits": [
+    "Historical comparison covers exactly eight original/legacy CSV files for one condition.",
+    "All pairs use the same source, runtime, network config and simulation CLI/flow schedule apart from run directory and declared hold policy. Holds are checked against actual socket events and sender transmissions.",
+    "No counter directly identifies send opportunities blocked by the gate. Baseline TX in the same window is contextual evidence only.",
+    "SRTT is not direct queueing delay; deterministic cases are not independent repetitions."
+  ]
+}

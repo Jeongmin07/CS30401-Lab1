@@ -1,0 +1,23 @@
+{
+  "container": "/lab1-orbit-bdp-20261012",
+  "container_id": "db8e94fe9fd0e46856707e2f3d82ce1b127d39255860e140b2c5491141f15918",
+  "image_id": "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+  "configured_image": "ghcr.io/yeonjong21/cs30401-lab1@sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+  "nano_cpus": 2000000000,
+  "memory_bytes": 4294967296,
+  "mounts": [
+    {
+      "destination": "/work",
+      "name": null,
+      "source": "C:\\Users\\Newbiedev\\Desktop\\네떡CS30401\\CS30401-Lab1",
+      "type": "bind"
+    },
+    {
+      "destination": "/home/ubuntu/ns-3.48",
+      "name": "cs30401-orbit-bdp-ns3-20261012",
+      "source": "/var/lib/docker/volumes/cs30401-orbit-bdp-ns3-20261012/_data",
+      "type": "volume"
+    }
+  ],
+  "build_jobs": 1
+}

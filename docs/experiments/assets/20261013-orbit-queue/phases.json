@@ -1,0 +1,86 @@
+{
+  "schema": 1,
+  "simulations": {
+    "base-natural": {
+      "manifest_sha256": "3cf8dfb717f19b0b96429259dc41e0da4948053ed3cef7773ea1325bc88048b4",
+      "launch_commit": "66b2409f722bc68e3a4973254ceb599c3d6b5892",
+      "status": "success",
+      "wall_seconds": 64.07178387699969,
+      "patch_sha256": "f0e85cab5a351e67d95a80d098cf65cf509300f73077e27b2d35dd6cbaf3e301",
+      "launch_runner_hashes": {
+        "code/orbit-queue/analyze.py": "0a5ab62541ea68cf44d5387bb91e3289334a79b6af7655ef3a55792f63276419",
+        "code/orbit-queue/run.py": "e3d04d83a0d8726419fe78743bac130c1ae7a2a979eafc4235698ce05ecb7ca6"
+      }
+    },
+    "selective-natural": {
+      "manifest_sha256": "a41a6acb2a429037ed1b004a0d641af2a7b27300722e6f913c41e8b0412f7ea1",
+      "launch_commit": "66b2409f722bc68e3a4973254ceb599c3d6b5892",
+      "status": "success",
+      "wall_seconds": 69.96645543399791,
+      "patch_sha256": "f0e85cab5a351e67d95a80d098cf65cf509300f73077e27b2d35dd6cbaf3e301",
+      "launch_runner_hashes": {
+        "code/orbit-queue/analyze.py": "0a5ab62541ea68cf44d5387bb91e3289334a79b6af7655ef3a55792f63276419",
+        "code/orbit-queue/run.py": "e3d04d83a0d8726419fe78743bac130c1ae7a2a979eafc4235698ce05ecb7ca6"
+      }
+    },
+    "selective-route75-delayed78": {
+      "manifest_sha256": "d037677c8373378137248f612da9420c67f59097ade762ccc0a07255b1b8ca8d",
+      "launch_commit": "3767411cb0f154e7b40b7c098f9516f1c47fbc73",
+      "status": "success",
+      "wall_seconds": 29.789788488997146,
+      "patch_sha256": "f0e85cab5a351e67d95a80d098cf65cf509300f73077e27b2d35dd6cbaf3e301",
+      "launch_runner_hashes": {
+        "code/orbit-queue/analyze.py": "9e13e7cc76943b6d8f1ec31e7d96681aad95ec678bc02b7497470ce7b4a81585",
+        "code/orbit-queue/run.py": "769da56d262391942b16cc4a6ec299d10e5d898e386641d8c7d5bc4867ca2272",
+        "code/orbit-queue/run_cf.py": "6d2985d4727d72cbfc6a7ece363d3cf32d5e93b5b2118c6ed411293a858ccf45"
+      }
+    }
+  },
+  "simulation_attempts": 3,
+  "successful_simulations": 3,
+  "failed_or_timeout_simulations": 0,
+  "final_posthoc_helpers": {
+    "analyze.py": "efa69ba813f3c1d5984f7cfdac0b4af54b36572844a35b6f31dd3c7066038b2a",
+    "analyze_cf.py": "0d364a82229959e166cd40dd548bbf588a45ad823e8187c378c4dc14be34ff05",
+    "archive.py": "e2d5527f74b3d8b42a98b93917326afda730e581fb93c8ecc12a5a7b85fc400c",
+    "build.py": "cc0628ce6bf6b85d319085f331b7a3b4dfc86706fa75c46d7131795b85fe9af6",
+    "delay_route.py": "17e7f1729af148491e73df2d573d830a8b4281b8977d73696c33dfdf9ecd1742",
+    "install.py": "b5e62b9ec4865c68b59f0fb49cd48f4dd7daac2014bdf06bcddcea60377cc695",
+    "run.py": "769da56d262391942b16cc4a6ec299d10e5d898e386641d8c7d5bc4867ca2272",
+    "run_cf.py": "6545907653c570fc08b56df6c91fe61d7c2aa23346cd22705f94a0ff0642e4d7"
+  },
+  "final_artifacts": {
+    "build.log": "2a44ba0594bd678d152ac76205e78ffa0f6d25c0b171ea7b2f59e318655dc9f3",
+    "counterfactual-raw-inventory.json": "ac84da231803b98fb86b921fe7ad6b5ca3dcf27bc0efa8a42fb07f21f13d7a77",
+    "counterfactual.json": "ca863d66fb421ae7a32a789b0069723c47df3d3232531cb97989fc5b8e252b81",
+    "environment.json": "2c25d97387f089017b25d06da5cf9cabd14f63aa2411f0e610413e9eac62fe57",
+    "final-build-log.txt": "2a44ba0594bd678d152ac76205e78ffa0f6d25c0b171ea7b2f59e318655dc9f3",
+    "natural-pair.json": "861cfece55fa110eab3b148c2b76e0f38e5f432b2c96c27348bc3e79d0a01589",
+    "natural-raw-inventory.json": "1a9a031f98bd8729026b40eee989482cff78988d521dbb32e7a3916555bfa00f",
+    "route-delay-input.json": "a9186766b2b4022e9256c91f4b854c89f8da709b1cef71914ca89b0f5ebf8eaf",
+    "routing-replacements.json": "a029fea8db9022f7685f0816729ba2fa3ce758d3f0a3192b89fb25784fff574c"
+  },
+  "final_owned_doc_sha256": "32b9fe9d34f3782376a2c23c50b7febac60f0b5632e32553979c5a8fab00f829",
+  "posthoc_changes": [
+    {
+      "phase": "after natural pair",
+      "change": "Correct legacy node/uid field aliases; original simulation/manifest/runtime unchanged."
+    },
+    {
+      "phase": "after all three simulations",
+      "change": "Strengthen TcDrop identity with tx_id, tx_time_ns, sequence and payload; match each tagged data drop to sender TX. Earlier exports preserved outside Git."
+    },
+    {
+      "phase": "posthoc CF analysis",
+      "change": "Use actual COHORT_WAIT_BEGIN/CONTINUE names and report occupancy raw rows separately from device groups; final exports regenerated without simulation."
+    },
+    {
+      "phase": "after CF launch3767411",
+      "change": "Add CF --ready CLI argument for a matching fresh build/natural pair; no C++/runtime/policy change."
+    }
+  ],
+  "independent_review": "Separate read-only agent cleared input, runner, all20 prefix checks and strict sender/drop joins499/486/486; no human teammate approval is implied.",
+  "preserved_earlier_analysis_directory": "/tmp/orbit-queue-prior-analysis",
+  "scope": "Final helper hashes are posthoc identities, distinct from immutable launch commits. No further simulations or fresh-volume replay.",
+  "final_owned_readme_sha256": "7fff16ed7c37013cd478b0510a588f40442288c4d1968db79bc68d024dc5fbc0"
+}

@@ -1,0 +1,10 @@
+{
+  "case": "v2-rise140-off",
+  "manifest_sha256": "3179cf55eb710f49232547b8d49696ea6b9ae520953adb47642e883a3f66bdcc",
+  "original_program_status": "success",
+  "original_returncode": 0,
+  "performance_result_eligible": false,
+  "reason": "Simulation launched before V2 build completed; source diff was V2 but loaded previous V1 runtime and 22-column lifecycle trace.",
+  "runtime_matches_completed_v2": false,
+  "original_execution_manifest_preserved": true
+}
