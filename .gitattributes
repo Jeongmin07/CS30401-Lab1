@@ -29,6 +29,6 @@ docs/experiments/assets/20261013-orbit-tail/** -text whitespace=cr-at-eol
 docs/experiments/assets/20261013-orbit-queue/** -text whitespace=cr-at-eol
 docs/experiments/assets/20261013-tail-and-queue/** -text whitespace=cr-at-eol
 code/orbit-tail/*.patch whitespace=-blank-at-eol,cr-at-eol
-code/orbit-queue/*.patch whitespace=-blank-at-eol,cr-at-eol
+code/orbit-queue/*.patch whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
 code/orbit-cubic-up/*.patch whitespace=-blank-at-eol,cr-at-eol
 code/orbit-loss/*.patch whitespace=-blank-at-eol,cr-at-eol

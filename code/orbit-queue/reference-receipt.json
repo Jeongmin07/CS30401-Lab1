@@ -1,0 +1,142 @@
+{
+  "schema": 1,
+  "source_container": "lab1-orbit-loss-20261012",
+  "source_patch_sha256": "531bf802984af821afd928fb3932912aca383fcdec5771f30f78d75a806d5591",
+  "scope": "Immutable completed original V2 baseline/selective; exact existing measurement CSV comparison excludes timing and newly added observers",
+  "cases": {
+    "base-natural": {
+      "original_case": "leo10-base",
+      "original_path": "/tmp/orbit-loss-v2/leo10-base",
+      "manifest_sha256": "de87de64355748f7cefdb6d0a45d138317bbdfdb9ead81cbe3358961cddde5e2",
+      "original_launch_commit": "730ea20936dd668c914c3ad3689231104134b592",
+      "status": "success",
+      "exit_code": 0,
+      "all_manifest_output_hashes_verified": true,
+      "measurement_csvs": {
+        "logs_ns3/study_app_rx_node_1585_port_1024.csv": {
+          "bytes": 14466654,
+          "sha256": "63defbe5710bafaafec06b3021dfda3c8d2df2bad3bf78ce15b54c84d7bc451d"
+        },
+        "logs_ns3/study_drop_coverage.csv": {
+          "bytes": 1140184,
+          "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+        },
+        "logs_ns3/study_drops.csv": {
+          "bytes": 55405,
+          "sha256": "c915297632311402f8a2b1b4d6d24b83691f5971f40477934b2e2826887e6821"
+        },
+        "logs_ns3/study_rx_node_1585_port_1024.csv": {
+          "bytes": 19448001,
+          "sha256": "445161a24e3c943e61518cc5c67ce72aecbae5c1bb2caaf6bd4f4ce451b2f1cf"
+        },
+        "logs_ns3/tcp_flow_0_cwnd.csv": {
+          "bytes": 101682,
+          "sha256": "6651966bdd19d9cbcbcc99fb18ec854f152de7e81ed93e075e8baa5d09599860"
+        },
+        "logs_ns3/tcp_flow_0_progress.csv": {
+          "bytes": 1994572,
+          "sha256": "2a9181e6a8a5bf7e1c25b8a770096f43714ec03779e7d7ccd2673b9992339534"
+        },
+        "logs_ns3/tcp_flow_0_rtt.csv": {
+          "bytes": 2029939,
+          "sha256": "b959d51947cf5f8d37d672ef2a239c942b8b57e9f3d574ce2f7624de42ab1e38"
+        },
+        "logs_ns3/tcp_flow_0_study_events.csv": {
+          "bytes": 5534,
+          "sha256": "8809b380277e387dcc400a5d27a5679ccbdf446a08c7efb06fa7a021a42df78b"
+        },
+        "logs_ns3/tcp_flow_0_study_packets.csv": {
+          "bytes": 19842749,
+          "sha256": "78fc54184c4481b1421d2139870debcbe72259c18ccb011ba180ef77784e146f"
+        },
+        "logs_ns3/tcp_flows.csv": {
+          "bytes": 75,
+          "sha256": "709ed6139c27b6b511fb5d5f9f754342c493d3d5ab3ad0cfc2e9b97d1d1b9404"
+        }
+      },
+      "input_files": {
+        "config_ns3.properties": {
+          "bytes": 613,
+          "sha256": "8c46772c95c46ca99935dd68cf6957631972a2bb519acabe0880640408b0f4d4"
+        },
+        "schedule.csv": {
+          "bytes": 29,
+          "sha256": "e6cde3aa7716856e46d24c3833354df90407313ece13a5ffbd1b789fa4fea23c"
+        }
+      },
+      "state_static_sha256_mapping_sha256": "afc13d0f402e082dd83a65ee52222e91b41f2bb775a0694a34ac33dfe216becf",
+      "state_static_sha256_file_count": 7,
+      "dynamic_input_sha256_mapping_sha256": "afbe0eb800dd2c8bf608b6241c5f94349677e6036dd883045c7c42fb80cddd8a",
+      "dynamic_input_sha256_file_count": 4000
+    },
+    "selective-natural": {
+      "original_case": "leo10-selective",
+      "original_path": "/tmp/orbit-loss-v2/leo10-selective",
+      "manifest_sha256": "2cbfaaaf646aca08d1d18dcf496cdd4d06a3d852e85af71fa0c2538edbb07838",
+      "original_launch_commit": "730ea20936dd668c914c3ad3689231104134b592",
+      "status": "success",
+      "exit_code": 0,
+      "all_manifest_output_hashes_verified": true,
+      "measurement_csvs": {
+        "logs_ns3/study_app_rx_node_1585_port_1024.csv": {
+          "bytes": 14465567,
+          "sha256": "bd7722c1cbb78f51335b6b181d55f2a2c10e427b2a4326a02c74b873712cb23d"
+        },
+        "logs_ns3/study_drop_coverage.csv": {
+          "bytes": 1140184,
+          "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+        },
+        "logs_ns3/study_drops.csv": {
+          "bytes": 53873,
+          "sha256": "9aca2d266ffc1b98cd56f7803d04bdc7d807e11e44d25952b6c1ede94b8ef02e"
+        },
+        "logs_ns3/study_rx_node_1585_port_1024.csv": {
+          "bytes": 19452445,
+          "sha256": "4fb3a7e70c6e79f54007de46368fd1e303359ef2882e0a314587c9e02292b71c"
+        },
+        "logs_ns3/tcp_flow_0_cwnd.csv": {
+          "bytes": 100679,
+          "sha256": "acf9286c1705fa2aa31eb56805f016c3793051f3d566bc91c87c151af2c5cace"
+        },
+        "logs_ns3/tcp_flow_0_orbit_loss.csv": {
+          "bytes": 1386,
+          "sha256": "dd65e13e2e79fefa5b63612950bd59f5e3fa772ee1b9fd8a07f9208234695374"
+        },
+        "logs_ns3/tcp_flow_0_progress.csv": {
+          "bytes": 1994229,
+          "sha256": "4ce98bb78f4f26fbc697971d23cfc085d8a3e89ad6b378222900a20469794ca4"
+        },
+        "logs_ns3/tcp_flow_0_rtt.csv": {
+          "bytes": 2030657,
+          "sha256": "5f7ed6085a55daca60bb23bb3df73b6098d879aa2005d8810d887b023080edc7"
+        },
+        "logs_ns3/tcp_flow_0_study_events.csv": {
+          "bytes": 5574,
+          "sha256": "56db00c9ed99c760c4d3b9a2d132f22eac6bf89570a8a5ff9d476c0be620d23a"
+        },
+        "logs_ns3/tcp_flow_0_study_packets.csv": {
+          "bytes": 19843355,
+          "sha256": "8129d3685fc3cc339409867b057b9126a6591aad06950e02052c97a52c02567c"
+        },
+        "logs_ns3/tcp_flows.csv": {
+          "bytes": 75,
+          "sha256": "2fa7e654ea06e0f91745acd609b08a9daa37dffdcf01b8035c2ded8567a85017"
+        }
+      },
+      "input_files": {
+        "config_ns3.properties": {
+          "bytes": 613,
+          "sha256": "8c46772c95c46ca99935dd68cf6957631972a2bb519acabe0880640408b0f4d4"
+        },
+        "schedule.csv": {
+          "bytes": 119,
+          "sha256": "c441ec9f73e726dcc20348d6c2fb2562401925fd26385a8c7ec8c45c9cf6c809"
+        }
+      },
+      "state_static_sha256_mapping_sha256": "afc13d0f402e082dd83a65ee52222e91b41f2bb775a0694a34ac33dfe216becf",
+      "state_static_sha256_file_count": 7,
+      "dynamic_input_sha256_mapping_sha256": "afbe0eb800dd2c8bf608b6241c5f94349677e6036dd883045c7c42fb80cddd8a",
+      "dynamic_input_sha256_file_count": 4000
+    }
+  }
+}
