@@ -1,0 +1,6 @@
+case,duration_s,flow_start_s,expected_finite_bytes,receiver_bytes,receiver_goodput_mbps,transfer_complete,fct_s,retransmissions,recovery_entries,ca_loss_entries,distinct_tagged_drops,drop_trace_rows,actual_high_threshold_time_s,censored_high_threshold_intervals,guard_starts,guard_start_skips,bounded_expiry_reevaluations,expiry_entered_recovery,tail_admissions,tail_admitted_bytes
+micro-base,4.0,0.0,27600,27600,0.0552,True,0.25150992,1,1,0,1,1,0,0,0,0,0,0,0,0
+micro-selective,4.0,0.0,27600,27600,0.0552,True,0.3504824,1,1,0,1,1,0,0,0,0,0,0,0,0
+micro-tail,4.0,0.0,27600,27600,0.0552,True,0.257223678,1,1,0,1,1,0,0,0,0,0,0,1,1380
+micro21-selective,4.0,0.0,28980,28980,0.05796,True,0.35059712,1,1,0,1,1,0,0,0,0,0,0,0,0
+micro21-tail,4.0,0.0,28980,28980,0.05796,True,0.35059712,1,1,0,1,1,0,0,0,0,0,0,0,0

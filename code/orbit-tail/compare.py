@@ -74,8 +74,10 @@ if __name__=='__main__':
             assert m['output_files']['config_ns3.properties']==reference['output_files']['config_ns3.properties']
             assert m['dynamic_input_sha256']==reference['dynamic_input_sha256']
     historical=[]
-    for n in ['micro-base','micro-selective','leo10-base','leo10-selective','leo10-drop-base']:
-        old=repo/'docs/experiments/assets/20261012-orbit-loss/final/cases'/n/'summary.json'
+    for n,previous_name in [('micro-base','micro-base'),('micro-selective','micro-selective'),
+        ('leo10-base','leo10-base'),('leo10-selective','leo10-selective'),
+        ('leo10-drop-base','leo10-drop-base'),('leo10-drop-tail','leo10-drop-selective')]:
+        old=repo/'docs/experiments/assets/20261012-orbit-loss/final/cases'/previous_name/'summary.json'
         previous=json.loads(old.read_text());checks=[];excluded=[]
         for item in previous['provenance']['raw_inputs']:
             key='logs_ns3/'+Path(item['path']).name
@@ -85,7 +87,19 @@ if __name__=='__main__':
             checks.append(dict(file=key,old_sha256=item['sha256'],actual_sha256=actual['sha256'],
                                equal=item['sha256']==actual['sha256']))
         assert all(c['equal'] for c in checks),'Historical measurement changed: '+n
-        historical.append(dict(case=n,source=receipt(old),checks=checks,excluded_wall_profiling=excluded))
+        historical.append(dict(case=n,previous_case=previous_name,source=receipt(old),checks=checks,excluded_wall_profiling=excluded))
+    no_action=[]
+    for left,right in [('micro21-selective','micro21-tail'),('leo10-selective','leo10-tail')]:
+        assert data[right]['tail_policy']['count']==0
+        checks=[]
+        for key,item in manifests[left]['output_files'].items():
+            if not key.startswith('logs_ns3/') or not key.endswith('.csv') or key.endswith(
+                ('timing_results.csv','orbit_loss_tail.csv')):continue
+            other=manifests[right]['output_files'][key]
+            assert item==other,'No-admission measurement changed: '+key
+            checks.append(dict(file=key,bytes=item['bytes'],sha256=item['sha256'],equal=True))
+        no_action.append(dict(left=left,right=right,zero_tail_admission=True,checks=checks,
+            exclusions=['Wall profiling','Separate observer tail-check trace']))
     pairs=[('micro-base','micro-selective'),('micro-selective','micro-tail'),('micro-base','micro-tail'),
            ('micro21-selective','micro21-tail'),('leo10-base','leo10-tail'),
            ('leo10-selective','leo10-tail'),('leo10-drop-base','leo10-drop-tail')]
@@ -106,9 +120,12 @@ if __name__=='__main__':
     assert x['output_files']['config_ns3.properties']==y['output_files']['config_ns3.properties']
     record=dict(schema_version=1,tool=receipt(Path(__file__)),inputs=[receipt(a.export/'cases'/n/'summary.json') for n in sorted(data)],
         conditions=10,not_statistical_replicates=True,final_patch_sha256=first['patch_sha256'],all_runtime_files_equal=True,
+        phase='Post-simulation extension: explicit zero-admission trajectory checks and prior injected selective control; launch helper preserved separately',
+        launch_compare_tool=receipt(Path(__file__).with_name('compare-at-launch.py')),
         source_commits=sorted({m['repo_commit'] for m in manifests.values()}),historical_off_controls=historical,
         exact_declared_case_settings=settings,matched_contrast_groups=groups,
-        comparisons=comparisons,tail_admissions={n:s['tail_policy']['count'] for n,s in data.items()},
+        comparisons=comparisons,no_admission_measurement_equality=no_action,
+        tail_admissions={n:s['tail_policy']['count'] for n,s in data.items()},
         paired_drop_identity=drops[0]['selection'],paired_physical_drop_equal=True,
         extra_drop_to_first_retx_ns=drops[1]['first_retransmission_after_drop_ns']-drops[0]['first_retransmission_after_drop_ns'],
         limitation='One deterministic run per condition; no deployment, loss of the extra tail, zero-window, ECN or RTO boundary proof.')
