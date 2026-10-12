@@ -23,7 +23,19 @@ PR14. The Git-free source ZIP at `1deee988a37325c230a389ad4e6dafc518fc138f`
 was extracted and run in a new official volume. The representative r40
 competition replay matches all 26 measurement CSVs, metrics, simulator sources,
 binary, libraries and state audit. An altered source hash was rejected before
-simulation. Only one representative fresh package replay is claimed.
+simulation. A subsequent complete run of the ZIP README workflow now passes:
+all ten cases (1,044.65 seconds including analysis), 155 measurement CSVs,
+all windows, the results table and figure PNG match exactly. The separately
+rerun original 100 Mbps baseline matches 11 CSVs and all six windows, including
+41.5113384 Mbps over 200 seconds. Same fresh volume and unchanged package;
+matrix used two workers, with the separate baseline running concurrently.
+This closes the research-package workflow gap, not final submission assembly.
+
+Publication is complete: all three assets of release `vegas-sensitivity-20261011`
+match server size/SHA256 checks. The failed PowerShell upload timed out; its
+stale local response was rejected. The replacement curl upload completed with
+HTTP 201, primary asset 632692769. Use committed `publication.json`, not failed
+temporary receipts. The release remains a prerelease; PR15 remains Draft.
 
 See [full follow-up](../experiments/20261011-vegas-renewal-sensitivity.md),
 `code/vegas-adaptive/sensitivity-evidence/`, and the

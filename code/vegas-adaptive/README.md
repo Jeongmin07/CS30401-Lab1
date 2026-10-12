@@ -11,8 +11,10 @@ an across-the-board winner. All original adaptive evidence below is preserved.
 exports it; `plot_sensitivity.py` draws the comparison. Results and receipts are
 in `sensitivity-evidence/`. `export_portable.py --out NEW_DIRECTORY` creates a
 small Git-free replay ZIP from a clean checkout, containing a source inventory
-and standalone README commands. One fresh-volume representative replay matched
-26 measurement CSVs exactly. The complete ten-case ZIP replay is not claimed.
+and standalone README commands. The initial fresh-volume representative replay
+matched 26 measurement CSVs. The subsequent complete ZIP workflow matched all
+155 matrix measurement CSVs, all 11 original-baseline CSVs, every analysis
+window, the results table and the figure PNG. See `full-package-replay.json`.
 The [evidence release](https://github.com/Jeongmin07/CS30401-Lab1/releases/tag/vegas-sensitivity-20261011)
 provides the original raw runs and the tested source package.
 

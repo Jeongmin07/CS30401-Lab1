@@ -1,0 +1,2133 @@
+{
+  "status": "PASS",
+  "case_count": 10,
+  "launch_commit": "1deee988a37325c230a389ad4e6dafc518fc138f",
+  "state_rows": 21840,
+  "renewals": 101,
+  "errors": [],
+  "compatibility": [
+    {
+      "reference": "v1-leo-renew",
+      "case": "s1-leo-r20",
+      "checks": [
+        {
+          "file": "logs_ns3/study_app_rx_node_1585_port_1024.csv",
+          "bytes": 112936826,
+          "sha256": "c8f09e8236082ebe4134caaf311a4f6e01f3f99734668b7b8901ffebd26193fd",
+          "match": true
+        },
+        {
+          "file": "logs_ns3/study_drop_coverage.csv",
+          "bytes": 1140184,
+          "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499",
+          "match": true
+        },
+        {
+          "file": "logs_ns3/study_drops.csv",
+          "bytes": 112,
+          "sha256": "ec37c4087cf6eb0bf412760b74ba37e2279e44d6bfff2d89f87c8135ec82b959",
+          "match": true
+        },
+        {
+          "file": "logs_ns3/study_rx_node_1585_port_1024.csv",
+          "bytes": 146420533,
+          "sha256": "34760b9c27859f1af4232e0d0b1395b176f776867cade866f7bbc54459af9128",
+          "match": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_cwnd.csv",
+          "bytes": 40008,
+          "sha256": "1df3f135ae5115c5579d1b8cc63917fca2ca681008f3ff57808f82e6809b4096",
+          "match": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_progress.csv",
+          "bytes": 15691990,
+          "sha256": "12af92ccac14200814b875c98c5fd310e72b663adb8d85e40eaaa7ae1052b459",
+          "match": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_rtt.csv",
+          "bytes": 14692017,
+          "sha256": "daf5b9664c906410c5353648c84de7f2922dbeb386d7ce4001d32fa53fb2320b",
+          "match": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_study_events.csv",
+          "bytes": 35334,
+          "sha256": "cda9e7018fd0a30a8c442e21cfbba29006fdbb73b8656df7154fbef2c45c414c",
+          "match": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_study_packets.csv",
+          "bytes": 144476145,
+          "sha256": "5d42b8e9c2c3426e6eaf395e3a7f3d2378a4f2937448f0af4e0d31318a6703f4",
+          "match": true
+        },
+        {
+          "file": "logs_ns3/tcp_flows.csv",
+          "bytes": 76,
+          "sha256": "5195b24237172a778466b67c95f84f4a9094329a1548d9063d57795a81cc8f7d",
+          "match": true
+        },
+        {
+          "file": "logs_ns3/vegas_state.csv",
+          "bytes": 253196,
+          "sha256": "f11167f380667b66996588b7fc9d1a9241ef97d54b26b24d59997cf0037a4881",
+          "match": true
+        }
+      ]
+    },
+    {
+      "reference": "v1-fixed-comp-renew",
+      "case": "s1-fixed-comp-r20",
+      "checks": [
+        {
+          "file": "logs_ns3/delay_events.csv",
+          "bytes": 162,
+          "sha256": "346e2e27550015f28425194bfe5a174f0c6ab87d89be7d9b81357111a4ea4f54",
+          "match": true
+        },
+        {
+          "file": "logs_ns3/flow_summary.csv",
+          "bytes": 373,
+          "sha256": "ca5514463f892310a9334a0ef51140327521e6165cb1a80262a5e9e11af67fd3",
+          "match": true
+        },
+        {
+          "file": "logs_ns3/queue_coverage.csv",
+          "bytes": 316,
+          "sha256": "82e2f2dd7290ec35da6592dd3f306a241471861265a21e8f88853c0053b73499",
+          "match": true
+        },
+        {
+          "file": "logs_ns3/queue_events.csv",
+          "bytes": 279136428,
+          "sha256": "c5ba5a7a9db133792e12281a981715858ea3897db4b92f5dbdc83b06158757ca",
+          "match": true
+        },
+        {
+          "file": "logs_ns3/queue_occupancy.csv",
+          "bytes": 137646691,
+          "sha256": "81797f95a50d35d69ae867ef8d2b424e947c556332be78fb7aea951fc235f702",
+          "match": true
+        },
+        {
+          "file": "logs_ns3/queue_pending.csv",
+          "bytes": 6343,
+          "sha256": "f151f3f08f1c398011922967d84ba314c0dc6a8498a0e80cd67ca027f98348c4",
+          "match": true
+        },
+        {
+          "file": "logs_ns3/queue_sojourn.csv",
+          "bytes": 145613180,
+          "sha256": "5aed816c22f0213d59b33d1da8b1871cba7112041cd2119d99352928a1c20b29",
+          "match": true
+        },
+        {
+          "file": "logs_ns3/queue_summary.csv",
+          "bytes": 187,
+          "sha256": "b202a09e384eeb78039435b9169253a8d20a4f28d45628a61689a502312d6ada",
+          "match": true
+        },
+        {
+          "file": "logs_ns3/socket_types.csv",
+          "bytes": 179,
+          "sha256": "d725d52c86dd0cbcb0d1092469d90abc5458d5d9ff966e7226fcf83a89b38994",
+          "match": true
+        },
+        {
+          "file": "logs_ns3/study_app_rx_node_1_port_1024.csv",
+          "bytes": 59517322,
+          "sha256": "b2746ec2366c451d03dfccb04d1afda01b0555ca2afbb8c005ad0b075764eda3",
+          "match": true
+        },
+        {
+          "file": "logs_ns3/study_app_rx_node_1_port_1025.csv",
+          "bytes": 47798916,
+          "sha256": "07c10ba42fcf171c077b91dbb94b1c61e40bee17b8ec2385dd7ef3cb627f4d5c",
+          "match": true
+        },
+        {
+          "file": "logs_ns3/study_drop_coverage.csv",
+          "bytes": 328,
+          "sha256": "f2bbce727ae1f61019ef8f727753e3a8f64abdeb41d660a20a3607802f4524f4",
+          "match": true
+        },
+        {
+          "file": "logs_ns3/study_drops.csv",
+          "bytes": 19856,
+          "sha256": "690a86c49716a27b996d6750b8b6fc1ead49a430085cd359a7165842c9ecb623",
+          "match": true
+        },
+        {
+          "file": "logs_ns3/study_rx_node_1_port_1024.csv",
+          "bytes": 79285851,
+          "sha256": "35543d2058fb1ad02e7841272bf8abc6aee5189f664601384a59744ac2cdcd46",
+          "match": true
+        },
+        {
+          "file": "logs_ns3/study_rx_node_1_port_1025.csv",
+          "bytes": 64528610,
+          "sha256": "64f8790badd2d7f539a3df8f985fbd9714b3953444419d6be8b7dfcd93e0a424",
+          "match": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_cwnd.csv",
+          "bytes": 35149,
+          "sha256": "0156a36c68aed87f728d1b8dacb43c0966760ae3781d2a6883d51c52ea6f027a",
+          "match": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_progress.csv",
+          "bytes": 9099156,
+          "sha256": "4e11009d326dfb703db49c9ebdb722591065f28f444391212ebd4a9277d86f42",
+          "match": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_rtt.csv",
+          "bytes": 8704532,
+          "sha256": "368664551be6051eb820bcdb42f96240d628a314d4d1467039a934c9f15a1d98",
+          "match": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_study_events.csv",
+          "bytes": 32516,
+          "sha256": "cf8368bc393e596505484eecdbf62ce40971c62721d3cdf3ba0e0a5bfd158a92",
+          "match": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_0_study_packets.csv",
+          "bytes": 84986013,
+          "sha256": "97565768c96d2423afaa83edcff1fb8d591de796150faf88d35b540255d285ea",
+          "match": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_1_cwnd.csv",
+          "bytes": 96864,
+          "sha256": "96787009851e839c880261dd6fbc953edf8b80662130525c8b4734062b876883",
+          "match": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_1_progress.csv",
+          "bytes": 7347728,
+          "sha256": "6bce62a69851ef05c5a11ca9fa1f312f56ccf6e6c5451e5e1567ef561e5ec31c",
+          "match": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_1_rtt.csv",
+          "bytes": 7077077,
+          "sha256": "6ece949d334b5fdef89cc77831a059c9b9095e85fe4be3430035354d562bcebe",
+          "match": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_1_study_events.csv",
+          "bytes": 1760,
+          "sha256": "db70f1a7d52320a6cf10c53313d1fa45a607fdaaae194dac8615c70206c8634c",
+          "match": true
+        },
+        {
+          "file": "logs_ns3/tcp_flow_1_study_packets.csv",
+          "bytes": 69928661,
+          "sha256": "092ddac130eca9075f0a2df1660219520aa8a44b1b6f96a18effac53bfaec224",
+          "match": true
+        },
+        {
+          "file": "logs_ns3/vegas_state.csv",
+          "bytes": 249545,
+          "sha256": "a9820881b71a8351285427298070725a93782bde60296a6154cabd6bc788dabe",
+          "match": true
+        }
+      ]
+    }
+  ],
+  "compatibility_file_count": 37,
+  "state_cases": {
+    "s1-fixed-comp-r10": {
+      "rows": 2225,
+      "event_counts": {
+        "ENABLE": 12,
+        "CYCLE_INCREASE": 888,
+        "CYCLE_DECREASE": 408,
+        "CYCLE_HOLD": 852,
+        "DISABLE": 18,
+        "RENEW": 47
+      },
+      "history_clear_reasons": {
+        "ENABLE": 12,
+        "INVALID_CYCLE": 3,
+        "DISABLE": 18
+      },
+      "instances": [
+        1,
+        2,
+        3
+      ],
+      "renewals": [
+        {
+          "time_ns": 91020729440,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 90000000,
+          "new_base_rtt_ns": 91030581,
+          "cycle_min_rtt_ns": 92235748,
+          "history_rounds": 10,
+          "history_elapsed_ns": 825984000,
+          "history_first_time_ns": 90194745440,
+          "cwnd_before_bytes": 645840,
+          "ssthresh_before_bytes": 535095,
+          "rtt_samples": 234,
+          "renewal_count": 1
+        },
+        {
+          "time_ns": 91958450720,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 91030581,
+          "new_base_rtt_ns": 92361728,
+          "cycle_min_rtt_ns": 94874993,
+          "history_rounds": 10,
+          "history_elapsed_ns": 845142240,
+          "history_first_time_ns": 91113308480,
+          "cwnd_before_bytes": 632040,
+          "ssthresh_before_bytes": 535095,
+          "rtt_samples": 229,
+          "renewal_count": 2
+        },
+        {
+          "time_ns": 92928981920,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 92361728,
+          "new_base_rtt_ns": 95167885,
+          "cycle_min_rtt_ns": 98707170,
+          "history_rounds": 10,
+          "history_elapsed_ns": 875084160,
+          "history_first_time_ns": 92053897760,
+          "cwnd_before_bytes": 618240,
+          "ssthresh_before_bytes": 535095,
+          "rtt_samples": 224,
+          "renewal_count": 3
+        },
+        {
+          "time_ns": 104109923520,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 90137098,
+          "new_base_rtt_ns": 91505805,
+          "cycle_min_rtt_ns": 93259617,
+          "history_rounds": 10,
+          "history_elapsed_ns": 833784960,
+          "history_first_time_ns": 103276138560,
+          "cwnd_before_bytes": 666540,
+          "ssthresh_before_bytes": 535095,
+          "rtt_samples": 241,
+          "renewal_count": 4
+        },
+        {
+          "time_ns": 105063017280,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 91505805,
+          "new_base_rtt_ns": 93596520,
+          "cycle_min_rtt_ns": 96235905,
+          "history_rounds": 10,
+          "history_elapsed_ns": 859023360,
+          "history_first_time_ns": 104203993920,
+          "cwnd_before_bytes": 652740,
+          "ssthresh_before_bytes": 535095,
+          "rtt_samples": 236,
+          "renewal_count": 5
+        },
+        {
+          "time_ns": 115354148160,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 90165239,
+          "new_base_rtt_ns": 91226752,
+          "cycle_min_rtt_ns": 92000000,
+          "history_rounds": 10,
+          "history_elapsed_ns": 824492640,
+          "history_first_time_ns": 114529655520,
+          "cwnd_before_bytes": 713460,
+          "ssthresh_before_bytes": 554760,
+          "rtt_samples": 258,
+          "renewal_count": 6
+        },
+        {
+          "time_ns": 116471062080,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 91226752,
+          "new_base_rtt_ns": 92359627,
+          "cycle_min_rtt_ns": 93852724,
+          "history_rounds": 10,
+          "history_elapsed_ns": 839979840,
+          "history_first_time_ns": 115631082240,
+          "cwnd_before_bytes": 696900,
+          "ssthresh_before_bytes": 554760,
+          "rtt_samples": 252,
+          "renewal_count": 7
+        },
+        {
+          "time_ns": 117430465440,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 92359627,
+          "new_base_rtt_ns": 94394541,
+          "cycle_min_rtt_ns": 97001607,
+          "history_rounds": 10,
+          "history_elapsed_ns": 864759360,
+          "history_first_time_ns": 116565706080,
+          "cwnd_before_bytes": 683100,
+          "ssthresh_before_bytes": 554760,
+          "rtt_samples": 247,
+          "renewal_count": 8
+        },
+        {
+          "time_ns": 121719546080,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 90167864,
+          "new_base_rtt_ns": 91234842,
+          "cycle_min_rtt_ns": 92163684,
+          "history_rounds": 10,
+          "history_elapsed_ns": 827016480,
+          "history_first_time_ns": 120892529600,
+          "cwnd_before_bytes": 572700,
+          "ssthresh_before_bytes": 553380,
+          "rtt_samples": 207,
+          "renewal_count": 9
+        },
+        {
+          "time_ns": 129174969440,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 91234842,
+          "new_base_rtt_ns": 92268409,
+          "cycle_min_rtt_ns": 92802197,
+          "history_rounds": 10,
+          "history_elapsed_ns": 832981920,
+          "history_first_time_ns": 128341987520,
+          "cwnd_before_bytes": 523020,
+          "ssthresh_before_bytes": 521640,
+          "rtt_samples": 189,
+          "renewal_count": 10
+        },
+        {
+          "time_ns": 130302667040,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 92268409,
+          "new_base_rtt_ns": 93278278,
+          "cycle_min_rtt_ns": 94998663,
+          "history_rounds": 10,
+          "history_elapsed_ns": 848239680,
+          "history_first_time_ns": 129454427360,
+          "cwnd_before_bytes": 510600,
+          "ssthresh_before_bytes": 509220,
+          "rtt_samples": 185,
+          "renewal_count": 11
+        },
+        {
+          "time_ns": 131268035840,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 93278278,
+          "new_base_rtt_ns": 95050628,
+          "cycle_min_rtt_ns": 97517514,
+          "history_rounds": 10,
+          "history_elapsed_ns": 870265920,
+          "history_first_time_ns": 130397769920,
+          "cwnd_before_bytes": 496800,
+          "ssthresh_before_bytes": 495420,
+          "rtt_samples": 180,
+          "renewal_count": 12
+        },
+        {
+          "time_ns": 134370719200,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 90167829,
+          "new_base_rtt_ns": 91484130,
+          "cycle_min_rtt_ns": 94618737,
+          "history_rounds": 10,
+          "history_elapsed_ns": 841815360,
+          "history_first_time_ns": 133528903840,
+          "cwnd_before_bytes": 483000,
+          "ssthresh_before_bytes": 481620,
+          "rtt_samples": 175,
+          "renewal_count": 13
+        },
+        {
+          "time_ns": 135330466720,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 91484130,
+          "new_base_rtt_ns": 94964761,
+          "cycle_min_rtt_ns": 96911387,
+          "history_rounds": 10,
+          "history_elapsed_ns": 864874080,
+          "history_first_time_ns": 134465592640,
+          "cwnd_before_bytes": 469200,
+          "ssthresh_before_bytes": 467820,
+          "rtt_samples": 170,
+          "renewal_count": 14
+        },
+        {
+          "time_ns": 136305242560,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 94964761,
+          "new_base_rtt_ns": 96853594,
+          "cycle_min_rtt_ns": 97874755,
+          "history_rounds": 10,
+          "history_elapsed_ns": 877952160,
+          "history_first_time_ns": 135427290400,
+          "cwnd_before_bytes": 455400,
+          "ssthresh_before_bytes": 454020,
+          "rtt_samples": 165,
+          "renewal_count": 15
+        },
+        {
+          "time_ns": 137287360480,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 96853594,
+          "new_base_rtt_ns": 97964076,
+          "cycle_min_rtt_ns": 98304361,
+          "history_rounds": 10,
+          "history_elapsed_ns": 884261760,
+          "history_first_time_ns": 136403098720,
+          "cwnd_before_bytes": 445740,
+          "ssthresh_before_bytes": 444360,
+          "rtt_samples": 161,
+          "renewal_count": 16
+        },
+        {
+          "time_ns": 139360465600,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 97964076,
+          "new_base_rtt_ns": 99000000,
+          "cycle_min_rtt_ns": 99032150,
+          "history_rounds": 10,
+          "history_elapsed_ns": 889997760,
+          "history_first_time_ns": 138470467840,
+          "cwnd_before_bytes": 445740,
+          "ssthresh_before_bytes": 444360,
+          "rtt_samples": 161,
+          "renewal_count": 17
+        },
+        {
+          "time_ns": 143045960320,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 99000000,
+          "new_base_rtt_ns": 100000273,
+          "cycle_min_rtt_ns": 100478844,
+          "history_rounds": 10,
+          "history_elapsed_ns": 902502240,
+          "history_first_time_ns": 142143458080,
+          "cwnd_before_bytes": 444360,
+          "ssthresh_before_bytes": 442980,
+          "rtt_samples": 161,
+          "renewal_count": 18
+        },
+        {
+          "time_ns": 145856678720,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 90167829,
+          "new_base_rtt_ns": 91183816,
+          "cycle_min_rtt_ns": 94173407,
+          "history_rounds": 10,
+          "history_elapsed_ns": 839635680,
+          "history_first_time_ns": 145017043040,
+          "cwnd_before_bytes": 448500,
+          "ssthresh_before_bytes": 442980,
+          "rtt_samples": 162,
+          "renewal_count": 19
+        },
+        {
+          "time_ns": 146814934880,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 91183816,
+          "new_base_rtt_ns": 94651509,
+          "cycle_min_rtt_ns": 96542836,
+          "history_rounds": 10,
+          "history_elapsed_ns": 863382720,
+          "history_first_time_ns": 145951552160,
+          "cwnd_before_bytes": 434700,
+          "ssthresh_before_bytes": 433320,
+          "rtt_samples": 157,
+          "renewal_count": 20
+        },
+        {
+          "time_ns": 147787645760,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 94651509,
+          "new_base_rtt_ns": 96817319,
+          "cycle_min_rtt_ns": 97631438,
+          "history_rounds": 10,
+          "history_elapsed_ns": 875887200,
+          "history_first_time_ns": 146911758560,
+          "cwnd_before_bytes": 420900,
+          "ssthresh_before_bytes": 419520,
+          "rtt_samples": 152,
+          "renewal_count": 21
+        },
+        {
+          "time_ns": 148769075360,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 96817319,
+          "new_base_rtt_ns": 97984803,
+          "cycle_min_rtt_ns": 98229769,
+          "history_rounds": 10,
+          "history_elapsed_ns": 883573440,
+          "history_first_time_ns": 147885501920,
+          "cwnd_before_bytes": 411240,
+          "ssthresh_before_bytes": 409860,
+          "rtt_samples": 149,
+          "renewal_count": 22
+        },
+        {
+          "time_ns": 150153516320,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 97984803,
+          "new_base_rtt_ns": 99000000,
+          "cycle_min_rtt_ns": 99228418,
+          "history_rounds": 10,
+          "history_elapsed_ns": 891718560,
+          "history_first_time_ns": 149261797760,
+          "cwnd_before_bytes": 415380,
+          "ssthresh_before_bytes": 409860,
+          "rtt_samples": 150,
+          "renewal_count": 23
+        },
+        {
+          "time_ns": 153741499040,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 99000000,
+          "new_base_rtt_ns": 100000288,
+          "cycle_min_rtt_ns": 100278277,
+          "history_rounds": 10,
+          "history_elapsed_ns": 900207840,
+          "history_first_time_ns": 152841291200,
+          "cwnd_before_bytes": 420900,
+          "ssthresh_before_bytes": 409860,
+          "rtt_samples": 152,
+          "renewal_count": 24
+        },
+        {
+          "time_ns": 156939053280,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 90167904,
+          "new_base_rtt_ns": 91649483,
+          "cycle_min_rtt_ns": 94618773,
+          "history_rounds": 10,
+          "history_elapsed_ns": 842044800,
+          "history_first_time_ns": 156097008480,
+          "cwnd_before_bytes": 427800,
+          "ssthresh_before_bytes": 409860,
+          "rtt_samples": 155,
+          "renewal_count": 25
+        },
+        {
+          "time_ns": 157899259680,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 91649483,
+          "new_base_rtt_ns": 94831806,
+          "cycle_min_rtt_ns": 96716431,
+          "history_rounds": 10,
+          "history_elapsed_ns": 865332960,
+          "history_first_time_ns": 157033926720,
+          "cwnd_before_bytes": 414000,
+          "ssthresh_before_bytes": 409860,
+          "rtt_samples": 150,
+          "renewal_count": 26
+        },
+        {
+          "time_ns": 158874838560,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 94831806,
+          "new_base_rtt_ns": 96719243,
+          "cycle_min_rtt_ns": 97852930,
+          "history_rounds": 10,
+          "history_elapsed_ns": 878640480,
+          "history_first_time_ns": 157996198080,
+          "cwnd_before_bytes": 400200,
+          "ssthresh_before_bytes": 398820,
+          "rtt_samples": 145,
+          "renewal_count": 27
+        },
+        {
+          "time_ns": 159857874240,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 96719243,
+          "new_base_rtt_ns": 97969281,
+          "cycle_min_rtt_ns": 98450950,
+          "history_rounds": 10,
+          "history_elapsed_ns": 885179520,
+          "history_first_time_ns": 158972694720,
+          "cwnd_before_bytes": 390540,
+          "ssthresh_before_bytes": 389160,
+          "rtt_samples": 141,
+          "renewal_count": 28
+        },
+        {
+          "time_ns": 161635690080,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 97969281,
+          "new_base_rtt_ns": 99000594,
+          "cycle_min_rtt_ns": 99032638,
+          "history_rounds": 10,
+          "history_elapsed_ns": 890112480,
+          "history_first_time_ns": 160745577600,
+          "cwnd_before_bytes": 390540,
+          "ssthresh_before_bytes": 389160,
+          "rtt_samples": 141,
+          "renewal_count": 29
+        },
+        {
+          "time_ns": 165225623040,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 99000594,
+          "new_base_rtt_ns": 100001566,
+          "cycle_min_rtt_ns": 100368623,
+          "history_rounds": 10,
+          "history_elapsed_ns": 902387520,
+          "history_first_time_ns": 164323235520,
+          "cwnd_before_bytes": 396060,
+          "ssthresh_before_bytes": 389160,
+          "rtt_samples": 143,
+          "renewal_count": 30
+        },
+        {
+          "time_ns": 168612605920,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 90359639,
+          "new_base_rtt_ns": 91708533,
+          "cycle_min_rtt_ns": 94995559,
+          "history_rounds": 10,
+          "history_elapsed_ns": 844798080,
+          "history_first_time_ns": 167767807840,
+          "cwnd_before_bytes": 391920,
+          "ssthresh_before_bytes": 387780,
+          "rtt_samples": 142,
+          "renewal_count": 31
+        },
+        {
+          "time_ns": 169573500640,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 91708533,
+          "new_base_rtt_ns": 95169513,
+          "cycle_min_rtt_ns": 96922013,
+          "history_rounds": 10,
+          "history_elapsed_ns": 865791840,
+          "history_first_time_ns": 168707708800,
+          "cwnd_before_bytes": 378120,
+          "ssthresh_before_bytes": 376740,
+          "rtt_samples": 137,
+          "renewal_count": 32
+        },
+        {
+          "time_ns": 170546670400,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 95169513,
+          "new_base_rtt_ns": 96845159,
+          "cycle_min_rtt_ns": 97608103,
+          "history_rounds": 10,
+          "history_elapsed_ns": 876346080,
+          "history_first_time_ns": 169670324320,
+          "cwnd_before_bytes": 364320,
+          "ssthresh_before_bytes": 362940,
+          "rtt_samples": 132,
+          "renewal_count": 33
+        },
+        {
+          "time_ns": 171822471520,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 96845159,
+          "new_base_rtt_ns": 98026742,
+          "cycle_min_rtt_ns": 98333851,
+          "history_rounds": 10,
+          "history_elapsed_ns": 884835360,
+          "history_first_time_ns": 170937636160,
+          "cwnd_before_bytes": 357420,
+          "ssthresh_before_bytes": 356040,
+          "rtt_samples": 129,
+          "renewal_count": 34
+        },
+        {
+          "time_ns": 176663999680,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 98026742,
+          "new_base_rtt_ns": 99032154,
+          "cycle_min_rtt_ns": 99460512,
+          "history_rounds": 10,
+          "history_elapsed_ns": 894357120,
+          "history_first_time_ns": 175769642560,
+          "cwnd_before_bytes": 357420,
+          "ssthresh_before_bytes": 356040,
+          "rtt_samples": 129,
+          "renewal_count": 35
+        },
+        {
+          "time_ns": 177970889920,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 99032154,
+          "new_base_rtt_ns": 100067816,
+          "cycle_min_rtt_ns": 101394420,
+          "history_rounds": 10,
+          "history_elapsed_ns": 907320480,
+          "history_first_time_ns": 177063569440,
+          "cwnd_before_bytes": 350520,
+          "ssthresh_before_bytes": 349140,
+          "rtt_samples": 127,
+          "renewal_count": 36
+        },
+        {
+          "time_ns": 180725485280,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 90237483,
+          "new_base_rtt_ns": 91518541,
+          "cycle_min_rtt_ns": 94451012,
+          "history_rounds": 10,
+          "history_elapsed_ns": 841585920,
+          "history_first_time_ns": 179883899360,
+          "cwnd_before_bytes": 343620,
+          "ssthresh_before_bytes": 342240,
+          "rtt_samples": 124,
+          "renewal_count": 37
+        },
+        {
+          "time_ns": 181682938400,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 91518541,
+          "new_base_rtt_ns": 94759746,
+          "cycle_min_rtt_ns": 96368682,
+          "history_rounds": 10,
+          "history_elapsed_ns": 862579680,
+          "history_first_time_ns": 180820358720,
+          "cwnd_before_bytes": 329820,
+          "ssthresh_before_bytes": 328440,
+          "rtt_samples": 119,
+          "renewal_count": 38
+        },
+        {
+          "time_ns": 182653813760,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 94759746,
+          "new_base_rtt_ns": 96478770,
+          "cycle_min_rtt_ns": 97279171,
+          "history_rounds": 10,
+          "history_elapsed_ns": 874281120,
+          "history_first_time_ns": 181779532640,
+          "cwnd_before_bytes": 317400,
+          "ssthresh_before_bytes": 316020,
+          "rtt_samples": 115,
+          "renewal_count": 39
+        },
+        {
+          "time_ns": 183730116800,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 96478770,
+          "new_base_rtt_ns": 97490872,
+          "cycle_min_rtt_ns": 98451002,
+          "history_rounds": 10,
+          "history_elapsed_ns": 881508480,
+          "history_first_time_ns": 182848608320,
+          "cwnd_before_bytes": 314640,
+          "ssthresh_before_bytes": 313260,
+          "rtt_samples": 114,
+          "renewal_count": 40
+        },
+        {
+          "time_ns": 186583776800,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 97490872,
+          "new_base_rtt_ns": 98502078,
+          "cycle_min_rtt_ns": 98518559,
+          "history_rounds": 10,
+          "history_elapsed_ns": 885867840,
+          "history_first_time_ns": 185697908960,
+          "cwnd_before_bytes": 314640,
+          "ssthresh_before_bytes": 313260,
+          "rtt_samples": 113,
+          "renewal_count": 41
+        },
+        {
+          "time_ns": 189294954560,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 98502078,
+          "new_base_rtt_ns": 99657012,
+          "cycle_min_rtt_ns": 100477820,
+          "history_rounds": 10,
+          "history_elapsed_ns": 901125600,
+          "history_first_time_ns": 188393828960,
+          "cwnd_before_bytes": 316020,
+          "ssthresh_before_bytes": 313260,
+          "rtt_samples": 114,
+          "renewal_count": 42
+        },
+        {
+          "time_ns": 192466263840,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 90167902,
+          "new_base_rtt_ns": 91184273,
+          "cycle_min_rtt_ns": 94759747,
+          "history_rounds": 10,
+          "history_elapsed_ns": 843880320,
+          "history_first_time_ns": 191622383520,
+          "cwnd_before_bytes": 325680,
+          "ssthresh_before_bytes": 313260,
+          "rtt_samples": 118,
+          "renewal_count": 43
+        },
+        {
+          "time_ns": 193430026560,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 91184273,
+          "new_base_rtt_ns": 95235634,
+          "cycle_min_rtt_ns": 97225700,
+          "history_rounds": 10,
+          "history_elapsed_ns": 868430400,
+          "history_first_time_ns": 192561596160,
+          "cwnd_before_bytes": 311880,
+          "ssthresh_before_bytes": 310500,
+          "rtt_samples": 113,
+          "renewal_count": 44
+        },
+        {
+          "time_ns": 194409161760,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 95235634,
+          "new_base_rtt_ns": 97351328,
+          "cycle_min_rtt_ns": 98294365,
+          "history_rounds": 10,
+          "history_elapsed_ns": 881852640,
+          "history_first_time_ns": 193527309120,
+          "cwnd_before_bytes": 298080,
+          "ssthresh_before_bytes": 296700,
+          "rtt_samples": 108,
+          "renewal_count": 45
+        },
+        {
+          "time_ns": 195497395680,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 97351328,
+          "new_base_rtt_ns": 98463175,
+          "cycle_min_rtt_ns": 99578879,
+          "history_rounds": 10,
+          "history_elapsed_ns": 891489120,
+          "history_first_time_ns": 194605906560,
+          "cwnd_before_bytes": 295320,
+          "ssthresh_before_bytes": 293940,
+          "rtt_samples": 107,
+          "renewal_count": 46
+        },
+        {
+          "time_ns": 196793158080,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 98463175,
+          "new_base_rtt_ns": 99591616,
+          "cycle_min_rtt_ns": 100000275,
+          "history_rounds": 10,
+          "history_elapsed_ns": 897913440,
+          "history_first_time_ns": 195895244640,
+          "cwnd_before_bytes": 295320,
+          "ssthresh_before_bytes": 293940,
+          "rtt_samples": 106,
+          "renewal_count": 47
+        }
+      ],
+      "errors": 0
+    },
+    "s1-fixed-comp-r20": {
+      "rows": 2205,
+      "event_counts": {
+        "ENABLE": 9,
+        "CYCLE_INCREASE": 872,
+        "CYCLE_DECREASE": 481,
+        "CYCLE_HOLD": 803,
+        "DISABLE": 12,
+        "RENEW": 28
+      },
+      "history_clear_reasons": {
+        "ENABLE": 9,
+        "INVALID_CYCLE": 3,
+        "DISABLE": 12
+      },
+      "instances": [
+        1,
+        2,
+        3
+      ],
+      "renewals": [
+        {
+          "time_ns": 91958450720,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 90000000,
+          "new_base_rtt_ns": 91030581,
+          "cycle_min_rtt_ns": 94874993,
+          "history_rounds": 20,
+          "history_elapsed_ns": 1763705280,
+          "history_first_time_ns": 90194745440,
+          "cwnd_before_bytes": 632040,
+          "ssthresh_before_bytes": 535095,
+          "rtt_samples": 229,
+          "renewal_count": 1
+        },
+        {
+          "time_ns": 105063017280,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 90137098,
+          "new_base_rtt_ns": 91505805,
+          "cycle_min_rtt_ns": 96235905,
+          "history_rounds": 20,
+          "history_elapsed_ns": 1786878720,
+          "history_first_time_ns": 103276138560,
+          "cwnd_before_bytes": 652740,
+          "ssthresh_before_bytes": 535095,
+          "rtt_samples": 236,
+          "renewal_count": 2
+        },
+        {
+          "time_ns": 116282806560,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 90165239,
+          "new_base_rtt_ns": 91226752,
+          "cycle_min_rtt_ns": 93368623,
+          "history_rounds": 20,
+          "history_elapsed_ns": 1753151040,
+          "history_first_time_ns": 114529655520,
+          "cwnd_before_bytes": 699660,
+          "ssthresh_before_bytes": 554760,
+          "rtt_samples": 253,
+          "renewal_count": 3
+        },
+        {
+          "time_ns": 122641780160,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 90167864,
+          "new_base_rtt_ns": 91234842,
+          "cycle_min_rtt_ns": 92228324,
+          "history_rounds": 20,
+          "history_elapsed_ns": 1749250560,
+          "history_first_time_ns": 120892529600,
+          "cwnd_before_bytes": 558900,
+          "ssthresh_before_bytes": 553380,
+          "rtt_samples": 202,
+          "renewal_count": 4
+        },
+        {
+          "time_ns": 130109708000,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 91234842,
+          "new_base_rtt_ns": 92268409,
+          "cycle_min_rtt_ns": 94168193,
+          "history_rounds": 20,
+          "history_elapsed_ns": 1767720480,
+          "history_first_time_ns": 128341987520,
+          "cwnd_before_bytes": 509220,
+          "ssthresh_before_bytes": 507840,
+          "rtt_samples": 184,
+          "renewal_count": 5
+        },
+        {
+          "time_ns": 132054212000,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 92268409,
+          "new_base_rtt_ns": 94226594,
+          "cycle_min_rtt_ns": 100314118,
+          "history_rounds": 20,
+          "history_elapsed_ns": 1850089440,
+          "history_first_time_ns": 130204122560,
+          "cwnd_before_bytes": 481620,
+          "ssthresh_before_bytes": 480240,
+          "rtt_samples": 174,
+          "renewal_count": 6
+        },
+        {
+          "time_ns": 135597598080,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 90311437,
+          "new_base_rtt_ns": 91707170,
+          "cycle_min_rtt_ns": 96603281,
+          "history_rounds": 20,
+          "history_elapsed_ns": 1803627840,
+          "history_first_time_ns": 133793970240,
+          "cwnd_before_bytes": 456780,
+          "ssthresh_before_bytes": 455400,
+          "rtt_samples": 165,
+          "renewal_count": 7
+        },
+        {
+          "time_ns": 137543593440,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 91707170,
+          "new_base_rtt_ns": 96716312,
+          "cycle_min_rtt_ns": 97281393,
+          "history_rounds": 20,
+          "history_elapsed_ns": 1849171680,
+          "history_first_time_ns": 135694421760,
+          "cwnd_before_bytes": 429180,
+          "ssthresh_before_bytes": 427800,
+          "rtt_samples": 155,
+          "renewal_count": 8
+        },
+        {
+          "time_ns": 140375800800,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 96716312,
+          "new_base_rtt_ns": 97759542,
+          "cycle_min_rtt_ns": 97852925,
+          "history_rounds": 20,
+          "history_elapsed_ns": 1857087360,
+          "history_first_time_ns": 138518713440,
+          "cwnd_before_bytes": 429180,
+          "ssthresh_before_bytes": 427800,
+          "rtt_samples": 155,
+          "renewal_count": 9
+        },
+        {
+          "time_ns": 144031353600,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 97759542,
+          "new_base_rtt_ns": 98762025,
+          "cycle_min_rtt_ns": 100001198,
+          "history_rounds": 20,
+          "history_elapsed_ns": 1886914560,
+          "history_first_time_ns": 142144439040,
+          "cwnd_before_bytes": 414000,
+          "ssthresh_before_bytes": 412620,
+          "rtt_samples": 150,
+          "renewal_count": 10
+        },
+        {
+          "time_ns": 148185228000,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 90167829,
+          "new_base_rtt_ns": 92000000,
+          "cycle_min_rtt_ns": 97225701,
+          "history_rounds": 20,
+          "history_elapsed_ns": 1810740480,
+          "history_first_time_ns": 146374487520,
+          "cwnd_before_bytes": 400200,
+          "ssthresh_before_bytes": 398820,
+          "rtt_samples": 145,
+          "renewal_count": 11
+        },
+        {
+          "time_ns": 150149463840,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 92000000,
+          "new_base_rtt_ns": 97210912,
+          "cycle_min_rtt_ns": 98496043,
+          "history_rounds": 20,
+          "history_elapsed_ns": 1866838560,
+          "history_first_time_ns": 148282625280,
+          "cwnd_before_bytes": 372600,
+          "ssthresh_before_bytes": 371220,
+          "rtt_samples": 135,
+          "renewal_count": 12
+        },
+        {
+          "time_ns": 152119550400,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 97210912,
+          "new_base_rtt_ns": 98428988,
+          "cycle_min_rtt_ns": 98505919,
+          "history_rounds": 20,
+          "history_elapsed_ns": 1871771520,
+          "history_first_time_ns": 150247778880,
+          "cwnd_before_bytes": 365700,
+          "ssthresh_before_bytes": 364320,
+          "rtt_samples": 132,
+          "renewal_count": 13
+        },
+        {
+          "time_ns": 156894196800,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 98428988,
+          "new_base_rtt_ns": 99452517,
+          "cycle_min_rtt_ns": 101083159,
+          "history_rounds": 20,
+          "history_elapsed_ns": 1905613920,
+          "history_first_time_ns": 154988582880,
+          "cwnd_before_bytes": 353280,
+          "ssthresh_before_bytes": 351900,
+          "rtt_samples": 128,
+          "renewal_count": 14
+        },
+        {
+          "time_ns": 160615180480,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 90157924,
+          "new_base_rtt_ns": 91226759,
+          "cycle_min_rtt_ns": 96716288,
+          "history_rounds": 20,
+          "history_elapsed_ns": 1800989280,
+          "history_first_time_ns": 158814191200,
+          "cwnd_before_bytes": 339480,
+          "ssthresh_before_bytes": 338100,
+          "rtt_samples": 123,
+          "renewal_count": 15
+        },
+        {
+          "time_ns": 162567370720,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 91226759,
+          "new_base_rtt_ns": 96848443,
+          "cycle_min_rtt_ns": 98030575,
+          "history_rounds": 20,
+          "history_elapsed_ns": 1855366560,
+          "history_first_time_ns": 160712004160,
+          "cwnd_before_bytes": 311880,
+          "ssthresh_before_bytes": 310500,
+          "rtt_samples": 113,
+          "renewal_count": 16
+        },
+        {
+          "time_ns": 164627627200,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 96848443,
+          "new_base_rtt_ns": 97852931,
+          "cycle_min_rtt_ns": 98281600,
+          "history_rounds": 20,
+          "history_elapsed_ns": 1864658880,
+          "history_first_time_ns": 162762968320,
+          "cwnd_before_bytes": 311880,
+          "ssthresh_before_bytes": 310500,
+          "rtt_samples": 112,
+          "renewal_count": 17
+        },
+        {
+          "time_ns": 168910698400,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 97852931,
+          "new_base_rtt_ns": 98860504,
+          "cycle_min_rtt_ns": 100443947,
+          "history_rounds": 20,
+          "history_elapsed_ns": 1893338880,
+          "history_first_time_ns": 167017359520,
+          "cwnd_before_bytes": 303600,
+          "ssthresh_before_bytes": 302220,
+          "rtt_samples": 110,
+          "renewal_count": 18
+        },
+        {
+          "time_ns": 173029021280,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 90167829,
+          "new_base_rtt_ns": 91226750,
+          "cycle_min_rtt_ns": 97072021,
+          "history_rounds": 20,
+          "history_elapsed_ns": 1807069440,
+          "history_first_time_ns": 171221951840,
+          "cwnd_before_bytes": 296700,
+          "ssthresh_before_bytes": 295320,
+          "rtt_samples": 107,
+          "renewal_count": 19
+        },
+        {
+          "time_ns": 174991765760,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 91226750,
+          "new_base_rtt_ns": 97198232,
+          "cycle_min_rtt_ns": 98450938,
+          "history_rounds": 20,
+          "history_elapsed_ns": 1865461920,
+          "history_first_time_ns": 173126303840,
+          "cwnd_before_bytes": 269100,
+          "ssthresh_before_bytes": 267720,
+          "rtt_samples": 97,
+          "renewal_count": 20
+        },
+        {
+          "time_ns": 176967358880,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 97198232,
+          "new_base_rtt_ns": 98451002,
+          "cycle_min_rtt_ns": 99032209,
+          "history_rounds": 20,
+          "history_elapsed_ns": 1877163360,
+          "history_first_time_ns": 175090195520,
+          "cwnd_before_bytes": 269100,
+          "ssthresh_before_bytes": 267720,
+          "rtt_samples": 97,
+          "renewal_count": 21
+        },
+        {
+          "time_ns": 181546637120,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 98451002,
+          "new_base_rtt_ns": 99452851,
+          "cycle_min_rtt_ns": 101279326,
+          "history_rounds": 20,
+          "history_elapsed_ns": 1906531680,
+          "history_first_time_ns": 179640105440,
+          "cwnd_before_bytes": 259440,
+          "ssthresh_before_bytes": 258060,
+          "rtt_samples": 94,
+          "renewal_count": 22
+        },
+        {
+          "time_ns": 185734456640,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 90228555,
+          "new_base_rtt_ns": 91707385,
+          "cycle_min_rtt_ns": 96751600,
+          "history_rounds": 20,
+          "history_elapsed_ns": 1727797920,
+          "history_first_time_ns": 184006658720,
+          "cwnd_before_bytes": 237360,
+          "ssthresh_before_bytes": 235980,
+          "rtt_samples": 86,
+          "renewal_count": 23
+        },
+        {
+          "time_ns": 187678157600,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 91707385,
+          "new_base_rtt_ns": 96715011,
+          "cycle_min_rtt_ns": 97504789,
+          "history_rounds": 20,
+          "history_elapsed_ns": 1847106720,
+          "history_first_time_ns": 185831050880,
+          "cwnd_before_bytes": 209760,
+          "ssthresh_before_bytes": 208380,
+          "rtt_samples": 76,
+          "renewal_count": 24
+        },
+        {
+          "time_ns": 190119858080,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 96715011,
+          "new_base_rtt_ns": 97720824,
+          "cycle_min_rtt_ns": 97852943,
+          "history_rounds": 20,
+          "history_elapsed_ns": 1857202080,
+          "history_first_time_ns": 188262656000,
+          "cwnd_before_bytes": 212520,
+          "ssthresh_before_bytes": 208380,
+          "rtt_samples": 76,
+          "renewal_count": 25
+        },
+        {
+          "time_ns": 193483104320,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 97720824,
+          "new_base_rtt_ns": 98762002,
+          "cycle_min_rtt_ns": 100365064,
+          "history_rounds": 20,
+          "history_elapsed_ns": 1888291200,
+          "history_first_time_ns": 191594813120,
+          "cwnd_before_bytes": 219420,
+          "ssthresh_before_bytes": 208380,
+          "rtt_samples": 79,
+          "renewal_count": 26
+        },
+        {
+          "time_ns": 197906953760,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 90172419,
+          "new_base_rtt_ns": 91715106,
+          "cycle_min_rtt_ns": 97280511,
+          "history_rounds": 20,
+          "history_elapsed_ns": 1733648640,
+          "history_first_time_ns": 196173305120,
+          "cwnd_before_bytes": 216660,
+          "ssthresh_before_bytes": 208380,
+          "rtt_samples": 78,
+          "renewal_count": 27
+        },
+        {
+          "time_ns": 199872566240,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 91715106,
+          "new_base_rtt_ns": 97643195,
+          "cycle_min_rtt_ns": 98707523,
+          "history_rounds": 20,
+          "history_elapsed_ns": 1868100480,
+          "history_first_time_ns": 198004465760,
+          "cwnd_before_bytes": 189060,
+          "ssthresh_before_bytes": 187680,
+          "rtt_samples": 68,
+          "renewal_count": 28
+        }
+      ],
+      "errors": 0
+    },
+    "s1-fixed-comp-r40": {
+      "rows": 2200,
+      "event_counts": {
+        "ENABLE": 7,
+        "CYCLE_INCREASE": 946,
+        "CYCLE_DECREASE": 592,
+        "CYCLE_HOLD": 639,
+        "DISABLE": 8,
+        "RENEW": 8
+      },
+      "history_clear_reasons": {
+        "ENABLE": 7,
+        "INVALID_CYCLE": 3,
+        "DISABLE": 8
+      },
+      "instances": [
+        1,
+        2,
+        3
+      ],
+      "renewals": [
+        {
+          "time_ns": 131141742880,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 90000000,
+          "new_base_rtt_ns": 91016219,
+          "cycle_min_rtt_ns": 101503524,
+          "history_rounds": 40,
+          "history_elapsed_ns": 3667713120,
+          "history_first_time_ns": 127474029760,
+          "cwnd_before_bytes": 667920,
+          "ssthresh_before_bytes": 543375,
+          "rtt_samples": 242,
+          "renewal_count": 1
+        },
+        {
+          "time_ns": 135717787840,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 90558936,
+          "new_base_rtt_ns": 91762028,
+          "cycle_min_rtt_ns": 97674895,
+          "history_rounds": 40,
+          "history_elapsed_ns": 3757883040,
+          "history_first_time_ns": 131959904800,
+          "cwnd_before_bytes": 619620,
+          "ssthresh_before_bytes": 543375,
+          "rtt_samples": 224,
+          "renewal_count": 2
+        },
+        {
+          "time_ns": 139544044000,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 91762028,
+          "new_base_rtt_ns": 93729370,
+          "cycle_min_rtt_ns": 93729370,
+          "history_rounds": 40,
+          "history_elapsed_ns": 3728744160,
+          "history_first_time_ns": 135815299840,
+          "cwnd_before_bytes": 564420,
+          "ssthresh_before_bytes": 543375,
+          "rtt_samples": 204,
+          "renewal_count": 3
+        },
+        {
+          "time_ns": 170653460800,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 90117651,
+          "new_base_rtt_ns": 91226829,
+          "cycle_min_rtt_ns": 97297236,
+          "history_rounds": 40,
+          "history_elapsed_ns": 3631805760,
+          "history_first_time_ns": 167021655040,
+          "cwnd_before_bytes": 401580,
+          "ssthresh_before_bytes": 400200,
+          "rtt_samples": 145,
+          "renewal_count": 4
+        },
+        {
+          "time_ns": 176867823040,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 90452518,
+          "new_base_rtt_ns": 91707367,
+          "cycle_min_rtt_ns": 98505868,
+          "history_rounds": 40,
+          "history_elapsed_ns": 3777041280,
+          "history_first_time_ns": 173090781760,
+          "cwnd_before_bytes": 354660,
+          "ssthresh_before_bytes": 353280,
+          "rtt_samples": 128,
+          "renewal_count": 5
+        },
+        {
+          "time_ns": 180738590560,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 91707367,
+          "new_base_rtt_ns": 94758663,
+          "cycle_min_rtt_ns": 94758663,
+          "history_rounds": 40,
+          "history_elapsed_ns": 3772223040,
+          "history_first_time_ns": 176966367520,
+          "cwnd_before_bytes": 299460,
+          "ssthresh_before_bytes": 298080,
+          "rtt_samples": 108,
+          "renewal_count": 6
+        },
+        {
+          "time_ns": 190997824800,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 90171858,
+          "new_base_rtt_ns": 91707196,
+          "cycle_min_rtt_ns": 99000000,
+          "history_rounds": 40,
+          "history_elapsed_ns": 3787021920,
+          "history_first_time_ns": 187210802880,
+          "cwnd_before_bytes": 240120,
+          "ssthresh_before_bytes": 238740,
+          "rtt_samples": 87,
+          "renewal_count": 7
+        },
+        {
+          "time_ns": 194880637920,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 91707196,
+          "new_base_rtt_ns": 95093086,
+          "cycle_min_rtt_ns": 95093086,
+          "history_rounds": 40,
+          "history_elapsed_ns": 3784153920,
+          "history_first_time_ns": 191096484000,
+          "cwnd_before_bytes": 184920,
+          "ssthresh_before_bytes": 183540,
+          "rtt_samples": 67,
+          "renewal_count": 8
+        }
+      ],
+      "errors": 0
+    },
+    "s1-leo-r10": {
+      "rows": 2195,
+      "event_counts": {
+        "ENABLE": 14,
+        "CYCLE_INCREASE": 1249,
+        "CYCLE_DECREASE": 47,
+        "CYCLE_HOLD": 866,
+        "RENEW": 3,
+        "DISABLE": 16
+      },
+      "history_clear_reasons": {
+        "ENABLE": 14,
+        "INVALID_CYCLE": 3,
+        "DISABLE": 16
+      },
+      "instances": [
+        1,
+        2
+      ],
+      "renewals": [
+        {
+          "time_ns": 1298069808,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 98250000,
+          "new_base_rtt_ns": 100177877,
+          "cycle_min_rtt_ns": 100463167,
+          "history_rounds": 10,
+          "history_elapsed_ns": 897809217,
+          "history_first_time_ns": 400260591,
+          "cwnd_before_bytes": 38640,
+          "ssthresh_before_bytes": 28980,
+          "rtt_samples": 13,
+          "renewal_count": 1
+        },
+        {
+          "time_ns": 122670947531,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 88591479,
+          "new_base_rtt_ns": 91696564,
+          "cycle_min_rtt_ns": 91718676,
+          "history_rounds": 10,
+          "history_elapsed_ns": 825127155,
+          "history_first_time_ns": 121845820376,
+          "cwnd_before_bytes": 787980,
+          "ssthresh_before_bytes": 786600,
+          "rtt_samples": 285,
+          "renewal_count": 2
+        },
+        {
+          "time_ns": 188555982553,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 91434841,
+          "new_base_rtt_ns": 99279364,
+          "cycle_min_rtt_ns": 99357937,
+          "history_rounds": 10,
+          "history_elapsed_ns": 893478527,
+          "history_first_time_ns": 187662504026,
+          "cwnd_before_bytes": 815580,
+          "ssthresh_before_bytes": 814200,
+          "rtt_samples": 295,
+          "renewal_count": 3
+        }
+      ],
+      "errors": 0
+    },
+    "s1-leo-r20": {
+      "rows": 2195,
+      "event_counts": {
+        "ENABLE": 14,
+        "CYCLE_INCREASE": 1242,
+        "CYCLE_DECREASE": 42,
+        "CYCLE_HOLD": 878,
+        "RENEW": 3,
+        "DISABLE": 16
+      },
+      "history_clear_reasons": {
+        "ENABLE": 14,
+        "INVALID_CYCLE": 3,
+        "DISABLE": 16
+      },
+      "instances": [
+        1,
+        2
+      ],
+      "renewals": [
+        {
+          "time_ns": 2295799001,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 98250000,
+          "new_base_rtt_ns": 100177877,
+          "cycle_min_rtt_ns": 101273752,
+          "history_rounds": 20,
+          "history_elapsed_ns": 1895538410,
+          "history_first_time_ns": 400260591,
+          "cwnd_before_bytes": 49680,
+          "ssthresh_before_bytes": 37260,
+          "rtt_samples": 17,
+          "renewal_count": 1
+        },
+        {
+          "time_ns": 123587694999,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 88582540,
+          "new_base_rtt_ns": 91686678,
+          "cycle_min_rtt_ns": 91714430,
+          "history_rounds": 20,
+          "history_elapsed_ns": 1741828140,
+          "history_first_time_ns": 121845866859,
+          "cwnd_before_bytes": 774180,
+          "ssthresh_before_bytes": 772800,
+          "rtt_samples": 280,
+          "renewal_count": 2
+        },
+        {
+          "time_ns": 189548914666,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 91429760,
+          "new_base_rtt_ns": 99266468,
+          "cycle_min_rtt_ns": 99352983,
+          "history_rounds": 20,
+          "history_elapsed_ns": 1886616930,
+          "history_first_time_ns": 187662297736,
+          "cwnd_before_bytes": 801780,
+          "ssthresh_before_bytes": 800400,
+          "rtt_samples": 290,
+          "renewal_count": 3
+        }
+      ],
+      "errors": 0
+    },
+    "s1-leo-r40": {
+      "rows": 2196,
+      "event_counts": {
+        "ENABLE": 14,
+        "CYCLE_INCREASE": 1259,
+        "CYCLE_DECREASE": 81,
+        "CYCLE_HOLD": 823,
+        "RENEW": 3,
+        "DISABLE": 16
+      },
+      "history_clear_reasons": {
+        "ENABLE": 14,
+        "INVALID_CYCLE": 3,
+        "DISABLE": 16
+      },
+      "instances": [
+        1,
+        2
+      ],
+      "renewals": [
+        {
+          "time_ns": 4197049780,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 98250000,
+          "new_base_rtt_ns": 99870723,
+          "cycle_min_rtt_ns": 100518859,
+          "history_rounds": 40,
+          "history_elapsed_ns": 3796789189,
+          "history_first_time_ns": 400260591,
+          "cwnd_before_bytes": 74520,
+          "ssthresh_before_bytes": 55890,
+          "rtt_samples": 26,
+          "renewal_count": 1
+        },
+        {
+          "time_ns": 125420565553,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 88542134,
+          "new_base_rtt_ns": 91658335,
+          "cycle_min_rtt_ns": 91663378,
+          "history_rounds": 40,
+          "history_elapsed_ns": 3574707927,
+          "history_first_time_ns": 121845857626,
+          "cwnd_before_bytes": 746580,
+          "ssthresh_before_bytes": 745200,
+          "rtt_samples": 270,
+          "renewal_count": 2
+        },
+        {
+          "time_ns": 191536328931,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 91433926,
+          "new_base_rtt_ns": 99280375,
+          "cycle_min_rtt_ns": 99403384,
+          "history_rounds": 40,
+          "history_elapsed_ns": 3873948366,
+          "history_first_time_ns": 187662380565,
+          "cwnd_before_bytes": 774180,
+          "ssthresh_before_bytes": 772800,
+          "rtt_samples": 280,
+          "renewal_count": 3
+        }
+      ],
+      "errors": 0
+    },
+    "s1-rate50-base": {
+      "rows": 2158,
+      "event_counts": {
+        "ENABLE": 8,
+        "CYCLE_INCREASE": 480,
+        "CYCLE_DECREASE": 279,
+        "CYCLE_HOLD": 1383,
+        "DISABLE": 8
+      },
+      "history_clear_reasons": {
+        "ENABLE": 8,
+        "INVALID_CYCLE": 3,
+        "POLICY_DISABLED": 2139,
+        "DISABLE": 8
+      },
+      "instances": [
+        1,
+        2
+      ],
+      "renewals": [],
+      "errors": 0
+    },
+    "s1-rate50-r10": {
+      "rows": 2155,
+      "event_counts": {
+        "ENABLE": 12,
+        "CYCLE_INCREASE": 702,
+        "CYCLE_DECREASE": 21,
+        "CYCLE_HOLD": 1404,
+        "RENEW": 3,
+        "DISABLE": 13
+      },
+      "history_clear_reasons": {
+        "ENABLE": 12,
+        "INVALID_CYCLE": 3,
+        "DISABLE": 13
+      },
+      "instances": [
+        1,
+        2
+      ],
+      "renewals": [
+        {
+          "time_ns": 1315727575,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 98375000,
+          "new_base_rtt_ns": 101658682,
+          "cycle_min_rtt_ns": 102734462,
+          "history_rounds": 10,
+          "history_elapsed_ns": 909137692,
+          "history_first_time_ns": 406589883,
+          "cwnd_before_bytes": 35880,
+          "ssthresh_before_bytes": 27600,
+          "rtt_samples": 12,
+          "renewal_count": 1
+        },
+        {
+          "time_ns": 122684918895,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 90033511,
+          "new_base_rtt_ns": 93019579,
+          "cycle_min_rtt_ns": 93019579,
+          "history_rounds": 10,
+          "history_elapsed_ns": 835266703,
+          "history_first_time_ns": 121849652192,
+          "cwnd_before_bytes": 412620,
+          "ssthresh_before_bytes": 411240,
+          "rtt_samples": 149,
+          "renewal_count": 2
+        },
+        {
+          "time_ns": 188470890692,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 92875849,
+          "new_base_rtt_ns": 100867425,
+          "cycle_min_rtt_ns": 101000000,
+          "history_rounds": 10,
+          "history_elapsed_ns": 905734909,
+          "history_first_time_ns": 187565155783,
+          "cwnd_before_bytes": 550620,
+          "ssthresh_before_bytes": 422280,
+          "rtt_samples": 199,
+          "renewal_count": 3
+        }
+      ],
+      "errors": 0
+    },
+    "s1-rate50-r20": {
+      "rows": 2155,
+      "event_counts": {
+        "ENABLE": 12,
+        "CYCLE_INCREASE": 713,
+        "CYCLE_DECREASE": 41,
+        "CYCLE_HOLD": 1373,
+        "RENEW": 3,
+        "DISABLE": 13
+      },
+      "history_clear_reasons": {
+        "ENABLE": 12,
+        "INVALID_CYCLE": 3,
+        "DISABLE": 13
+      },
+      "instances": [
+        1,
+        2
+      ],
+      "renewals": [
+        {
+          "time_ns": 2326442281,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 98375000,
+          "new_base_rtt_ns": 101387727,
+          "cycle_min_rtt_ns": 104098920,
+          "history_rounds": 20,
+          "history_elapsed_ns": 1919852398,
+          "history_first_time_ns": 406589883,
+          "cwnd_before_bytes": 40020,
+          "ssthresh_before_bytes": 30015,
+          "rtt_samples": 14,
+          "renewal_count": 1
+        },
+        {
+          "time_ns": 123612884909,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 90033303,
+          "new_base_rtt_ns": 93023989,
+          "cycle_min_rtt_ns": 93048244,
+          "history_rounds": 20,
+          "history_elapsed_ns": 1763294203,
+          "history_first_time_ns": 121849590706,
+          "cwnd_before_bytes": 398820,
+          "ssthresh_before_bytes": 397440,
+          "rtt_samples": 144,
+          "renewal_count": 2
+        },
+        {
+          "time_ns": 189477866910,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 92869967,
+          "new_base_rtt_ns": 100874961,
+          "cycle_min_rtt_ns": 101001067,
+          "history_rounds": 20,
+          "history_elapsed_ns": 1912561829,
+          "history_first_time_ns": 187565305081,
+          "cwnd_before_bytes": 536820,
+          "ssthresh_before_bytes": 422280,
+          "rtt_samples": 194,
+          "renewal_count": 3
+        }
+      ],
+      "errors": 0
+    },
+    "s1-rate50-r40": {
+      "rows": 2156,
+      "event_counts": {
+        "ENABLE": 12,
+        "CYCLE_INCREASE": 719,
+        "CYCLE_DECREASE": 81,
+        "CYCLE_HOLD": 1328,
+        "RENEW": 3,
+        "DISABLE": 13
+      },
+      "history_clear_reasons": {
+        "ENABLE": 12,
+        "INVALID_CYCLE": 3,
+        "DISABLE": 13
+      },
+      "instances": [
+        1,
+        2
+      ],
+      "renewals": [
+        {
+          "time_ns": 4353247573,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 98375000,
+          "new_base_rtt_ns": 101387727,
+          "cycle_min_rtt_ns": 104247382,
+          "history_rounds": 40,
+          "history_elapsed_ns": 3946657690,
+          "history_first_time_ns": 406589883,
+          "cwnd_before_bytes": 40020,
+          "ssthresh_before_bytes": 30015,
+          "rtt_samples": 14,
+          "renewal_count": 1
+        },
+        {
+          "time_ns": 125462996486,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 90050846,
+          "new_base_rtt_ns": 93020257,
+          "cycle_min_rtt_ns": 93036903,
+          "history_rounds": 40,
+          "history_elapsed_ns": 3613459933,
+          "history_first_time_ns": 121849536553,
+          "cwnd_before_bytes": 371220,
+          "ssthresh_before_bytes": 369840,
+          "rtt_samples": 134,
+          "renewal_count": 2
+        },
+        {
+          "time_ns": 191488070796,
+          "vegas_instance": 1,
+          "old_base_rtt_ns": 92842323,
+          "new_base_rtt_ns": 100874961,
+          "cycle_min_rtt_ns": 101036689,
+          "history_rounds": 40,
+          "history_elapsed_ns": 3922807961,
+          "history_first_time_ns": 187565262835,
+          "cwnd_before_bytes": 509220,
+          "ssthresh_before_bytes": 422280,
+          "rtt_samples": 184,
+          "renewal_count": 3
+        }
+      ],
+      "errors": 0
+    }
+  },
+  "state_inputs": {
+    "s1-fixed-comp-r10/logs_ns3/vegas_state.csv": {
+      "bytes": 250366,
+      "sha256": "46bf8e0077ffbadf3944c973f3ef27168861fce090e8b54e7549443f3f7e215e"
+    },
+    "s1-fixed-comp-r20/logs_ns3/vegas_state.csv": {
+      "bytes": 249545,
+      "sha256": "a9820881b71a8351285427298070725a93782bde60296a6154cabd6bc788dabe"
+    },
+    "s1-fixed-comp-r40/logs_ns3/vegas_state.csv": {
+      "bytes": 251189,
+      "sha256": "02a1238db2bb3390a79a8172f5d9d3fe9e5708575b6e75fd811f6c0feb2e1ab3"
+    },
+    "s1-leo-r10/logs_ns3/vegas_state.csv": {
+      "bytes": 251862,
+      "sha256": "28ff33e669e3d1d0d447930ac7df73c63031af8ec1913571d47fe29326b961c4"
+    },
+    "s1-leo-r20/logs_ns3/vegas_state.csv": {
+      "bytes": 253196,
+      "sha256": "f11167f380667b66996588b7fc9d1a9241ef97d54b26b24d59997cf0037a4881"
+    },
+    "s1-leo-r40/logs_ns3/vegas_state.csv": {
+      "bytes": 252124,
+      "sha256": "e86c01b7ff6085e7fcf8d01a1c6c18f8bde009793dbd0944b3db4db74b1f83a5"
+    },
+    "s1-rate50-base/logs_ns3/vegas_state.csv": {
+      "bytes": 204657,
+      "sha256": "89e475c49372a570ce900bc5581c378d196e5ff547dd508f366fc71376440e02"
+    },
+    "s1-rate50-r10/logs_ns3/vegas_state.csv": {
+      "bytes": 244643,
+      "sha256": "6cd88d4bc4a4329139f3b89b0bb76b002b98f27963ffa797c0c9d161e233676a"
+    },
+    "s1-rate50-r20/logs_ns3/vegas_state.csv": {
+      "bytes": 246090,
+      "sha256": "b2c21dc2486cb0951b9c398497a3e585d01261513a45f452621220c84035bf4d"
+    },
+    "s1-rate50-r40/logs_ns3/vegas_state.csv": {
+      "bytes": 244909,
+      "sha256": "5ff7270a32e9224a90dd406ce0ef7644c7609475b9b2a2c6670745945cddf901"
+    }
+  },
+  "primary_and_capacity_results": [
+    {
+      "case": "s1-fixed-comp-r10",
+      "window": "common",
+      "start_ns": 80000000000,
+      "end_ns": 200000000000,
+      "rate_mbps": 100,
+      "renewal": true,
+      "rounds": 10,
+      "vegas_mbps": 41.17,
+      "cubic_mbps": 52.76016,
+      "aggregate_mbps": 93.93016,
+      "jain": 0.985002935364992,
+      "queue_mean_ms": 4.995098975522381,
+      "TcDrop": 185,
+      "vegas_retransmissions": 10,
+      "renewals_whole": 47
+    },
+    {
+      "case": "s1-fixed-comp-r20",
+      "window": "common",
+      "start_ns": 80000000000,
+      "end_ns": 200000000000,
+      "rate_mbps": 100,
+      "renewal": true,
+      "rounds": 20,
+      "vegas_mbps": 38.419844,
+      "cubic_mbps": 55.382896,
+      "aggregate_mbps": 93.80274,
+      "jain": 0.968333370793904,
+      "queue_mean_ms": 4.723996642015867,
+      "TcDrop": 186,
+      "vegas_retransmissions": 6,
+      "renewals_whole": 28
+    },
+    {
+      "case": "s1-fixed-comp-r40",
+      "window": "common",
+      "start_ns": 80000000000,
+      "end_ns": 200000000000,
+      "rate_mbps": 100,
+      "renewal": true,
+      "rounds": 40,
+      "vegas_mbps": 45.450484,
+      "cubic_mbps": 47.468688,
+      "aggregate_mbps": 92.919172,
+      "jain": 0.999528464245268,
+      "queue_mean_ms": 3.2477479295184275,
+      "TcDrop": 203,
+      "vegas_retransmissions": 5,
+      "renewals_whole": 8
+    },
+    {
+      "case": "s1-leo-r10",
+      "window": "whole",
+      "start_ns": 0,
+      "end_ns": 200000000000,
+      "rate_mbps": 100,
+      "renewal": true,
+      "rounds": 10,
+      "vegas_mbps": 69.91344959999999,
+      "cubic_mbps": null,
+      "aggregate_mbps": 69.91344959999999,
+      "jain": null,
+      "queue_mean_ms": null,
+      "TcDrop": 0,
+      "vegas_retransmissions": 71,
+      "renewals_whole": 3
+    },
+    {
+      "case": "s1-leo-r20",
+      "window": "whole",
+      "start_ns": 0,
+      "end_ns": 200000000000,
+      "rate_mbps": 100,
+      "renewal": true,
+      "rounds": 20,
+      "vegas_mbps": 69.34323359999999,
+      "cubic_mbps": null,
+      "aggregate_mbps": 69.34323359999999,
+      "jain": null,
+      "queue_mean_ms": null,
+      "TcDrop": 0,
+      "vegas_retransmissions": 71,
+      "renewals_whole": 3
+    },
+    {
+      "case": "s1-leo-r40",
+      "window": "whole",
+      "start_ns": 0,
+      "end_ns": 200000000000,
+      "rate_mbps": 100,
+      "renewal": true,
+      "rounds": 40,
+      "vegas_mbps": 68.453796,
+      "cubic_mbps": null,
+      "aggregate_mbps": 68.453796,
+      "jain": null,
+      "queue_mean_ms": null,
+      "TcDrop": 0,
+      "vegas_retransmissions": 71,
+      "renewals_whole": 3
+    },
+    {
+      "case": "s1-rate50-base",
+      "window": "whole",
+      "start_ns": 0,
+      "end_ns": 200000000000,
+      "rate_mbps": 50.0,
+      "renewal": false,
+      "rounds": 20,
+      "vegas_mbps": 25.3262016,
+      "cubic_mbps": null,
+      "aggregate_mbps": 25.3262016,
+      "jain": null,
+      "queue_mean_ms": null,
+      "TcDrop": 0,
+      "vegas_retransmissions": 19,
+      "renewals_whole": 0
+    },
+    {
+      "case": "s1-rate50-r10",
+      "window": "whole",
+      "start_ns": 0,
+      "end_ns": 200000000000,
+      "rate_mbps": 50.0,
+      "renewal": true,
+      "rounds": 10,
+      "vegas_mbps": 42.0674784,
+      "cubic_mbps": null,
+      "aggregate_mbps": 42.0674784,
+      "jain": null,
+      "queue_mean_ms": null,
+      "TcDrop": 0,
+      "vegas_retransmissions": 34,
+      "renewals_whole": 3
+    },
+    {
+      "case": "s1-rate50-r20",
+      "window": "whole",
+      "start_ns": 0,
+      "end_ns": 200000000000,
+      "rate_mbps": 50.0,
+      "renewal": true,
+      "rounds": 20,
+      "vegas_mbps": 41.7340152,
+      "cubic_mbps": null,
+      "aggregate_mbps": 41.7340152,
+      "jain": null,
+      "queue_mean_ms": null,
+      "TcDrop": 0,
+      "vegas_retransmissions": 34,
+      "renewals_whole": 3
+    },
+    {
+      "case": "s1-rate50-r40",
+      "window": "whole",
+      "start_ns": 0,
+      "end_ns": 200000000000,
+      "rate_mbps": 50.0,
+      "renewal": true,
+      "rounds": 40,
+      "vegas_mbps": 40.843252799999995,
+      "cubic_mbps": null,
+      "aggregate_mbps": 40.843252799999995,
+      "jain": null,
+      "queue_mean_ms": null,
+      "TcDrop": 0,
+      "vegas_retransmissions": 34,
+      "renewals_whole": 3
+    }
+  ],
+  "comparisons": [
+    {
+      "rounds": 10,
+      "advantages_higher_is_better": [
+        0.570216000000002,
+        0.12742000000000075,
+        0.016669564571087925,
+        -0.2711023335065139
+      ],
+      "dominates_r20": false
+    },
+    {
+      "rounds": 40,
+      "advantages_higher_is_better": [
+        -0.8894375999999937,
+        -0.8835679999999968,
+        0.031195093451363953,
+        1.4762487124974393
+      ],
+      "dominates_r20": false
+    }
+  ],
+  "scripts": {
+    "verify_sensitivity.py": "addebda530409b51ec048b9f0b776ef07609ac8c4ac978a7007cc8b8b85e00ee",
+    "pr14_audit_mechanism.py": "3db271bd8dd075f01af15054e58ee329fa0a25f98a328b8e674f1a157f8c847c"
+  }
+}

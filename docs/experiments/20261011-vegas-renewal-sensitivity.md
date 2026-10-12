@@ -187,8 +187,8 @@ branch without relabeling the earlier simulation source. New outputs are
 required; existing case paths are deliberately refused. For a current-source
 replay, pass its exact source commit to `verify_sensitivity.py
 --expected-source-commit SHA`. The package README supplies complete fresh-volume
-commands without any host Git metadata. Only the representative package replay,
-not a complete ten-case fresh-volume rerun, is part of this follow-up validation.
+commands without any host Git metadata. The initial representative replay was
+subsequently extended to the full ten-case workflow, as recorded below.
 
 ### Git-free replay and publication
 
@@ -205,8 +205,33 @@ confirms all **26** measurement CSVs, all analyzed windows, the independent
 image, policy and network settings match. The runner's source commit/hash
 differs because packaging verification was added; this difference is explicit.
 A negative test with an incorrect source hash exits nonzero before creating
-a case directory. Only this representative case received the new fresh-volume
-replay; the entire matrix was not rerun from the ZIP.
+a case directory. This was the initial representative replay; a later full
+workflow check uses the same extracted package and fresh official volume.
+
+### Complete package workflow check, 2026-10-12
+
+After the publication interruption, the exact ZIP README matrix command ran
+all ten cases at source `1deee988a37325c230a389ad4e6dafc518fc138f` in
+1,044.65 seconds including analysis, with its declared two workers. The
+unchanged package is mounted read-only, with no host Git metadata. The
+separate original-Vegas 100 Mbps baseline ran concurrently and reproduced
+41.5113384 Mbps. No simulation settings or TCP code changed for this check.
+
+The README's independent audit and locked-dependency plotting commands both
+passed. [`full-package-replay.json`](../../code/vegas-adaptive/sensitivity-evidence/full-package-replay.json)
+records exact matches for all **155** matrix measurement CSVs, all **11**
+baseline measurement CSVs, every analysis window, simulator identity, the
+57-row result table and the figure PNG. The regenerated PDF is also produced;
+its timestamp metadata is not required to match. The state audit again checks
+21,840 rows and 101 renewals. The comparison script runs outside the package
+and checks original archive inventories; it does not modify the tested code.
+
+Compact new manifests, matrix and analyses are in `full-package-replay/` and
+`full-package-baseline/`. Identical measurement contents remain available in
+the original published archives; the replay raw files are also retained in
+the Docker container. These are reproduction checks, not independent trials.
+This closes the complete research-ZIP workflow gap. A final submission with
+the report and any further selected results still needs its own clean check.
 
 The source package contains no raw logs, state, ns-3 source tree or build
 artifacts. Its README includes full-matrix and figure/table regeneration commands,

@@ -26,6 +26,13 @@ assert sha(a.evidence/'results.csv')==fig['results_sha256']
 replay=read('portable-replay-verification.json')
 assert replay['status']=='PASS' and replay['measurement_csv_count']==26 and replay['negative_source_hash_check_passed']
 for name,expected in replay['inputs'].items(): assert sha(a.evidence/name)==expected
+full=read('full-package-replay.json')
+assert full['status']=='PASS' and full['case_count']==10
+assert full['measurement_csv_count']==155 and full['baseline_measurement_csv_count']==11
+assert all(full[k] for k in ('all_windows_exact','results_csv_exact','figure_png_exact',
+                             'simulator_identity_exact','baseline_windows_exact'))
+assert sha(a.evidence/'full-package-replay'/'verification.json')==full['regenerated_audit_sha256']
+assert sha(Path(__file__).with_name('verify_full_package_replay.py'))==full['script_sha256']
 publication=read('publication.json')
 assert publication['release']['draft'] is False and publication['release']['prerelease'] is True
 assert publication['release']['tag_name']=='vegas-sensitivity-20261011'
@@ -46,10 +53,11 @@ pkg=replay['package']; asset=next(x for x in publication['assets'] if x['name']=
 assert asset['state']=='uploaded' and asset['size']==pkg['bytes'] and asset['digest']=='sha256:'+pkg['sha256']
 result=dict(status='PASS',cases=10,table_rows=len(rows),state_rows=21840,renewals=101,
             historical_measurement_csv_matches=37,fresh_replay_measurement_csv_matches=26,
+            full_package_replay_measurement_csv_matches=155,full_package_baseline_csv_matches=11,
             archives=checks,package=pkg,release=publication['release']['html_url'],
             inputs={str(x.relative_to(a.evidence)):sha(x) for x in sorted(a.evidence.rglob('*')) if x.is_file() and x!=a.out},
             limitations=['One LEO path at two capacities; one fixed-path competition scenario.',
-                'Only representative r40 competition replayed from Git-free ZIP, not the full ten-case matrix.',
+                'Full research workflow reproduced; final report/submission ZIP is still separate.',
                 'No universal optimum or route/congestion discrimination; not the final report/submission.'])
 a.out.write_text(json.dumps(result,indent=2)+'\n')
 print(json.dumps({k:v for k,v in result.items() if k!='inputs'},indent=2))
