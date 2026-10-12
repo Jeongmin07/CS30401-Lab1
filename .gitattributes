@@ -35,3 +35,12 @@ code/orbit-loss/*.patch whitespace=-blank-at-eol,cr-at-eol
 # Actual build/console logs retain emitted spaces for their SHA receipts.
 docs/experiments/assets/20261013-orbit-tail/**/*.txt -whitespace
 docs/experiments/assets/20261013-orbit-queue/**/*.txt -whitespace
+code/queue-pacing/** -text whitespace=cr-at-eol
+code/queue-backpressure/** -text whitespace=cr-at-eol
+docs/experiments/assets/20261013-queue-pacing/** -text whitespace=cr-at-eol
+docs/experiments/assets/20261013-queue-backpressure/** -text whitespace=cr-at-eol
+docs/experiments/assets/20261013-queue-mitigation/** -text whitespace=cr-at-eol
+code/queue-pacing/*.patch whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+code/queue-backpressure/*.patch whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
+docs/experiments/assets/20261013-queue-pacing/**/*.txt -whitespace
+docs/experiments/assets/20261013-queue-backpressure/**/*.txt -whitespace
