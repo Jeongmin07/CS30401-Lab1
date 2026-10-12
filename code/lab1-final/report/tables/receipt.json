@@ -1,0 +1,25 @@
+{
+  "data": {
+    "path": "/work/output/lab1-final-replay/report-data.json",
+    "sha256": "2fe4ddb013c0bce29429e624fce18145dd8a9b6ddfc0f494b38dd27c90ef9df1"
+  },
+  "helper_sha256": "678d7d7081052e90c9472beb2d3620685b455418cd730aeba9b41223aae6ce0c",
+  "files": {
+    "magnitudes.tex": {
+      "bytes": 619,
+      "sha256": "0fc345b18049b5ad598ffa55d3e9bc265f9beeb526811fa3896483ef1f9722f1"
+    },
+    "table-I-spec-map.csv": {
+      "bytes": 2651,
+      "sha256": "885079627a24c19da7ff5158a9f13084d72f647be6007f4bd6a57b46db49fdcf"
+    },
+    "table-II.csv": {
+      "bytes": 530,
+      "sha256": "5a5970d95a95338f97e119f24e14b8115608f6abe27aad909e1ac5b61450f065"
+    },
+    "values.json": {
+      "bytes": 207118,
+      "sha256": "6da900c181a23d4baa214412c4b0a9f251d496a8b1cbfa5155cd6038edc64f17"
+    }
+  }
+}

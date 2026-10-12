@@ -1,0 +1,40 @@
+{
+  "report_pdf": {
+    "path": "C:\\Users\\Newbiedev\\Desktop\\\ub124\ub5a1CS30401\\CS30401-Lab1\\output\\pdf\\report.pdf",
+    "bytes": 185984,
+    "sha256": "3cd0da9394f0db36f30810a333c759932518e02a115f32b397845fb6a63cc770"
+  },
+  "report_tex_sha256": "d11b9669df2ccf4f3af3a0ebd6a03e854dd5f77bdf9e5c7e2c27d03a61f3b48e",
+  "fresh_report_data_sha256": "2fe4ddb013c0bce29429e624fce18145dd8a9b6ddfc0f494b38dd27c90ef9df1",
+  "pages": 5,
+  "body_pages_at_most_6": true,
+  "IEEEtran_version": "1.8b",
+  "conference_defaults_unchanged": true,
+  "author_names_confirmed": true,
+  "required_section_order_checked": true,
+  "two_compile_passes_succeeded": true,
+  "undefined_references": false,
+  "overfull_boxes": false,
+  "font_types": {
+    "/ZXRJHQ+NimbusRomNo9L-Regu": "/Type1",
+    "/LREKMX+NimbusRomNo9L-MediItal": "/Type1",
+    "/GIXMDB+NimbusRomNo9L-Medi": "/Type1",
+    "/BRPOLX+NimbusRomNo9L-ReguItal": "/Type1",
+    "/DHIXEB+CMMI10": "/Type1",
+    "/PGCUPN+CMMI7": "/Type1",
+    "/CNXSVA+CMSY10": "/Type1",
+    "/VQSVFY+CMR10": "/Type1",
+    "/CVQCUU+CMEX10": "/Type1",
+    "/TEOLBD+NimbusMonL-Regu": "/Type1",
+    "/PGTGDA+CMR7": "/Type1",
+    "/BMQQDV+DejaVuSans": "/Type0"
+  },
+  "visual_review": {
+    "render": "Poppler pdftoppm, 120 dpi, all five final pages",
+    "all_pages_inspected": true,
+    "no_clipping_overlaps_or_missing_glyphs": true,
+    "figures_tables_readable": true,
+    "final_columns_balanced": true
+  },
+  "compiler": "Dedicated lab1-report-tex-20261013; TeX Live 2023/Debian; no ns-3 runtime mutation"
+}

@@ -38,3 +38,11 @@
 독립 검토 결과 BP 세 파일의 차이는 200초 종료 시 pending 행 순서뿐이다. 설치된 원본과 새 `backpressure.h`는 같으며 `std::map<const Packet*,Entry>`의 포인터 순서가 종료 기록으로 출력된다. 헤더·순서 있는 non-pending 원시 바이트·pending 전체 15개 필드와 중복 개수는 정확히 같다. 따라서 **342개 CSV의 바이트 일치와 3개 종료 pending 기록의 전체 필드 일치**로 구분하며, 345개 모두 바이트 일치라고 보고하지 않는다. 새 검증 계약은 결과를 만들지 않으며 이 종료 순서 외 차이는 거부한다.
 
 `analyze.py`와 `merge.py`의 순수 분석 검증만 수정한다. 런타임 patch, controller, build·실험 dispatcher, 기존 원본 계약과 입력·설정은 그대로다. 이 수정은 실행을 다시 돌리는 원인이 아니며 별도 분석 source checkpoint와 새 분석 결과 폴더로 기록한다. 최종 표·그림·PDF·ZIP 검증과 공유는 계속 진행 중이다. KLMS 업로드, 개인 Contribution Survey 제출, 팀 PR 병합은 이 준비 작업에 포함하지 않는다.
+
+## 완성된 보고서와 제출 패키지
+
+[최종 PDF](../../code/lab1-final/report/report.pdf)는 실제 IEEEtran conference 1.8b, 기본 두 단·10pt Times 계열 본문·기본 여백으로 작성한 영문 5쪽이다. 두 번 컴파일한 뒤 다섯 쪽을 모두 렌더링해 표·그림·본문·저자·참고문헌·마지막 두 단 배치를 확인했다. [PDF 검수](assets/20261013-finalization/pdf-qa.json)는 source·실제 새 데이터·PDF hash와 검사 범위를 남긴다. 세 벡터 그림과 Table II는 [새 재현 데이터](../../code/lab1-final/report/report-data.json)에서 잠긴 Matplotlib 환경과 stdlib 표 생성기로 만들었으며, [도표 연결](../../code/lab1-final/report/README.md)에서 재생성한다.
+
+`Lab1_5.zip`은 773,756 bytes, 54개 파일, SHA256 `695af4d2338576c6bfd84a6401521964368303bf735b46dd61005844f48e9595`다. 루트는 `report.pdf`, `README.md`, `code/`이며 로그·state·ns-3 트리·빌드·가상환경·초기 preview는 없다. [ZIP 생성·검수](assets/20261013-finalization/submission-package.json)는 실제 검증한 실행 파일과의 바이트 일치, 검토된 두 분석 파일 수정, 모든 archive member hash를 기록한다. 최종 ZIP을 별도 위치에 추출한 후 공식 이미지의 읽기 전용 단독 mount에서 코드 import·19개 조건·세 alias·두 patch hash·Git 없는 실행도 확인했다. 이는 추가 시뮬레이션이 아닌 최종 포장 검증이다.
+
+보고서 PDF는 185,984 bytes, SHA256 `3cd0da9394f0db36f30810a333c759932518e02a115f32b397845fb6a63cc770`다. 수치와 패킷 증거·재현·시각 검사·포장 검증은 각각 별도 기록이며 어느 하나를 다른 검증으로 대체하지 않는다. Release 업로드와 원격 자산 확인은 아래 공유 기록에서 별도로 완료한다.

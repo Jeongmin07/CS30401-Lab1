@@ -1,0 +1,169 @@
+-- Using default output directory /home/ubuntu/ns-3.48/build
+-- [33mProceeding without cmake-format[0m
+-- [33mPython: development libraries were not found[0m
+-- [33mBoost was not found[0m
+-- [33mdocs: doxygen documentation not enabled due to missing dependencies: doxygen dot dia[0m
+-- Failed to locate sphinx-build executable (missing: SPHINX_EXECUTABLE) 
+-- [33mdocs: sphinx documentation not enabled due to missing dependencies: Sphinx epstopdf pdflatex latexmk convert dvipng dia[0m
+-- Processing contrib/satellite-network
+-- Processing contrib/satellite
+-- Processing contrib/basic-sim
+-- Processing src/flow-monitor
+-- Processing src/core
+-- Boost Units are an optional feature of length.cc.  Ubuntu ships it within the libboost-dev package.  You may need to clean up the CMake cache after installing it to pass this check.
+-- Processing src/internet
+-- Processing src/bridge
+-- Processing src/network
+-- Processing src/stats
+-- Processing src/traffic-control
+-- Processing src/applications
+-- Processing src/point-to-point
+-- Processing src/mobility
+-- Processing src/antenna
+-- Standard library Bessel function has been found
+-- Processing src/internet-apps
+-- ---- Summary of ns-3 settings:
+Build profile                 : release
+Build directory               : /home/ubuntu/ns-3.48/build
+Build with runtime asserts    : OFF (not requested)
+Build with runtime logging    : OFF (not requested)
+Build version embedding       : OFF (not requested)
+BRITE Integration             : [31mOFF (missing dependency)[0m
+DES Metrics event collection  : OFF (not requested)
+DPDK NetDevice                : OFF (not requested)
+Emulation FdNetDevice         : [31mOFF (missing dependency)[0m
+Examples                      : OFF (not requested)
+File descriptor NetDevice     : [31mOFF (missing dependency)[0m
+GNU Scientific Library (GSL)  : [31mOFF (GSL was not found)[0m
+GtkConfigStore                : [31mOFF (Harfbuzz is required by GTK3 and was not found)[0m
+LibXml2 support               : [31mOFF (LibXML2 was not found)[0m
+MPI Support                   : OFF (not requested)
+ns-3 Click Integration        : [31mOFF (missing dependency)[0m
+ns-3 OpenFlow Integration     : [31mOFF (missing dependency)[0m
+Netmap emulation FdNetDevice  : [31mOFF (missing dependency)[0m
+PyViz visualizer              : [31mOFF (Python Bindings are disabled)[0m
+Python Bindings               : OFF (not requested)
+SQLite support                : [31mOFF (missing dependency)[0m
+Eigen3 support                : [31mOFF (Eigen was not found)[0m
+Tap Bridge                    : [32mON[0m
+Tap FdNetDevice               : [31mOFF (missing dependency)[0m
+Tests                         : OFF (not requested)
+
+
+Modules configured to be built:
+antenna                   applications              basic-sim                 
+bridge                    core                      flow-monitor              
+internet                  internet-apps             mobility                  
+network                   point-to-point            satellite                 
+satellite-network         stats                     traffic-control           
+
+
+Modules that cannot be built:
+mpi                       
+
+
+-- Configuring done (0.5s)
+-- Generating done (0.1s)
+-- Build files have been written to: /home/ubuntu/ns-3.48/cmake-cache
+[0/2] Re-checking globbed directories...
+[1/65] Building CXX object contrib/satellite-network/CMakeFiles/satellite-network.dir/model/ground-station.cc.o
+[2/65] Building CXX object contrib/satellite-network/CMakeFiles/satellite-network.dir/helper/gsl-helper.cc.o
+In file included from /home/ubuntu/ns-3.48/build/include/ns3/gsl-channel.h:1,
+                 from /home/ubuntu/ns-3.48/contrib/satellite-network/helper/gsl-helper.cc:31:
+/home/ubuntu/ns-3.48/contrib/satellite-network/model/gsl-channel.h:38:38: warning: ‘template<class _Arg, class _Result> struct std::unary_function’ is deprecated [-Wdeprecated-declarations]
+   38 | class Mac48AddressHash : public std::unary_function<Mac48Address, size_t> {
+      |                                      ^~~~~~~~~~~~~~
+In file included from /usr/include/c++/13/string:49,
+                 from /usr/include/c++/13/bits/locale_classes.h:40,
+                 from /usr/include/c++/13/bits/ios_base.h:41,
+                 from /usr/include/c++/13/ios:44,
+                 from /usr/include/c++/13/ostream:40,
+                 from /home/ubuntu/ns-3.48/src/core/model/fatal-impl.h:12,
+                 from /home/ubuntu/ns-3.48/src/core/model/fatal-error.h:12,
+                 from /home/ubuntu/ns-3.48/src/core/model/abort.h:12,
+                 from /home/ubuntu/ns-3.48/build/include/ns3/abort.h:1,
+                 from /home/ubuntu/ns-3.48/contrib/satellite-network/helper/gsl-helper.cc:27:
+/usr/include/c++/13/bits/stl_function.h:117:12: note: declared here
+  117 |     struct unary_function
+      |            ^~~~~~~~~~~~~~
+[3/65] Building CXX object contrib/satellite-network/CMakeFiles/satellite-network.dir/helper/point-to-point-laser-helper.cc.o
+[4/65] Building CXX object contrib/satellite-network/CMakeFiles/satellite-network.dir/model/topology-satellite-network.cc.o
+[5/65] Building CXX object contrib/satellite-network/CMakeFiles/satellite-network.dir/model/arbiter-satnet.cc.o
+[6/65] Building CXX object contrib/satellite-network/CMakeFiles/satellite-network.dir/model/arbiter-single-forward.cc.o
+[7/65] Building CXX object contrib/satellite-network/CMakeFiles/satellite-network.dir/helper/arbiter-single-forward-helper.cc.o
+[8/65] Building CXX object contrib/satellite-network/CMakeFiles/satellite-network.dir/helper/gsl-if-bandwidth-helper.cc.o
+[9/65] Building CXX object contrib/basic-sim/CMakeFiles/basic-sim.dir/model/core/basic-simulation.cc.o
+/home/ubuntu/ns-3.48/contrib/basic-sim/model/core/basic-simulation.cc: In member function ‘void ns3::BasicSimulation::ConfirmAllConfigParamKeysRequested()’:
+/home/ubuntu/ns-3.48/contrib/basic-sim/model/core/basic-simulation.cc:249:53: warning: loop variable ‘key_val’ of type ‘const std::pair<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> >&’ binds to a temporary constructed from type ‘std::pair<const std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> >’ [-Wrange-loop-construct]
+  249 |     for (const std::pair<std::string, std::string>& key_val : m_config) {
+      |                                                     ^~~~~~~
+/home/ubuntu/ns-3.48/contrib/basic-sim/model/core/basic-simulation.cc:249:53: note: use non-reference type ‘const std::pair<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> >’ to make the copy explicit or ‘const std::pair<const std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> >&’ to prevent copying
+[10/65] Building CXX object contrib/basic-sim/CMakeFiles/basic-sim.dir/model/core/topology-ptop.cc.o
+[11/65] Building CXX object contrib/basic-sim/CMakeFiles/basic-sim.dir/model/core/topology-ptop-queue-selector-default.cc.o
+[12/65] Building CXX object contrib/basic-sim/CMakeFiles/basic-sim.dir/model/core/topology-ptop-tc-qdisc-selector-default.cc.o
+[13/65] Building CXX object contrib/basic-sim/CMakeFiles/basic-sim.dir/model/core/arbiter-ptop.cc.o
+[14/65] Building CXX object contrib/basic-sim/CMakeFiles/basic-sim.dir/model/core/arbiter-ecmp.cc.o
+[15/65] Building CXX object contrib/basic-sim/CMakeFiles/basic-sim.dir/model/core/ptop-link-utilization-tracker.cc.o
+[16/65] Building CXX object contrib/basic-sim/CMakeFiles/basic-sim.dir/model/core/ptop-link-queue-tracker.cc.o
+[17/65] Building CXX object contrib/basic-sim/CMakeFiles/basic-sim.dir/helper/core/arbiter-ecmp-helper.cc.o
+[18/65] Building CXX object contrib/basic-sim/CMakeFiles/basic-sim.dir/helper/core/ptop-link-utilization-tracker-helper.cc.o
+[19/65] Building CXX object contrib/basic-sim/CMakeFiles/basic-sim.dir/helper/core/ptop-link-queue-tracker-helper.cc.o
+[20/65] Building CXX object contrib/basic-sim/CMakeFiles/basic-sim.dir/helper/core/tcp-optimizer.cc.o
+[21/65] Building CXX object contrib/basic-sim/CMakeFiles/basic-sim.dir/helper/core/point-to-point-ab-helper.cc.o
+[22/65] Building CXX object contrib/basic-sim/CMakeFiles/basic-sim.dir/model/apps/tcp-flow-send-application.cc.o
+[23/65] Building CXX object contrib/basic-sim/CMakeFiles/basic-sim.dir/model/apps/tcp-flow-sink.cc.o
+[24/65] Building CXX object contrib/basic-sim/CMakeFiles/basic-sim.dir/model/apps/udp-burst-application.cc.o
+[25/65] Building CXX object contrib/basic-sim/CMakeFiles/basic-sim.dir/helper/apps/tcp-flow-scheduler.cc.o
+[26/65] Building CXX object contrib/basic-sim/CMakeFiles/basic-sim.dir/helper/apps/udp-burst-helper.cc.o
+[27/65] Building CXX object contrib/basic-sim/CMakeFiles/basic-sim.dir/helper/apps/udp-burst-scheduler.cc.o
+[28/65] Building CXX object contrib/basic-sim/CMakeFiles/basic-sim.dir/helper/apps/pingmesh-scheduler.cc.o
+[29/65] Building CXX object src/internet/CMakeFiles/internet.dir/helper/internet-stack-helper.cc.o
+[30/65] Building CXX object src/internet/CMakeFiles/internet.dir/helper/ipv4-address-helper.cc.o
+[31/65] Building CXX object src/internet/CMakeFiles/internet.dir/helper/ipv6-address-helper.cc.o
+[32/65] Building CXX object src/internet/CMakeFiles/internet.dir/model/arp-l3-protocol.cc.o
+[33/65] Building CXX object src/internet/CMakeFiles/internet.dir/model/ipv4-interface.cc.o
+[34/65] Building CXX object src/internet/CMakeFiles/internet.dir/model/ipv4-l3-protocol.cc.o
+[35/65] Building CXX object src/internet/CMakeFiles/internet.dir/model/ipv6-interface.cc.o
+[36/65] Building CXX object src/internet/CMakeFiles/internet.dir/model/ipv6-l3-protocol.cc.o
+[37/65] Building CXX object src/internet/CMakeFiles/internet.dir/model/tcp-cubic.cc.o
+[38/65] Building CXX object src/internet/CMakeFiles/internet.dir/model/tcp-l4-protocol.cc.o
+[39/65] Building CXX object src/internet/CMakeFiles/internet.dir/model/tcp-socket-base.cc.o
+In file included from /home/ubuntu/ns-3.48/src/internet/model/tcp-socket-base.cc:16:
+/home/ubuntu/ns-3.48/src/internet/model/tcp-socket-base.h: In copy constructor ‘ns3::TcpSocketBase::TcpSocketBase(const ns3::TcpSocketBase&)’:
+/home/ubuntu/ns-3.48/src/internet/model/tcp-socket-base.h:1494:10: warning: ‘ns3::TcpSocketBase::m_orbitTailEnabled’ will be initialized after [-Wreorder]
+ 1494 |     bool m_orbitTailEnabled{false}, m_orbitTailUsed{false};
+      |          ^~~~~~~~~~~~~~~~~~
+/home/ubuntu/ns-3.48/src/internet/model/tcp-socket-base.h:1446:10: warning:   ‘bool ns3::TcpSocketBase::m_shutdownSend’ [-Wreorder]
+ 1446 |     bool m_shutdownSend{false};  //!< Send no longer allowed
+      |          ^~~~~~~~~~~~~~
+/home/ubuntu/ns-3.48/src/internet/model/tcp-socket-base.cc:391:1: warning:   when initialized here [-Wreorder]
+  391 | TcpSocketBase::TcpSocketBase(const TcpSocketBase& sock)
+      | ^~~~~~~~~~~~~
+[40/65] Building CXX object src/internet/CMakeFiles/internet.dir/model/tcp-tx-buffer.cc.o
+[41/65] Building CXX object src/network/CMakeFiles/network.dir/helper/simple-net-device-helper.cc.o
+[42/65] Building CXX object src/network/CMakeFiles/network.dir/utils/net-device-queue-interface.cc.o
+[43/65] Linking CXX shared library /home/ubuntu/ns-3.48/build/lib/libns3.48-network.so
+[44/65] Building CXX object src/traffic-control/CMakeFiles/traffic-control.dir/helper/traffic-control-helper.cc.o
+[45/65] Building CXX object src/traffic-control/CMakeFiles/traffic-control.dir/model/cobalt-queue-disc.cc.o
+[46/65] Building CXX object src/traffic-control/CMakeFiles/traffic-control.dir/model/fq-cobalt-queue-disc.cc.o
+[47/65] Building CXX object src/traffic-control/CMakeFiles/traffic-control.dir/model/fq-codel-queue-disc.cc.o
+[48/65] Building CXX object src/traffic-control/CMakeFiles/traffic-control.dir/model/fq-pie-queue-disc.cc.o
+[49/65] Building CXX object src/traffic-control/CMakeFiles/traffic-control.dir/model/queue-disc.cc.o
+[50/65] Building CXX object src/traffic-control/CMakeFiles/traffic-control.dir/model/tbf-queue-disc.cc.o
+[51/65] Building CXX object src/traffic-control/CMakeFiles/traffic-control.dir/model/traffic-control-layer.cc.o
+[52/65] Linking CXX shared library /home/ubuntu/ns-3.48/build/lib/libns3.48-traffic-control.so
+[53/65] Linking CXX shared library /home/ubuntu/ns-3.48/build/lib/libns3.48-internet.so
+[54/65] Building CXX object src/applications/CMakeFiles/applications.dir/model/bulk-send-application.cc.o
+[55/65] Linking CXX shared library /home/ubuntu/ns-3.48/build/lib/libns3.48-applications.so
+[56/65] Building CXX object src/point-to-point/CMakeFiles/point-to-point.dir/helper/point-to-point-helper.cc.o
+[57/65] Linking CXX shared library /home/ubuntu/ns-3.48/build/lib/libns3.48-point-to-point.so
+[58/65] Linking CXX shared library /home/ubuntu/ns-3.48/build/lib/libns3.48-basic-sim.so
+[59/65] Building CXX object src/internet-apps/CMakeFiles/internet-apps.dir/helper/dhcp-helper.cc.o
+[60/65] Linking CXX shared library /home/ubuntu/ns-3.48/build/lib/libns3.48-internet-apps.so
+[61/65] Linking CXX shared library /home/ubuntu/ns-3.48/build/lib/libns3.48-satellite-network.so
+[62/65] Building CXX object scratch/CMakeFiles/scratch_main_satnet_main_satnet.dir/main_satnet/main_satnet.cc.o
+[63/65] Linking CXX executable /home/ubuntu/ns-3.48/build/scratch/main_satnet/ns3.48-main_satnet
+[64/65] Building CXX object scratch/CMakeFiles/scratch_study_micro_study_micro.dir/study_micro/study_micro.cc.o
+[65/65] Linking CXX executable /home/ubuntu/ns-3.48/build/scratch/study_micro/ns3.48-study_micro
+Finished executing the following commands:
+/usr/bin/cmake --build /home/ubuntu/ns-3.48/cmake-cache -j 1

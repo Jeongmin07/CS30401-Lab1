@@ -1,0 +1,23 @@
+\begin{table}[t]
+\caption{Effect magnitudes and costs in the matched controls}
+\label{tab:magnitudes}
+\centering
+\begin{tabular}{lrr}
+\toprule
+\multicolumn{3}{l}{Completed 20-MSS first-loss transfer}\\
+Policy & FCT (ms) & Tail TX\\
+\midrule
+Stock & 251.509920 & 0\\
+Selective & 350.482400 & 0\\
+Selective + tail & 257.223678 & 1\\
++ Capacity pacing & 471.434773 & 0\\
+\midrule
+\multicolumn{3}{l}{Natural 200 s bulk; no finite FCT}\\
+Policy & Goodput (Mbps) & Data losses\\
+\midrule
+Stock & 9.5443560 & 499\\
+Selective + tail & 9.5465088 & 486\\
++ Capacity pacing & 9.5662704 & 0\\
+\bottomrule
+\end{tabular}
+\end{table}

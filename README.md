@@ -2,6 +2,12 @@
 
 This repository holds the team's shared lab work. Use the map below to find a result without reading every study file.
 
+## Prepared submission — 13 October 2026
+
+The [English IEEE report](code/lab1-final/report/report.pdf) is five pages and identifies Seongchan Kim, Jeongmin Kim and Jaehwan Kang, Team 5. [Standalone code and commands](code/lab1-final/README.md), [figure/table mapping](code/lab1-final/report/README.md), and [fresh reproduction evidence](docs/experiments/20261013-final-reproduction.md) accompany it. The primary profile is selective old-flight loss waiting plus the bounded one-MSS final-segment allowance, **pacing OFF**. The report describes the small event-local benefit and its genuine-loss/finite-flow costs; pacing and queue controls remain conditional diagnostics.
+
+Two new official source volumes completed the 19 fixed physical conditions / 22 named mappings from an isolated extracted package. Validation checks 342 byte-identical CSVs and three BP files whose ordered non-pending bytes and complete terminal pending-row bags match exactly. Only the pointer-dependent final pending-row order differs. The original strict analysis failure is retained separately; no simulation or controller was rerun for that postprocessing repair. The [finalization record](docs/experiments/20261013-finalization.md) links PDF/ZIP verification and publication. Earlier studies below remain historical evidence; this prepared package is on [PR #16](https://github.com/Jeongmin07/CS30401-Lab1/pull/16) for review.
+
 ## Current direction under review — 13 October 2026
 
 Start with [the queue follow-up](docs/experiments/20261013-queue-mitigation.md). Eleven fixed conditions are complete. For the supplied single flow at fixed 10 Mbps over 200 s, native pacing with a predetermined payload ceiling based on the operator's known capacity preserves goodput (9.546509→9.566270 Mbps), reduces source mean queued packets in 75–75.5 s from 87.23 to 0, and removes observed tagged data losses (486→0 over 200 s). Whole network queue packet-time falls 91.947%; source zero waiting is confirmed across 436 actual served visits in that window, while downstream queueing remains. [Pacing code/replay](code/queue-pacing/README.md) and [full results](docs/experiments/20261013-queue-pacing.md) preserve settings and costs.

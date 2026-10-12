@@ -2,7 +2,7 @@
   "schema": 1,
   "qualification": "Postprocessing only; no controller, simulation dispatcher, build or frozen runtime change.",
   "simulation_source_checkpoint": "9a5687bd4e46447e81f3dec13ab2f78442ede056",
-  "postprocessing_source_checkpoint": null,
+  "postprocessing_source_checkpoint": "b5d01511d4b729346e6840e6ab11891e860132da",
   "changes": {
     "code/analyze.py": {
       "old_sha256": "f9f0ec68fbc4ebacf81a8f8cdf391af500a07e36c4ac301e9547e1cee451bab4",
@@ -86,5 +86,28 @@
     "ordered_nonpending_and_full_pending_bag": 3,
     "total": 345
   },
-  "simulation_reruns_for_correction": 0
+  "simulation_reruns_for_correction": 0,
+  "reexport_results": {
+    "pace": {
+      "status": "success",
+      "conditions": 16,
+      "output": "/work/output/lab1-final-replay/pace-validated/report-data.json"
+    },
+    "bp": {
+      "status": "success",
+      "conditions": 3,
+      "output": "/work/output/lab1-final-replay/bp-validated/report-data.json"
+    },
+    "merge": {
+      "status": "success",
+      "physical_conditions": 19,
+      "mapped_conditions": 22,
+      "all_measurements_equal": true,
+      "all_exact": false,
+      "measurement_contracts": {
+        "raw_bytes": 342,
+        "ordered_nonpending_and_full_pending_bag": 3
+      }
+    }
+  }
 }

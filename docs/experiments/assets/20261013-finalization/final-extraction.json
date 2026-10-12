@@ -1,0 +1,20 @@
+{
+  "archive": "Lab1_5.zip",
+  "sha256": "695af4d2338576c6bfd84a6401521964368303bf735b46dd61005844f48e9595",
+  "members": 54,
+  "every_extracted_member_size_and_sha256_equal": true,
+  "archive_crc_check_passed": true,
+  "python_sources_ast_checked": true,
+  "top_level": ["README.md", "code", "report.pdf"],
+  "isolated_readonly_mount_import": {
+    "image": "ghcr.io/yeonjong21/cs30401-lab1@sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+    "physical_condition_definitions": 19,
+    "aliases": 3,
+    "both_frozen_patch_hashes_verified": true,
+    "package_git_commit": null,
+    "package_git_dirty": null,
+    "no_surrounding_repository_mounted": true,
+    "exit_code": 0
+  },
+  "qualification": "Final archive extraction and import check only; no new build or simulation. The 19 actual simulations and exact source correspondence are verified separately."
+}

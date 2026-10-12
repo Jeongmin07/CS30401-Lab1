@@ -57,3 +57,4 @@ docs/experiments/assets/20261013-finalization/** -text whitespace=cr-at-eol
 docs/experiments/assets/20261013-report-facts/** -text whitespace=cr-at-eol
 docs/experiments/assets/20261013-final-reproduction/**/*.txt -whitespace
 docs/experiments/assets/20261013-final-reproduction/**/*.log -whitespace
+docs/experiments/assets/20261013-final-reproduction/**/*.patch -whitespace

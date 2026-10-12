@@ -1,0 +1,9 @@
+{
+  "status": "failed",
+  "simulation_status": "all three success; no exclusion",
+  "command": "python3 -B /work/code/analyze.py --profile bp --out /work/output/lab1-final-replay/bp",
+  "output_directory": "/work/output/lab1-final-replay/bp",
+  "observed_error": "AssertionError: Frozen measurement parity failed: control100 logs_ns3/bp_outcomes.csv",
+  "tool_sha256": "f9f0ec68fbc4ebacf81a8f8cdf391af500a07e36c4ac301e9547e1cee451bab4",
+  "log_qualification": "Observed tool error retained in this receipt; raw files/manifests and partial output directory are preserved."
+}

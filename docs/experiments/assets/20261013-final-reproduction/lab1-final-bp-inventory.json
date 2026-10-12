@@ -1,0 +1,493 @@
+{
+  "schema": 1,
+  "profile": "bp",
+  "archive": "/work/output/lab1-final-raw/lab1-final-bp-20261013.tar.gz",
+  "bytes": 53775408,
+  "sha256": "d3076df71f124e4cc21644d675708fe5570f085f98fb880d571ee176a0eae029",
+  "file_count": 118,
+  "uncompressed_bytes": 333508746,
+  "every_member_verified": true,
+  "files": {
+    "lab1-final-bp/codel4-96/config_ns3.properties": {
+      "bytes": 613,
+      "sha256": "8c46772c95c46ca99935dd68cf6957631972a2bb519acabe0880640408b0f4d4"
+    },
+    "lab1-final-bp/codel4-96/console.txt": {
+      "bytes": 6165,
+      "sha256": "7c450ec47f50be652f3c149a1b7b80090034049c6a99458baf9b74e994afe801"
+    },
+    "lab1-final-bp/codel4-96/logs_ns3/bp_config.csv": {
+      "bytes": 144,
+      "sha256": "020924e278c56cce9d7c8286b64529bc3cdae335021748e96527bc4428fe705c"
+    },
+    "lab1-final-bp/codel4-96/logs_ns3/bp_outcomes.csv": {
+      "bytes": 18940,
+      "sha256": "cd323eae378d78aa5bd2287bda531d89b15f4d45fec03fbc8a018f917fb4af17"
+    },
+    "lab1-final-bp/codel4-96/logs_ns3/bp_receiver_drop.csv": {
+      "bytes": 87,
+      "sha256": "4944c2fc7d4bc212b17ab661b2311f7cbc4f7ffd72663279e9a7590b5e5ebea1"
+    },
+    "lab1-final-bp/codel4-96/logs_ns3/bp_served.csv": {
+      "bytes": 23262700,
+      "sha256": "f167b5235b1d8c64ddb2807ee0a42a3ef8d95761351bec486749bdf03fbc359a"
+    },
+    "lab1-final-bp/codel4-96/logs_ns3/bp_state_bins.csv": {
+      "bytes": 169946,
+      "sha256": "8a45ff1eb41d7bf53ca11b7d7e38c1b353662481e1ccc7c804888a56f57e632e"
+    },
+    "lab1-final-bp/codel4-96/logs_ns3/bp_summary.csv": {
+      "bytes": 354,
+      "sha256": "6826a839d873e047c78ed4c37e01af5ea5dbb568ae735e189eb327f93f8ac75c"
+    },
+    "lab1-final-bp/codel4-96/logs_ns3/finished.txt": {
+      "bytes": 4,
+      "sha256": "927580bf287560d4a26a5d6e129f91ffa9cb63031b1a8c772be6ec584e65e82b"
+    },
+    "lab1-final-bp/codel4-96/logs_ns3/orbit_coverage.csv": {
+      "bytes": 1398438,
+      "sha256": "e61a82534cc147cff0e21431beb7c1a2a6f48e4cb5b45cfe3df99a7adf1a0a7b"
+    },
+    "lab1-final-bp/codel4-96/logs_ns3/orbit_drops.csv": {
+      "bytes": 102,
+      "sha256": "9e96d658428b39768ff51bdb4813ead4343183c7be69410db98535fecadcb6c7"
+    },
+    "lab1-final-bp/codel4-96/logs_ns3/orbit_queue_bins.csv": {
+      "bytes": 2864847,
+      "sha256": "273f9c01b8d1a5b850b6b6f16cc211e4d530a89885b40fc33a5457bf85c053bb"
+    },
+    "lab1-final-bp/codel4-96/logs_ns3/orbit_queue_pending.csv": {
+      "bytes": 130,
+      "sha256": "238bc926c6a60f136840dc5cb484f73c652d34cb82101a1dc0a1b514f26c6718"
+    },
+    "lab1-final-bp/codel4-96/logs_ns3/orbit_service_bins.csv": {
+      "bytes": 2700725,
+      "sha256": "fe55d20248b2908b5be1176634f7adc993a0a19d0808f4efa2b4cdcb9ffe7f70"
+    },
+    "lab1-final-bp/codel4-96/logs_ns3/orbit_service_coverage.csv": {
+      "bytes": 289969,
+      "sha256": "102295605d325a6491f26c20a955d8fde2c96fa6aec15a166e8043f42510cdf8"
+    },
+    "lab1-final-bp/codel4-96/logs_ns3/queue_devices.csv": {
+      "bytes": 645726,
+      "sha256": "48ef5338513079234caaed3bf5f92c30c3ef2cfb239739c284be312b260d1528"
+    },
+    "lab1-final-bp/codel4-96/logs_ns3/queue_flow_state.csv": {
+      "bytes": 6025424,
+      "sha256": "32e1b86a8adc151638ad7af6de919cf9061ee413139b22bfef10dde7457b04ac"
+    },
+    "lab1-final-bp/codel4-96/logs_ns3/queue_focus.csv": {
+      "bytes": 5105959,
+      "sha256": "8a24fd9a0e8a0a043aa1c0504fec9057ff1083907ee2177d9d30c14c880ef10e"
+    },
+    "lab1-final-bp/codel4-96/logs_ns3/queue_occupancy.csv": {
+      "bytes": 3447595,
+      "sha256": "9d8f789dcf0054a7d5f140954b00b3c3e7c15304293e2bf390fd5cf6a861d944"
+    },
+    "lab1-final-bp/codel4-96/logs_ns3/queue_tc_drop.csv": {
+      "bytes": 217,
+      "sha256": "a22e92556510c09720bbe6a44986eb24cebf2e5bb5556d3c87ca55cbbb134f37"
+    },
+    "lab1-final-bp/codel4-96/logs_ns3/study_app_rx_node_1585_port_1024.csv": {
+      "bytes": 13604366,
+      "sha256": "4b3e18ec9398a1571bb4a373bdb53960076d187edac6cbe8b46780fda2dc7bf9"
+    },
+    "lab1-final-bp/codel4-96/logs_ns3/study_drop_coverage.csv": {
+      "bytes": 1140249,
+      "sha256": "1c4f2eebc14f8c701c33a931a2f1ef361246be2c73ca542fcd87d7d785dedfa9"
+    },
+    "lab1-final-bp/codel4-96/logs_ns3/study_drops.csv": {
+      "bytes": 23293,
+      "sha256": "c15be97494324ea791230c251095275ef0517bd10bc4aaa22b576a15162280e5"
+    },
+    "lab1-final-bp/codel4-96/logs_ns3/study_rx_node_1585_port_1024.csv": {
+      "bytes": 18190882,
+      "sha256": "e4e5cccc4a98704d7149cc432592dabc4efa16a7e6c9dff67f9cfaf2e267d8cd"
+    },
+    "lab1-final-bp/codel4-96/logs_ns3/tcp_flow_0_cwnd.csv": {
+      "bytes": 82998,
+      "sha256": "8766784301e238c9e86c8714580ff41a4bc571c54a18b3b31c79aed3415ddd74"
+    },
+    "lab1-final-bp/codel4-96/logs_ns3/tcp_flow_0_orbit_loss.csv": {
+      "bytes": 999,
+      "sha256": "15d4d0a724bc716c01a605b3b755c4cb8b5034bc257e72cf6b2b93e5bd48566e"
+    },
+    "lab1-final-bp/codel4-96/logs_ns3/tcp_flow_0_orbit_loss_tail.csv": {
+      "bytes": 497,
+      "sha256": "c1d95c46a3e422df0b877bfa673acd262c2f10b6df364d26a821523bcebd162d"
+    },
+    "lab1-final-bp/codel4-96/logs_ns3/tcp_flow_0_progress.csv": {
+      "bytes": 1873662,
+      "sha256": "fc6095e4a06671969c69a23b4feb8ddb100a760d94102648c906392e05ab1b8e"
+    },
+    "lab1-final-bp/codel4-96/logs_ns3/tcp_flow_0_rtt.csv": {
+      "bytes": 1908584,
+      "sha256": "23ee96c65b67ce6286db86157264f9a8f53337532e69b20c42c7a2f0456ca4d1"
+    },
+    "lab1-final-bp/codel4-96/logs_ns3/tcp_flow_0_study_events.csv": {
+      "bytes": 5872,
+      "sha256": "881cecb2203715d20845d599906711841b0bef0dc7b6d730139f90bbaeff9007"
+    },
+    "lab1-final-bp/codel4-96/logs_ns3/tcp_flow_0_study_packets.csv": {
+      "bytes": 18280157,
+      "sha256": "dbfc1326ace8f81160de971ccc285f4cd244a3481aa1d76a01b9d5bbecbbc11c"
+    },
+    "lab1-final-bp/codel4-96/logs_ns3/tcp_flows.csv": {
+      "bytes": 75,
+      "sha256": "ea5ccc05651ad123d5e11d4d08ec309ac1fd3f7364117037a155c4e56787e04c"
+    },
+    "lab1-final-bp/codel4-96/logs_ns3/tcp_flows.txt": {
+      "bytes": 336,
+      "sha256": "71feb4da4944486863bdcfb9844eda3010910d6bdb7913ecd1ecd605912911ba"
+    },
+    "lab1-final-bp/codel4-96/logs_ns3/timing_results.csv": {
+      "bytes": 567,
+      "sha256": "91352dfc4428889344a983ab352019ad9d57f576e05d83a6cc88f598d4796032"
+    },
+    "lab1-final-bp/codel4-96/logs_ns3/timing_results.txt": {
+      "bytes": 910,
+      "sha256": "1d31107c148d27c9143d36e71eed37edce2e0e9423acc8c045a9fa3e41cc199f"
+    },
+    "lab1-final-bp/codel4-96/logs_ns3/weighted_device_queues.csv": {
+      "bytes": 2220404,
+      "sha256": "f6ede371804e4ddefc4a94d3c0dd7c80b4f818d517909e5e20d3f6e6564ffc56"
+    },
+    "lab1-final-bp/codel4-96/manifest.json": {
+      "bytes": 432476,
+      "sha256": "adf19e59756289147e3860a479cf846ce282c6b42b296d054c38ab4c58a54b5b"
+    },
+    "lab1-final-bp/codel4-96/schedule.csv": {
+      "bytes": 119,
+      "sha256": "c441ec9f73e726dcc20348d6c2fb2562401925fd26385a8c7ec8c45c9cf6c809"
+    },
+    "lab1-final-bp/control100/config_ns3.properties": {
+      "bytes": 613,
+      "sha256": "8c46772c95c46ca99935dd68cf6957631972a2bb519acabe0880640408b0f4d4"
+    },
+    "lab1-final-bp/control100/console.txt": {
+      "bytes": 6171,
+      "sha256": "e9b07df9366e549c39e7739684130b33ff254cafb32576f6e849564c9414fdb6"
+    },
+    "lab1-final-bp/control100/logs_ns3/bp_config.csv": {
+      "bytes": 128,
+      "sha256": "89fe6551d8ef40f4b68ebe00be28f4bd7417b9894943d2b38edbe25df402ec73"
+    },
+    "lab1-final-bp/control100/logs_ns3/bp_outcomes.csv": {
+      "bytes": 59875,
+      "sha256": "4cf14ab51b66135802bad3201ceb62ba94cde4c31fb33b08d3c58dd34f50a9b6"
+    },
+    "lab1-final-bp/control100/logs_ns3/bp_receiver_drop.csv": {
+      "bytes": 87,
+      "sha256": "4944c2fc7d4bc212b17ab661b2311f7cbc4f7ffd72663279e9a7590b5e5ebea1"
+    },
+    "lab1-final-bp/control100/logs_ns3/bp_served.csv": {
+      "bytes": 22094888,
+      "sha256": "b6ef10f1b9449937345eb8ba2a1e50f5c9f1132eb73b0e5cbccdb60b1f455618"
+    },
+    "lab1-final-bp/control100/logs_ns3/bp_state_bins.csv": {
+      "bytes": 177697,
+      "sha256": "075d5afba1d6d3381f9617d49e217626d5ba11b0a35edbcb6fb0773f40658c98"
+    },
+    "lab1-final-bp/control100/logs_ns3/bp_summary.csv": {
+      "bytes": 333,
+      "sha256": "4fccdd532f8da0ff82b6466ba15717e0dbbbc88e66b68ab2d0b508a8f53db279"
+    },
+    "lab1-final-bp/control100/logs_ns3/finished.txt": {
+      "bytes": 4,
+      "sha256": "927580bf287560d4a26a5d6e129f91ffa9cb63031b1a8c772be6ec584e65e82b"
+    },
+    "lab1-final-bp/control100/logs_ns3/orbit_coverage.csv": {
+      "bytes": 1398438,
+      "sha256": "7785a349bbcd58d321430e5454d4e7193dfc4ed7766e00af84b503fa6bafef9c"
+    },
+    "lab1-final-bp/control100/logs_ns3/orbit_drops.csv": {
+      "bytes": 44468,
+      "sha256": "7c6430e5143ca2a44ff5ee49f5ff0795d789f58b042b1c60a101c87379ef3d55"
+    },
+    "lab1-final-bp/control100/logs_ns3/orbit_queue_bins.csv": {
+      "bytes": 2936446,
+      "sha256": "aa2b45cbacc8b442d0d4b561fcb5d0c8548186e9f6f64a1df22e0fa779ae6729"
+    },
+    "lab1-final-bp/control100/logs_ns3/orbit_queue_pending.csv": {
+      "bytes": 134,
+      "sha256": "f517122709969bb2a1d7bd47fb4ef58f9f914558203bbd7aef139e953669cb6c"
+    },
+    "lab1-final-bp/control100/logs_ns3/orbit_service_bins.csv": {
+      "bytes": 2713797,
+      "sha256": "420c7fec34bdc33beb3fc36f5b39859a4fe5a7196a1b5d00d4736b6d0a88ac4b"
+    },
+    "lab1-final-bp/control100/logs_ns3/orbit_service_coverage.csv": {
+      "bytes": 289969,
+      "sha256": "102295605d325a6491f26c20a955d8fde2c96fa6aec15a166e8043f42510cdf8"
+    },
+    "lab1-final-bp/control100/logs_ns3/queue_devices.csv": {
+      "bytes": 645713,
+      "sha256": "36639705e7d001b7f59ab2ef2f509fc8a326a0ed8ef25d1f17cbc7fc90cac2ee"
+    },
+    "lab1-final-bp/control100/logs_ns3/queue_flow_state.csv": {
+      "bytes": 329388,
+      "sha256": "a0f7fe2f249523bfcb12c1d5dbc3603dc6359502489626e2c43f9a80c79fa5d1"
+    },
+    "lab1-final-bp/control100/logs_ns3/queue_focus.csv": {
+      "bytes": 5758765,
+      "sha256": "0d0764c3e64d4b0069239e6f1a682d71bab30c11b95219e0f1f61be650b65b9c"
+    },
+    "lab1-final-bp/control100/logs_ns3/queue_occupancy.csv": {
+      "bytes": 3802112,
+      "sha256": "3f67eec823aa1f64d9e8834c4829d36b643b206319999f9a0ce67f64346ad785"
+    },
+    "lab1-final-bp/control100/logs_ns3/queue_tc_drop.csv": {
+      "bytes": 51062,
+      "sha256": "5779f350f37249e7a55bef444013bbb33fc4d96db81da1fea71ec4b887af9185"
+    },
+    "lab1-final-bp/control100/logs_ns3/study_app_rx_node_1585_port_1024.csv": {
+      "bytes": 14465567,
+      "sha256": "bd7722c1cbb78f51335b6b181d55f2a2c10e427b2a4326a02c74b873712cb23d"
+    },
+    "lab1-final-bp/control100/logs_ns3/study_drop_coverage.csv": {
+      "bytes": 1140184,
+      "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+    },
+    "lab1-final-bp/control100/logs_ns3/study_drops.csv": {
+      "bytes": 53873,
+      "sha256": "9aca2d266ffc1b98cd56f7803d04bdc7d807e11e44d25952b6c1ede94b8ef02e"
+    },
+    "lab1-final-bp/control100/logs_ns3/study_rx_node_1585_port_1024.csv": {
+      "bytes": 19452445,
+      "sha256": "4fb3a7e70c6e79f54007de46368fd1e303359ef2882e0a314587c9e02292b71c"
+    },
+    "lab1-final-bp/control100/logs_ns3/tcp_flow_0_cwnd.csv": {
+      "bytes": 100679,
+      "sha256": "acf9286c1705fa2aa31eb56805f016c3793051f3d566bc91c87c151af2c5cace"
+    },
+    "lab1-final-bp/control100/logs_ns3/tcp_flow_0_orbit_loss.csv": {
+      "bytes": 1386,
+      "sha256": "dd65e13e2e79fefa5b63612950bd59f5e3fa772ee1b9fd8a07f9208234695374"
+    },
+    "lab1-final-bp/control100/logs_ns3/tcp_flow_0_orbit_loss_tail.csv": {
+      "bytes": 621,
+      "sha256": "8447baa1e3aa446ab7ca47c36eea5e2b8c8db4c38c3f04a3b805cbcd0f4af8ec"
+    },
+    "lab1-final-bp/control100/logs_ns3/tcp_flow_0_progress.csv": {
+      "bytes": 1994229,
+      "sha256": "4ce98bb78f4f26fbc697971d23cfc085d8a3e89ad6b378222900a20469794ca4"
+    },
+    "lab1-final-bp/control100/logs_ns3/tcp_flow_0_rtt.csv": {
+      "bytes": 2030657,
+      "sha256": "5f7ed6085a55daca60bb23bb3df73b6098d879aa2005d8810d887b023080edc7"
+    },
+    "lab1-final-bp/control100/logs_ns3/tcp_flow_0_study_events.csv": {
+      "bytes": 5574,
+      "sha256": "56db00c9ed99c760c4d3b9a2d132f22eac6bf89570a8a5ff9d476c0be620d23a"
+    },
+    "lab1-final-bp/control100/logs_ns3/tcp_flow_0_study_packets.csv": {
+      "bytes": 19843355,
+      "sha256": "8129d3685fc3cc339409867b057b9126a6591aad06950e02052c97a52c02567c"
+    },
+    "lab1-final-bp/control100/logs_ns3/tcp_flows.csv": {
+      "bytes": 75,
+      "sha256": "2fa7e654ea06e0f91745acd609b08a9daa37dffdcf01b8035c2ded8567a85017"
+    },
+    "lab1-final-bp/control100/logs_ns3/tcp_flows.txt": {
+      "bytes": 336,
+      "sha256": "f971a8fa371d58169b3dcd209c3f33dd1fa2eac1a4ebb9a6d7ee751b00a56ed8"
+    },
+    "lab1-final-bp/control100/logs_ns3/timing_results.csv": {
+      "bytes": 566,
+      "sha256": "0c7cd5d8202104da5b38101aa42868af7361267a039eea307ea7759ebfd09874"
+    },
+    "lab1-final-bp/control100/logs_ns3/timing_results.txt": {
+      "bytes": 910,
+      "sha256": "7648332e5ca768a6707ed9e3d51597a68cccbecd5a915dbd2567e95da256e9a6"
+    },
+    "lab1-final-bp/control100/logs_ns3/weighted_device_queues.csv": {
+      "bytes": 2318756,
+      "sha256": "7865f57f707673c80b74d40991f362ff528647655245fdf55f599c65fc88db3c"
+    },
+    "lab1-final-bp/control100/manifest.json": {
+      "bytes": 432482,
+      "sha256": "1c80d76a6aab3f58b000e522668d98c0be0f0c0d3f50f439bc7e4dea523c440c"
+    },
+    "lab1-final-bp/control100/schedule.csv": {
+      "bytes": 119,
+      "sha256": "c441ec9f73e726dcc20348d6c2fb2562401925fd26385a8c7ec8c45c9cf6c809"
+    },
+    "lab1-final-bp/fifo4-96/config_ns3.properties": {
+      "bytes": 613,
+      "sha256": "8c46772c95c46ca99935dd68cf6957631972a2bb519acabe0880640408b0f4d4"
+    },
+    "lab1-final-bp/fifo4-96/console.txt": {
+      "bytes": 6270,
+      "sha256": "36c9f94da0a04314109111cca530d2460ed478f4433f0eca70b109e048bf640b"
+    },
+    "lab1-final-bp/fifo4-96/logs_ns3/bp_config.csv": {
+      "bytes": 142,
+      "sha256": "896531ba077173e764a1c675fbfcec05962321c8eb400bbb9127125f4b2846fa"
+    },
+    "lab1-final-bp/fifo4-96/logs_ns3/bp_outcomes.csv": {
+      "bytes": 57931,
+      "sha256": "fef7493f23b783591ee895dfde7286de3b514930add53713bafa86fef1ddb621"
+    },
+    "lab1-final-bp/fifo4-96/logs_ns3/bp_receiver_drop.csv": {
+      "bytes": 87,
+      "sha256": "4944c2fc7d4bc212b17ab661b2311f7cbc4f7ffd72663279e9a7590b5e5ebea1"
+    },
+    "lab1-final-bp/fifo4-96/logs_ns3/bp_served.csv": {
+      "bytes": 26389386,
+      "sha256": "c4c996f9ba7a4c70f7a13e280696c4dc63bbac581b768d6db819056f7d1c77a5"
+    },
+    "lab1-final-bp/fifo4-96/logs_ns3/bp_state_bins.csv": {
+      "bytes": 195274,
+      "sha256": "c7f845f04424ae72ea001e27d98e20b3f8cf3e237c999f12bf4e0a9261832dc0"
+    },
+    "lab1-final-bp/fifo4-96/logs_ns3/bp_summary.csv": {
+      "bytes": 355,
+      "sha256": "f75182f2cae4fbb1d82269b09baaab87fb012851574bd1b983e1ac8892a1fbea"
+    },
+    "lab1-final-bp/fifo4-96/logs_ns3/finished.txt": {
+      "bytes": 4,
+      "sha256": "927580bf287560d4a26a5d6e129f91ffa9cb63031b1a8c772be6ec584e65e82b"
+    },
+    "lab1-final-bp/fifo4-96/logs_ns3/orbit_coverage.csv": {
+      "bytes": 1398438,
+      "sha256": "e61a82534cc147cff0e21431beb7c1a2a6f48e4cb5b45cfe3df99a7adf1a0a7b"
+    },
+    "lab1-final-bp/fifo4-96/logs_ns3/orbit_drops.csv": {
+      "bytes": 102,
+      "sha256": "9e96d658428b39768ff51bdb4813ead4343183c7be69410db98535fecadcb6c7"
+    },
+    "lab1-final-bp/fifo4-96/logs_ns3/orbit_queue_bins.csv": {
+      "bytes": 2928387,
+      "sha256": "6554b639ca7cb8a396a954cf41f1bbcbb123916bf204dbf54e219f4c898f2553"
+    },
+    "lab1-final-bp/fifo4-96/logs_ns3/orbit_queue_pending.csv": {
+      "bytes": 131,
+      "sha256": "e45cdd58747633e74e0a6f3c7fc2a3d584957beec6b69bc5ef8dd042cb93dba8"
+    },
+    "lab1-final-bp/fifo4-96/logs_ns3/orbit_service_bins.csv": {
+      "bytes": 2713797,
+      "sha256": "420c7fec34bdc33beb3fc36f5b39859a4fe5a7196a1b5d00d4736b6d0a88ac4b"
+    },
+    "lab1-final-bp/fifo4-96/logs_ns3/orbit_service_coverage.csv": {
+      "bytes": 289969,
+      "sha256": "102295605d325a6491f26c20a955d8fde2c96fa6aec15a166e8043f42510cdf8"
+    },
+    "lab1-final-bp/fifo4-96/logs_ns3/queue_devices.csv": {
+      "bytes": 645725,
+      "sha256": "f375ad88635799242d99f7bf52a9e2175773de93fd3f3a63d85e4803bfe08238"
+    },
+    "lab1-final-bp/fifo4-96/logs_ns3/queue_flow_state.csv": {
+      "bytes": 21493178,
+      "sha256": "a3922c019a28a30736852d02311918c4ee06f7958f2c5d4568b56485e020f17c"
+    },
+    "lab1-final-bp/fifo4-96/logs_ns3/queue_focus.csv": {
+      "bytes": 5737763,
+      "sha256": "c9969a6b5491e3b5d45242b60f76ede2ee9a52c61a9bcb0a7dc3768e381b74b1"
+    },
+    "lab1-final-bp/fifo4-96/logs_ns3/queue_occupancy.csv": {
+      "bytes": 3777371,
+      "sha256": "68fd7cfee22305a6d89db15aa8f63a5d2a43ea7af640f18968eb59ee9c88ca16"
+    },
+    "lab1-final-bp/fifo4-96/logs_ns3/queue_tc_drop.csv": {
+      "bytes": 217,
+      "sha256": "a22e92556510c09720bbe6a44986eb24cebf2e5bb5556d3c87ca55cbbb134f37"
+    },
+    "lab1-final-bp/fifo4-96/logs_ns3/study_app_rx_node_1585_port_1024.csv": {
+      "bytes": 14465567,
+      "sha256": "bd7722c1cbb78f51335b6b181d55f2a2c10e427b2a4326a02c74b873712cb23d"
+    },
+    "lab1-final-bp/fifo4-96/logs_ns3/study_drop_coverage.csv": {
+      "bytes": 1140249,
+      "sha256": "1c4f2eebc14f8c701c33a931a2f1ef361246be2c73ca542fcd87d7d785dedfa9"
+    },
+    "lab1-final-bp/fifo4-96/logs_ns3/study_drops.csv": {
+      "bytes": 70397,
+      "sha256": "433f4d9175d42a008d0e7262626311d5aa4cd74b773d1e364f403b781e221ad9"
+    },
+    "lab1-final-bp/fifo4-96/logs_ns3/study_rx_node_1585_port_1024.csv": {
+      "bytes": 19452445,
+      "sha256": "4fb3a7e70c6e79f54007de46368fd1e303359ef2882e0a314587c9e02292b71c"
+    },
+    "lab1-final-bp/fifo4-96/logs_ns3/tcp_flow_0_cwnd.csv": {
+      "bytes": 100679,
+      "sha256": "acf9286c1705fa2aa31eb56805f016c3793051f3d566bc91c87c151af2c5cace"
+    },
+    "lab1-final-bp/fifo4-96/logs_ns3/tcp_flow_0_orbit_loss.csv": {
+      "bytes": 1386,
+      "sha256": "dd65e13e2e79fefa5b63612950bd59f5e3fa772ee1b9fd8a07f9208234695374"
+    },
+    "lab1-final-bp/fifo4-96/logs_ns3/tcp_flow_0_orbit_loss_tail.csv": {
+      "bytes": 621,
+      "sha256": "8447baa1e3aa446ab7ca47c36eea5e2b8c8db4c38c3f04a3b805cbcd0f4af8ec"
+    },
+    "lab1-final-bp/fifo4-96/logs_ns3/tcp_flow_0_progress.csv": {
+      "bytes": 1994229,
+      "sha256": "4ce98bb78f4f26fbc697971d23cfc085d8a3e89ad6b378222900a20469794ca4"
+    },
+    "lab1-final-bp/fifo4-96/logs_ns3/tcp_flow_0_rtt.csv": {
+      "bytes": 2030657,
+      "sha256": "5f7ed6085a55daca60bb23bb3df73b6098d879aa2005d8810d887b023080edc7"
+    },
+    "lab1-final-bp/fifo4-96/logs_ns3/tcp_flow_0_study_events.csv": {
+      "bytes": 5574,
+      "sha256": "56db00c9ed99c760c4d3b9a2d132f22eac6bf89570a8a5ff9d476c0be620d23a"
+    },
+    "lab1-final-bp/fifo4-96/logs_ns3/tcp_flow_0_study_packets.csv": {
+      "bytes": 19843355,
+      "sha256": "8129d3685fc3cc339409867b057b9126a6591aad06950e02052c97a52c02567c"
+    },
+    "lab1-final-bp/fifo4-96/logs_ns3/tcp_flows.csv": {
+      "bytes": 75,
+      "sha256": "2fa7e654ea06e0f91745acd609b08a9daa37dffdcf01b8035c2ded8567a85017"
+    },
+    "lab1-final-bp/fifo4-96/logs_ns3/tcp_flows.txt": {
+      "bytes": 336,
+      "sha256": "f971a8fa371d58169b3dcd209c3f33dd1fa2eac1a4ebb9a6d7ee751b00a56ed8"
+    },
+    "lab1-final-bp/fifo4-96/logs_ns3/timing_results.csv": {
+      "bytes": 568,
+      "sha256": "e7d2171a6aa82dc8e116c98f20ea883f738569bf026fa9ddc462a61d56325484"
+    },
+    "lab1-final-bp/fifo4-96/logs_ns3/timing_results.txt": {
+      "bytes": 910,
+      "sha256": "3f669f262188d815e8c380f12226b446ae16c13b4b1a20f29dff72366ec6842a"
+    },
+    "lab1-final-bp/fifo4-96/logs_ns3/weighted_device_queues.csv": {
+      "bytes": 2321792,
+      "sha256": "d553dac2e0a4e4b1f45d9c11df4cba1f3aaa06c6710eb753f47ac59ab2bbe894"
+    },
+    "lab1-final-bp/fifo4-96/manifest.json": {
+      "bytes": 432472,
+      "sha256": "ff9de53a398389b496aa279449c88b59f35f0cfb75f95e79c6fa71b3ea5209c4"
+    },
+    "lab1-final-bp/fifo4-96/schedule.csv": {
+      "bytes": 119,
+      "sha256": "c441ec9f73e726dcc20348d6c2fb2562401925fd26385a8c7ec8c45c9cf6c809"
+    },
+    "build/lab1-final-ready-bp.build.log": {
+      "bytes": 19740,
+      "sha256": "c3c36fb85e93a9bc349e1fac4dcf2039ccb1abd3d08db4bff9b4453105d0bba1"
+    },
+    "build/lab1-final-ready-bp.json": {
+      "bytes": 5768,
+      "sha256": "d78801126f099873fb8ebe54808313c642e06aefab18da789ca022072e7fbf15"
+    },
+    "build/lab1-final-ready-bp.official.export.log": {
+      "bytes": 1304,
+      "sha256": "cf0090bbde757dedf523d3a520c2f47ead49931f32e01b8628ec35b76275b03f"
+    },
+    "build/lab1-final-ready-bp.official.patch": {
+      "bytes": 128930,
+      "sha256": "90f9114c9a31df219587aea1e9406dccaeb3c4891243699c5d825827369ac72f"
+    }
+  },
+  "simulation_attempts": 3,
+  "simulation_successes": 3,
+  "simulation_failures": 0,
+  "simulation_exclusions": 0,
+  "build_attempts": 1,
+  "build_successes": 1,
+  "wall_seconds": 13.405185111994797,
+  "source_checkpoint": "9a5687bd4e46447e81f3dec13ab2f78442ede056",
+  "qualification": "Only fresh final runs/build records and small route-control or validation receipts; no full provided state, ns-3 tree, historical logs or submission-only files."
+}
