@@ -1,0 +1,2 @@
+node_id,device_id,device_type,flow_id,seq,payload_bytes
+1585,1,ns3::GSLNetDevice,0,1,1380

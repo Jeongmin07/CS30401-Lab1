@@ -1,0 +1,4 @@
+flow_id,time_ns,event,epoch_ns,deadline_ns,seq,admitted_bytes,new_sack_bytes,unsent_bytes,pipe_before,pipe_after,cwnd_bytes,receiver_right_edge,used_before,used_after,cong_state,close_on_empty,shutdown_send,normal_packets_sent,ordinary_window_bytes
+0,26336336469,APPLICATION_OPEN,26200000000,26342967987,24804121,0,1380,33295880,169740,169740,169740,58184673,0,0,1,0,0,1,0
+0,26338630856,APPLICATION_OPEN,26200000000,26342967987,24806881,0,1380,33293120,169740,169740,169740,58186053,0,0,1,0,0,1,0
+0,26340925234,APPLICATION_OPEN,26200000000,26342967987,24809641,0,1380,33290360,169740,169740,169740,58187433,0,0,1,0,0,1,0

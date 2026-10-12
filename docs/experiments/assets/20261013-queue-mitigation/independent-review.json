@@ -1,0 +1,77 @@
+{
+  "schema": 1,
+  "reviewer": "/root/audit_research_handoff",
+  "scope": "Read-only independent source/runtime/actual CSV review in the same chat; no independent fresh full simulation replay.",
+  "simulations_reviewed": 11,
+  "pacing_patch_sha256": "ace08b170b04774c2eac849c1875e647a97e786611616cbb32867496cb2cb808",
+  "backpressure_patch_sha256": "90f9114c9a31df219587aea1e9406dccaeb3c4891243699c5d825827369ac72f",
+  "each_live_runtime_files_verified": 17,
+  "final_pacing_comparison_sha256": "8b6fc4ced622aa1861677260eb22822adcb795f54d346f31ce64c04a69aa2e01",
+  "final_backpressure_analysis_sha256": "63597aa8b5e175abaf7ff0826358b99df2eff282d3a53fa5fa9325f164869c48",
+  "pacing_posthoc_sha256": "ea2df1889ab5e721e13e870bc7cc23689f90565f1551965f6ff24a3436edaae6",
+  "source_repairs_before_simulations": [
+    "Install the source root queue discipline before legacy drop observers; record actual presence and before/after drop hooks with the separate IPv4 header.",
+    "Reject a preexisting physical receive error model before installing the optional directed evaluation loss model."
+  ],
+  "measurement_checks": [
+    "Exact held-state packet/byte areas with complete cutoff, including zero-time callback ordering and final state checks.",
+    "Backpressure source total includes qdisc, device and ordinary requeue inventory; serializing packet is separately measured.",
+    "Residence ends at actual PhyTxBegin; CoDel after-dequeue drops are excluded from served visits.",
+    "All data loss notifications join full flow/tx_id/tx_time/seq/payload transmission identity and sender TX.",
+    "Matched physical inputs, configuration, schedule, owned helpers and runtime are verified separately from unrelated launch HEAD changes.",
+    "Historical pacing OFF 12, micro-original 9, micro-current 11 CSVs match prior size/SHA; backpressure control independently matches 12."
+  ],
+  "capacity_post_window": {
+    "start_ns": 75000000000,
+    "end_ns": 75500000000,
+    "actual_served_visits": 436,
+    "served_wait_sum_ns": 0,
+    "source_mean_queued_packets": 0,
+    "network_wide_zero_queue_claim": false
+  },
+  "capacity_natural_whole": {
+    "ordered_app_bytes": 239156760,
+    "goodput_mbps": 9.5662704,
+    "unique_tagged_data_losses": 0,
+    "retransmissions": 2,
+    "all_device_queue_packet_ns": 632853245227,
+    "source_served_mean_wait_ns": 456.345,
+    "source_startup_peak_packets": 10
+  },
+  "remaining_unnecessary_retransmissions": {
+    "original_sequences": [145031101, 145032481],
+    "original_tx_ids": [105098, 105099],
+    "original_rx_and_app_delivery_ns": [121623684545, 121624831750],
+    "retransmission_ns": [121668378284, 121669463406],
+    "original_delivered_before_retransmission": true,
+    "trigger": "Observed duplicate ACK/SACK followed by recovery and a partial ACK, with exact witnesses in pacing posthoc.json.",
+    "physical_route_shortening_cause_established": false
+  },
+  "actual_first_loss_pair": {
+    "same_actual_original_tx_and_physical_drop": true,
+    "flow_id": 0,
+    "seq": 1,
+    "payload_bytes": 1380,
+    "tx_id": 3,
+    "tx_time_ns": 99500204,
+    "physical_drop_ns": 161402717,
+    "first_retransmission_ns": 214631686,
+    "drop_to_first_retransmission_ns": 53228969,
+    "tests_an_active_orbit_guard": false
+  },
+  "finite_flow": {
+    "complete_bytes_all_conditions": 27600,
+    "original_fct_s": 0.251509920,
+    "current_tail_fct_s": 0.257223678,
+    "paced_selected_fct_s": 0.471434773,
+    "first_retransmission_ns_current_and_selected": 207108958,
+    "native_pacing_rate_bps": 2208000,
+    "pacing_packet_interval_ns": 5000000,
+    "selected_tail_admissions": 0,
+    "selected_tail_rejections": "Seven MORE_THAN_ONE_MSS checks with 12420 unsent bytes; not PACING_TIMER.",
+    "global_enablement_supported": false
+  },
+  "backpressure_conclusion": "FIFO shifts identical backlog/loss into qdisc. CoDel counts 54 capacity plus 117 target-after drops, excludes those 117 from served samples, but loses 6.349454 percent goodput.",
+  "blocking_findings_remaining": 0,
+  "recommended_claim_scope": "Opt-in, operator-known fixed capacity, single long bulk flow. Publish the observed short-flow cost and startup-loss limitation."
+}
