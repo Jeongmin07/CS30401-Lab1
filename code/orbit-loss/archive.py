@@ -14,7 +14,7 @@ def digest(stream):
 
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
-    p.add_argument('--root',type=Path,default=Path('/tmp/orbit-loss'))
+    p.add_argument('--root',type=Path,default=Path('/tmp/orbit-loss-v2'))
     p.add_argument('--cases',nargs='+',required=True)
     p.add_argument('--out',type=Path,required=True)
     p.add_argument('--inventory',type=Path,required=True)

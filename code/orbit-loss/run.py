@@ -135,8 +135,8 @@ def execute(name,root,timeout,readiness):
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('cases',nargs='+',choices=CASES)
-    p.add_argument('--root',type=Path,default=Path('/tmp/orbit-loss'))
+    p.add_argument('--root',type=Path,default=Path('/tmp/orbit-loss-v2'))
     p.add_argument('--timeout',type=int,default=240)
-    p.add_argument('--ready',type=Path,default=HERE/'build-ready.json')
+    p.add_argument('--ready',type=Path,default=HERE/'build-ready-v2.json')
     a=p.parse_args()
     for case in a.cases: execute(case,a.root,a.timeout,a.ready)

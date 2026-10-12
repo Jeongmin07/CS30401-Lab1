@@ -18,7 +18,7 @@ SACK 규모 예산은 `3+ceil(Rbit/s×forward_drop_s/(8×MSSbytes))`다. R은 �
 
 ## 사전 실행 집합과 중단
 
-최대7조건이며 각240초 wall cap이다. 짧은 micro를 먼저 검증한다. 기본 문턱 유지, 실제 타이머·SACK/dupACK invariant·pipe accounting과 종료 시 복구를 확인하지 못하면 긴 실행을 시작하지 않는다.
+최종 성능 표는 동일 V2 source/runtime의7조건이며 각240초 wall cap이다. 아래 peer review 보수 전에 이미 완료한 V1 micro2는 예비 자료로 보존하며 최종 표와 합산하지 않는다. 전체9attempt(예비2+최종7) 범위다. 짧은 micro를 먼저 검증한다. 기본 문턱 유지, 실제 타이머·SACK/dupACK invariant·pipe accounting과 종료 시 복구를 확인하지 못하면 긴 실행을 시작하지 않는다.
 
 1. stable micro 100Mbps·q2000·편도50→50ms·4초·20MSS(27,600B)의 첫 segment 실제 손실: baseline/새 selective 두 조건. 정책에는 일부러 0.15~0.35초의 잘못된 positive hint와 26.2초와 같은 forward 감소 예산을 준다. Δ=0을 알아 보호를 생략하는 방식으로 안전 비용을 숨기지 않는다.
 2. 제공 LEO 10Mbps·q100·200초 단일100GB: baseline/기존 bounded K20/새 selective 세 조건. 전체와 `[25.7,28.2)`, `[74.5,77.0)`의 앱 고유 수신량·재전송/복구/실제 drop과 정책 이벤트를 비교한다.
@@ -29,3 +29,11 @@ cohort 밖 hole의 기본 손실 표시가 보호를 해제할 수 있다. 그�
 ## 실행·재현 계획
 
 새 container `lab1-orbit-loss-20261012`, 새 volume `cs30401-orbit-loss-ns3-20261012`, CPU2·4GiB, build1job. 공식 이미지 digest는 `sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4`다. 다른 후보나 기존 predict-loss volume은 수정하지 않는다. combined patch·실행 commit/dirty flag·runtime/input/output SHA·상태·명령과 실제 app delivery/FCT/정책 대기·복구 비용을 남긴다. 대용량 원본은 별도 압축과 member hash를 보존하고 작은 evidence만 Git에 둔다. 통계적 반복이나 현대 Linux RACK 구현의 성과로 일반화하지 않는다.
+
+### 긴 실행 전 peer review 보수
+
+V1 micro 두 조건은 `e8cea96`의 source에서 완전히 수신·한 실제 drop·한 재전송을 확인했다. shared wait는 정확6.631518ms였으나 FCT는0.251509920→0.350482400초였다. 짧은 재전송 지연도 PRR/ACK 시점을 바꾸어 남은 새 데이터의 전송을 다음 RTT까지 늦출 수 있다. 이 결과를 본 뒤 τ·packet budget을 튜닝하지 않았다.
+
+별도 소스 검토에서 cumulative ACK 뒤 상태가 OPEN으로 돌아간 경우 deadline의 loss flag 재평가만 하고 송신을 깨우지 않을 가능성을 발견했다. 이는 관측된 실행 실패가 아니라 정확성 경계다. V2는 deadline과 registration End가 공통 재평가를 사용한다. OPEN에서는 **실제 저장된 head loss flag**가 있을 때만 DISORDER를 거쳐 기본 `EnterRecovery(0)`/`SendPendingData`로 진행한다. 가짜 ACK·dupACK count·cwnd 값을 만들지 않는다. DISORDER의 기본 증거 재평가와 RTO는 유지한다. registration End가 같은 시각의 deadline timer보다 먼저 실행돼도 대기를 넘기지 않는다.
+
+V1 patch/readiness/micro 원본·예비 요약을 보존하고, 별도 V2 patch/readiness/source checkpoint에서 최종7조건을 실행한다. 이 보수는 새 성능에 맞춘 규칙 변경이 아니다. 해당 OPEN 분기가 실제 실행에서 나타나지 않으면 실행 검증된 경계라고 부르지 않는다. 공식 build의 `NS3_ASSERT=OFF`도 기록하며 단순 실행 성공을 디버그 assertion 검증으로 쓰지 않는다.

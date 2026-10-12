@@ -125,14 +125,31 @@ TcpSocketBase::ExpireOrbitLoss()
 {
     m_orbitPending = false;
     TraceOrbitLoss("COHORT_DEADLINE", m_orbitWaitingHead);
+    FinishOrbitLossReevaluation();
+}
+
+void
+TcpSocketBase::FinishOrbitLossReevaluation()
+{
     // The saved deadline makes the callback decline the expired head here.
     if (m_tcb->m_congState != TcpSocketState::CA_OPEN &&
         m_tcb->m_congState != TcpSocketState::CA_DISORDER) return;
     m_txBuffer->ReevaluateLoss();
+    const bool knownLoss = m_txBuffer->IsLost(m_highRxAckMark);
     const bool dupLoss = m_dupAckCount >= m_retxThresh &&
+        m_highRxAckMark >= m_orbitCohortLo && m_highRxAckMark < m_orbitCohortHi &&
         (m_highRxAckMark >= m_recover || !m_recoverActive);
-    if (m_tcb->m_congState == TcpSocketState::CA_DISORDER && !OrbitHeadWaiting() &&
-        (dupLoss || m_txBuffer->IsLost(m_highRxAckMark)))
+    if (OrbitHeadWaiting()) return;
+    if (m_tcb->m_congState == TcpSocketState::CA_OPEN)
+    {
+        // A timer cannot manufacture three duplicate ACKs. Only a real stored
+        // SACK presumed-loss flag permits this state transition from OPEN.
+        if (!knownLoss) return;
+        m_congestionControl->CongestionStateSet(m_tcb, TcpSocketState::CA_DISORDER);
+        m_tcb->m_congState = TcpSocketState::CA_DISORDER;
+        TraceOrbitLoss("OPEN_LOSS_REEVALUATED", m_highRxAckMark);
+    }
+    if (knownLoss || dupLoss)
     {
         TraceOrbitLoss("DEADLINE_RECOVERY", m_highRxAckMark);
         EnterRecovery(0); // A timer acknowledges no newly delivered bytes.
@@ -143,9 +160,9 @@ TcpSocketBase::ExpireOrbitLoss()
 void
 TcpSocketBase::EndOrbitLossEpoch()
 {
-    const bool had = m_orbitHadDefer;
+    const bool pending = m_orbitPending;
     CancelOrbitLoss("EPOCH_END");
-    if (had) ReevaluateLossAfterThresholdRestore();
+    if (pending) FinishOrbitLossReevaluation();
 }
 '''
 
@@ -165,6 +182,7 @@ def transformed(root):
                         Time last, bool retrans);
     bool OrbitHeadWaiting() const;
     void ExpireOrbitLoss();
+    void FinishOrbitLossReevaluation();
     void CancelOrbitLoss(const char* reason);
     void TraceOrbitLoss(const char* event, SequenceNumber32 seq,
                         uint32_t sacked=0, Time last=Time(0));

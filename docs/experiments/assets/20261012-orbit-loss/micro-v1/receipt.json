@@ -1,0 +1,35 @@
+{
+  "tool": {
+    "path": "/work/code/orbit-loss/analyze.py",
+    "bytes": 6776,
+    "sha256": "d32fcf5b4fd5e94bb19e6b14d4b25b9ac62baa4aad5350eb5e46e3c92fded943"
+  },
+  "cases": [
+    {
+      "case": "micro-base",
+      "manifest": {
+        "path": "/tmp/orbit-loss/micro-base/manifest.json",
+        "bytes": 6941,
+        "sha256": "79da70540967c3c1593f024797f9cc3d285353516145823417c63cbc75a66be8"
+      },
+      "full_analysis": {
+        "path": "/tmp/orbit-loss/micro-base/analysis.json",
+        "bytes": 15937,
+        "sha256": "b63cc968b44b4022f26d51aefea02a08b4bbeb3bf7a9cc4c1b0d1a728ce7bbaa"
+      }
+    },
+    {
+      "case": "micro-selective",
+      "manifest": {
+        "path": "/tmp/orbit-loss/micro-selective/manifest.json",
+        "bytes": 7583,
+        "sha256": "19847938b67ae39507788bdbaf17df226f4d0b965eca96548f167201420d5147"
+      },
+      "full_analysis": {
+        "path": "/tmp/orbit-loss/micro-selective/analysis.json",
+        "bytes": 16127,
+        "sha256": "0fa696ff8c70f333d0a2c6c30f9f2b4680d07b2f0910c044c88a79055bf7a3f6"
+      }
+    }
+  ]
+}
