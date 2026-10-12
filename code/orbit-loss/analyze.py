@@ -78,17 +78,28 @@ def export(run,out):
         installation=list(csv.DictReader((run/'logs_ns3/orbit_drop_install.csv').open()))
         if not any(r['device_type']=='ns3::GSLNetDevice' for r in installation):
             raise ValueError('Actual loss control not installed on GSL')
+        def matching_drop(row):
+            try:
+                return int(row['node'])==1585 and int(row['device']) in {
+                    int(item['device_id']) for item in installation} and all(
+                    int(row[key])==chosen[key] for key in
+                    ['flow_id','tx_id','tx_time_ns','seq','payload_bytes','time_ns'])
+            except (ValueError,KeyError): return False
         matches=[r for r in csv.DictReader((run/'logs_ns3/study_drops.csv').open())
-                 if int(r['tx_id'])==chosen['tx_id']]
+                 if matching_drop(r)]
         if len(matches)!=1 or matches[0]['layer']!='PhyRxDrop':
             raise ValueError('Selected original transmission has no unique physical drop record')
         recovery=[]
+        earlier=[]
         for row in csv.DictReader((run/'logs_ns3/tcp_flow_0_study_packets.csv').open()):
-            if row['event']=='RETX' and int(row['seq'])==chosen['seq']:
-                recovery.append(int(row['time_ns']))
+            if (row['event']=='RETX' and int(row['flow_id'])==chosen['flow_id'] and
+                int(row['seq'])==chosen['seq']):
+                (recovery if int(row['time_ns'])>=chosen['time_ns'] else earlier).append(int(row['time_ns']))
         if not recovery: raise ValueError('No retransmission of selected genuine loss')
         summary['injected_actual_drop']=dict(selection=chosen,installation=installation,
             retransmission_times_ns=recovery,first_retransmission_after_drop_ns=recovery[0]-chosen['time_ns'],
+            earlier_retransmission_times_ns=earlier,matched_physical_drop=matches[0],
+            exact_identity_and_receiver_time_audit=True,
             source=compact.receipt(drop),trace_layer='PhyRxDrop')
     target=out/'cases'/manifest['case']
     target.mkdir(parents=True,exist_ok=False)
@@ -113,6 +124,7 @@ if __name__=='__main__':
         w=csv.DictWriter(f,fieldnames=fields)
         w.writeheader(); w.writerows(s['metrics'] for s in summaries)
     (a.out/'receipt.json').write_text(json.dumps(dict(tool=compact.receipt(Path(__file__)),
+        phase='Post-simulation export; physical-drop join and after-drop RETX filter strengthened after all seven runs',
         cases=[dict(case=s['metrics']['case'],manifest=s['provenance']['manifest'],
                    full_analysis=s['provenance']['full_analysis']) for s in summaries]),indent=2)+'\n')
     print(json.dumps([s['metrics'] for s in summaries],indent=2))

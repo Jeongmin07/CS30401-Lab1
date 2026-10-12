@@ -22,5 +22,6 @@ code/orbit-loss/** -text whitespace=cr-at-eol
 docs/experiments/assets/20261012-orbit-cubic-up/** -text whitespace=cr-at-eol
 docs/experiments/assets/20261012-orbit-cubic-down/** -text whitespace=cr-at-eol
 docs/experiments/assets/20261012-orbit-loss/** -text whitespace=cr-at-eol
+docs/experiments/assets/20261012-three-followups/** -text whitespace=cr-at-eol
 code/orbit-cubic-up/*.patch whitespace=-blank-at-eol,cr-at-eol
 code/orbit-loss/*.patch whitespace=-blank-at-eol,cr-at-eol

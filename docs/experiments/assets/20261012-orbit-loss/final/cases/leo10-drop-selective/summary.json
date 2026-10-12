@@ -1,0 +1,794 @@
+{
+  "metrics": {
+    "case": "leo10-drop-selective",
+    "duration_s": 200.0,
+    "flow_start_s": 0.0,
+    "expected_finite_bytes": null,
+    "receiver_bytes": 238606140,
+    "receiver_goodput_mbps": 9.5442456,
+    "transfer_complete": null,
+    "fct_s": null,
+    "retransmissions": 521,
+    "recovery_entries": 41,
+    "ca_loss_entries": 1,
+    "distinct_tagged_drops": 500,
+    "drop_trace_rows": 500,
+    "actual_high_threshold_time_s": 0,
+    "censored_high_threshold_intervals": 0,
+    "guard_starts": 0,
+    "guard_start_skips": 0,
+    "bounded_expiry_reevaluations": 0,
+    "expiry_entered_recovery": 0
+  },
+  "flow": {
+    "counts": {
+      "ack_rows_with_sack": 7446,
+      "application_delivered_bytes": 238606140,
+      "drop_trace_rows": 500,
+      "loss_state_entries": 1,
+      "official_retransmission_rows": 521,
+      "out_of_order_payload_rows": 7198,
+      "overlapping_sequence_tx_rows": 521,
+      "recovery_state_entries": 41,
+      "repeated_cumulative_ack_rows": 7188,
+      "sender_new_sequence_bytes": 238717920,
+      "sender_payload_tx_bytes": 239436900,
+      "wire_payload_rx_bytes": 238606140,
+      "wire_unique_sequence_bytes": 238606140
+    },
+    "distinct_tagged_transmissions_dropped": 500,
+    "drop_case_samples_truncated": true,
+    "drop_sample_selection": "First example per observed drop layer, then chronological rows to sample cap.",
+    "drop_trace_row_cases_total": 500,
+    "first_receiver_application_delivery_time_s": 0.161402717,
+    "gap_case_samples_truncated": true,
+    "gap_cases_total": 194,
+    "gap_classifications": {
+      "accepted_original_also_retransmitted_gaps": 2,
+      "candidate_unnecessary_recovery_original_arrived": 1,
+      "gap_with_observed_actual_drop": 189,
+      "loss_excluded_original_also_retransmitted_gaps": 2,
+      "original_eventually_arrived_after_reordering": 4
+    },
+    "initial_retransmission_threshold": 3,
+    "last_receiver_application_delivery_time_s": 199.999382681,
+    "receiver_application_goodput_mbps": 9.5442456,
+    "resolved_gap_tag_cache_misses": 0,
+    "restore_deadlines_missed": 0,
+    "restore_deferrals": 0,
+    "smoothed_rtt": {
+      "covered_duration_s": 199.900499797,
+      "maximum_ms": 227.252687,
+      "minimum_ms": 99.0,
+      "p50_ms": 135.770404,
+      "p95_ms": 210.93401,
+      "p99_ms": 221.773781,
+      "qualification": "Smoothed sender RTT held between trace changes; excludes initial unknown/zero SRTT; not raw packet RTT or isolated queueing delay.",
+      "time_weighted_mean_ms": 148.1434207159023,
+      "trace_rows": 82943
+    },
+    "unfinished_recovery_start_ns": null,
+    "wire_unique_payload_rate_mbps": 9.5442456
+  },
+  "path_event_windows": [
+    {
+      "flows": {
+        "0": {
+          "ack_rows_with_sack": 534,
+          "application_delivered_bytes": 2878680,
+          "drop_trace_rows": 7,
+          "gap_with_observed_actual_drop": 7,
+          "loss_state_entries": 1,
+          "official_retransmission_rows": 48,
+          "out_of_order_payload_rows": 467,
+          "overlapping_sequence_tx_rows": 48,
+          "receiver_application_goodput_mbps": 9.211775999999999,
+          "recovery_state_entries": 2,
+          "repeated_cumulative_ack_rows": 490,
+          "sender_new_sequence_bytes": 1999620,
+          "sender_payload_tx_bytes": 2065860,
+          "wire_payload_rx_bytes": 1999620,
+          "wire_unique_sequence_bytes": 1999620
+        }
+      },
+      "forward_path_changed": true,
+      "rtt_change_ms": 0.001,
+      "time_s": 2.4,
+      "window_end_s": 4.4,
+      "window_start_s": 1.9
+    },
+    {
+      "flows": {
+        "0": {
+          "ack_rows_with_sack": 124,
+          "application_delivered_bytes": 2961480,
+          "drop_trace_rows": 1,
+          "gap_with_observed_actual_drop": 1,
+          "official_retransmission_rows": 1,
+          "out_of_order_payload_rows": 124,
+          "overlapping_sequence_tx_rows": 1,
+          "receiver_application_goodput_mbps": 9.476736,
+          "recovery_state_entries": 1,
+          "repeated_cumulative_ack_rows": 123,
+          "sender_new_sequence_bytes": 2947680,
+          "sender_payload_tx_bytes": 2949060,
+          "wire_payload_rx_bytes": 2961480,
+          "wire_unique_sequence_bytes": 2961480
+        }
+      },
+      "forward_path_changed": true,
+      "rtt_change_ms": -6.634,
+      "time_s": 26.2,
+      "window_end_s": 28.2,
+      "window_start_s": 25.7
+    },
+    {
+      "flows": {
+        "0": {
+          "ack_rows_with_sack": 1,
+          "application_delivered_bytes": 3007020,
+          "original_eventually_arrived_after_reordering": 1,
+          "out_of_order_payload_rows": 1,
+          "receiver_application_goodput_mbps": 9.622464,
+          "sender_new_sequence_bytes": 3087060,
+          "sender_payload_tx_bytes": 3087060,
+          "wire_payload_rx_bytes": 3007020,
+          "wire_unique_sequence_bytes": 3007020
+        }
+      },
+      "forward_path_changed": true,
+      "rtt_change_ms": -3.343,
+      "time_s": 75.0,
+      "window_end_s": 77.0,
+      "window_start_s": 74.5
+    },
+    {
+      "flows": {
+        "0": {
+          "ack_rows_with_sack": 7,
+          "application_delivered_bytes": 2982180,
+          "candidate_unnecessary_recovery_original_arrived": 1,
+          "official_retransmission_rows": 2,
+          "original_eventually_arrived_after_reordering": 3,
+          "out_of_order_payload_rows": 4,
+          "overlapping_sequence_tx_rows": 2,
+          "receiver_application_goodput_mbps": 9.542976,
+          "recovery_state_entries": 1,
+          "repeated_cumulative_ack_rows": 5,
+          "sender_new_sequence_bytes": 2969760,
+          "sender_payload_tx_bytes": 2972520,
+          "wire_payload_rx_bytes": 2982180,
+          "wire_unique_sequence_bytes": 2982180
+        }
+      },
+      "forward_path_changed": true,
+      "rtt_change_ms": 3.061,
+      "time_s": 121.6,
+      "window_end_s": 123.6,
+      "window_start_s": 121.1
+    },
+    {
+      "flows": {
+        "0": {
+          "application_delivered_bytes": 3000120,
+          "receiver_application_goodput_mbps": 9.600384,
+          "sender_new_sequence_bytes": 3000120,
+          "sender_payload_tx_bytes": 3000120,
+          "wire_payload_rx_bytes": 3000120,
+          "wire_unique_sequence_bytes": 3000120
+        }
+      },
+      "forward_path_changed": true,
+      "rtt_change_ms": 7.231,
+      "time_s": 187.4,
+      "window_end_s": 189.4,
+      "window_start_s": 186.9
+    },
+    {
+      "flows": {
+        "0": {
+          "ack_rows_with_sack": 351,
+          "application_delivered_bytes": 3005640,
+          "drop_trace_rows": 12,
+          "gap_with_observed_actual_drop": 10,
+          "official_retransmission_rows": 13,
+          "out_of_order_payload_rows": 340,
+          "overlapping_sequence_tx_rows": 13,
+          "receiver_application_goodput_mbps": 9.618048,
+          "recovery_state_entries": 2,
+          "repeated_cumulative_ack_rows": 341,
+          "sender_new_sequence_bytes": 2913180,
+          "sender_payload_tx_bytes": 2931120,
+          "wire_payload_rx_bytes": 3005640,
+          "wire_unique_sequence_bytes": 3005640
+        }
+      },
+      "forward_path_changed": true,
+      "rtt_change_ms": 0.004,
+      "time_s": 193.8,
+      "window_end_s": 195.8,
+      "window_start_s": 193.3
+    },
+    {
+      "flows": {
+        "0": {
+          "ack_rows_with_sack": 351,
+          "application_delivered_bytes": 3005640,
+          "drop_trace_rows": 12,
+          "gap_with_observed_actual_drop": 10,
+          "official_retransmission_rows": 13,
+          "out_of_order_payload_rows": 340,
+          "overlapping_sequence_tx_rows": 13,
+          "receiver_application_goodput_mbps": 9.618048,
+          "recovery_state_entries": 2,
+          "repeated_cumulative_ack_rows": 341,
+          "sender_new_sequence_bytes": 2904900,
+          "sender_payload_tx_bytes": 2922840,
+          "wire_payload_rx_bytes": 3005640,
+          "wire_unique_sequence_bytes": 3005640
+        }
+      },
+      "forward_path_changed": true,
+      "rtt_change_ms": 0.003,
+      "time_s": 194.0,
+      "window_end_s": 196.0,
+      "window_start_s": 193.5
+    }
+  ],
+  "analysis_parameters": {
+    "bin_s": 0.1,
+    "event_after_s": 2.0,
+    "event_before_s": 0.5,
+    "maximum_case_samples": 100,
+    "maximum_evidence_rows_per_sample": 12,
+    "root_queue_disc_absence_independently_audited": false,
+    "tx_identity_retention_s": 10.0
+  },
+  "drop_rows_by_layer": {
+    "PhyRxDrop": 1,
+    "TcDrop": 499
+  },
+  "drop_rows_without_usable_transmission_tag": 0,
+  "drop_coverage": {
+    "absence_of_drop_inference": "listed hooks connected with matching IPv4/TcDrop node coverage",
+    "available": true,
+    "connected": 50704,
+    "devices_without_root_queue_disc_absence_check": [],
+    "devices_without_root_queue_disc_absence_check_count": 0,
+    "ipv4_nodes_without_traffic_control_drop_hook": [],
+    "layer_entries": {
+      "DropAfterDequeue": 7922,
+      "DropBeforeEnqueue": 7922,
+      "MacTxDrop": 7922,
+      "PhyRxDrop": 7922,
+      "PhyTxDrop": 7922,
+      "TcDrop": 1586,
+      "ipv4": 1586,
+      "root_queue_disc_absent": 7922
+    },
+    "not_connected": [],
+    "qualification": "Manifest coverage is not an independent audit of every loss path.",
+    "root_queue_disc_absence_coverage_complete": true,
+    "traffic_control_drop_hook_present": true,
+    "traffic_control_node_coverage_complete": true
+  },
+  "controller": {
+    "bounded_restore_declared": false,
+    "requested_windows_ns": [],
+    "events": [
+      {
+        "flow_id": 0,
+        "time_ns": 0,
+        "event": "THRESHOLD_INIT",
+        "old_value": 3,
+        "new_value": 3,
+        "threshold": 3,
+        "cong_state": 0
+      }
+    ],
+    "event_counts": {
+      "THRESHOLD_INIT": 1
+    },
+    "actual_high_threshold_intervals": []
+  },
+  "provenance": {
+    "manifest": {
+      "path": "/tmp/orbit-loss-v2/leo10-drop-selective/manifest.json",
+      "bytes": 422655,
+      "sha256": "46fc543a594b689786a52fe4cdf6a72db4641d6162787315743bea5ae5cb23a4"
+    },
+    "full_analysis": {
+      "path": "/tmp/orbit-loss-v2/leo10-drop-selective/analysis.json",
+      "bytes": 860365,
+      "sha256": "d2001f64426a736e43774a48d5e60e3f1c17a2942e8078268b74e6acd6e6ba49"
+    },
+    "checked_settings": [
+      {
+        "path": "/tmp/orbit-loss-v2/leo10-drop-selective/config_ns3.properties",
+        "bytes": 613,
+        "sha256": "8c46772c95c46ca99935dd68cf6957631972a2bb519acabe0880640408b0f4d4"
+      },
+      {
+        "path": "/tmp/orbit-loss-v2/leo10-drop-selective/schedule.csv",
+        "bytes": 119,
+        "sha256": "c441ec9f73e726dcc20348d6c2fb2562401925fd26385a8c7ec8c45c9cf6c809"
+      }
+    ],
+    "verified_execution_outputs": [
+      {
+        "path": "/tmp/orbit-loss-v2/leo10-drop-selective/config_ns3.properties",
+        "bytes": 613,
+        "sha256": "8c46772c95c46ca99935dd68cf6957631972a2bb519acabe0880640408b0f4d4"
+      },
+      {
+        "path": "/tmp/orbit-loss-v2/leo10-drop-selective/console.txt",
+        "bytes": 6119,
+        "sha256": "d311c55a5f4aa6b5fefdc87543e7e0831f34ceaf8d9132dc505922d42be5eacf"
+      },
+      {
+        "path": "/tmp/orbit-loss-v2/leo10-drop-selective/logs_ns3/finished.txt",
+        "bytes": 4,
+        "sha256": "927580bf287560d4a26a5d6e129f91ffa9cb63031b1a8c772be6ec584e65e82b"
+      },
+      {
+        "path": "/tmp/orbit-loss-v2/leo10-drop-selective/logs_ns3/orbit_actual_drop.csv",
+        "bytes": 145,
+        "sha256": "1853a585847be72c2b3d3c58f60fea3d153db9a2da756e4e3049e2b786bec8e3"
+      },
+      {
+        "path": "/tmp/orbit-loss-v2/leo10-drop-selective/logs_ns3/orbit_drop_install.csv",
+        "bytes": 100,
+        "sha256": "639a91b644d909826cf4c0957c04d46d1e484c636cd331fe0c58b90b7ab41613"
+      },
+      {
+        "path": "/tmp/orbit-loss-v2/leo10-drop-selective/logs_ns3/study_app_rx_node_1585_port_1024.csv",
+        "bytes": 14456302,
+        "sha256": "55fff2397fd105a138a8237071bed9def916d92d52e8dfa3bd7295a20e4404bc"
+      },
+      {
+        "path": "/tmp/orbit-loss-v2/leo10-drop-selective/logs_ns3/study_drop_coverage.csv",
+        "bytes": 1140184,
+        "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+      },
+      {
+        "path": "/tmp/orbit-loss-v2/leo10-drop-selective/logs_ns3/study_drops.csv",
+        "bytes": 55513,
+        "sha256": "16d2d7d6c50aebd8c423aef68cc0e1f483c458b18c899aeb3436ec073b1c2224"
+      },
+      {
+        "path": "/tmp/orbit-loss-v2/leo10-drop-selective/logs_ns3/study_rx_node_1585_port_1024.csv",
+        "bytes": 19447771,
+        "sha256": "376c02eac88b430ed761ab96e9d92e8517f9bfb078d56caf9881a184e23df32c"
+      },
+      {
+        "path": "/tmp/orbit-loss-v2/leo10-drop-selective/logs_ns3/tcp_flow_0_cwnd.csv",
+        "bytes": 101850,
+        "sha256": "c481d966bd03a8875ca40f8263e01b4edd53ad3f6fda1fbb6e65b1911f4a23e3"
+      },
+      {
+        "path": "/tmp/orbit-loss-v2/leo10-drop-selective/logs_ns3/tcp_flow_0_orbit_loss.csv",
+        "bytes": 1248,
+        "sha256": "d2098605ab74323b576af006a45ce5ad7146aff3f3b20ee5e12fda0241d818ab"
+      },
+      {
+        "path": "/tmp/orbit-loss-v2/leo10-drop-selective/logs_ns3/tcp_flow_0_progress.csv",
+        "bytes": 1993122,
+        "sha256": "f9367049342c6fbf98323ece36c6dc3d52990663ba919657cb4334b38ae0f5ac"
+      },
+      {
+        "path": "/tmp/orbit-loss-v2/leo10-drop-selective/logs_ns3/tcp_flow_0_rtt.csv",
+        "bytes": 2029483,
+        "sha256": "254ac35be3723622db625e77f128db0681a9a6a403e28a01f66a1b85efbf88e7"
+      },
+      {
+        "path": "/tmp/orbit-loss-v2/leo10-drop-selective/logs_ns3/tcp_flow_0_study_events.csv",
+        "bytes": 5426,
+        "sha256": "df732fe7580d83cab6dd84efebd718ea0c5285bba06ceac27edd90cabc86a37d"
+      },
+      {
+        "path": "/tmp/orbit-loss-v2/leo10-drop-selective/logs_ns3/tcp_flow_0_study_packets.csv",
+        "bytes": 19847801,
+        "sha256": "fea30f5b656faf0b607b98857d43fa8a8be400a55b9d1b12284ead0fa56b9339"
+      },
+      {
+        "path": "/tmp/orbit-loss-v2/leo10-drop-selective/logs_ns3/tcp_flows.csv",
+        "bytes": 75,
+        "sha256": "4abdf3e8ef592572a23f34e71d0c41588567bb3cc71a22ffcbbbd98db6b61466"
+      },
+      {
+        "path": "/tmp/orbit-loss-v2/leo10-drop-selective/logs_ns3/tcp_flows.txt",
+        "bytes": 336,
+        "sha256": "87d6bb609e9966e381fc1d441217b4e315c5eb7c010a02e96ea95bb9eb5b962b"
+      },
+      {
+        "path": "/tmp/orbit-loss-v2/leo10-drop-selective/logs_ns3/timing_results.csv",
+        "bytes": 567,
+        "sha256": "c1c0542a732ede37a37944d50302b22f1a32e30f2e9902b157f10e348fb4e061"
+      },
+      {
+        "path": "/tmp/orbit-loss-v2/leo10-drop-selective/logs_ns3/timing_results.txt",
+        "bytes": 910,
+        "sha256": "a1c5c77b4e1f040662deb44619f13e07c2e98c73da93c777ae722996ddf56cf9"
+      },
+      {
+        "path": "/tmp/orbit-loss-v2/leo10-drop-selective/schedule.csv",
+        "bytes": 119,
+        "sha256": "c441ec9f73e726dcc20348d6c2fb2562401925fd26385a8c7ec8c45c9cf6c809"
+      }
+    ],
+    "raw_inputs": [
+      {
+        "path": "/tmp/orbit-loss-v2/leo10-drop-selective/logs_ns3/orbit_actual_drop.csv",
+        "bytes": 145,
+        "sha256": "1853a585847be72c2b3d3c58f60fea3d153db9a2da756e4e3049e2b786bec8e3"
+      },
+      {
+        "path": "/tmp/orbit-loss-v2/leo10-drop-selective/logs_ns3/orbit_drop_install.csv",
+        "bytes": 100,
+        "sha256": "639a91b644d909826cf4c0957c04d46d1e484c636cd331fe0c58b90b7ab41613"
+      },
+      {
+        "path": "/tmp/orbit-loss-v2/leo10-drop-selective/logs_ns3/study_app_rx_node_1585_port_1024.csv",
+        "bytes": 14456302,
+        "sha256": "55fff2397fd105a138a8237071bed9def916d92d52e8dfa3bd7295a20e4404bc"
+      },
+      {
+        "path": "/tmp/orbit-loss-v2/leo10-drop-selective/logs_ns3/study_drop_coverage.csv",
+        "bytes": 1140184,
+        "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+      },
+      {
+        "path": "/tmp/orbit-loss-v2/leo10-drop-selective/logs_ns3/study_drops.csv",
+        "bytes": 55513,
+        "sha256": "16d2d7d6c50aebd8c423aef68cc0e1f483c458b18c899aeb3436ec073b1c2224"
+      },
+      {
+        "path": "/tmp/orbit-loss-v2/leo10-drop-selective/logs_ns3/study_rx_node_1585_port_1024.csv",
+        "bytes": 19447771,
+        "sha256": "376c02eac88b430ed761ab96e9d92e8517f9bfb078d56caf9881a184e23df32c"
+      },
+      {
+        "path": "/tmp/orbit-loss-v2/leo10-drop-selective/logs_ns3/tcp_flow_0_cwnd.csv",
+        "bytes": 101850,
+        "sha256": "c481d966bd03a8875ca40f8263e01b4edd53ad3f6fda1fbb6e65b1911f4a23e3"
+      },
+      {
+        "path": "/tmp/orbit-loss-v2/leo10-drop-selective/logs_ns3/tcp_flow_0_orbit_loss.csv",
+        "bytes": 1248,
+        "sha256": "d2098605ab74323b576af006a45ce5ad7146aff3f3b20ee5e12fda0241d818ab"
+      },
+      {
+        "path": "/tmp/orbit-loss-v2/leo10-drop-selective/logs_ns3/tcp_flow_0_progress.csv",
+        "bytes": 1993122,
+        "sha256": "f9367049342c6fbf98323ece36c6dc3d52990663ba919657cb4334b38ae0f5ac"
+      },
+      {
+        "path": "/tmp/orbit-loss-v2/leo10-drop-selective/logs_ns3/tcp_flow_0_rtt.csv",
+        "bytes": 2029483,
+        "sha256": "254ac35be3723622db625e77f128db0681a9a6a403e28a01f66a1b85efbf88e7"
+      },
+      {
+        "path": "/tmp/orbit-loss-v2/leo10-drop-selective/logs_ns3/tcp_flow_0_study_events.csv",
+        "bytes": 5426,
+        "sha256": "df732fe7580d83cab6dd84efebd718ea0c5285bba06ceac27edd90cabc86a37d"
+      },
+      {
+        "path": "/tmp/orbit-loss-v2/leo10-drop-selective/logs_ns3/tcp_flow_0_study_packets.csv",
+        "bytes": 19847801,
+        "sha256": "fea30f5b656faf0b607b98857d43fa8a8be400a55b9d1b12284ead0fa56b9339"
+      },
+      {
+        "path": "/tmp/orbit-loss-v2/leo10-drop-selective/logs_ns3/tcp_flows.csv",
+        "bytes": 75,
+        "sha256": "4abdf3e8ef592572a23f34e71d0c41588567bb3cc71a22ffcbbbd98db6b61466"
+      },
+      {
+        "path": "/tmp/orbit-loss-v2/leo10-drop-selective/logs_ns3/timing_results.csv",
+        "bytes": 567,
+        "sha256": "c1c0542a732ede37a37944d50302b22f1a32e30f2e9902b157f10e348fb4e061"
+      }
+    ],
+    "analysis_inputs": [
+      {
+        "kind": "sender",
+        "path": "/tmp/orbit-loss-v2/leo10-drop-selective/logs_ns3/tcp_flow_0_study_packets.csv"
+      },
+      {
+        "kind": "drop",
+        "path": "/tmp/orbit-loss-v2/leo10-drop-selective/logs_ns3/study_drops.csv"
+      },
+      {
+        "kind": "receiver",
+        "path": "/tmp/orbit-loss-v2/leo10-drop-selective/logs_ns3/study_rx_node_1585_port_1024.csv"
+      },
+      {
+        "kind": "app",
+        "path": "/tmp/orbit-loss-v2/leo10-drop-selective/logs_ns3/study_app_rx_node_1585_port_1024.csv"
+      },
+      {
+        "kind": "state",
+        "path": "/tmp/orbit-loss-v2/leo10-drop-selective/logs_ns3/tcp_flow_0_study_events.csv"
+      }
+    ]
+  },
+  "omissions": {
+    "receiver_application_bins": 2000,
+    "gap_case_samples": 100,
+    "drop_case_samples": 100,
+    "recovery_periods": 41
+  },
+  "limitations": [
+    "Path-truth propagation RTT includes both directions; RTT decreases alone do not prove forward-path overtaking.",
+    "Repeated cumulative ACKs are observations, not an independent reconstruction of every duplicate-ACK predicate.",
+    "Exact tx_id tags, not packet UIDs, identify transmission instances; joins are retained for a bounded time.",
+    "Candidate unnecessary recovery associates a sequence gap, ACK evidence, retransmission and eventual original delivery; controlled comparisons are still needed for a causal performance claim.",
+    "LOSS state is reported directly and is not automatically called an RTO without a dedicated timer trace.",
+    "Drop trace rows can duplicate one physical loss; distinct tagged transmission counts and per-layer counts are separate.",
+    "No observed drop is not proof of no drop when coverage or packet parsing is incomplete.",
+    "Traffic-control TcDrop coverage is required before excluding network loss; pre-v3 coverage can omit this path.",
+    "Root queue-disc absence must be verified per device or explicitly independently audited; TcDrop does not observe a root queue-disc's own losses.",
+    "Receiver TCP window rejection and PAWS/input discards are not covered by queue/IP/device/traffic-control hooks.",
+    "Pre-processing wire Rx does not prove acceptance: a gap fill requires subsequent expected_seq advancement or same-time application delivery.",
+    "Application HandleRead bytes are ordered unique delivery; wire interval union is a separate metric.",
+    "Sequence epochs assume adjacent relevant sequence references differ by less than 2^31 bytes.",
+    "Static and dynamic path controls, actual loss tests and deployment-information errors remain separate experimental requirements.",
+    "CA_LOSS is not independently identified as an RTO; FCT is reported only when receiver delivery equals positive MaxBytes.",
+    "High-threshold intervals come from actual setters; requested window ends alone do not prove restoration.",
+    "Source/binary hashes in the copied execution manifest are declarations, not independently rebuilt validation."
+  ],
+  "selective_policy": {
+    "enabled": true,
+    "events": [
+      {
+        "flow_id": 0,
+        "time_ns": 26200000000,
+        "event": "EPOCH_REGISTER",
+        "epoch_ns": 26200000000,
+        "epoch_end_ns": 26395390816,
+        "seq": 29577541,
+        "cohort_lo": 29577541,
+        "cohort_hi": 29739001,
+        "last_sent_ns": 0,
+        "sacked_pkts": 0,
+        "budget_pkts": 7,
+        "deadline_ns": 0,
+        "dupacks": 0,
+        "lost_bytes": 0,
+        "pipe_bytes": 161460,
+        "cong_state": 0,
+        "threshold": 3
+      },
+      {
+        "flow_id": 0,
+        "time_ns": 26285195515,
+        "event": "COHORT_WAIT_BEGIN",
+        "epoch_ns": 26200000000,
+        "epoch_end_ns": 26395390816,
+        "seq": 29681041,
+        "cohort_lo": 29577541,
+        "cohort_hi": 29739001,
+        "last_sent_ns": 26152017749,
+        "sacked_pkts": 3,
+        "budget_pkts": 7,
+        "deadline_ns": 26291827033,
+        "dupacks": 2,
+        "lost_bytes": 0,
+        "pipe_bytes": 161460,
+        "cong_state": 1,
+        "threshold": 3
+      },
+      {
+        "flow_id": 0,
+        "time_ns": 26286342708,
+        "event": "COHORT_WAIT_CONTINUE",
+        "epoch_ns": 26200000000,
+        "epoch_end_ns": 26395390816,
+        "seq": 29681041,
+        "cohort_lo": 29577541,
+        "cohort_hi": 29739001,
+        "last_sent_ns": 26152017749,
+        "sacked_pkts": 4,
+        "budget_pkts": 7,
+        "deadline_ns": 26291827033,
+        "dupacks": 3,
+        "lost_bytes": 0,
+        "pipe_bytes": 161460,
+        "cong_state": 1,
+        "threshold": 3
+      },
+      {
+        "flow_id": 0,
+        "time_ns": 26287489903,
+        "event": "COHORT_WAIT_CONTINUE",
+        "epoch_ns": 26200000000,
+        "epoch_end_ns": 26395390816,
+        "seq": 29681041,
+        "cohort_lo": 29577541,
+        "cohort_hi": 29739001,
+        "last_sent_ns": 26152017749,
+        "sacked_pkts": 5,
+        "budget_pkts": 7,
+        "deadline_ns": 26291827033,
+        "dupacks": 4,
+        "lost_bytes": 0,
+        "pipe_bytes": 161460,
+        "cong_state": 1,
+        "threshold": 3
+      },
+      {
+        "flow_id": 0,
+        "time_ns": 26288637096,
+        "event": "COHORT_WAIT_CONTINUE",
+        "epoch_ns": 26200000000,
+        "epoch_end_ns": 26395390816,
+        "seq": 29681041,
+        "cohort_lo": 29577541,
+        "cohort_hi": 29739001,
+        "last_sent_ns": 26152017749,
+        "sacked_pkts": 6,
+        "budget_pkts": 7,
+        "deadline_ns": 26291827033,
+        "dupacks": 5,
+        "lost_bytes": 0,
+        "pipe_bytes": 161460,
+        "cong_state": 1,
+        "threshold": 3
+      },
+      {
+        "flow_id": 0,
+        "time_ns": 26289784278,
+        "event": "COHORT_WAIT_CONTINUE",
+        "epoch_ns": 26200000000,
+        "epoch_end_ns": 26395390816,
+        "seq": 29681041,
+        "cohort_lo": 29577541,
+        "cohort_hi": 29739001,
+        "last_sent_ns": 26152017749,
+        "sacked_pkts": 7,
+        "budget_pkts": 7,
+        "deadline_ns": 26291827033,
+        "dupacks": 6,
+        "lost_bytes": 0,
+        "pipe_bytes": 161460,
+        "cong_state": 1,
+        "threshold": 3
+      },
+      {
+        "flow_id": 0,
+        "time_ns": 26290931476,
+        "event": "BUDGET_EXCEEDED",
+        "epoch_ns": 26200000000,
+        "epoch_end_ns": 26395390816,
+        "seq": 29681041,
+        "cohort_lo": 29577541,
+        "cohort_hi": 29739001,
+        "last_sent_ns": 0,
+        "sacked_pkts": 0,
+        "budget_pkts": 7,
+        "deadline_ns": 26291827033,
+        "dupacks": 7,
+        "lost_bytes": 0,
+        "pipe_bytes": 161460,
+        "cong_state": 1,
+        "threshold": 3
+      },
+      {
+        "flow_id": 0,
+        "time_ns": 75000000000,
+        "event": "EPOCH_REGISTER",
+        "epoch_ns": 75000000000,
+        "epoch_end_ns": 75181977820,
+        "seq": 88235821,
+        "cohort_lo": 88235821,
+        "cohort_hi": 88426261,
+        "last_sent_ns": 0,
+        "sacked_pkts": 0,
+        "budget_pkts": 5,
+        "deadline_ns": 26291827033,
+        "dupacks": 0,
+        "lost_bytes": 0,
+        "pipe_bytes": 190440,
+        "cong_state": 0,
+        "threshold": 3
+      },
+      {
+        "flow_id": 0,
+        "time_ns": 75181977820,
+        "event": "EPOCH_END",
+        "epoch_ns": 75000000000,
+        "epoch_end_ns": 75181977820,
+        "seq": 88455241,
+        "cohort_lo": 88235821,
+        "cohort_hi": 88426261,
+        "last_sent_ns": 0,
+        "sacked_pkts": 0,
+        "budget_pkts": 5,
+        "deadline_ns": 26291827033,
+        "dupacks": 0,
+        "lost_bytes": 0,
+        "pipe_bytes": 195960,
+        "cong_state": 0,
+        "threshold": 3
+      }
+    ],
+    "event_counts": {
+      "EPOCH_REGISTER": 2,
+      "COHORT_WAIT_BEGIN": 1,
+      "COHORT_WAIT_CONTINUE": 4,
+      "BUDGET_EXCEEDED": 1,
+      "EPOCH_END": 1
+    },
+    "episodes": [
+      {
+        "epoch_ns": 26200000000,
+        "start_ns": 26285195515,
+        "end_ns": 26290931476,
+        "deadline_ns": 26291827033,
+        "duration_s": 0.005735961,
+        "end_event": "BUDGET_EXCEEDED",
+        "deferred_sequences": [
+          29681041
+        ]
+      }
+    ],
+    "shared_deadline_audit": true,
+    "K3_audit": true,
+    "source": {
+      "path": "/tmp/orbit-loss-v2/leo10-drop-selective/logs_ns3/tcp_flow_0_orbit_loss.csv",
+      "bytes": 1248,
+      "sha256": "d2098605ab74323b576af006a45ce5ad7146aff3f3b20ee5e12fda0241d818ab"
+    }
+  },
+  "finite_retransmission_times_ns": null,
+  "injected_actual_drop": {
+    "selection": {
+      "time_ns": 26235726816,
+      "flow_id": 0,
+      "tx_id": 21820,
+      "tx_time_ns": 26152017749,
+      "seq": 29681041,
+      "payload_bytes": 1380,
+      "event_ns": 26200000000,
+      "earliest_tx_ns": 26151152296
+    },
+    "installation": [
+      {
+        "node_id": "1585",
+        "device_id": "1",
+        "device_type": "ns3::GSLNetDevice",
+        "event_ns": "26200000000",
+        "old_forward_ns": "48847704"
+      }
+    ],
+    "retransmission_times_ns": [
+      26290931476
+    ],
+    "first_retransmission_after_drop_ns": 55204660,
+    "earlier_retransmission_times_ns": [],
+    "matched_physical_drop": {
+      "time_ns": "26235726816",
+      "layer": "PhyRxDrop",
+      "node": "1585",
+      "device": "1",
+      "reason": "-1",
+      "uid": "279",
+      "src": "10.18.144.1",
+      "dst": "10.18.145.1",
+      "src_port": "49153",
+      "dst_port": "1024",
+      "seq": "29681041",
+      "payload_bytes": "1380",
+      "flags": "16",
+      "flow_id": "0",
+      "tx_id": "21820",
+      "tx_time_ns": "26152017749"
+    },
+    "exact_identity_and_receiver_time_audit": true,
+    "source": {
+      "path": "/tmp/orbit-loss-v2/leo10-drop-selective/logs_ns3/orbit_actual_drop.csv",
+      "bytes": 145,
+      "sha256": "1853a585847be72c2b3d3c58f60fea3d153db9a2da756e4e3049e2b786bec8e3"
+    },
+    "trace_layer": "PhyRxDrop"
+  }
+}

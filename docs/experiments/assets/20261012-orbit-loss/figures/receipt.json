@@ -1,0 +1,144 @@
+{
+  "tool": {
+    "path": "/work/code/orbit-loss/plot.py",
+    "bytes": 4361,
+    "sha256": "3a91a486980595ef119f3b934b4ea1b9321624923675d1809ee66478e6cba6b1"
+  },
+  "matplotlib_version": "3.10.8",
+  "inputs": [
+    {
+      "path": "/tmp/orbit-loss-final-export/cases/leo10-base/summary.json",
+      "bytes": 19527,
+      "sha256": "e83cf441545d43cc93ea4c87ac3b4c6c9ad3f72578481e87525dcea215a46053"
+    },
+    {
+      "path": "/tmp/orbit-loss-final-export/cases/leo10-bounded20/summary.json",
+      "bytes": 21670,
+      "sha256": "48a04d294fe752da541f76cdae007d254215393eaddc98216e933f3b88bce5bc"
+    },
+    {
+      "path": "/tmp/orbit-loss-final-export/cases/leo10-drop-base/summary.json",
+      "bytes": 21927,
+      "sha256": "e2223582a88a7d08ebab1a35e153aa2216e89122c289220131bb1cf2f1590102"
+    },
+    {
+      "path": "/tmp/orbit-loss-final-export/cases/leo10-drop-selective/summary.json",
+      "bytes": 27909,
+      "sha256": "3fcf2bf5625a4c67076c0f2ca4538a3959ae97f0998a913a2db2572982037888"
+    },
+    {
+      "path": "/tmp/orbit-loss-final-export/cases/leo10-selective/summary.json",
+      "bytes": 26127,
+      "sha256": "ee60e1d4aeeed9c1c9070d72f50febf2f3bf7bcf310bd8672485cab06d2fbad4"
+    },
+    {
+      "path": "/tmp/orbit-loss-final-export/cases/micro-base/summary.json",
+      "bytes": 12082,
+      "sha256": "a26f61b9d90950bcf3e39362eb40a6a8b665d7101305dc05e5be008aeaa20202"
+    },
+    {
+      "path": "/tmp/orbit-loss-final-export/cases/micro-selective/summary.json",
+      "bytes": 18726,
+      "sha256": "d804ca9a26eb6245b676b4dd7905cdb6dc25b78d2f56926d1316c34faeeb777e"
+    }
+  ],
+  "natural_panels": [
+    {
+      "title": "Whole run [0,200) s",
+      "values": [
+        9.544356,
+        9.5465088,
+        9.5465088
+      ],
+      "retx_recovery": [
+        [
+          523,
+          41
+        ],
+        [
+          507,
+          40
+        ],
+        [
+          507,
+          40
+        ]
+      ]
+    },
+    {
+      "title": "First window [25.7,28.2) s",
+      "values": [
+        9.485568,
+        9.622464,
+        9.622464
+      ],
+      "retx_recovery": [
+        [
+          3,
+          1
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "title": "Later window [74.5,77.0) s",
+      "values": [
+        9.62688,
+        9.618048,
+        9.618048
+      ],
+      "retx_recovery": [
+        [
+          0,
+          0
+        ],
+        [
+          12,
+          2
+        ],
+        [
+          12,
+          2
+        ]
+      ]
+    }
+  ],
+  "finite_fct_s": [
+    0.25150992,
+    0.3504824
+  ],
+  "physical_drop_to_first_retx_ms": [
+    49.468699,
+    55.20466
+  ],
+  "outputs": [
+    {
+      "path": "/work/docs/experiments/assets/20261012-orbit-loss/figures/natural-leo.png",
+      "bytes": 104674,
+      "sha256": "af2d9e9c24c060bf33e4cab9e24e37d2777d63b2f5f48062ffff0247ac16219b"
+    },
+    {
+      "path": "/work/docs/experiments/assets/20261012-orbit-loss/figures/natural-leo.pdf",
+      "bytes": 19195,
+      "sha256": "73fca37f8dbcd2f31e4dcb6c0a10980b53701ff7de55072a2044bf29a52c08f8"
+    },
+    {
+      "path": "/work/docs/experiments/assets/20261012-orbit-loss/figures/actual-loss-cost.png",
+      "bytes": 121156,
+      "sha256": "8f04e1628c041cda114b183743aaaeb8b5306868ef4f6111753fc87c14941add"
+    },
+    {
+      "path": "/work/docs/experiments/assets/20261012-orbit-loss/figures/actual-loss-cost.pdf",
+      "bytes": 20444,
+      "sha256": "84a359503bf4ed1823f95c6f6ebf38f411f409043f1d9739e43fbabb4b5fbfcb"
+    }
+  ],
+  "qualification": "One deterministic matched case per condition. No confidence intervals; axes start at zero. LEO bulk flows have no FCT."
+}
