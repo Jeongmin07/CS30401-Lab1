@@ -1,0 +1,331 @@
+{
+  "archive": "orbit-probe-v1-20261012.tar.gz",
+  "bytes": 11991776,
+  "sha256": "8fdac40bf18052157c470a20673578f8f4ae400cdd22778b84b0a33435b6c460",
+  "file_count": 80,
+  "uncompressed_bytes": 43356967,
+  "every_decompressed_member_verified": true,
+  "members": {
+    "solo40-off/config_ns3.properties": {
+      "bytes": 611,
+      "sha256": "9533e0efa6dd560ba18c941afeadf3ac45212969f16f303c5e9ccc37c3407472"
+    },
+    "solo40-off/console.txt": {
+      "bytes": 6422,
+      "sha256": "e7e7651f7c12b43a52f81b063d6e40514774dde2e5494b3def9fec5995e48697"
+    },
+    "solo40-off/forecast.txt": {
+      "bytes": 24,
+      "sha256": "3f6d449b5e2a1f749fd6cf63f32aa828e57a5a8e8017b981de346656615a15fe"
+    },
+    "solo40-off/logs_ns3/bbr_app_rx_node_1585.csv": {
+      "bytes": 32296,
+      "sha256": "e132c83e1fb52ad6feb6c093e391259deac1f1f0d0f80b1419beb11a0cc9708a"
+    },
+    "solo40-off/logs_ns3/bbr_coverage.csv": {
+      "bytes": 1398438,
+      "sha256": "7785a349bbcd58d321430e5454d4e7193dfc4ed7766e00af84b503fa6bafef9c"
+    },
+    "solo40-off/logs_ns3/bbr_drops.csv": {
+      "bytes": 710228,
+      "sha256": "eda0e277ac3c325716e4c9eea5c82ca3b4fd2eeb67fcc23ea1b06b9af713f3c7"
+    },
+    "solo40-off/logs_ns3/bbr_queue_bins.csv": {
+      "bytes": 623600,
+      "sha256": "adb19748260b37fcb3bf7d8c111d60114504a040cf1a8db4c9aeb3f5269eeb8e"
+    },
+    "solo40-off/logs_ns3/bbr_queue_pending.csv": {
+      "bytes": 90,
+      "sha256": "bd912a74a0dee1b032ecbeac1820c6c6d343cbec86b2fdcadf1b67eb243ce335"
+    },
+    "solo40-off/logs_ns3/bbr_state.csv": {
+      "bytes": 80971,
+      "sha256": "e8f22b6acd98596386af5466926f78cea3f8136a0945f5834c9d81515988ab4b"
+    },
+    "solo40-off/logs_ns3/finished.txt": {
+      "bytes": 4,
+      "sha256": "927580bf287560d4a26a5d6e129f91ffa9cb63031b1a8c772be6ec584e65e82b"
+    },
+    "solo40-off/logs_ns3/orbit_probe.csv": {
+      "bytes": 14422,
+      "sha256": "8d7088d33d89846189bdbef3d73bcd82d2f830da14e54ff95c46f1a65e4162e8"
+    },
+    "solo40-off/logs_ns3/tcp_flow_0_cwnd.csv": {
+      "bytes": 1695683,
+      "sha256": "5eaeeecf6bdf6cea63fa98179e103c62ec0623b5194ebb3b9d4e8f2b6a7bef0f"
+    },
+    "solo40-off/logs_ns3/tcp_flow_0_progress.csv": {
+      "bytes": 3215465,
+      "sha256": "984d6275051c6ccf0f070cc8699f57cd13bd36d7f20c91f104daba81939e0cfb"
+    },
+    "solo40-off/logs_ns3/tcp_flow_0_rtt.csv": {
+      "bytes": 3084029,
+      "sha256": "f39f17c79234f79b687845dbb7e202fe0618b63dc924de2afd8642f1bc2434cd"
+    },
+    "solo40-off/logs_ns3/tcp_flows.csv": {
+      "bytes": 73,
+      "sha256": "69295bd1c582de8a7d5c55c5b9c54bce5d1eb477c0dfc80dbdf15c4055a5f8f1"
+    },
+    "solo40-off/logs_ns3/tcp_flows.txt": {
+      "bytes": 336,
+      "sha256": "0ea7a667a0c89a887883b46ca72b2140a10c1e52db3e621b93bbc26393ad175e"
+    },
+    "solo40-off/logs_ns3/timing_results.csv": {
+      "bytes": 562,
+      "sha256": "9feed9bd3fb6971bbb19f9b8062b7773e329b649751c30e25e9a679f881b5626"
+    },
+    "solo40-off/logs_ns3/timing_results.txt": {
+      "bytes": 909,
+      "sha256": "8fa906ad2a4078631001f6d58d0a095b18cdcca415b8fd71100edbfc04edb602"
+    },
+    "solo40-off/manifest.json": {
+      "bytes": 420317,
+      "sha256": "eca05476427846e5fe07bf1ea0a45184902a5c78afdc125c857c1434c88b851f"
+    },
+    "solo40-off/schedule.csv": {
+      "bytes": 29,
+      "sha256": "e6cde3aa7716856e46d24c3833354df90407313ece13a5ffbd1b789fa4fea23c"
+    },
+    "solo40-on/config_ns3.properties": {
+      "bytes": 611,
+      "sha256": "9533e0efa6dd560ba18c941afeadf3ac45212969f16f303c5e9ccc37c3407472"
+    },
+    "solo40-on/console.txt": {
+      "bytes": 6416,
+      "sha256": "d308f6e571139db2b35c4939cd0d2c82c2352d67ba096e4b1546910b2361f15b"
+    },
+    "solo40-on/forecast.txt": {
+      "bytes": 24,
+      "sha256": "3f6d449b5e2a1f749fd6cf63f32aa828e57a5a8e8017b981de346656615a15fe"
+    },
+    "solo40-on/logs_ns3/bbr_app_rx_node_1585.csv": {
+      "bytes": 32296,
+      "sha256": "e132c83e1fb52ad6feb6c093e391259deac1f1f0d0f80b1419beb11a0cc9708a"
+    },
+    "solo40-on/logs_ns3/bbr_coverage.csv": {
+      "bytes": 1398438,
+      "sha256": "7785a349bbcd58d321430e5454d4e7193dfc4ed7766e00af84b503fa6bafef9c"
+    },
+    "solo40-on/logs_ns3/bbr_drops.csv": {
+      "bytes": 710228,
+      "sha256": "eda0e277ac3c325716e4c9eea5c82ca3b4fd2eeb67fcc23ea1b06b9af713f3c7"
+    },
+    "solo40-on/logs_ns3/bbr_queue_bins.csv": {
+      "bytes": 623600,
+      "sha256": "adb19748260b37fcb3bf7d8c111d60114504a040cf1a8db4c9aeb3f5269eeb8e"
+    },
+    "solo40-on/logs_ns3/bbr_queue_pending.csv": {
+      "bytes": 90,
+      "sha256": "bd912a74a0dee1b032ecbeac1820c6c6d343cbec86b2fdcadf1b67eb243ce335"
+    },
+    "solo40-on/logs_ns3/bbr_state.csv": {
+      "bytes": 80971,
+      "sha256": "e8f22b6acd98596386af5466926f78cea3f8136a0945f5834c9d81515988ab4b"
+    },
+    "solo40-on/logs_ns3/finished.txt": {
+      "bytes": 4,
+      "sha256": "927580bf287560d4a26a5d6e129f91ffa9cb63031b1a8c772be6ec584e65e82b"
+    },
+    "solo40-on/logs_ns3/orbit_probe.csv": {
+      "bytes": 14623,
+      "sha256": "fb150fc208d7d333a91e6570baa9521d95675c32d3c2c24d8ea453b82a0f9d32"
+    },
+    "solo40-on/logs_ns3/tcp_flow_0_cwnd.csv": {
+      "bytes": 1695683,
+      "sha256": "5eaeeecf6bdf6cea63fa98179e103c62ec0623b5194ebb3b9d4e8f2b6a7bef0f"
+    },
+    "solo40-on/logs_ns3/tcp_flow_0_progress.csv": {
+      "bytes": 3215465,
+      "sha256": "984d6275051c6ccf0f070cc8699f57cd13bd36d7f20c91f104daba81939e0cfb"
+    },
+    "solo40-on/logs_ns3/tcp_flow_0_rtt.csv": {
+      "bytes": 3084029,
+      "sha256": "f39f17c79234f79b687845dbb7e202fe0618b63dc924de2afd8642f1bc2434cd"
+    },
+    "solo40-on/logs_ns3/tcp_flows.csv": {
+      "bytes": 73,
+      "sha256": "69295bd1c582de8a7d5c55c5b9c54bce5d1eb477c0dfc80dbdf15c4055a5f8f1"
+    },
+    "solo40-on/logs_ns3/tcp_flows.txt": {
+      "bytes": 336,
+      "sha256": "0ea7a667a0c89a887883b46ca72b2140a10c1e52db3e621b93bbc26393ad175e"
+    },
+    "solo40-on/logs_ns3/timing_results.csv": {
+      "bytes": 559,
+      "sha256": "88f3e35bf5e213a4a1ec528afac3eef75a3571f65e93979bb6983d792b582639"
+    },
+    "solo40-on/logs_ns3/timing_results.txt": {
+      "bytes": 909,
+      "sha256": "15160136440badf1446422a61babf978c44fbb3149b437f77697d6d090276b9e"
+    },
+    "solo40-on/manifest.json": {
+      "bytes": 420311,
+      "sha256": "5fee011b031a3d87d39b44fe536be0d039caabac09ab9c6d69100dd1e660d00a"
+    },
+    "solo40-on/schedule.csv": {
+      "bytes": 29,
+      "sha256": "e6cde3aa7716856e46d24c3833354df90407313ece13a5ffbd1b789fa4fea23c"
+    },
+    "rise140-off/config_ns3.properties": {
+      "bytes": 612,
+      "sha256": "d21adce9300e18c904323482e5c46df145840f692c70f353e5922a437734aae7"
+    },
+    "rise140-off/console.txt": {
+      "bytes": 5871,
+      "sha256": "35838e7385e94eeaf4f922c0c59fce7ee9f8c14eaff808bd95dfc4de4c85474a"
+    },
+    "rise140-off/forecast.txt": {
+      "bytes": 74,
+      "sha256": "1544d8ec10a9c46380ceb2efaf3e4a8f82411fcc4b843366b17fd286e1915b17"
+    },
+    "rise140-off/logs_ns3/bbr_app_rx_node_1585.csv": {
+      "bytes": 29346,
+      "sha256": "feeae2b74942ef31094a42a50b059e1fccb569724a73aaf37029fadae9e96e4e"
+    },
+    "rise140-off/logs_ns3/bbr_coverage.csv": {
+      "bytes": 1398438,
+      "sha256": "7785a349bbcd58d321430e5454d4e7193dfc4ed7766e00af84b503fa6bafef9c"
+    },
+    "rise140-off/logs_ns3/bbr_drops.csv": {
+      "bytes": 638135,
+      "sha256": "791b6319b52c0943aa4d18792773df8683162a88a2ca8891a5542a6ebe3c73ae"
+    },
+    "rise140-off/logs_ns3/bbr_queue_bins.csv": {
+      "bytes": 510862,
+      "sha256": "45d28167c9f42e30d5b51783f80b049f19bceba0123567e1d2d6736e474c5f77"
+    },
+    "rise140-off/logs_ns3/bbr_queue_pending.csv": {
+      "bytes": 133,
+      "sha256": "26213eabea454a12b8bedfcfe921d3bd32ef5be132ef1143b4be4fa4fb87ed06"
+    },
+    "rise140-off/logs_ns3/bbr_state.csv": {
+      "bytes": 72572,
+      "sha256": "5f4264f72aa2c97deabeb8d9beee8fbefc4f57d18da641f41e504dbe11f46bb4"
+    },
+    "rise140-off/logs_ns3/finished.txt": {
+      "bytes": 4,
+      "sha256": "927580bf287560d4a26a5d6e129f91ffa9cb63031b1a8c772be6ec584e65e82b"
+    },
+    "rise140-off/logs_ns3/orbit_probe.csv": {
+      "bytes": 36285,
+      "sha256": "92f843df35ab5f7553f9e5b3edbd2992cc1aa1ace5113f30155877fe4cab1536"
+    },
+    "rise140-off/logs_ns3/tcp_flow_0_cwnd.csv": {
+      "bytes": 1560172,
+      "sha256": "6d52f04e1995e962b7a8bffce30034c120cb4fe7f0d023c0ec6f5ebbde1fd7fd"
+    },
+    "rise140-off/logs_ns3/tcp_flow_0_progress.csv": {
+      "bytes": 2909487,
+      "sha256": "084d3b5422587b5a3827d18c9ad703e4674153d95fb5ec4abb62121c7849d429"
+    },
+    "rise140-off/logs_ns3/tcp_flow_0_rtt.csv": {
+      "bytes": 2805071,
+      "sha256": "7937717f095b16ffe27a83c57af30fd1cc61157f715d18decb69dcfc71ce3e9b"
+    },
+    "rise140-off/logs_ns3/tcp_flows.csv": {
+      "bytes": 85,
+      "sha256": "1dcf41fc20e41991dba178ea87b92616dbabf58b714666e90e842ed508753aa4"
+    },
+    "rise140-off/logs_ns3/tcp_flows.txt": {
+      "bytes": 336,
+      "sha256": "adddd3500d7e0472f04b9b383a1abf3ee473cafb45902809d301bdd76f89406b"
+    },
+    "rise140-off/logs_ns3/timing_results.csv": {
+      "bytes": 563,
+      "sha256": "fff4e1e18942c58b55e59ded16ff243462d75512fd67dc6a7afe2518081ade45"
+    },
+    "rise140-off/logs_ns3/timing_results.txt": {
+      "bytes": 909,
+      "sha256": "3088ea26f9397b5d56a498a977f32fdb509c6203f89390e4d161142d8ecbf22a"
+    },
+    "rise140-off/manifest.json": {
+      "bytes": 420740,
+      "sha256": "fec386ed7ef465e710ed962937e09a54e1d9eecf17172521164e5552d5170a0f"
+    },
+    "rise140-off/schedule.csv": {
+      "bytes": 40,
+      "sha256": "9442a582acbac4df93d6ad13cfeb49305a1bff4c272c7393fd4071c770c43d86"
+    },
+    "rise140-on/config_ns3.properties": {
+      "bytes": 612,
+      "sha256": "d21adce9300e18c904323482e5c46df145840f692c70f353e5922a437734aae7"
+    },
+    "rise140-on/console.txt": {
+      "bytes": 5865,
+      "sha256": "267ac9683185e00c1599130972f0ca1e7f5e81fde34e5e3ed94874a5a30e35dd"
+    },
+    "rise140-on/forecast.txt": {
+      "bytes": 74,
+      "sha256": "1544d8ec10a9c46380ceb2efaf3e4a8f82411fcc4b843366b17fd286e1915b17"
+    },
+    "rise140-on/logs_ns3/bbr_app_rx_node_1585.csv": {
+      "bytes": 29346,
+      "sha256": "feeae2b74942ef31094a42a50b059e1fccb569724a73aaf37029fadae9e96e4e"
+    },
+    "rise140-on/logs_ns3/bbr_coverage.csv": {
+      "bytes": 1398438,
+      "sha256": "7785a349bbcd58d321430e5454d4e7193dfc4ed7766e00af84b503fa6bafef9c"
+    },
+    "rise140-on/logs_ns3/bbr_drops.csv": {
+      "bytes": 638135,
+      "sha256": "791b6319b52c0943aa4d18792773df8683162a88a2ca8891a5542a6ebe3c73ae"
+    },
+    "rise140-on/logs_ns3/bbr_queue_bins.csv": {
+      "bytes": 510862,
+      "sha256": "45d28167c9f42e30d5b51783f80b049f19bceba0123567e1d2d6736e474c5f77"
+    },
+    "rise140-on/logs_ns3/bbr_queue_pending.csv": {
+      "bytes": 133,
+      "sha256": "26213eabea454a12b8bedfcfe921d3bd32ef5be132ef1143b4be4fa4fb87ed06"
+    },
+    "rise140-on/logs_ns3/bbr_state.csv": {
+      "bytes": 72572,
+      "sha256": "5f4264f72aa2c97deabeb8d9beee8fbefc4f57d18da641f41e504dbe11f46bb4"
+    },
+    "rise140-on/logs_ns3/finished.txt": {
+      "bytes": 4,
+      "sha256": "927580bf287560d4a26a5d6e129f91ffa9cb63031b1a8c772be6ec584e65e82b"
+    },
+    "rise140-on/logs_ns3/orbit_probe.csv": {
+      "bytes": 44592,
+      "sha256": "f26c99e2ca32d170221e60658d29eee4edc290e5c81918f475d331a9616c8705"
+    },
+    "rise140-on/logs_ns3/tcp_flow_0_cwnd.csv": {
+      "bytes": 1560172,
+      "sha256": "6d52f04e1995e962b7a8bffce30034c120cb4fe7f0d023c0ec6f5ebbde1fd7fd"
+    },
+    "rise140-on/logs_ns3/tcp_flow_0_progress.csv": {
+      "bytes": 2909487,
+      "sha256": "084d3b5422587b5a3827d18c9ad703e4674153d95fb5ec4abb62121c7849d429"
+    },
+    "rise140-on/logs_ns3/tcp_flow_0_rtt.csv": {
+      "bytes": 2805071,
+      "sha256": "7937717f095b16ffe27a83c57af30fd1cc61157f715d18decb69dcfc71ce3e9b"
+    },
+    "rise140-on/logs_ns3/tcp_flows.csv": {
+      "bytes": 85,
+      "sha256": "1dcf41fc20e41991dba178ea87b92616dbabf58b714666e90e842ed508753aa4"
+    },
+    "rise140-on/logs_ns3/tcp_flows.txt": {
+      "bytes": 336,
+      "sha256": "adddd3500d7e0472f04b9b383a1abf3ee473cafb45902809d301bdd76f89406b"
+    },
+    "rise140-on/logs_ns3/timing_results.csv": {
+      "bytes": 561,
+      "sha256": "f6e4cc696edc72c0b1edb7ef6512568bf495f5c3685a16ca5ff6390a1d2272bc"
+    },
+    "rise140-on/logs_ns3/timing_results.txt": {
+      "bytes": 909,
+      "sha256": "85edcd63ac5cdeee99f63eb9b3b5f977c31de270113bafe6d0474cd8dd8eade1"
+    },
+    "rise140-on/manifest.json": {
+      "bytes": 420734,
+      "sha256": "b39bb4aa8e1471b34989b5735a0145e69a011d1785389edb88515610a6d0b725"
+    },
+    "rise140-on/schedule.csv": {
+      "bytes": 40,
+      "sha256": "9442a582acbac4df93d6ad13cfeb49305a1bff4c272c7393fd4071c770c43d86"
+    }
+  },
+  "scope": "Completed text logs/settings/manifests only; no ns-3 tree, binaries or generated state. Archive bytes identify this artifact; byte-identical reruns or deterministic gzip are not claimed."
+}

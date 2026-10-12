@@ -1,0 +1,28 @@
+{
+  "container_name": "/lab1-orbit-probe-20261012",
+  "image_config_id": "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+  "declared_config_image": "ghcr.io/yeonjong21/cs30401-lab1@sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+  "nano_cpus": 2000000000,
+  "memory_bytes": 4294967296,
+  "mounts": [
+    {
+      "Type": "bind",
+      "Source": "C:\\Users\\Newbiedev\\Desktop\\\udceb\uaf55\udceb\ubf1eCS30401\\CS30401-Lab1",
+      "Destination": "/work",
+      "Mode": "",
+      "RW": true,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "volume",
+      "Name": "cs30401-orbit-probe-ns3-20261012",
+      "Source": "/var/lib/docker/volumes/cs30401-orbit-probe-ns3-20261012/_data",
+      "Destination": "/home/ubuntu/ns-3.48",
+      "Driver": "local",
+      "Mode": "z",
+      "RW": true,
+      "Propagation": ""
+    }
+  ],
+  "started_at": "2026-10-12T11:01:59.834486456Z"
+}

@@ -1,0 +1,151 @@
+{
+  "analyzer_sha256": "eb71783c409f349e301687ede75b4b08ce22df95b46c4e789b1490a2f6a506e5",
+  "cases": [
+    "near-on",
+    "near-off",
+    "stable-on",
+    "stable-off",
+    "near-on-unobserved",
+    "near-forecast"
+  ],
+  "comparison": {
+    "passive_observation": {
+      "left": "near-on",
+      "right": "near-on-unobserved",
+      "all_measurements_byte_identical": true,
+      "checks": [
+        {
+          "file": "study_app_rx_node_1585_port_1024.csv",
+          "left_sha256": "a4677cb8cba9b4170ec0ce994c6fc5a9d701f1745c4cb76023eb366654572efd",
+          "right_sha256": "a4677cb8cba9b4170ec0ce994c6fc5a9d701f1745c4cb76023eb366654572efd",
+          "equal": true
+        },
+        {
+          "file": "study_drop_coverage.csv",
+          "left_sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499",
+          "right_sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499",
+          "equal": true
+        },
+        {
+          "file": "study_drops.csv",
+          "left_sha256": "5a34164a5edd41f629aaf8f3fe18b51cd365584137e5546097acc378fc447304",
+          "right_sha256": "5a34164a5edd41f629aaf8f3fe18b51cd365584137e5546097acc378fc447304",
+          "equal": true
+        },
+        {
+          "file": "study_rx_node_1585_port_1024.csv",
+          "left_sha256": "6400f0e66739ff9ad86a545120f022ffd53de206c3a41cc7040660840c091df6",
+          "right_sha256": "6400f0e66739ff9ad86a545120f022ffd53de206c3a41cc7040660840c091df6",
+          "equal": true
+        },
+        {
+          "file": "tcp_flow_0_cwnd.csv",
+          "left_sha256": "8ac916277d8feb4ed4bf48d051151e1c675f975f73897c2ef4f387dce9538e2a",
+          "right_sha256": "8ac916277d8feb4ed4bf48d051151e1c675f975f73897c2ef4f387dce9538e2a",
+          "equal": true
+        },
+        {
+          "file": "tcp_flow_0_progress.csv",
+          "left_sha256": "e6250444a1e6cfa790852dba6ead1db00ba9ba17b8d4fa4a9572b8f84ead08e3",
+          "right_sha256": "e6250444a1e6cfa790852dba6ead1db00ba9ba17b8d4fa4a9572b8f84ead08e3",
+          "equal": true
+        },
+        {
+          "file": "tcp_flow_0_rtt.csv",
+          "left_sha256": "acbf56d6730dc7c4851392bc57c084bf06c910c988d4788263a1e9e8a8eda08b",
+          "right_sha256": "acbf56d6730dc7c4851392bc57c084bf06c910c988d4788263a1e9e8a8eda08b",
+          "equal": true
+        },
+        {
+          "file": "tcp_flow_0_study_events.csv",
+          "left_sha256": "9ae3dc325e47d38c26759fc4611218476d6e84bee0a1133277380e50f08e2146",
+          "right_sha256": "9ae3dc325e47d38c26759fc4611218476d6e84bee0a1133277380e50f08e2146",
+          "equal": true
+        },
+        {
+          "file": "tcp_flow_0_study_packets.csv",
+          "left_sha256": "1637d26f0f21652eb30113c86f9bd9814449518531a520203cc9a117a0a1573c",
+          "right_sha256": "1637d26f0f21652eb30113c86f9bd9814449518531a520203cc9a117a0a1573c",
+          "equal": true
+        },
+        {
+          "file": "tcp_flows.csv",
+          "left_sha256": "6652f3ac700fcab0565474df4951f76599f9a8f4c9e67ec8f9ab40aaa60cb05a",
+          "right_sha256": "6652f3ac700fcab0565474df4951f76599f9a8f4c9e67ec8f9ab40aaa60cb05a",
+          "equal": true
+        }
+      ],
+      "limits": "Timing and new observer files excluded. Case source/binary identities remain separate. One-condition equality is not universal behavior equivalence."
+    },
+    "forecast_trajectory": {
+      "left": "near-on",
+      "right": "near-forecast",
+      "all_measurements_byte_identical": true,
+      "checks": [
+        {
+          "file": "study_app_rx_node_1585_port_1024.csv",
+          "left_sha256": "a4677cb8cba9b4170ec0ce994c6fc5a9d701f1745c4cb76023eb366654572efd",
+          "right_sha256": "a4677cb8cba9b4170ec0ce994c6fc5a9d701f1745c4cb76023eb366654572efd",
+          "equal": true
+        },
+        {
+          "file": "study_drop_coverage.csv",
+          "left_sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499",
+          "right_sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499",
+          "equal": true
+        },
+        {
+          "file": "study_drops.csv",
+          "left_sha256": "5a34164a5edd41f629aaf8f3fe18b51cd365584137e5546097acc378fc447304",
+          "right_sha256": "5a34164a5edd41f629aaf8f3fe18b51cd365584137e5546097acc378fc447304",
+          "equal": true
+        },
+        {
+          "file": "study_rx_node_1585_port_1024.csv",
+          "left_sha256": "6400f0e66739ff9ad86a545120f022ffd53de206c3a41cc7040660840c091df6",
+          "right_sha256": "6400f0e66739ff9ad86a545120f022ffd53de206c3a41cc7040660840c091df6",
+          "equal": true
+        },
+        {
+          "file": "tcp_flow_0_cwnd.csv",
+          "left_sha256": "8ac916277d8feb4ed4bf48d051151e1c675f975f73897c2ef4f387dce9538e2a",
+          "right_sha256": "8ac916277d8feb4ed4bf48d051151e1c675f975f73897c2ef4f387dce9538e2a",
+          "equal": true
+        },
+        {
+          "file": "tcp_flow_0_progress.csv",
+          "left_sha256": "e6250444a1e6cfa790852dba6ead1db00ba9ba17b8d4fa4a9572b8f84ead08e3",
+          "right_sha256": "e6250444a1e6cfa790852dba6ead1db00ba9ba17b8d4fa4a9572b8f84ead08e3",
+          "equal": true
+        },
+        {
+          "file": "tcp_flow_0_rtt.csv",
+          "left_sha256": "acbf56d6730dc7c4851392bc57c084bf06c910c988d4788263a1e9e8a8eda08b",
+          "right_sha256": "acbf56d6730dc7c4851392bc57c084bf06c910c988d4788263a1e9e8a8eda08b",
+          "equal": true
+        },
+        {
+          "file": "tcp_flow_0_study_events.csv",
+          "left_sha256": "9ae3dc325e47d38c26759fc4611218476d6e84bee0a1133277380e50f08e2146",
+          "right_sha256": "9ae3dc325e47d38c26759fc4611218476d6e84bee0a1133277380e50f08e2146",
+          "equal": true
+        },
+        {
+          "file": "tcp_flow_0_study_packets.csv",
+          "left_sha256": "1637d26f0f21652eb30113c86f9bd9814449518531a520203cc9a117a0a1573c",
+          "right_sha256": "1637d26f0f21652eb30113c86f9bd9814449518531a520203cc9a117a0a1573c",
+          "equal": true
+        },
+        {
+          "file": "tcp_flows.csv",
+          "left_sha256": "6652f3ac700fcab0565474df4951f76599f9a8f4c9e67ec8f9ab40aaa60cb05a",
+          "right_sha256": "6652f3ac700fcab0565474df4951f76599f9a8f4c9e67ec8f9ab40aaa60cb05a",
+          "equal": true
+        }
+      ],
+      "limits": "Timing and new observer files excluded. Case source/binary identities remain separate. One-condition equality is not universal behavior equivalence."
+    }
+  },
+  "measurements": "Ordered application completion and directly observed drops/retransmissions; queue mean/max only, no p95 inferred from bins.",
+  "limits": "Declared deterministic conditions; no independent replay/seed replications here."
+}

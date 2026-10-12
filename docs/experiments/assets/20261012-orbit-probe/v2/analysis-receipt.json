@@ -1,0 +1,89 @@
+{
+  "inputs": [
+    {
+      "run": "/tmp/orbit-probe-v2-repair/v2-rise140-off",
+      "manifest_sha256": "924f0db7cbea9c8a5dccaad3fa3a3b880db203029d71c9df1207e903668d500c"
+    },
+    {
+      "run": "/tmp/orbit-probe/v2-rise140-on",
+      "manifest_sha256": "211828f8143e4dfbbdf646b4d60abe1182ce206ae37720a9dd9b058500eff07d"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "cases/v2-rise140-off/config_ns3.properties",
+      "bytes": 612,
+      "sha256": "d21adce9300e18c904323482e5c46df145840f692c70f353e5922a437734aae7"
+    },
+    {
+      "path": "cases/v2-rise140-off/forecast.txt",
+      "bytes": 26,
+      "sha256": "2019783036ae5ac9073684621c730603ba05a88f2ca0e68bfa04a194d0c897c8"
+    },
+    {
+      "path": "cases/v2-rise140-off/manifest.json",
+      "bytes": 420673,
+      "sha256": "924f0db7cbea9c8a5dccaad3fa3a3b880db203029d71c9df1207e903668d500c"
+    },
+    {
+      "path": "cases/v2-rise140-off/orbit_probe.csv",
+      "bytes": 38899,
+      "sha256": "b3355d24ff5777469ae7880f3d3502d753f85ca9444f856b7df2531aaed47f11"
+    },
+    {
+      "path": "cases/v2-rise140-off/schedule.csv",
+      "bytes": 40,
+      "sha256": "9442a582acbac4df93d6ad13cfeb49305a1bff4c272c7393fd4071c770c43d86"
+    },
+    {
+      "path": "cases/v2-rise140-off/summary.json",
+      "bytes": 10970,
+      "sha256": "a845b34a3dc10abf023c1b9022f5ff8baef6f89bcdd00543f94d35d02084ecf4"
+    },
+    {
+      "path": "cases/v2-rise140-on/config_ns3.properties",
+      "bytes": 612,
+      "sha256": "d21adce9300e18c904323482e5c46df145840f692c70f353e5922a437734aae7"
+    },
+    {
+      "path": "cases/v2-rise140-on/forecast.txt",
+      "bytes": 26,
+      "sha256": "2019783036ae5ac9073684621c730603ba05a88f2ca0e68bfa04a194d0c897c8"
+    },
+    {
+      "path": "cases/v2-rise140-on/manifest.json",
+      "bytes": 420465,
+      "sha256": "211828f8143e4dfbbdf646b4d60abe1182ce206ae37720a9dd9b058500eff07d"
+    },
+    {
+      "path": "cases/v2-rise140-on/orbit_probe.csv",
+      "bytes": 24893,
+      "sha256": "3e538bdbce05899a154f0ab4af6c9d9b95e6db7f0dcf77837505c6fde8386126"
+    },
+    {
+      "path": "cases/v2-rise140-on/schedule.csv",
+      "bytes": 40,
+      "sha256": "9442a582acbac4df93d6ad13cfeb49305a1bff4c272c7393fd4071c770c43d86"
+    },
+    {
+      "path": "cases/v2-rise140-on/summary.json",
+      "bytes": 11893,
+      "sha256": "b9f080f8b7ff5e87b622f189ca477b46c2b61bf03dd7778e217cd9da84ffcd85"
+    },
+    {
+      "path": "device-queues.csv",
+      "bytes": 11734,
+      "sha256": "dbc689eddf3ee17456133c2724f25c9db0f7392684ff8ccf77b75e356068df21"
+    },
+    {
+      "path": "summary.json",
+      "bytes": 26953,
+      "sha256": "c1b8c782a3d097fc2cd90269355e5e98049bfded45b2fe2345d841cfe050ec49"
+    },
+    {
+      "path": "windows.csv",
+      "bytes": 2662,
+      "sha256": "b98449f68ba964c34074878f13bd17a15e0dbccb9b4d45df7a4bc2b2ef21d8a9"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "matched_ns3_binary_libraries_source_and_inputs": true,
+  "actual_v2_trace_headers_verified": true,
+  "normalized_commands_equal": true,
+  "matched_fields": [
+    "patch_sha256",
+    "installed_diff_sha256",
+    "runtime_files",
+    "config_sha256",
+    "schedule_sha256",
+    "state_static_sha256",
+    "dynamic_state_sha256",
+    "forecast_source_sha256",
+    "forecast_sha256",
+    "sim_seconds",
+    "rate_mbps",
+    "queue_packets",
+    "seed",
+    "windows"
+  ],
+  "manifest_sha256": [
+    "924f0db7cbea9c8a5dccaad3fa3a3b880db203029d71c9df1207e903668d500c",
+    "211828f8143e4dfbbdf646b4d60abe1182ce206ae37720a9dd9b058500eff07d"
+  ],
+  "runner_sha256": [
+    "a138f8d58f1523f11ed4d4de522edac331e1c0e5cd22de880aef2bf5f4b4385b",
+    "ec6ec2edf62b7e4be8d89211e5c925b9027de352084dad6590d668ee49222417"
+  ],
+  "runner_difference": "OFF uses a pending-build/runtime-before-and-after guard; ON used the preserved pre-guard runner. Commands and actual NS3 binaries/libraries/patch/inputs match; both V2 trace headers verified. Invalid earlier OFF excluded separately.",
+  "tool_sha256": "5435e49476d847339d66706230eee554de2e9aa25ee845ad993b29ba62876862"
+}

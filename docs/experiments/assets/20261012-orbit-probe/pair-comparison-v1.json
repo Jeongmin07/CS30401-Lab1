@@ -1,0 +1,181 @@
+{
+  "tool_sha256": "632467d4c3501aac748457577dc54879cce2c0aeb0864e6aba2831565697f75a",
+  "pairs": [
+    {
+      "family": "solo40",
+      "matched_fields": [
+        "runner_sha256",
+        "patch_sha256",
+        "installed_diff_sha256",
+        "runtime_files",
+        "config_sha256",
+        "schedule_sha256",
+        "state_static_sha256",
+        "dynamic_state_sha256",
+        "forecast_source_sha256",
+        "forecast_sha256",
+        "sim_seconds",
+        "rate_mbps",
+        "queue_packets",
+        "seed",
+        "windows"
+      ],
+      "all_measured_csv_equal": true,
+      "checks": [
+        {
+          "path": "logs_ns3/bbr_app_rx_node_1585.csv",
+          "off_sha256": "e132c83e1fb52ad6feb6c093e391259deac1f1f0d0f80b1419beb11a0cc9708a",
+          "on_sha256": "e132c83e1fb52ad6feb6c093e391259deac1f1f0d0f80b1419beb11a0cc9708a",
+          "equal": true
+        },
+        {
+          "path": "logs_ns3/bbr_coverage.csv",
+          "off_sha256": "7785a349bbcd58d321430e5454d4e7193dfc4ed7766e00af84b503fa6bafef9c",
+          "on_sha256": "7785a349bbcd58d321430e5454d4e7193dfc4ed7766e00af84b503fa6bafef9c",
+          "equal": true
+        },
+        {
+          "path": "logs_ns3/bbr_drops.csv",
+          "off_sha256": "eda0e277ac3c325716e4c9eea5c82ca3b4fd2eeb67fcc23ea1b06b9af713f3c7",
+          "on_sha256": "eda0e277ac3c325716e4c9eea5c82ca3b4fd2eeb67fcc23ea1b06b9af713f3c7",
+          "equal": true
+        },
+        {
+          "path": "logs_ns3/bbr_queue_bins.csv",
+          "off_sha256": "adb19748260b37fcb3bf7d8c111d60114504a040cf1a8db4c9aeb3f5269eeb8e",
+          "on_sha256": "adb19748260b37fcb3bf7d8c111d60114504a040cf1a8db4c9aeb3f5269eeb8e",
+          "equal": true
+        },
+        {
+          "path": "logs_ns3/bbr_queue_pending.csv",
+          "off_sha256": "bd912a74a0dee1b032ecbeac1820c6c6d343cbec86b2fdcadf1b67eb243ce335",
+          "on_sha256": "bd912a74a0dee1b032ecbeac1820c6c6d343cbec86b2fdcadf1b67eb243ce335",
+          "equal": true
+        },
+        {
+          "path": "logs_ns3/bbr_state.csv",
+          "off_sha256": "e8f22b6acd98596386af5466926f78cea3f8136a0945f5834c9d81515988ab4b",
+          "on_sha256": "e8f22b6acd98596386af5466926f78cea3f8136a0945f5834c9d81515988ab4b",
+          "equal": true
+        },
+        {
+          "path": "logs_ns3/tcp_flow_0_cwnd.csv",
+          "off_sha256": "5eaeeecf6bdf6cea63fa98179e103c62ec0623b5194ebb3b9d4e8f2b6a7bef0f",
+          "on_sha256": "5eaeeecf6bdf6cea63fa98179e103c62ec0623b5194ebb3b9d4e8f2b6a7bef0f",
+          "equal": true
+        },
+        {
+          "path": "logs_ns3/tcp_flow_0_progress.csv",
+          "off_sha256": "984d6275051c6ccf0f070cc8699f57cd13bd36d7f20c91f104daba81939e0cfb",
+          "on_sha256": "984d6275051c6ccf0f070cc8699f57cd13bd36d7f20c91f104daba81939e0cfb",
+          "equal": true
+        },
+        {
+          "path": "logs_ns3/tcp_flow_0_rtt.csv",
+          "off_sha256": "f39f17c79234f79b687845dbb7e202fe0618b63dc924de2afd8642f1bc2434cd",
+          "on_sha256": "f39f17c79234f79b687845dbb7e202fe0618b63dc924de2afd8642f1bc2434cd",
+          "equal": true
+        },
+        {
+          "path": "logs_ns3/tcp_flows.csv",
+          "off_sha256": "69295bd1c582de8a7d5c55c5b9c54bce5d1eb477c0dfc80dbdf15c4055a5f8f1",
+          "on_sha256": "69295bd1c582de8a7d5c55c5b9c54bce5d1eb477c0dfc80dbdf15c4055a5f8f1",
+          "equal": true
+        }
+      ],
+      "execution_manifest_sha256": [
+        "eca05476427846e5fe07bf1ea0a45184902a5c78afdc125c857c1434c88b851f",
+        "5fee011b031a3d87d39b44fe536be0d039caabac09ab9c6d69100dd1e660d00a"
+      ],
+      "scope": "Timing and controller decision CSVs excluded from behavioral equality; all raw output SHA/size independently checked."
+    },
+    {
+      "family": "rise140",
+      "matched_fields": [
+        "runner_sha256",
+        "patch_sha256",
+        "installed_diff_sha256",
+        "runtime_files",
+        "config_sha256",
+        "schedule_sha256",
+        "state_static_sha256",
+        "dynamic_state_sha256",
+        "forecast_source_sha256",
+        "forecast_sha256",
+        "sim_seconds",
+        "rate_mbps",
+        "queue_packets",
+        "seed",
+        "windows"
+      ],
+      "all_measured_csv_equal": true,
+      "checks": [
+        {
+          "path": "logs_ns3/bbr_app_rx_node_1585.csv",
+          "off_sha256": "feeae2b74942ef31094a42a50b059e1fccb569724a73aaf37029fadae9e96e4e",
+          "on_sha256": "feeae2b74942ef31094a42a50b059e1fccb569724a73aaf37029fadae9e96e4e",
+          "equal": true
+        },
+        {
+          "path": "logs_ns3/bbr_coverage.csv",
+          "off_sha256": "7785a349bbcd58d321430e5454d4e7193dfc4ed7766e00af84b503fa6bafef9c",
+          "on_sha256": "7785a349bbcd58d321430e5454d4e7193dfc4ed7766e00af84b503fa6bafef9c",
+          "equal": true
+        },
+        {
+          "path": "logs_ns3/bbr_drops.csv",
+          "off_sha256": "791b6319b52c0943aa4d18792773df8683162a88a2ca8891a5542a6ebe3c73ae",
+          "on_sha256": "791b6319b52c0943aa4d18792773df8683162a88a2ca8891a5542a6ebe3c73ae",
+          "equal": true
+        },
+        {
+          "path": "logs_ns3/bbr_queue_bins.csv",
+          "off_sha256": "45d28167c9f42e30d5b51783f80b049f19bceba0123567e1d2d6736e474c5f77",
+          "on_sha256": "45d28167c9f42e30d5b51783f80b049f19bceba0123567e1d2d6736e474c5f77",
+          "equal": true
+        },
+        {
+          "path": "logs_ns3/bbr_queue_pending.csv",
+          "off_sha256": "26213eabea454a12b8bedfcfe921d3bd32ef5be132ef1143b4be4fa4fb87ed06",
+          "on_sha256": "26213eabea454a12b8bedfcfe921d3bd32ef5be132ef1143b4be4fa4fb87ed06",
+          "equal": true
+        },
+        {
+          "path": "logs_ns3/bbr_state.csv",
+          "off_sha256": "5f4264f72aa2c97deabeb8d9beee8fbefc4f57d18da641f41e504dbe11f46bb4",
+          "on_sha256": "5f4264f72aa2c97deabeb8d9beee8fbefc4f57d18da641f41e504dbe11f46bb4",
+          "equal": true
+        },
+        {
+          "path": "logs_ns3/tcp_flow_0_cwnd.csv",
+          "off_sha256": "6d52f04e1995e962b7a8bffce30034c120cb4fe7f0d023c0ec6f5ebbde1fd7fd",
+          "on_sha256": "6d52f04e1995e962b7a8bffce30034c120cb4fe7f0d023c0ec6f5ebbde1fd7fd",
+          "equal": true
+        },
+        {
+          "path": "logs_ns3/tcp_flow_0_progress.csv",
+          "off_sha256": "084d3b5422587b5a3827d18c9ad703e4674153d95fb5ec4abb62121c7849d429",
+          "on_sha256": "084d3b5422587b5a3827d18c9ad703e4674153d95fb5ec4abb62121c7849d429",
+          "equal": true
+        },
+        {
+          "path": "logs_ns3/tcp_flow_0_rtt.csv",
+          "off_sha256": "7937717f095b16ffe27a83c57af30fd1cc61157f715d18decb69dcfc71ce3e9b",
+          "on_sha256": "7937717f095b16ffe27a83c57af30fd1cc61157f715d18decb69dcfc71ce3e9b",
+          "equal": true
+        },
+        {
+          "path": "logs_ns3/tcp_flows.csv",
+          "off_sha256": "1dcf41fc20e41991dba178ea87b92616dbabf58b714666e90e842ed508753aa4",
+          "on_sha256": "1dcf41fc20e41991dba178ea87b92616dbabf58b714666e90e842ed508753aa4",
+          "equal": true
+        }
+      ],
+      "execution_manifest_sha256": [
+        "fec386ed7ef465e710ed962937e09a54e1d9eecf17172521164e5552d5170a0f",
+        "b39bb4aa8e1471b34989b5735a0145e69a011d1785389edb88515610a6d0b725"
+      ],
+      "scope": "Timing and controller decision CSVs excluded from behavioral equality; all raw output SHA/size independently checked."
+    }
+  ]
+}

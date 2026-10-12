@@ -2,8 +2,8 @@
   "schema_version": 1,
   "tool": {
     "path": "/work/code/orbit-order/compare.py",
-    "bytes": 5700,
-    "sha256": "11c7c91795929808a97897f3c49f3e0aae3fde41efc75a4e7d90199f1bbc567d"
+    "bytes": 7229,
+    "sha256": "907fefaa6f01ec85a4dac075a30dbdd2b17506a07ee81ceade8fd07aea60e968"
   },
   "inputs": [
     {
@@ -384,7 +384,7 @@
   ],
   "limits": [
     "Historical comparison covers exactly eight original/legacy CSV files for one condition.",
-    "All pairs use the same source and runtime. Holds are checked against actual socket events and sender transmissions.",
+    "All pairs use the same source, runtime, network config and simulation CLI/flow schedule apart from run directory and declared hold policy. Holds are checked against actual socket events and sender transmissions.",
     "No counter directly identifies send opportunities blocked by the gate. Baseline TX in the same window is contextual evidence only.",
     "SRTT is not direct queueing delay; deterministic cases are not independent repetitions."
   ]

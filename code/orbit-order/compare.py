@@ -43,8 +43,9 @@ def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--export', type=Path, required=True)
     p.add_argument('--historical', type=Path, required=True)
+    p.add_argument('--out', type=Path)
     a = p.parse_args()
-    out = a.export / 'comparison.json'
+    out = a.out or a.export / 'comparison.json'
     require(not out.exists(), 'Refusing to overwrite comparison')
     names = ['leo10-base', 'leo10-hold1', 'leo10-hold2', 'loss-first-base', 'loss-first-hold']
     data, manifests, inputs = {}, {}, []
@@ -60,6 +61,22 @@ def main():
         for key in ['ns3_head', 'patch_sha256', 'installed_diff_sha256', 'runtime_files',
                     'state_static_sha256', 'dynamic_input_sha256', 'forecast_source_sha256', 'runner_sha256']:
             require(bm[key] == nm[key], f'Unmatched {key}: {base}, {policy}')
+        bp, np = a.export / 'cases' / base, a.export / 'cases' / policy
+        require((bp / 'config_ns3.properties').read_bytes() == (np / 'config_ns3.properties').read_bytes(),
+                f'Unmatched network configuration: {base}, {policy}')
+        strip_command = lambda m: [x for x in m['command'] if not x.startswith(('--run_dir=', '--parameters='))]
+        require(strip_command(bm) == strip_command(nm), f'Unmatched simulation CLI: {base}, {policy}')
+        if (bp / 'schedule.csv').exists():
+            bs = list(csv.reader((bp / 'schedule.csv').open(newline='')))
+            ns = list(csv.reader((np / 'schedule.csv').open(newline='')))
+            require(len(bs) == len(ns) == 1 and bs[0][:5] + bs[0][6:] == ns[0][:5] + ns[0][6:],
+                    f'Unmatched scheduled flow endpoints, size, or start: {base}, {policy}')
+            require(bs[0][5] == bm['additional_parameters'] and ns[0][5] == nm['additional_parameters'],
+                    f'Schedule policy differs from manifest: {base}, {policy}')
+        else:
+            actual_parameters = lambda m: next((x.split('=', 1)[1] for x in m['command'] if x.startswith('--parameters=')), '')
+            require(actual_parameters(bm) == bm['additional_parameters'] and actual_parameters(nm) == nm['additional_parameters'],
+                    f'Micro CLI policy differs from manifest: {base}, {policy}')
         windows = n['controller']['requested_hold_windows_ns']
         tx_paths = {case: Path(next(x['path'] for x in data[case]['provenance']['analysis_inputs'] if x['kind'] == 'sender')) for case in (base, policy)}
         tx_counts = {case: tx_window_counts(path, windows) for case, path in tx_paths.items()}
@@ -91,7 +108,7 @@ def main():
         'historical_input': receipt(a.historical), 'historical_baseline_byte_matches': checks,
         'comparisons': comparisons,
         'limits': ['Historical comparison covers exactly eight original/legacy CSV files for one condition.',
-                   'All pairs use the same source and runtime. Holds are checked against actual socket events and sender transmissions.',
+                   'All pairs use the same source, runtime, network config and simulation CLI/flow schedule apart from run directory and declared hold policy. Holds are checked against actual socket events and sender transmissions.',
                    'No counter directly identifies send opportunities blocked by the gate. Baseline TX in the same window is contextual evidence only.',
                    'SRTT is not direct queueing delay; deterministic cases are not independent repetitions.']}, indent=2) + '\n')
     print(out)
