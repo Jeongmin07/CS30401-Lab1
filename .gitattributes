@@ -47,3 +47,5 @@ docs/experiments/assets/20261013-queue-pacing/**/*.txt -whitespace
 docs/experiments/assets/20261013-queue-backpressure/**/*.txt -whitespace
 code/queue-pacing/development-initial/*.txt -whitespace
 code/queue-backpressure/development-initial/*.txt -whitespace
+docs/experiments/assets/20261013-queue-pacing/**/*.log -whitespace
+docs/experiments/assets/20261013-queue-backpressure/**/*.log -whitespace
