@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "tag": "orbit-candidates-20261012",
+  "url": "https://github.com/Jeongmin07/CS30401-Lab1/releases/tag/orbit-candidates-20261012",
+  "is_prerelease": true,
+  "source_checkpoint": "6eb7fcd65322c8f62015f0a9d319fb4d551c7f16",
+  "verified_at_utc": "2026-10-12T11:38:58.292506Z",
+  "valid_simulations": 21,
+  "total_attempts": 22,
+  "performance_excluded_attempts": 1,
+  "compressed_bytes": 62770181.0,
+  "assets": [
+    {
+      "name": "orbit-bdp-20261012.tar.gz",
+      "bytes": 7743962,
+      "sha256": "7e284e9331b17a84c9df5d6206ba467626c7ac6778aebb45353bcbefb30b02db",
+      "github_digest": "sha256:7e284e9331b17a84c9df5d6206ba467626c7ac6778aebb45353bcbefb30b02db",
+      "github_asset_id": 633616053,
+      "url": "https://github.com/Jeongmin07/CS30401-Lab1/releases/download/orbit-candidates-20261012/orbit-bdp-20261012.tar.gz",
+      "size_and_sha_match": true
+    },
+    {
+      "name": "orbit-probe-v1-20261012.tar.gz",
+      "bytes": 11991776,
+      "sha256": "8fdac40bf18052157c470a20673578f8f4ae400cdd22778b84b0a33435b6c460",
+      "github_digest": "sha256:8fdac40bf18052157c470a20673578f8f4ae400cdd22778b84b0a33435b6c460",
+      "github_asset_id": 633616052,
+      "url": "https://github.com/Jeongmin07/CS30401-Lab1/releases/download/orbit-candidates-20261012/orbit-probe-v1-20261012.tar.gz",
+      "size_and_sha_match": true
+    },
+    {
+      "name": "orbit-probe-v2-20261012.tar.gz",
+      "bytes": 5617613,
+      "sha256": "22a3a6cc4a56f39f5674676eae761c22d59268c9629488931c1c0ba4aa028afd",
+      "github_digest": "sha256:22a3a6cc4a56f39f5674676eae761c22d59268c9629488931c1c0ba4aa028afd",
+      "github_asset_id": 633616049,
+      "url": "https://github.com/Jeongmin07/CS30401-Lab1/releases/download/orbit-candidates-20261012/orbit-probe-v2-20261012.tar.gz",
+      "size_and_sha_match": true
+    },
+    {
+      "name": "orbit-probe-excluded-build-race-20261012.tar.gz",
+      "bytes": 2807948,
+      "sha256": "bc547863b0984c3c4f8bf6c0a0884edfef61b064810322e59948c80fa4c00352",
+      "github_digest": "sha256:bc547863b0984c3c4f8bf6c0a0884edfef61b064810322e59948c80fa4c00352",
+      "github_asset_id": 633616056,
+      "url": "https://github.com/Jeongmin07/CS30401-Lab1/releases/download/orbit-candidates-20261012/orbit-probe-excluded-build-race-20261012.tar.gz",
+      "size_and_sha_match": true
+    },
+    {
+      "name": "orbit-hystart-20261012.tar.gz",
+      "bytes": 4381571,
+      "sha256": "752be45fb1ee1807cda5060a98bffa19769fdaf8312266a8ea7cf183d1f7c273",
+      "github_digest": "sha256:752be45fb1ee1807cda5060a98bffa19769fdaf8312266a8ea7cf183d1f7c273",
+      "github_asset_id": 633616054,
+      "url": "https://github.com/Jeongmin07/CS30401-Lab1/releases/download/orbit-candidates-20261012/orbit-hystart-20261012.tar.gz",
+      "size_and_sha_match": true
+    },
+    {
+      "name": "orbit-order-20261012.tar.gz",
+      "bytes": 30227311,
+      "sha256": "1470111cdb6c062aee064e8d9d1d80002955e9419341058b29cbe0c9b15bffd2",
+      "github_digest": "sha256:1470111cdb6c062aee064e8d9d1d80002955e9419341058b29cbe0c9b15bffd2",
+      "github_asset_id": 633616122,
+      "url": "https://github.com/Jeongmin07/CS30401-Lab1/releases/download/orbit-candidates-20261012/orbit-order-20261012.tar.gz",
+      "size_and_sha_match": true
+    }
+  ],
+  "verification": "Local archive SHA/size matches fresh GitHub API asset digest/size for all six assets. Archive members were independently streamed against each track inventory before upload.",
+  "limits": [
+    "No new download roundtrip was performed; GitHub-provided SHA256 digests were verified.",
+    "No independent whole-matrix replay or statistical repetitions.",
+    "Excluded build-race archive remains excluded from performance results."
+  ]
+}
