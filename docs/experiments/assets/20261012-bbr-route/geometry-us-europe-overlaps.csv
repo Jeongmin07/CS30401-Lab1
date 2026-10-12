@@ -1,0 +1,9 @@
+time_ns,group,both_reachable,shared_isl_edges,shared_isl_edge_count,shared_directed_egresses,shared_gsl_egresses
+0,newyork-london_vs_sandiego-paris,True,[],0,[],[]
+20000000000,newyork-london_vs_sandiego-paris,True,[],0,[],[]
+40000000000,newyork-london_vs_sandiego-paris,True,[],0,[],[]
+60000000000,newyork-london_vs_sandiego-paris,True,[],0,[],[]
+100000000000,newyork-london_vs_sandiego-paris,True,[],0,[],[]
+140000000000,newyork-london_vs_sandiego-paris,True,[],0,[],[]
+180000000000,newyork-london_vs_sandiego-paris,True,[],0,[],[]
+199900000000,newyork-london_vs_sandiego-paris,True,[],0,[],[]

@@ -89,3 +89,93 @@ Compact receipts are in
 `docs/experiments/assets/20261012-bbr-route/{path-probe.json,path-samples.csv,route-overlaps.csv,path-inputs.csv}`.
 The per-file inventory is about 208 kB and contains hashes and counts only,
 not raw forwarding entries. No additional topology or state was generated.
+
+## On-demand geometry screening
+
+`geometry_probe.py` is a separate, bounded screening tool. It uses the supplied
+TLEs, ISL-file order, description range limits and official satgen GS-distance
+function. It reproduces the course generator's cached ephem ISL-weight math,
+one free GSL interface per node, all visible attachment candidates and the
+free-one shortest-path/tie decisions. It caches length vectors from a
+single-source Dijkstra for each distinct visible destination satellite. It
+never runs all-pairs shortest paths, exports full forwarding state, or simulates
+packets. Import/loader cost is included in elapsed time; the default cap is
+100 seconds, 1,000 Dijkstra calls, 4 MiB of metadata/source fingerprint reads,
+eight snapshots and 64 hops per route. Loader rereads are separately counted;
+Python import IO and physical disk IO are not measured.
+
+First, it compares both existing Seoul/London directions at all eight samples
+against `path_probe.py`'s forwarding-derived nodes and directed egresses. A
+mismatch stops the probe; no additional-city route is then promoted to routing
+evidence. Destination-rooted networkx Dijkstra can differ numerically from
+the official source-rooted scipy APSP, so sampled agreement is checked rather
+than assumed to prove equivalence everywhere.
+
+The first declared additional group is Seoul->London versus Tokyo->Paris. Tokyo
+and Paris coordinates come from the installed Hypatia population-city input
+file, with its hash recorded. Their node IDs are hypothetical in-memory IDs:
+these stations do not exist in the supplied forwarding state. The alternative
+paper-city group New York->London versus San Diego->St Johns was not evaluated;
+St Johns is absent from that installed city dataset. There is no global
+city/route search or unreported parameter sweep.
+
+```text
+python3 /work/code/bbr-route/geometry_probe.py --state /home/ubuntu/lab/data/seoul_london/state --out /tmp/bbr-geometry-probe
+```
+
+Eight snapshots produced exact agreement for all sixteen original-direction
+references using 260 SSSP calls. The two additional independent-endpoint
+corridors shared 3, 7, 1, 1, 6, 3, 3 and 3 directed ISLs at the declared sample
+times; none of those samples showed fully separate ISL paths. At 100 s they
+also shared satellite224's GSL outgoing interface4, although their destination
+GSs differ. This is separately recorded and must not be mistaken for an ISL
+edge. A sampled merge/split candidate was therefore not found. Behavior between
+samples, exact four-GS exported forwarding and actual bottleneck/queue use
+remain unverified. The script and `geometry-probe.json`, `geometry-paths.csv`
+and `geometry-overlaps.csv` preserve the hypotheses and their measured cost.
+
+### Second and final declared city group
+
+Before execution, the second group is changed from New York->London versus
+San Diego->St Johns to **New-York-Newark->London versus San-Diego->Paris**.
+St Johns is absent from the installed coordinate dataset. The replacement
+uses four distinct endpoints whose coordinates all exist in that same dataset,
+preserving the transatlantic/long-US-corridor motivation without introducing
+unverified coordinates. It is an exploratory corridor selection, not a
+replication of a paper's terminals. The two-group maximum and the original
+eight sample times remain fixed. No further city combinations or denser time
+grid will be searched in this bounded step.
+
+Only the declared group selector is added to the geometry tool; graph weights,
+visibility, attachment choices, SSSP cache and path-walking decisions do not
+change. The first completed receipt remains untouched. Its exact tool source
+is archived as `geometry-asia-source.py` alongside that receipt, with SHA256
+equal to its `script_sha256`. The newer selector source has its own hash.
+The tool's automatic Seoul/London validation will run again in the second
+calculation; this is a routing check, not an independent TCP experiment.
+
+```text
+python3 /work/code/bbr-route/geometry_probe.py --state /home/ubuntu/lab/data/seoul_london/state --corridors us-europe --out /tmp/bbr-geometry-us-europe
+```
+
+Second-group results will be recorded separately as
+`geometry-us-europe-probe.json`, `geometry-us-europe-paths.csv` and
+`geometry-us-europe-overlaps.csv`.
+
+The second calculation completed in 5.0254 s including imports and TLE loading,
+with 260 SSSP calls, 12,672 cached ISL position computations and 63,360 GSL
+distance calls. Its automatic original-route check again matched all sixteen
+reference node/egress paths. New York->London and San Diego->Paris were both
+reachable but had no shared directed ISL, directed egress or GSL egress at
+any of the eight declared samples. Thus the second sampled merge/split
+candidate count is also zero. This does not establish absence between samples.
+
+The two retained geometry receipts report 5.8389 s and 5.0254 s respectively
+(10.8643 s combined). A prior first-group development/validation run took
+5.6708 s before the fingerprint-budget guard was tightened; it used the same
+cities and times, changed no path result, remains only in the container, and
+is not an additional corridor or independent experiment. Including that
+development run, observed geometry-tool elapsed time was about 16.5351 s.
+No third corridor, denser grid, full forwarding export or TCP simulation was
+run by these discovery tools. All three copied output receipts and the archived
+first source hash were checked against the final host-file bytes.

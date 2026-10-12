@@ -1,0 +1,381 @@
+{
+  "kind": "bounded_on_demand_geometry_hypothesis",
+  "no_state_generation_or_simulation": true,
+  "complete": true,
+  "stop_reason": null,
+  "script_sha256": "e415022cc85bbe4944047a34f452a05e6e24a59d0255cc2c3df90540c96c60b1",
+  "input_fingerprints": [
+    {
+      "path": "/home/ubuntu/lab/data/seoul_london/state/tles.txt",
+      "bytes": 249168,
+      "sha256": "e8e944ac15ae28f2ba5fe8e0a845bdfe106694a1536711a52ec0e54f5ca29dd5"
+    },
+    {
+      "path": "/home/ubuntu/lab/data/seoul_london/state/ground_stations.txt",
+      "bytes": 165,
+      "sha256": "9a6f895ced480a880c7c5aa229be1cc6b23c2e85bca0b6ce312af823cdf57262"
+    },
+    {
+      "path": "/home/ubuntu/lab/data/seoul_london/state/isls.txt",
+      "bytes": 27240,
+      "sha256": "8586b19155b7a9df2db5c563229790313c8280504aa15821f56000fd095c6d6c"
+    },
+    {
+      "path": "/home/ubuntu/lab/data/seoul_london/state/description.txt",
+      "bytes": 72,
+      "sha256": "e9e2297b872bb727a52e10e288f4f2a3243228ac5e95a4b49ffa8b532bccfb6e"
+    },
+    {
+      "path": "/home/ubuntu/lab/data/seoul_london/state/gsl_interfaces_info.txt",
+      "bytes": 24266,
+      "sha256": "8d0817a32dd3e624ec673fcb7babae33907c46b8e2acb55602c347e45f3a1138"
+    },
+    {
+      "path": "/home/ubuntu/lab/scripts/gen_state.py",
+      "bytes": 13972,
+      "sha256": "62cbfccad15185e0f7c1022b07f5021a940b9c9645d0e62aa453e0285cebdfee"
+    },
+    {
+      "path": "/home/ubuntu/hypatia/satgenpy/satgen/dynamic_state/generate_dynamic_state.py",
+      "bytes": 10901,
+      "sha256": "8732f9be6e85396970fbf5c8e5f419d2b6a21cd8891cbcf8d4071b818c2ee017"
+    },
+    {
+      "path": "/home/ubuntu/hypatia/satgenpy/satgen/dynamic_state/fstate_calculation.py",
+      "bytes": 12407,
+      "sha256": "6d6b848693dcd2a8a78b7bc9af66bfc6ebf786c02a35bd834dd98c2de78bfbad"
+    },
+    {
+      "path": "/home/ubuntu/hypatia/satgenpy/satgen/dynamic_state/algorithm_free_one_only_over_isls.py",
+      "bytes": 4722,
+      "sha256": "295e9929ce7e40a5fb081c5c6c47858a42c4e5be7aa04ecaf98a4409eb30a4aa"
+    },
+    {
+      "path": "/home/ubuntu/hypatia/satgenpy/satgen/distance_tools/distance_tools.py",
+      "bytes": 7628,
+      "sha256": "7878ec051b118f0749c2dfec6306c609c60b9bacbb5b7d086060c3601f4b122f"
+    },
+    {
+      "path": "/home/ubuntu/hypatia/satgenpy/satgen/tles/read_tles.py",
+      "bytes": 4170,
+      "sha256": "e39a1cca28817680650535995b6baca2372a2238f375baaae8a99d4d7ef72153"
+    },
+    {
+      "path": "/home/ubuntu/hypatia/paper/satellite_networks_state/input_data/ground_stations_cities_sorted_by_estimated_2025_pop_top_1000.basic.txt",
+      "bytes": 34826,
+      "sha256": "d3b818536bde570128bc89e6ebbaea655755688789e3956d41fa66d8ec87e232"
+    },
+    {
+      "path": "/work/docs/experiments/assets/20261012-bbr-route/path-probe.json",
+      "bytes": 16664,
+      "sha256": "35ff08c5f4c5d2f353609736a25a93690e39eb4397192eac4d5bc079e6f28d5d"
+    },
+    {
+      "path": "/work/docs/experiments/assets/20261012-bbr-route/path-samples.csv",
+      "bytes": 5240,
+      "sha256": "4b2c5c2f929da08e5341789e8ce519dc80569ee8173d49436be9a7a73bddc43e"
+    }
+  ],
+  "requested_samples_ns": [
+    0,
+    20000000000,
+    40000000000,
+    60000000000,
+    100000000000,
+    140000000000,
+    180000000000,
+    199900000000
+  ],
+  "snapshots": [
+    {
+      "time_ns": 0,
+      "satellites": 1584,
+      "isl_edges": 3168,
+      "visible_satellites": {
+        "Seoul": 11,
+        "London": 17,
+        "Tokyo": 10,
+        "Paris": 20
+      },
+      "unique_destination_visible_satellites": 33,
+      "dijkstra_calls": 33,
+      "elapsed_s": 0.10995546799995282
+    },
+    {
+      "time_ns": 20000000000,
+      "satellites": 1584,
+      "isl_edges": 3168,
+      "visible_satellites": {
+        "Seoul": 11,
+        "London": 17,
+        "Tokyo": 10,
+        "Paris": 20
+      },
+      "unique_destination_visible_satellites": 33,
+      "dijkstra_calls": 33,
+      "elapsed_s": 0.11085950699998648
+    },
+    {
+      "time_ns": 40000000000,
+      "satellites": 1584,
+      "isl_edges": 3168,
+      "visible_satellites": {
+        "Seoul": 13,
+        "London": 18,
+        "Tokyo": 10,
+        "Paris": 19
+      },
+      "unique_destination_visible_satellites": 35,
+      "dijkstra_calls": 35,
+      "elapsed_s": 0.10763487500003066
+    },
+    {
+      "time_ns": 60000000000,
+      "satellites": 1584,
+      "isl_edges": 3168,
+      "visible_satellites": {
+        "Seoul": 12,
+        "London": 17,
+        "Tokyo": 10,
+        "Paris": 20
+      },
+      "unique_destination_visible_satellites": 33,
+      "dijkstra_calls": 33,
+      "elapsed_s": 0.1036263369999233
+    },
+    {
+      "time_ns": 100000000000,
+      "satellites": 1584,
+      "isl_edges": 3168,
+      "visible_satellites": {
+        "Seoul": 11,
+        "London": 18,
+        "Tokyo": 9,
+        "Paris": 19
+      },
+      "unique_destination_visible_satellites": 32,
+      "dijkstra_calls": 32,
+      "elapsed_s": 0.10320907400000578
+    },
+    {
+      "time_ns": 140000000000,
+      "satellites": 1584,
+      "isl_edges": 3168,
+      "visible_satellites": {
+        "Seoul": 10,
+        "London": 17,
+        "Tokyo": 10,
+        "Paris": 20
+      },
+      "unique_destination_visible_satellites": 32,
+      "dijkstra_calls": 32,
+      "elapsed_s": 0.10807122300002447
+    },
+    {
+      "time_ns": 180000000000,
+      "satellites": 1584,
+      "isl_edges": 3168,
+      "visible_satellites": {
+        "Seoul": 10,
+        "London": 19,
+        "Tokyo": 10,
+        "Paris": 19
+      },
+      "unique_destination_visible_satellites": 30,
+      "dijkstra_calls": 30,
+      "elapsed_s": 0.11218313099993793
+    },
+    {
+      "time_ns": 199900000000,
+      "satellites": 1584,
+      "isl_edges": 3168,
+      "visible_satellites": {
+        "Seoul": 10,
+        "London": 18,
+        "Tokyo": 10,
+        "Paris": 19
+      },
+      "unique_destination_visible_satellites": 32,
+      "dijkstra_calls": 32,
+      "elapsed_s": 0.11352926499989735
+    }
+  ],
+  "stations": [
+    {
+      "name": "Seoul",
+      "latitude_degrees_str": "37.568260",
+      "longitude_degrees_str": "126.977830",
+      "elevation_m_float": 0.0,
+      "node_id": 1584
+    },
+    {
+      "name": "London",
+      "latitude_degrees_str": "51.508530",
+      "longitude_degrees_str": "-0.125740",
+      "elevation_m_float": 0.0,
+      "node_id": 1585
+    },
+    {
+      "node_id": 1586,
+      "name": "Tokyo",
+      "latitude_degrees_str": "35.689500",
+      "longitude_degrees_str": "139.691710",
+      "elevation_m_float": 0.0
+    },
+    {
+      "node_id": 1587,
+      "name": "Paris",
+      "latitude_degrees_str": "48.853410",
+      "longitude_degrees_str": "2.348800",
+      "elevation_m_float": 0.0
+    }
+  ],
+  "hypothetical_added_stations": [
+    "Tokyo",
+    "Paris"
+  ],
+  "candidate_groups": [
+    "Seoul->London vs Tokyo->Paris"
+  ],
+  "reference_comparisons": [
+    {
+      "time_ns": 0,
+      "pair": "reference-seoul-london",
+      "exact_nodes_and_directed_egresses": true
+    },
+    {
+      "time_ns": 0,
+      "pair": "reference-london-seoul",
+      "exact_nodes_and_directed_egresses": true
+    },
+    {
+      "time_ns": 20000000000,
+      "pair": "reference-seoul-london",
+      "exact_nodes_and_directed_egresses": true
+    },
+    {
+      "time_ns": 20000000000,
+      "pair": "reference-london-seoul",
+      "exact_nodes_and_directed_egresses": true
+    },
+    {
+      "time_ns": 40000000000,
+      "pair": "reference-seoul-london",
+      "exact_nodes_and_directed_egresses": true
+    },
+    {
+      "time_ns": 40000000000,
+      "pair": "reference-london-seoul",
+      "exact_nodes_and_directed_egresses": true
+    },
+    {
+      "time_ns": 60000000000,
+      "pair": "reference-seoul-london",
+      "exact_nodes_and_directed_egresses": true
+    },
+    {
+      "time_ns": 60000000000,
+      "pair": "reference-london-seoul",
+      "exact_nodes_and_directed_egresses": true
+    },
+    {
+      "time_ns": 100000000000,
+      "pair": "reference-seoul-london",
+      "exact_nodes_and_directed_egresses": true
+    },
+    {
+      "time_ns": 100000000000,
+      "pair": "reference-london-seoul",
+      "exact_nodes_and_directed_egresses": true
+    },
+    {
+      "time_ns": 140000000000,
+      "pair": "reference-seoul-london",
+      "exact_nodes_and_directed_egresses": true
+    },
+    {
+      "time_ns": 140000000000,
+      "pair": "reference-london-seoul",
+      "exact_nodes_and_directed_egresses": true
+    },
+    {
+      "time_ns": 180000000000,
+      "pair": "reference-seoul-london",
+      "exact_nodes_and_directed_egresses": true
+    },
+    {
+      "time_ns": 180000000000,
+      "pair": "reference-london-seoul",
+      "exact_nodes_and_directed_egresses": true
+    },
+    {
+      "time_ns": 199900000000,
+      "pair": "reference-seoul-london",
+      "exact_nodes_and_directed_egresses": true
+    },
+    {
+      "time_ns": 199900000000,
+      "pair": "reference-london-seoul",
+      "exact_nodes_and_directed_egresses": true
+    }
+  ],
+  "reference_matches": 16,
+  "reference_expected_comparisons": 16,
+  "observed_shared_isl_sample_times_ns": [
+    0,
+    20000000000,
+    40000000000,
+    60000000000,
+    100000000000,
+    140000000000,
+    180000000000,
+    199900000000
+  ],
+  "observed_no_shared_isl_sample_times_ns": [],
+  "candidate_isl_merge_split_at_sampled_times": false,
+  "read_cost": {
+    "fingerprinted_metadata_source_bytes": 411441,
+    "satgen_loader_additional_declared_bytes": 357641,
+    "dijkstra_calls": 260,
+    "ephem_isl_position_computations": 12672,
+    "gsl_distance_calls": 50688,
+    "elapsed_s_including_imports_and_tle_loading": 5.838920718999816,
+    "meaning": "Metadata/source fingerprint reads and loader reads are reported separately; Python import IO and physical disk IO are not measured."
+  },
+  "budgets": {
+    "max_elapsed_s": 100,
+    "max_dijkstra": 1000,
+    "max_metadata_bytes": 4194304,
+    "max_hops": 64
+  },
+  "versions": {
+    "networkx": "3.6.1",
+    "ephem": "4.2.1",
+    "astropy": "8.0.1"
+  },
+  "method": [
+    "Same TLEs, epoch, ISLs in file order, cached ephem ISL weights, GSL visibility distance threshold and one free GSL interface as the official generator.",
+    "Every visible destination satellite gets one length-vector SSSP, cached per snapshot; no all-pairs shortest paths or full forwarding export.",
+    "Source attachment minimizes full GSL+ISL+GSL distance, not nearest-satellite distance alone.",
+    "At every satellite select (remaining distance + destination GSL length, destination satellite ID), then official strict-< neighbor iteration order.",
+    "Dijkstra direction and floating-point/tie behavior may differ from the generator's scipy APSP; known sampled references are checked exactly, not assumed equivalent."
+  ],
+  "limits": [
+    "Additional-city node IDs exist only in this in-memory hypothesis, not in the supplied state.",
+    "Eight samples can bracket sharing differences but cannot identify event timing, duration, in-flight paths or behavior between samples.",
+    "ISL edge overlap and GSL egress overlap are separate; neither establishes a bottleneck or actual packet queue contention.",
+    "One-way geometric propagation is a path-distance calculation, not socket SRTT or measured queue latency.",
+    "Exact agreement on original sampled routes does not prove all future four-GS forwarding entries match an official export.",
+    "A candidate requires a separately validated topology/state and matched TCP baseline before any performance claim."
+  ],
+  "outputs": {
+    "geometry-paths.csv": {
+      "bytes": 5402,
+      "sha256": "a6ef21ef86b13bd5a0b9770590f3a94e794ebfeba3271ff5efaf32030ad352d3"
+    },
+    "geometry-overlaps.csv": {
+      "bytes": 1083,
+      "sha256": "e07735604a6bfa876420edfc4170c282cb9cf0cdedef75fef9db11194510821b"
+    }
+  }
+}
