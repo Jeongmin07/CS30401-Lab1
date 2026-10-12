@@ -34,7 +34,7 @@
 - 최종 patch: `code/bbr-route/ns3-observe.patch`, SHA256 `ddcad50d06a8e3fc34a79fabb4942e2225d4788488d3db96e2b72a379262c445`.
 - reference는 runner commit `2e805cf`, 초기 patch-off는 `5edda66`, 수정 observer-on은 `d520bd4`에서 실행했다. 각 원본 manifest가 실행 commit·소스 diff·binary/library·설정/스케줄·상태 입력·출력 hash·명령·wall time을 보존한다. 초기 reference manifest의 필드가 후속 runner보다 적다는 한계도 유지한다.
 - [원본/off 비교](../experiments/assets/20261012-bbr-route/equivalence-original-off.json), [원본/on 비교](../experiments/assets/20261012-bbr-route/equivalence-original-on.json), [6개 거부 검사](../experiments/assets/20261012-bbr-route/observer-negative-checks.json), [완료 실행 분석](../experiments/assets/20261012-bbr-route/pilot-analysis/pilot-summary.json)을 공유한다. 상태 receipt를 연결한 비교가 동적 입력 파일 전체를 재감사한 것은 아니다.
-- 원본 압축 파일은 10,002,124B, 70개 텍스트 파일이며 실패/timeout도 포함한다. SHA256 `db389f9a6af331701ad8c15656661a41b83fc1c1092971b62a7f34a5d01ea5a8`. 파일별 목록·해시는 [inventory](../experiments/assets/20261012-bbr-route/raw-inventory.json)에 있다. 공유 위치는 실험 기록에 적는다. build/state/core dump는 포함하지 않는다.
+- [GitHub diagnostic prerelease의 원본](https://github.com/Jeongmin07/CS30401-Lab1/releases/download/bbr-route-diagnostics-20261012/bbr-route-diagnostics-20261012.tar.gz)은 10,002,124B, 70개 텍스트 파일이며 실패/timeout도 포함한다. SHA256 `db389f9a6af331701ad8c15656661a41b83fc1c1092971b62a7f34a5d01ea5a8`. 파일별 목록·해시는 [inventory](../experiments/assets/20261012-bbr-route/raw-inventory.json)에 있다. 모든 member hash와 GitHub asset digest/size를 확인했다. build/state/core dump는 포함하지 않는다.
 
 ## 다음 작업과 검토할 점
 

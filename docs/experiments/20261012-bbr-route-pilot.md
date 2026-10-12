@@ -61,9 +61,15 @@ docker exec lab1-bbr-route-20261012 python3 /work/code/bbr-route/run_pilot.py pa
 
 ### 완성된 단독 조건의 실제 관측
 
-실제 수신 앱 바이트는 452,307,420B이며 `[0,40)` goodput은90.4615Mbit/s, `[10,40)`은93.3465Mbit/s다. 같은40초의 sender ACK progress 451,763,700B와 혼용하지 않는다. 전체 창에 TcDrop 7,528 **hook events**가 기록됐다. 이 수치와 BBR rate-sample loss-byte 누계를 고유 패킷 손실/재전송 수로 바꾸어 쓰지 않는다. served queue visit의 전체 평균은0.08885ms, 최댓값11.4720ms이며, ACK와 양방향 여러 장치 방문을 포함한 값이다. 종단 간 큐 지연이 아니다.
+실제 수신 앱 바이트는 452,307,420B이며 `[0,40)` goodput은 90.4615Mbit/s, `[10,40)`은 93.3465Mbit/s다. 같은 40초의 sender ACK progress 451,763,700B와 혼용하지 않는다. 전체 창에 TcDrop 7,528 **hook events**가 기록됐다. 이 수치와 BBR rate-sample loss-byte 누계를 고유 패킷 손실/재전송 수로 바꾸어 쓰지 않는다. served queue visit의 전체 평균은 0.08885ms, 최댓값 11.4720ms이며, ACK와 양방향 여러 장치 방문을 포함한 값이다. 종단 간 큐 지연이 아니다.
 
 이 결과는 제공 BBR의 관측 기반을 확보한 것이며 새로운 개선을 시험하지 않았다. 평균 처리량이 높다는 사실이나 이 drop count만으로 LEO 경로 변화가 원인이라고 결론 내리지 않는다.
+
+### 원본 공유 위치
+
+[GitHub diagnostic prerelease](https://github.com/Jeongmin07/CS30401-Lab1/releases/tag/bbr-route-diagnostics-20261012)의 [압축 원본](https://github.com/Jeongmin07/CS30401-Lab1/releases/download/bbr-route-diagnostics-20261012/bbr-route-diagnostics-20261012.tar.gz)을 받으면 된다. 크기는 10,002,124B, SHA256은 `db389f9a6af331701ad8c15656661a41b83fc1c1092971b62a7f34a5d01ea5a8`이다. [파일별 inventory](assets/20261012-bbr-route/raw-inventory.json)의 70개 텍스트 파일을 전부 대조했고 GitHub asset의 digest/size도 확인했다.
+
+성공한 v2 reference/off, v3 observed-solo와 실패한 첫 관측/timeout 기록을 모두 포함한다. 후기 코드에서 과거 실행한 것으로 취급하지 않도록 각 manifest의 실행 commit을 유지했다. release target은 공유 자료를 묶는 commit이지 모든 실행의 commit이 아니다. 원본 build·generated state·core dump는 archive에 넣지 않았다.
 
 ### 후속 판단
 
