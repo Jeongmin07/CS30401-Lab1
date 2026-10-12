@@ -1,0 +1,489 @@
+{
+  "schema_version": 1,
+  "run": "/tmp/predict-loss/leo100-base40",
+  "duration_ns": 40000000000,
+  "actual_config": {
+    "simulation_end_time_ns": "40000000000",
+    "simulation_seed": "123456789",
+    "satellite_network_dir": "\"../../../home/ubuntu/lab/data/seoul_london/state\"",
+    "satellite_network_routes_dir": "\"../../../home/ubuntu/lab/data/seoul_london/state/dynamic_state_100ms_for_200s\"",
+    "dynamic_state_update_interval_ns": "100000000",
+    "isl_data_rate_megabit_per_s": "100",
+    "gsl_data_rate_megabit_per_s": "100",
+    "isl_max_queue_size_pkts": "1000",
+    "gsl_max_queue_size_pkts": "1000",
+    "enable_isl_utilization_tracking": "false",
+    "tcp_socket_type": "TcpCubic",
+    "tcp_enable_pacing": "false",
+    "enable_tcp_flow_scheduler": "true",
+    "tcp_flow_schedule_filename": "\"schedule.csv\"",
+    "tcp_flow_enable_logging_for_tcp_flow_ids": "set(0)"
+  },
+  "original_manifest": {
+    "case": "leo100-base40",
+    "definition": {
+      "kind": "leo",
+      "mode": "base",
+      "rate": 100,
+      "queue": 1000,
+      "duration": 40
+    },
+    "command": [
+      "/home/ubuntu/ns-3.48/build/scratch/main_satnet/ns3.48-main_satnet",
+      "--run_dir=/tmp/predict-loss/leo100-base40"
+    ],
+    "status": "success",
+    "repo_commit": "439bd138e6474cbb31697548a25c278db1e49039",
+    "repo_dirty": true,
+    "runner_sha256": "57e9a1545f96945b56ac9d7b84fc955a49e6deea904a98dc0fcbf32de4e57f12",
+    "patch_sha256": "666c376fe68687f053786d850af926402f59f925c9b7706c72faec6e50b42340",
+    "installed_diff_sha256": "666c376fe68687f053786d850af926402f59f925c9b7706c72faec6e50b42340",
+    "ns3_head": "99bc6f733274475b7a6e804128651e17ee2a2536",
+    "declared_image_digest": "ghcr.io/yeonjong21/cs30401-lab1@sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+    "runtime_files": {
+      "scratch/main_satnet/ns3.48-main_satnet": "de9f678113c37a72df7e3215e876f18945c0ccecf9123f60fc8f655f9d9a6eab",
+      "lib/libns3.48-antenna.so": "edf56f782f446d54291425c4b357fb2a609f64da3a3a88a2d48e18dbcf4200b8",
+      "lib/libns3.48-applications.so": "029ee91a59a88fd8cff0c865053f31dfc36f6cc6f10484ebb3843864025750ca",
+      "lib/libns3.48-basic-sim.so": "005f6059fd2669ee3ba4dfaa5b7e76a35542eaa5a98093f72eded4c94360bdd8",
+      "lib/libns3.48-bridge.so": "5c0e5f9092dc8a215a2d77aaa75ba0e3db181578566db25b9463cc220a94a1a0",
+      "lib/libns3.48-core.so": "5f6e271f0e98438059ac55c8dc5c94ee411050cb7cd7f23956963310674982a1",
+      "lib/libns3.48-flow-monitor.so": "5fbe40f2a843bf01f38b943a28377f7e9628b748506498298cfd6096c621b1ad",
+      "lib/libns3.48-internet-apps.so": "c31699838a1a449773562164af013663951dbd78c7b0e1bcddc4b451f2eaa6bc",
+      "lib/libns3.48-internet.so": "e8928e5155bf36a0e800c171c661ab30dea9d0d72b25014aa3ed544616552817",
+      "lib/libns3.48-mobility.so": "45dc648f0ff11a8c83574fdea0dd189a35ccc606d625d3e3612afa3a6f806351",
+      "lib/libns3.48-network.so": "7930b3ed5f927eb731b7a010e5664ebd7927d1b25ecd2ef1f950857b434621b7",
+      "lib/libns3.48-point-to-point.so": "af4a8a6c3378e80fc6347fd77ad9c0bad5783eb34c2ea90e416f797b985e3f89",
+      "lib/libns3.48-satellite-network.so": "6c54072c67b2a2470abe2aca9f561d57093df69fa832ae2035753e2e52ebf907",
+      "lib/libns3.48-satellite.so": "68e7ce4d29d13efe374989d3279a8587bedb7a8104757938ab2c14605e3d4002",
+      "lib/libns3.48-stats.so": "ab02ae3cfe9c8453b6b251528884a678fe470cb1aac2e6500064a6fd44caf447",
+      "lib/libns3.48-traffic-control.so": "354fd4e2ef550af211e9abf272fd64b45818636c845b4876b606a0ffa6520d53"
+    },
+    "forecast_source_sha256": "49bd5418f2b13bdbf6d703f719d61075f814cc86d44c745651bf797f4e5f656c",
+    "forecast_rule": "H=2*max(old,new propagation RTT)",
+    "hints": [],
+    "additional_parameters": "",
+    "environment": {
+      "CS30401_STUDY_TRACE": "1",
+      "CS30401_STUDY_TRACE_DIR": "/tmp/predict-loss/leo100-base40/logs_ns3",
+      "LD_LIBRARY_PATH": "/home/ubuntu/ns-3.48/build/lib"
+    },
+    "declared_event_windows_s": [
+      [
+        25.7,
+        28.2
+      ]
+    ],
+    "timeout_s": 180,
+    "expected_finite_bytes": null,
+    "exit_code": 0,
+    "wall_seconds": 61.958035972999824
+  },
+  "state_mapping_receipts": {
+    "state_static_sha256": {
+      "count": 7,
+      "sha256": "afc13d0f402e082dd83a65ee52222e91b41f2bb775a0694a34ac33dfe216becf"
+    },
+    "dynamic_input_sha256": {
+      "count": 4000,
+      "sha256": "afbe0eb800dd2c8bf608b6241c5f94349677e6036dd883045c7c42fb80cddd8a"
+    }
+  },
+  "events": [
+    {
+      "time_ns": 26200000000,
+      "time_s": 26.2,
+      "old_rtt_prop_ms": 97.698,
+      "new_rtt_prop_ms": 91.064,
+      "rtt_decrease_ms": 6.634,
+      "geometric_bdp_ratio": 0.9320968699461606,
+      "old_path_nodes": [
+        1584,
+        381,
+        380,
+        379,
+        357,
+        335,
+        313,
+        291,
+        269,
+        247,
+        225,
+        224,
+        1585
+      ],
+      "new_path_nodes": [
+        1584,
+        316,
+        315,
+        314,
+        313,
+        291,
+        269,
+        247,
+        225,
+        224,
+        1585
+      ],
+      "changed_forward_nodes": [
+        314,
+        315,
+        316,
+        335,
+        357,
+        379,
+        380,
+        381
+      ],
+      "windows": {
+        "pre": {
+          "start_ns": 25700000000,
+          "end_ns": 26200000000,
+          "duration_s": 0.5,
+          "application_bytes": 6014040,
+          "application_goodput_mbps": 96.22464,
+          "sender_event_counts": {
+            "RX_ACK": 2179,
+            "TX": 4409
+          },
+          "sender_event_payload_bytes": {
+            "RX_ACK": 0,
+            "TX": 6084420
+          },
+          "congestion_event_counts": {},
+          "all_direction_drop_rows": 0,
+          "distinct_tagged_drop_transmissions": 0,
+          "drop_rows_by_layer": {},
+          "drop_rows_by_device": [],
+          "exact_drop_rows": [],
+          "tagged_flow0_device_queue_visits": null,
+          "cwnd_bytes_trace": {
+            "held_at_start": {
+              "time_ns": 25699645992,
+              "value": 2127960
+            },
+            "first_change": {
+              "time_ns": 25709052932,
+              "value": 2129340
+            },
+            "last_change": {
+              "time_ns": 26196836833,
+              "value": 2198340
+            },
+            "change_count": 51,
+            "minimum": 2127960,
+            "maximum": 2198340
+          },
+          "srtt_ns_trace": {
+            "held_at_start": {
+              "time_ns": 25699875431,
+              "value": 174502317
+            },
+            "first_change": {
+              "time_ns": 25700104874,
+              "value": 174564527
+            },
+            "last_change": {
+              "time_ns": 26199819518,
+              "value": 180670979
+            },
+            "change_count": 2179,
+            "minimum": 174502317,
+            "maximum": 180766834
+          }
+        },
+        "post": {
+          "start_ns": 26200000000,
+          "end_ns": 26700000000,
+          "duration_s": 0.5,
+          "application_bytes": 5971260,
+          "application_goodput_mbps": 95.54016,
+          "sender_event_counts": {
+            "RX_ACK": 2244,
+            "TX": 3933,
+            "RETX": 32
+          },
+          "sender_event_payload_bytes": {
+            "RX_ACK": 0,
+            "TX": 5427540,
+            "RETX": 44160
+          },
+          "congestion_event_counts": {
+            "CONG": 7,
+            "SSTHRESH": 1
+          },
+          "all_direction_drop_rows": 0,
+          "distinct_tagged_drop_transmissions": 0,
+          "drop_rows_by_layer": {},
+          "drop_rows_by_device": [],
+          "exact_drop_rows": [],
+          "tagged_flow0_device_queue_visits": null,
+          "cwnd_bytes_trace": {
+            "held_at_start": {
+              "time_ns": 26196836833,
+              "value": 2198340
+            },
+            "first_change": {
+              "time_ns": 26206932083,
+              "value": 2199720
+            },
+            "last_change": {
+              "time_ns": 26690361950,
+              "value": 1569060
+            },
+            "change_count": 479,
+            "minimum": 1555260,
+            "maximum": 2221800
+          },
+          "srtt_ns_trace": {
+            "held_at_start": {
+              "time_ns": 26199819518,
+              "value": 180670979
+            },
+            "first_change": {
+              "time_ns": 26200048961,
+              "value": 180712106
+            },
+            "last_change": {
+              "time_ns": 26699998368,
+              "value": 129435787
+            },
+            "change_count": 2165,
+            "minimum": 129435787,
+            "maximum": 185095125
+          }
+        },
+        "legacy": {
+          "start_ns": 25700000000,
+          "end_ns": 28200000000,
+          "duration_s": 2.5,
+          "application_bytes": 30028800,
+          "application_goodput_mbps": 96.09215999999999,
+          "sender_event_counts": {
+            "RX_ACK": 10960,
+            "TX": 21519,
+            "RETX": 32
+          },
+          "sender_event_payload_bytes": {
+            "RX_ACK": 0,
+            "TX": 29696220,
+            "RETX": 44160
+          },
+          "congestion_event_counts": {
+            "CONG": 7,
+            "SSTHRESH": 1
+          },
+          "all_direction_drop_rows": 0,
+          "distinct_tagged_drop_transmissions": 0,
+          "drop_rows_by_layer": {},
+          "drop_rows_by_device": [],
+          "exact_drop_rows": [],
+          "tagged_flow0_device_queue_visits": null,
+          "cwnd_bytes_trace": {
+            "held_at_start": {
+              "time_ns": 25699645992,
+              "value": 2127960
+            },
+            "first_change": {
+              "time_ns": 25709052932,
+              "value": 2129340
+            },
+            "last_change": {
+              "time_ns": 28191120733,
+              "value": 1711200
+            },
+            "change_count": 633,
+            "minimum": 1555260,
+            "maximum": 2221800
+          },
+          "srtt_ns_trace": {
+            "held_at_start": {
+              "time_ns": 25699875431,
+              "value": 174502317
+            },
+            "first_change": {
+              "time_ns": 25700104874,
+              "value": 174564527
+            },
+            "last_change": {
+              "time_ns": 28199839407,
+              "value": 141277803
+            },
+            "change_count": 10843,
+            "minimum": 129279206,
+            "maximum": 185095125
+          }
+        },
+        "tight_legacy": {
+          "start_ns": 26100000000,
+          "end_ns": 26600000000,
+          "duration_s": 0.5,
+          "application_bytes": 5969880,
+          "application_goodput_mbps": 95.51808000000001,
+          "sender_event_counts": {
+            "RX_ACK": 2244,
+            "TX": 3935,
+            "RETX": 32
+          },
+          "sender_event_payload_bytes": {
+            "RX_ACK": 0,
+            "TX": 5430300,
+            "RETX": 44160
+          },
+          "congestion_event_counts": {
+            "CONG": 7,
+            "SSTHRESH": 1
+          },
+          "all_direction_drop_rows": 0,
+          "distinct_tagged_drop_transmissions": 0,
+          "drop_rows_by_layer": {},
+          "drop_rows_by_device": [],
+          "exact_drop_rows": [],
+          "tagged_flow0_device_queue_visits": null,
+          "cwnd_bytes_trace": {
+            "held_at_start": {
+              "time_ns": 26096113811,
+              "value": 2184540
+            },
+            "first_change": {
+              "time_ns": 26105979618,
+              "value": 2185920
+            },
+            "last_change": {
+              "time_ns": 26589408950,
+              "value": 1558020
+            },
+            "change_count": 481,
+            "minimum": 1555260,
+            "maximum": 2221800
+          },
+          "srtt_ns_trace": {
+            "held_at_start": {
+              "time_ns": 26099784804,
+              "value": 179624944
+            },
+            "first_change": {
+              "time_ns": 26100014247,
+              "value": 179671826
+            },
+            "last_change": {
+              "time_ns": 26599963121,
+              "value": 147264524
+            },
+            "change_count": 2165,
+            "minimum": 147264524,
+            "maximum": 185095125
+          }
+        }
+      }
+    }
+  ],
+  "queue_trace_available": false,
+  "manifest_output_checks": [
+    {
+      "file": "config_ns3.properties",
+      "sha256": "53b8c3d65cce756d8d6308a707197881ab0bdf1d6c38a2afbd96e528344b19f1",
+      "matches": true
+    },
+    {
+      "file": "schedule.csv",
+      "sha256": "e6cde3aa7716856e46d24c3833354df90407313ece13a5ffbd1b789fa4fea23c",
+      "matches": true
+    },
+    {
+      "file": "logs_ns3/study_drops.csv",
+      "sha256": "75ad39c5f5889821c24c7d06f235805e87af4367cd3da1942cd7fc0ff2efe619",
+      "matches": true
+    },
+    {
+      "file": "logs_ns3/tcp_flow_0_study_packets.csv",
+      "sha256": "d70589a545601d8b9cfa0857d0768df8e56c5a4dca91ed129920ddcd72968bab",
+      "matches": true
+    },
+    {
+      "file": "logs_ns3/tcp_flow_0_study_events.csv",
+      "sha256": "2dc8f04575eab4f405078c8e6ee555abfe10e409ca094cac8bb0df4f630a9bec",
+      "matches": true
+    },
+    {
+      "file": "logs_ns3/study_app_rx_node_1585_port_1024.csv",
+      "sha256": "3fdd1fcc6cb9ef27684a7feda775ac81c6eca1093758af9b076a70f5da3cde8a",
+      "matches": true
+    },
+    {
+      "file": "logs_ns3/tcp_flow_0_cwnd.csv",
+      "sha256": "7f5535796f23f8d7a545a5063393d699c8c8fba761f97fe996d54afc801d80de",
+      "matches": true
+    },
+    {
+      "file": "logs_ns3/tcp_flow_0_rtt.csv",
+      "sha256": "259875a2b2b4dbd2c9c3b0f0899a1bb56b5349bcd2ba8492dc1243e21b0cb381",
+      "matches": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "/tmp/predict-loss/leo100-base40/manifest.json",
+      "bytes": 420125,
+      "sha256": "f0c83a1de7745a53976f153dfc676961c67b370cf1dbf11f86a6bd216924bfcf"
+    },
+    {
+      "path": "/work/code/kim-study/path_truth_200s.csv",
+      "bytes": 135964,
+      "sha256": "49bd5418f2b13bdbf6d703f719d61075f814cc86d44c745651bf797f4e5f656c"
+    },
+    {
+      "path": "/tmp/predict-loss/leo100-base40/config_ns3.properties",
+      "bytes": 616,
+      "sha256": "53b8c3d65cce756d8d6308a707197881ab0bdf1d6c38a2afbd96e528344b19f1"
+    },
+    {
+      "path": "/tmp/predict-loss/leo100-base40/schedule.csv",
+      "bytes": 29,
+      "sha256": "e6cde3aa7716856e46d24c3833354df90407313ece13a5ffbd1b789fa4fea23c"
+    },
+    {
+      "path": "/tmp/predict-loss/leo100-base40/logs_ns3/study_drops.csv",
+      "bytes": 28932,
+      "sha256": "75ad39c5f5889821c24c7d06f235805e87af4367cd3da1942cd7fc0ff2efe619"
+    },
+    {
+      "path": "/tmp/predict-loss/leo100-base40/logs_ns3/tcp_flow_0_study_packets.csv",
+      "bytes": 38631377,
+      "sha256": "d70589a545601d8b9cfa0857d0768df8e56c5a4dca91ed129920ddcd72968bab"
+    },
+    {
+      "path": "/tmp/predict-loss/leo100-base40/logs_ns3/tcp_flow_0_study_events.csv",
+      "bytes": 724,
+      "sha256": "2dc8f04575eab4f405078c8e6ee555abfe10e409ca094cac8bb0df4f630a9bec"
+    },
+    {
+      "path": "/tmp/predict-loss/leo100-base40/logs_ns3/study_app_rx_node_1585_port_1024.csv",
+      "bytes": 29032577,
+      "sha256": "3fdd1fcc6cb9ef27684a7feda775ac81c6eca1093758af9b076a70f5da3cde8a"
+    },
+    {
+      "path": "/tmp/predict-loss/leo100-base40/logs_ns3/tcp_flow_0_cwnd.csv",
+      "bytes": 99347,
+      "sha256": "7f5535796f23f8d7a545a5063393d699c8c8fba761f97fe996d54afc801d80de"
+    },
+    {
+      "path": "/tmp/predict-loss/leo100-base40/logs_ns3/tcp_flow_0_rtt.csv",
+      "bytes": 3790485,
+      "sha256": "259875a2b2b4dbd2c9c3b0f0899a1bb56b5349bcd2ba8492dc1243e21b0cb381"
+    }
+  ],
+  "helper": {
+    "path": "/work/code/orbit-cubic-down/analyze_gate.py",
+    "bytes": 11338,
+    "sha256": "5714e9dfef6235f0c3e1cd49b3adec0920609a3b417849cd26eddd002a46159e"
+  },
+  "causal_gate": "Manual evidence assessment required; this extractor never labels shortening as overflow.",
+  "limits": [
+    "Windows are half-open. Sender events and ordered app bytes are separate.",
+    "No queue trace means queue surge is unmeasured, not zero.",
+    "Queue visits are flow0-tagged served visits at each device, not end-to-end queue delay.",
+    "Flush occupancy is device-global at flush_time_ns, not a bin boundary snapshot.",
+    "A route snapshot changes more than geometric propagation; no pure-shortening causality is inferred.",
+    "Existing-run output hash checks depend on available original receipt fields."
+  ]
+}

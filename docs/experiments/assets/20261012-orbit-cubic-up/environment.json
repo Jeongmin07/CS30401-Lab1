@@ -1,0 +1,29 @@
+{
+  "container": "lab1-orbit-cubic-up-20261012",
+  "container_id": "d68271135a558df37ff8103f256e1ca29dadab8da4f0b393091b0800d422cdf4",
+  "actual_image_id": "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+  "configured_image_ref": "ghcr.io/yeonjong21/cs30401-lab1@sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+  "cpu_limit": 2.0,
+  "memory_limit_bytes": 4294967296,
+  "mounts": [
+    {
+      "type": "bind",
+      "name": null,
+      "source": "C:\\Users\\Newbiedev\\Desktop\\\ub124\ub5a1CS30401\\CS30401-Lab1",
+      "destination": "/work"
+    },
+    {
+      "type": "volume",
+      "name": "cs30401-orbit-cubic-up-ns3-20261012",
+      "source": "/var/lib/docker/volumes/cs30401-orbit-cubic-up-ns3-20261012/_data",
+      "destination": "/home/ubuntu/ns-3.48"
+    }
+  ],
+  "fresh_container_and_volume_verified_absent_before_creation": true,
+  "build_command": [
+    "./ns3",
+    "build",
+    "-j",
+    "1"
+  ]
+}
