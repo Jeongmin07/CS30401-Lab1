@@ -169,9 +169,11 @@ def analyze(run, reference):
         assert int(r['device_stop']) | int(r['bql_stop']) == 1
         attributed[key(r)].append(r)
     tagged_drops = list(rows(logs / 'study_drops.csv'))
-    old_tc = Counter((r['time_ns'], r['node'], r['uid'], r['flow_id'])
+    old_tc = Counter((r['time_ns'], r['node'], r['uid'], r['flow_id'],
+                      r['tx_id'], r['tx_time_ns'], r['seq'], r['payload_bytes'])
                      for r in tagged_drops if r['layer'] == 'TcDrop')
-    new_tc = Counter((r['time_ns'], r['node_id'], r['packet_uid'], r['flow_id']) for r in tc_drops)
+    new_tc = Counter((r['time_ns'], r['node_id'], r['packet_uid'], r['flow_id'],
+                      r['tx_id'], r['tx_time_ns'], r['seq'], r['payload_bytes']) for r in tc_drops)
     assert old_tc == new_tc, 'Exact stopped-device hook does not match original TcDrop'
     important = set(attributed)
     for k, tr in occupancy.items():
@@ -204,6 +206,7 @@ def analyze(run, reference):
         for w in ['whole', *window_names(t)]:
             metrics[w]['app_bytes'] += n
     highest = 0
+    sender_data_keys = set()
     for r in rows(logs / 'tcp_flow_0_study_packets.csv'):
         if r['event'] == 'RETX':
             for w in ['whole', *window_names(int(r['time_ns']))]:
@@ -211,11 +214,17 @@ def analyze(run, reference):
         if r['event'] != 'TX' or int(r['payload_bytes']) <= 0:
             continue
         seq, count, t = int(r['seq']), int(r['payload_bytes']), int(r['time_ns'])
+        sender_data_keys.add((r['flow_id'], r['packet_uid'], r['tx_id'],
+                              r['tx_time_ns'], r['seq'], r['payload_bytes']))
         retx = seq < highest
         highest = max(highest, seq+count)
         for w in ['whole', *window_names(t)]:
             metrics[w]['tx_packets'] += 1
             metrics[w]['retx_packets'] += retx
+    for r in tc_drops:
+        if r['flow_id'] == '0' and int(r['payload_bytes']) > 0:
+            assert (r['flow_id'], r['packet_uid'], r['tx_id'], r['tx_time_ns'],
+                    r['seq'], r['payload_bytes']) in sender_data_keys, 'Dropped data does not match sender transmission'
     for r in rows(logs / 'tcp_flow_0_study_events.csv'):
         if r['event'] != 'CONG':
             continue
@@ -244,6 +253,7 @@ def analyze(run, reference):
                 queue_conservation=conservation,
                 qa=dict(manifest_hashes_verified=True, input_state_equal=True,
                         exact_tc_drop_multiset=True, all_queue_conservation=True,
+                        tagged_tc_drops_match_sender_tx=True,
                         source_runtime_unchanged=True),
                 source=dict(manifest_sha256=sha(run/'manifest.json'),
                             patch_sha256=manifest['patch_sha256'],

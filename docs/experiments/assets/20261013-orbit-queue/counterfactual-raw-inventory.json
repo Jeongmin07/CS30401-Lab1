@@ -1,0 +1,171 @@
+{
+  "schema": 1,
+  "archive": {
+    "path": "/work/output/tail-queue-raw/orbit-queue-route-delay-20261013.tar.gz",
+    "bytes": 12306772,
+    "sha256": "f852d8bbe44e6b5be4da7b6487172f5e0b29df5f0755f829162754dde8fc6157"
+  },
+  "root": "/tmp/orbit-queue-cf",
+  "cases": {
+    "selective-route75-delayed78": {
+      "status": "success",
+      "exit_code": 0,
+      "wall_seconds": 29.789788488997146,
+      "launch_commit": "3767411cb0f154e7b40b7c098f9516f1c47fbc73",
+      "source_checkpoint": "3767411cb0f154e7b40b7c098f9516f1c47fbc73",
+      "patch_sha256": "f0e85cab5a351e67d95a80d098cf65cf509300f73077e27b2d35dd6cbaf3e301",
+      "runtime_files": {
+        "scratch/main_satnet/ns3.48-main_satnet": "647a0359399d97cec58447afab03ca11b50290904275723fe323520c59b026ba",
+        "scratch/study_micro/ns3.48-study_micro": "00c73fc938af9f336437131926377088dd3e1fdc36597d0c5ca2154e6846430e",
+        "lib/libns3.48-antenna.so": "edf56f782f446d54291425c4b357fb2a609f64da3a3a88a2d48e18dbcf4200b8",
+        "lib/libns3.48-applications.so": "029ee91a59a88fd8cff0c865053f31dfc36f6cc6f10484ebb3843864025750ca",
+        "lib/libns3.48-basic-sim.so": "9de948e3a13dbc418b344b53496407d09bfc694b473c5847715a327c25c800b2",
+        "lib/libns3.48-bridge.so": "5c0e5f9092dc8a215a2d77aaa75ba0e3db181578566db25b9463cc220a94a1a0",
+        "lib/libns3.48-core.so": "5f6e271f0e98438059ac55c8dc5c94ee411050cb7cd7f23956963310674982a1",
+        "lib/libns3.48-flow-monitor.so": "5fbe40f2a843bf01f38b943a28377f7e9628b748506498298cfd6096c621b1ad",
+        "lib/libns3.48-internet-apps.so": "c31699838a1a449773562164af013663951dbd78c7b0e1bcddc4b451f2eaa6bc",
+        "lib/libns3.48-internet.so": "a55cbb36db4aa4e15d32064acfcf6b9111a981d41f59ab5d95cd1ffd0c6b8957",
+        "lib/libns3.48-mobility.so": "45dc648f0ff11a8c83574fdea0dd189a35ccc606d625d3e3612afa3a6f806351",
+        "lib/libns3.48-network.so": "8258009efcadb296e3abc3da3d12606b258eb5545dc33bd0d4f047af5e552bb0",
+        "lib/libns3.48-point-to-point.so": "8b7e72efbe1af5906a8df5191ba0bd625f2c8796b35b3bc6443279be093ac6d8",
+        "lib/libns3.48-satellite-network.so": "4073a1defc99168132fce6b98b0ed9b06bae36c88be3bb07d4777c09e122d5fd",
+        "lib/libns3.48-satellite.so": "68e7ce4d29d13efe374989d3279a8587bedb7a8104757938ab2c14605e3d4002",
+        "lib/libns3.48-stats.so": "ab02ae3cfe9c8453b6b251528884a678fe470cb1aac2e6500064a6fd44caf447",
+        "lib/libns3.48-traffic-control.so": "a260ff14dd0c5d4b6950676f7d219d3563ec6039e84390eae6a880bbe81f6ddb"
+      },
+      "manifest_sha256": "d037677c8373378137248f612da9420c67f59097ade762ccc0a07255b1b8ca8d"
+    }
+  },
+  "files": {
+    "selective-route75-delayed78/config_ns3.properties": {
+      "bytes": 603,
+      "sha256": "d6df7760c8851eaada741e6dcc605b55d269ba8ba2f37392c166e9fe08794e5a"
+    },
+    "selective-route75-delayed78/console.txt": {
+      "bytes": 6156,
+      "sha256": "ced085d51edeabce2173c642002af96eef6df4b72cc09d594cc9a93aa25c351c"
+    },
+    "selective-route75-delayed78/logs_ns3/finished.txt": {
+      "bytes": 4,
+      "sha256": "927580bf287560d4a26a5d6e129f91ffa9cb63031b1a8c772be6ec584e65e82b"
+    },
+    "selective-route75-delayed78/logs_ns3/orbit_coverage.csv": {
+      "bytes": 1398438,
+      "sha256": "7785a349bbcd58d321430e5454d4e7193dfc4ed7766e00af84b503fa6bafef9c"
+    },
+    "selective-route75-delayed78/logs_ns3/orbit_drops.csv": {
+      "bytes": 44468,
+      "sha256": "44183d356cab40acf6f2d955cfafd833b43412a53d79df7b7d63eb338e468698"
+    },
+    "selective-route75-delayed78/logs_ns3/orbit_queue_bins.csv": {
+      "bytes": 2936453,
+      "sha256": "b0d0d6e2435728567c9ff73581237ce7db976c14ce0fd1eee1626cfaee341ae6"
+    },
+    "selective-route75-delayed78/logs_ns3/orbit_queue_pending.csv": {
+      "bytes": 134,
+      "sha256": "f517122709969bb2a1d7bd47fb4ef58f9f914558203bbd7aef139e953669cb6c"
+    },
+    "selective-route75-delayed78/logs_ns3/orbit_service_bins.csv": {
+      "bytes": 2713805,
+      "sha256": "0bec064eef90d6fcbb5531cff10a9085f48cd1d702a52cd2ae5834c6d21aded2"
+    },
+    "selective-route75-delayed78/logs_ns3/orbit_service_coverage.csv": {
+      "bytes": 289969,
+      "sha256": "102295605d325a6491f26c20a955d8fde2c96fa6aec15a166e8043f42510cdf8"
+    },
+    "selective-route75-delayed78/logs_ns3/queue_devices.csv": {
+      "bytes": 645713,
+      "sha256": "36639705e7d001b7f59ab2ef2f509fc8a326a0ed8ef25d1f17cbc7fc90cac2ee"
+    },
+    "selective-route75-delayed78/logs_ns3/queue_flow_state.csv": {
+      "bytes": 329523,
+      "sha256": "4aec9b9c5e44310a304dca3aea3ceb08c9b35854b1514716da157db6636d0dfb"
+    },
+    "selective-route75-delayed78/logs_ns3/queue_focus.csv": {
+      "bytes": 5775352,
+      "sha256": "877eefdc28fb1a104d16f0ef3bbbfd61234d998240d856c8b1ac08ba9c1610ec"
+    },
+    "selective-route75-delayed78/logs_ns3/queue_occupancy.csv": {
+      "bytes": 3797787,
+      "sha256": "8b46af28e24bab94a6d089110fce22dc9592007f648f543d1d3059ab321f9fdb"
+    },
+    "selective-route75-delayed78/logs_ns3/queue_tc_drop.csv": {
+      "bytes": 51062,
+      "sha256": "2bd7d7a080e8cffece068f62d012266df3c4e990ea04609a041c1425df9df92d"
+    },
+    "selective-route75-delayed78/logs_ns3/study_app_rx_node_1585_port_1024.csv": {
+      "bytes": 14465481,
+      "sha256": "ae29c00d733451b2a51c8592dc58eefff8397e36f3ce512982af316c934a28f8"
+    },
+    "selective-route75-delayed78/logs_ns3/study_drop_coverage.csv": {
+      "bytes": 1140184,
+      "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+    },
+    "selective-route75-delayed78/logs_ns3/study_drops.csv": {
+      "bytes": 53873,
+      "sha256": "d33e2a09e4dfd4915c081dd9e860e1eb19e2b2e621822ebdc6ace53731cd0010"
+    },
+    "selective-route75-delayed78/logs_ns3/study_rx_node_1585_port_1024.csv": {
+      "bytes": 19452444,
+      "sha256": "7d2a1ad6350e96f48e1ee613f3928cb425670b37480d5a7554d27603376faa75"
+    },
+    "selective-route75-delayed78/logs_ns3/tcp_flow_0_cwnd.csv": {
+      "bytes": 100677,
+      "sha256": "82f66a58758b60dfd1d36142d8fe84a264613a3b3783f1039d03848b85c55728"
+    },
+    "selective-route75-delayed78/logs_ns3/tcp_flow_0_orbit_loss.csv": {
+      "bytes": 1386,
+      "sha256": "dd65e13e2e79fefa5b63612950bd59f5e3fa772ee1b9fd8a07f9208234695374"
+    },
+    "selective-route75-delayed78/logs_ns3/tcp_flow_0_progress.csv": {
+      "bytes": 1994229,
+      "sha256": "c6f13a8e0e52029ce1dc4b73eb8a002d2cdbf173ac0ab1d281675363e45cc121"
+    },
+    "selective-route75-delayed78/logs_ns3/tcp_flow_0_rtt.csv": {
+      "bytes": 2030632,
+      "sha256": "868091f599bf5ceac8f6b3f15417633e87d5e55d08ae81929e20d959b2c334a5"
+    },
+    "selective-route75-delayed78/logs_ns3/tcp_flow_0_study_events.csv": {
+      "bytes": 5574,
+      "sha256": "25050c2164c7a8b2cdc962f055871f31756b438e9db03cf93545b169a8b2f14a"
+    },
+    "selective-route75-delayed78/logs_ns3/tcp_flow_0_study_packets.csv": {
+      "bytes": 19843635,
+      "sha256": "a9911652f661eb449ae9dc4aad6e56d8e8636d53c149dbbf39ec595a2e20be0a"
+    },
+    "selective-route75-delayed78/logs_ns3/tcp_flows.csv": {
+      "bytes": 75,
+      "sha256": "2fa7e654ea06e0f91745acd609b08a9daa37dffdcf01b8035c2ded8567a85017"
+    },
+    "selective-route75-delayed78/logs_ns3/tcp_flows.txt": {
+      "bytes": 336,
+      "sha256": "f971a8fa371d58169b3dcd209c3f33dd1fa2eac1a4ebb9a6d7ee751b00a56ed8"
+    },
+    "selective-route75-delayed78/logs_ns3/timing_results.csv": {
+      "bytes": 564,
+      "sha256": "eb65ac30c8cfc41f1cfa56d5408efa16d8553016d6a400bcfa99b2b9ed1cc6b5"
+    },
+    "selective-route75-delayed78/logs_ns3/timing_results.txt": {
+      "bytes": 909,
+      "sha256": "4359f6082de0adda7535ee154996ec9afb761bbb2ab5c419a64672828db57e25"
+    },
+    "selective-route75-delayed78/manifest.json": {
+      "bytes": 425768,
+      "sha256": "d037677c8373378137248f612da9420c67f59097ade762ccc0a07255b1b8ca8d"
+    },
+    "selective-route75-delayed78/schedule.csv": {
+      "bytes": 119,
+      "sha256": "c441ec9f73e726dcc20348d6c2fb2562401925fd26385a8c7ec8c45c9cf6c809"
+    }
+  },
+  "file_count": 30,
+  "raw_bytes": 77505353,
+  "archive_members_byte_verified": true,
+  "source_files_still_unchanged": true,
+  "helper_sha256": "e2d5527f74b3d8b42a98b93917326afda730e581fb93c8ecc12a5a7b85fc400c",
+  "posthoc_git_head": "9886df2703175f6f9bcc1ed327ed833168104aab",
+  "posthoc_repo_dirty": true,
+  "wall_seconds": 10.418526179000764,
+  "scope": "Completed run files only; no source volume or generated full routing state.",
+  "source_recipe": "Launch source commits and full runtime hashes are recorded separately per case; posthoc archiver identity is distinct."
+}

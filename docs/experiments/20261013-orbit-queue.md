@@ -1,6 +1,6 @@
 # Paired device-queue audit around the 75-second route transition
 
-Status: natural pair completed and verified; conditional routing input prepared for independent review, 13 October 2026. This is an independent diagnostic; it does not select the team's final topic. Existing study directories, source volumes and policies remain frozen.
+Status: all three declared conditions completed, raw/evidence verification passed, 13 October 2026. This is an independent diagnostic; it does not select the team's final topic. Existing study directories, source volumes and policies remain frozen.
 
 ## Question and fixed scope
 
@@ -55,8 +55,45 @@ There are no literal-full intervals or drops before T75 in the prewindow. Every 
 
 The larger selective queue is already present before the route switch. After selective recovery, the complete `[74.5,77.5)` mean occupancy is **lower** (48.717926 versus 67.179912 packets). This establishes a different congestion phase and a local full-device-stop discard mechanism; it does not establish a continuously higher queue or route shortening as the sole cause. Whole-run app goodput remains 9.544356 versus 9.5465088 Mbit/s.
 
-The posthoc analyzer initially used the new observer's `node_id/packet_uid` names for the unchanged legacy `study_drops.csv`, whose fields are `node/uid`. Only this analysis alias was corrected after both simulations; no source/runtime or simulation was rerun. The evidence preserves the launch analyzer hash separately from the final helper hash.
+The posthoc analyzer initially used the new observer's `node_id/packet_uid` names for the unchanged legacy `study_drops.csv`, whose fields are `node/uid`. This analysis alias was corrected after both simulations. Independent review then strengthened dropped-transmission identity to time/node/UID/flow/tx_id/tx_time/sequence/payload, because UID can repeat in simultaneous bursts; every tagged data drop also matches a sender TX row. The finalized exports were regenerated without rerunning or modifying any simulation, original manifest or runtime. Earlier intermediate exports remain outside Git in `/tmp/orbit-queue-prior-analysis`. [Phase receipt](assets/20261013-orbit-queue/phases.json) separates launch helpers from final posthoc helpers.
 
-The paired result warrants the single predeclared routing counterfactual. `delay_route.py` copied the supplied state and changed exactly two files: empty the original T75 delta and place its unchanged 30 rows at T78. Construction/validation took 13.103793 seconds. The [actual replacement files](assets/20261013-orbit-queue/routing-replacements.json) total 514 bytes. All 75.1–78.0 frames are empty in the original input, all earlier/static/capacity/other dynamic bytes are unchanged, and original future overrides remain intact. [Construction receipt](assets/20261013-orbit-queue/route-delay-input.json) validates the accumulated state, actual interface types and ISL counterpart identities, and all source-to-endpoint routes in both states at each of 32 affected frames. Both forward and reverse routes/link choices remain old until T78. The original T75 forecast/policy schedule stays unchanged; this is a fixed-policy routing intervention, not a deployed controller reforecast for T78. Native ideal shared-channel GSL validity does not prove physical visibility. Independent review and the parent chat's checkpoint are required before this third simulation; its execution is still pending.
+The paired result warranted the single predeclared routing counterfactual. `delay_route.py` copied the supplied state and changed exactly two files: empty the original T75 delta and place its unchanged 30 rows at T78. Construction/validation took 13.103793 seconds. The [actual replacement files](assets/20261013-orbit-queue/routing-replacements.json) total 514 bytes. All 75.1–78.0 frames are empty in the original input, all earlier/static/capacity/other dynamic bytes are unchanged, and original future overrides remain intact. [Construction receipt](assets/20261013-orbit-queue/route-delay-input.json) validates the accumulated state, actual interface types and ISL counterpart identities, and all source-to-endpoint routes in both states at each of 32 affected frames. Both forward and reverse routes/link choices remain old until T78. The original T75 forecast/policy schedule stays unchanged; this is a fixed-policy routing intervention, not a deployed controller reforecast for T78. Native ideal shared-channel GSL validity does not prove physical visibility.
 
-Raw inventories, final conditional results and publication links will be added after execution. Publication and common PR/Release records belong to the parent chat.
+Independent input/runner review cleared before the third run. Shared checkpoint `3767411cb0f154e7b40b7c098f9516f1c47fbc73` launched it with the same patch and 17 runtime hashes; it completed exit 0 in 29.789788 seconds. The [counterfactual evidence](assets/20261013-orbit-queue/counterfactual.json) verifies 16 temporal/projected pre-T75 comparisons and four full static files, preserving original app/packet/cwnd/RTT/drop/policy and observer histories. Bin flush/final-cutoff fields are excluded from temporal prefix comparisons because they may observe a later time. This is not a claim that 20 entire output files are identical. Counterfactual input/config differences are exactly the declared two routing files and the two directory locator properties; schedule bytes remain identical.
+
+| Source-device focus measure | Selective natural T75 switch | Selective switch delayed to T78 |
+|---|---:|---:|
+| Post `[75,75.5)` mean queued packets | 87.232381 | 85.875350 |
+| First literal-full/DEVICE_STOP | 75.564051455 s | 75.617356228 s |
+| First TcDrop | 75.591584423 s | 75.644889535 s |
+| Focus TcDrop / retransmissions / recovery entries | 11 / 12 / 2 | 11 / 12 / 2 |
+| Focus literal-full time | 22.661582 ms | 95.664354 ms |
+| Focus mean queued packets | 48.717926 | 50.089641 |
+| Whole app goodput | 9.5465088 Mbit/s | 9.5465088 Mbit/s |
+
+The route delay shifts the first rejection by 53.305112 ms, yet the same local queue still reaches 100 packets and rejects 11 transmissions **before the delayed switch occurs**. Thus the T75 route switch is not necessary for this overflow in the tested fixed-policy state. Routing affects the measured timing and queue evolution, so this is not evidence that routing has no influence. Packet identities/trajectories differ after T75 even though the listed whole-run app/retx/recovery/drop totals agree.
+
+Both conditions have zero selective wait actions in the focus and delayed-transition windows; the original 26-second episode remains unchanged. The descriptive `[77.5,80.5)` window has zero TcDrop/retransmissions/recoveries in both conditions, with equal app goodput 9.6232 Mbit/s. Exact occupancy logging ends at 77.5; later aligned queue bins report served-visit wait only, not direct time-weighted occupancy. This diagnostic does not test or establish the effectiveness of a geometry-only cwnd cap.
+
+## Reproduction and raw preservation
+
+Exactly three simulations were launched and completed; none failed or timed out, and no further condition was added. Wall runtimes reflect concurrent local load and are not network-performance comparisons. This track verifies added-observer equivalence to completed final V2 runs and the conditional input prefix; it does not claim a separate clean-volume replay or final assignment ZIP validation.
+
+Original launch commands (historical paths/receipts; use new outputs for reconstruction):
+
+```text
+python3 -B /work/code/orbit-queue/run.py base-natural selective-natural --root /tmp/orbit-queue --timeout 600 --checkpoint 66b2409
+python3 -B /work/code/orbit-queue/delay_route.py --receipt /work/docs/experiments/assets/20261013-orbit-queue/route-delay-input.json
+python3 -B /work/code/orbit-queue/run_cf.py --receipt /work/docs/experiments/assets/20261013-orbit-queue/route-delay-input.json --checkpoint 3767411 --root /tmp/orbit-queue-cf --timeout 600
+```
+
+The original launch versions remain in those checkpoints. The final CF wrapper adds `--ready` after launch as a CLI-only portability change, allowing a fresh build receipt and its matching fresh natural pair without overwriting the original readiness. See the [runner README](../../code/orbit-queue/README.md). Final analysis tools are posthoc, with separate hashes and no new TCP/runtime behavior.
+
+| Verified raw archive | Bytes | Members | SHA256 |
+|---|---:|---:|---|
+| `orbit-queue-natural-20261013.tar.gz` | 24,629,094 | 59 | `cfafbeae5f4761f53d0e823da84ee3388ff28b6817e67c05e8e2285c5310e064` |
+| `orbit-queue-route-delay-20261013.tar.gz` | 12,306,772 | 30 | `f852d8bbe44e6b5be4da7b6487172f5e0b29df5f0755f829162754dde8fc6157` |
+
+Every member was rehashed against the unchanged run files: [natural inventory](assets/20261013-orbit-queue/natural-raw-inventory.json), [conditional inventory](assets/20261013-orbit-queue/counterfactual-raw-inventory.json). Archives reside in ignored `output/tail-queue-raw`; the two tiny routing replacements and construction recipe reconstruct the conditional input from the pinned supplied state, without archiving a new topology. Image/resource identity is in [environment.json](assets/20261013-orbit-queue/environment.json), and the single-job build output is [final-build-log.txt](assets/20261013-orbit-queue/final-build-log.txt).
+
+Publication and shared Release verification are tracked in the [common follow-up record](20261013-tail-and-queue.md), maintained by the parent chat.

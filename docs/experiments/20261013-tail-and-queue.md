@@ -65,4 +65,41 @@ source·runner·runtime·입력·출력·실제 launch commit/dirty 상태를 �
 
 선택적 대기의11개 드롭은100패킷(143400B) 큐와 `device_stop=1`, `BQL=0`에 직접 연결된다. 송신 큐가 멈춘 상태인데 새 패킷을 보관할 root qdisc가 없어 TrafficControl에서 버린 것이다. DropTail 내부의 enqueue 실패와 이 상위 계층의 거절을 구별한다. 원본도 조금 뒤 같은 현상을 겪으며, 새 방식의 큐는 경로 변경 이전부터 더 컸다. 그렇다고 항상 더 크지는 않는다. 복구 뒤까지 포함한74.5–77.5초 평균은 선택적 대기가 더 낮다.
 
-두 조건 모두75–75.5초 송신 링크를100% 사용했다. 큐 대기는 실제 장치의 측정이며 SRTT를 대신 쓴 값이 아니다. [직접 관측·보존 검사](assets/20261013-orbit-queue/natural-pair.json)와 [상세 관측 기록](20261013-orbit-queue.md)에 원본 태그·장치·stop과 실제 drop 연결을 보존한다. 이 두 실행만으로75초 경로 변경이 드롭의 원인이라고 확정하지 않는다. 해당 전환만78초로 늦추는 사전 선언 대조의 안전성 검사를 이어 진행한다.
+두 조건 모두75–75.5초 송신 링크를100% 사용했다. 큐 대기는 실제 장치의 측정이며 SRTT를 대신 쓴 값이 아니다. [직접 관측·보존 검사](assets/20261013-orbit-queue/natural-pair.json)와 [상세 관측 기록](20261013-orbit-queue.md)에 원본 태그·장치·stop과 실제 drop 연결을 보존한다. 이 두 실행만으로75초 경로 변경이 드롭의 원인이라고 확정하지 않고 아래의 추가 대조를 진행했다.
+
+## 경로 전환을 늦춘 대조의 결과
+
+75초 전환을78초로 늦춰도75초 부근의 큐 드롭은 사라지지 않았다. 과거 이력이 같다는 검사 후, 전환이 없는75초 구간에도 같은 장치의100패킷 큐·송신 정지·11개 거절이 발생했다.
+
+| 측정 | 선택적 대기 + 원래75초 전환 | 같은 정책 + 전환을78초로 지연 |
+| --- | ---: | ---: |
+| 첫100패킷 큐 / 장치 정지 | 75.564051455초 | 75.617356228초 |
+| 첫 상위 계층 패킷 거절 | 75.591584423초 | 75.644889535초 |
+| 74.5–77.5초 드롭 / 재전송 / 복구 | 11 / 12 / 2 | 11 / 12 / 2 |
+| 75–75.5초 평균 큐 점유 | 87.2324패킷 | 85.8754패킷 |
+| 74.5–77.5초 큐가 실제100패킷이었던 누적 시간 | 22.661582ms | 95.664354ms |
+| 전체200초 전달 속도 / 재전송 / 복구 | 9.5465088Mbps / 507 / 40 | 동일 |
+
+첫 드롭은53.305112ms 늦어졌지만 드롭 자체는 남았고,78초로 미룬 전환의 별도77.5–80.5초 창에는 드롭·재전송·복구0회였다.75초와78초 창에서 선택적 손실 대기 동작도0회다. 이는 해당75초 경로 단축이 이 드롭의 **필수 원인이 아니라는 대조**이며 경로가 시각에 영향을 주지 않았다는 뜻은 아니다. 앞선26.2초의 복구 회피로 송신·혼잡·큐 주기가 달라진 설명과 일관된다. 그 개입의 영향을 세부 기제별로 완전히 분해하거나 모든 LEO 환경의 결론으로 일반화하지 않는다. 기하 BDP cap이 이 비용을 안전하게 줄인다는 근거도 새로 얻은 것이 아니다.
+
+입력 준비는 제공 sparse delta30행을 옮기는13.103793초 작업이었다. 새 토폴로지·APSP·궤도 자료를 생성하지 않았다. 실제로 바뀐 파일은75초/78초의 두 routing 파일뿐이고 static·용량·그 외 동적 입력은 같았다. 영향을 받는32개100ms frame의 양방향 경로와 native 장치/연결을 확인하고78초 이후 누적 상태·후속 override가 다시 같음을 검증했다. [입력 영수증](assets/20261013-orbit-queue/route-delay-input.json), [실제 작은 변경 파일](assets/20261013-orbit-queue/routing-delta/), [실행 후 대조 감사](assets/20261013-orbit-queue/counterfactual.json)가 재현 근거다.75초 이전20개 측정·관측 prefix/정적 파일이 같음을 확인했으며, 종료 때 flush된 bin을 과거 상태로 대신하지 않았다.
+
+원래75초 예측/정책 스케줄은 그대로 두었고 양방향 route/link 선택을 함께 늦췄다. 따라서 고정된 정책 아래의 routing 입력 대조다. native GSL의 가시성/range 제한 없는 이상적 공유 채널에서 연결이 유효한 것이며, 실제 위성 핸드오버의 가능성이나 RTT 하나의 독립 효과를 증명한 것은 아니다.
+
+## 실행 수와 원본 공유
+
+이번 요청의 새 시뮬레이션은 **13조건 모두 성공**했다. tail10·순수 큐 관측2·사전 선언한 routing 대조1이며 실패·timeout·추가 sweep은0이다. tail의 simulation wall 합은305.808134초, 큐 세 조건은64.071784/69.966455/29.789788초다. 이는 실행 예산 기록이고 링크 전달 속도나 알고리즘 효율의 척도가 아니다. build·입력 준비·hashing·분석·보관 시간은 별도다.
+
+tail source checkpoint는46d8810, 순수 큐 관측은66b2409, routing 대조는3767411이다. 각 실제 launch commit/dirty와 source/runtime/input/output SHA를 그대로 보존했다. 다른 트랙의 게시로 Git ref가 달라도 tail10조건의 실제 실행 파일 해시는 같다. 독립 읽기 검토에서 ordinary-window guard·FIN/기한·routing 입력·동일 runtime·변경 전 prefix를 확인했다. 기존 packet UID가 반복되는 사례가 있어 실행 후 드롭 연결을 time/node/UID/flow/tx_id/TXtime/seq/payload와 실제 sender TX로 강화했고 baseline499/selective486/대조486개 모두 통과했다. 분석 전용 수정은 원본 launch helper 및 실제 manifest와 구분하며 시뮬레이션을 다시 돌리지 않았다.
+
+[원본 prerelease](https://github.com/Jeongmin07/CS30401-Lab1/releases/tag/orbit-tail-queue-20261013)에 다음3개를 보관한다. 기존 연구 원본과 patch는 보존하며 두 새 combined patch도 별도 clean source에 각각 적용한다.
+
+| 원본 archive | 실행 범위 | 압축 bytes | 검증한 member 수 |
+| --- | --- | ---: | ---: |
+| orbit-tail-20261013.tar.gz | 최종 tail10조건 | 50,758,951 | 178 |
+| orbit-queue-natural-20261013.tar.gz | 순수 큐 관측2조건 | 24,629,094 | 59 |
+| orbit-queue-route-delay-20261013.tar.gz | routing 대조1조건 | 12,306,772 | 30 |
+
+총87,694,817B이며267개 member의 size/hash를 실제 archive에서 다시 확인했다. [tail inventory](assets/20261013-orbit-tail/raw-inventory.json), [큐 원본 inventory](assets/20261013-orbit-queue/natural-raw-inventory.json), [routing 대조 inventory](assets/20261013-orbit-queue/counterfactual-raw-inventory.json), [GitHub asset 확인](assets/20261013-tail-and-queue/release.json)을 연결한다. [정적 게시 검사](assets/20261013-tail-and-queue/verification.json)는 코드 구문·JSON·문서 링크·이전 연구 파일 보존 범위를 확인한다. 원본 다운로드 왕복이나 전체 조건의 독립 재실행을 수행했다는 뜻은 아니다.
+
+현재의 제한된 결론은 짧은 파일 한 조건의 마지막 패킷 비용을 보완했고,75초 드롭의 직접 장치 원인과 경로 변경의 필수성 여부를 확인했다는 것이다. 큰 처리량 개선·모든 짧은 파일의 해결·기하 BDP cap의 이득·최종 팀 주제를 확정하지 않는다. 다른 조원과 각자의 AI는 공통 기록과 두 세부 실험을 읽고 보고서에 사용할 효과·비용·정보 가정을 검토할 수 있다.

@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "container": "lab1-orbit-queue-20261013",
+  "volume": "cs30401-orbit-queue-ns3-20261013",
+  "image_ref": "ghcr.io/yeonjong21/cs30401-lab1@sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+  "host_inspected_actual_image_id": "sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
+  "host_inspected_nano_cpus": 2000000000,
+  "host_inspected_memory_bytes": 4294967296,
+  "build_jobs": 1,
+  "ns3_head": "99bc6f733274475b7a6e804128651e17ee2a2536",
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+  "host_image_inspection_command": [
+    "docker",
+    "inspect",
+    "--format",
+    "{{.Image}} {{.Config.Image}} {{.HostConfig.NanoCpus}} {{.HostConfig.Memory}}",
+    "lab1-orbit-queue-20261013"
+  ],
+  "scope": "Source and runtime remained immutable for all three conditions; no new topology or visibility test."
+}

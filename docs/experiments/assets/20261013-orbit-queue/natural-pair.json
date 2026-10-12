@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "helper_sha256": "9e13e7cc76943b6d8f1ec31e7d96681aad95ec678bc02b7497470ce7b4a81585",
+  "helper_sha256": "efa69ba813f3c1d5984f7cfdac0b4af54b36572844a35b6f31dd3c7066038b2a",
   "reference_receipt_sha256": "e1f794c274a8a6dc49aba543d268124d9123fa5eb2e2b62ce227fd428bb15009",
   "cases": {
     "base-natural": {
@@ -6263,6 +6263,7 @@
         "input_state_equal": true,
         "exact_tc_drop_multiset": true,
         "all_queue_conservation": true,
+        "tagged_tc_drops_match_sender_tx": true,
         "source_runtime_unchanged": true
       },
       "source": {
@@ -13288,6 +13289,7 @@
         "input_state_equal": true,
         "exact_tc_drop_multiset": true,
         "all_queue_conservation": true,
+        "tagged_tc_drops_match_sender_tx": true,
         "source_runtime_unchanged": true
       },
       "source": {

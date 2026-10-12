@@ -17,6 +17,7 @@ def main():
     p.add_argument('--root', type=Path, default=Path('/tmp/orbit-queue-cf'))
     p.add_argument('--natural-root', type=Path, default=Path('/tmp/orbit-queue'))
     p.add_argument('--timeout', type=int, default=600)
+    p.add_argument('--ready', type=Path, default=HERE/'build-ready.json')
     a = p.parse_args(); receipt = json.loads(a.receipt.read_text())
     assert all(receipt['checks'].values()), 'Input construction checks failed'
     assert receipt['original_transition_ns'] == 75_000_000_000 and receipt['delayed_transition_ns'] == 78_000_000_000
@@ -30,7 +31,7 @@ def main():
     current_patch = run.sha(HERE/'ns3.patch')
     assert original['patch_sha256'] == original['installed_diff_sha256'] == current_patch
     assert original['runtime_files'] == run.runtime(), 'Runtime differs from the completed selective case'
-    assert original['build_ready_sha256'] == run.sha(HERE/'build-ready.json')
+    assert original['build_ready_sha256'] == run.sha(a.ready)
     assert run.sha(original_run/'schedule.csv') == receipt['original_selective_schedule_sha256']
     assert run.sha(original_run/'manifest.json') == receipt['original_selective_manifest_sha256']
     name = 'selective-route75-delayed78'
@@ -41,7 +42,7 @@ def main():
         implementation_patch_and_runtime_unchanged=True,
         intervention='Only the supplied T75 sparse routing delta moves to T78, both directions/link choices.',
         limit='Native ideal shared-GSL routing counterfactual; physical visibility and deployment feasibility unproved.')
-    run.execute(name, a.root, a.timeout, HERE/'build-ready.json', a.checkpoint,
+    run.execute(name, a.root, a.timeout, a.ready, a.checkpoint,
                 input_state=state, routing_counterfactual=provenance)
 
 
