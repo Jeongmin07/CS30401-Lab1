@@ -69,11 +69,13 @@ def run_case(name, root, timeout):
     record = {
         "case": name, "definition": definition,
         "kind": "shared-bottleneck-admission-diagnostic-not-natural-route-merge",
-        "repo_commit": command_output(["git", "rev-parse", "HEAD"], "/work"),
+        "repo_commit": command_output(["git", "-c", "safe.directory=/work", "rev-parse", "HEAD"], "/work"),
         "runner_sha256": sha(__file__),
         "ns3_head": command_output(["git", "rev-parse", "HEAD"], NS3),
-        "installed_diff_sha256": hashlib.sha256(subprocess.check_output(
-            ["git", "diff", "--binary", "HEAD"], cwd=NS3)).hexdigest(),
+        "effective_build_diff_sha256": hashlib.sha256(b"" if definition["reference"] else
+            subprocess.check_output(["git", "diff", "--binary", "HEAD"], cwd=NS3)).hexdigest(),
+        "source_note": "Reference build copied before edits; its effective diff is empty."
+                       if definition["reference"] else "Current installed source diff.",
         "config_sha256": sha(config), "schedule_sha256": sha(schedule),
         "command": argv, "environment": {key: env[key] for key in [
             "LD_LIBRARY_PATH", "CS30401_BBR_OBSERVE", "CS30401_BBR_OBSERVE_DIR"]},
