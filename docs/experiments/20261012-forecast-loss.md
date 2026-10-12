@@ -81,7 +81,8 @@ Guide의 cwnd/SRTT 그래프는 PDF9쪽이며 10쪽 globe에도 Figure3 번호�
 - [기존 원본과의 비교](assets/20261012-forecast-loss/historical-equivalence.json): LEO10 baseline과 finite 첫/중간 baseline 세 조건의 원본8개씩, 총24개 CSV가 기존 v6 결과와 byte-identical이다. default off의 이 조건들에 대한 검증이며 전 조건의 무영향 증명이 아니다.
 - [그림 receipt](assets/20261012-forecast-loss/figures/plot-receipt.json)는 작은 summary8개·full-analysis hash·표시 값·PNG/PDF4개의 SHA를 연결한다. 실제 숫자와 시각적 잘림/겹침을 확인했다. Git의13-case export와 모든 그림 입력이 같은 바이트임도 검증했다.
 - simulation wall time 합계는271.3979초다. 빌드·분석·자료 공유 시간은 제외했고 연속 batch 전체 경과 시간이나 독립 반복 횟수로 쓰지 않는다. 모든13개가180초 개별 cap 안에 성공했다.
-- 원본 압축은85,141,440B, 텍스트205개, 미압축529,509,233B다. SHA256 `3d55c45297446dbdf601bdbfe9485a9e1ed7c6098d8306778dd9c6991fd7c3d1`. [inventory](assets/20261012-forecast-loss/raw-inventory.json)의 모든 member size/SHA를 실제 archive와 대조했다. build/state는 포함하지 않는다. 원본 공유 링크와 별도 clean replay 범위는 후속 공유 기록에 추가한다.
+- 원본 압축은85,141,440B, 텍스트205개, 미압축529,509,233B다. SHA256 `3d55c45297446dbdf601bdbfe9485a9e1ed7c6098d8306778dd9c6991fd7c3d1`. [inventory](assets/20261012-forecast-loss/raw-inventory.json)의 모든 member size/SHA를 실제 archive와 대조했다. [GitHub diagnostic prerelease](https://github.com/Jeongmin07/CS30401-Lab1/releases/tag/forecast-loss-20261012)의 [압축 원본](https://github.com/Jeongmin07/CS30401-Lab1/releases/download/forecast-loss-20261012/forecast-loss-20261012.tar.gz)을 공유했고 GitHub asset digest/size도 일치했다. build/state는 포함하지 않는다. release target은 공유 commit이며 실제 실행 commit은 각 manifest를 따른다.
+- [새 빈 volume의 별도 재현](assets/20261012-forecast-loss/clean-replay.json): combined patch 한 장을 원본 공식 source에 적용해 빌드하고, `loss-first-bounded`와 `leo10-forecast` **두 조건만** 다시 실행했다. 측정CSV19개와 schedule1개, 설정·상태 입력·모든 실행 binary/library가 원본과 일치했다. wall-clock profiling `timing_results.csv` 한 개는 서로 다르고 양쪽 SHA를 보존했다. 전체13개나 분석/그림을 다시 재현한 주장은 하지 않는다. 별도 빌드33.06초·두 실행 약17.77초이며 앞의271.3979초와 구분한다.
 
 ## 이번 단계의 판단
 
