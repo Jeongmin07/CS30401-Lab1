@@ -1,0 +1,9 @@
+time_ns,pair_a,pair_b,both_reachable,shared_directed_edge_count,shared_isl_edge_count,shared_gsl_edge_count,shared_directed_egress_count,shared_isl_edges,shared_gsl_edges
+0,gs-1584-to-1585,gs-1585-to-1584,True,0,0,0,0,[],[]
+20000000000,gs-1584-to-1585,gs-1585-to-1584,True,0,0,0,0,[],[]
+40000000000,gs-1584-to-1585,gs-1585-to-1584,True,0,0,0,0,[],[]
+60000000000,gs-1584-to-1585,gs-1585-to-1584,True,0,0,0,0,[],[]
+100000000000,gs-1584-to-1585,gs-1585-to-1584,True,0,0,0,0,[],[]
+140000000000,gs-1584-to-1585,gs-1585-to-1584,True,0,0,0,0,[],[]
+180000000000,gs-1584-to-1585,gs-1585-to-1584,True,0,0,0,0,[],[]
+199900000000,gs-1584-to-1585,gs-1585-to-1584,True,0,0,0,0,[],[]

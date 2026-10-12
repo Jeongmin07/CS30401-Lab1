@@ -76,6 +76,8 @@ def run_case(name, root, timeout):
             subprocess.check_output(["git", "diff", "--binary", "HEAD"], cwd=NS3)).hexdigest(),
         "source_note": "Reference build copied before edits; its effective diff is empty."
                        if definition["reference"] else "Current installed source diff.",
+        "observer_patch_sha256": None if definition["reference"] else
+            sha(Path(__file__).parent / "ns3-observe.patch"),
         "config_sha256": sha(config), "schedule_sha256": sha(schedule),
         "command": argv, "environment": {key: env[key] for key in [
             "LD_LIBRARY_PATH", "CS30401_BBR_OBSERVE", "CS30401_BBR_OBSERVE_DIR"]},
@@ -84,6 +86,7 @@ def run_case(name, root, timeout):
         "state_static_sha256": {path.name: sha(path) for path in sorted(STATE.iterdir())
                                 if path.is_file()},
         "state_note": "Unmodified supplied Seoul-London state; 100ms delta forwarding.",
+        "image_digest": "ghcr.io/yeonjong21/cs30401-lab1@sha256:3cb4877c73b4ae5e3542c1567b6761a8913056dd429d8a18f7c40aeeb399b3b4",
         "sim_seconds": 40, "rate_mbps": 100, "queue_packets": 100,
         "seed": 123456789, "primary_window_seconds": [10, 40],
         "event_window_seconds": [10, 15], "timeout_seconds": timeout,
