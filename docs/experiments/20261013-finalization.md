@@ -46,3 +46,9 @@
 `Lab1_5.zip`은 773,756 bytes, 54개 파일, SHA256 `695af4d2338576c6bfd84a6401521964368303bf735b46dd61005844f48e9595`다. 루트는 `report.pdf`, `README.md`, `code/`이며 로그·state·ns-3 트리·빌드·가상환경·초기 preview는 없다. [ZIP 생성·검수](assets/20261013-finalization/submission-package.json)는 실제 검증한 실행 파일과의 바이트 일치, 검토된 두 분석 파일 수정, 모든 archive member hash를 기록한다. 최종 ZIP을 별도 위치에 추출한 후 공식 이미지의 읽기 전용 단독 mount에서 코드 import·19개 조건·세 alias·두 patch hash·Git 없는 실행도 확인했다. 이는 추가 시뮬레이션이 아닌 최종 포장 검증이다.
 
 보고서 PDF는 185,984 bytes, SHA256 `3cd0da9394f0db36f30810a333c759932518e02a115f32b397845fb6a63cc770`다. 수치와 패킷 증거·재현·시각 검사·포장 검증은 각각 별도 기록이며 어느 하나를 다른 검증으로 대체하지 않는다. Release 업로드와 원격 자산 확인은 아래 공유 기록에서 별도로 완료한다.
+
+## 원격 공유 확인
+
+[검토용 Release](https://github.com/Jeongmin07/CS30401-Lab1/releases/tag/lab1-final-20261013)는 immutable target `385be59765a670a14e8379caab43e0b82d3e87af`에 연결됐다. `Lab1_5.zip`, `report.pdf`, 새 raw archive 두 개와 `SHA256SUMS.txt`를 게시했고, GitHub가 반환한 다섯 자산의 실제 크기와 SHA256 digest를 로컬 파일에 전부 대조했다. [원격 확인](assets/20261013-finalization/release.json)에 다운로드 주소와 해시가 있다. 별도 [독립 최종 검토](assets/20261013-finalization/independent-review.json)도 archive member·실행 코드·새 데이터·저자·형식·재현 경로에서 막힌 항목이 없음을 확인했다.
+
+준비·재현·문서·포장·공유 작업은 완료됐다. PR16은 팀 검토에 넘기며 KLMS 업로드·개인 Contribution Survey·`main` 병합은 수행하지 않았다.
