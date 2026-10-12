@@ -115,7 +115,7 @@ def execute(name, root, timeout):
                   repo_dirty=bool(git('status','--porcelain')),
                   runner_sha256=sha(__file__), patch_sha256=sha(patch),
                   installed_diff_sha256=hashlib.sha256(source+b'\n').hexdigest(),
-                  ns3_head=git('rev-parse','HEAD',cwd=NS3).decode(), image_digest=IMAGE,
+                  ns3_head=git('rev-parse','HEAD',cwd=NS3).decode(), declared_image_digest=IMAGE,
                   runtime_files={str(p.relative_to(NS3/'build')):sha(p)
                                  for p in [binary,*sorted((NS3/'build/lib').glob('*.so'))]},
                   state_static_sha256={p.name:sha(p) for p in sorted(STATE.iterdir()) if p.is_file()},
@@ -124,7 +124,9 @@ def execute(name, root, timeout):
                   forecast_source_sha256=sha(TRUTH), forecast_rule='H=2*max(old,new propagation RTT)',
                   hints=hints, additional_parameters=additional,
                   environment={k:env[k] for k in ('CS30401_STUDY_TRACE','CS30401_STUDY_TRACE_DIR','LD_LIBRARY_PATH')},
-                  declared_event_windows_s=[[25.7,28.2],[74.5,77.0]] if case['kind']=='leo' else [[1.5,4.0]],
+                  declared_event_windows_s=([w for w in [[25.7,28.2],[74.5,77.0]]
+                                            if w[1] <= case['duration']]
+                                           if case['kind']=='leo' else [[1.5,4.0]]),
                   timeout_s=timeout, expected_finite_bytes=27600 if case['kind']=='micro' else None)
     (run/'manifest.json').write_text(json.dumps(record,indent=2)+'\n')
     start = time.monotonic()
