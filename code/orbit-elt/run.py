@@ -32,11 +32,17 @@ def execute(name,a):
         CS30401_ORBIT_SERVICE_TRACE='1',CS30401_QUEUE_FLOW_TRACE='1',
         CS30401_QUEUE_PACING_RATE_TRACE='1',CS30401_QUEUE_PACING_FIRST_LOSS='0')
     ns3=c.NS3;repo=c.HERE.parents[1]
+    try:
+        base=['git','-c',f'safe.directory={repo}']
+        call=lambda *parts:subprocess.check_output(base+list(parts),cwd=repo,stderr=subprocess.DEVNULL)
+        package_git=dict(commit=call('rev-parse','HEAD').decode().strip(),dirty=bool(call('status','--porcelain')))
+    except subprocess.CalledProcessError:
+        package_git=dict(commit=None,dirty=None,qualification=
+            'Windows worktree Git metadata is inaccessible from this bind mount. Source checkpoint is host-declared; exact source files, installed patch and runtime are independently hashed.')
     record=dict(case=name,status='running',definition=d,profile='elt',tail_admission=d['tail'],
         expected_finite_bytes=d.get('bytes'),command=argv,cwd=str(ns3),
         source_checkpoint=a.checkpoint,declared_source_checkpoint=a.checkpoint,
-        repo_commit=c.git('rev-parse','HEAD',cwd=repo).decode().strip(),
-        repo_dirty=bool(c.git('status','--porcelain',cwd=repo)),
+        repo_commit=package_git['commit'],repo_dirty=package_git['dirty'],package_git=package_git,
         source_files=sources,runtime_files=before,patch_sha256=c.sha(c.HERE/'ns3.patch'),
         installed_diff_sha256=__import__('hashlib').sha256(diff).hexdigest(),
         runner_sha256=c.sha(Path(__file__)),build_ready_sha256=c.sha(a.ready),
