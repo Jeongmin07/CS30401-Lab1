@@ -1,0 +1,1834 @@
+{
+  "schema": 1,
+  "purpose": "Checksum and scalar parity checks only; never used to generate result figures or tables. No raw logs.",
+  "cases": {
+    "micro-base": {
+      "profile": "pace",
+      "metrics": {
+        "case": "micro-base",
+        "duration_s": 4.0,
+        "flow_start_s": 0.0,
+        "expected_finite_bytes": 27600,
+        "receiver_bytes": 27600,
+        "receiver_goodput_mbps": 0.0552,
+        "transfer_complete": true,
+        "fct_s": 0.25150992,
+        "retransmissions": 1,
+        "recovery_entries": 1,
+        "ca_loss_entries": 0,
+        "distinct_tagged_drops": 1,
+        "drop_trace_rows": 1,
+        "actual_high_threshold_time_s": 0,
+        "censored_high_threshold_intervals": 0,
+        "guard_starts": 0,
+        "guard_start_skips": 0,
+        "bounded_expiry_reevaluations": 0,
+        "expiry_entered_recovery": 0
+      },
+      "measurement_csvs": {
+        "logs_ns3/study_app_rx_node_1_port_1024.csv": {
+          "bytes": 733,
+          "sha256": "b35c9ac46bde2331da713fba1846eeb718c907027d0bb2f050acdf2fbca75b5e"
+        },
+        "logs_ns3/study_drop_coverage.csv": {
+          "bytes": 328,
+          "sha256": "f2bbce727ae1f61019ef8f727753e3a8f64abdeb41d660a20a3607802f4524f4"
+        },
+        "logs_ns3/study_drops.csv": {
+          "bytes": 194,
+          "sha256": "e875ed492bd803c301bd18a29514bca50a6edfe104a69a85ae1ec68003bac35c"
+        },
+        "logs_ns3/study_rx_node_1_port_1024.csv": {
+          "bytes": 1849,
+          "sha256": "cb432b3cd841713975a574fc6919f5cf0812185846599bdd17182cccacd11e5a"
+        },
+        "logs_ns3/tcp_flow_0_cwnd.csv": {
+          "bytes": 233,
+          "sha256": "ceb39256e8a1e4c940cb3f597b7e200596f2e9ff1f9ac9a0a5075021e8262630"
+        },
+        "logs_ns3/tcp_flow_0_progress.csv": {
+          "bytes": 160,
+          "sha256": "b583a1b2888476107f8d65535c480fa872d89ef79c7b12c3cdb4380249a86e98"
+        },
+        "logs_ns3/tcp_flow_0_rtt.csv": {
+          "bytes": 110,
+          "sha256": "f46faf24fbfea5e839643bcebcbd4b6f10073f725ed5a139f993b2c823b14278"
+        },
+        "logs_ns3/tcp_flow_0_study_events.csv": {
+          "bytes": 238,
+          "sha256": "3038a5be2c89948a5724671c2c638a3c408f7828393d6a2513b0a6e6e636863e"
+        },
+        "logs_ns3/tcp_flow_0_study_packets.csv": {
+          "bytes": 2680,
+          "sha256": "9774112da74ac364fbe1421ae7d2f532b3e0450cf2f32d874f6362b9043bd6e6"
+        }
+      },
+      "reference_path": "docs/experiments/assets/20261013-orbit-tail/final/cases/micro-base/summary.json",
+      "reference_sha256": "6b04dafa8bb388431f7774316b8fb1225193e585878dafb5c4fd99e9ec8c74ad"
+    },
+    "micro-selective": {
+      "profile": "pace",
+      "metrics": {
+        "case": "micro-selective",
+        "duration_s": 4.0,
+        "flow_start_s": 0.0,
+        "expected_finite_bytes": 27600,
+        "receiver_bytes": 27600,
+        "receiver_goodput_mbps": 0.0552,
+        "transfer_complete": true,
+        "fct_s": 0.3504824,
+        "retransmissions": 1,
+        "recovery_entries": 1,
+        "ca_loss_entries": 0,
+        "distinct_tagged_drops": 1,
+        "drop_trace_rows": 1,
+        "actual_high_threshold_time_s": 0,
+        "censored_high_threshold_intervals": 0,
+        "guard_starts": 0,
+        "guard_start_skips": 0,
+        "bounded_expiry_reevaluations": 0,
+        "expiry_entered_recovery": 0
+      },
+      "measurement_csvs": {
+        "logs_ns3/study_app_rx_node_1_port_1024.csv": {
+          "bytes": 278,
+          "sha256": "68282cab648ac5c1f1614dc8a9e324de04dfdce1fe96588313e66fc879de6ff4"
+        },
+        "logs_ns3/study_drop_coverage.csv": {
+          "bytes": 328,
+          "sha256": "f2bbce727ae1f61019ef8f727753e3a8f64abdeb41d660a20a3607802f4524f4"
+        },
+        "logs_ns3/study_drops.csv": {
+          "bytes": 194,
+          "sha256": "e875ed492bd803c301bd18a29514bca50a6edfe104a69a85ae1ec68003bac35c"
+        },
+        "logs_ns3/study_rx_node_1_port_1024.csv": {
+          "bytes": 1821,
+          "sha256": "99168bced495f41fc683fe721c54f3dc14f68832ce4ffcc5b56432dca1af351c"
+        },
+        "logs_ns3/tcp_flow_0_cwnd.csv": {
+          "bytes": 125,
+          "sha256": "e3fca5845078ebfe43cff4ea1364ceec472ab74e0938e2922c499f6b897630df"
+        },
+        "logs_ns3/tcp_flow_0_orbit_loss.csv": {
+          "bytes": 1233,
+          "sha256": "9218e1576a9faf477e39906a3bea23158ca96a17e77726accd74b3f6010bf59d"
+        },
+        "logs_ns3/tcp_flow_0_orbit_loss_tail.csv": {
+          "bytes": 249,
+          "sha256": "670b7cc8ea7f4a63844fa39c9eed682067b8a08ee79e434b430e916c53e8793a"
+        },
+        "logs_ns3/tcp_flow_0_progress.csv": {
+          "bytes": 106,
+          "sha256": "d15bcf3891bebadf9b75b90269fc6bc9e235d2beeaa03f67f1f1d68ac5cbbad9"
+        },
+        "logs_ns3/tcp_flow_0_rtt.csv": {
+          "bytes": 44,
+          "sha256": "8ffbede61eb234ea6a582be7c507d2e5d21fcbbb82ddb3b62f147771ec32ae83"
+        },
+        "logs_ns3/tcp_flow_0_study_events.csv": {
+          "bytes": 238,
+          "sha256": "40b65890df347d24b0f507e81eea09ed4ffb6893ca09255b6443670cc6f12fb5"
+        },
+        "logs_ns3/tcp_flow_0_study_packets.csv": {
+          "bytes": 2946,
+          "sha256": "4283cde1fd113e2e34cdf1e9660449d11eced8500f41608d3b52d34342c0ca26"
+        }
+      },
+      "reference_path": "docs/experiments/assets/20261013-orbit-tail/final/cases/micro-selective/summary.json",
+      "reference_sha256": "2c8595134dc1cb6dbbccbca7a697072c2d37175de539131f7b328a797bfcb0d5"
+    },
+    "micro-tail": {
+      "profile": "pace",
+      "metrics": {
+        "case": "micro-tail",
+        "duration_s": 4.0,
+        "flow_start_s": 0.0,
+        "expected_finite_bytes": 27600,
+        "receiver_bytes": 27600,
+        "receiver_goodput_mbps": 0.0552,
+        "transfer_complete": true,
+        "fct_s": 0.257223678,
+        "retransmissions": 1,
+        "recovery_entries": 1,
+        "ca_loss_entries": 0,
+        "distinct_tagged_drops": 1,
+        "drop_trace_rows": 1,
+        "actual_high_threshold_time_s": 0,
+        "censored_high_threshold_intervals": 0,
+        "guard_starts": 0,
+        "guard_start_skips": 0,
+        "bounded_expiry_reevaluations": 0,
+        "expiry_entered_recovery": 0
+      },
+      "measurement_csvs": {
+        "logs_ns3/study_app_rx_node_1_port_1024.csv": {
+          "bytes": 213,
+          "sha256": "0cc1691a749637b2e00fbe73a93d58fce89b016f43cd27994db7f0da140b3581"
+        },
+        "logs_ns3/study_drop_coverage.csv": {
+          "bytes": 328,
+          "sha256": "f2bbce727ae1f61019ef8f727753e3a8f64abdeb41d660a20a3607802f4524f4"
+        },
+        "logs_ns3/study_drops.csv": {
+          "bytes": 194,
+          "sha256": "e875ed492bd803c301bd18a29514bca50a6edfe104a69a85ae1ec68003bac35c"
+        },
+        "logs_ns3/study_rx_node_1_port_1024.csv": {
+          "bytes": 1817,
+          "sha256": "fe6d05ecf49669bafc8d3e732755443215431c7b8cd666ea7270a069953eb874"
+        },
+        "logs_ns3/tcp_flow_0_cwnd.csv": {
+          "bytes": 143,
+          "sha256": "17c74bef1830b3666d72b43fb6c67dfe3b64a8154f6ee6684f8232128abacfb9"
+        },
+        "logs_ns3/tcp_flow_0_orbit_loss.csv": {
+          "bytes": 1233,
+          "sha256": "65425aa39716a0ddbbb98188869d0dd428c5474659ac00482c877a94582d2590"
+        },
+        "logs_ns3/tcp_flow_0_orbit_loss_tail.csv": {
+          "bytes": 1008,
+          "sha256": "9b4059ca2cd970fba4641317e1507f9ea2b1b288817e72084da9a5481e918000"
+        },
+        "logs_ns3/tcp_flow_0_progress.csv": {
+          "bytes": 74,
+          "sha256": "8131123d560f49d8565894b4789934eb98a7c51efd79c81c10f0a24c630654c8"
+        },
+        "logs_ns3/tcp_flow_0_rtt.csv": {
+          "bytes": 44,
+          "sha256": "b7a405044fcf382bd907731a6904f647632ebafdcdd9c5ca2a2858afc18c9107"
+        },
+        "logs_ns3/tcp_flow_0_study_events.csv": {
+          "bytes": 238,
+          "sha256": "40b65890df347d24b0f507e81eea09ed4ffb6893ca09255b6443670cc6f12fb5"
+        },
+        "logs_ns3/tcp_flow_0_study_packets.csv": {
+          "bytes": 2896,
+          "sha256": "49e61b2453ecbab5ca6d6bc6b5bee7ebb183605863a50feaf5afb03cac74e82b"
+        }
+      },
+      "reference_path": "docs/experiments/assets/20261013-orbit-tail/final/cases/micro-tail/summary.json",
+      "reference_sha256": "d355aa8acd9ce87d97039a89c4fb533d6f54eb579695b919aa34eae262d2bb66"
+    },
+    "micro21-selective": {
+      "profile": "pace",
+      "metrics": {
+        "case": "micro21-selective",
+        "duration_s": 4.0,
+        "flow_start_s": 0.0,
+        "expected_finite_bytes": 28980,
+        "receiver_bytes": 28980,
+        "receiver_goodput_mbps": 0.05796,
+        "transfer_complete": true,
+        "fct_s": 0.35059712,
+        "retransmissions": 1,
+        "recovery_entries": 1,
+        "ca_loss_entries": 0,
+        "distinct_tagged_drops": 1,
+        "drop_trace_rows": 1,
+        "actual_high_threshold_time_s": 0,
+        "censored_high_threshold_intervals": 0,
+        "guard_starts": 0,
+        "guard_start_skips": 0,
+        "bounded_expiry_reevaluations": 0,
+        "expiry_entered_recovery": 0
+      },
+      "measurement_csvs": {
+        "logs_ns3/study_app_rx_node_1_port_1024.csv": {
+          "bytes": 343,
+          "sha256": "4b443f381f3a1789e5217174ed8afbf52fad0f7db2d66593fa8767aafad5ea9b"
+        },
+        "logs_ns3/study_drop_coverage.csv": {
+          "bytes": 328,
+          "sha256": "f2bbce727ae1f61019ef8f727753e3a8f64abdeb41d660a20a3607802f4524f4"
+        },
+        "logs_ns3/study_drops.csv": {
+          "bytes": 194,
+          "sha256": "e875ed492bd803c301bd18a29514bca50a6edfe104a69a85ae1ec68003bac35c"
+        },
+        "logs_ns3/study_rx_node_1_port_1024.csv": {
+          "bytes": 1905,
+          "sha256": "e416d61299485757ff77793f8ff2a103680416e1f02e81cb782512b9c8267e2e"
+        },
+        "logs_ns3/tcp_flow_0_cwnd.csv": {
+          "bytes": 143,
+          "sha256": "15c27df1662d3684046e77fc2870d145fc5ec00ee20bd74b147c64c6bbd15b5e"
+        },
+        "logs_ns3/tcp_flow_0_orbit_loss.csv": {
+          "bytes": 1233,
+          "sha256": "9218e1576a9faf477e39906a3bea23158ca96a17e77726accd74b3f6010bf59d"
+        },
+        "logs_ns3/tcp_flow_0_orbit_loss_tail.csv": {
+          "bytes": 249,
+          "sha256": "670b7cc8ea7f4a63844fa39c9eed682067b8a08ee79e434b430e916c53e8793a"
+        },
+        "logs_ns3/tcp_flow_0_progress.csv": {
+          "bytes": 106,
+          "sha256": "2b2b1ffe258d82aa268e1505e7cf7ca8d4a354fe28a042fed6167a79e81e8389"
+        },
+        "logs_ns3/tcp_flow_0_rtt.csv": {
+          "bytes": 44,
+          "sha256": "ced902551c2e5be981c1fdf07d10db108daf76f31c8729b907aa418c51dc378a"
+        },
+        "logs_ns3/tcp_flow_0_study_events.csv": {
+          "bytes": 238,
+          "sha256": "40b65890df347d24b0f507e81eea09ed4ffb6893ca09255b6443670cc6f12fb5"
+        },
+        "logs_ns3/tcp_flow_0_study_packets.csv": {
+          "bytes": 3008,
+          "sha256": "8c6054ac48f7e232eaab59398989ad12bf7a93c38e6ce91d0ec40a374872b891"
+        }
+      },
+      "reference_path": "docs/experiments/assets/20261013-orbit-tail/final/cases/micro21-selective/summary.json",
+      "reference_sha256": "d6aa2c0dc03841947c2df442dcfe740ed84422dc1739d1cf1e16e54ed8b375d1"
+    },
+    "micro21-tail": {
+      "profile": "pace",
+      "metrics": {
+        "case": "micro21-tail",
+        "duration_s": 4.0,
+        "flow_start_s": 0.0,
+        "expected_finite_bytes": 28980,
+        "receiver_bytes": 28980,
+        "receiver_goodput_mbps": 0.05796,
+        "transfer_complete": true,
+        "fct_s": 0.35059712,
+        "retransmissions": 1,
+        "recovery_entries": 1,
+        "ca_loss_entries": 0,
+        "distinct_tagged_drops": 1,
+        "drop_trace_rows": 1,
+        "actual_high_threshold_time_s": 0,
+        "censored_high_threshold_intervals": 0,
+        "guard_starts": 0,
+        "guard_start_skips": 0,
+        "bounded_expiry_reevaluations": 0,
+        "expiry_entered_recovery": 0
+      },
+      "measurement_csvs": {
+        "logs_ns3/study_app_rx_node_1_port_1024.csv": {
+          "bytes": 343,
+          "sha256": "4b443f381f3a1789e5217174ed8afbf52fad0f7db2d66593fa8767aafad5ea9b"
+        },
+        "logs_ns3/study_drop_coverage.csv": {
+          "bytes": 328,
+          "sha256": "f2bbce727ae1f61019ef8f727753e3a8f64abdeb41d660a20a3607802f4524f4"
+        },
+        "logs_ns3/study_drops.csv": {
+          "bytes": 194,
+          "sha256": "e875ed492bd803c301bd18a29514bca50a6edfe104a69a85ae1ec68003bac35c"
+        },
+        "logs_ns3/study_rx_node_1_port_1024.csv": {
+          "bytes": 1905,
+          "sha256": "e416d61299485757ff77793f8ff2a103680416e1f02e81cb782512b9c8267e2e"
+        },
+        "logs_ns3/tcp_flow_0_cwnd.csv": {
+          "bytes": 143,
+          "sha256": "15c27df1662d3684046e77fc2870d145fc5ec00ee20bd74b147c64c6bbd15b5e"
+        },
+        "logs_ns3/tcp_flow_0_orbit_loss.csv": {
+          "bytes": 1233,
+          "sha256": "9218e1576a9faf477e39906a3bea23158ca96a17e77726accd74b3f6010bf59d"
+        },
+        "logs_ns3/tcp_flow_0_orbit_loss_tail.csv": {
+          "bytes": 1013,
+          "sha256": "bdb129fd3cce59d77075a22dc4fbe939e845208aa07f36032a759da417d66cf3"
+        },
+        "logs_ns3/tcp_flow_0_progress.csv": {
+          "bytes": 106,
+          "sha256": "2b2b1ffe258d82aa268e1505e7cf7ca8d4a354fe28a042fed6167a79e81e8389"
+        },
+        "logs_ns3/tcp_flow_0_rtt.csv": {
+          "bytes": 44,
+          "sha256": "ced902551c2e5be981c1fdf07d10db108daf76f31c8729b907aa418c51dc378a"
+        },
+        "logs_ns3/tcp_flow_0_study_events.csv": {
+          "bytes": 238,
+          "sha256": "40b65890df347d24b0f507e81eea09ed4ffb6893ca09255b6443670cc6f12fb5"
+        },
+        "logs_ns3/tcp_flow_0_study_packets.csv": {
+          "bytes": 3008,
+          "sha256": "8c6054ac48f7e232eaab59398989ad12bf7a93c38e6ce91d0ec40a374872b891"
+        }
+      },
+      "reference_path": "docs/experiments/assets/20261013-orbit-tail/final/cases/micro21-tail/summary.json",
+      "reference_sha256": "776da4d5a5b7be267b9c259b2ff7b26d8f8cb8792fd5ab38c74a2aaae157b24e"
+    },
+    "leo10-base": {
+      "profile": "pace",
+      "metrics": {
+        "case": "leo10-base",
+        "duration_s": 200.0,
+        "flow_start_s": 0.0,
+        "expected_finite_bytes": null,
+        "receiver_bytes": 238608900,
+        "receiver_goodput_mbps": 9.544356,
+        "transfer_complete": null,
+        "fct_s": null,
+        "retransmissions": 523,
+        "recovery_entries": 41,
+        "ca_loss_entries": 1,
+        "distinct_tagged_drops": 499,
+        "drop_trace_rows": 499,
+        "actual_high_threshold_time_s": 0,
+        "censored_high_threshold_intervals": 0,
+        "guard_starts": 0,
+        "guard_start_skips": 0,
+        "bounded_expiry_reevaluations": 0,
+        "expiry_entered_recovery": 0
+      },
+      "measurement_csvs": {
+        "logs_ns3/study_app_rx_node_1585_port_1024.csv": {
+          "bytes": 14466654,
+          "sha256": "63defbe5710bafaafec06b3021dfda3c8d2df2bad3bf78ce15b54c84d7bc451d"
+        },
+        "logs_ns3/study_drop_coverage.csv": {
+          "bytes": 1140184,
+          "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+        },
+        "logs_ns3/study_drops.csv": {
+          "bytes": 55405,
+          "sha256": "c915297632311402f8a2b1b4d6d24b83691f5971f40477934b2e2826887e6821"
+        },
+        "logs_ns3/study_rx_node_1585_port_1024.csv": {
+          "bytes": 19448001,
+          "sha256": "445161a24e3c943e61518cc5c67ce72aecbae5c1bb2caaf6bd4f4ce451b2f1cf"
+        },
+        "logs_ns3/tcp_flow_0_cwnd.csv": {
+          "bytes": 101682,
+          "sha256": "6651966bdd19d9cbcbcc99fb18ec854f152de7e81ed93e075e8baa5d09599860"
+        },
+        "logs_ns3/tcp_flow_0_progress.csv": {
+          "bytes": 1994572,
+          "sha256": "2a9181e6a8a5bf7e1c25b8a770096f43714ec03779e7d7ccd2673b9992339534"
+        },
+        "logs_ns3/tcp_flow_0_rtt.csv": {
+          "bytes": 2029939,
+          "sha256": "b959d51947cf5f8d37d672ef2a239c942b8b57e9f3d574ce2f7624de42ab1e38"
+        },
+        "logs_ns3/tcp_flow_0_study_events.csv": {
+          "bytes": 5534,
+          "sha256": "8809b380277e387dcc400a5d27a5679ccbdf446a08c7efb06fa7a021a42df78b"
+        },
+        "logs_ns3/tcp_flow_0_study_packets.csv": {
+          "bytes": 19842749,
+          "sha256": "78fc54184c4481b1421d2139870debcbe72259c18ccb011ba180ef77784e146f"
+        },
+        "logs_ns3/tcp_flows.csv": {
+          "bytes": 75,
+          "sha256": "709ed6139c27b6b511fb5d5f9f754342c493d3d5ab3ad0cfc2e9b97d1d1b9404"
+        }
+      },
+      "reference_path": "docs/experiments/assets/20261013-orbit-tail/final/cases/leo10-base/summary.json",
+      "reference_sha256": "25acc55e1c98bc1685fccb0d30220e312834d852437327e4cc75f8150764c267"
+    },
+    "leo10-selective": {
+      "profile": "pace",
+      "metrics": {
+        "case": "leo10-selective",
+        "duration_s": 200.0,
+        "flow_start_s": 0.0,
+        "expected_finite_bytes": null,
+        "receiver_bytes": 238662720,
+        "receiver_goodput_mbps": 9.5465088,
+        "transfer_complete": null,
+        "fct_s": null,
+        "retransmissions": 507,
+        "recovery_entries": 40,
+        "ca_loss_entries": 1,
+        "distinct_tagged_drops": 486,
+        "drop_trace_rows": 486,
+        "actual_high_threshold_time_s": 0,
+        "censored_high_threshold_intervals": 0,
+        "guard_starts": 0,
+        "guard_start_skips": 0,
+        "bounded_expiry_reevaluations": 0,
+        "expiry_entered_recovery": 0
+      },
+      "measurement_csvs": {
+        "logs_ns3/study_app_rx_node_1585_port_1024.csv": {
+          "bytes": 14465567,
+          "sha256": "bd7722c1cbb78f51335b6b181d55f2a2c10e427b2a4326a02c74b873712cb23d"
+        },
+        "logs_ns3/study_drop_coverage.csv": {
+          "bytes": 1140184,
+          "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+        },
+        "logs_ns3/study_drops.csv": {
+          "bytes": 53873,
+          "sha256": "9aca2d266ffc1b98cd56f7803d04bdc7d807e11e44d25952b6c1ede94b8ef02e"
+        },
+        "logs_ns3/study_rx_node_1585_port_1024.csv": {
+          "bytes": 19452445,
+          "sha256": "4fb3a7e70c6e79f54007de46368fd1e303359ef2882e0a314587c9e02292b71c"
+        },
+        "logs_ns3/tcp_flow_0_cwnd.csv": {
+          "bytes": 100679,
+          "sha256": "acf9286c1705fa2aa31eb56805f016c3793051f3d566bc91c87c151af2c5cace"
+        },
+        "logs_ns3/tcp_flow_0_orbit_loss.csv": {
+          "bytes": 1386,
+          "sha256": "dd65e13e2e79fefa5b63612950bd59f5e3fa772ee1b9fd8a07f9208234695374"
+        },
+        "logs_ns3/tcp_flow_0_orbit_loss_tail.csv": {
+          "bytes": 249,
+          "sha256": "670b7cc8ea7f4a63844fa39c9eed682067b8a08ee79e434b430e916c53e8793a"
+        },
+        "logs_ns3/tcp_flow_0_progress.csv": {
+          "bytes": 1994229,
+          "sha256": "4ce98bb78f4f26fbc697971d23cfc085d8a3e89ad6b378222900a20469794ca4"
+        },
+        "logs_ns3/tcp_flow_0_rtt.csv": {
+          "bytes": 2030657,
+          "sha256": "5f7ed6085a55daca60bb23bb3df73b6098d879aa2005d8810d887b023080edc7"
+        },
+        "logs_ns3/tcp_flow_0_study_events.csv": {
+          "bytes": 5574,
+          "sha256": "56db00c9ed99c760c4d3b9a2d132f22eac6bf89570a8a5ff9d476c0be620d23a"
+        },
+        "logs_ns3/tcp_flow_0_study_packets.csv": {
+          "bytes": 19843355,
+          "sha256": "8129d3685fc3cc339409867b057b9126a6591aad06950e02052c97a52c02567c"
+        },
+        "logs_ns3/tcp_flows.csv": {
+          "bytes": 75,
+          "sha256": "2fa7e654ea06e0f91745acd609b08a9daa37dffdcf01b8035c2ded8567a85017"
+        }
+      },
+      "reference_path": "docs/experiments/assets/20261013-orbit-tail/final/cases/leo10-selective/summary.json",
+      "reference_sha256": "348f9de05501cd7102b016ff009a2a38a33b392360a8c26ceb75b8bba739cc68"
+    },
+    "leo10-tail": {
+      "profile": "pace",
+      "metrics": {
+        "case": "leo10-tail",
+        "duration_s": 200.0,
+        "flow_start_s": 0.0,
+        "expected_finite_bytes": null,
+        "receiver_bytes": 238662720,
+        "receiver_goodput_mbps": 9.5465088,
+        "transfer_complete": null,
+        "fct_s": null,
+        "retransmissions": 507,
+        "recovery_entries": 40,
+        "ca_loss_entries": 1,
+        "distinct_tagged_drops": 486,
+        "drop_trace_rows": 486,
+        "actual_high_threshold_time_s": 0,
+        "censored_high_threshold_intervals": 0,
+        "guard_starts": 0,
+        "guard_start_skips": 0,
+        "bounded_expiry_reevaluations": 0,
+        "expiry_entered_recovery": 0
+      },
+      "measurement_csvs": {
+        "logs_ns3/study_app_rx_node_1585_port_1024.csv": {
+          "bytes": 14465567,
+          "sha256": "bd7722c1cbb78f51335b6b181d55f2a2c10e427b2a4326a02c74b873712cb23d"
+        },
+        "logs_ns3/study_drop_coverage.csv": {
+          "bytes": 1140184,
+          "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+        },
+        "logs_ns3/study_drops.csv": {
+          "bytes": 53873,
+          "sha256": "9aca2d266ffc1b98cd56f7803d04bdc7d807e11e44d25952b6c1ede94b8ef02e"
+        },
+        "logs_ns3/study_rx_node_1585_port_1024.csv": {
+          "bytes": 19452445,
+          "sha256": "4fb3a7e70c6e79f54007de46368fd1e303359ef2882e0a314587c9e02292b71c"
+        },
+        "logs_ns3/tcp_flow_0_cwnd.csv": {
+          "bytes": 100679,
+          "sha256": "acf9286c1705fa2aa31eb56805f016c3793051f3d566bc91c87c151af2c5cace"
+        },
+        "logs_ns3/tcp_flow_0_orbit_loss.csv": {
+          "bytes": 1386,
+          "sha256": "dd65e13e2e79fefa5b63612950bd59f5e3fa772ee1b9fd8a07f9208234695374"
+        },
+        "logs_ns3/tcp_flow_0_orbit_loss_tail.csv": {
+          "bytes": 621,
+          "sha256": "8447baa1e3aa446ab7ca47c36eea5e2b8c8db4c38c3f04a3b805cbcd0f4af8ec"
+        },
+        "logs_ns3/tcp_flow_0_progress.csv": {
+          "bytes": 1994229,
+          "sha256": "4ce98bb78f4f26fbc697971d23cfc085d8a3e89ad6b378222900a20469794ca4"
+        },
+        "logs_ns3/tcp_flow_0_rtt.csv": {
+          "bytes": 2030657,
+          "sha256": "5f7ed6085a55daca60bb23bb3df73b6098d879aa2005d8810d887b023080edc7"
+        },
+        "logs_ns3/tcp_flow_0_study_events.csv": {
+          "bytes": 5574,
+          "sha256": "56db00c9ed99c760c4d3b9a2d132f22eac6bf89570a8a5ff9d476c0be620d23a"
+        },
+        "logs_ns3/tcp_flow_0_study_packets.csv": {
+          "bytes": 19843355,
+          "sha256": "8129d3685fc3cc339409867b057b9126a6591aad06950e02052c97a52c02567c"
+        },
+        "logs_ns3/tcp_flows.csv": {
+          "bytes": 75,
+          "sha256": "2fa7e654ea06e0f91745acd609b08a9daa37dffdcf01b8035c2ded8567a85017"
+        }
+      },
+      "reference_path": "docs/experiments/assets/20261013-orbit-tail/final/cases/leo10-tail/summary.json",
+      "reference_sha256": "127fd5ea373358339bb2701ab047d62fbc7061dbbfc3d2f5998ff25018cd1e22"
+    },
+    "leo10-drop-base": {
+      "profile": "pace",
+      "metrics": {
+        "case": "leo10-drop-base",
+        "duration_s": 200.0,
+        "flow_start_s": 0.0,
+        "expected_finite_bytes": null,
+        "receiver_bytes": 238604760,
+        "receiver_goodput_mbps": 9.5441904,
+        "transfer_complete": null,
+        "fct_s": null,
+        "retransmissions": 522,
+        "recovery_entries": 41,
+        "ca_loss_entries": 1,
+        "distinct_tagged_drops": 500,
+        "drop_trace_rows": 500,
+        "actual_high_threshold_time_s": 0,
+        "censored_high_threshold_intervals": 0,
+        "guard_starts": 0,
+        "guard_start_skips": 0,
+        "bounded_expiry_reevaluations": 0,
+        "expiry_entered_recovery": 0
+      },
+      "measurement_csvs": {
+        "logs_ns3/orbit_actual_drop.csv": {
+          "bytes": 145,
+          "sha256": "1853a585847be72c2b3d3c58f60fea3d153db9a2da756e4e3049e2b786bec8e3"
+        },
+        "logs_ns3/orbit_drop_install.csv": {
+          "bytes": 100,
+          "sha256": "639a91b644d909826cf4c0957c04d46d1e484c636cd331fe0c58b90b7ab41613"
+        },
+        "logs_ns3/study_app_rx_node_1585_port_1024.csv": {
+          "bytes": 14456642,
+          "sha256": "17568aaabc4f44397310d1e66094260d115cb2de4075f713b8ea2797a8a93215"
+        },
+        "logs_ns3/study_drop_coverage.csv": {
+          "bytes": 1140184,
+          "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+        },
+        "logs_ns3/study_drops.csv": {
+          "bytes": 55513,
+          "sha256": "13f432242f9397d517edf8e753eb28f943e2d77a0aa2a0bf1b8f6ebcec39361f"
+        },
+        "logs_ns3/study_rx_node_1585_port_1024.csv": {
+          "bytes": 19447657,
+          "sha256": "94ea0ca4f0176ccffa98404781ba063b648d9e16cd841cd3e4d9e8f2e1079480"
+        },
+        "logs_ns3/tcp_flow_0_cwnd.csv": {
+          "bytes": 101871,
+          "sha256": "91456dc7268723be452912b7831c8b4e419aa69306bb17f5f702ba543f037168"
+        },
+        "logs_ns3/tcp_flow_0_progress.csv": {
+          "bytes": 1993166,
+          "sha256": "9e9ee9766c361dbf0bd6710a58fb37f75a62b4a6c183fd2d3ab40740d1fa1d19"
+        },
+        "logs_ns3/tcp_flow_0_rtt.csv": {
+          "bytes": 2027635,
+          "sha256": "ea6b8d686a9d168a0eae372a4aebbd7123a5d87c23d9d6a77b8de9c44cd8f9f3"
+        },
+        "logs_ns3/tcp_flow_0_study_events.csv": {
+          "bytes": 5426,
+          "sha256": "a42ae675a75dfebeb2c008ef80f07ba96cd7299faff6fa937b8efffba8048290"
+        },
+        "logs_ns3/tcp_flow_0_study_packets.csv": {
+          "bytes": 19847592,
+          "sha256": "87153c8c3575eee4c614f6f9eb1d1e53117f55230de3f930770c2191f5ae5b68"
+        },
+        "logs_ns3/tcp_flows.csv": {
+          "bytes": 75,
+          "sha256": "e226d521080593f28e93b196d2a57880bf893d02605a5e81f1dfb9acbd62862b"
+        }
+      },
+      "reference_path": "docs/experiments/assets/20261013-orbit-tail/final/cases/leo10-drop-base/summary.json",
+      "reference_sha256": "a186cfadfb1e1b25f948ccfb1ced4964712c1ccfac2e53345399270c1a0c9b6c"
+    },
+    "leo10-drop-tail": {
+      "profile": "pace",
+      "metrics": {
+        "case": "leo10-drop-tail",
+        "duration_s": 200.0,
+        "flow_start_s": 0.0,
+        "expected_finite_bytes": null,
+        "receiver_bytes": 238606140,
+        "receiver_goodput_mbps": 9.5442456,
+        "transfer_complete": null,
+        "fct_s": null,
+        "retransmissions": 521,
+        "recovery_entries": 41,
+        "ca_loss_entries": 1,
+        "distinct_tagged_drops": 500,
+        "drop_trace_rows": 500,
+        "actual_high_threshold_time_s": 0,
+        "censored_high_threshold_intervals": 0,
+        "guard_starts": 0,
+        "guard_start_skips": 0,
+        "bounded_expiry_reevaluations": 0,
+        "expiry_entered_recovery": 0
+      },
+      "measurement_csvs": {
+        "logs_ns3/orbit_actual_drop.csv": {
+          "bytes": 145,
+          "sha256": "1853a585847be72c2b3d3c58f60fea3d153db9a2da756e4e3049e2b786bec8e3"
+        },
+        "logs_ns3/orbit_drop_install.csv": {
+          "bytes": 100,
+          "sha256": "639a91b644d909826cf4c0957c04d46d1e484c636cd331fe0c58b90b7ab41613"
+        },
+        "logs_ns3/study_app_rx_node_1585_port_1024.csv": {
+          "bytes": 14456302,
+          "sha256": "55fff2397fd105a138a8237071bed9def916d92d52e8dfa3bd7295a20e4404bc"
+        },
+        "logs_ns3/study_drop_coverage.csv": {
+          "bytes": 1140184,
+          "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+        },
+        "logs_ns3/study_drops.csv": {
+          "bytes": 55513,
+          "sha256": "16d2d7d6c50aebd8c423aef68cc0e1f483c458b18c899aeb3436ec073b1c2224"
+        },
+        "logs_ns3/study_rx_node_1585_port_1024.csv": {
+          "bytes": 19447771,
+          "sha256": "376c02eac88b430ed761ab96e9d92e8517f9bfb078d56caf9881a184e23df32c"
+        },
+        "logs_ns3/tcp_flow_0_cwnd.csv": {
+          "bytes": 101850,
+          "sha256": "c481d966bd03a8875ca40f8263e01b4edd53ad3f6fda1fbb6e65b1911f4a23e3"
+        },
+        "logs_ns3/tcp_flow_0_orbit_loss.csv": {
+          "bytes": 1248,
+          "sha256": "d2098605ab74323b576af006a45ce5ad7146aff3f3b20ee5e12fda0241d818ab"
+        },
+        "logs_ns3/tcp_flow_0_orbit_loss_tail.csv": {
+          "bytes": 869,
+          "sha256": "7d7b0e6b0bab0a362b51143f3d23eab29f26a037631294b5b80c1776010bb3e3"
+        },
+        "logs_ns3/tcp_flow_0_progress.csv": {
+          "bytes": 1993122,
+          "sha256": "f9367049342c6fbf98323ece36c6dc3d52990663ba919657cb4334b38ae0f5ac"
+        },
+        "logs_ns3/tcp_flow_0_rtt.csv": {
+          "bytes": 2029483,
+          "sha256": "254ac35be3723622db625e77f128db0681a9a6a403e28a01f66a1b85efbf88e7"
+        },
+        "logs_ns3/tcp_flow_0_study_events.csv": {
+          "bytes": 5426,
+          "sha256": "df732fe7580d83cab6dd84efebd718ea0c5285bba06ceac27edd90cabc86a37d"
+        },
+        "logs_ns3/tcp_flow_0_study_packets.csv": {
+          "bytes": 19847801,
+          "sha256": "fea30f5b656faf0b607b98857d43fa8a8be400a55b9d1b12284ead0fa56b9339"
+        },
+        "logs_ns3/tcp_flows.csv": {
+          "bytes": 75,
+          "sha256": "4abdf3e8ef592572a23f34e71d0c41588567bb3cc71a22ffcbbbd98db6b61466"
+        }
+      },
+      "reference_path": "docs/experiments/assets/20261013-orbit-tail/final/cases/leo10-drop-tail/summary.json",
+      "reference_sha256": "9e4ba5bcc343f6c5367b6280bb917e36a63659ea4a9a0eccff1da61b36f21b4f"
+    },
+    "native": {
+      "profile": "pace",
+      "metrics": {
+        "case": "native",
+        "duration_s": 200.0,
+        "flow_start_s": 0.0,
+        "expected_finite_bytes": null,
+        "receiver_bytes": 226427640,
+        "receiver_goodput_mbps": 9.0571056,
+        "transfer_complete": null,
+        "fct_s": null,
+        "retransmissions": 471,
+        "recovery_entries": 29,
+        "ca_loss_entries": 10,
+        "distinct_tagged_drops": 460,
+        "drop_trace_rows": 460,
+        "actual_high_threshold_time_s": 0,
+        "censored_high_threshold_intervals": 0,
+        "guard_starts": 0,
+        "guard_start_skips": 0,
+        "bounded_expiry_reevaluations": 0,
+        "expiry_entered_recovery": 0
+      },
+      "measurement_csvs": {
+        "logs_ns3/orbit_coverage.csv": {
+          "bytes": 1398438,
+          "sha256": "7785a349bbcd58d321430e5454d4e7193dfc4ed7766e00af84b503fa6bafef9c"
+        },
+        "logs_ns3/orbit_drops.csv": {
+          "bytes": 42350,
+          "sha256": "061658930917c1143ee20d793ee1af7771e74c22bd7e22456b3fc229968daa41"
+        },
+        "logs_ns3/orbit_queue_bins.csv": {
+          "bytes": 2861322,
+          "sha256": "f62b4f65fc8bd7723f2af7d7e28395ca2770f2fd7d23c1a3bb91f0943864ca71"
+        },
+        "logs_ns3/orbit_queue_pending.csv": {
+          "bytes": 134,
+          "sha256": "3a98357caa39629b7080010faf3aaca78a01dac0fff45652ee5d99962d9a6e2c"
+        },
+        "logs_ns3/orbit_service_bins.csv": {
+          "bytes": 2676229,
+          "sha256": "aca83b4a6cb86f67636745fb2c503bbc3a362b6d1c3abbf853ed499083e27e0e"
+        },
+        "logs_ns3/orbit_service_coverage.csv": {
+          "bytes": 289969,
+          "sha256": "102295605d325a6491f26c20a955d8fde2c96fa6aec15a166e8043f42510cdf8"
+        },
+        "logs_ns3/queue_area_bins.csv": {
+          "bytes": 2580263,
+          "sha256": "abb349ab7ef0077ee1012345aa9c945cf05f7fc0270124ad4c278f1272f057ba"
+        },
+        "logs_ns3/queue_devices.csv": {
+          "bytes": 645713,
+          "sha256": "36639705e7d001b7f59ab2ef2f509fc8a326a0ed8ef25d1f17cbc7fc90cac2ee"
+        },
+        "logs_ns3/queue_flow_state.csv": {
+          "bytes": 559682,
+          "sha256": "3c054bf200d9edef39e1980f8b6c25ebc409dd665d52d6c490ed9edfa1157a93"
+        },
+        "logs_ns3/queue_focus.csv": {
+          "bytes": 5522561,
+          "sha256": "259bf88dd6fa61c3a76f803dbdbd6f6f66c4a42e26e5137a106635f768123b6f"
+        },
+        "logs_ns3/queue_occupancy.csv": {
+          "bytes": 3672292,
+          "sha256": "718432fcc9e432b9590216e5b708843d224875acb894eae3c71c2bb8a6aa8f0f"
+        },
+        "logs_ns3/queue_tc_drop.csv": {
+          "bytes": 48824,
+          "sha256": "efb98e7572c91b80b8afcbd93d13e8653291b0d71e2e51b6bd0df804c2450950"
+        },
+        "logs_ns3/study_app_rx_node_1585_port_1024.csv": {
+          "bytes": 13278310,
+          "sha256": "be11c3c3db63e9d19ff353b087d4889b252812a34df9795d57808674b3c4dac7"
+        },
+        "logs_ns3/study_drop_coverage.csv": {
+          "bytes": 1140184,
+          "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+        },
+        "logs_ns3/study_drops.csv": {
+          "bytes": 51479,
+          "sha256": "aaf6fa13115b54330021b1327983a3f624f7feb54240af5b0168438f14104197"
+        },
+        "logs_ns3/study_rx_node_1585_port_1024.csv": {
+          "bytes": 18435517,
+          "sha256": "7e8d1b6019aa76b0c386fb644c3771458b8857569c709c5ef6f9429c112a94e2"
+        },
+        "logs_ns3/tcp_flow_0_cwnd.csv": {
+          "bytes": 89238,
+          "sha256": "e4b100975e67e38ac669f104236d599b7c77f9149c15e0d98d9ce21a610d3d17"
+        },
+        "logs_ns3/tcp_flow_0_orbit_loss.csv": {
+          "bytes": 1386,
+          "sha256": "cd130992e8bbbf83642e060f77a06bd605a85d388d6670fabd927b588e755928"
+        },
+        "logs_ns3/tcp_flow_0_orbit_loss_tail.csv": {
+          "bytes": 621,
+          "sha256": "f44e6aaa6511197bf29c1ea38a295fb0a148583f572016ed43bf88386c08d68d"
+        },
+        "logs_ns3/tcp_flow_0_pacing.csv": {
+          "bytes": 2502915,
+          "sha256": "73b59290c8da184c88e924ac1a9d6e5bd35b9778cbfacc3cb276fefe23bab7f8"
+        },
+        "logs_ns3/tcp_flow_0_progress.csv": {
+          "bytes": 1829014,
+          "sha256": "00cf75d9e477f97a10b671572d2b37c4c2d7325b9aaa01291d794c1e1f2b4a87"
+        },
+        "logs_ns3/tcp_flow_0_rtt.csv": {
+          "bytes": 1860618,
+          "sha256": "49d5c7067f0c1fb2866c1ba21a8b9aa731a4adeb3f592629236188c03ca35684"
+        },
+        "logs_ns3/tcp_flow_0_study_events.csv": {
+          "bytes": 4839,
+          "sha256": "45314c2b408ffd55c13cf808088e8f800b16abf38d7618d9380c8ffe1e7d9ab7"
+        },
+        "logs_ns3/tcp_flow_0_study_packets.csv": {
+          "bytes": 19249056,
+          "sha256": "cac61b57ab3173c09885572b0fee4d8cc4e6b78504c7d46137aa936d05ac6379"
+        },
+        "logs_ns3/tcp_flows.csv": {
+          "bytes": 75,
+          "sha256": "43faca732ba1169b9d840ce4f4f3afe195192ef848a23f5c24b842d980a68cb8"
+        }
+      },
+      "reference_path": "docs/experiments/assets/20261013-queue-pacing/final/cases/native/summary.json",
+      "reference_sha256": "8bee9c39b9cdfcf4a16036663ada405ced49a7f43b63fff5467d21d730765e85"
+    },
+    "capacity": {
+      "profile": "pace",
+      "metrics": {
+        "case": "capacity",
+        "duration_s": 200.0,
+        "flow_start_s": 0.0,
+        "expected_finite_bytes": null,
+        "receiver_bytes": 239156760,
+        "receiver_goodput_mbps": 9.5662704,
+        "transfer_complete": null,
+        "fct_s": null,
+        "retransmissions": 2,
+        "recovery_entries": 1,
+        "ca_loss_entries": 0,
+        "distinct_tagged_drops": 0,
+        "drop_trace_rows": 0,
+        "actual_high_threshold_time_s": 0,
+        "censored_high_threshold_intervals": 0,
+        "guard_starts": 0,
+        "guard_start_skips": 0,
+        "bounded_expiry_reevaluations": 0,
+        "expiry_entered_recovery": 0
+      },
+      "measurement_csvs": {
+        "logs_ns3/orbit_coverage.csv": {
+          "bytes": 1398438,
+          "sha256": "7785a349bbcd58d321430e5454d4e7193dfc4ed7766e00af84b503fa6bafef9c"
+        },
+        "logs_ns3/orbit_drops.csv": {
+          "bytes": 102,
+          "sha256": "9e96d658428b39768ff51bdb4813ead4343183c7be69410db98535fecadcb6c7"
+        },
+        "logs_ns3/orbit_queue_bins.csv": {
+          "bytes": 2899912,
+          "sha256": "ae39267ceb4fd3ca701089b4c94d00d8bc2545ccc565d4955bdaf53d18193b8c"
+        },
+        "logs_ns3/orbit_queue_pending.csv": {
+          "bytes": 90,
+          "sha256": "bd912a74a0dee1b032ecbeac1820c6c6d343cbec86b2fdcadf1b67eb243ce335"
+        },
+        "logs_ns3/orbit_service_bins.csv": {
+          "bytes": 2714526,
+          "sha256": "8d47369b9d91033c4cbed871b81ffaf69ac1bf84f4c5c555dbb7e8953b0bff3f"
+        },
+        "logs_ns3/orbit_service_coverage.csv": {
+          "bytes": 289969,
+          "sha256": "102295605d325a6491f26c20a955d8fde2c96fa6aec15a166e8043f42510cdf8"
+        },
+        "logs_ns3/queue_area_bins.csv": {
+          "bytes": 2622512,
+          "sha256": "42ad392b058a7b67b7acdae6a04a7a73e1399e46d0431519f4bb66cdc5d8a347"
+        },
+        "logs_ns3/queue_devices.csv": {
+          "bytes": 645713,
+          "sha256": "36639705e7d001b7f59ab2ef2f509fc8a326a0ed8ef25d1f17cbc7fc90cac2ee"
+        },
+        "logs_ns3/queue_flow_state.csv": {
+          "bytes": 205,
+          "sha256": "f4209430eec2bae0d1084b6bf1897752ce91be23316ffadcef9185f80903fc04"
+        },
+        "logs_ns3/queue_focus.csv": {
+          "bytes": 5527778,
+          "sha256": "91c7bb55fbef56e5515a9069a9d605a5d1045bec6bd8de3e34d7a8e99a5925ee"
+        },
+        "logs_ns3/queue_occupancy.csv": {
+          "bytes": 3654387,
+          "sha256": "c17fb39e45a8d8912ec2a277a6ae1ba54ab144eb8522232c3fa2924ef7487994"
+        },
+        "logs_ns3/queue_tc_drop.csv": {
+          "bytes": 217,
+          "sha256": "a22e92556510c09720bbe6a44986eb24cebf2e5bb5556d3c87ca55cbbb134f37"
+        },
+        "logs_ns3/study_app_rx_node_1585_port_1024.csv": {
+          "bytes": 15113215,
+          "sha256": "098e7547636ba09b6bcad0648013cd7f56370218b1d88c7e69d5433aeb3593bc"
+        },
+        "logs_ns3/study_drop_coverage.csv": {
+          "bytes": 1140184,
+          "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+        },
+        "logs_ns3/study_drops.csv": {
+          "bytes": 112,
+          "sha256": "ec37c4087cf6eb0bf412760b74ba37e2279e44d6bfff2d89f87c8135ec82b959"
+        },
+        "logs_ns3/study_rx_node_1585_port_1024.csv": {
+          "bytes": 19497354,
+          "sha256": "b403e69489fba87e95162783c2e40cf471e52c55492dfa76e24b5ce369f0c495"
+        },
+        "logs_ns3/tcp_flow_0_cwnd.csv": {
+          "bytes": 2283,
+          "sha256": "9777a1f3e14393fc18b4b4b2eebb7030e791f65216341a75937f3d4f31a09683"
+        },
+        "logs_ns3/tcp_flow_0_orbit_loss.csv": {
+          "bytes": 1386,
+          "sha256": "58cbd7db6402345d8f6dc41d852b45136de4d349eabfc93be652b9201a9e00bc"
+        },
+        "logs_ns3/tcp_flow_0_orbit_loss_tail.csv": {
+          "bytes": 630,
+          "sha256": "acc282c84cb780fe376b13547a1559bf6d46f47886c5717709c6205712d8fdb4"
+        },
+        "logs_ns3/tcp_flow_0_pacing.csv": {
+          "bytes": 4047,
+          "sha256": "564c15f404ce0eed8a97fc53807e63fade9cb830a84b47cf827c7c042f1d86fa"
+        },
+        "logs_ns3/tcp_flow_0_progress.csv": {
+          "bytes": 2078439,
+          "sha256": "d181d1c68b347c286c63bf558e0f7dc073ac9d9541f6bf19b67ee4468eee8489"
+        },
+        "logs_ns3/tcp_flow_0_rtt.csv": {
+          "bytes": 2080980,
+          "sha256": "e2d228dcf51c375ee03fc50716c8ee708a5d4b11d118347e89ba7644495281c3"
+        },
+        "logs_ns3/tcp_flow_0_study_events.csv": {
+          "bytes": 692,
+          "sha256": "632c808f1d4d68861ea2df9f3c59c26012cf021cce2f13631bf2e0545fde3c80"
+        },
+        "logs_ns3/tcp_flow_0_study_packets.csv": {
+          "bytes": 19207643,
+          "sha256": "1a6506a77023345f730d3353cccd2e401447d8ade329423028a58c35df773a78"
+        },
+        "logs_ns3/tcp_flows.csv": {
+          "bytes": 75,
+          "sha256": "7bc5a136e7c2a2f2c73a4c6db06279fda4f33061463fc96ec9f29fc98deb8b6f"
+        }
+      },
+      "reference_path": "docs/experiments/assets/20261013-queue-pacing/final/cases/capacity/summary.json",
+      "reference_sha256": "a3c22489b32b7de6380080d12f7bc607faaf57e12a5c95505bfa828d8407baac"
+    },
+    "micro-selected": {
+      "profile": "pace",
+      "metrics": {
+        "case": "micro-selected",
+        "duration_s": 4.0,
+        "flow_start_s": 0.0,
+        "expected_finite_bytes": 27600,
+        "receiver_bytes": 27600,
+        "receiver_goodput_mbps": 0.0552,
+        "transfer_complete": true,
+        "fct_s": 0.471434773,
+        "retransmissions": 1,
+        "recovery_entries": 1,
+        "ca_loss_entries": 0,
+        "distinct_tagged_drops": 1,
+        "drop_trace_rows": 1,
+        "actual_high_threshold_time_s": 0,
+        "censored_high_threshold_intervals": 0,
+        "guard_starts": 0,
+        "guard_start_skips": 0,
+        "bounded_expiry_reevaluations": 0,
+        "expiry_entered_recovery": 0
+      },
+      "measurement_csvs": {
+        "logs_ns3/study_app_rx_node_1_port_1024.csv": {
+          "bytes": 733,
+          "sha256": "4b29df2b25b58461d294ea60533273f7b7f81bd48297ff1d0faf6d91dda55ef0"
+        },
+        "logs_ns3/study_drop_coverage.csv": {
+          "bytes": 328,
+          "sha256": "f2bbce727ae1f61019ef8f727753e3a8f64abdeb41d660a20a3607802f4524f4"
+        },
+        "logs_ns3/study_drops.csv": {
+          "bytes": 194,
+          "sha256": "e875ed492bd803c301bd18a29514bca50a6edfe104a69a85ae1ec68003bac35c"
+        },
+        "logs_ns3/study_rx_node_1_port_1024.csv": {
+          "bytes": 1849,
+          "sha256": "021da51a1d134e7c0f898ccaaee11671c094d363e20e65988364e199bc554147"
+        },
+        "logs_ns3/tcp_flow_0_cwnd.csv": {
+          "bytes": 86,
+          "sha256": "56399c1f0d65f24e2aede773297097815c697432ae29566c124fc1423da25168"
+        },
+        "logs_ns3/tcp_flow_0_orbit_loss.csv": {
+          "bytes": 1224,
+          "sha256": "57de46a60ff69710535fbaa34315a04cb56c8b867f152f4e8badbb2dd4a52168"
+        },
+        "logs_ns3/tcp_flow_0_orbit_loss_tail.csv": {
+          "bytes": 1029,
+          "sha256": "9be7109b01ae5a32f344989966f1f075d9822fe800502b09182dd3ffe39e399b"
+        },
+        "logs_ns3/tcp_flow_0_pacing.csv": {
+          "bytes": 218,
+          "sha256": "9de5355f620d36bb29098605a90bbde35437422e2146174fadb0e248a08a1470"
+        },
+        "logs_ns3/tcp_flow_0_progress.csv": {
+          "bytes": 164,
+          "sha256": "100436b6e9984562013070dd590678b60df7e0bfea8880fc9c0f5a902fedcec5"
+        },
+        "logs_ns3/tcp_flow_0_rtt.csv": {
+          "bytes": 132,
+          "sha256": "d7d1bafd8f12f9772f4e367dab6288aec7ad3a50394cae1124c974c0df2bd58c"
+        },
+        "logs_ns3/tcp_flow_0_study_events.csv": {
+          "bytes": 238,
+          "sha256": "40b65890df347d24b0f507e81eea09ed4ffb6893ca09255b6443670cc6f12fb5"
+        },
+        "logs_ns3/tcp_flow_0_study_packets.csv": {
+          "bytes": 2680,
+          "sha256": "a39873049a24436523c86a3cb3ed4485e274d968ac5a831c897997dcbb7dbebe"
+        }
+      },
+      "reference_path": "docs/experiments/assets/20261013-queue-pacing/final/cases/micro-selected/summary.json",
+      "reference_sha256": "cb83c5ecc5d6489b81dc66220cacf3a2f589890886b5d8e499cfaf3eb50a176c"
+    },
+    "loss-current": {
+      "profile": "pace",
+      "metrics": {
+        "case": "loss-current",
+        "duration_s": 200.0,
+        "flow_start_s": 0.0,
+        "expected_finite_bytes": null,
+        "receiver_bytes": 233553960,
+        "receiver_goodput_mbps": 9.3421584,
+        "transfer_complete": null,
+        "fct_s": null,
+        "retransmissions": 215,
+        "recovery_entries": 37,
+        "ca_loss_entries": 0,
+        "distinct_tagged_drops": 192,
+        "drop_trace_rows": 192,
+        "actual_high_threshold_time_s": 0,
+        "censored_high_threshold_intervals": 0,
+        "guard_starts": 0,
+        "guard_start_skips": 0,
+        "bounded_expiry_reevaluations": 0,
+        "expiry_entered_recovery": 0
+      },
+      "measurement_csvs": {
+        "logs_ns3/orbit_coverage.csv": {
+          "bytes": 1398438,
+          "sha256": "7785a349bbcd58d321430e5454d4e7193dfc4ed7766e00af84b503fa6bafef9c"
+        },
+        "logs_ns3/orbit_drops.csv": {
+          "bytes": 18463,
+          "sha256": "bcf7f65b93908cace990fc46d2b1e1ec9addea435f2b4f9713847b0a50186f5b"
+        },
+        "logs_ns3/orbit_queue_bins.csv": {
+          "bytes": 2941868,
+          "sha256": "1931ec283a83e0f82c78e12643dc9707c4a17b7e9a8ebd7dd593fb4cbd1741e4"
+        },
+        "logs_ns3/orbit_queue_pending.csv": {
+          "bytes": 213,
+          "sha256": "eb1c56c5626919e3ca9bfeca07d221807def6bb822ce1e635b8890dab4fc6659"
+        },
+        "logs_ns3/orbit_service_bins.csv": {
+          "bytes": 2711842,
+          "sha256": "f829afa4c68861e023e1aa640edd78dbb4cbd7008fcca847be61eeb12103d0c4"
+        },
+        "logs_ns3/orbit_service_coverage.csv": {
+          "bytes": 289969,
+          "sha256": "102295605d325a6491f26c20a955d8fde2c96fa6aec15a166e8043f42510cdf8"
+        },
+        "logs_ns3/pacing_first_loss.csv": {
+          "bytes": 100,
+          "sha256": "266ddf0e757caf8cfba1a7c5dde547f752b40a130ec9c6b57ce39621b06f9c8c"
+        },
+        "logs_ns3/pacing_first_loss_install.csv": {
+          "bytes": 90,
+          "sha256": "0607f701d5ba9cb6ab82bbc68812cd170aff4837750b5341c631d1bcddf22724"
+        },
+        "logs_ns3/queue_area_bins.csv": {
+          "bytes": 2681722,
+          "sha256": "fee942ef5274585e42c72ffb78dd82eef42b53ed344af4dbc9b10907a047efa5"
+        },
+        "logs_ns3/queue_devices.csv": {
+          "bytes": 645713,
+          "sha256": "36639705e7d001b7f59ab2ef2f509fc8a326a0ed8ef25d1f17cbc7fc90cac2ee"
+        },
+        "logs_ns3/queue_flow_state.csv": {
+          "bytes": 274819,
+          "sha256": "b88022fdc30a5a19be6245d23a4771d4b032945db3c5dc84894142368ed2a0b9"
+        },
+        "logs_ns3/queue_focus.csv": {
+          "bytes": 5555887,
+          "sha256": "1567d6a1d6bda14ca231423e6472d8c0948bc2f84b04e26fdf3d4d416d45d3fe"
+        },
+        "logs_ns3/queue_occupancy.csv": {
+          "bytes": 3675694,
+          "sha256": "015f10e58c71ef781d25c2a5a582f30a01c9065113949cf3dd3e02a7ee2f50aa"
+        },
+        "logs_ns3/queue_tc_drop.csv": {
+          "bytes": 21497,
+          "sha256": "15808adcc261f6113d0930e974b8e8469ef628c3782c5dca3e70441235bfe55e"
+        },
+        "logs_ns3/study_app_rx_node_1585_port_1024.csv": {
+          "bytes": 14260161,
+          "sha256": "6c1e28ad925d13d6b5a0b564804bf27ce3b571136432a8acbaf1c716c1683796"
+        },
+        "logs_ns3/study_drop_coverage.csv": {
+          "bytes": 1140184,
+          "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+        },
+        "logs_ns3/study_drops.csv": {
+          "bytes": 22628,
+          "sha256": "b9b3244b43ca52830051e9f4469e54e6da1858c085ff6f60c2a3e36c9d169db6"
+        },
+        "logs_ns3/study_rx_node_1585_port_1024.csv": {
+          "bytes": 19043333,
+          "sha256": "bea8f32f66f0e8981bc55f585d3931b458a60c3474dd0283a8601dca74fde000"
+        },
+        "logs_ns3/tcp_flow_0_cwnd.csv": {
+          "bytes": 93165,
+          "sha256": "a57766cce5abd168cc66669a8ff5c5b1c94a1d617c5f301d5283fc8d88ca6256"
+        },
+        "logs_ns3/tcp_flow_0_orbit_loss.csv": {
+          "bytes": 1386,
+          "sha256": "796f7901aaeb3b41a27f8df0473350bc36f490a1c115aa60971f907465d3a0ac"
+        },
+        "logs_ns3/tcp_flow_0_orbit_loss_tail.csv": {
+          "bytes": 621,
+          "sha256": "d5464dbc5add21469fc4dead417dde71f49f60c6a8d32c34d6dbdd89130e0ae3"
+        },
+        "logs_ns3/tcp_flow_0_pacing.csv": {
+          "bytes": 32,
+          "sha256": "90cda193abed81c81cfac1c9ee13b48877511c6564bdbd416233bd10911fb356"
+        },
+        "logs_ns3/tcp_flow_0_progress.csv": {
+          "bytes": 1966490,
+          "sha256": "8aee08eb3f35402c4211082d5e055739efa4046404cd7e13486207e083807556"
+        },
+        "logs_ns3/tcp_flow_0_rtt.csv": {
+          "bytes": 2004624,
+          "sha256": "79a1bb82253f9792291e0d048d3e6245ac92633fb2d8c759974c8a50298debf3"
+        },
+        "logs_ns3/tcp_flow_0_study_events.csv": {
+          "bytes": 5253,
+          "sha256": "3427c474c75f803e9c9e1569d8a9ebdfd5889a3e7f9e6beef25d5b3f244dae83"
+        },
+        "logs_ns3/tcp_flow_0_study_packets.csv": {
+          "bytes": 19295960,
+          "sha256": "ee5fdfe6e7e6df0d53bae5ef6aa4a0f09f0d575f0f560ca6ffee9e420ce0814d"
+        },
+        "logs_ns3/tcp_flows.csv": {
+          "bytes": 75,
+          "sha256": "8cfad02fbf8419db81bdbf8eabf4879f9acf45bf4e2d0a4f185ff9258f46dfc5"
+        }
+      },
+      "reference_path": "docs/experiments/assets/20261013-queue-pacing/final/cases/loss-current/summary.json",
+      "reference_sha256": "fc58e47fc39c49fead94ed49bf4f62c197c27c4e65de18c74cb66b76755a15fd"
+    },
+    "loss-selected": {
+      "profile": "pace",
+      "metrics": {
+        "case": "loss-selected",
+        "duration_s": 200.0,
+        "flow_start_s": 0.0,
+        "expected_finite_bytes": null,
+        "receiver_bytes": 233316600,
+        "receiver_goodput_mbps": 9.332664,
+        "transfer_complete": null,
+        "fct_s": null,
+        "retransmissions": 3,
+        "recovery_entries": 2,
+        "ca_loss_entries": 0,
+        "distinct_tagged_drops": 1,
+        "drop_trace_rows": 1,
+        "actual_high_threshold_time_s": 0,
+        "censored_high_threshold_intervals": 0,
+        "guard_starts": 0,
+        "guard_start_skips": 0,
+        "bounded_expiry_reevaluations": 0,
+        "expiry_entered_recovery": 0
+      },
+      "measurement_csvs": {
+        "logs_ns3/orbit_coverage.csv": {
+          "bytes": 1398438,
+          "sha256": "7785a349bbcd58d321430e5454d4e7193dfc4ed7766e00af84b503fa6bafef9c"
+        },
+        "logs_ns3/orbit_drops.csv": {
+          "bytes": 178,
+          "sha256": "120c99367bae861f083fe716a380d2c5683f145706116b24c5e93596a6bfcf01"
+        },
+        "logs_ns3/orbit_queue_bins.csv": {
+          "bytes": 2891991,
+          "sha256": "83146b3646210a7a340b9edc3b6c53ec3023ac7ea5b5c64d205d0ae3563dabb9"
+        },
+        "logs_ns3/orbit_queue_pending.csv": {
+          "bytes": 90,
+          "sha256": "bd912a74a0dee1b032ecbeac1820c6c6d343cbec86b2fdcadf1b67eb243ce335"
+        },
+        "logs_ns3/orbit_service_bins.csv": {
+          "bytes": 2710990,
+          "sha256": "e66a69ae0556eb6523277823ef9b0e14a68a4dab5b7708f2e0f9d6799d5e28a7"
+        },
+        "logs_ns3/orbit_service_coverage.csv": {
+          "bytes": 289969,
+          "sha256": "102295605d325a6491f26c20a955d8fde2c96fa6aec15a166e8043f42510cdf8"
+        },
+        "logs_ns3/pacing_first_loss.csv": {
+          "bytes": 100,
+          "sha256": "266ddf0e757caf8cfba1a7c5dde547f752b40a130ec9c6b57ce39621b06f9c8c"
+        },
+        "logs_ns3/pacing_first_loss_install.csv": {
+          "bytes": 90,
+          "sha256": "0607f701d5ba9cb6ab82bbc68812cd170aff4837750b5341c631d1bcddf22724"
+        },
+        "logs_ns3/queue_area_bins.csv": {
+          "bytes": 2613594,
+          "sha256": "8753d6ffca3a24c58afc2708e038bb78ceb5c15106298c2299e65e11b91b2785"
+        },
+        "logs_ns3/queue_devices.csv": {
+          "bytes": 645713,
+          "sha256": "36639705e7d001b7f59ab2ef2f509fc8a326a0ed8ef25d1f17cbc7fc90cac2ee"
+        },
+        "logs_ns3/queue_flow_state.csv": {
+          "bytes": 205,
+          "sha256": "f4209430eec2bae0d1084b6bf1897752ce91be23316ffadcef9185f80903fc04"
+        },
+        "logs_ns3/queue_focus.csv": {
+          "bytes": 5518327,
+          "sha256": "93525d832586be39105128d18c899bb5da295bd1ae7b3ca61ba50a151f8a1412"
+        },
+        "logs_ns3/queue_occupancy.csv": {
+          "bytes": 3652189,
+          "sha256": "9e86ad1c6bdfc4f0f1847278f5470491e138cafdc1a9e1dfa5556825e9da4e72"
+        },
+        "logs_ns3/queue_tc_drop.csv": {
+          "bytes": 217,
+          "sha256": "a22e92556510c09720bbe6a44986eb24cebf2e5bb5556d3c87ca55cbbb134f37"
+        },
+        "logs_ns3/study_app_rx_node_1585_port_1024.csv": {
+          "bytes": 14744408,
+          "sha256": "4323b08b170af275f77df31e563ee9e311b1e40c66fd32fded7a2cace4cd50d9"
+        },
+        "logs_ns3/study_drop_coverage.csv": {
+          "bytes": 1140184,
+          "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+        },
+        "logs_ns3/study_drops.csv": {
+          "bytes": 202,
+          "sha256": "76a41ae6119fac6ef244555581cc4f66588ffbb31b5370f0bce8688f90eb26e7"
+        },
+        "logs_ns3/study_rx_node_1585_port_1024.csv": {
+          "bytes": 19023598,
+          "sha256": "74b13743f6f637dce63d02244a5e8f6da88b8f27bbfda6d03537f3aacaeb3f63"
+        },
+        "logs_ns3/tcp_flow_0_cwnd.csv": {
+          "bytes": 3313,
+          "sha256": "b2e33cdb272300aae2c0fae9962754fa1fe8d7e637b5afc68caed0ab7ea62882"
+        },
+        "logs_ns3/tcp_flow_0_orbit_loss.csv": {
+          "bytes": 1386,
+          "sha256": "8a38d3d37353d00e5c94fc13f055dfacb63d614f092daf46b04675500488ac63"
+        },
+        "logs_ns3/tcp_flow_0_orbit_loss_tail.csv": {
+          "bytes": 630,
+          "sha256": "972e86d11d0e926506ade1c2e22dc981db53067815076b59adc4da22735fa40c"
+        },
+        "logs_ns3/tcp_flow_0_pacing.csv": {
+          "bytes": 29236,
+          "sha256": "f2b00c25002e1f4aa904e5b9853c0e1660a1116abf62b71a6baa7624813746e1"
+        },
+        "logs_ns3/tcp_flow_0_progress.csv": {
+          "bytes": 2029743,
+          "sha256": "852f723e96e9ecbfe8e6b2cbe3577dbf5f9475b7078931c854412636bda1de75"
+        },
+        "logs_ns3/tcp_flow_0_rtt.csv": {
+          "bytes": 1906597,
+          "sha256": "31c84b8a2eb3bf516bc7326efcc50235272c33bb9c7666f7021e92cec617d7b6"
+        },
+        "logs_ns3/tcp_flow_0_study_events.csv": {
+          "bytes": 802,
+          "sha256": "7d59d708137e86e53b371f463f93869f52438892ce6d170523b5e5a06e1ab7b1"
+        },
+        "logs_ns3/tcp_flow_0_study_packets.csv": {
+          "bytes": 18745013,
+          "sha256": "df9204659a4a49c3c848eedc86d38819b9b345862fc001fa13db32fb4dd199d8"
+        },
+        "logs_ns3/tcp_flows.csv": {
+          "bytes": 75,
+          "sha256": "0d209c1a0f43956192d396058288bec44a2c81712990bc5e4cb7f4da3dcc4458"
+        }
+      },
+      "reference_path": "docs/experiments/assets/20261013-queue-pacing/final/cases/loss-selected/summary.json",
+      "reference_sha256": "50ee6aea125bbbb60aa2af7ca4b84b4c36a1a6a006018acbd0a0d2b1d4365a8a"
+    },
+    "control100": {
+      "profile": "bp",
+      "measurement_csvs": {
+        "logs_ns3/bp_config.csv": {
+          "bytes": 128,
+          "sha256": "89fe6551d8ef40f4b68ebe00be28f4bd7417b9894943d2b38edbe25df402ec73"
+        },
+        "logs_ns3/bp_outcomes.csv": {
+          "bytes": 59875,
+          "sha256": "3d38fa0d7aeee2abe0d6e2d5b3893860cf1296d36ce10f2ce56db49598552a47"
+        },
+        "logs_ns3/bp_receiver_drop.csv": {
+          "bytes": 87,
+          "sha256": "4944c2fc7d4bc212b17ab661b2311f7cbc4f7ffd72663279e9a7590b5e5ebea1"
+        },
+        "logs_ns3/bp_served.csv": {
+          "bytes": 22094888,
+          "sha256": "b6ef10f1b9449937345eb8ba2a1e50f5c9f1132eb73b0e5cbccdb60b1f455618"
+        },
+        "logs_ns3/bp_state_bins.csv": {
+          "bytes": 177697,
+          "sha256": "075d5afba1d6d3381f9617d49e217626d5ba11b0a35edbcb6fb0773f40658c98"
+        },
+        "logs_ns3/bp_summary.csv": {
+          "bytes": 333,
+          "sha256": "4fccdd532f8da0ff82b6466ba15717e0dbbbc88e66b68ab2d0b508a8f53db279"
+        },
+        "logs_ns3/orbit_coverage.csv": {
+          "bytes": 1398438,
+          "sha256": "7785a349bbcd58d321430e5454d4e7193dfc4ed7766e00af84b503fa6bafef9c"
+        },
+        "logs_ns3/orbit_drops.csv": {
+          "bytes": 44468,
+          "sha256": "7c6430e5143ca2a44ff5ee49f5ff0795d789f58b042b1c60a101c87379ef3d55"
+        },
+        "logs_ns3/orbit_queue_bins.csv": {
+          "bytes": 2936446,
+          "sha256": "aa2b45cbacc8b442d0d4b561fcb5d0c8548186e9f6f64a1df22e0fa779ae6729"
+        },
+        "logs_ns3/orbit_queue_pending.csv": {
+          "bytes": 134,
+          "sha256": "f517122709969bb2a1d7bd47fb4ef58f9f914558203bbd7aef139e953669cb6c"
+        },
+        "logs_ns3/orbit_service_bins.csv": {
+          "bytes": 2713797,
+          "sha256": "420c7fec34bdc33beb3fc36f5b39859a4fe5a7196a1b5d00d4736b6d0a88ac4b"
+        },
+        "logs_ns3/orbit_service_coverage.csv": {
+          "bytes": 289969,
+          "sha256": "102295605d325a6491f26c20a955d8fde2c96fa6aec15a166e8043f42510cdf8"
+        },
+        "logs_ns3/queue_devices.csv": {
+          "bytes": 645713,
+          "sha256": "36639705e7d001b7f59ab2ef2f509fc8a326a0ed8ef25d1f17cbc7fc90cac2ee"
+        },
+        "logs_ns3/queue_flow_state.csv": {
+          "bytes": 329388,
+          "sha256": "a0f7fe2f249523bfcb12c1d5dbc3603dc6359502489626e2c43f9a80c79fa5d1"
+        },
+        "logs_ns3/queue_focus.csv": {
+          "bytes": 5758765,
+          "sha256": "0d0764c3e64d4b0069239e6f1a682d71bab30c11b95219e0f1f61be650b65b9c"
+        },
+        "logs_ns3/queue_occupancy.csv": {
+          "bytes": 3802112,
+          "sha256": "3f67eec823aa1f64d9e8834c4829d36b643b206319999f9a0ce67f64346ad785"
+        },
+        "logs_ns3/queue_tc_drop.csv": {
+          "bytes": 51062,
+          "sha256": "5779f350f37249e7a55bef444013bbb33fc4d96db81da1fea71ec4b887af9185"
+        },
+        "logs_ns3/study_app_rx_node_1585_port_1024.csv": {
+          "bytes": 14465567,
+          "sha256": "bd7722c1cbb78f51335b6b181d55f2a2c10e427b2a4326a02c74b873712cb23d"
+        },
+        "logs_ns3/study_drop_coverage.csv": {
+          "bytes": 1140184,
+          "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+        },
+        "logs_ns3/study_drops.csv": {
+          "bytes": 53873,
+          "sha256": "9aca2d266ffc1b98cd56f7803d04bdc7d807e11e44d25952b6c1ede94b8ef02e"
+        },
+        "logs_ns3/study_rx_node_1585_port_1024.csv": {
+          "bytes": 19452445,
+          "sha256": "4fb3a7e70c6e79f54007de46368fd1e303359ef2882e0a314587c9e02292b71c"
+        },
+        "logs_ns3/tcp_flow_0_cwnd.csv": {
+          "bytes": 100679,
+          "sha256": "acf9286c1705fa2aa31eb56805f016c3793051f3d566bc91c87c151af2c5cace"
+        },
+        "logs_ns3/tcp_flow_0_orbit_loss.csv": {
+          "bytes": 1386,
+          "sha256": "dd65e13e2e79fefa5b63612950bd59f5e3fa772ee1b9fd8a07f9208234695374"
+        },
+        "logs_ns3/tcp_flow_0_orbit_loss_tail.csv": {
+          "bytes": 621,
+          "sha256": "8447baa1e3aa446ab7ca47c36eea5e2b8c8db4c38c3f04a3b805cbcd0f4af8ec"
+        },
+        "logs_ns3/tcp_flow_0_progress.csv": {
+          "bytes": 1994229,
+          "sha256": "4ce98bb78f4f26fbc697971d23cfc085d8a3e89ad6b378222900a20469794ca4"
+        },
+        "logs_ns3/tcp_flow_0_rtt.csv": {
+          "bytes": 2030657,
+          "sha256": "5f7ed6085a55daca60bb23bb3df73b6098d879aa2005d8810d887b023080edc7"
+        },
+        "logs_ns3/tcp_flow_0_study_events.csv": {
+          "bytes": 5574,
+          "sha256": "56db00c9ed99c760c4d3b9a2d132f22eac6bf89570a8a5ff9d476c0be620d23a"
+        },
+        "logs_ns3/tcp_flow_0_study_packets.csv": {
+          "bytes": 19843355,
+          "sha256": "8129d3685fc3cc339409867b057b9126a6591aad06950e02052c97a52c02567c"
+        },
+        "logs_ns3/tcp_flows.csv": {
+          "bytes": 75,
+          "sha256": "2fa7e654ea06e0f91745acd609b08a9daa37dffdcf01b8035c2ded8567a85017"
+        },
+        "logs_ns3/weighted_device_queues.csv": {
+          "bytes": 2318756,
+          "sha256": "7865f57f707673c80b74d40991f362ff528647655245fdf55f599c65fc88db3c"
+        },
+        "schedule.csv": {
+          "bytes": 119,
+          "sha256": "c441ec9f73e726dcc20348d6c2fb2562401925fd26385a8c7ec8c45c9cf6c809"
+        }
+      },
+      "reference_path": "docs/experiments/assets/20261013-queue-backpressure/cases/control100.json",
+      "reference_sha256": "8b189487ddadc591d802ded7deb9c7bada3c801d30f7a0838a5ae7cdcc912426"
+    },
+    "fifo4-96": {
+      "profile": "bp",
+      "measurement_csvs": {
+        "logs_ns3/bp_config.csv": {
+          "bytes": 142,
+          "sha256": "896531ba077173e764a1c675fbfcec05962321c8eb400bbb9127125f4b2846fa"
+        },
+        "logs_ns3/bp_outcomes.csv": {
+          "bytes": 57931,
+          "sha256": "b394d231d9e7aa5bdc6ffa3f8ef9313940623b842841c893036c28c95bbf2dcf"
+        },
+        "logs_ns3/bp_receiver_drop.csv": {
+          "bytes": 87,
+          "sha256": "4944c2fc7d4bc212b17ab661b2311f7cbc4f7ffd72663279e9a7590b5e5ebea1"
+        },
+        "logs_ns3/bp_served.csv": {
+          "bytes": 26389386,
+          "sha256": "c4c996f9ba7a4c70f7a13e280696c4dc63bbac581b768d6db819056f7d1c77a5"
+        },
+        "logs_ns3/bp_state_bins.csv": {
+          "bytes": 195274,
+          "sha256": "c7f845f04424ae72ea001e27d98e20b3f8cf3e237c999f12bf4e0a9261832dc0"
+        },
+        "logs_ns3/bp_summary.csv": {
+          "bytes": 355,
+          "sha256": "f75182f2cae4fbb1d82269b09baaab87fb012851574bd1b983e1ac8892a1fbea"
+        },
+        "logs_ns3/orbit_coverage.csv": {
+          "bytes": 1398438,
+          "sha256": "e61a82534cc147cff0e21431beb7c1a2a6f48e4cb5b45cfe3df99a7adf1a0a7b"
+        },
+        "logs_ns3/orbit_drops.csv": {
+          "bytes": 102,
+          "sha256": "9e96d658428b39768ff51bdb4813ead4343183c7be69410db98535fecadcb6c7"
+        },
+        "logs_ns3/orbit_queue_bins.csv": {
+          "bytes": 2928387,
+          "sha256": "6554b639ca7cb8a396a954cf41f1bbcbb123916bf204dbf54e219f4c898f2553"
+        },
+        "logs_ns3/orbit_queue_pending.csv": {
+          "bytes": 131,
+          "sha256": "e45cdd58747633e74e0a6f3c7fc2a3d584957beec6b69bc5ef8dd042cb93dba8"
+        },
+        "logs_ns3/orbit_service_bins.csv": {
+          "bytes": 2713797,
+          "sha256": "420c7fec34bdc33beb3fc36f5b39859a4fe5a7196a1b5d00d4736b6d0a88ac4b"
+        },
+        "logs_ns3/orbit_service_coverage.csv": {
+          "bytes": 289969,
+          "sha256": "102295605d325a6491f26c20a955d8fde2c96fa6aec15a166e8043f42510cdf8"
+        },
+        "logs_ns3/queue_devices.csv": {
+          "bytes": 645725,
+          "sha256": "f375ad88635799242d99f7bf52a9e2175773de93fd3f3a63d85e4803bfe08238"
+        },
+        "logs_ns3/queue_flow_state.csv": {
+          "bytes": 21493178,
+          "sha256": "a3922c019a28a30736852d02311918c4ee06f7958f2c5d4568b56485e020f17c"
+        },
+        "logs_ns3/queue_focus.csv": {
+          "bytes": 5737763,
+          "sha256": "c9969a6b5491e3b5d45242b60f76ede2ee9a52c61a9bcb0a7dc3768e381b74b1"
+        },
+        "logs_ns3/queue_occupancy.csv": {
+          "bytes": 3777371,
+          "sha256": "68fd7cfee22305a6d89db15aa8f63a5d2a43ea7af640f18968eb59ee9c88ca16"
+        },
+        "logs_ns3/queue_tc_drop.csv": {
+          "bytes": 217,
+          "sha256": "a22e92556510c09720bbe6a44986eb24cebf2e5bb5556d3c87ca55cbbb134f37"
+        },
+        "logs_ns3/study_app_rx_node_1585_port_1024.csv": {
+          "bytes": 14465567,
+          "sha256": "bd7722c1cbb78f51335b6b181d55f2a2c10e427b2a4326a02c74b873712cb23d"
+        },
+        "logs_ns3/study_drop_coverage.csv": {
+          "bytes": 1140249,
+          "sha256": "1c4f2eebc14f8c701c33a931a2f1ef361246be2c73ca542fcd87d7d785dedfa9"
+        },
+        "logs_ns3/study_drops.csv": {
+          "bytes": 70397,
+          "sha256": "433f4d9175d42a008d0e7262626311d5aa4cd74b773d1e364f403b781e221ad9"
+        },
+        "logs_ns3/study_rx_node_1585_port_1024.csv": {
+          "bytes": 19452445,
+          "sha256": "4fb3a7e70c6e79f54007de46368fd1e303359ef2882e0a314587c9e02292b71c"
+        },
+        "logs_ns3/tcp_flow_0_cwnd.csv": {
+          "bytes": 100679,
+          "sha256": "acf9286c1705fa2aa31eb56805f016c3793051f3d566bc91c87c151af2c5cace"
+        },
+        "logs_ns3/tcp_flow_0_orbit_loss.csv": {
+          "bytes": 1386,
+          "sha256": "dd65e13e2e79fefa5b63612950bd59f5e3fa772ee1b9fd8a07f9208234695374"
+        },
+        "logs_ns3/tcp_flow_0_orbit_loss_tail.csv": {
+          "bytes": 621,
+          "sha256": "8447baa1e3aa446ab7ca47c36eea5e2b8c8db4c38c3f04a3b805cbcd0f4af8ec"
+        },
+        "logs_ns3/tcp_flow_0_progress.csv": {
+          "bytes": 1994229,
+          "sha256": "4ce98bb78f4f26fbc697971d23cfc085d8a3e89ad6b378222900a20469794ca4"
+        },
+        "logs_ns3/tcp_flow_0_rtt.csv": {
+          "bytes": 2030657,
+          "sha256": "5f7ed6085a55daca60bb23bb3df73b6098d879aa2005d8810d887b023080edc7"
+        },
+        "logs_ns3/tcp_flow_0_study_events.csv": {
+          "bytes": 5574,
+          "sha256": "56db00c9ed99c760c4d3b9a2d132f22eac6bf89570a8a5ff9d476c0be620d23a"
+        },
+        "logs_ns3/tcp_flow_0_study_packets.csv": {
+          "bytes": 19843355,
+          "sha256": "8129d3685fc3cc339409867b057b9126a6591aad06950e02052c97a52c02567c"
+        },
+        "logs_ns3/tcp_flows.csv": {
+          "bytes": 75,
+          "sha256": "2fa7e654ea06e0f91745acd609b08a9daa37dffdcf01b8035c2ded8567a85017"
+        },
+        "logs_ns3/weighted_device_queues.csv": {
+          "bytes": 2321792,
+          "sha256": "d553dac2e0a4e4b1f45d9c11df4cba1f3aaa06c6710eb753f47ac59ab2bbe894"
+        },
+        "schedule.csv": {
+          "bytes": 119,
+          "sha256": "c441ec9f73e726dcc20348d6c2fb2562401925fd26385a8c7ec8c45c9cf6c809"
+        }
+      },
+      "reference_path": "docs/experiments/assets/20261013-queue-backpressure/cases/fifo4-96.json",
+      "reference_sha256": "27400b8efc22c86490761626786ec24944a293bc8e80b98e3890691c9afb8b6c"
+    },
+    "codel4-96": {
+      "profile": "bp",
+      "measurement_csvs": {
+        "logs_ns3/bp_config.csv": {
+          "bytes": 144,
+          "sha256": "020924e278c56cce9d7c8286b64529bc3cdae335021748e96527bc4428fe705c"
+        },
+        "logs_ns3/bp_outcomes.csv": {
+          "bytes": 18940,
+          "sha256": "c19b05fcd90c62c8c5e08f0b9cb8e67348f21cebfe7991725ad2b4d99bbd5cb5"
+        },
+        "logs_ns3/bp_receiver_drop.csv": {
+          "bytes": 87,
+          "sha256": "4944c2fc7d4bc212b17ab661b2311f7cbc4f7ffd72663279e9a7590b5e5ebea1"
+        },
+        "logs_ns3/bp_served.csv": {
+          "bytes": 23262700,
+          "sha256": "f167b5235b1d8c64ddb2807ee0a42a3ef8d95761351bec486749bdf03fbc359a"
+        },
+        "logs_ns3/bp_state_bins.csv": {
+          "bytes": 169946,
+          "sha256": "8a45ff1eb41d7bf53ca11b7d7e38c1b353662481e1ccc7c804888a56f57e632e"
+        },
+        "logs_ns3/bp_summary.csv": {
+          "bytes": 354,
+          "sha256": "6826a839d873e047c78ed4c37e01af5ea5dbb568ae735e189eb327f93f8ac75c"
+        },
+        "logs_ns3/orbit_coverage.csv": {
+          "bytes": 1398438,
+          "sha256": "e61a82534cc147cff0e21431beb7c1a2a6f48e4cb5b45cfe3df99a7adf1a0a7b"
+        },
+        "logs_ns3/orbit_drops.csv": {
+          "bytes": 102,
+          "sha256": "9e96d658428b39768ff51bdb4813ead4343183c7be69410db98535fecadcb6c7"
+        },
+        "logs_ns3/orbit_queue_bins.csv": {
+          "bytes": 2864847,
+          "sha256": "273f9c01b8d1a5b850b6b6f16cc211e4d530a89885b40fc33a5457bf85c053bb"
+        },
+        "logs_ns3/orbit_queue_pending.csv": {
+          "bytes": 130,
+          "sha256": "238bc926c6a60f136840dc5cb484f73c652d34cb82101a1dc0a1b514f26c6718"
+        },
+        "logs_ns3/orbit_service_bins.csv": {
+          "bytes": 2700725,
+          "sha256": "fe55d20248b2908b5be1176634f7adc993a0a19d0808f4efa2b4cdcb9ffe7f70"
+        },
+        "logs_ns3/orbit_service_coverage.csv": {
+          "bytes": 289969,
+          "sha256": "102295605d325a6491f26c20a955d8fde2c96fa6aec15a166e8043f42510cdf8"
+        },
+        "logs_ns3/queue_devices.csv": {
+          "bytes": 645726,
+          "sha256": "48ef5338513079234caaed3bf5f92c30c3ef2cfb239739c284be312b260d1528"
+        },
+        "logs_ns3/queue_flow_state.csv": {
+          "bytes": 6025424,
+          "sha256": "32e1b86a8adc151638ad7af6de919cf9061ee413139b22bfef10dde7457b04ac"
+        },
+        "logs_ns3/queue_focus.csv": {
+          "bytes": 5105959,
+          "sha256": "8a24fd9a0e8a0a043aa1c0504fec9057ff1083907ee2177d9d30c14c880ef10e"
+        },
+        "logs_ns3/queue_occupancy.csv": {
+          "bytes": 3447595,
+          "sha256": "9d8f789dcf0054a7d5f140954b00b3c3e7c15304293e2bf390fd5cf6a861d944"
+        },
+        "logs_ns3/queue_tc_drop.csv": {
+          "bytes": 217,
+          "sha256": "a22e92556510c09720bbe6a44986eb24cebf2e5bb5556d3c87ca55cbbb134f37"
+        },
+        "logs_ns3/study_app_rx_node_1585_port_1024.csv": {
+          "bytes": 13604366,
+          "sha256": "4b3e18ec9398a1571bb4a373bdb53960076d187edac6cbe8b46780fda2dc7bf9"
+        },
+        "logs_ns3/study_drop_coverage.csv": {
+          "bytes": 1140249,
+          "sha256": "1c4f2eebc14f8c701c33a931a2f1ef361246be2c73ca542fcd87d7d785dedfa9"
+        },
+        "logs_ns3/study_drops.csv": {
+          "bytes": 23293,
+          "sha256": "c15be97494324ea791230c251095275ef0517bd10bc4aaa22b576a15162280e5"
+        },
+        "logs_ns3/study_rx_node_1585_port_1024.csv": {
+          "bytes": 18190882,
+          "sha256": "e4e5cccc4a98704d7149cc432592dabc4efa16a7e6c9dff67f9cfaf2e267d8cd"
+        },
+        "logs_ns3/tcp_flow_0_cwnd.csv": {
+          "bytes": 82998,
+          "sha256": "8766784301e238c9e86c8714580ff41a4bc571c54a18b3b31c79aed3415ddd74"
+        },
+        "logs_ns3/tcp_flow_0_orbit_loss.csv": {
+          "bytes": 999,
+          "sha256": "15d4d0a724bc716c01a605b3b755c4cb8b5034bc257e72cf6b2b93e5bd48566e"
+        },
+        "logs_ns3/tcp_flow_0_orbit_loss_tail.csv": {
+          "bytes": 497,
+          "sha256": "c1d95c46a3e422df0b877bfa673acd262c2f10b6df364d26a821523bcebd162d"
+        },
+        "logs_ns3/tcp_flow_0_progress.csv": {
+          "bytes": 1873662,
+          "sha256": "fc6095e4a06671969c69a23b4feb8ddb100a760d94102648c906392e05ab1b8e"
+        },
+        "logs_ns3/tcp_flow_0_rtt.csv": {
+          "bytes": 1908584,
+          "sha256": "23ee96c65b67ce6286db86157264f9a8f53337532e69b20c42c7a2f0456ca4d1"
+        },
+        "logs_ns3/tcp_flow_0_study_events.csv": {
+          "bytes": 5872,
+          "sha256": "881cecb2203715d20845d599906711841b0bef0dc7b6d730139f90bbaeff9007"
+        },
+        "logs_ns3/tcp_flow_0_study_packets.csv": {
+          "bytes": 18280157,
+          "sha256": "dbfc1326ace8f81160de971ccc285f4cd244a3481aa1d76a01b9d5bbecbbc11c"
+        },
+        "logs_ns3/tcp_flows.csv": {
+          "bytes": 75,
+          "sha256": "ea5ccc05651ad123d5e11d4d08ec309ac1fd3f7364117037a155c4e56787e04c"
+        },
+        "logs_ns3/weighted_device_queues.csv": {
+          "bytes": 2220404,
+          "sha256": "f6ede371804e4ddefc4a94d3c0dd7c80b4f818d517909e5e20d3f6e6564ffc56"
+        },
+        "schedule.csv": {
+          "bytes": 119,
+          "sha256": "c441ec9f73e726dcc20348d6c2fb2562401925fd26385a8c7ec8c45c9cf6c809"
+        }
+      },
+      "reference_path": "docs/experiments/assets/20261013-queue-backpressure/cases/codel4-96.json",
+      "reference_sha256": "2251fb8088c89a3867caffa287bf1a02a3d2962cd8c949d09636eceb71f83d57"
+    },
+    "selective-route75-delayed78": {
+      "profile": "pace",
+      "measurement_csvs": {
+        "logs_ns3/orbit_coverage.csv": {
+          "bytes": 1398438,
+          "sha256": "7785a349bbcd58d321430e5454d4e7193dfc4ed7766e00af84b503fa6bafef9c"
+        },
+        "logs_ns3/orbit_drops.csv": {
+          "bytes": 44468,
+          "sha256": "44183d356cab40acf6f2d955cfafd833b43412a53d79df7b7d63eb338e468698"
+        },
+        "logs_ns3/orbit_queue_bins.csv": {
+          "bytes": 2936453,
+          "sha256": "b0d0d6e2435728567c9ff73581237ce7db976c14ce0fd1eee1626cfaee341ae6"
+        },
+        "logs_ns3/orbit_queue_pending.csv": {
+          "bytes": 134,
+          "sha256": "f517122709969bb2a1d7bd47fb4ef58f9f914558203bbd7aef139e953669cb6c"
+        },
+        "logs_ns3/orbit_service_bins.csv": {
+          "bytes": 2713805,
+          "sha256": "0bec064eef90d6fcbb5531cff10a9085f48cd1d702a52cd2ae5834c6d21aded2"
+        },
+        "logs_ns3/orbit_service_coverage.csv": {
+          "bytes": 289969,
+          "sha256": "102295605d325a6491f26c20a955d8fde2c96fa6aec15a166e8043f42510cdf8"
+        },
+        "logs_ns3/queue_devices.csv": {
+          "bytes": 645713,
+          "sha256": "36639705e7d001b7f59ab2ef2f509fc8a326a0ed8ef25d1f17cbc7fc90cac2ee"
+        },
+        "logs_ns3/queue_flow_state.csv": {
+          "bytes": 329523,
+          "sha256": "4aec9b9c5e44310a304dca3aea3ceb08c9b35854b1514716da157db6636d0dfb"
+        },
+        "logs_ns3/queue_focus.csv": {
+          "bytes": 5775352,
+          "sha256": "877eefdc28fb1a104d16f0ef3bbbfd61234d998240d856c8b1ac08ba9c1610ec"
+        },
+        "logs_ns3/queue_occupancy.csv": {
+          "bytes": 3797787,
+          "sha256": "8b46af28e24bab94a6d089110fce22dc9592007f648f543d1d3059ab321f9fdb"
+        },
+        "logs_ns3/queue_tc_drop.csv": {
+          "bytes": 51062,
+          "sha256": "2bd7d7a080e8cffece068f62d012266df3c4e990ea04609a041c1425df9df92d"
+        },
+        "logs_ns3/study_app_rx_node_1585_port_1024.csv": {
+          "bytes": 14465481,
+          "sha256": "ae29c00d733451b2a51c8592dc58eefff8397e36f3ce512982af316c934a28f8"
+        },
+        "logs_ns3/study_drop_coverage.csv": {
+          "bytes": 1140184,
+          "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+        },
+        "logs_ns3/study_drops.csv": {
+          "bytes": 53873,
+          "sha256": "d33e2a09e4dfd4915c081dd9e860e1eb19e2b2e621822ebdc6ace53731cd0010"
+        },
+        "logs_ns3/study_rx_node_1585_port_1024.csv": {
+          "bytes": 19452444,
+          "sha256": "7d2a1ad6350e96f48e1ee613f3928cb425670b37480d5a7554d27603376faa75"
+        },
+        "logs_ns3/tcp_flow_0_cwnd.csv": {
+          "bytes": 100677,
+          "sha256": "82f66a58758b60dfd1d36142d8fe84a264613a3b3783f1039d03848b85c55728"
+        },
+        "logs_ns3/tcp_flow_0_orbit_loss.csv": {
+          "bytes": 1386,
+          "sha256": "dd65e13e2e79fefa5b63612950bd59f5e3fa772ee1b9fd8a07f9208234695374"
+        },
+        "logs_ns3/tcp_flow_0_progress.csv": {
+          "bytes": 1994229,
+          "sha256": "c6f13a8e0e52029ce1dc4b73eb8a002d2cdbf173ac0ab1d281675363e45cc121"
+        },
+        "logs_ns3/tcp_flow_0_rtt.csv": {
+          "bytes": 2030632,
+          "sha256": "868091f599bf5ceac8f6b3f15417633e87d5e55d08ae81929e20d959b2c334a5"
+        },
+        "logs_ns3/tcp_flow_0_study_events.csv": {
+          "bytes": 5574,
+          "sha256": "25050c2164c7a8b2cdc962f055871f31756b438e9db03cf93545b169a8b2f14a"
+        },
+        "logs_ns3/tcp_flow_0_study_packets.csv": {
+          "bytes": 19843635,
+          "sha256": "a9911652f661eb449ae9dc4aad6e56d8e8636d53c149dbbf39ec595a2e20be0a"
+        },
+        "logs_ns3/tcp_flows.csv": {
+          "bytes": 75,
+          "sha256": "2fa7e654ea06e0f91745acd609b08a9daa37dffdcf01b8035c2ded8567a85017"
+        },
+        "schedule.csv": {
+          "bytes": 119,
+          "sha256": "c441ec9f73e726dcc20348d6c2fb2562401925fd26385a8c7ec8c45c9cf6c809"
+        }
+      },
+      "reference_path": "docs/experiments/assets/20261013-orbit-queue/counterfactual-raw-inventory.json",
+      "reference_sha256": "ac84da231803b98fb86b921fe7ad6b5ca3dcf27bc0efa8a42fb07f21f13d7a77"
+    }
+  }
+}

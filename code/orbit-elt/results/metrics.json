@@ -1,0 +1,3096 @@
+{
+  "schema": 1,
+  "source_analysis_tool": {
+    "path": "/work/code/orbit-elt/analyze.py",
+    "bytes": 35973,
+    "sha256": "656256252e04b57a149ae7bec38671fcf987a8fb3f617dfb1ece2d115a01856a"
+  },
+  "window_convention": "[start_ns,end_ns)",
+  "cases": [
+    {
+      "case": "leo200-eltA",
+      "definition": {
+        "kind": "leo",
+        "duration": 200,
+        "rate": 10,
+        "queue": 100,
+        "variant": "eltA",
+        "mode": "selective",
+        "tail": false,
+        "elt_mode": 1
+      },
+      "fct_s": null,
+      "transfer_complete": null,
+      "metrics": {
+        "whole": {
+          "start_ns": 0,
+          "end_ns": 200000000000,
+          "app_bytes": 238662720,
+          "app_goodput_mbps": 9.5465088,
+          "tx_payload_rows": 173532,
+          "retx_packets": 507,
+          "recovery_entries": 40,
+          "loss_state_entries": 1,
+          "tagged_data_drop_notifications": 486,
+          "unique_tagged_data_losses": 486
+        },
+        "first": {
+          "start_ns": 25700000000,
+          "end_ns": 28200000000,
+          "app_bytes": 3007020,
+          "app_goodput_mbps": 9.622464,
+          "tx_payload_rows": 2194,
+          "retx_packets": 0,
+          "recovery_entries": 0,
+          "loss_state_entries": 0,
+          "tagged_data_drop_notifications": 0,
+          "unique_tagged_data_losses": 0
+        },
+        "legacy": {
+          "start_ns": 74500000000,
+          "end_ns": 77000000000,
+          "app_bytes": 3005640,
+          "app_goodput_mbps": 9.618048,
+          "tx_payload_rows": 2137,
+          "retx_packets": 12,
+          "recovery_entries": 2,
+          "loss_state_entries": 0,
+          "tagged_data_drop_notifications": 11,
+          "unique_tagged_data_losses": 11
+        },
+        "focus75": {
+          "start_ns": 74500000000,
+          "end_ns": 77500000000,
+          "app_bytes": 3607320,
+          "app_goodput_mbps": 9.61952,
+          "tx_payload_rows": 2578,
+          "retx_packets": 12,
+          "recovery_entries": 2,
+          "loss_state_entries": 0,
+          "tagged_data_drop_notifications": 11,
+          "unique_tagged_data_losses": 11
+        },
+        "pre75": {
+          "start_ns": 74500000000,
+          "end_ns": 75000000000,
+          "app_bytes": 600300,
+          "app_goodput_mbps": 9.6048,
+          "tx_payload_rows": 449,
+          "retx_packets": 0,
+          "recovery_entries": 0,
+          "loss_state_entries": 0,
+          "tagged_data_drop_notifications": 0,
+          "unique_tagged_data_losses": 0
+        },
+        "post75": {
+          "start_ns": 75000000000,
+          "end_ns": 75500000000,
+          "app_bytes": 601680,
+          "app_goodput_mbps": 9.62688,
+          "tx_payload_rows": 454,
+          "retx_packets": 0,
+          "recovery_entries": 0,
+          "loss_state_entries": 0,
+          "tagged_data_drop_notifications": 0,
+          "unique_tagged_data_losses": 0
+        }
+      },
+      "queue_windows": {
+        "whole": {
+          "source": {
+            "q_packet_ns": 7227776771517,
+            "q_byte_ns": 10364631890355378,
+            "full_ns": 1414773239,
+            "peak_packets": 100,
+            "peak_bytes": 143400,
+            "mean_packets": 36.138883857585,
+            "mean_bytes": 51823.15945177689
+          },
+          "all_device": {
+            "q_packet_ns": 7866815891410,
+            "q_byte_ns": 11281013988281940,
+            "full_ns": 1414773239,
+            "peak_packets": 100,
+            "peak_bytes": 143400,
+            "summed_mean_packets": 39.33407945705
+          },
+          "source_served_wait": {
+            "samples": 173022,
+            "sum_ns": 7227384294685,
+            "max_ns": 114682779,
+            "mean_ns": 41771475.85096115
+          }
+        },
+        "first": {
+          "source": {
+            "q_packet_ns": 61034355943,
+            "q_byte_ns": 87523266422262,
+            "full_ns": 0,
+            "peak_packets": 29,
+            "peak_bytes": 41586,
+            "mean_packets": 24.4137423772,
+            "mean_bytes": 35009.3065689048
+          },
+          "all_device": {
+            "q_packet_ns": 71471792336,
+            "q_byte_ns": 102490550209824,
+            "full_ns": 0,
+            "peak_packets": 29,
+            "peak_bytes": 41586,
+            "summed_mean_packets": 28.5887169344
+          },
+          "source_served_wait": {
+            "samples": 2180,
+            "sum_ns": 60739229289,
+            "max_ns": 32126572,
+            "mean_ns": 27862031.783944953
+          }
+        },
+        "legacy": {
+          "source": {
+            "q_packet_ns": 136528427845,
+            "q_byte_ns": 195781765529730,
+            "full_ns": 22684844,
+            "peak_packets": 100,
+            "peak_bytes": 143400,
+            "mean_packets": 54.611371138,
+            "mean_bytes": 78312.706211892
+          },
+          "all_device": {
+            "q_packet_ns": 153278646730,
+            "q_byte_ns": 219801579410820,
+            "full_ns": 22684844,
+            "peak_packets": 100,
+            "peak_bytes": 143400,
+            "summed_mean_packets": 61.311458692
+          },
+          "source_served_wait": {
+            "samples": 2179,
+            "sum_ns": 138891880700,
+            "max_ns": 113770640,
+            "mean_ns": 63741110.92244149
+          }
+        },
+        "focus75": {
+          "source": {
+            "q_packet_ns": 144748289831,
+            "q_byte_ns": 207569047617654,
+            "full_ns": 22684844,
+            "peak_packets": 100,
+            "peak_bytes": 143400,
+            "mean_packets": 48.24942994366667,
+            "mean_bytes": 69189.682539218
+          },
+          "all_device": {
+            "q_packet_ns": 165041364316,
+            "q_byte_ns": 236669316429144,
+            "full_ns": 22684844,
+            "peak_packets": 100,
+            "peak_bytes": 143400,
+            "summed_mean_packets": 55.01378810533333
+          },
+          "source_served_wait": {
+            "samples": 2615,
+            "sum_ns": 147022720028,
+            "max_ns": 113770640,
+            "mean_ns": 56222837.486806884
+          }
+        },
+        "pre75": {
+          "source": {
+            "q_packet_ns": 36145379794,
+            "q_byte_ns": 51832474624596,
+            "full_ns": 0,
+            "peak_packets": 80,
+            "peak_bytes": 114720,
+            "mean_packets": 72.290759588,
+            "mean_bytes": 103664.949249192
+          },
+          "all_device": {
+            "q_packet_ns": 38941768368,
+            "q_byte_ns": 55842495839712,
+            "full_ns": 0,
+            "peak_packets": 80,
+            "peak_bytes": 114720,
+            "summed_mean_packets": 77.883536736
+          },
+          "source_served_wait": {
+            "samples": 436,
+            "sum_ns": 35181197974,
+            "max_ns": 88012079,
+            "mean_ns": 80690821.0412844
+          }
+        },
+        "post75": {
+          "source": {
+            "q_packet_ns": 44262552335,
+            "q_byte_ns": 63472500048390,
+            "full_ns": 0,
+            "peak_packets": 98,
+            "peak_bytes": 140532,
+            "mean_packets": 88.52510467,
+            "mean_bytes": 126945.00009678
+          },
+          "all_device": {
+            "q_packet_ns": 47610621471,
+            "q_byte_ns": 68273631189414,
+            "full_ns": 0,
+            "peak_packets": 98,
+            "peak_bytes": 140532,
+            "summed_mean_packets": 95.221242942
+          },
+          "source_served_wait": {
+            "samples": 435,
+            "sum_ns": 42461695758,
+            "max_ns": 106888326,
+            "mean_ns": 97613093.69655173
+          }
+        }
+      },
+      "first_physical_drop": null,
+      "policies": {
+        "selective": {
+          "event_counts": {
+            "EPOCH_REGISTER": 2,
+            "COHORT_WAIT_BEGIN": 1,
+            "COHORT_WAIT_CONTINUE": 5,
+            "ACK_MOVED_OUTSIDE_COHORT": 1,
+            "EPOCH_END": 1
+          },
+          "count": 10,
+          "episodes": [
+            {
+              "epoch_ns": 26200000000,
+              "start_ns": 26328788841,
+              "end_ns": 26334460816,
+              "deadline_ns": 26335420359,
+              "end_event": "ACK_MOVED_OUTSIDE_COHORT",
+              "elapsed_ns": 5671975
+            }
+          ]
+        },
+        "tail": {
+          "event_counts": {},
+          "count": 0,
+          "admissions": []
+        },
+        "elt": {
+          "event_counts": {
+            "ELT_BEGIN": 1,
+            "ELT_SEND_BEFORE": 3,
+            "ELT_NEW_TX": 3,
+            "ELT_SKIP_CEILING": 1,
+            "ELT_CACK_BEFORE": 1,
+            "ELT_EXIT_CACK": 1
+          },
+          "count": 10,
+          "episode_validation": [
+            {
+              "epoch_ns": 26200000000,
+              "deadline_ns": 26335420359,
+              "saved_flight_bytes": 165600,
+              "original_sends": 3,
+              "original_sent_bytes": 4140,
+              "cack_exits": 1
+            }
+          ],
+          "mode": 1,
+          "new_tx_actions": 3,
+          "new_tx_bytes": 4140,
+          "actual_original_sender_TX_audit": true,
+          "flight_ceiling_and_mode_allowance_audit": true,
+          "allowance_semantics": "E2 checks pre-send pipe+Skipped+MSS<=entry flight. Actual post-send pipe<=entry flight; Careful increments Skipped after send, so pipe+Skipped may then exceed entry flight by one MSS.",
+          "cack_T1_T2_audit_scope": "Observed ELT_EXIT_CACK rows only; no untriggered branch safety claim.",
+          "sequence_arithmetic_scope": "These declared 10-Mbps/200-s and finite cases do not wrap 32-bit data sequences; FIN beyond high data TX means zero post-ACK data flight."
+        }
+      },
+      "manifest_sha256": "910352493a3febfc61f0578c79ce8a16444ef855be16300d72ff0be151b0fb1e",
+      "limitations": [
+        "FCT is null unless the entire positive finite MaxBytes was delivered; bulk FCT is null.",
+        "APP HandleRead is ordered delivery; cached SRTT is not measured queue residence.",
+        "Tagged payload-bearing data loss is a full TX identity union; unmapped ACK/control notifications stay separate.",
+        "CA_LOSS state entries are not independently counted RTOs.",
+        "Tail/ELT behavior is not a queue fix. No T75 causality is inferred from cwnd, drops or absent policy actions.",
+        "Historical OFF byte parity is a separate root-owned check; this analyzer hashes newly completed raw data."
+      ]
+    },
+    {
+      "case": "leo200-eltC",
+      "definition": {
+        "kind": "leo",
+        "duration": 200,
+        "rate": 10,
+        "queue": 100,
+        "variant": "eltC",
+        "mode": "selective",
+        "tail": false,
+        "elt_mode": 2
+      },
+      "fct_s": null,
+      "transfer_complete": null,
+      "metrics": {
+        "whole": {
+          "start_ns": 0,
+          "end_ns": 200000000000,
+          "app_bytes": 238662720,
+          "app_goodput_mbps": 9.5465088,
+          "tx_payload_rows": 173532,
+          "retx_packets": 507,
+          "recovery_entries": 40,
+          "loss_state_entries": 1,
+          "tagged_data_drop_notifications": 486,
+          "unique_tagged_data_losses": 486
+        },
+        "first": {
+          "start_ns": 25700000000,
+          "end_ns": 28200000000,
+          "app_bytes": 3007020,
+          "app_goodput_mbps": 9.622464,
+          "tx_payload_rows": 2194,
+          "retx_packets": 0,
+          "recovery_entries": 0,
+          "loss_state_entries": 0,
+          "tagged_data_drop_notifications": 0,
+          "unique_tagged_data_losses": 0
+        },
+        "legacy": {
+          "start_ns": 74500000000,
+          "end_ns": 77000000000,
+          "app_bytes": 3005640,
+          "app_goodput_mbps": 9.618048,
+          "tx_payload_rows": 2137,
+          "retx_packets": 12,
+          "recovery_entries": 2,
+          "loss_state_entries": 0,
+          "tagged_data_drop_notifications": 11,
+          "unique_tagged_data_losses": 11
+        },
+        "focus75": {
+          "start_ns": 74500000000,
+          "end_ns": 77500000000,
+          "app_bytes": 3607320,
+          "app_goodput_mbps": 9.61952,
+          "tx_payload_rows": 2578,
+          "retx_packets": 12,
+          "recovery_entries": 2,
+          "loss_state_entries": 0,
+          "tagged_data_drop_notifications": 11,
+          "unique_tagged_data_losses": 11
+        },
+        "pre75": {
+          "start_ns": 74500000000,
+          "end_ns": 75000000000,
+          "app_bytes": 600300,
+          "app_goodput_mbps": 9.6048,
+          "tx_payload_rows": 449,
+          "retx_packets": 0,
+          "recovery_entries": 0,
+          "loss_state_entries": 0,
+          "tagged_data_drop_notifications": 0,
+          "unique_tagged_data_losses": 0
+        },
+        "post75": {
+          "start_ns": 75000000000,
+          "end_ns": 75500000000,
+          "app_bytes": 601680,
+          "app_goodput_mbps": 9.62688,
+          "tx_payload_rows": 454,
+          "retx_packets": 0,
+          "recovery_entries": 0,
+          "loss_state_entries": 0,
+          "tagged_data_drop_notifications": 0,
+          "unique_tagged_data_losses": 0
+        }
+      },
+      "queue_windows": {
+        "whole": {
+          "source": {
+            "q_packet_ns": 7227775624320,
+            "q_byte_ns": 10364630245274880,
+            "full_ns": 1414773239,
+            "peak_packets": 100,
+            "peak_bytes": 143400,
+            "mean_packets": 36.1388781216,
+            "mean_bytes": 51823.1512263744
+          },
+          "all_device": {
+            "q_packet_ns": 7866814744213,
+            "q_byte_ns": 11281012343201442,
+            "full_ns": 1414773239,
+            "peak_packets": 100,
+            "peak_bytes": 143400,
+            "summed_mean_packets": 39.334073721065
+          },
+          "source_served_wait": {
+            "samples": 173022,
+            "sum_ns": 7227383147488,
+            "max_ns": 114682779,
+            "mean_ns": 41771469.22060779
+          }
+        },
+        "first": {
+          "source": {
+            "q_packet_ns": 61033208746,
+            "q_byte_ns": 87521621341764,
+            "full_ns": 0,
+            "peak_packets": 29,
+            "peak_bytes": 41586,
+            "mean_packets": 24.4132834984,
+            "mean_bytes": 35008.6485367056
+          },
+          "all_device": {
+            "q_packet_ns": 71470645139,
+            "q_byte_ns": 102488905129326,
+            "full_ns": 0,
+            "peak_packets": 29,
+            "peak_bytes": 41586,
+            "summed_mean_packets": 28.5882580556
+          },
+          "source_served_wait": {
+            "samples": 2180,
+            "sum_ns": 60738082092,
+            "max_ns": 32126572,
+            "mean_ns": 27861505.54678899
+          }
+        },
+        "legacy": {
+          "source": {
+            "q_packet_ns": 136528427845,
+            "q_byte_ns": 195781765529730,
+            "full_ns": 22684844,
+            "peak_packets": 100,
+            "peak_bytes": 143400,
+            "mean_packets": 54.611371138,
+            "mean_bytes": 78312.706211892
+          },
+          "all_device": {
+            "q_packet_ns": 153278646730,
+            "q_byte_ns": 219801579410820,
+            "full_ns": 22684844,
+            "peak_packets": 100,
+            "peak_bytes": 143400,
+            "summed_mean_packets": 61.311458692
+          },
+          "source_served_wait": {
+            "samples": 2179,
+            "sum_ns": 138891880700,
+            "max_ns": 113770640,
+            "mean_ns": 63741110.92244149
+          }
+        },
+        "focus75": {
+          "source": {
+            "q_packet_ns": 144748289831,
+            "q_byte_ns": 207569047617654,
+            "full_ns": 22684844,
+            "peak_packets": 100,
+            "peak_bytes": 143400,
+            "mean_packets": 48.24942994366667,
+            "mean_bytes": 69189.682539218
+          },
+          "all_device": {
+            "q_packet_ns": 165041364316,
+            "q_byte_ns": 236669316429144,
+            "full_ns": 22684844,
+            "peak_packets": 100,
+            "peak_bytes": 143400,
+            "summed_mean_packets": 55.01378810533333
+          },
+          "source_served_wait": {
+            "samples": 2615,
+            "sum_ns": 147022720028,
+            "max_ns": 113770640,
+            "mean_ns": 56222837.486806884
+          }
+        },
+        "pre75": {
+          "source": {
+            "q_packet_ns": 36145379794,
+            "q_byte_ns": 51832474624596,
+            "full_ns": 0,
+            "peak_packets": 80,
+            "peak_bytes": 114720,
+            "mean_packets": 72.290759588,
+            "mean_bytes": 103664.949249192
+          },
+          "all_device": {
+            "q_packet_ns": 38941768368,
+            "q_byte_ns": 55842495839712,
+            "full_ns": 0,
+            "peak_packets": 80,
+            "peak_bytes": 114720,
+            "summed_mean_packets": 77.883536736
+          },
+          "source_served_wait": {
+            "samples": 436,
+            "sum_ns": 35181197974,
+            "max_ns": 88012079,
+            "mean_ns": 80690821.0412844
+          }
+        },
+        "post75": {
+          "source": {
+            "q_packet_ns": 44262552335,
+            "q_byte_ns": 63472500048390,
+            "full_ns": 0,
+            "peak_packets": 98,
+            "peak_bytes": 140532,
+            "mean_packets": 88.52510467,
+            "mean_bytes": 126945.00009678
+          },
+          "all_device": {
+            "q_packet_ns": 47610621471,
+            "q_byte_ns": 68273631189414,
+            "full_ns": 0,
+            "peak_packets": 98,
+            "peak_bytes": 140532,
+            "summed_mean_packets": 95.221242942
+          },
+          "source_served_wait": {
+            "samples": 435,
+            "sum_ns": 42461695758,
+            "max_ns": 106888326,
+            "mean_ns": 97613093.69655173
+          }
+        }
+      },
+      "first_physical_drop": null,
+      "policies": {
+        "selective": {
+          "event_counts": {
+            "EPOCH_REGISTER": 2,
+            "COHORT_WAIT_BEGIN": 1,
+            "COHORT_WAIT_CONTINUE": 5,
+            "ACK_MOVED_OUTSIDE_COHORT": 1,
+            "EPOCH_END": 1
+          },
+          "count": 10,
+          "episodes": [
+            {
+              "epoch_ns": 26200000000,
+              "start_ns": 26328788841,
+              "end_ns": 26334460816,
+              "deadline_ns": 26335420359,
+              "end_event": "ACK_MOVED_OUTSIDE_COHORT",
+              "elapsed_ns": 5671975
+            }
+          ]
+        },
+        "tail": {
+          "event_counts": {},
+          "count": 0,
+          "admissions": []
+        },
+        "elt": {
+          "event_counts": {
+            "ELT_BEGIN": 1,
+            "ELT_SEND_BEFORE": 2,
+            "ELT_NEW_TX": 2,
+            "ELT_SKIP_CEILING": 1,
+            "ELT_CACK_BEFORE": 1,
+            "ELT_EXIT_CACK": 1
+          },
+          "count": 8,
+          "episode_validation": [
+            {
+              "epoch_ns": 26200000000,
+              "deadline_ns": 26335420359,
+              "saved_flight_bytes": 165600,
+              "original_sends": 2,
+              "original_sent_bytes": 2760,
+              "cack_exits": 1
+            }
+          ],
+          "mode": 2,
+          "new_tx_actions": 2,
+          "new_tx_bytes": 2760,
+          "actual_original_sender_TX_audit": true,
+          "flight_ceiling_and_mode_allowance_audit": true,
+          "allowance_semantics": "E2 checks pre-send pipe+Skipped+MSS<=entry flight. Actual post-send pipe<=entry flight; Careful increments Skipped after send, so pipe+Skipped may then exceed entry flight by one MSS.",
+          "cack_T1_T2_audit_scope": "Observed ELT_EXIT_CACK rows only; no untriggered branch safety claim.",
+          "sequence_arithmetic_scope": "These declared 10-Mbps/200-s and finite cases do not wrap 32-bit data sequences; FIN beyond high data TX means zero post-ACK data flight."
+        }
+      },
+      "manifest_sha256": "cb734f6012723aecb93533916d4f55e646b78188b703a50540e13e4bb05fe9f4",
+      "limitations": [
+        "FCT is null unless the entire positive finite MaxBytes was delivered; bulk FCT is null.",
+        "APP HandleRead is ordered delivery; cached SRTT is not measured queue residence.",
+        "Tagged payload-bearing data loss is a full TX identity union; unmapped ACK/control notifications stay separate.",
+        "CA_LOSS state entries are not independently counted RTOs.",
+        "Tail/ELT behavior is not a queue fix. No T75 causality is inferred from cwnd, drops or absent policy actions.",
+        "Historical OFF byte parity is a separate root-owned check; this analyzer hashes newly completed raw data."
+      ]
+    },
+    {
+      "case": "leo200-stock",
+      "definition": {
+        "kind": "leo",
+        "duration": 200,
+        "rate": 10,
+        "queue": 100,
+        "variant": "stock",
+        "mode": "base",
+        "tail": false,
+        "elt_mode": 0
+      },
+      "fct_s": null,
+      "transfer_complete": null,
+      "metrics": {
+        "whole": {
+          "start_ns": 0,
+          "end_ns": 200000000000,
+          "app_bytes": 238608900,
+          "app_goodput_mbps": 9.544356,
+          "tx_payload_rows": 173509,
+          "retx_packets": 523,
+          "recovery_entries": 41,
+          "loss_state_entries": 1,
+          "tagged_data_drop_notifications": 499,
+          "unique_tagged_data_losses": 499
+        },
+        "first": {
+          "start_ns": 25700000000,
+          "end_ns": 28200000000,
+          "app_bytes": 2964240,
+          "app_goodput_mbps": 9.485568,
+          "tx_payload_rows": 2140,
+          "retx_packets": 3,
+          "recovery_entries": 1,
+          "loss_state_entries": 0,
+          "tagged_data_drop_notifications": 0,
+          "unique_tagged_data_losses": 0
+        },
+        "legacy": {
+          "start_ns": 74500000000,
+          "end_ns": 77000000000,
+          "app_bytes": 3008400,
+          "app_goodput_mbps": 9.62688,
+          "tx_payload_rows": 2237,
+          "retx_packets": 0,
+          "recovery_entries": 0,
+          "loss_state_entries": 0,
+          "tagged_data_drop_notifications": 0,
+          "unique_tagged_data_losses": 0
+        },
+        "focus75": {
+          "start_ns": 74500000000,
+          "end_ns": 77500000000,
+          "app_bytes": 3461040,
+          "app_goodput_mbps": 9.22944,
+          "tx_payload_rows": 2633,
+          "retx_packets": 9,
+          "recovery_entries": 1,
+          "loss_state_entries": 0,
+          "tagged_data_drop_notifications": 12,
+          "unique_tagged_data_losses": 12
+        },
+        "pre75": {
+          "start_ns": 74500000000,
+          "end_ns": 75000000000,
+          "app_bytes": 601680,
+          "app_goodput_mbps": 9.62688,
+          "tx_payload_rows": 444,
+          "retx_packets": 0,
+          "recovery_entries": 0,
+          "loss_state_entries": 0,
+          "tagged_data_drop_notifications": 0,
+          "unique_tagged_data_losses": 0
+        },
+        "post75": {
+          "start_ns": 75000000000,
+          "end_ns": 75500000000,
+          "app_bytes": 601680,
+          "app_goodput_mbps": 9.62688,
+          "tx_payload_rows": 446,
+          "retx_packets": 0,
+          "recovery_entries": 0,
+          "loss_state_entries": 0,
+          "tagged_data_drop_notifications": 0,
+          "unique_tagged_data_losses": 0
+        }
+      },
+      "queue_windows": {
+        "whole": {
+          "source": {
+            "q_packet_ns": 7190468595376,
+            "q_byte_ns": 10311131965769184,
+            "full_ns": 1282036896,
+            "peak_packets": 100,
+            "peak_bytes": 143400,
+            "mean_packets": 35.95234297688,
+            "mean_bytes": 51555.65982884592
+          },
+          "all_device": {
+            "q_packet_ns": 7328130064861,
+            "q_byte_ns": 10508538513010674,
+            "full_ns": 1282036896,
+            "peak_packets": 100,
+            "peak_bytes": 143400,
+            "summed_mean_packets": 36.640650324305
+          },
+          "source_served_wait": {
+            "samples": 172986,
+            "sum_ns": 7190072171062,
+            "max_ns": 114691985,
+            "mean_ns": 41564474.41447285
+          }
+        },
+        "first": {
+          "source": {
+            "q_packet_ns": 18343822820,
+            "q_byte_ns": 26305041923880,
+            "full_ns": 0,
+            "peak_packets": 23,
+            "peak_bytes": 32982,
+            "mean_packets": 7.337529128,
+            "mean_bytes": 10522.016769552
+          },
+          "all_device": {
+            "q_packet_ns": 19478093064,
+            "q_byte_ns": 27931585453776,
+            "full_ns": 0,
+            "peak_packets": 23,
+            "peak_bytes": 32982,
+            "summed_mean_packets": 7.7912372256
+          },
+          "source_served_wait": {
+            "samples": 2147,
+            "sum_ns": 18435682420,
+            "max_ns": 26380293,
+            "mean_ns": 8586717.475547275
+          }
+        },
+        "legacy": {
+          "source": {
+            "q_packet_ns": 161947022443,
+            "q_byte_ns": 232232030183262,
+            "full_ns": 0,
+            "peak_packets": 98,
+            "peak_bytes": 140532,
+            "mean_packets": 64.7788089772,
+            "mean_bytes": 92892.8120733048
+          },
+          "all_device": {
+            "q_packet_ns": 165604940533,
+            "q_byte_ns": 237477484724322,
+            "full_ns": 0,
+            "peak_packets": 98,
+            "peak_bytes": 140532,
+            "summed_mean_packets": 66.2419762132
+          },
+          "source_served_wait": {
+            "samples": 2180,
+            "sum_ns": 157706353396,
+            "max_ns": 107176158,
+            "mean_ns": 72342363.94311927
+          }
+        },
+        "focus75": {
+          "source": {
+            "q_packet_ns": 201539736638,
+            "q_byte_ns": 289007982338892,
+            "full_ns": 55590982,
+            "peak_packets": 100,
+            "peak_bytes": 143400,
+            "mean_packets": 67.17991221266666,
+            "mean_bytes": 96335.994112964
+          },
+          "all_device": {
+            "q_packet_ns": 206111444673,
+            "q_byte_ns": 295563811661082,
+            "full_ns": 55590982,
+            "peak_packets": 100,
+            "peak_bytes": 143400,
+            "summed_mean_packets": 68.703814891
+          },
+          "source_served_wait": {
+            "samples": 2615,
+            "sum_ns": 201326237300,
+            "max_ns": 114058328,
+            "mean_ns": 76989000.87954111
+          }
+        },
+        "pre75": {
+          "source": {
+            "q_packet_ns": 21675042935,
+            "q_byte_ns": 31082011568790,
+            "full_ns": 0,
+            "peak_packets": 48,
+            "peak_bytes": 68832,
+            "mean_packets": 43.35008587,
+            "mean_bytes": 62164.02313758
+          },
+          "all_device": {
+            "q_packet_ns": 21842371563,
+            "q_byte_ns": 31321960821342,
+            "full_ns": 0,
+            "peak_packets": 48,
+            "peak_bytes": 68832,
+            "summed_mean_packets": 43.684743126
+          },
+          "source_served_wait": {
+            "samples": 436,
+            "sum_ns": 21321104782,
+            "max_ns": 53891492,
+            "mean_ns": 48901616.47247706
+          }
+        },
+        "post75": {
+          "source": {
+            "q_packet_ns": 26635464594,
+            "q_byte_ns": 38195256227796,
+            "full_ns": 0,
+            "peak_packets": 59,
+            "peak_bytes": 84606,
+            "mean_packets": 53.270929188,
+            "mean_bytes": 76390.512455592
+          },
+          "all_device": {
+            "q_packet_ns": 27407414008,
+            "q_byte_ns": 39302231687472,
+            "full_ns": 0,
+            "peak_packets": 59,
+            "peak_bytes": 84606,
+            "summed_mean_packets": 54.814828016
+          },
+          "source_served_wait": {
+            "samples": 436,
+            "sum_ns": 25995673579,
+            "max_ns": 65884991,
+            "mean_ns": 59623104.538990825
+          }
+        }
+      },
+      "first_physical_drop": null,
+      "policies": {
+        "selective": {
+          "event_counts": {},
+          "count": 0,
+          "episodes": []
+        },
+        "tail": {
+          "event_counts": {},
+          "count": 0,
+          "admissions": []
+        },
+        "elt": {
+          "event_counts": {},
+          "count": 0,
+          "episode_validation": [],
+          "mode": 0,
+          "new_tx_actions": 0,
+          "new_tx_bytes": 0,
+          "actual_original_sender_TX_audit": true,
+          "flight_ceiling_and_mode_allowance_audit": true,
+          "allowance_semantics": "E2 checks pre-send pipe+Skipped+MSS<=entry flight. Actual post-send pipe<=entry flight; Careful increments Skipped after send, so pipe+Skipped may then exceed entry flight by one MSS.",
+          "cack_T1_T2_audit_scope": "Observed ELT_EXIT_CACK rows only; no untriggered branch safety claim.",
+          "sequence_arithmetic_scope": "These declared 10-Mbps/200-s and finite cases do not wrap 32-bit data sequences; FIN beyond high data TX means zero post-ACK data flight."
+        }
+      },
+      "manifest_sha256": "c40bbaf64f4473a63705df22e11528a32e40f4c23a92d677755e4db91ebaec82",
+      "limitations": [
+        "FCT is null unless the entire positive finite MaxBytes was delivered; bulk FCT is null.",
+        "APP HandleRead is ordered delivery; cached SRTT is not measured queue residence.",
+        "Tagged payload-bearing data loss is a full TX identity union; unmapped ACK/control notifications stay separate.",
+        "CA_LOSS state entries are not independently counted RTOs.",
+        "Tail/ELT behavior is not a queue fix. No T75 causality is inferred from cwnd, drops or absent policy actions.",
+        "Historical OFF byte parity is a separate root-owned check; this analyzer hashes newly completed raw data."
+      ]
+    },
+    {
+      "case": "leo200-tail",
+      "definition": {
+        "kind": "leo",
+        "duration": 200,
+        "rate": 10,
+        "queue": 100,
+        "variant": "tail",
+        "mode": "selective",
+        "tail": true,
+        "elt_mode": 0
+      },
+      "fct_s": null,
+      "transfer_complete": null,
+      "metrics": {
+        "whole": {
+          "start_ns": 0,
+          "end_ns": 200000000000,
+          "app_bytes": 238662720,
+          "app_goodput_mbps": 9.5465088,
+          "tx_payload_rows": 173532,
+          "retx_packets": 507,
+          "recovery_entries": 40,
+          "loss_state_entries": 1,
+          "tagged_data_drop_notifications": 486,
+          "unique_tagged_data_losses": 486
+        },
+        "first": {
+          "start_ns": 25700000000,
+          "end_ns": 28200000000,
+          "app_bytes": 3007020,
+          "app_goodput_mbps": 9.622464,
+          "tx_payload_rows": 2194,
+          "retx_packets": 0,
+          "recovery_entries": 0,
+          "loss_state_entries": 0,
+          "tagged_data_drop_notifications": 0,
+          "unique_tagged_data_losses": 0
+        },
+        "legacy": {
+          "start_ns": 74500000000,
+          "end_ns": 77000000000,
+          "app_bytes": 3005640,
+          "app_goodput_mbps": 9.618048,
+          "tx_payload_rows": 2137,
+          "retx_packets": 12,
+          "recovery_entries": 2,
+          "loss_state_entries": 0,
+          "tagged_data_drop_notifications": 11,
+          "unique_tagged_data_losses": 11
+        },
+        "focus75": {
+          "start_ns": 74500000000,
+          "end_ns": 77500000000,
+          "app_bytes": 3607320,
+          "app_goodput_mbps": 9.61952,
+          "tx_payload_rows": 2577,
+          "retx_packets": 12,
+          "recovery_entries": 2,
+          "loss_state_entries": 0,
+          "tagged_data_drop_notifications": 11,
+          "unique_tagged_data_losses": 11
+        },
+        "pre75": {
+          "start_ns": 74500000000,
+          "end_ns": 75000000000,
+          "app_bytes": 600300,
+          "app_goodput_mbps": 9.6048,
+          "tx_payload_rows": 447,
+          "retx_packets": 0,
+          "recovery_entries": 0,
+          "loss_state_entries": 0,
+          "tagged_data_drop_notifications": 0,
+          "unique_tagged_data_losses": 0
+        },
+        "post75": {
+          "start_ns": 75000000000,
+          "end_ns": 75500000000,
+          "app_bytes": 601680,
+          "app_goodput_mbps": 9.62688,
+          "tx_payload_rows": 455,
+          "retx_packets": 0,
+          "recovery_entries": 0,
+          "loss_state_entries": 0,
+          "tagged_data_drop_notifications": 0,
+          "unique_tagged_data_losses": 0
+        }
+      },
+      "queue_windows": {
+        "whole": {
+          "source": {
+            "q_packet_ns": 7219678027927,
+            "q_byte_ns": 10353018292047318,
+            "full_ns": 1414504257,
+            "peak_packets": 100,
+            "peak_bytes": 143400,
+            "mean_packets": 36.098390139635,
+            "mean_bytes": 51765.09146023659
+          },
+          "all_device": {
+            "q_packet_ns": 7858720494834,
+            "q_byte_ns": 11269405189591956,
+            "full_ns": 1414504257,
+            "peak_packets": 100,
+            "peak_bytes": 143400,
+            "summed_mean_packets": 39.29360247417
+          },
+          "source_served_wait": {
+            "samples": 173022,
+            "sum_ns": 7219285551095,
+            "max_ns": 114682779,
+            "mean_ns": 41724668.256608985
+          }
+        },
+        "first": {
+          "source": {
+            "q_packet_ns": 60823400403,
+            "q_byte_ns": 87220756177902,
+            "full_ns": 0,
+            "peak_packets": 29,
+            "peak_bytes": 41586,
+            "mean_packets": 24.3293601612,
+            "mean_bytes": 34888.3024711608
+          },
+          "all_device": {
+            "q_packet_ns": 71260836796,
+            "q_byte_ns": 102188039965464,
+            "full_ns": 0,
+            "peak_packets": 29,
+            "peak_bytes": 41586,
+            "summed_mean_packets": 28.5043347184
+          },
+          "source_served_wait": {
+            "samples": 2180,
+            "sum_ns": 60528273749,
+            "max_ns": 32126572,
+            "mean_ns": 27765263.18761468
+          }
+        },
+        "legacy": {
+          "source": {
+            "q_packet_ns": 138123814922,
+            "q_byte_ns": 198069550598148,
+            "full_ns": 22661582,
+            "peak_packets": 100,
+            "peak_bytes": 143400,
+            "mean_packets": 55.2495259688,
+            "mean_bytes": 79227.8202392592
+          },
+          "all_device": {
+            "q_packet_ns": 154877381469,
+            "q_byte_ns": 222094165026546,
+            "full_ns": 22661582,
+            "peak_packets": 100,
+            "peak_bytes": 143400,
+            "summed_mean_packets": 61.9509525876
+          },
+          "source_served_wait": {
+            "samples": 2179,
+            "sum_ns": 140404667925,
+            "max_ns": 113770454,
+            "mean_ns": 64435368.483249195
+          }
+        },
+        "focus75": {
+          "source": {
+            "q_packet_ns": 146153776608,
+            "q_byte_ns": 209584515655872,
+            "full_ns": 22661582,
+            "peak_packets": 100,
+            "peak_bytes": 143400,
+            "mean_packets": 48.717925536,
+            "mean_bytes": 69861.505218624
+          },
+          "all_device": {
+            "q_packet_ns": 166450198791,
+            "q_byte_ns": 238689585066294,
+            "full_ns": 22661582,
+            "peak_packets": 100,
+            "peak_bytes": 143400,
+            "summed_mean_packets": 55.483399597
+          },
+          "source_served_wait": {
+            "samples": 2615,
+            "sum_ns": 148365720637,
+            "max_ns": 113770454,
+            "mean_ns": 56736413.24550669
+          }
+        },
+        "pre75": {
+          "source": {
+            "q_packet_ns": 35589279939,
+            "q_byte_ns": 51035027432526,
+            "full_ns": 0,
+            "peak_packets": 79,
+            "peak_bytes": 113286,
+            "mean_packets": 71.178559878,
+            "mean_bytes": 102070.054865052
+          },
+          "all_device": {
+            "q_packet_ns": 38385668513,
+            "q_byte_ns": 55045048647642,
+            "full_ns": 0,
+            "peak_packets": 79,
+            "peak_bytes": 113286,
+            "summed_mean_packets": 76.771337026
+          },
+          "source_served_wait": {
+            "samples": 436,
+            "sum_ns": 34648887509,
+            "max_ns": 86864811,
+            "mean_ns": 79469925.4793578
+          }
+        },
+        "post75": {
+          "source": {
+            "q_packet_ns": 43616190322,
+            "q_byte_ns": 62545616921748,
+            "full_ns": 0,
+            "peak_packets": 97,
+            "peak_bytes": 139098,
+            "mean_packets": 87.232380644,
+            "mean_bytes": 125091.233843496
+          },
+          "all_device": {
+            "q_packet_ns": 46967607120,
+            "q_byte_ns": 67351548610080,
+            "full_ns": 0,
+            "peak_packets": 97,
+            "peak_bytes": 139098,
+            "summed_mean_packets": 93.93521424
+          },
+          "source_served_wait": {
+            "samples": 435,
+            "sum_ns": 41846801308,
+            "max_ns": 105741067,
+            "mean_ns": 96199543.23678161
+          }
+        }
+      },
+      "first_physical_drop": null,
+      "policies": {
+        "selective": {
+          "event_counts": {
+            "EPOCH_REGISTER": 2,
+            "COHORT_WAIT_BEGIN": 1,
+            "COHORT_WAIT_CONTINUE": 5,
+            "ACK_MOVED_OUTSIDE_COHORT": 1,
+            "EPOCH_END": 1
+          },
+          "count": 10,
+          "episodes": [
+            {
+              "epoch_ns": 26200000000,
+              "start_ns": 26328788841,
+              "end_ns": 26334460816,
+              "deadline_ns": 26335420359,
+              "end_event": "ACK_MOVED_OUTSIDE_COHORT",
+              "elapsed_ns": 5671975
+            }
+          ]
+        },
+        "tail": {
+          "event_counts": {
+            "APPLICATION_OPEN": 3
+          },
+          "count": 3,
+          "admissions": []
+        },
+        "elt": {
+          "event_counts": {},
+          "count": 0,
+          "episode_validation": [],
+          "mode": 0,
+          "new_tx_actions": 0,
+          "new_tx_bytes": 0,
+          "actual_original_sender_TX_audit": true,
+          "flight_ceiling_and_mode_allowance_audit": true,
+          "allowance_semantics": "E2 checks pre-send pipe+Skipped+MSS<=entry flight. Actual post-send pipe<=entry flight; Careful increments Skipped after send, so pipe+Skipped may then exceed entry flight by one MSS.",
+          "cack_T1_T2_audit_scope": "Observed ELT_EXIT_CACK rows only; no untriggered branch safety claim.",
+          "sequence_arithmetic_scope": "These declared 10-Mbps/200-s and finite cases do not wrap 32-bit data sequences; FIN beyond high data TX means zero post-ACK data flight."
+        }
+      },
+      "manifest_sha256": "997e9e07b5b2fa0ff9d83b2bd67ae58e0d867c31d2687e62f8e626c126485eb8",
+      "limitations": [
+        "FCT is null unless the entire positive finite MaxBytes was delivered; bulk FCT is null.",
+        "APP HandleRead is ordered delivery; cached SRTT is not measured queue residence.",
+        "Tagged payload-bearing data loss is a full TX identity union; unmapped ACK/control notifications stay separate.",
+        "CA_LOSS state entries are not independently counted RTOs.",
+        "Tail/ELT behavior is not a queue fix. No T75 causality is inferred from cwnd, drops or absent policy actions.",
+        "Historical OFF byte parity is a separate root-owned check; this analyzer hashes newly completed raw data."
+      ]
+    },
+    {
+      "case": "micro20-eltA",
+      "definition": {
+        "kind": "micro",
+        "duration": 4,
+        "variant": "eltA",
+        "bytes": 27600,
+        "mode": "selective",
+        "tail": false,
+        "elt_mode": 1
+      },
+      "fct_s": 0.257223678,
+      "transfer_complete": true,
+      "metrics": {
+        "whole": {
+          "start_ns": 0,
+          "end_ns": 4000000000,
+          "app_bytes": 27600,
+          "app_goodput_mbps": 0.0552,
+          "tx_payload_rows": 21,
+          "retx_packets": 1,
+          "recovery_entries": 1,
+          "loss_state_entries": 0,
+          "tagged_data_drop_notifications": 1,
+          "unique_tagged_data_losses": 1
+        }
+      },
+      "queue_windows": null,
+      "first_physical_drop": {
+        "identity": {
+          "flow_id": 0,
+          "tx_id": 3,
+          "tx_time_ns": 100009281,
+          "seq": 1,
+          "payload_bytes": 1380
+        },
+        "first_drop": {
+          "time_ns": "150128320",
+          "layer": "PhyRxDrop",
+          "node": "1",
+          "device": "1",
+          "reason": "-1",
+          "uid": "3",
+          "src": "10.1.1.1",
+          "dst": "10.1.1.2",
+          "src_port": "49153",
+          "dst_port": "1024",
+          "seq": "1",
+          "payload_bytes": "1380",
+          "flags": "16",
+          "flow_id": "0",
+          "tx_id": "3",
+          "tx_time_ns": "100009281"
+        },
+        "actual_tx": {
+          "time_ns": 100009281,
+          "flow_id": 0,
+          "tx_id": 3,
+          "tx_time_ns": 100009281,
+          "seq": 1,
+          "payload_bytes": 1380
+        },
+        "drop_notifications": 1,
+        "first_retx_after_drop": {
+          "time_ns": 207108958,
+          "payload_bytes": 1380,
+          "tx_id": 23,
+          "tx_time_ns": 207108958
+        },
+        "drop_to_first_retx_ns": 56980638
+      },
+      "policies": {
+        "selective": {
+          "event_counts": {
+            "EPOCH_REGISTER": 1,
+            "COHORT_WAIT_BEGIN": 1,
+            "COHORT_WAIT_CONTINUE": 6,
+            "COHORT_DEADLINE": 1,
+            "DEADLINE_RECOVERY": 1,
+            "STOCK_RECOVERY": 1
+          },
+          "count": 11,
+          "episodes": [
+            {
+              "epoch_ns": 150000000,
+              "start_ns": 200477440,
+              "end_ns": 207108958,
+              "deadline_ns": 207108958,
+              "end_event": "COHORT_DEADLINE",
+              "elapsed_ns": 6631518
+            }
+          ]
+        },
+        "tail": {
+          "event_counts": {},
+          "count": 0,
+          "admissions": []
+        },
+        "elt": {
+          "event_counts": {
+            "ELT_BEGIN": 1,
+            "ELT_SEND_BEFORE": 8,
+            "ELT_NEW_TX": 8,
+            "ELT_SKIP_CEILING": 6,
+            "ELT_EXIT_DEADLINE": 1
+          },
+          "count": 24,
+          "episode_validation": [
+            {
+              "epoch_ns": 150000000,
+              "deadline_ns": 207108958,
+              "saved_flight_bytes": 16560,
+              "original_sends": 8,
+              "original_sent_bytes": 11040,
+              "cack_exits": 0
+            }
+          ],
+          "mode": 1,
+          "new_tx_actions": 8,
+          "new_tx_bytes": 11040,
+          "actual_original_sender_TX_audit": true,
+          "flight_ceiling_and_mode_allowance_audit": true,
+          "allowance_semantics": "E2 checks pre-send pipe+Skipped+MSS<=entry flight. Actual post-send pipe<=entry flight; Careful increments Skipped after send, so pipe+Skipped may then exceed entry flight by one MSS.",
+          "cack_T1_T2_audit_scope": "Observed ELT_EXIT_CACK rows only; no untriggered branch safety claim.",
+          "sequence_arithmetic_scope": "These declared 10-Mbps/200-s and finite cases do not wrap 32-bit data sequences; FIN beyond high data TX means zero post-ACK data flight."
+        }
+      },
+      "manifest_sha256": "ac5a9caa60b4b518acab75fcabecedfb4f1697013ad247cba9753725728e4307",
+      "limitations": [
+        "FCT is null unless the entire positive finite MaxBytes was delivered; bulk FCT is null.",
+        "APP HandleRead is ordered delivery; cached SRTT is not measured queue residence.",
+        "Tagged payload-bearing data loss is a full TX identity union; unmapped ACK/control notifications stay separate.",
+        "CA_LOSS state entries are not independently counted RTOs.",
+        "Tail/ELT behavior is not a queue fix. No T75 causality is inferred from cwnd, drops or absent policy actions.",
+        "Historical OFF byte parity is a separate root-owned check; this analyzer hashes newly completed raw data."
+      ]
+    },
+    {
+      "case": "micro20-eltC",
+      "definition": {
+        "kind": "micro",
+        "duration": 4,
+        "variant": "eltC",
+        "bytes": 27600,
+        "mode": "selective",
+        "tail": false,
+        "elt_mode": 2
+      },
+      "fct_s": 0.35082656,
+      "transfer_complete": true,
+      "metrics": {
+        "whole": {
+          "start_ns": 0,
+          "end_ns": 4000000000,
+          "app_bytes": 27600,
+          "app_goodput_mbps": 0.0552,
+          "tx_payload_rows": 21,
+          "retx_packets": 1,
+          "recovery_entries": 1,
+          "loss_state_entries": 0,
+          "tagged_data_drop_notifications": 1,
+          "unique_tagged_data_losses": 1
+        }
+      },
+      "queue_windows": null,
+      "first_physical_drop": {
+        "identity": {
+          "flow_id": 0,
+          "tx_id": 3,
+          "tx_time_ns": 100009281,
+          "seq": 1,
+          "payload_bytes": 1380
+        },
+        "first_drop": {
+          "time_ns": "150128320",
+          "layer": "PhyRxDrop",
+          "node": "1",
+          "device": "1",
+          "reason": "-1",
+          "uid": "3",
+          "src": "10.1.1.1",
+          "dst": "10.1.1.2",
+          "src_port": "49153",
+          "dst_port": "1024",
+          "seq": "1",
+          "payload_bytes": "1380",
+          "flags": "16",
+          "flow_id": "0",
+          "tx_id": "3",
+          "tx_time_ns": "100009281"
+        },
+        "actual_tx": {
+          "time_ns": 100009281,
+          "flow_id": 0,
+          "tx_id": 3,
+          "tx_time_ns": 100009281,
+          "seq": 1,
+          "payload_bytes": 1380
+        },
+        "drop_notifications": 1,
+        "first_retx_after_drop": {
+          "time_ns": 207108958,
+          "payload_bytes": 1380,
+          "tx_id": 20,
+          "tx_time_ns": 207108958
+        },
+        "drop_to_first_retx_ns": 56980638
+      },
+      "policies": {
+        "selective": {
+          "event_counts": {
+            "EPOCH_REGISTER": 1,
+            "COHORT_WAIT_BEGIN": 1,
+            "COHORT_WAIT_CONTINUE": 6,
+            "COHORT_DEADLINE": 1,
+            "DEADLINE_RECOVERY": 1,
+            "STOCK_RECOVERY": 1
+          },
+          "count": 11,
+          "episodes": [
+            {
+              "epoch_ns": 150000000,
+              "start_ns": 200477440,
+              "end_ns": 207108958,
+              "deadline_ns": 207108958,
+              "end_event": "COHORT_DEADLINE",
+              "elapsed_ns": 6631518
+            }
+          ]
+        },
+        "tail": {
+          "event_counts": {},
+          "count": 0,
+          "admissions": []
+        },
+        "elt": {
+          "event_counts": {
+            "ELT_BEGIN": 1,
+            "ELT_SEND_BEFORE": 5,
+            "ELT_NEW_TX": 5,
+            "ELT_SKIP_CEILING": 7,
+            "ELT_EXIT_DEADLINE": 1
+          },
+          "count": 19,
+          "episode_validation": [
+            {
+              "epoch_ns": 150000000,
+              "deadline_ns": 207108958,
+              "saved_flight_bytes": 16560,
+              "original_sends": 5,
+              "original_sent_bytes": 6900,
+              "cack_exits": 0
+            }
+          ],
+          "mode": 2,
+          "new_tx_actions": 5,
+          "new_tx_bytes": 6900,
+          "actual_original_sender_TX_audit": true,
+          "flight_ceiling_and_mode_allowance_audit": true,
+          "allowance_semantics": "E2 checks pre-send pipe+Skipped+MSS<=entry flight. Actual post-send pipe<=entry flight; Careful increments Skipped after send, so pipe+Skipped may then exceed entry flight by one MSS.",
+          "cack_T1_T2_audit_scope": "Observed ELT_EXIT_CACK rows only; no untriggered branch safety claim.",
+          "sequence_arithmetic_scope": "These declared 10-Mbps/200-s and finite cases do not wrap 32-bit data sequences; FIN beyond high data TX means zero post-ACK data flight."
+        }
+      },
+      "manifest_sha256": "59793b32cc97fb0649185ebe26925e5802a57b5d9f7048ceb5a43ec0422d6ced",
+      "limitations": [
+        "FCT is null unless the entire positive finite MaxBytes was delivered; bulk FCT is null.",
+        "APP HandleRead is ordered delivery; cached SRTT is not measured queue residence.",
+        "Tagged payload-bearing data loss is a full TX identity union; unmapped ACK/control notifications stay separate.",
+        "CA_LOSS state entries are not independently counted RTOs.",
+        "Tail/ELT behavior is not a queue fix. No T75 causality is inferred from cwnd, drops or absent policy actions.",
+        "Historical OFF byte parity is a separate root-owned check; this analyzer hashes newly completed raw data."
+      ]
+    },
+    {
+      "case": "micro20-selective",
+      "definition": {
+        "kind": "micro",
+        "duration": 4,
+        "variant": "selective",
+        "bytes": 27600,
+        "mode": "selective",
+        "tail": false,
+        "elt_mode": 0
+      },
+      "fct_s": 0.3504824,
+      "transfer_complete": true,
+      "metrics": {
+        "whole": {
+          "start_ns": 0,
+          "end_ns": 4000000000,
+          "app_bytes": 27600,
+          "app_goodput_mbps": 0.0552,
+          "tx_payload_rows": 21,
+          "retx_packets": 1,
+          "recovery_entries": 1,
+          "loss_state_entries": 0,
+          "tagged_data_drop_notifications": 1,
+          "unique_tagged_data_losses": 1
+        }
+      },
+      "queue_windows": null,
+      "first_physical_drop": {
+        "identity": {
+          "flow_id": 0,
+          "tx_id": 3,
+          "tx_time_ns": 100009281,
+          "seq": 1,
+          "payload_bytes": 1380
+        },
+        "first_drop": {
+          "time_ns": "150128320",
+          "layer": "PhyRxDrop",
+          "node": "1",
+          "device": "1",
+          "reason": "-1",
+          "uid": "3",
+          "src": "10.1.1.1",
+          "dst": "10.1.1.2",
+          "src_port": "49153",
+          "dst_port": "1024",
+          "seq": "1",
+          "payload_bytes": "1380",
+          "flags": "16",
+          "flow_id": "0",
+          "tx_id": "3",
+          "tx_time_ns": "100009281"
+        },
+        "actual_tx": {
+          "time_ns": 100009281,
+          "flow_id": 0,
+          "tx_id": 3,
+          "tx_time_ns": 100009281,
+          "seq": 1,
+          "payload_bytes": 1380
+        },
+        "drop_notifications": 1,
+        "first_retx_after_drop": {
+          "time_ns": 207108958,
+          "payload_bytes": 1380,
+          "tx_id": 22,
+          "tx_time_ns": 207108958
+        },
+        "drop_to_first_retx_ns": 56980638
+      },
+      "policies": {
+        "selective": {
+          "event_counts": {
+            "EPOCH_REGISTER": 1,
+            "COHORT_WAIT_BEGIN": 1,
+            "COHORT_WAIT_CONTINUE": 6,
+            "COHORT_DEADLINE": 1,
+            "DEADLINE_RECOVERY": 1,
+            "STOCK_RECOVERY": 1
+          },
+          "count": 11,
+          "episodes": [
+            {
+              "epoch_ns": 150000000,
+              "start_ns": 200477440,
+              "end_ns": 207108958,
+              "deadline_ns": 207108958,
+              "end_event": "COHORT_DEADLINE",
+              "elapsed_ns": 6631518
+            }
+          ]
+        },
+        "tail": {
+          "event_counts": {},
+          "count": 0,
+          "admissions": []
+        },
+        "elt": {
+          "event_counts": {},
+          "count": 0,
+          "episode_validation": [],
+          "mode": 0,
+          "new_tx_actions": 0,
+          "new_tx_bytes": 0,
+          "actual_original_sender_TX_audit": true,
+          "flight_ceiling_and_mode_allowance_audit": true,
+          "allowance_semantics": "E2 checks pre-send pipe+Skipped+MSS<=entry flight. Actual post-send pipe<=entry flight; Careful increments Skipped after send, so pipe+Skipped may then exceed entry flight by one MSS.",
+          "cack_T1_T2_audit_scope": "Observed ELT_EXIT_CACK rows only; no untriggered branch safety claim.",
+          "sequence_arithmetic_scope": "These declared 10-Mbps/200-s and finite cases do not wrap 32-bit data sequences; FIN beyond high data TX means zero post-ACK data flight."
+        }
+      },
+      "manifest_sha256": "4826ec89d63d7f6a4774ffa8dd1fc8dd4babff5dd9187a167e0fafbaa9358a40",
+      "limitations": [
+        "FCT is null unless the entire positive finite MaxBytes was delivered; bulk FCT is null.",
+        "APP HandleRead is ordered delivery; cached SRTT is not measured queue residence.",
+        "Tagged payload-bearing data loss is a full TX identity union; unmapped ACK/control notifications stay separate.",
+        "CA_LOSS state entries are not independently counted RTOs.",
+        "Tail/ELT behavior is not a queue fix. No T75 causality is inferred from cwnd, drops or absent policy actions.",
+        "Historical OFF byte parity is a separate root-owned check; this analyzer hashes newly completed raw data."
+      ]
+    },
+    {
+      "case": "micro20-stock",
+      "definition": {
+        "kind": "micro",
+        "duration": 4,
+        "variant": "stock",
+        "bytes": 27600,
+        "mode": "base",
+        "tail": false,
+        "elt_mode": 0
+      },
+      "fct_s": 0.25150992,
+      "transfer_complete": true,
+      "metrics": {
+        "whole": {
+          "start_ns": 0,
+          "end_ns": 4000000000,
+          "app_bytes": 27600,
+          "app_goodput_mbps": 0.0552,
+          "tx_payload_rows": 21,
+          "retx_packets": 1,
+          "recovery_entries": 1,
+          "loss_state_entries": 0,
+          "tagged_data_drop_notifications": 1,
+          "unique_tagged_data_losses": 1
+        }
+      },
+      "queue_windows": null,
+      "first_physical_drop": {
+        "identity": {
+          "flow_id": 0,
+          "tx_id": 3,
+          "tx_time_ns": 100009281,
+          "seq": 1,
+          "payload_bytes": 1380
+        },
+        "first_drop": {
+          "time_ns": "150128320",
+          "layer": "PhyRxDrop",
+          "node": "1",
+          "device": "1",
+          "reason": "-1",
+          "uid": "3",
+          "src": "10.1.1.1",
+          "dst": "10.1.1.2",
+          "src_port": "49153",
+          "dst_port": "1024",
+          "seq": "1",
+          "payload_bytes": "1380",
+          "flags": "16",
+          "flow_id": "0",
+          "tx_id": "3",
+          "tx_time_ns": "100009281"
+        },
+        "actual_tx": {
+          "time_ns": 100009281,
+          "flow_id": 0,
+          "tx_id": 3,
+          "tx_time_ns": 100009281,
+          "seq": 1,
+          "payload_bytes": 1380
+        },
+        "drop_notifications": 1,
+        "first_retx_after_drop": {
+          "time_ns": 200477440,
+          "payload_bytes": 1380,
+          "tx_id": 15,
+          "tx_time_ns": 200477440
+        },
+        "drop_to_first_retx_ns": 50349120
+      },
+      "policies": {
+        "selective": {
+          "event_counts": {},
+          "count": 0,
+          "episodes": []
+        },
+        "tail": {
+          "event_counts": {},
+          "count": 0,
+          "admissions": []
+        },
+        "elt": {
+          "event_counts": {},
+          "count": 0,
+          "episode_validation": [],
+          "mode": 0,
+          "new_tx_actions": 0,
+          "new_tx_bytes": 0,
+          "actual_original_sender_TX_audit": true,
+          "flight_ceiling_and_mode_allowance_audit": true,
+          "allowance_semantics": "E2 checks pre-send pipe+Skipped+MSS<=entry flight. Actual post-send pipe<=entry flight; Careful increments Skipped after send, so pipe+Skipped may then exceed entry flight by one MSS.",
+          "cack_T1_T2_audit_scope": "Observed ELT_EXIT_CACK rows only; no untriggered branch safety claim.",
+          "sequence_arithmetic_scope": "These declared 10-Mbps/200-s and finite cases do not wrap 32-bit data sequences; FIN beyond high data TX means zero post-ACK data flight."
+        }
+      },
+      "manifest_sha256": "aca202d1599006275927f22292b4741d48affa273dcf9060350ee0db803635cb",
+      "limitations": [
+        "FCT is null unless the entire positive finite MaxBytes was delivered; bulk FCT is null.",
+        "APP HandleRead is ordered delivery; cached SRTT is not measured queue residence.",
+        "Tagged payload-bearing data loss is a full TX identity union; unmapped ACK/control notifications stay separate.",
+        "CA_LOSS state entries are not independently counted RTOs.",
+        "Tail/ELT behavior is not a queue fix. No T75 causality is inferred from cwnd, drops or absent policy actions.",
+        "Historical OFF byte parity is a separate root-owned check; this analyzer hashes newly completed raw data."
+      ]
+    },
+    {
+      "case": "micro20-tail",
+      "definition": {
+        "kind": "micro",
+        "duration": 4,
+        "variant": "tail",
+        "bytes": 27600,
+        "mode": "selective",
+        "tail": true,
+        "elt_mode": 0
+      },
+      "fct_s": 0.257223678,
+      "transfer_complete": true,
+      "metrics": {
+        "whole": {
+          "start_ns": 0,
+          "end_ns": 4000000000,
+          "app_bytes": 27600,
+          "app_goodput_mbps": 0.0552,
+          "tx_payload_rows": 21,
+          "retx_packets": 1,
+          "recovery_entries": 1,
+          "loss_state_entries": 0,
+          "tagged_data_drop_notifications": 1,
+          "unique_tagged_data_losses": 1
+        }
+      },
+      "queue_windows": null,
+      "first_physical_drop": {
+        "identity": {
+          "flow_id": 0,
+          "tx_id": 3,
+          "tx_time_ns": 100009281,
+          "seq": 1,
+          "payload_bytes": 1380
+        },
+        "first_drop": {
+          "time_ns": "150128320",
+          "layer": "PhyRxDrop",
+          "node": "1",
+          "device": "1",
+          "reason": "-1",
+          "uid": "3",
+          "src": "10.1.1.1",
+          "dst": "10.1.1.2",
+          "src_port": "49153",
+          "dst_port": "1024",
+          "seq": "1",
+          "payload_bytes": "1380",
+          "flags": "16",
+          "flow_id": "0",
+          "tx_id": "3",
+          "tx_time_ns": "100009281"
+        },
+        "actual_tx": {
+          "time_ns": 100009281,
+          "flow_id": 0,
+          "tx_id": 3,
+          "tx_time_ns": 100009281,
+          "seq": 1,
+          "payload_bytes": 1380
+        },
+        "drop_notifications": 1,
+        "first_retx_after_drop": {
+          "time_ns": 207108958,
+          "payload_bytes": 1380,
+          "tx_id": 23,
+          "tx_time_ns": 207108958
+        },
+        "drop_to_first_retx_ns": 56980638
+      },
+      "policies": {
+        "selective": {
+          "event_counts": {
+            "EPOCH_REGISTER": 1,
+            "COHORT_WAIT_BEGIN": 1,
+            "COHORT_WAIT_CONTINUE": 6,
+            "COHORT_DEADLINE": 1,
+            "DEADLINE_RECOVERY": 1,
+            "STOCK_RECOVERY": 1
+          },
+          "count": 11,
+          "episodes": [
+            {
+              "epoch_ns": 150000000,
+              "start_ns": 200477440,
+              "end_ns": 207108958,
+              "deadline_ns": 207108958,
+              "end_event": "COHORT_DEADLINE",
+              "elapsed_ns": 6631518
+            }
+          ]
+        },
+        "tail": {
+          "event_counts": {
+            "MORE_THAN_ONE_MSS": 6,
+            "TAIL_ADMIT": 1
+          },
+          "count": 7,
+          "admissions": [
+            {
+              "flow_id": 0,
+              "time_ns": 201165760,
+              "event": "TAIL_ADMIT",
+              "epoch_ns": 150000000,
+              "deadline_ns": 207108958,
+              "seq": 26221,
+              "admitted_bytes": 1380,
+              "new_sack_bytes": 1380,
+              "unsent_bytes": 1380,
+              "pipe_before": 13800,
+              "pipe_after": 15180,
+              "cwnd_bytes": 13800,
+              "receiver_right_edge": 33554433,
+              "used_before": 0,
+              "used_after": 1,
+              "cong_state": 1,
+              "close_on_empty": 1,
+              "shutdown_send": 0,
+              "normal_packets_sent": 1,
+              "ordinary_window_bytes": 0
+            }
+          ]
+        },
+        "elt": {
+          "event_counts": {},
+          "count": 0,
+          "episode_validation": [],
+          "mode": 0,
+          "new_tx_actions": 0,
+          "new_tx_bytes": 0,
+          "actual_original_sender_TX_audit": true,
+          "flight_ceiling_and_mode_allowance_audit": true,
+          "allowance_semantics": "E2 checks pre-send pipe+Skipped+MSS<=entry flight. Actual post-send pipe<=entry flight; Careful increments Skipped after send, so pipe+Skipped may then exceed entry flight by one MSS.",
+          "cack_T1_T2_audit_scope": "Observed ELT_EXIT_CACK rows only; no untriggered branch safety claim.",
+          "sequence_arithmetic_scope": "These declared 10-Mbps/200-s and finite cases do not wrap 32-bit data sequences; FIN beyond high data TX means zero post-ACK data flight."
+        }
+      },
+      "manifest_sha256": "2d1761deddc0e29f34422cc37e6734ad07e1dd3fcbec846317c773bf1e388fc9",
+      "limitations": [
+        "FCT is null unless the entire positive finite MaxBytes was delivered; bulk FCT is null.",
+        "APP HandleRead is ordered delivery; cached SRTT is not measured queue residence.",
+        "Tagged payload-bearing data loss is a full TX identity union; unmapped ACK/control notifications stay separate.",
+        "CA_LOSS state entries are not independently counted RTOs.",
+        "Tail/ELT behavior is not a queue fix. No T75 causality is inferred from cwnd, drops or absent policy actions.",
+        "Historical OFF byte parity is a separate root-owned check; this analyzer hashes newly completed raw data."
+      ]
+    },
+    {
+      "case": "micro21-eltA",
+      "definition": {
+        "kind": "micro",
+        "duration": 4,
+        "variant": "eltA",
+        "bytes": 28980,
+        "mode": "selective",
+        "tail": false,
+        "elt_mode": 1
+      },
+      "fct_s": 0.257223678,
+      "transfer_complete": true,
+      "metrics": {
+        "whole": {
+          "start_ns": 0,
+          "end_ns": 4000000000,
+          "app_bytes": 28980,
+          "app_goodput_mbps": 0.05796,
+          "tx_payload_rows": 22,
+          "retx_packets": 1,
+          "recovery_entries": 1,
+          "loss_state_entries": 0,
+          "tagged_data_drop_notifications": 1,
+          "unique_tagged_data_losses": 1
+        }
+      },
+      "queue_windows": null,
+      "first_physical_drop": {
+        "identity": {
+          "flow_id": 0,
+          "tx_id": 3,
+          "tx_time_ns": 100009281,
+          "seq": 1,
+          "payload_bytes": 1380
+        },
+        "first_drop": {
+          "time_ns": "150128320",
+          "layer": "PhyRxDrop",
+          "node": "1",
+          "device": "1",
+          "reason": "-1",
+          "uid": "3",
+          "src": "10.1.1.1",
+          "dst": "10.1.1.2",
+          "src_port": "49153",
+          "dst_port": "1024",
+          "seq": "1",
+          "payload_bytes": "1380",
+          "flags": "16",
+          "flow_id": "0",
+          "tx_id": "3",
+          "tx_time_ns": "100009281"
+        },
+        "actual_tx": {
+          "time_ns": 100009281,
+          "flow_id": 0,
+          "tx_id": 3,
+          "tx_time_ns": 100009281,
+          "seq": 1,
+          "payload_bytes": 1380
+        },
+        "drop_notifications": 1,
+        "first_retx_after_drop": {
+          "time_ns": 207108958,
+          "payload_bytes": 1380,
+          "tx_id": 24,
+          "tx_time_ns": 207108958
+        },
+        "drop_to_first_retx_ns": 56980638
+      },
+      "policies": {
+        "selective": {
+          "event_counts": {
+            "EPOCH_REGISTER": 1,
+            "COHORT_WAIT_BEGIN": 1,
+            "COHORT_WAIT_CONTINUE": 6,
+            "COHORT_DEADLINE": 1,
+            "DEADLINE_RECOVERY": 1,
+            "STOCK_RECOVERY": 1
+          },
+          "count": 11,
+          "episodes": [
+            {
+              "epoch_ns": 150000000,
+              "start_ns": 200477440,
+              "end_ns": 207108958,
+              "deadline_ns": 207108958,
+              "end_event": "COHORT_DEADLINE",
+              "elapsed_ns": 6631518
+            }
+          ]
+        },
+        "tail": {
+          "event_counts": {},
+          "count": 0,
+          "admissions": []
+        },
+        "elt": {
+          "event_counts": {
+            "ELT_BEGIN": 1,
+            "ELT_SEND_BEFORE": 9,
+            "ELT_NEW_TX": 9,
+            "ELT_SKIP_CEILING": 7,
+            "ELT_EXIT_DEADLINE": 1
+          },
+          "count": 27,
+          "episode_validation": [
+            {
+              "epoch_ns": 150000000,
+              "deadline_ns": 207108958,
+              "saved_flight_bytes": 16560,
+              "original_sends": 9,
+              "original_sent_bytes": 12420,
+              "cack_exits": 0
+            }
+          ],
+          "mode": 1,
+          "new_tx_actions": 9,
+          "new_tx_bytes": 12420,
+          "actual_original_sender_TX_audit": true,
+          "flight_ceiling_and_mode_allowance_audit": true,
+          "allowance_semantics": "E2 checks pre-send pipe+Skipped+MSS<=entry flight. Actual post-send pipe<=entry flight; Careful increments Skipped after send, so pipe+Skipped may then exceed entry flight by one MSS.",
+          "cack_T1_T2_audit_scope": "Observed ELT_EXIT_CACK rows only; no untriggered branch safety claim.",
+          "sequence_arithmetic_scope": "These declared 10-Mbps/200-s and finite cases do not wrap 32-bit data sequences; FIN beyond high data TX means zero post-ACK data flight."
+        }
+      },
+      "manifest_sha256": "64a78e9bd1428d03797fe5f6dc706e2ca16b160cef523c3147038d000460013b",
+      "limitations": [
+        "FCT is null unless the entire positive finite MaxBytes was delivered; bulk FCT is null.",
+        "APP HandleRead is ordered delivery; cached SRTT is not measured queue residence.",
+        "Tagged payload-bearing data loss is a full TX identity union; unmapped ACK/control notifications stay separate.",
+        "CA_LOSS state entries are not independently counted RTOs.",
+        "Tail/ELT behavior is not a queue fix. No T75 causality is inferred from cwnd, drops or absent policy actions.",
+        "Historical OFF byte parity is a separate root-owned check; this analyzer hashes newly completed raw data."
+      ]
+    },
+    {
+      "case": "micro21-eltC",
+      "definition": {
+        "kind": "micro",
+        "duration": 4,
+        "variant": "eltC",
+        "bytes": 28980,
+        "mode": "selective",
+        "tail": false,
+        "elt_mode": 2
+      },
+      "fct_s": 0.35094128,
+      "transfer_complete": true,
+      "metrics": {
+        "whole": {
+          "start_ns": 0,
+          "end_ns": 4000000000,
+          "app_bytes": 28980,
+          "app_goodput_mbps": 0.05796,
+          "tx_payload_rows": 22,
+          "retx_packets": 1,
+          "recovery_entries": 1,
+          "loss_state_entries": 0,
+          "tagged_data_drop_notifications": 1,
+          "unique_tagged_data_losses": 1
+        }
+      },
+      "queue_windows": null,
+      "first_physical_drop": {
+        "identity": {
+          "flow_id": 0,
+          "tx_id": 3,
+          "tx_time_ns": 100009281,
+          "seq": 1,
+          "payload_bytes": 1380
+        },
+        "first_drop": {
+          "time_ns": "150128320",
+          "layer": "PhyRxDrop",
+          "node": "1",
+          "device": "1",
+          "reason": "-1",
+          "uid": "3",
+          "src": "10.1.1.1",
+          "dst": "10.1.1.2",
+          "src_port": "49153",
+          "dst_port": "1024",
+          "seq": "1",
+          "payload_bytes": "1380",
+          "flags": "16",
+          "flow_id": "0",
+          "tx_id": "3",
+          "tx_time_ns": "100009281"
+        },
+        "actual_tx": {
+          "time_ns": 100009281,
+          "flow_id": 0,
+          "tx_id": 3,
+          "tx_time_ns": 100009281,
+          "seq": 1,
+          "payload_bytes": 1380
+        },
+        "drop_notifications": 1,
+        "first_retx_after_drop": {
+          "time_ns": 207108958,
+          "payload_bytes": 1380,
+          "tx_id": 20,
+          "tx_time_ns": 207108958
+        },
+        "drop_to_first_retx_ns": 56980638
+      },
+      "policies": {
+        "selective": {
+          "event_counts": {
+            "EPOCH_REGISTER": 1,
+            "COHORT_WAIT_BEGIN": 1,
+            "COHORT_WAIT_CONTINUE": 6,
+            "COHORT_DEADLINE": 1,
+            "DEADLINE_RECOVERY": 1,
+            "STOCK_RECOVERY": 1
+          },
+          "count": 11,
+          "episodes": [
+            {
+              "epoch_ns": 150000000,
+              "start_ns": 200477440,
+              "end_ns": 207108958,
+              "deadline_ns": 207108958,
+              "end_event": "COHORT_DEADLINE",
+              "elapsed_ns": 6631518
+            }
+          ]
+        },
+        "tail": {
+          "event_counts": {},
+          "count": 0,
+          "admissions": []
+        },
+        "elt": {
+          "event_counts": {
+            "ELT_BEGIN": 1,
+            "ELT_SEND_BEFORE": 5,
+            "ELT_NEW_TX": 5,
+            "ELT_SKIP_CEILING": 7,
+            "ELT_EXIT_DEADLINE": 1
+          },
+          "count": 19,
+          "episode_validation": [
+            {
+              "epoch_ns": 150000000,
+              "deadline_ns": 207108958,
+              "saved_flight_bytes": 16560,
+              "original_sends": 5,
+              "original_sent_bytes": 6900,
+              "cack_exits": 0
+            }
+          ],
+          "mode": 2,
+          "new_tx_actions": 5,
+          "new_tx_bytes": 6900,
+          "actual_original_sender_TX_audit": true,
+          "flight_ceiling_and_mode_allowance_audit": true,
+          "allowance_semantics": "E2 checks pre-send pipe+Skipped+MSS<=entry flight. Actual post-send pipe<=entry flight; Careful increments Skipped after send, so pipe+Skipped may then exceed entry flight by one MSS.",
+          "cack_T1_T2_audit_scope": "Observed ELT_EXIT_CACK rows only; no untriggered branch safety claim.",
+          "sequence_arithmetic_scope": "These declared 10-Mbps/200-s and finite cases do not wrap 32-bit data sequences; FIN beyond high data TX means zero post-ACK data flight."
+        }
+      },
+      "manifest_sha256": "ed91095ff9eeeeb443d7572c05902105a6b8b2facecc281937b45beafa50721a",
+      "limitations": [
+        "FCT is null unless the entire positive finite MaxBytes was delivered; bulk FCT is null.",
+        "APP HandleRead is ordered delivery; cached SRTT is not measured queue residence.",
+        "Tagged payload-bearing data loss is a full TX identity union; unmapped ACK/control notifications stay separate.",
+        "CA_LOSS state entries are not independently counted RTOs.",
+        "Tail/ELT behavior is not a queue fix. No T75 causality is inferred from cwnd, drops or absent policy actions.",
+        "Historical OFF byte parity is a separate root-owned check; this analyzer hashes newly completed raw data."
+      ]
+    },
+    {
+      "case": "micro21-selective",
+      "definition": {
+        "kind": "micro",
+        "duration": 4,
+        "variant": "selective",
+        "bytes": 28980,
+        "mode": "selective",
+        "tail": false,
+        "elt_mode": 0
+      },
+      "fct_s": 0.35059712,
+      "transfer_complete": true,
+      "metrics": {
+        "whole": {
+          "start_ns": 0,
+          "end_ns": 4000000000,
+          "app_bytes": 28980,
+          "app_goodput_mbps": 0.05796,
+          "tx_payload_rows": 22,
+          "retx_packets": 1,
+          "recovery_entries": 1,
+          "loss_state_entries": 0,
+          "tagged_data_drop_notifications": 1,
+          "unique_tagged_data_losses": 1
+        }
+      },
+      "queue_windows": null,
+      "first_physical_drop": {
+        "identity": {
+          "flow_id": 0,
+          "tx_id": 3,
+          "tx_time_ns": 100009281,
+          "seq": 1,
+          "payload_bytes": 1380
+        },
+        "first_drop": {
+          "time_ns": "150128320",
+          "layer": "PhyRxDrop",
+          "node": "1",
+          "device": "1",
+          "reason": "-1",
+          "uid": "3",
+          "src": "10.1.1.1",
+          "dst": "10.1.1.2",
+          "src_port": "49153",
+          "dst_port": "1024",
+          "seq": "1",
+          "payload_bytes": "1380",
+          "flags": "16",
+          "flow_id": "0",
+          "tx_id": "3",
+          "tx_time_ns": "100009281"
+        },
+        "actual_tx": {
+          "time_ns": 100009281,
+          "flow_id": 0,
+          "tx_id": 3,
+          "tx_time_ns": 100009281,
+          "seq": 1,
+          "payload_bytes": 1380
+        },
+        "drop_notifications": 1,
+        "first_retx_after_drop": {
+          "time_ns": 207108958,
+          "payload_bytes": 1380,
+          "tx_id": 22,
+          "tx_time_ns": 207108958
+        },
+        "drop_to_first_retx_ns": 56980638
+      },
+      "policies": {
+        "selective": {
+          "event_counts": {
+            "EPOCH_REGISTER": 1,
+            "COHORT_WAIT_BEGIN": 1,
+            "COHORT_WAIT_CONTINUE": 6,
+            "COHORT_DEADLINE": 1,
+            "DEADLINE_RECOVERY": 1,
+            "STOCK_RECOVERY": 1
+          },
+          "count": 11,
+          "episodes": [
+            {
+              "epoch_ns": 150000000,
+              "start_ns": 200477440,
+              "end_ns": 207108958,
+              "deadline_ns": 207108958,
+              "end_event": "COHORT_DEADLINE",
+              "elapsed_ns": 6631518
+            }
+          ]
+        },
+        "tail": {
+          "event_counts": {},
+          "count": 0,
+          "admissions": []
+        },
+        "elt": {
+          "event_counts": {},
+          "count": 0,
+          "episode_validation": [],
+          "mode": 0,
+          "new_tx_actions": 0,
+          "new_tx_bytes": 0,
+          "actual_original_sender_TX_audit": true,
+          "flight_ceiling_and_mode_allowance_audit": true,
+          "allowance_semantics": "E2 checks pre-send pipe+Skipped+MSS<=entry flight. Actual post-send pipe<=entry flight; Careful increments Skipped after send, so pipe+Skipped may then exceed entry flight by one MSS.",
+          "cack_T1_T2_audit_scope": "Observed ELT_EXIT_CACK rows only; no untriggered branch safety claim.",
+          "sequence_arithmetic_scope": "These declared 10-Mbps/200-s and finite cases do not wrap 32-bit data sequences; FIN beyond high data TX means zero post-ACK data flight."
+        }
+      },
+      "manifest_sha256": "1dbf929fe06a7db631338efdfc377aeeaece28e92c75fa6a86bba8dafba65782",
+      "limitations": [
+        "FCT is null unless the entire positive finite MaxBytes was delivered; bulk FCT is null.",
+        "APP HandleRead is ordered delivery; cached SRTT is not measured queue residence.",
+        "Tagged payload-bearing data loss is a full TX identity union; unmapped ACK/control notifications stay separate.",
+        "CA_LOSS state entries are not independently counted RTOs.",
+        "Tail/ELT behavior is not a queue fix. No T75 causality is inferred from cwnd, drops or absent policy actions.",
+        "Historical OFF byte parity is a separate root-owned check; this analyzer hashes newly completed raw data."
+      ]
+    },
+    {
+      "case": "micro21-stock",
+      "definition": {
+        "kind": "micro",
+        "duration": 4,
+        "variant": "stock",
+        "bytes": 28980,
+        "mode": "base",
+        "tail": false,
+        "elt_mode": 0
+      },
+      "fct_s": 0.3504824,
+      "transfer_complete": true,
+      "metrics": {
+        "whole": {
+          "start_ns": 0,
+          "end_ns": 4000000000,
+          "app_bytes": 28980,
+          "app_goodput_mbps": 0.05796,
+          "tx_payload_rows": 22,
+          "retx_packets": 1,
+          "recovery_entries": 1,
+          "loss_state_entries": 0,
+          "tagged_data_drop_notifications": 1,
+          "unique_tagged_data_losses": 1
+        }
+      },
+      "queue_windows": null,
+      "first_physical_drop": {
+        "identity": {
+          "flow_id": 0,
+          "tx_id": 3,
+          "tx_time_ns": 100009281,
+          "seq": 1,
+          "payload_bytes": 1380
+        },
+        "first_drop": {
+          "time_ns": "150128320",
+          "layer": "PhyRxDrop",
+          "node": "1",
+          "device": "1",
+          "reason": "-1",
+          "uid": "3",
+          "src": "10.1.1.1",
+          "dst": "10.1.1.2",
+          "src_port": "49153",
+          "dst_port": "1024",
+          "seq": "1",
+          "payload_bytes": "1380",
+          "flags": "16",
+          "flow_id": "0",
+          "tx_id": "3",
+          "tx_time_ns": "100009281"
+        },
+        "actual_tx": {
+          "time_ns": 100009281,
+          "flow_id": 0,
+          "tx_id": 3,
+          "tx_time_ns": 100009281,
+          "seq": 1,
+          "payload_bytes": 1380
+        },
+        "drop_notifications": 1,
+        "first_retx_after_drop": {
+          "time_ns": 200477440,
+          "payload_bytes": 1380,
+          "tx_id": 15,
+          "tx_time_ns": 200477440
+        },
+        "drop_to_first_retx_ns": 50349120
+      },
+      "policies": {
+        "selective": {
+          "event_counts": {},
+          "count": 0,
+          "episodes": []
+        },
+        "tail": {
+          "event_counts": {},
+          "count": 0,
+          "admissions": []
+        },
+        "elt": {
+          "event_counts": {},
+          "count": 0,
+          "episode_validation": [],
+          "mode": 0,
+          "new_tx_actions": 0,
+          "new_tx_bytes": 0,
+          "actual_original_sender_TX_audit": true,
+          "flight_ceiling_and_mode_allowance_audit": true,
+          "allowance_semantics": "E2 checks pre-send pipe+Skipped+MSS<=entry flight. Actual post-send pipe<=entry flight; Careful increments Skipped after send, so pipe+Skipped may then exceed entry flight by one MSS.",
+          "cack_T1_T2_audit_scope": "Observed ELT_EXIT_CACK rows only; no untriggered branch safety claim.",
+          "sequence_arithmetic_scope": "These declared 10-Mbps/200-s and finite cases do not wrap 32-bit data sequences; FIN beyond high data TX means zero post-ACK data flight."
+        }
+      },
+      "manifest_sha256": "0a22f8944fb3bf7c08ce1c0d1ec70c1f086a7eb5923745ff71e0aac1a2d7ad34",
+      "limitations": [
+        "FCT is null unless the entire positive finite MaxBytes was delivered; bulk FCT is null.",
+        "APP HandleRead is ordered delivery; cached SRTT is not measured queue residence.",
+        "Tagged payload-bearing data loss is a full TX identity union; unmapped ACK/control notifications stay separate.",
+        "CA_LOSS state entries are not independently counted RTOs.",
+        "Tail/ELT behavior is not a queue fix. No T75 causality is inferred from cwnd, drops or absent policy actions.",
+        "Historical OFF byte parity is a separate root-owned check; this analyzer hashes newly completed raw data."
+      ]
+    },
+    {
+      "case": "micro21-tail",
+      "definition": {
+        "kind": "micro",
+        "duration": 4,
+        "variant": "tail",
+        "bytes": 28980,
+        "mode": "selective",
+        "tail": true,
+        "elt_mode": 0
+      },
+      "fct_s": 0.35059712,
+      "transfer_complete": true,
+      "metrics": {
+        "whole": {
+          "start_ns": 0,
+          "end_ns": 4000000000,
+          "app_bytes": 28980,
+          "app_goodput_mbps": 0.05796,
+          "tx_payload_rows": 22,
+          "retx_packets": 1,
+          "recovery_entries": 1,
+          "loss_state_entries": 0,
+          "tagged_data_drop_notifications": 1,
+          "unique_tagged_data_losses": 1
+        }
+      },
+      "queue_windows": null,
+      "first_physical_drop": {
+        "identity": {
+          "flow_id": 0,
+          "tx_id": 3,
+          "tx_time_ns": 100009281,
+          "seq": 1,
+          "payload_bytes": 1380
+        },
+        "first_drop": {
+          "time_ns": "150128320",
+          "layer": "PhyRxDrop",
+          "node": "1",
+          "device": "1",
+          "reason": "-1",
+          "uid": "3",
+          "src": "10.1.1.1",
+          "dst": "10.1.1.2",
+          "src_port": "49153",
+          "dst_port": "1024",
+          "seq": "1",
+          "payload_bytes": "1380",
+          "flags": "16",
+          "flow_id": "0",
+          "tx_id": "3",
+          "tx_time_ns": "100009281"
+        },
+        "actual_tx": {
+          "time_ns": 100009281,
+          "flow_id": 0,
+          "tx_id": 3,
+          "tx_time_ns": 100009281,
+          "seq": 1,
+          "payload_bytes": 1380
+        },
+        "drop_notifications": 1,
+        "first_retx_after_drop": {
+          "time_ns": 207108958,
+          "payload_bytes": 1380,
+          "tx_id": 22,
+          "tx_time_ns": 207108958
+        },
+        "drop_to_first_retx_ns": 56980638
+      },
+      "policies": {
+        "selective": {
+          "event_counts": {
+            "EPOCH_REGISTER": 1,
+            "COHORT_WAIT_BEGIN": 1,
+            "COHORT_WAIT_CONTINUE": 6,
+            "COHORT_DEADLINE": 1,
+            "DEADLINE_RECOVERY": 1,
+            "STOCK_RECOVERY": 1
+          },
+          "count": 11,
+          "episodes": [
+            {
+              "epoch_ns": 150000000,
+              "start_ns": 200477440,
+              "end_ns": 207108958,
+              "deadline_ns": 207108958,
+              "end_event": "COHORT_DEADLINE",
+              "elapsed_ns": 6631518
+            }
+          ]
+        },
+        "tail": {
+          "event_counts": {
+            "MORE_THAN_ONE_MSS": 7
+          },
+          "count": 7,
+          "admissions": []
+        },
+        "elt": {
+          "event_counts": {},
+          "count": 0,
+          "episode_validation": [],
+          "mode": 0,
+          "new_tx_actions": 0,
+          "new_tx_bytes": 0,
+          "actual_original_sender_TX_audit": true,
+          "flight_ceiling_and_mode_allowance_audit": true,
+          "allowance_semantics": "E2 checks pre-send pipe+Skipped+MSS<=entry flight. Actual post-send pipe<=entry flight; Careful increments Skipped after send, so pipe+Skipped may then exceed entry flight by one MSS.",
+          "cack_T1_T2_audit_scope": "Observed ELT_EXIT_CACK rows only; no untriggered branch safety claim.",
+          "sequence_arithmetic_scope": "These declared 10-Mbps/200-s and finite cases do not wrap 32-bit data sequences; FIN beyond high data TX means zero post-ACK data flight."
+        }
+      },
+      "manifest_sha256": "a236a22d5d473d9fa3d740a5c786b48e5dbb8066db3e409a33ff1ec738fcd045",
+      "limitations": [
+        "FCT is null unless the entire positive finite MaxBytes was delivered; bulk FCT is null.",
+        "APP HandleRead is ordered delivery; cached SRTT is not measured queue residence.",
+        "Tagged payload-bearing data loss is a full TX identity union; unmapped ACK/control notifications stay separate.",
+        "CA_LOSS state entries are not independently counted RTOs.",
+        "Tail/ELT behavior is not a queue fix. No T75 causality is inferred from cwnd, drops or absent policy actions.",
+        "Historical OFF byte parity is a separate root-owned check; this analyzer hashes newly completed raw data."
+      ]
+    },
+    {
+      "case": "micro24-eltA",
+      "definition": {
+        "kind": "micro",
+        "duration": 4,
+        "variant": "eltA",
+        "bytes": 33120,
+        "mode": "selective",
+        "tail": false,
+        "elt_mode": 1
+      },
+      "fct_s": 0.35082656,
+      "transfer_complete": true,
+      "metrics": {
+        "whole": {
+          "start_ns": 0,
+          "end_ns": 4000000000,
+          "app_bytes": 33120,
+          "app_goodput_mbps": 0.06624,
+          "tx_payload_rows": 25,
+          "retx_packets": 1,
+          "recovery_entries": 1,
+          "loss_state_entries": 0,
+          "tagged_data_drop_notifications": 1,
+          "unique_tagged_data_losses": 1
+        }
+      },
+      "queue_windows": null,
+      "first_physical_drop": {
+        "identity": {
+          "flow_id": 0,
+          "tx_id": 3,
+          "tx_time_ns": 100009281,
+          "seq": 1,
+          "payload_bytes": 1380
+        },
+        "first_drop": {
+          "time_ns": "150128320",
+          "layer": "PhyRxDrop",
+          "node": "1",
+          "device": "1",
+          "reason": "-1",
+          "uid": "3",
+          "src": "10.1.1.1",
+          "dst": "10.1.1.2",
+          "src_port": "49153",
+          "dst_port": "1024",
+          "seq": "1",
+          "payload_bytes": "1380",
+          "flags": "16",
+          "flow_id": "0",
+          "tx_id": "3",
+          "tx_time_ns": "100009281"
+        },
+        "actual_tx": {
+          "time_ns": 100009281,
+          "flow_id": 0,
+          "tx_id": 3,
+          "tx_time_ns": 100009281,
+          "seq": 1,
+          "payload_bytes": 1380
+        },
+        "drop_notifications": 1,
+        "first_retx_after_drop": {
+          "time_ns": 207108958,
+          "payload_bytes": 1380,
+          "tx_id": 24,
+          "tx_time_ns": 207108958
+        },
+        "drop_to_first_retx_ns": 56980638
+      },
+      "policies": {
+        "selective": {
+          "event_counts": {
+            "EPOCH_REGISTER": 1,
+            "COHORT_WAIT_BEGIN": 1,
+            "COHORT_WAIT_CONTINUE": 6,
+            "COHORT_DEADLINE": 1,
+            "DEADLINE_RECOVERY": 1,
+            "STOCK_RECOVERY": 1
+          },
+          "count": 11,
+          "episodes": [
+            {
+              "epoch_ns": 150000000,
+              "start_ns": 200477440,
+              "end_ns": 207108958,
+              "deadline_ns": 207108958,
+              "end_event": "COHORT_DEADLINE",
+              "elapsed_ns": 6631518
+            }
+          ]
+        },
+        "tail": {
+          "event_counts": {},
+          "count": 0,
+          "admissions": []
+        },
+        "elt": {
+          "event_counts": {
+            "ELT_BEGIN": 1,
+            "ELT_SEND_BEFORE": 9,
+            "ELT_NEW_TX": 9,
+            "ELT_SKIP_CEILING": 7,
+            "ELT_EXIT_DEADLINE": 1
+          },
+          "count": 27,
+          "episode_validation": [
+            {
+              "epoch_ns": 150000000,
+              "deadline_ns": 207108958,
+              "saved_flight_bytes": 16560,
+              "original_sends": 9,
+              "original_sent_bytes": 12420,
+              "cack_exits": 0
+            }
+          ],
+          "mode": 1,
+          "new_tx_actions": 9,
+          "new_tx_bytes": 12420,
+          "actual_original_sender_TX_audit": true,
+          "flight_ceiling_and_mode_allowance_audit": true,
+          "allowance_semantics": "E2 checks pre-send pipe+Skipped+MSS<=entry flight. Actual post-send pipe<=entry flight; Careful increments Skipped after send, so pipe+Skipped may then exceed entry flight by one MSS.",
+          "cack_T1_T2_audit_scope": "Observed ELT_EXIT_CACK rows only; no untriggered branch safety claim.",
+          "sequence_arithmetic_scope": "These declared 10-Mbps/200-s and finite cases do not wrap 32-bit data sequences; FIN beyond high data TX means zero post-ACK data flight."
+        }
+      },
+      "manifest_sha256": "96156ca97bb0cd105dd75e72d6bb0915e6c3da8f6f591cd2d79a5b09c19343fd",
+      "limitations": [
+        "FCT is null unless the entire positive finite MaxBytes was delivered; bulk FCT is null.",
+        "APP HandleRead is ordered delivery; cached SRTT is not measured queue residence.",
+        "Tagged payload-bearing data loss is a full TX identity union; unmapped ACK/control notifications stay separate.",
+        "CA_LOSS state entries are not independently counted RTOs.",
+        "Tail/ELT behavior is not a queue fix. No T75 causality is inferred from cwnd, drops or absent policy actions.",
+        "Historical OFF byte parity is a separate root-owned check; this analyzer hashes newly completed raw data."
+      ]
+    },
+    {
+      "case": "micro24-eltC",
+      "definition": {
+        "kind": "micro",
+        "duration": 4,
+        "variant": "eltC",
+        "bytes": 33120,
+        "mode": "selective",
+        "tail": false,
+        "elt_mode": 2
+      },
+      "fct_s": 0.357342718,
+      "transfer_complete": true,
+      "metrics": {
+        "whole": {
+          "start_ns": 0,
+          "end_ns": 4000000000,
+          "app_bytes": 33120,
+          "app_goodput_mbps": 0.06624,
+          "tx_payload_rows": 25,
+          "retx_packets": 1,
+          "recovery_entries": 1,
+          "loss_state_entries": 0,
+          "tagged_data_drop_notifications": 1,
+          "unique_tagged_data_losses": 1
+        }
+      },
+      "queue_windows": null,
+      "first_physical_drop": {
+        "identity": {
+          "flow_id": 0,
+          "tx_id": 3,
+          "tx_time_ns": 100009281,
+          "seq": 1,
+          "payload_bytes": 1380
+        },
+        "first_drop": {
+          "time_ns": "150128320",
+          "layer": "PhyRxDrop",
+          "node": "1",
+          "device": "1",
+          "reason": "-1",
+          "uid": "3",
+          "src": "10.1.1.1",
+          "dst": "10.1.1.2",
+          "src_port": "49153",
+          "dst_port": "1024",
+          "seq": "1",
+          "payload_bytes": "1380",
+          "flags": "16",
+          "flow_id": "0",
+          "tx_id": "3",
+          "tx_time_ns": "100009281"
+        },
+        "actual_tx": {
+          "time_ns": 100009281,
+          "flow_id": 0,
+          "tx_id": 3,
+          "tx_time_ns": 100009281,
+          "seq": 1,
+          "payload_bytes": 1380
+        },
+        "drop_notifications": 1,
+        "first_retx_after_drop": {
+          "time_ns": 207108958,
+          "payload_bytes": 1380,
+          "tx_id": 20,
+          "tx_time_ns": 207108958
+        },
+        "drop_to_first_retx_ns": 56980638
+      },
+      "policies": {
+        "selective": {
+          "event_counts": {
+            "EPOCH_REGISTER": 1,
+            "COHORT_WAIT_BEGIN": 1,
+            "COHORT_WAIT_CONTINUE": 6,
+            "COHORT_DEADLINE": 1,
+            "DEADLINE_RECOVERY": 1,
+            "STOCK_RECOVERY": 1
+          },
+          "count": 11,
+          "episodes": [
+            {
+              "epoch_ns": 150000000,
+              "start_ns": 200477440,
+              "end_ns": 207108958,
+              "deadline_ns": 207108958,
+              "end_event": "COHORT_DEADLINE",
+              "elapsed_ns": 6631518
+            }
+          ]
+        },
+        "tail": {
+          "event_counts": {},
+          "count": 0,
+          "admissions": []
+        },
+        "elt": {
+          "event_counts": {
+            "ELT_BEGIN": 1,
+            "ELT_SEND_BEFORE": 5,
+            "ELT_NEW_TX": 5,
+            "ELT_SKIP_CEILING": 7,
+            "ELT_EXIT_DEADLINE": 1
+          },
+          "count": 19,
+          "episode_validation": [
+            {
+              "epoch_ns": 150000000,
+              "deadline_ns": 207108958,
+              "saved_flight_bytes": 16560,
+              "original_sends": 5,
+              "original_sent_bytes": 6900,
+              "cack_exits": 0
+            }
+          ],
+          "mode": 2,
+          "new_tx_actions": 5,
+          "new_tx_bytes": 6900,
+          "actual_original_sender_TX_audit": true,
+          "flight_ceiling_and_mode_allowance_audit": true,
+          "allowance_semantics": "E2 checks pre-send pipe+Skipped+MSS<=entry flight. Actual post-send pipe<=entry flight; Careful increments Skipped after send, so pipe+Skipped may then exceed entry flight by one MSS.",
+          "cack_T1_T2_audit_scope": "Observed ELT_EXIT_CACK rows only; no untriggered branch safety claim.",
+          "sequence_arithmetic_scope": "These declared 10-Mbps/200-s and finite cases do not wrap 32-bit data sequences; FIN beyond high data TX means zero post-ACK data flight."
+        }
+      },
+      "manifest_sha256": "faf82c75dcf2740c9d857d92a636c4795b19ee121871737dc966d0ea01120c2f",
+      "limitations": [
+        "FCT is null unless the entire positive finite MaxBytes was delivered; bulk FCT is null.",
+        "APP HandleRead is ordered delivery; cached SRTT is not measured queue residence.",
+        "Tagged payload-bearing data loss is a full TX identity union; unmapped ACK/control notifications stay separate.",
+        "CA_LOSS state entries are not independently counted RTOs.",
+        "Tail/ELT behavior is not a queue fix. No T75 causality is inferred from cwnd, drops or absent policy actions.",
+        "Historical OFF byte parity is a separate root-owned check; this analyzer hashes newly completed raw data."
+      ]
+    },
+    {
+      "case": "micro24-selective",
+      "definition": {
+        "kind": "micro",
+        "duration": 4,
+        "variant": "selective",
+        "bytes": 33120,
+        "mode": "selective",
+        "tail": false,
+        "elt_mode": 0
+      },
+      "fct_s": 0.35094128,
+      "transfer_complete": true,
+      "metrics": {
+        "whole": {
+          "start_ns": 0,
+          "end_ns": 4000000000,
+          "app_bytes": 33120,
+          "app_goodput_mbps": 0.06624,
+          "tx_payload_rows": 25,
+          "retx_packets": 1,
+          "recovery_entries": 1,
+          "loss_state_entries": 0,
+          "tagged_data_drop_notifications": 1,
+          "unique_tagged_data_losses": 1
+        }
+      },
+      "queue_windows": null,
+      "first_physical_drop": {
+        "identity": {
+          "flow_id": 0,
+          "tx_id": 3,
+          "tx_time_ns": 100009281,
+          "seq": 1,
+          "payload_bytes": 1380
+        },
+        "first_drop": {
+          "time_ns": "150128320",
+          "layer": "PhyRxDrop",
+          "node": "1",
+          "device": "1",
+          "reason": "-1",
+          "uid": "3",
+          "src": "10.1.1.1",
+          "dst": "10.1.1.2",
+          "src_port": "49153",
+          "dst_port": "1024",
+          "seq": "1",
+          "payload_bytes": "1380",
+          "flags": "16",
+          "flow_id": "0",
+          "tx_id": "3",
+          "tx_time_ns": "100009281"
+        },
+        "actual_tx": {
+          "time_ns": 100009281,
+          "flow_id": 0,
+          "tx_id": 3,
+          "tx_time_ns": 100009281,
+          "seq": 1,
+          "payload_bytes": 1380
+        },
+        "drop_notifications": 1,
+        "first_retx_after_drop": {
+          "time_ns": 207108958,
+          "payload_bytes": 1380,
+          "tx_id": 22,
+          "tx_time_ns": 207108958
+        },
+        "drop_to_first_retx_ns": 56980638
+      },
+      "policies": {
+        "selective": {
+          "event_counts": {
+            "EPOCH_REGISTER": 1,
+            "COHORT_WAIT_BEGIN": 1,
+            "COHORT_WAIT_CONTINUE": 6,
+            "COHORT_DEADLINE": 1,
+            "DEADLINE_RECOVERY": 1,
+            "STOCK_RECOVERY": 1
+          },
+          "count": 11,
+          "episodes": [
+            {
+              "epoch_ns": 150000000,
+              "start_ns": 200477440,
+              "end_ns": 207108958,
+              "deadline_ns": 207108958,
+              "end_event": "COHORT_DEADLINE",
+              "elapsed_ns": 6631518
+            }
+          ]
+        },
+        "tail": {
+          "event_counts": {},
+          "count": 0,
+          "admissions": []
+        },
+        "elt": {
+          "event_counts": {},
+          "count": 0,
+          "episode_validation": [],
+          "mode": 0,
+          "new_tx_actions": 0,
+          "new_tx_bytes": 0,
+          "actual_original_sender_TX_audit": true,
+          "flight_ceiling_and_mode_allowance_audit": true,
+          "allowance_semantics": "E2 checks pre-send pipe+Skipped+MSS<=entry flight. Actual post-send pipe<=entry flight; Careful increments Skipped after send, so pipe+Skipped may then exceed entry flight by one MSS.",
+          "cack_T1_T2_audit_scope": "Observed ELT_EXIT_CACK rows only; no untriggered branch safety claim.",
+          "sequence_arithmetic_scope": "These declared 10-Mbps/200-s and finite cases do not wrap 32-bit data sequences; FIN beyond high data TX means zero post-ACK data flight."
+        }
+      },
+      "manifest_sha256": "0b9cf7c597f499bb9863f5dbbfb1dde4b20aad571d3d714cafd668a2de532111",
+      "limitations": [
+        "FCT is null unless the entire positive finite MaxBytes was delivered; bulk FCT is null.",
+        "APP HandleRead is ordered delivery; cached SRTT is not measured queue residence.",
+        "Tagged payload-bearing data loss is a full TX identity union; unmapped ACK/control notifications stay separate.",
+        "CA_LOSS state entries are not independently counted RTOs.",
+        "Tail/ELT behavior is not a queue fix. No T75 causality is inferred from cwnd, drops or absent policy actions.",
+        "Historical OFF byte parity is a separate root-owned check; this analyzer hashes newly completed raw data."
+      ]
+    },
+    {
+      "case": "micro24-stock",
+      "definition": {
+        "kind": "micro",
+        "duration": 4,
+        "variant": "stock",
+        "bytes": 33120,
+        "mode": "base",
+        "tail": false,
+        "elt_mode": 0
+      },
+      "fct_s": 0.3512848,
+      "transfer_complete": true,
+      "metrics": {
+        "whole": {
+          "start_ns": 0,
+          "end_ns": 4000000000,
+          "app_bytes": 33120,
+          "app_goodput_mbps": 0.06624,
+          "tx_payload_rows": 25,
+          "retx_packets": 1,
+          "recovery_entries": 1,
+          "loss_state_entries": 0,
+          "tagged_data_drop_notifications": 1,
+          "unique_tagged_data_losses": 1
+        }
+      },
+      "queue_windows": null,
+      "first_physical_drop": {
+        "identity": {
+          "flow_id": 0,
+          "tx_id": 3,
+          "tx_time_ns": 100009281,
+          "seq": 1,
+          "payload_bytes": 1380
+        },
+        "first_drop": {
+          "time_ns": "150128320",
+          "layer": "PhyRxDrop",
+          "node": "1",
+          "device": "1",
+          "reason": "-1",
+          "uid": "3",
+          "src": "10.1.1.1",
+          "dst": "10.1.1.2",
+          "src_port": "49153",
+          "dst_port": "1024",
+          "seq": "1",
+          "payload_bytes": "1380",
+          "flags": "16",
+          "flow_id": "0",
+          "tx_id": "3",
+          "tx_time_ns": "100009281"
+        },
+        "actual_tx": {
+          "time_ns": 100009281,
+          "flow_id": 0,
+          "tx_id": 3,
+          "tx_time_ns": 100009281,
+          "seq": 1,
+          "payload_bytes": 1380
+        },
+        "drop_notifications": 1,
+        "first_retx_after_drop": {
+          "time_ns": 200477440,
+          "payload_bytes": 1380,
+          "tx_id": 15,
+          "tx_time_ns": 200477440
+        },
+        "drop_to_first_retx_ns": 50349120
+      },
+      "policies": {
+        "selective": {
+          "event_counts": {},
+          "count": 0,
+          "episodes": []
+        },
+        "tail": {
+          "event_counts": {},
+          "count": 0,
+          "admissions": []
+        },
+        "elt": {
+          "event_counts": {},
+          "count": 0,
+          "episode_validation": [],
+          "mode": 0,
+          "new_tx_actions": 0,
+          "new_tx_bytes": 0,
+          "actual_original_sender_TX_audit": true,
+          "flight_ceiling_and_mode_allowance_audit": true,
+          "allowance_semantics": "E2 checks pre-send pipe+Skipped+MSS<=entry flight. Actual post-send pipe<=entry flight; Careful increments Skipped after send, so pipe+Skipped may then exceed entry flight by one MSS.",
+          "cack_T1_T2_audit_scope": "Observed ELT_EXIT_CACK rows only; no untriggered branch safety claim.",
+          "sequence_arithmetic_scope": "These declared 10-Mbps/200-s and finite cases do not wrap 32-bit data sequences; FIN beyond high data TX means zero post-ACK data flight."
+        }
+      },
+      "manifest_sha256": "a0449f8c37c8314265423cd06ff5e04f6525e84011a117f453bf763e13881995",
+      "limitations": [
+        "FCT is null unless the entire positive finite MaxBytes was delivered; bulk FCT is null.",
+        "APP HandleRead is ordered delivery; cached SRTT is not measured queue residence.",
+        "Tagged payload-bearing data loss is a full TX identity union; unmapped ACK/control notifications stay separate.",
+        "CA_LOSS state entries are not independently counted RTOs.",
+        "Tail/ELT behavior is not a queue fix. No T75 causality is inferred from cwnd, drops or absent policy actions.",
+        "Historical OFF byte parity is a separate root-owned check; this analyzer hashes newly completed raw data."
+      ]
+    },
+    {
+      "case": "micro24-tail",
+      "definition": {
+        "kind": "micro",
+        "duration": 4,
+        "variant": "tail",
+        "bytes": 33120,
+        "mode": "selective",
+        "tail": true,
+        "elt_mode": 0
+      },
+      "fct_s": 0.35094128,
+      "transfer_complete": true,
+      "metrics": {
+        "whole": {
+          "start_ns": 0,
+          "end_ns": 4000000000,
+          "app_bytes": 33120,
+          "app_goodput_mbps": 0.06624,
+          "tx_payload_rows": 25,
+          "retx_packets": 1,
+          "recovery_entries": 1,
+          "loss_state_entries": 0,
+          "tagged_data_drop_notifications": 1,
+          "unique_tagged_data_losses": 1
+        }
+      },
+      "queue_windows": null,
+      "first_physical_drop": {
+        "identity": {
+          "flow_id": 0,
+          "tx_id": 3,
+          "tx_time_ns": 100009281,
+          "seq": 1,
+          "payload_bytes": 1380
+        },
+        "first_drop": {
+          "time_ns": "150128320",
+          "layer": "PhyRxDrop",
+          "node": "1",
+          "device": "1",
+          "reason": "-1",
+          "uid": "3",
+          "src": "10.1.1.1",
+          "dst": "10.1.1.2",
+          "src_port": "49153",
+          "dst_port": "1024",
+          "seq": "1",
+          "payload_bytes": "1380",
+          "flags": "16",
+          "flow_id": "0",
+          "tx_id": "3",
+          "tx_time_ns": "100009281"
+        },
+        "actual_tx": {
+          "time_ns": 100009281,
+          "flow_id": 0,
+          "tx_id": 3,
+          "tx_time_ns": 100009281,
+          "seq": 1,
+          "payload_bytes": 1380
+        },
+        "drop_notifications": 1,
+        "first_retx_after_drop": {
+          "time_ns": 207108958,
+          "payload_bytes": 1380,
+          "tx_id": 22,
+          "tx_time_ns": 207108958
+        },
+        "drop_to_first_retx_ns": 56980638
+      },
+      "policies": {
+        "selective": {
+          "event_counts": {
+            "EPOCH_REGISTER": 1,
+            "COHORT_WAIT_BEGIN": 1,
+            "COHORT_WAIT_CONTINUE": 6,
+            "COHORT_DEADLINE": 1,
+            "DEADLINE_RECOVERY": 1,
+            "STOCK_RECOVERY": 1
+          },
+          "count": 11,
+          "episodes": [
+            {
+              "epoch_ns": 150000000,
+              "start_ns": 200477440,
+              "end_ns": 207108958,
+              "deadline_ns": 207108958,
+              "end_event": "COHORT_DEADLINE",
+              "elapsed_ns": 6631518
+            }
+          ]
+        },
+        "tail": {
+          "event_counts": {
+            "MORE_THAN_ONE_MSS": 7
+          },
+          "count": 7,
+          "admissions": []
+        },
+        "elt": {
+          "event_counts": {},
+          "count": 0,
+          "episode_validation": [],
+          "mode": 0,
+          "new_tx_actions": 0,
+          "new_tx_bytes": 0,
+          "actual_original_sender_TX_audit": true,
+          "flight_ceiling_and_mode_allowance_audit": true,
+          "allowance_semantics": "E2 checks pre-send pipe+Skipped+MSS<=entry flight. Actual post-send pipe<=entry flight; Careful increments Skipped after send, so pipe+Skipped may then exceed entry flight by one MSS.",
+          "cack_T1_T2_audit_scope": "Observed ELT_EXIT_CACK rows only; no untriggered branch safety claim.",
+          "sequence_arithmetic_scope": "These declared 10-Mbps/200-s and finite cases do not wrap 32-bit data sequences; FIN beyond high data TX means zero post-ACK data flight."
+        }
+      },
+      "manifest_sha256": "245b0bae04500fe8bcda190efedf8697e1aaa73e155b211cdd28b3e45051e6fb",
+      "limitations": [
+        "FCT is null unless the entire positive finite MaxBytes was delivered; bulk FCT is null.",
+        "APP HandleRead is ordered delivery; cached SRTT is not measured queue residence.",
+        "Tagged payload-bearing data loss is a full TX identity union; unmapped ACK/control notifications stay separate.",
+        "CA_LOSS state entries are not independently counted RTOs.",
+        "Tail/ELT behavior is not a queue fix. No T75 causality is inferred from cwnd, drops or absent policy actions.",
+        "Historical OFF byte parity is a separate root-owned check; this analyzer hashes newly completed raw data."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,983 @@
+{
+  "reference": "PR16 frozen pace controls",
+  "case_count": 7,
+  "compared_files": 75,
+  "all_equal": true,
+  "checks": [
+    {
+      "case": "micro20-stock",
+      "file": "logs_ns3/study_app_rx_node_1_port_1024.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 733,
+        "sha256": "b35c9ac46bde2331da713fba1846eeb718c907027d0bb2f050acdf2fbca75b5e"
+      },
+      "expected": {
+        "bytes": 733,
+        "sha256": "b35c9ac46bde2331da713fba1846eeb718c907027d0bb2f050acdf2fbca75b5e"
+      }
+    },
+    {
+      "case": "micro20-stock",
+      "file": "logs_ns3/study_drop_coverage.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 328,
+        "sha256": "f2bbce727ae1f61019ef8f727753e3a8f64abdeb41d660a20a3607802f4524f4"
+      },
+      "expected": {
+        "bytes": 328,
+        "sha256": "f2bbce727ae1f61019ef8f727753e3a8f64abdeb41d660a20a3607802f4524f4"
+      }
+    },
+    {
+      "case": "micro20-stock",
+      "file": "logs_ns3/study_drops.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 194,
+        "sha256": "e875ed492bd803c301bd18a29514bca50a6edfe104a69a85ae1ec68003bac35c"
+      },
+      "expected": {
+        "bytes": 194,
+        "sha256": "e875ed492bd803c301bd18a29514bca50a6edfe104a69a85ae1ec68003bac35c"
+      }
+    },
+    {
+      "case": "micro20-stock",
+      "file": "logs_ns3/study_rx_node_1_port_1024.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 1849,
+        "sha256": "cb432b3cd841713975a574fc6919f5cf0812185846599bdd17182cccacd11e5a"
+      },
+      "expected": {
+        "bytes": 1849,
+        "sha256": "cb432b3cd841713975a574fc6919f5cf0812185846599bdd17182cccacd11e5a"
+      }
+    },
+    {
+      "case": "micro20-stock",
+      "file": "logs_ns3/tcp_flow_0_cwnd.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 233,
+        "sha256": "ceb39256e8a1e4c940cb3f597b7e200596f2e9ff1f9ac9a0a5075021e8262630"
+      },
+      "expected": {
+        "bytes": 233,
+        "sha256": "ceb39256e8a1e4c940cb3f597b7e200596f2e9ff1f9ac9a0a5075021e8262630"
+      }
+    },
+    {
+      "case": "micro20-stock",
+      "file": "logs_ns3/tcp_flow_0_progress.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 160,
+        "sha256": "b583a1b2888476107f8d65535c480fa872d89ef79c7b12c3cdb4380249a86e98"
+      },
+      "expected": {
+        "bytes": 160,
+        "sha256": "b583a1b2888476107f8d65535c480fa872d89ef79c7b12c3cdb4380249a86e98"
+      }
+    },
+    {
+      "case": "micro20-stock",
+      "file": "logs_ns3/tcp_flow_0_rtt.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 110,
+        "sha256": "f46faf24fbfea5e839643bcebcbd4b6f10073f725ed5a139f993b2c823b14278"
+      },
+      "expected": {
+        "bytes": 110,
+        "sha256": "f46faf24fbfea5e839643bcebcbd4b6f10073f725ed5a139f993b2c823b14278"
+      }
+    },
+    {
+      "case": "micro20-stock",
+      "file": "logs_ns3/tcp_flow_0_study_events.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 238,
+        "sha256": "3038a5be2c89948a5724671c2c638a3c408f7828393d6a2513b0a6e6e636863e"
+      },
+      "expected": {
+        "bytes": 238,
+        "sha256": "3038a5be2c89948a5724671c2c638a3c408f7828393d6a2513b0a6e6e636863e"
+      }
+    },
+    {
+      "case": "micro20-stock",
+      "file": "logs_ns3/tcp_flow_0_study_packets.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 2680,
+        "sha256": "9774112da74ac364fbe1421ae7d2f532b3e0450cf2f32d874f6362b9043bd6e6"
+      },
+      "expected": {
+        "bytes": 2680,
+        "sha256": "9774112da74ac364fbe1421ae7d2f532b3e0450cf2f32d874f6362b9043bd6e6"
+      }
+    },
+    {
+      "case": "micro20-selective",
+      "file": "logs_ns3/study_app_rx_node_1_port_1024.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 278,
+        "sha256": "68282cab648ac5c1f1614dc8a9e324de04dfdce1fe96588313e66fc879de6ff4"
+      },
+      "expected": {
+        "bytes": 278,
+        "sha256": "68282cab648ac5c1f1614dc8a9e324de04dfdce1fe96588313e66fc879de6ff4"
+      }
+    },
+    {
+      "case": "micro20-selective",
+      "file": "logs_ns3/study_drop_coverage.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 328,
+        "sha256": "f2bbce727ae1f61019ef8f727753e3a8f64abdeb41d660a20a3607802f4524f4"
+      },
+      "expected": {
+        "bytes": 328,
+        "sha256": "f2bbce727ae1f61019ef8f727753e3a8f64abdeb41d660a20a3607802f4524f4"
+      }
+    },
+    {
+      "case": "micro20-selective",
+      "file": "logs_ns3/study_drops.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 194,
+        "sha256": "e875ed492bd803c301bd18a29514bca50a6edfe104a69a85ae1ec68003bac35c"
+      },
+      "expected": {
+        "bytes": 194,
+        "sha256": "e875ed492bd803c301bd18a29514bca50a6edfe104a69a85ae1ec68003bac35c"
+      }
+    },
+    {
+      "case": "micro20-selective",
+      "file": "logs_ns3/study_rx_node_1_port_1024.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 1821,
+        "sha256": "99168bced495f41fc683fe721c54f3dc14f68832ce4ffcc5b56432dca1af351c"
+      },
+      "expected": {
+        "bytes": 1821,
+        "sha256": "99168bced495f41fc683fe721c54f3dc14f68832ce4ffcc5b56432dca1af351c"
+      }
+    },
+    {
+      "case": "micro20-selective",
+      "file": "logs_ns3/tcp_flow_0_cwnd.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 125,
+        "sha256": "e3fca5845078ebfe43cff4ea1364ceec472ab74e0938e2922c499f6b897630df"
+      },
+      "expected": {
+        "bytes": 125,
+        "sha256": "e3fca5845078ebfe43cff4ea1364ceec472ab74e0938e2922c499f6b897630df"
+      }
+    },
+    {
+      "case": "micro20-selective",
+      "file": "logs_ns3/tcp_flow_0_orbit_loss.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 1233,
+        "sha256": "9218e1576a9faf477e39906a3bea23158ca96a17e77726accd74b3f6010bf59d"
+      },
+      "expected": {
+        "bytes": 1233,
+        "sha256": "9218e1576a9faf477e39906a3bea23158ca96a17e77726accd74b3f6010bf59d"
+      }
+    },
+    {
+      "case": "micro20-selective",
+      "file": "logs_ns3/tcp_flow_0_orbit_loss_tail.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 249,
+        "sha256": "670b7cc8ea7f4a63844fa39c9eed682067b8a08ee79e434b430e916c53e8793a"
+      },
+      "expected": {
+        "bytes": 249,
+        "sha256": "670b7cc8ea7f4a63844fa39c9eed682067b8a08ee79e434b430e916c53e8793a"
+      }
+    },
+    {
+      "case": "micro20-selective",
+      "file": "logs_ns3/tcp_flow_0_progress.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 106,
+        "sha256": "d15bcf3891bebadf9b75b90269fc6bc9e235d2beeaa03f67f1f1d68ac5cbbad9"
+      },
+      "expected": {
+        "bytes": 106,
+        "sha256": "d15bcf3891bebadf9b75b90269fc6bc9e235d2beeaa03f67f1f1d68ac5cbbad9"
+      }
+    },
+    {
+      "case": "micro20-selective",
+      "file": "logs_ns3/tcp_flow_0_rtt.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 44,
+        "sha256": "8ffbede61eb234ea6a582be7c507d2e5d21fcbbb82ddb3b62f147771ec32ae83"
+      },
+      "expected": {
+        "bytes": 44,
+        "sha256": "8ffbede61eb234ea6a582be7c507d2e5d21fcbbb82ddb3b62f147771ec32ae83"
+      }
+    },
+    {
+      "case": "micro20-selective",
+      "file": "logs_ns3/tcp_flow_0_study_events.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 238,
+        "sha256": "40b65890df347d24b0f507e81eea09ed4ffb6893ca09255b6443670cc6f12fb5"
+      },
+      "expected": {
+        "bytes": 238,
+        "sha256": "40b65890df347d24b0f507e81eea09ed4ffb6893ca09255b6443670cc6f12fb5"
+      }
+    },
+    {
+      "case": "micro20-selective",
+      "file": "logs_ns3/tcp_flow_0_study_packets.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 2946,
+        "sha256": "4283cde1fd113e2e34cdf1e9660449d11eced8500f41608d3b52d34342c0ca26"
+      },
+      "expected": {
+        "bytes": 2946,
+        "sha256": "4283cde1fd113e2e34cdf1e9660449d11eced8500f41608d3b52d34342c0ca26"
+      }
+    },
+    {
+      "case": "micro20-tail",
+      "file": "logs_ns3/study_app_rx_node_1_port_1024.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 213,
+        "sha256": "0cc1691a749637b2e00fbe73a93d58fce89b016f43cd27994db7f0da140b3581"
+      },
+      "expected": {
+        "bytes": 213,
+        "sha256": "0cc1691a749637b2e00fbe73a93d58fce89b016f43cd27994db7f0da140b3581"
+      }
+    },
+    {
+      "case": "micro20-tail",
+      "file": "logs_ns3/study_drop_coverage.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 328,
+        "sha256": "f2bbce727ae1f61019ef8f727753e3a8f64abdeb41d660a20a3607802f4524f4"
+      },
+      "expected": {
+        "bytes": 328,
+        "sha256": "f2bbce727ae1f61019ef8f727753e3a8f64abdeb41d660a20a3607802f4524f4"
+      }
+    },
+    {
+      "case": "micro20-tail",
+      "file": "logs_ns3/study_drops.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 194,
+        "sha256": "e875ed492bd803c301bd18a29514bca50a6edfe104a69a85ae1ec68003bac35c"
+      },
+      "expected": {
+        "bytes": 194,
+        "sha256": "e875ed492bd803c301bd18a29514bca50a6edfe104a69a85ae1ec68003bac35c"
+      }
+    },
+    {
+      "case": "micro20-tail",
+      "file": "logs_ns3/study_rx_node_1_port_1024.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 1817,
+        "sha256": "fe6d05ecf49669bafc8d3e732755443215431c7b8cd666ea7270a069953eb874"
+      },
+      "expected": {
+        "bytes": 1817,
+        "sha256": "fe6d05ecf49669bafc8d3e732755443215431c7b8cd666ea7270a069953eb874"
+      }
+    },
+    {
+      "case": "micro20-tail",
+      "file": "logs_ns3/tcp_flow_0_cwnd.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 143,
+        "sha256": "17c74bef1830b3666d72b43fb6c67dfe3b64a8154f6ee6684f8232128abacfb9"
+      },
+      "expected": {
+        "bytes": 143,
+        "sha256": "17c74bef1830b3666d72b43fb6c67dfe3b64a8154f6ee6684f8232128abacfb9"
+      }
+    },
+    {
+      "case": "micro20-tail",
+      "file": "logs_ns3/tcp_flow_0_orbit_loss.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 1233,
+        "sha256": "65425aa39716a0ddbbb98188869d0dd428c5474659ac00482c877a94582d2590"
+      },
+      "expected": {
+        "bytes": 1233,
+        "sha256": "65425aa39716a0ddbbb98188869d0dd428c5474659ac00482c877a94582d2590"
+      }
+    },
+    {
+      "case": "micro20-tail",
+      "file": "logs_ns3/tcp_flow_0_orbit_loss_tail.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 1008,
+        "sha256": "9b4059ca2cd970fba4641317e1507f9ea2b1b288817e72084da9a5481e918000"
+      },
+      "expected": {
+        "bytes": 1008,
+        "sha256": "9b4059ca2cd970fba4641317e1507f9ea2b1b288817e72084da9a5481e918000"
+      }
+    },
+    {
+      "case": "micro20-tail",
+      "file": "logs_ns3/tcp_flow_0_progress.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 74,
+        "sha256": "8131123d560f49d8565894b4789934eb98a7c51efd79c81c10f0a24c630654c8"
+      },
+      "expected": {
+        "bytes": 74,
+        "sha256": "8131123d560f49d8565894b4789934eb98a7c51efd79c81c10f0a24c630654c8"
+      }
+    },
+    {
+      "case": "micro20-tail",
+      "file": "logs_ns3/tcp_flow_0_rtt.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 44,
+        "sha256": "b7a405044fcf382bd907731a6904f647632ebafdcdd9c5ca2a2858afc18c9107"
+      },
+      "expected": {
+        "bytes": 44,
+        "sha256": "b7a405044fcf382bd907731a6904f647632ebafdcdd9c5ca2a2858afc18c9107"
+      }
+    },
+    {
+      "case": "micro20-tail",
+      "file": "logs_ns3/tcp_flow_0_study_events.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 238,
+        "sha256": "40b65890df347d24b0f507e81eea09ed4ffb6893ca09255b6443670cc6f12fb5"
+      },
+      "expected": {
+        "bytes": 238,
+        "sha256": "40b65890df347d24b0f507e81eea09ed4ffb6893ca09255b6443670cc6f12fb5"
+      }
+    },
+    {
+      "case": "micro20-tail",
+      "file": "logs_ns3/tcp_flow_0_study_packets.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 2896,
+        "sha256": "49e61b2453ecbab5ca6d6bc6b5bee7ebb183605863a50feaf5afb03cac74e82b"
+      },
+      "expected": {
+        "bytes": 2896,
+        "sha256": "49e61b2453ecbab5ca6d6bc6b5bee7ebb183605863a50feaf5afb03cac74e82b"
+      }
+    },
+    {
+      "case": "micro21-selective",
+      "file": "logs_ns3/study_app_rx_node_1_port_1024.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 343,
+        "sha256": "4b443f381f3a1789e5217174ed8afbf52fad0f7db2d66593fa8767aafad5ea9b"
+      },
+      "expected": {
+        "bytes": 343,
+        "sha256": "4b443f381f3a1789e5217174ed8afbf52fad0f7db2d66593fa8767aafad5ea9b"
+      }
+    },
+    {
+      "case": "micro21-selective",
+      "file": "logs_ns3/study_drop_coverage.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 328,
+        "sha256": "f2bbce727ae1f61019ef8f727753e3a8f64abdeb41d660a20a3607802f4524f4"
+      },
+      "expected": {
+        "bytes": 328,
+        "sha256": "f2bbce727ae1f61019ef8f727753e3a8f64abdeb41d660a20a3607802f4524f4"
+      }
+    },
+    {
+      "case": "micro21-selective",
+      "file": "logs_ns3/study_drops.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 194,
+        "sha256": "e875ed492bd803c301bd18a29514bca50a6edfe104a69a85ae1ec68003bac35c"
+      },
+      "expected": {
+        "bytes": 194,
+        "sha256": "e875ed492bd803c301bd18a29514bca50a6edfe104a69a85ae1ec68003bac35c"
+      }
+    },
+    {
+      "case": "micro21-selective",
+      "file": "logs_ns3/study_rx_node_1_port_1024.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 1905,
+        "sha256": "e416d61299485757ff77793f8ff2a103680416e1f02e81cb782512b9c8267e2e"
+      },
+      "expected": {
+        "bytes": 1905,
+        "sha256": "e416d61299485757ff77793f8ff2a103680416e1f02e81cb782512b9c8267e2e"
+      }
+    },
+    {
+      "case": "micro21-selective",
+      "file": "logs_ns3/tcp_flow_0_cwnd.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 143,
+        "sha256": "15c27df1662d3684046e77fc2870d145fc5ec00ee20bd74b147c64c6bbd15b5e"
+      },
+      "expected": {
+        "bytes": 143,
+        "sha256": "15c27df1662d3684046e77fc2870d145fc5ec00ee20bd74b147c64c6bbd15b5e"
+      }
+    },
+    {
+      "case": "micro21-selective",
+      "file": "logs_ns3/tcp_flow_0_orbit_loss.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 1233,
+        "sha256": "9218e1576a9faf477e39906a3bea23158ca96a17e77726accd74b3f6010bf59d"
+      },
+      "expected": {
+        "bytes": 1233,
+        "sha256": "9218e1576a9faf477e39906a3bea23158ca96a17e77726accd74b3f6010bf59d"
+      }
+    },
+    {
+      "case": "micro21-selective",
+      "file": "logs_ns3/tcp_flow_0_orbit_loss_tail.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 249,
+        "sha256": "670b7cc8ea7f4a63844fa39c9eed682067b8a08ee79e434b430e916c53e8793a"
+      },
+      "expected": {
+        "bytes": 249,
+        "sha256": "670b7cc8ea7f4a63844fa39c9eed682067b8a08ee79e434b430e916c53e8793a"
+      }
+    },
+    {
+      "case": "micro21-selective",
+      "file": "logs_ns3/tcp_flow_0_progress.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 106,
+        "sha256": "2b2b1ffe258d82aa268e1505e7cf7ca8d4a354fe28a042fed6167a79e81e8389"
+      },
+      "expected": {
+        "bytes": 106,
+        "sha256": "2b2b1ffe258d82aa268e1505e7cf7ca8d4a354fe28a042fed6167a79e81e8389"
+      }
+    },
+    {
+      "case": "micro21-selective",
+      "file": "logs_ns3/tcp_flow_0_rtt.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 44,
+        "sha256": "ced902551c2e5be981c1fdf07d10db108daf76f31c8729b907aa418c51dc378a"
+      },
+      "expected": {
+        "bytes": 44,
+        "sha256": "ced902551c2e5be981c1fdf07d10db108daf76f31c8729b907aa418c51dc378a"
+      }
+    },
+    {
+      "case": "micro21-selective",
+      "file": "logs_ns3/tcp_flow_0_study_events.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 238,
+        "sha256": "40b65890df347d24b0f507e81eea09ed4ffb6893ca09255b6443670cc6f12fb5"
+      },
+      "expected": {
+        "bytes": 238,
+        "sha256": "40b65890df347d24b0f507e81eea09ed4ffb6893ca09255b6443670cc6f12fb5"
+      }
+    },
+    {
+      "case": "micro21-selective",
+      "file": "logs_ns3/tcp_flow_0_study_packets.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 3008,
+        "sha256": "8c6054ac48f7e232eaab59398989ad12bf7a93c38e6ce91d0ec40a374872b891"
+      },
+      "expected": {
+        "bytes": 3008,
+        "sha256": "8c6054ac48f7e232eaab59398989ad12bf7a93c38e6ce91d0ec40a374872b891"
+      }
+    },
+    {
+      "case": "micro21-tail",
+      "file": "logs_ns3/study_app_rx_node_1_port_1024.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 343,
+        "sha256": "4b443f381f3a1789e5217174ed8afbf52fad0f7db2d66593fa8767aafad5ea9b"
+      },
+      "expected": {
+        "bytes": 343,
+        "sha256": "4b443f381f3a1789e5217174ed8afbf52fad0f7db2d66593fa8767aafad5ea9b"
+      }
+    },
+    {
+      "case": "micro21-tail",
+      "file": "logs_ns3/study_drop_coverage.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 328,
+        "sha256": "f2bbce727ae1f61019ef8f727753e3a8f64abdeb41d660a20a3607802f4524f4"
+      },
+      "expected": {
+        "bytes": 328,
+        "sha256": "f2bbce727ae1f61019ef8f727753e3a8f64abdeb41d660a20a3607802f4524f4"
+      }
+    },
+    {
+      "case": "micro21-tail",
+      "file": "logs_ns3/study_drops.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 194,
+        "sha256": "e875ed492bd803c301bd18a29514bca50a6edfe104a69a85ae1ec68003bac35c"
+      },
+      "expected": {
+        "bytes": 194,
+        "sha256": "e875ed492bd803c301bd18a29514bca50a6edfe104a69a85ae1ec68003bac35c"
+      }
+    },
+    {
+      "case": "micro21-tail",
+      "file": "logs_ns3/study_rx_node_1_port_1024.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 1905,
+        "sha256": "e416d61299485757ff77793f8ff2a103680416e1f02e81cb782512b9c8267e2e"
+      },
+      "expected": {
+        "bytes": 1905,
+        "sha256": "e416d61299485757ff77793f8ff2a103680416e1f02e81cb782512b9c8267e2e"
+      }
+    },
+    {
+      "case": "micro21-tail",
+      "file": "logs_ns3/tcp_flow_0_cwnd.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 143,
+        "sha256": "15c27df1662d3684046e77fc2870d145fc5ec00ee20bd74b147c64c6bbd15b5e"
+      },
+      "expected": {
+        "bytes": 143,
+        "sha256": "15c27df1662d3684046e77fc2870d145fc5ec00ee20bd74b147c64c6bbd15b5e"
+      }
+    },
+    {
+      "case": "micro21-tail",
+      "file": "logs_ns3/tcp_flow_0_orbit_loss.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 1233,
+        "sha256": "9218e1576a9faf477e39906a3bea23158ca96a17e77726accd74b3f6010bf59d"
+      },
+      "expected": {
+        "bytes": 1233,
+        "sha256": "9218e1576a9faf477e39906a3bea23158ca96a17e77726accd74b3f6010bf59d"
+      }
+    },
+    {
+      "case": "micro21-tail",
+      "file": "logs_ns3/tcp_flow_0_orbit_loss_tail.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 1013,
+        "sha256": "bdb129fd3cce59d77075a22dc4fbe939e845208aa07f36032a759da417d66cf3"
+      },
+      "expected": {
+        "bytes": 1013,
+        "sha256": "bdb129fd3cce59d77075a22dc4fbe939e845208aa07f36032a759da417d66cf3"
+      }
+    },
+    {
+      "case": "micro21-tail",
+      "file": "logs_ns3/tcp_flow_0_progress.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 106,
+        "sha256": "2b2b1ffe258d82aa268e1505e7cf7ca8d4a354fe28a042fed6167a79e81e8389"
+      },
+      "expected": {
+        "bytes": 106,
+        "sha256": "2b2b1ffe258d82aa268e1505e7cf7ca8d4a354fe28a042fed6167a79e81e8389"
+      }
+    },
+    {
+      "case": "micro21-tail",
+      "file": "logs_ns3/tcp_flow_0_rtt.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 44,
+        "sha256": "ced902551c2e5be981c1fdf07d10db108daf76f31c8729b907aa418c51dc378a"
+      },
+      "expected": {
+        "bytes": 44,
+        "sha256": "ced902551c2e5be981c1fdf07d10db108daf76f31c8729b907aa418c51dc378a"
+      }
+    },
+    {
+      "case": "micro21-tail",
+      "file": "logs_ns3/tcp_flow_0_study_events.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 238,
+        "sha256": "40b65890df347d24b0f507e81eea09ed4ffb6893ca09255b6443670cc6f12fb5"
+      },
+      "expected": {
+        "bytes": 238,
+        "sha256": "40b65890df347d24b0f507e81eea09ed4ffb6893ca09255b6443670cc6f12fb5"
+      }
+    },
+    {
+      "case": "micro21-tail",
+      "file": "logs_ns3/tcp_flow_0_study_packets.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 3008,
+        "sha256": "8c6054ac48f7e232eaab59398989ad12bf7a93c38e6ce91d0ec40a374872b891"
+      },
+      "expected": {
+        "bytes": 3008,
+        "sha256": "8c6054ac48f7e232eaab59398989ad12bf7a93c38e6ce91d0ec40a374872b891"
+      }
+    },
+    {
+      "case": "leo200-stock",
+      "file": "logs_ns3/study_app_rx_node_1585_port_1024.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 14466654,
+        "sha256": "63defbe5710bafaafec06b3021dfda3c8d2df2bad3bf78ce15b54c84d7bc451d"
+      },
+      "expected": {
+        "bytes": 14466654,
+        "sha256": "63defbe5710bafaafec06b3021dfda3c8d2df2bad3bf78ce15b54c84d7bc451d"
+      }
+    },
+    {
+      "case": "leo200-stock",
+      "file": "logs_ns3/study_drop_coverage.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 1140184,
+        "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+      },
+      "expected": {
+        "bytes": 1140184,
+        "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+      }
+    },
+    {
+      "case": "leo200-stock",
+      "file": "logs_ns3/study_drops.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 55405,
+        "sha256": "c915297632311402f8a2b1b4d6d24b83691f5971f40477934b2e2826887e6821"
+      },
+      "expected": {
+        "bytes": 55405,
+        "sha256": "c915297632311402f8a2b1b4d6d24b83691f5971f40477934b2e2826887e6821"
+      }
+    },
+    {
+      "case": "leo200-stock",
+      "file": "logs_ns3/study_rx_node_1585_port_1024.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 19448001,
+        "sha256": "445161a24e3c943e61518cc5c67ce72aecbae5c1bb2caaf6bd4f4ce451b2f1cf"
+      },
+      "expected": {
+        "bytes": 19448001,
+        "sha256": "445161a24e3c943e61518cc5c67ce72aecbae5c1bb2caaf6bd4f4ce451b2f1cf"
+      }
+    },
+    {
+      "case": "leo200-stock",
+      "file": "logs_ns3/tcp_flow_0_cwnd.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 101682,
+        "sha256": "6651966bdd19d9cbcbcc99fb18ec854f152de7e81ed93e075e8baa5d09599860"
+      },
+      "expected": {
+        "bytes": 101682,
+        "sha256": "6651966bdd19d9cbcbcc99fb18ec854f152de7e81ed93e075e8baa5d09599860"
+      }
+    },
+    {
+      "case": "leo200-stock",
+      "file": "logs_ns3/tcp_flow_0_progress.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 1994572,
+        "sha256": "2a9181e6a8a5bf7e1c25b8a770096f43714ec03779e7d7ccd2673b9992339534"
+      },
+      "expected": {
+        "bytes": 1994572,
+        "sha256": "2a9181e6a8a5bf7e1c25b8a770096f43714ec03779e7d7ccd2673b9992339534"
+      }
+    },
+    {
+      "case": "leo200-stock",
+      "file": "logs_ns3/tcp_flow_0_rtt.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 2029939,
+        "sha256": "b959d51947cf5f8d37d672ef2a239c942b8b57e9f3d574ce2f7624de42ab1e38"
+      },
+      "expected": {
+        "bytes": 2029939,
+        "sha256": "b959d51947cf5f8d37d672ef2a239c942b8b57e9f3d574ce2f7624de42ab1e38"
+      }
+    },
+    {
+      "case": "leo200-stock",
+      "file": "logs_ns3/tcp_flow_0_study_events.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 5534,
+        "sha256": "8809b380277e387dcc400a5d27a5679ccbdf446a08c7efb06fa7a021a42df78b"
+      },
+      "expected": {
+        "bytes": 5534,
+        "sha256": "8809b380277e387dcc400a5d27a5679ccbdf446a08c7efb06fa7a021a42df78b"
+      }
+    },
+    {
+      "case": "leo200-stock",
+      "file": "logs_ns3/tcp_flow_0_study_packets.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 19842749,
+        "sha256": "78fc54184c4481b1421d2139870debcbe72259c18ccb011ba180ef77784e146f"
+      },
+      "expected": {
+        "bytes": 19842749,
+        "sha256": "78fc54184c4481b1421d2139870debcbe72259c18ccb011ba180ef77784e146f"
+      }
+    },
+    {
+      "case": "leo200-stock",
+      "file": "logs_ns3/tcp_flows.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 75,
+        "sha256": "709ed6139c27b6b511fb5d5f9f754342c493d3d5ab3ad0cfc2e9b97d1d1b9404"
+      },
+      "expected": {
+        "bytes": 75,
+        "sha256": "709ed6139c27b6b511fb5d5f9f754342c493d3d5ab3ad0cfc2e9b97d1d1b9404"
+      }
+    },
+    {
+      "case": "leo200-tail",
+      "file": "logs_ns3/study_app_rx_node_1585_port_1024.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 14465567,
+        "sha256": "bd7722c1cbb78f51335b6b181d55f2a2c10e427b2a4326a02c74b873712cb23d"
+      },
+      "expected": {
+        "bytes": 14465567,
+        "sha256": "bd7722c1cbb78f51335b6b181d55f2a2c10e427b2a4326a02c74b873712cb23d"
+      }
+    },
+    {
+      "case": "leo200-tail",
+      "file": "logs_ns3/study_drop_coverage.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 1140184,
+        "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+      },
+      "expected": {
+        "bytes": 1140184,
+        "sha256": "ccfb5db0ca596dd4cf116b75602b4386c374cb5def8e9d6ed3fe6f86457aa499"
+      }
+    },
+    {
+      "case": "leo200-tail",
+      "file": "logs_ns3/study_drops.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 53873,
+        "sha256": "9aca2d266ffc1b98cd56f7803d04bdc7d807e11e44d25952b6c1ede94b8ef02e"
+      },
+      "expected": {
+        "bytes": 53873,
+        "sha256": "9aca2d266ffc1b98cd56f7803d04bdc7d807e11e44d25952b6c1ede94b8ef02e"
+      }
+    },
+    {
+      "case": "leo200-tail",
+      "file": "logs_ns3/study_rx_node_1585_port_1024.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 19452445,
+        "sha256": "4fb3a7e70c6e79f54007de46368fd1e303359ef2882e0a314587c9e02292b71c"
+      },
+      "expected": {
+        "bytes": 19452445,
+        "sha256": "4fb3a7e70c6e79f54007de46368fd1e303359ef2882e0a314587c9e02292b71c"
+      }
+    },
+    {
+      "case": "leo200-tail",
+      "file": "logs_ns3/tcp_flow_0_cwnd.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 100679,
+        "sha256": "acf9286c1705fa2aa31eb56805f016c3793051f3d566bc91c87c151af2c5cace"
+      },
+      "expected": {
+        "bytes": 100679,
+        "sha256": "acf9286c1705fa2aa31eb56805f016c3793051f3d566bc91c87c151af2c5cace"
+      }
+    },
+    {
+      "case": "leo200-tail",
+      "file": "logs_ns3/tcp_flow_0_orbit_loss.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 1386,
+        "sha256": "dd65e13e2e79fefa5b63612950bd59f5e3fa772ee1b9fd8a07f9208234695374"
+      },
+      "expected": {
+        "bytes": 1386,
+        "sha256": "dd65e13e2e79fefa5b63612950bd59f5e3fa772ee1b9fd8a07f9208234695374"
+      }
+    },
+    {
+      "case": "leo200-tail",
+      "file": "logs_ns3/tcp_flow_0_orbit_loss_tail.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 621,
+        "sha256": "8447baa1e3aa446ab7ca47c36eea5e2b8c8db4c38c3f04a3b805cbcd0f4af8ec"
+      },
+      "expected": {
+        "bytes": 621,
+        "sha256": "8447baa1e3aa446ab7ca47c36eea5e2b8c8db4c38c3f04a3b805cbcd0f4af8ec"
+      }
+    },
+    {
+      "case": "leo200-tail",
+      "file": "logs_ns3/tcp_flow_0_progress.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 1994229,
+        "sha256": "4ce98bb78f4f26fbc697971d23cfc085d8a3e89ad6b378222900a20469794ca4"
+      },
+      "expected": {
+        "bytes": 1994229,
+        "sha256": "4ce98bb78f4f26fbc697971d23cfc085d8a3e89ad6b378222900a20469794ca4"
+      }
+    },
+    {
+      "case": "leo200-tail",
+      "file": "logs_ns3/tcp_flow_0_rtt.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 2030657,
+        "sha256": "5f7ed6085a55daca60bb23bb3df73b6098d879aa2005d8810d887b023080edc7"
+      },
+      "expected": {
+        "bytes": 2030657,
+        "sha256": "5f7ed6085a55daca60bb23bb3df73b6098d879aa2005d8810d887b023080edc7"
+      }
+    },
+    {
+      "case": "leo200-tail",
+      "file": "logs_ns3/tcp_flow_0_study_events.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 5574,
+        "sha256": "56db00c9ed99c760c4d3b9a2d132f22eac6bf89570a8a5ff9d476c0be620d23a"
+      },
+      "expected": {
+        "bytes": 5574,
+        "sha256": "56db00c9ed99c760c4d3b9a2d132f22eac6bf89570a8a5ff9d476c0be620d23a"
+      }
+    },
+    {
+      "case": "leo200-tail",
+      "file": "logs_ns3/tcp_flow_0_study_packets.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 19843355,
+        "sha256": "8129d3685fc3cc339409867b057b9126a6591aad06950e02052c97a52c02567c"
+      },
+      "expected": {
+        "bytes": 19843355,
+        "sha256": "8129d3685fc3cc339409867b057b9126a6591aad06950e02052c97a52c02567c"
+      }
+    },
+    {
+      "case": "leo200-tail",
+      "file": "logs_ns3/tcp_flows.csv",
+      "equal": true,
+      "actual": {
+        "bytes": 75,
+        "sha256": "2fa7e654ea06e0f91745acd609b08a9daa37dffdcf01b8035c2ded8567a85017"
+      },
+      "expected": {
+        "bytes": 75,
+        "sha256": "2fa7e654ea06e0f91745acd609b08a9daa37dffdcf01b8035c2ded8567a85017"
+      }
+    }
+  ]
+}

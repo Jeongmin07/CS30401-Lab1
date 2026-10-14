@@ -1,0 +1,33 @@
+{
+  "schema": 1,
+  "reason": "Compile-only type correction: explicit SequenceNumber32 receiver edge and explicit uint32_t sequence subtraction. No policy or parameter change.",
+  "original_source_checkpoint": "6f856c2",
+  "first_build": {
+    "status": "failed",
+    "simulation_attempts": 0,
+    "preserved_directory": "/tmp/orbit-elt-build-attempt1",
+    "patch_sha256": "5c6a4ad3b2177bd8cfac5880d51e1b7d970b61122fa285c3bc0763c3ad67d062",
+    "helper_sha256": "4f8b29713895e4e0baf0727a9e1315efe9c2ae0c632b3a158412fccf4f9ee755",
+    "error_excerpt": [
+      "right.GetValue() unavailable on inferred TracedValue",
+      "receiverRoom conditional operands infer incompatible types"
+    ]
+  },
+  "source_before": {
+    "tcp-socket-base.cc": "f08c252b53fe45d1c7d93ccb29f8beb9e2fc21f75024acb605ed0f7c0a8cc4d3",
+    "tcp-socket-base.h": "0409809270bd35e5beeefc44988670cad83f02475d520791cb6bc317217f0f96"
+  },
+  "source_after": {
+    "tcp-socket-base.cc": "8af1dcc936e583e280fc043f36ca412a84b2178209c6fbef3378f411a2381edc",
+    "tcp-socket-base.h": "0409809270bd35e5beeefc44988670cad83f02475d520791cb6bc317217f0f96"
+  },
+  "helper_sha256": "15ff02ff496b17c16108400cdcba8277c86b29f79f88d710a49318a381214e54",
+  "patch": {
+    "path": "/work/code/orbit-elt/ns3.patch",
+    "bytes": 128843,
+    "sha256": "8f822979eb9556c1f27f5128a462d66f085b1554ab3366c9af2c4036df8d7997",
+    "official_export_byte_equal_full_staged_diff": true
+  },
+  "retry_ready_planned": "/tmp/orbit-elt-ready-v2.json",
+  "retry_build_status": "not started by implementation agent"
+}

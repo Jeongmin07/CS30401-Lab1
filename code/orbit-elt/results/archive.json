@@ -1,0 +1,8 @@
+{
+  "path": "/tmp/orbit-elt-20261014-raw.tar.gz",
+  "bytes": 64887523,
+  "sha256": "8895c2d79000e31d165fe2af689e0599e17aaff26902b5bb119dc9471bc45bc0",
+  "scope": "19 completed physical runs, detailed fresh analysis, unchanged-source build receipts and pre-simulation failed attempts",
+  "compression": "tar + gzip -1",
+  "verified_readable": true
+}

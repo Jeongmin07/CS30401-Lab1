@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "check_only": false,
+  "source_before": {
+    "tcp-socket-base.cc": "baed29017f11b6f984adc3307fbe9c4d1e63d07a40114a9f42c117293a7461cb",
+    "tcp-socket-base.h": "2303f2a83affaf95439a547d416bf8a4153cf442f4a7c7afed303723eb182e12"
+  },
+  "source_after": {
+    "tcp-socket-base.cc": "f08c252b53fe45d1c7d93ccb29f8beb9e2fc21f75024acb605ed0f7c0a8cc4d3",
+    "tcp-socket-base.h": "0409809270bd35e5beeefc44988670cad83f02475d520791cb6bc317217f0f96"
+  },
+  "helper_sha256": "4f8b29713895e4e0baf0727a9e1315efe9c2ae0c632b3a158412fccf4f9ee755",
+  "modes": {
+    "0": "OFF; existing tail setting retained",
+    "1": "Aggressive",
+    "2": "Careful"
+  },
+  "interpretation": "ELT-inspired fixed entry-flight permission within existing K3 selective wait; partial RFC4653 adaptation, full-MSS pilot."
+}

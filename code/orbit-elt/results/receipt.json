@@ -1,0 +1,325 @@
+{
+  "analysis_tool": {
+    "path": "/work/code/orbit-elt/analyze.py",
+    "bytes": 35973,
+    "sha256": "656256252e04b57a149ae7bec38671fcf987a8fb3f617dfb1ece2d115a01856a"
+  },
+  "case_count": 19,
+  "outputs": [
+    {
+      "path": "/work/code/orbit-elt/results/cases/leo200-eltA/config_ns3.properties",
+      "bytes": 613,
+      "sha256": "8c46772c95c46ca99935dd68cf6957631972a2bb519acabe0880640408b0f4d4"
+    },
+    {
+      "path": "/work/code/orbit-elt/results/cases/leo200-eltA/manifest.json",
+      "bytes": 427459,
+      "sha256": "910352493a3febfc61f0578c79ce8a16444ef855be16300d72ff0be151b0fb1e"
+    },
+    {
+      "path": "/work/code/orbit-elt/results/cases/leo200-eltA/schedule.csv",
+      "bytes": 119,
+      "sha256": "c441ec9f73e726dcc20348d6c2fb2562401925fd26385a8c7ec8c45c9cf6c809"
+    },
+    {
+      "path": "/work/code/orbit-elt/results/cases/leo200-eltA/summary.json",
+      "bytes": 7645518,
+      "sha256": "631cbcc001d1ff801b346f82d612648df1063a9c9e2d605845718a7cc4e1d041"
+    },
+    {
+      "path": "/work/code/orbit-elt/results/cases/leo200-eltC/config_ns3.properties",
+      "bytes": 613,
+      "sha256": "8c46772c95c46ca99935dd68cf6957631972a2bb519acabe0880640408b0f4d4"
+    },
+    {
+      "path": "/work/code/orbit-elt/results/cases/leo200-eltC/manifest.json",
+      "bytes": 427458,
+      "sha256": "cb734f6012723aecb93533916d4f55e646b78188b703a50540e13e4bb05fe9f4"
+    },
+    {
+      "path": "/work/code/orbit-elt/results/cases/leo200-eltC/schedule.csv",
+      "bytes": 119,
+      "sha256": "c441ec9f73e726dcc20348d6c2fb2562401925fd26385a8c7ec8c45c9cf6c809"
+    },
+    {
+      "path": "/work/code/orbit-elt/results/cases/leo200-eltC/summary.json",
+      "bytes": 7644210,
+      "sha256": "b91133f2aff10496996e21dfbbcd47409b6960346577e759a164109b68d92d2f"
+    },
+    {
+      "path": "/work/code/orbit-elt/results/cases/leo200-stock/config_ns3.properties",
+      "bytes": 613,
+      "sha256": "8c46772c95c46ca99935dd68cf6957631972a2bb519acabe0880640408b0f4d4"
+    },
+    {
+      "path": "/work/code/orbit-elt/results/cases/leo200-stock/manifest.json",
+      "bytes": 426374,
+      "sha256": "c40bbaf64f4473a63705df22e11528a32e40f4c23a92d677755e4db91ebaec82"
+    },
+    {
+      "path": "/work/code/orbit-elt/results/cases/leo200-stock/schedule.csv",
+      "bytes": 29,
+      "sha256": "e6cde3aa7716856e46d24c3833354df90407313ece13a5ffbd1b789fa4fea23c"
+    },
+    {
+      "path": "/work/code/orbit-elt/results/cases/leo200-stock/summary.json",
+      "bytes": 7645969,
+      "sha256": "38e24dcda78ae904e4b8e8b159f7f75f04d802798c45fcf4b33e03f8d0a51102"
+    },
+    {
+      "path": "/work/code/orbit-elt/results/cases/leo200-tail/config_ns3.properties",
+      "bytes": 613,
+      "sha256": "8c46772c95c46ca99935dd68cf6957631972a2bb519acabe0880640408b0f4d4"
+    },
+    {
+      "path": "/work/code/orbit-elt/results/cases/leo200-tail/manifest.json",
+      "bytes": 427454,
+      "sha256": "997e9e07b5b2fa0ff9d83b2bd67ae58e0d867c31d2687e62f8e626c126485eb8"
+    },
+    {
+      "path": "/work/code/orbit-elt/results/cases/leo200-tail/schedule.csv",
+      "bytes": 119,
+      "sha256": "c441ec9f73e726dcc20348d6c2fb2562401925fd26385a8c7ec8c45c9cf6c809"
+    },
+    {
+      "path": "/work/code/orbit-elt/results/cases/leo200-tail/summary.json",
+      "bytes": 7640599,
+      "sha256": "4047278fe7423619a25e5330f69ac87ee198e50c45003d26d638c4352529edef"
+    },
+    {
+      "path": "/work/code/orbit-elt/results/cases/micro20-eltA/config_ns3.properties",
+      "bytes": 34,
+      "sha256": "f3f2e1b48fdfdd1d6ae0913db5fb1a817dd66b0fbca791dc678692fd6f1496f9"
+    },
+    {
+      "path": "/work/code/orbit-elt/results/cases/micro20-eltA/manifest.json",
+      "bytes": 10743,
+      "sha256": "ac5a9caa60b4b518acab75fcabecedfb4f1697013ad247cba9753725728e4307"
+    },
+    {
+      "path": "/work/code/orbit-elt/results/cases/micro20-eltA/summary.json",
+      "bytes": 43707,
+      "sha256": "feb0b7c86357c1295fca116b57c2e3a7cc91a3f8f959718be9635352096ee1b2"
+    },
+    {
+      "path": "/work/code/orbit-elt/results/cases/micro20-eltC/config_ns3.properties",
+      "bytes": 34,
+      "sha256": "f3f2e1b48fdfdd1d6ae0913db5fb1a817dd66b0fbca791dc678692fd6f1496f9"
+    },
+    {
+      "path": "/work/code/orbit-elt/results/cases/micro20-eltC/manifest.json",
+      "bytes": 10744,
+      "sha256": "59793b32cc97fb0649185ebe26925e5802a57b5d9f7048ceb5a43ec0422d6ced"
+    },
+    {
+      "path": "/work/code/orbit-elt/results/cases/micro20-eltC/summary.json",
+      "bytes": 40584,
+      "sha256": "053f2063cc361485837dd11ce7f63eecfbef17ba389e55cc027400b095cbcd51"
+    },
+    {
+      "path": "/work/code/orbit-elt/results/cases/micro20-selective/config_ns3.properties",
+      "bytes": 34,
+      "sha256": "f3f2e1b48fdfdd1d6ae0913db5fb1a817dd66b0fbca791dc678692fd6f1496f9"
+    },
+    {
+      "path": "/work/code/orbit-elt/results/cases/micro20-selective/manifest.json",
+      "bytes": 10770,
+      "sha256": "4826ec89d63d7f6a4774ffa8dd1fc8dd4babff5dd9187a167e0fafbaa9358a40"
+    },
+    {
+      "path": "/work/code/orbit-elt/results/cases/micro20-selective/summary.json",
+      "bytes": 28220,
+      "sha256": "cb66614a07c41473c98e53396f821e7e3f14fd27b5bb36c0f1fd9d25aefff3ec"
+    },
+    {
+      "path": "/work/code/orbit-elt/results/cases/micro20-stock/config_ns3.properties",
+      "bytes": 34,
+      "sha256": "f3f2e1b48fdfdd1d6ae0913db5fb1a817dd66b0fbca791dc678692fd6f1496f9"
+    },
+    {
+      "path": "/work/code/orbit-elt/results/cases/micro20-stock/manifest.json",
+      "bytes": 9806,
+      "sha256": "aca202d1599006275927f22292b4741d48affa273dcf9060350ee0db803635cb"
+    },
+    {
+      "path": "/work/code/orbit-elt/results/cases/micro20-stock/summary.json",
+      "bytes": 20059,
+      "sha256": "91a1125b1f0fc2561c86491f955cbd646758434158754b5314b91167c6a3e2f3"
+    },
+    {
+      "path": "/work/code/orbit-elt/results/cases/micro20-tail/config_ns3.properties",
+      "bytes": 34,
+      "sha256": "f3f2e1b48fdfdd1d6ae0913db5fb1a817dd66b0fbca791dc678692fd6f1496f9"
+    },
+    {
+      "path": "/work/code/orbit-elt/results/cases/micro20-tail/manifest.json",
+      "bytes": 10741,
+      "sha256": "2d1761deddc0e29f34422cc37e6734ad07e1dd3fcbec846317c773bf1e388fc9"
+    },
+    {
+      "path": "/work/code/orbit-elt/results/cases/micro20-tail/summary.json",
+      "bytes": 33422,
+      "sha256": "ec540f00a169f1571b1ebb1a83c34d66835dbf0e26613184143a86b11db983fe"
+    },
+    {
+      "path": "/work/code/orbit-elt/results/cases/micro21-eltA/config_ns3.properties",
+      "bytes": 34,
+      "sha256": "f3f2e1b48fdfdd1d6ae0913db5fb1a817dd66b0fbca791dc678692fd6f1496f9"
+    },
+    {
+      "path": "/work/code/orbit-elt/results/cases/micro21-eltA/manifest.json",
+      "bytes": 10745,
+      "sha256": "64a78e9bd1428d03797fe5f6dc706e2ca16b160cef523c3147038d000460013b"
+    },
+    {
+      "path": "/work/code/orbit-elt/results/cases/micro21-eltA/summary.json",
+      "bytes": 45619,
+      "sha256": "4fdd969ee107709909632835aadd430fe3411a2d6f9c89a60d093b08c5392f83"
+    },
+    {
+      "path": "/work/code/orbit-elt/results/cases/micro21-eltC/config_ns3.properties",
+      "bytes": 34,
+      "sha256": "f3f2e1b48fdfdd1d6ae0913db5fb1a817dd66b0fbca791dc678692fd6f1496f9"
+    },
+    {
+      "path": "/work/code/orbit-elt/results/cases/micro21-eltC/manifest.json",
+      "bytes": 10743,
+      "sha256": "ed91095ff9eeeeb443d7572c05902105a6b8b2facecc281937b45beafa50721a"
+    },
+    {
+      "path": "/work/code/orbit-elt/results/cases/micro21-eltC/summary.json",
+      "bytes": 40586,
+      "sha256": "ac3b6890aa2710b81de83147cdb992cebeafd49f19d77664336966b6e6de3220"
+    },
+    {
+      "path": "/work/code/orbit-elt/results/cases/micro21-selective/config_ns3.properties",
+      "bytes": 34,
+      "sha256": "f3f2e1b48fdfdd1d6ae0913db5fb1a817dd66b0fbca791dc678692fd6f1496f9"
+    },
+    {
+      "path": "/work/code/orbit-elt/results/cases/micro21-selective/manifest.json",
+      "bytes": 10769,
+      "sha256": "1dbf929fe06a7db631338efdfc377aeeaece28e92c75fa6a86bba8dafba65782"
+    },
+    {
+      "path": "/work/code/orbit-elt/results/cases/micro21-selective/summary.json",
+      "bytes": 28221,
+      "sha256": "8902e46fcd7ca7e069548d30b7244ec02cbbe315e92114cf91b86ec9dff77837"
+    },
+    {
+      "path": "/work/code/orbit-elt/results/cases/micro21-stock/config_ns3.properties",
+      "bytes": 34,
+      "sha256": "f3f2e1b48fdfdd1d6ae0913db5fb1a817dd66b0fbca791dc678692fd6f1496f9"
+    },
+    {
+      "path": "/work/code/orbit-elt/results/cases/micro21-stock/manifest.json",
+      "bytes": 9805,
+      "sha256": "0a22f8944fb3bf7c08ce1c0d1ec70c1f086a7eb5923745ff71e0aac1a2d7ad34"
+    },
+    {
+      "path": "/work/code/orbit-elt/results/cases/micro21-stock/summary.json",
+      "bytes": 20058,
+      "sha256": "64d5d0d6944819ff844523f94882d6a4e758ef5b95f43ba38e258ac130a8c6f0"
+    },
+    {
+      "path": "/work/code/orbit-elt/results/cases/micro21-tail/config_ns3.properties",
+      "bytes": 34,
+      "sha256": "f3f2e1b48fdfdd1d6ae0913db5fb1a817dd66b0fbca791dc678692fd6f1496f9"
+    },
+    {
+      "path": "/work/code/orbit-elt/results/cases/micro21-tail/manifest.json",
+      "bytes": 10741,
+      "sha256": "a236a22d5d473d9fa3d740a5c786b48e5dbb8066db3e409a33ff1ec738fcd045"
+    },
+    {
+      "path": "/work/code/orbit-elt/results/cases/micro21-tail/summary.json",
+      "bytes": 32740,
+      "sha256": "2255f16544579b55116a0ac36ffbdd4cdc61b25962e7883758f071720a4ceefe"
+    },
+    {
+      "path": "/work/code/orbit-elt/results/cases/micro24-eltA/config_ns3.properties",
+      "bytes": 34,
+      "sha256": "f3f2e1b48fdfdd1d6ae0913db5fb1a817dd66b0fbca791dc678692fd6f1496f9"
+    },
+    {
+      "path": "/work/code/orbit-elt/results/cases/micro24-eltA/manifest.json",
+      "bytes": 10746,
+      "sha256": "96156ca97bb0cd105dd75e72d6bb0915e6c3da8f6f591cd2d79a5b09c19343fd"
+    },
+    {
+      "path": "/work/code/orbit-elt/results/cases/micro24-eltA/summary.json",
+      "bytes": 45636,
+      "sha256": "e7b03e3d275d34ecd99ee6bc604830004afde4fd6128b9733e9c9890c01910b5"
+    },
+    {
+      "path": "/work/code/orbit-elt/results/cases/micro24-eltC/config_ns3.properties",
+      "bytes": 34,
+      "sha256": "f3f2e1b48fdfdd1d6ae0913db5fb1a817dd66b0fbca791dc678692fd6f1496f9"
+    },
+    {
+      "path": "/work/code/orbit-elt/results/cases/micro24-eltC/manifest.json",
+      "bytes": 10744,
+      "sha256": "faf82c75dcf2740c9d857d92a636c4795b19ee121871737dc966d0ea01120c2f"
+    },
+    {
+      "path": "/work/code/orbit-elt/results/cases/micro24-eltC/summary.json",
+      "bytes": 40600,
+      "sha256": "8f2d16a6430fc9e7ae8abddd881accb736b89723cecf93c7ad9b366d8a1f0fb2"
+    },
+    {
+      "path": "/work/code/orbit-elt/results/cases/micro24-selective/config_ns3.properties",
+      "bytes": 34,
+      "sha256": "f3f2e1b48fdfdd1d6ae0913db5fb1a817dd66b0fbca791dc678692fd6f1496f9"
+    },
+    {
+      "path": "/work/code/orbit-elt/results/cases/micro24-selective/manifest.json",
+      "bytes": 10769,
+      "sha256": "0b9cf7c597f499bb9863f5dbbfb1dde4b20aad571d3d714cafd668a2de532111"
+    },
+    {
+      "path": "/work/code/orbit-elt/results/cases/micro24-selective/summary.json",
+      "bytes": 28221,
+      "sha256": "9dcc3872687992c7c1fcfbc10cd5d8c505717f23c7d6d9d48c71d7bd89337a56"
+    },
+    {
+      "path": "/work/code/orbit-elt/results/cases/micro24-stock/config_ns3.properties",
+      "bytes": 34,
+      "sha256": "f3f2e1b48fdfdd1d6ae0913db5fb1a817dd66b0fbca791dc678692fd6f1496f9"
+    },
+    {
+      "path": "/work/code/orbit-elt/results/cases/micro24-stock/manifest.json",
+      "bytes": 9805,
+      "sha256": "a0449f8c37c8314265423cd06ff5e04f6525e84011a117f453bf763e13881995"
+    },
+    {
+      "path": "/work/code/orbit-elt/results/cases/micro24-stock/summary.json",
+      "bytes": 20058,
+      "sha256": "d486a9e3379dac1dfca422942dbb18a741ea5936556cd9fe4d20d18efef2f7e8"
+    },
+    {
+      "path": "/work/code/orbit-elt/results/cases/micro24-tail/config_ns3.properties",
+      "bytes": 34,
+      "sha256": "f3f2e1b48fdfdd1d6ae0913db5fb1a817dd66b0fbca791dc678692fd6f1496f9"
+    },
+    {
+      "path": "/work/code/orbit-elt/results/cases/micro24-tail/manifest.json",
+      "bytes": 10742,
+      "sha256": "245b0bae04500fe8bcda190efedf8697e1aaa73e155b211cdd28b3e45051e6fb"
+    },
+    {
+      "path": "/work/code/orbit-elt/results/cases/micro24-tail/summary.json",
+      "bytes": 32744,
+      "sha256": "6d46505fa6a40c0669fa49d098be5e4c7fe86eba16622430189a2f7b7067238a"
+    },
+    {
+      "path": "/work/code/orbit-elt/results/results.json",
+      "bytes": 36690575,
+      "sha256": "449ec0555f4d633cfd154cc09a73f0e0bc84f252b3d7404f791a2afe949f1206"
+    },
+    {
+      "path": "/work/code/orbit-elt/results/summary.csv",
+      "bytes": 5401,
+      "sha256": "b0355641eba8c1fb072fc504115714393dc2ff2605be7c1243a475c6dd8f072c"
+    }
+  ]
+}
