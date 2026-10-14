@@ -62,7 +62,14 @@ def execute(name,a):
     record.update(wall_seconds=time.monotonic()-start,runtime_unchanged=before==c.runtime(),
         source_unchanged=c.git('diff','--binary','HEAD')==diff,
         launch_source_files_unchanged=sources==c.source_files())
-    if not all(record[k] for k in ('runtime_unchanged','source_unchanged','launch_source_files_unchanged')):
+    record['input_files_unchanged']=all(c.sha(run/n)==v['sha256'] for n,v in record['input_files'].items())
+    record['state_inputs_unchanged']=record['state_static_sha256']=={
+        p.name:c.sha(p) for p in sorted(c.STATE.iterdir()) if p.is_file()}
+    if d['kind']=='leo':
+        record['state_inputs_unchanged'] &= record['dynamic_input_sha256']=={
+            p.name:c.sha(p) for p in sorted(dynamic.iterdir()) if p.is_file()}
+    if not all(record[k] for k in ('runtime_unchanged','source_unchanged','launch_source_files_unchanged',
+                                  'input_files_unchanged','state_inputs_unchanged')):
         record['audit_exclude']='Source/runtime/runner/input changed during simulation'
     record['output_files']={str(p.relative_to(run)):dict(bytes=p.stat().st_size,sha256=c.sha(p))
         for p in sorted(run.rglob('*')) if p.is_file() and p!=manifest}
