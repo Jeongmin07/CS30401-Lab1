@@ -1,0 +1,3 @@
+# Full analysis and per-case raw inventories are archived as release assets.
+results/results.json
+results/cases/
