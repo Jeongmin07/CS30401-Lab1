@@ -370,10 +370,13 @@ def validate_policies(logs, m, policies):
         before_cacks = [r for r in group if r['event'] == 'ELT_CACK_BEFORE']
         require(len(cacks) == len(before_cacks), 'Unpaired cumulative-ACK T1/T2 events')
         for pre, r in zip(before_cacks, cacks):
+            pending = [v for v in group if v['event'] == 'ELT_CACK_PENDING' and v['time_ns'] <= pre['time_ns']]
+            require(pre['active'] == 1 or (pre['active'] == 0 and pending), 'T1/T2 lacks active or pending CACK phase')
             require(pre['time_ns'] == r['time_ns'] and pre['head_seq'] == r['head_seq'] and
-                    pre['high_tx'] == r['high_tx'] and pre['active'] == 1, 'T1/T2 changed ACK flight or chronology')
-            require(r['active'] == 0 and r['high_tx'] >= r['head_seq'] and
-                    r['cwnd_bytes'] == min(r['high_tx'] - r['head_seq'] + MSS, begin['saved_flight_bytes']) and
+                    pre['high_tx'] == r['high_tx'], 'T1/T2 changed ACK flight or chronology')
+            post_ack_flight = max(0, r['high_tx'] - r['head_seq'])
+            require(r['active'] == 0 and
+                    r['cwnd_bytes'] == min(post_ack_flight + MSS, begin['saved_flight_bytes']) and
                     r['ssthresh_bytes'] == begin['saved_flight_bytes'], 'Cumulative-ACK T1/T2 trace does not match')
         validations.append(dict(epoch_ns=begin['epoch_ns'], deadline_ns=begin['deadline_ns'],
                                 saved_flight_bytes=begin['saved_flight_bytes'], original_sends=len(sends),
@@ -405,6 +408,7 @@ def validate_policies(logs, m, policies):
     elt['allowance_semantics'] = ('E2 checks pre-send pipe+Skipped+MSS<=entry flight. Actual post-send pipe<=entry flight; '
                                 'Careful increments Skipped after send, so pipe+Skipped may then exceed entry flight by one MSS.')
     elt['cack_T1_T2_audit_scope'] = 'Observed ELT_EXIT_CACK rows only; no untriggered branch safety claim.'
+    elt['sequence_arithmetic_scope'] = 'These declared 10-Mbps/200-s and finite cases do not wrap 32-bit data sequences; FIN beyond high data TX means zero post-ACK data flight.'
 
 
 def analyze(run):

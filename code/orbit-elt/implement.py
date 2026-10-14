@@ -28,7 +28,7 @@ TcpSocketBase::TraceOrbitElt(const char* event, SequenceNumber32 seq, uint32_t s
     if (m_orbitEltMode == 0 || m_orbitEltPath.empty()) return;
     std::ofstream out(m_orbitEltPath, std::ios::app);
     const auto high = m_tcb->m_highTxMark.Get();
-    const auto right = m_highRxAckMark + SequenceNumber32(m_rWnd.Get());
+    const SequenceNumber32 right = m_highRxAckMark.Get() + SequenceNumber32(m_rWnd.Get());
     out << m_orbitLossFlow << ',' << Simulator::Now().GetNanoSeconds() << ',' << event
         << ',' << m_orbitEltMode << ',' << m_orbitEpoch.GetNanoSeconds()
         << ',' << m_orbitDeadline.GetNanoSeconds() << ',' << m_orbitEltFlight
@@ -103,8 +103,8 @@ TcpSocketBase::OrbitEltWindow()
     const uint64_t used = uint64_t(BytesInFlight()) + m_orbitEltSkipped;
     const uint32_t room = used < m_orbitEltFlight ? m_orbitEltFlight - used : 0;
     const SequenceNumber32 seq = m_tcb->m_highTxMark;
-    const auto right = m_highRxAckMark + SequenceNumber32(m_rWnd.Get());
-    const uint32_t receiverRoom = right > seq ? right - seq : 0;
+    const SequenceNumber32 right = m_highRxAckMark.Get() + SequenceNumber32(m_rWnd.Get());
+    const uint32_t receiverRoom = right > seq ? uint32_t(right - seq) : 0;
     if (room < m_tcb->m_segmentSize)
     {
         TraceOrbitElt("ELT_SKIP_CEILING", seq);
